@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertEventIntegrationPolicyForView : TeaModel {
         /// <summary>
-        /// <para>UUID</para>
+        /// <para>The universally unique identifier (UUID).</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123123</para>
@@ -20,13 +20,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AlertEventIntegrationPolicyId { get; set; }
 
         /// <summary>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>集成名</para>
         /// </summary>
         [NameInMap("alertEventIntegrationPolicyName")]
         [Validation(Required=false)]
         public string AlertEventIntegrationPolicyName { get; set; }
 
         /// <summary>
+        /// <para>The time when the policy was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
         /// </summary>
@@ -35,6 +41,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
         /// </summary>
@@ -43,6 +51,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the policy is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,11 +60,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
+        /// <summary>
+        /// <para>The filter configuration.</para>
+        /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
+        /// <para>The subscription settings.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;region&quot;:&quot;cn-hangzhou&quot;}</para>
         /// </summary>
@@ -63,6 +78,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IntegrationSetting { get; set; }
 
         /// <summary>
+        /// <para>The key for the integration\&quot;s reporting endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10-16818f1445e10a1d012922b285bfb334</para>
         /// </summary>
@@ -70,11 +87,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string Token { get; set; }
 
+        /// <summary>
+        /// <para>The transformation settings.</para>
+        /// </summary>
         [NameInMap("transformerSetting")]
         [Validation(Required=false)]
         public List<TransformAction> TransformerSetting { get; set; }
 
         /// <summary>
+        /// <para>The type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ALERT_CUSTOM</para>
         /// </summary>
@@ -83,6 +105,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The time when the policy was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-12-16T02:00:23Z</para>
         /// </summary>
@@ -91,6 +115,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123123</para>
         /// </summary>
@@ -99,7 +125,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>workspace</para>
+        /// <para>The workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPolicyStorageRequirementsResponseBody : TeaModel {
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>0CEC5375-C554-562B-A65F-9A629907C1F0</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of storage requirements</para>
+        /// <para>The list of storage requirements.</para>
         /// </summary>
         [NameInMap("storageRequirements")]
         [Validation(Required=false)]
         public List<ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirements> StorageRequirements { get; set; }
         public class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirements : TeaModel {
             /// <summary>
-            /// <para>Collection of AddonReleases.</para>
+            /// <para>A collection of AddonRelease names.</para>
             /// </summary>
             [NameInMap("addonReleaseNames")]
             [Validation(Required=false)]
             public List<string> AddonReleaseNames { get; set; }
 
             /// <summary>
-            /// <para>API Version</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ApiVersion { get; set; }
 
             /// <summary>
-            /// <para>Resource kind</para>
+            /// <para>The kind of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Pod</para>
@@ -54,28 +54,28 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>Metadata</para>
+            /// <para>The metadata.</para>
             /// </summary>
             [NameInMap("metadata")]
             [Validation(Required=false)]
             public ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsMetadata Metadata { get; set; }
             public class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsMetadata : TeaModel {
                 /// <summary>
-                /// <para>Annotations</para>
+                /// <para>The annotations.</para>
                 /// </summary>
                 [NameInMap("annotations")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Annotations { get; set; }
 
                 /// <summary>
-                /// <para>Resource labels</para>
+                /// <para>The resource labels.</para>
                 /// </summary>
                 [NameInMap("labels")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Labels { get; set; }
 
                 /// <summary>
-                /// <para>Resource name</para>
+                /// <para>The resource name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pod-1234567</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Namespace</para>
+                /// <para>The namespace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>arms-prom</para>
@@ -97,14 +97,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Resource spec</para>
+            /// <para>The spec of the resource.</para>
             /// </summary>
             [NameInMap("spec")]
             [Validation(Required=false)]
             public ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsSpec Spec { get; set; }
             public class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsSpec : TeaModel {
                 /// <summary>
-                /// <para>Instance ID, which can be specified if you need to pinpoint to the instance level. It depends on the data in EntityStore.</para>
+                /// <para>The instance ID. Specify this parameter to query data at the instance level. This parameter depends on data in EntityStore.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>es-xxxxx</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>Prom Instance ID.</para>
+                /// <para>The ID of the Prometheus instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-bp122p85gthbniw8rsu9</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Instance { get; set; }
 
                 /// <summary>
-                /// <para>Prom instance name</para>
+                /// <para>The name of the Prometheus instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>category_predict</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string InstanceName { get; set; }
 
                 /// <summary>
-                /// <para>Optional parameter, determined based on the current environment type</para>
+                /// <para>Optional. The project is determined based on the current environment type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>datagrid_cdm</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>Region</para>
+                /// <para>The region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shenzhen</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>Storage sharing scope: Environment | Region | Workspace | Custom</para>
+                /// <para>The scope of storage sharing. Valid values: Environment, Region, Workspace, and Custom.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Region</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string ShareScope { get; set; }
 
                 /// <summary>
-                /// <para>Instance storage type</para>
+                /// <para>The storage type of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prometheus</para>
@@ -174,21 +174,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// <para>Tags to be applied to the target storage (injected as system tags)</para>
+                /// <para>The tags that need to be added to the destination storage. The tags are injected as system tags.</para>
                 /// </summary>
                 [NameInMap("systemTags")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> SystemTags { get; set; }
 
                 /// <summary>
-                /// <para>Tags to be applied to the target storage (injected as regular tags)</para>
+                /// <para>The tags that need to be added to the destination storage. The tags are injected as common tags.</para>
                 /// </summary>
                 [NameInMap("tags")]
                 [Validation(Required=false)]
                 public Dictionary<string, string> Tags { get; set; }
 
                 /// <summary>
-                /// <para>User ID</para>
+                /// <para>The user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12345678</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string UserId { get; set; }
 
                 /// <summary>
-                /// <para>Workspace</para>
+                /// <para>The workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test-api</para>
@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Storage requirement status</para>
+            /// <para>The status of the storage requirement.</para>
             /// </summary>
             [NameInMap("status")]
             [Validation(Required=false)]
             public ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsStatus Status { get; set; }
             public class ListIntegrationPolicyStorageRequirementsResponseBodyStorageRequirementsStatus : TeaModel {
                 /// <summary>
-                /// <para>Instance ID</para>
+                /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rmq-cn-uqm3ket1t0u</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Internal URL</para>
+                /// <para>The internal URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://192.168.xxxxxx">http://192.168.xxxxxx</a></para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string InterUrl { get; set; }
 
                 /// <summary>
-                /// <para>External URL</para>
+                /// <para>The internal URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://100.100.xxxxxx">http://100.100.xxxxxx</a></para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string IntraUrl { get; set; }
 
                 /// <summary>
-                /// <para>存储需求名称</para>
+                /// <para>The name of the storage requirement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sr-xxxx</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>存储需求项目</para>
+                /// <para>The project for the storage requirement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>jiuwu_algo</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Project { get; set; }
 
                 /// <summary>
-                /// <para>Prom\&quot;s metric center</para>
+                /// <para>The metric store of Prometheus.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxxx</para>
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string PromMetricStore { get; set; }
 
                 /// <summary>
-                /// <para>Region</para>
+                /// <para>The region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>Instance storage type</para>
+                /// <para>The storage type of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Prometheus</para>
@@ -297,7 +297,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string StorageType { get; set; }
 
                 /// <summary>
-                /// <para>Workspace.</para>
+                /// <para>The workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>default</para>

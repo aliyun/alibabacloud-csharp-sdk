@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Create Time.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-11T08:21:58Z</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace test</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether enabled.</para>
+        /// <para>Indicates whether the subscription is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>Filtering settings.</para>
+        /// <para>The filter settings.</para>
         /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
         public FilterSetting FilterSetting { get; set; }
 
         /// <summary>
-        /// <para>Notification policy UUID.</para>
+        /// <para>The UUID of the notification policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23123123</para>
@@ -71,21 +71,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NotifyStrategyId { get; set; }
 
         /// <summary>
-        /// <para>Push settings.</para>
+        /// <para>The push settings.</para>
         /// </summary>
         [NameInMap("pushingSetting")]
         [Validation(Required=false)]
         public SubscriptionForViewPushingSetting PushingSetting { get; set; }
         public class SubscriptionForViewPushingSetting : TeaModel {
             /// <summary>
-            /// <para>Alert push action integration ID list.</para>
+            /// <para>A list of action integration IDs for alert pushes.</para>
             /// </summary>
             [NameInMap("alertActionIds")]
             [Validation(Required=false)]
             public List<string> AlertActionIds { get; set; }
 
             /// <summary>
-            /// <para>Action plan ID.</para>
+            /// <para>The action plan ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123123</para>
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResponsePlanId { get; set; }
 
             /// <summary>
-            /// <para>Recovery push action integration ID list.</para>
+            /// <para>A list of action integration IDs for recovery pushes.</para>
             /// </summary>
             [NameInMap("restoreActionIds")]
             [Validation(Required=false)]
             public List<string> RestoreActionIds { get; set; }
 
             /// <summary>
-            /// <para>Template UUID.</para>
+            /// <para>The template UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123123123</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>UUID</para>
+        /// <para>The UUID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123123123</para>
@@ -124,11 +124,11 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SubscriptionId { get; set; }
 
         /// <summary>
-        /// <para>Name.</para>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Subscription test.</para>
+        /// <para>订阅测试</para>
         /// </summary>
         [NameInMap("subscriptionName")]
         [Validation(Required=false)]
@@ -142,12 +142,18 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string SubscriptionType { get; set; }
 
+        /// <summary>
+        /// <para>The source type of the synchronization policy.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;ARMS&quot;</para>
+        /// </summary>
         [NameInMap("syncFromType")]
         [Validation(Required=false)]
         public string SyncFromType { get; set; }
 
         /// <summary>
-        /// <para>Update Time.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-05-23T02:29:02Z</para>
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123123123</para>
@@ -167,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>workspace</para>
+        /// <para>Specifies the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

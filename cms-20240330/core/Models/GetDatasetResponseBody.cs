@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetDatasetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time the dataset was created, as a Unix timestamp.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_dataset</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string DatasetName { get; set; }
 
         /// <summary>
+        /// <para>The description of the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the dataset is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>
@@ -51,11 +60,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The data schema of the dataset.</para>
+        /// </summary>
         [NameInMap("schema")]
         [Validation(Required=false)]
         public Dictionary<string, IndexKey> Schema { get; set; }
 
         /// <summary>
+        /// <para>The time the dataset was last updated, as a Unix timestamp.</para>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>
         /// </summary>

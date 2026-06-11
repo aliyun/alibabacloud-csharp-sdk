@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class Pagination : TeaModel {
         /// <summary>
-        /// <para>页码（从 1 开始）</para>
+        /// <para>The current page number.</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页数量</para>
+        /// <para>The number of entries returned per page.</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

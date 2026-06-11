@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UmodelEntityFilter : TeaModel {
         /// <summary>
-        /// <para>过滤字段名</para>
+        /// <para>The field name to filter on.</para>
         /// </summary>
         [NameInMap("field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>过滤操作符，仅支持 = 或 !=</para>
+        /// <para>The comparison operator to use. Supported operators include <c>=</c>, <c>&gt;</c>, <c>&lt;</c>, <c>!=</c>, <c>IN</c>, and <c>NOT IN</c>.</para>
         /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>过滤值</para>
+        /// <para>The value to compare the field against.</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

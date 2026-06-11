@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetContextRequest : TeaModel {
         /// <summary>
+        /// <para>Whether to return the context in a formatted structure. Valid values: <c>true</c> and <c>false</c>. Default value: <c>false</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

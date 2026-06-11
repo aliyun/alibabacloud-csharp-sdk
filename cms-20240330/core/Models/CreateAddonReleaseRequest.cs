@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// <para>The Addon name of the component that needs to be monitored.</para>
+        /// <para>The name of the add-on to integrate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonName { get; set; }
 
         /// <summary>
-        /// <para>The language type of the component.</para>
+        /// <para>The language of the add-on.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AliyunLang { get; set; }
 
         /// <summary>
-        /// <para>Whether it is a dry run, default is false.</para>
+        /// <para>Specifies whether to perform a dry run. The default value is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,14 +41,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Field rules</para>
+        /// <para>The entity discovery rules.</para>
         /// </summary>
         [NameInMap("entityRules")]
         [Validation(Required=false)]
         public EntityDiscoverRule EntityRules { get; set; }
 
         /// <summary>
-        /// <para>Environment type. If the Policy type is CS and ECS, use accordingly; otherwise, it is unified as Cloud.</para>
+        /// <para>The environment type. Set this parameter to CS for container environments or ECS for ECS environments. For all other environment types, set this parameter to Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CS</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EnvType { get; set; }
 
         /// <summary>
-        /// <para>Parent AddonReleaseId.</para>
+        /// <para>The ID of the parent AddonRelease.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-xxxxxxxxxxx</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ParentAddonReleaseId { get; set; }
 
         /// <summary>
-        /// <para>The plugin name after access. If not specified, a default rule name will be generated.</para>
+        /// <para>The name of the release after the integration. If you do not specify this parameter, a default name is generated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-gpu-integration-name</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ReleaseName { get; set; }
 
         /// <summary>
-        /// <para>Input metadata.</para>
+        /// <para>The metadata.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Values { get; set; }
 
         /// <summary>
-        /// <para>The version of the Addon component that needs to be monitored.</para>
+        /// <para>The version of the add-on to integrate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>The workspace name for installing the component resources.</para>
+        /// <para>The name of the workspace where the add-on is installed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>

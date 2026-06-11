@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPolicyPodMonitorsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>et15prod-et15storage</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>PodMonitor list</para>
+        /// <para>The list of PodMonitors.</para>
         /// </summary>
         [NameInMap("podMonitors")]
         [Validation(Required=false)]
         public List<ListIntegrationPolicyPodMonitorsResponseBodyPodMonitors> PodMonitors { get; set; }
         public class ListIntegrationPolicyPodMonitorsResponseBodyPodMonitors : TeaModel {
             /// <summary>
-            /// <para>Addon name.</para>
+            /// <para>The name of the add-on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud-ecs</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonName { get; set; }
 
             /// <summary>
-            /// <para>Addon Release name.</para>
+            /// <para>The name of the add-on release.</para>
             /// 
             /// <b>Example:</b>
             /// <para>release-2345678</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonReleaseName { get; set; }
 
             /// <summary>
-            /// <para>Addon version.</para>
+            /// <para>The version of the add-on.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.0.1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AddonVersion { get; set; }
 
             /// <summary>
-            /// <para>Configuration yaml.</para>
+            /// <para>The YAML configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apiVersion: xxxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ConfigYaml { get; set; }
 
             /// <summary>
-            /// <para>Enable status.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>run</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EnableStatus { get; set; }
 
             /// <summary>
-            /// <para>Encrypt yaml.</para>
+            /// <para>Indicates whether the YAML file is encrypted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YXBpVmVyc2lvbjogeHh4eHgK</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public bool? EncryptYaml { get; set; }
 
             /// <summary>
-            /// <para>Instance endpoints.</para>
+            /// <para>The endpoints of the instance.</para>
             /// </summary>
             [NameInMap("endpoints")]
             [Validation(Required=false)]
             public List<ListIntegrationPolicyPodMonitorsResponseBodyPodMonitorsEndpoints> Endpoints { get; set; }
             public class ListIntegrationPolicyPodMonitorsResponseBodyPodMonitorsEndpoints : TeaModel {
                 /// <summary>
-                /// <para>Collection interval</para>
+                /// <para>The collection interval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30s</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Interval { get; set; }
 
                 /// <summary>
-                /// <para>Number of matched targets</para>
+                /// <para>The number of matched targets.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public long? MatchedTargetCount { get; set; }
 
                 /// <summary>
-                /// <para>Metric collection path</para>
+                /// <para>The metric collection path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/metrics</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>Port number</para>
+                /// <para>The port number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9100</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// <para>Target port</para>
+                /// <para>The target port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>https</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>Number of matched pods</para>
+            /// <para>The number of matched pods.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? MatchedPodCount { get; set; }
 
             /// <summary>
-            /// <para>Collection name.</para>
+            /// <para>The collection name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>znzmo_entity_test</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Namespace</para>
+            /// <para>The namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sla-ns-d5aeb2b4f91b47</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Policy ID.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-c9efed2b99c348d49e589c5f780fc074</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD8BA7D6-995D-578D-9941-78B0FECD14B5</para>

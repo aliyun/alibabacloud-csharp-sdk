@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentResourceStruct : TeaModel {
         /// <summary>
-        /// <para>Description information.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Production environment web server.</para>
+        /// <para>生产环境 Web 服务器</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Incident ID.</para>
+        /// <para>The event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of this resource in the event.</para>
+        /// <para>The unique ID of the resource in the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>res-001</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentResourceId { get; set; }
 
         /// <summary>
-        /// <para>Event resource details object.</para>
+        /// <para>The details object for the event resource.</para>
         /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]
         public IncidentResourceDetail Resource { get; set; }
 
         /// <summary>
-        /// <para>Source.</para>
+        /// <para>The source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudmonitor</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Time.</para>
+        /// <para>The timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-12345</para>

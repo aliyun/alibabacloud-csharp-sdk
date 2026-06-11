@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentTimelineForView : TeaModel {
         /// <summary>
+        /// <para>The type of status change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;Open -&gt; In Progress&quot;</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ChangeType { get; set; }
 
         /// <summary>
+        /// <para>The content of the timeline event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;{&quot;action&quot;:&quot;restart&quot;,&quot;resourceId&quot;:&quot;i-bp123456&quot;}&quot;</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public object Content { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the incident.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;a1b2c3d4-e5f6-7890-1234-567890abcdef&quot;</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string IncidentUuid { get; set; }
 
+        /// <summary>
+        /// <para>Information about the operator.</para>
+        /// </summary>
         [NameInMap("operator")]
         [Validation(Required=false)]
         public ContactForIncidentView Operator { get; set; }
 
         /// <summary>
+        /// <para>The UNIX timestamp when the timeline event occurred.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1743876000000</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Time { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the timeline record.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;x1y2z3a4-b5c6-d7e8-f9g0-h1i2j3k4l5m6&quot;</para>
         /// </summary>
@@ -53,11 +66,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string TimelineUuid { get; set; }
 
+        /// <summary>
+        /// <para>The title of the timeline event.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;故障已升级至值班主管&quot;</para>
+        /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
+        /// <para>The type of the timeline event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;Comment&quot;</para>
         /// </summary>
@@ -66,6 +87,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;user-abc123&quot;</para>
         /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;ws-xyz789&quot;</para>
         /// </summary>

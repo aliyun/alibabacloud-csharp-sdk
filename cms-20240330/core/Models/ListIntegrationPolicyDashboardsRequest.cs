@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListIntegrationPolicyDashboardsRequest : TeaModel {
         /// <summary>
-        /// <para>Addon Name.</para>
+        /// <para>The add-on name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-default</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonName { get; set; }
 
         /// <summary>
-        /// <para>Query Language</para>
+        /// <para>The query language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>Component Scenario.</para>
+        /// <para>The component scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>databse</para>

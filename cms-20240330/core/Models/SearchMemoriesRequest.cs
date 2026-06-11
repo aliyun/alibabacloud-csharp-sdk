@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SearchMemoriesRequest : TeaModel {
         /// <summary>
+        /// <para>The agent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>972772996913709056</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The app ID assigned by the merchant.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mm_480d961a1b5e4efe84603f4cbc0f</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>The filter conditions.</para>
+        /// </summary>
         [NameInMap("filters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Filters { get; set; }
 
         /// <summary>
+        /// <para>The query text.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>What I like</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to rerank the search results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -54,6 +65,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RetrievalOption { get; set; }
 
         /// <summary>
+        /// <para>The run ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_session_001</para>
         /// </summary>
@@ -62,6 +75,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RunId { get; set; }
 
         /// <summary>
+        /// <para>The search type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>experience</para>
         /// </summary>
@@ -70,6 +85,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string SearchType { get; set; }
 
         /// <summary>
+        /// <para>The similarity threshold.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.3</para>
         /// </summary>
@@ -78,6 +95,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public double? Threshold { get; set; }
 
         /// <summary>
+        /// <para>The number of top-K results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -86,6 +105,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? TopK { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_session_001</para>
         /// </summary>

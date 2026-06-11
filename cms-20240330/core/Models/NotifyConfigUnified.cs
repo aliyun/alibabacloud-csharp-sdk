@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class NotifyConfigUnified : TeaModel {
         /// <summary>
-        /// <para>一周中发送通知的星期，1-7</para>
+        /// <para>The active days of the week.</para>
         /// </summary>
         [NameInMap("activeDays")]
         [Validation(Required=false)]
         public List<int?> ActiveDays { get; set; }
 
         /// <summary>
-        /// <para>每天通知生效结束时间</para>
+        /// <para>The end of the daily active time window. On active days, the system sends notifications only before this time. Format: <c>HH:mm</c>.</para>
         /// </summary>
         [NameInMap("activeEndTime")]
         [Validation(Required=false)]
         public string ActiveEndTime { get; set; }
 
         /// <summary>
-        /// <para>每天通知生效开始时间</para>
+        /// <para>The start of the daily active time window. On active days, the system sends notifications only after this time. Format: <c>HH:mm</c>.</para>
         /// </summary>
         [NameInMap("activeStartTime")]
         [Validation(Required=false)]
         public string ActiveStartTime { get; set; }
 
         /// <summary>
-        /// <para>通知渠道列表</para>
+        /// <para>The notification channels that receive alerts.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("channels")]
@@ -39,14 +39,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<DirectNotifyChannel> Channels { get; set; }
 
         /// <summary>
-        /// <para>通道沉默周期（秒）</para>
+        /// <para>The silence time in seconds. After sending a notification, the system suppresses new notifications for the same alert for this duration.</para>
         /// </summary>
         [NameInMap("silenceTimeSecs")]
         [Validation(Required=false)]
         public int? SilenceTimeSecs { get; set; }
 
         /// <summary>
-        /// <para>通知配置类型</para>
+        /// <para>The type of the notification configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("type")]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>UTC 时区偏移量</para>
+        /// <para>The UTC offset for <c>activeStartTime</c> and <c>activeEndTime</c>. The format is <c>[+/-]HH:mm</c>. For example, <c>+08:00</c> represents the UTC+8 time zone.</para>
         /// </summary>
         [NameInMap("utcOffset")]
         [Validation(Required=false)]

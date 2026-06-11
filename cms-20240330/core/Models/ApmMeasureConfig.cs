@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ApmMeasureConfig : TeaModel {
         /// <summary>
-        /// <para>分组维度</para>
+        /// <para>An array of dimension keys used to group the results.</para>
         /// </summary>
         [NameInMap("groupBy")]
         [Validation(Required=false)]
         public List<string> GroupBy { get; set; }
 
         /// <summary>
-        /// <para>指标代码</para>
+        /// <para>The unique code that identifies the metric.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("measureCode")]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string MeasureCode { get; set; }
 
         /// <summary>
-        /// <para>查询时间窗口（秒）</para>
+        /// <para>The aggregation period in seconds, which determines the time granularity of data points.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("windowSecs")]

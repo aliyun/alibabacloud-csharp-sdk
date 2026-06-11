@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class SearchContextRequest : TeaModel {
+        /// <summary>
+        /// <para>Filter conditions</para>
+        /// </summary>
         [NameInMap("filter")]
         [Validation(Required=false)]
         public Dictionary<string, object> Filter { get; set; }
 
         /// <summary>
+        /// <para>Whether to format</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? Formatted { get; set; }
 
         /// <summary>
+        /// <para>Limit the number of items returned</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -30,6 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? Limit { get; set; }
 
         /// <summary>
+        /// <para>Query content</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>Retrieval option</para>
+        /// 
         /// <b>Example:</b>
         /// <para>reranker,llm_rank</para>
         /// </summary>
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RetrievalOption { get; set; }
 
         /// <summary>
+        /// <para>Similarity threshold</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.3</para>
         /// </summary>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DatasourceConfigUnified : TeaModel {
         /// <summary>
-        /// <para>Prometheus 实例 ID（type=PROMETHEUS 时使用）</para>
+        /// <para>The unique instance ID.</para>
         /// </summary>
         [NameInMap("instanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>地域 ID（各类型可选，缺省与规则/网关一致）</para>
+        /// <para>The region ID.</para>
         /// </summary>
         [NameInMap("regionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>数据源类型</para>
+        /// <para>The type of the data source.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("type")]

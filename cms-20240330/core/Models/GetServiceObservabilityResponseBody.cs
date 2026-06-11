@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetServiceObservabilityResponseBody : TeaModel {
         /// <summary>
-        /// <para>Endpoint and Authentication Information</para>
+        /// <para>The endpoint and authentication information.</para>
         /// </summary>
         [NameInMap("entryPointInfo")]
         [Validation(Required=false)]
         public GetServiceObservabilityResponseBodyEntryPointInfo EntryPointInfo { get; set; }
         public class GetServiceObservabilityResponseBodyEntryPointInfo : TeaModel {
             /// <summary>
-            /// <para>Authentication Token for Data Reporting</para>
+            /// <para>The authentication token for reporting data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gaddp****@de20f2<em><b>1ce</b></em></para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthToken { get; set; }
 
             /// <summary>
-            /// <para>Private Network Access Address</para>
+            /// <para>The internal endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou-intranet.log.aliyuncs.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrivateDomain { get; set; }
 
             /// <summary>
-            /// <para>SLS Project</para>
+            /// <para>The Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>proj-xtrace-xxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>Public Network Access Address</para>
+            /// <para>The public endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou.log.aliyuncs.com</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Billing Type</para>
+        /// <para>The billing type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms=serverless;xtrace=serverless</para>
@@ -69,14 +69,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FeeType { get; set; }
 
         /// <summary>
-        /// <para>Quota Configuration</para>
+        /// <para>The quota configuration.</para>
         /// </summary>
         [NameInMap("quotas")]
         [Validation(Required=false)]
         public Dictionary<string, string> Quotas { get; set; }
 
         /// <summary>
-        /// <para>Region</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4852B9B5-345C-5CBC-A15F-786D83ECCBBA</para>
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>System Configuration</para>
+        /// <para>The system configuration.</para>
         /// </summary>
         [NameInMap("settings")]
         [Validation(Required=false)]
         public Dictionary<string, string> Settings { get; set; }
 
         /// <summary>
-        /// <para>Resource Initialization Status</para>
+        /// <para>The resource initialization status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Application Observability Type</para>
+        /// <para>The type of application observability.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apm</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Workspace Name</para>
+        /// <para>The workspace name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default-cms-1654218***343050-cn-hangzhou</para>

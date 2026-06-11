@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EventResourceForEventView : TeaModel {
+        /// <summary>
+        /// <para>The resource entity.</para>
+        /// </summary>
         [NameInMap("entity")]
         [Validation(Required=false)]
         public EventResourceForEventViewEntity Entity { get; set; }
         public class EventResourceForEventViewEntity : TeaModel {
             /// <summary>
+            /// <para>The product domain to which the resource belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;ECS&quot;</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Domain { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;i-bp123456&quot;</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityId { get; set; }
 
             /// <summary>
+            /// <para>The specific type of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>&quot;Instance&quot;</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityType { get; set; }
 
             /// <summary>
+            /// <para>Extra properties of the resource.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{ &quot;name&quot;: &quot;web-server-01&quot;, &quot;ip&quot;: &quot;10.0.0.1&quot; }</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The tags.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{ &quot;env&quot;: &quot;prod&quot;, &quot;project&quot;: &quot;payment-gateway&quot; }</para>
         /// </summary>

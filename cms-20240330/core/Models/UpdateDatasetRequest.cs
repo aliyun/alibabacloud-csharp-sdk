@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateDatasetRequest : TeaModel {
         /// <summary>
+        /// <para>The new description for the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test dataset</para>
         /// </summary>

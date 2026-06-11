@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleTimeSpan : TeaModel {
         /// <summary>
-        /// <para>Day of the week.</para>
+        /// <para>The days of the week.</para>
         /// </summary>
         [NameInMap("dayOfWeek")]
         [Validation(Required=false)]
         public List<int?> DayOfWeek { get; set; }
 
         /// <summary>
-        /// <para>End time, in HH:mm format.</para>
+        /// <para>The end time. The format is HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23:00</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Default time zone is Beijing Time: +0800.</para>
+        /// <para>The default value is +0800 (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>+0800</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string GmtOffset { get; set; }
 
         /// <summary>
-        /// <para>Start time, in HH:mm format.</para>
+        /// <para>The start time. The format is HH:mm.</para>
         /// 
         /// <b>Example:</b>
         /// <para>09:00</para>

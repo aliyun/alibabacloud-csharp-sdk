@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusVirtualInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Instance information.</para>
+        /// <para>A list of instances.</para>
         /// </summary>
         [NameInMap("instances")]
         [Validation(Required=false)]
         public List<ListPrometheusVirtualInstancesResponseBodyInstances> Instances { get; set; }
         public class ListPrometheusVirtualInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1750315319946</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>HTTP API URL.</para>
+            /// <para>The HTTP API URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxxxxxxx">http://xxxxxxxx</a></para>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string HttpApiUrl { get; set; }
 
             /// <summary>
-            /// <para>Applicable data source type: PROMETHEUS_DS</para>
-            /// <para>Prometheus instance ID</para>
+            /// <para>Returned for the <c>PROMETHEUS_DS</c> data source type.</para>
+            /// <para>The Prometheus instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-b8cfbbe94194ac37fe83f3d2d16a</para>
@@ -48,8 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Applicable query type: CMS_BASIC_QUERY.</para>
-            /// <para>Namespace of the metric</para>
+            /// <para>Returned for the <c>CMS_BASIC_QUERY</c> query type.</para>
+            /// <para>The namespace of the metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arms-prom</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-cloudspe</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>User ID.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17073812345</para>
@@ -80,16 +80,22 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        /// <summary>
+        /// <para>The maximum number of entries returned on each page.</para>
+        /// </summary>
         [NameInMap("maxResults")]
         [Validation(Required=false)]
         public string MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If all results are returned, this parameter is left empty.</para>
+        /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</para>
@@ -98,6 +104,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// </summary>
         [NameInMap("totalCount")]
         [Validation(Required=false)]
         public string TotalCount { get; set; }

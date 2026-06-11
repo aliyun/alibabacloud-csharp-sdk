@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContextStoresRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the context store.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-context-store</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContextStoreName { get; set; }
 
         /// <summary>
+        /// <para>The context type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>memory</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ContextType { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OCAQV0pBqldexv7EidbIZw==</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetMemoriesRequest : TeaModel {
         /// <summary>
+        /// <para>The application\&quot;s agent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>952730652285943809</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The Application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>150130323</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>The filter criteria.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;<b>strategy_type</b>&quot;:&quot;Fact&quot;}</para>
+        /// </summary>
         [NameInMap("filters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Filters { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The Run ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>jr-80ded1d6953c64ea</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RunId { get; set; }
 
         /// <summary>
+        /// <para>The User ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_user_001</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateContextStoreAPIKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The value of the API key. This value is returned only upon creation. Store it in a secure location.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The display name of the API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Production Service Key</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3B311FD9-A60B-55E0-A896-A0C73*********</para>
         /// </summary>

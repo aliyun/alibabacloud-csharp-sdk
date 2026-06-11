@@ -10,11 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListWorkspacesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Page size
-        /// Default value:
-        ///     50
-        /// Maximum value:
-        ///     50</para>
+        /// <para>The number of entries to return on each page. Default value: 50. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -24,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Pagination Token</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxxxxxx</para>
@@ -34,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Region</para>
+        /// <para>The region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>
@@ -47,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>Workspace name, fuzzy search</para>
+        /// <para>The name of the workspace. This parameter supports fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>
@@ -57,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string WorkspaceName { get; set; }
 
         /// <summary>
-        /// <para>Workspace name, exact match</para>
+        /// <para>The names of the workspaces. This parameter supports exact search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test-001</para>

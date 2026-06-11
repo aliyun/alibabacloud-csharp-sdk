@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteAddonReleaseRequest : TeaModel {
         /// <summary>
-        /// <para>Addon name. When AddonName is provided, it will ignore the ReleaseName parameter and batch uninstall all AddonReleases belonging to the same Addon.</para>
+        /// <para>The name of the add-on. If you specify this parameter, the ReleaseName parameter is ignored and all AddonReleases that belong to the add-on are uninstalled in a batch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-gpu</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AddonName { get; set; }
 
         /// <summary>
-        /// <para>Whether to force deletion, default is false.</para>
+        /// <para>Specifies whether to forcibly delete the add-on release. The default value is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

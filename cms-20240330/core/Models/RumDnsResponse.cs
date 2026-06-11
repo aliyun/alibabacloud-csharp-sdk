@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class RumDnsResponse : TeaModel {
         /// <summary>
+        /// <para>The domain name for RUM reporting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rum</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>The message returned if initialization fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The DNS initialization status of the domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

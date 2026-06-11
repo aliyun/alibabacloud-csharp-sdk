@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateContextRequest : TeaModel {
         /// <summary>
+        /// <para>The updated text for the long-term memory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Users prefer to first view the SLS error logs, index configuration, and the most recent Agent execution trace.</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The experience object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;taskType&quot;: &quot;troubleshooting&quot;,
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Experience { get; set; }
 
         /// <summary>
+        /// <para>A set of key-value pairs to attach to an object for storing custom information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;sessionId&quot;:&quot;test_session_001&quot;}</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
+        /// <para>The payload to update.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;userId&quot;: &quot;u-10001&quot;,
@@ -58,6 +66,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public Dictionary<string, object> Payload { get; set; }
 
         /// <summary>
+        /// <para>The trigger condition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Identify and troubleshoot SLs issues</para>
         /// </summary>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetAggTaskGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Aggregation task group.</para>
+        /// <para>The aggregation task group.</para>
         /// </summary>
         [NameInMap("aggTaskGroup")]
         [Validation(Required=false)]
         public GetAggTaskGroupResponseBodyAggTaskGroup AggTaskGroup { get; set; }
         public class GetAggTaskGroupResponseBodyAggTaskGroup : TeaModel {
             /// <summary>
-            /// <para>Aggregation task group configuration.</para>
+            /// <para>The configuration of the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>groups:</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AggTaskGroupConfig { get; set; }
 
             /// <summary>
-            /// <para>Summary of the aggregation task group configuration.</para>
+            /// <para>The summary of the aggregation task group configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a54136xxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AggTaskGroupConfigHash { get; set; }
 
             /// <summary>
-            /// <para>ID of the aggregation task group.</para>
+            /// <para>The ID of the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aggTaskGroup-xx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AggTaskGroupId { get; set; }
 
             /// <summary>
-            /// <para>Name of the aggregation task group.</para>
+            /// <para>The name of the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pipeline-aggtask-group</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AggTaskGroupName { get; set; }
 
             /// <summary>
-            /// <para>Scheduling expression for the aggregation task group when the scheduling mode is \&quot;Cron\&quot;.</para>
+            /// <para>The scheduling expression of the aggregation task group when the scheduling mode is set to Cron.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 1 3 * * ? *</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CronExpr { get; set; }
 
             /// <summary>
-            /// <para>Fixed delay time (in seconds) for scheduling.</para>
+            /// <para>The fixed delay time for scheduling, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? Delay { get; set; }
 
             /// <summary>
-            /// <para>Description of the aggregation task group.</para>
+            /// <para>The description of the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Second-level timestamp corresponding to the start time of scheduling (not yet effective).</para>
+            /// <para>The UNIX timestamp in seconds that corresponds to the start time of the scheduling. This parameter is not yet in effect.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757409495</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? FromTime { get; set; }
 
             /// <summary>
-            /// <para>Maximum number of retries for executing the aggregation task.</para>
+            /// <para>The maximum number of retries to execute the aggregation task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? MaxRetries { get; set; }
 
             /// <summary>
-            /// <para>Maximum retry time for executing the aggregation task.</para>
+            /// <para>The maximum runtime of the aggregation task, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public int? MaxRunTimeInSeconds { get; set; }
 
             /// <summary>
-            /// <para>Pre-check configuration.</para>
+            /// <para>The dry run configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;rw-xx&quot;,&quot;query&quot;:&quot;noPrecheck&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;none&quot;}</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PrecheckString { get; set; }
 
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Scheduling mode.</para>
+            /// <para>The scheduling mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FixedRate</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ScheduleMode { get; set; }
 
             /// <summary>
-            /// <para>Scheduling time expression.</para>
+            /// <para>The scheduling time expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@m</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ScheduleTimeExpr { get; set; }
 
             /// <summary>
-            /// <para>ID of the source Prometheus instance for the aggregation task group.</para>
+            /// <para>The ID of the source Prometheus instance for the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-xxx</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string SourcePrometheusId { get; set; }
 
             /// <summary>
-            /// <para>Status of the aggregation task group.</para>
+            /// <para>The status of the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -187,14 +187,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Resource group tags</para>
+            /// <para>The tags of the resource group.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<GetAggTaskGroupResponseBodyAggTaskGroupTags> Tags { get; set; }
             public class GetAggTaskGroupResponseBodyAggTaskGroupTags : TeaModel {
                 /// <summary>
-                /// <para>Key of the resource group tag.</para>
+                /// <para>The key of the resource group tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>key1</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             }
 
             /// <summary>
-            /// <para>The target Prometheus instance ID of the aggregation task group.</para>
+            /// <para>The ID of the target Prometheus instance for the aggregation task group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rw-xxx</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string TargetPrometheusId { get; set; }
 
             /// <summary>
-            /// <para>The second-level timestamp corresponding to the end time of the scheduling.</para>
+            /// <para>The UNIX timestamp in seconds that corresponds to the end time of the scheduling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757409495</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public long? ToTime { get; set; }
 
             /// <summary>
-            /// <para>The update time (timestamp) of the aggregation task group.</para>
+            /// <para>The time when the aggregation task group was updated. This is a timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1757409499000</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The user to whom the aggregation task group belongs.</para>
+            /// <para>The user to which the aggregation task group belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxx</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68DAF543-35DF-5762-BE90-F5C00B5DC036</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

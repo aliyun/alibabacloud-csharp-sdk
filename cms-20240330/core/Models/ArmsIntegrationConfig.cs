@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ArmsIntegrationConfig : TeaModel {
         /// <summary>
-        /// <para>是否启用 ARMS 集成</para>
+        /// <para>Whether ARMS integration is enabled.</para>
         /// </summary>
         [NameInMap("enabled")]
         [Validation(Required=false)]

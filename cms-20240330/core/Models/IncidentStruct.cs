@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentStruct : TeaModel {
         /// <summary>
-        /// <para>Content.</para>
+        /// <para>The content of the event.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Detected that the connection count of RDS instance rds-bp1234567890abcdef has reached 1000, triggering an alert.</para>
+        /// <para>检测到 RDS 实例 rds-bp1234567890abcdef 的连接数达到 1000，已触发告警。</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>List of escalation policies.</para>
+        /// <para>The list of escalation policies.</para>
         /// </summary>
         [NameInMap("escalations")]
         [Validation(Required=false)]
         public List<IncidentEscalationStruct> Escalations { get; set; }
 
         /// <summary>
-        /// <para>Incident ID.</para>
+        /// <para>The unique ID of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>incident-001</para>
@@ -37,21 +37,21 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentId { get; set; }
 
         /// <summary>
-        /// <para>Associated incident contingency plan.</para>
+        /// <para>The associated incident plan.</para>
         /// </summary>
         [NameInMap("incidentPlan")]
         [Validation(Required=false)]
         public IncidentPlanStruct IncidentPlan { get; set; }
 
         /// <summary>
-        /// <para>Associated resource details.</para>
+        /// <para>The details of the associated resource.</para>
         /// </summary>
         [NameInMap("resource")]
         [Validation(Required=false)]
         public IncidentResourceDetail Resource { get; set; }
 
         /// <summary>
-        /// <para>Incident severity level.</para>
+        /// <para>The severity level of the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>P1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>Status.</para>
+        /// <para>The current status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OPEN</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Time.</para>
+        /// <para>The timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -81,17 +81,17 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? Time { get; set; }
 
         /// <summary>
-        /// <para>Title.</para>
+        /// <para>The title of the event.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Excessively high database connection count.</para>
+        /// <para>数据库连接数过高</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user-12345</para>

@@ -10,60 +10,63 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ServerResponseManageAlertRulesResult : TeaModel {
         /// <summary>
-        /// <para>响应码</para>
+        /// <para>The operation status code.</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The result of the operation.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ManageAlertRulesResult Data { get; set; }
 
         /// <summary>
-        /// <para>错误消息</para>
+        /// <para>A message detailing the outcome of the request, such as a success message or an error description.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>分页 Token</para>
+        /// <para>The token used to retrieve the next page of results. If the token is not returned, there are no more results.</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>页码</para>
+        /// <para>The current page number.</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页大小</para>
+        /// <para>The number of entries per page.</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求 ID</para>
+        /// <para>The unique ID for the request. Provide this ID when contacting support for assistance.</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>是否成功</para>
+        /// <para>Indicates whether the request succeeded (<c>true</c>) or failed (<c>false</c>).</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>总数</para>
+        /// <para>The total number of entries that match the query.</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

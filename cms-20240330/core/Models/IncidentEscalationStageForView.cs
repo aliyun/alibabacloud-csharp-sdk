@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentEscalationStageForView : TeaModel {
         /// <summary>
+        /// <para>The number of loop notifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? CycleNotifyCount { get; set; }
 
         /// <summary>
+        /// <para>The loop notification interval.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -25,11 +29,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public int? CycleNotifyInterval { get; set; }
 
+        /// <summary>
+        /// <para>The effective time range.</para>
+        /// </summary>
         [NameInMap("effectTimeRange")]
         [Validation(Required=false)]
         public EffectTimeRange EffectTimeRange { get; set; }
 
         /// <summary>
+        /// <para>The stage index.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,11 +47,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public int? Index { get; set; }
 
+        /// <summary>
+        /// <para>The list of notification channels.</para>
+        /// </summary>
         [NameInMap("notifyChannels")]
         [Validation(Required=false)]
         public List<NotifyChannel> NotifyChannels { get; set; }
 
         /// <summary>
+        /// <para>The target event state.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;Open&quot;</para>
         /// </summary>
@@ -52,6 +65,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TargetIncidentState { get; set; }
 
         /// <summary>
+        /// <para>The trigger delay time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>

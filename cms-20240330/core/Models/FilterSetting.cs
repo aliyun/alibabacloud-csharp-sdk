@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class FilterSetting : TeaModel {
+        /// <summary>
+        /// <para>The subscription conditions.</para>
+        /// </summary>
         [NameInMap("conditions")]
         [Validation(Required=false)]
         public List<FilterSettingConditions> Conditions { get; set; }
         public class FilterSettingConditions : TeaModel {
             /// <summary>
+            /// <para>The field.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>severity</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Field { get; set; }
 
             /// <summary>
+            /// <para>The comparison operator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>EQ</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Op { get; set; }
 
             /// <summary>
+            /// <para>The value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CRITICAL</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The expression.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1 and 2 or 3</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Expression { get; set; }
 
         /// <summary>
+        /// <para>The relationship between conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AND</para>
         /// </summary>

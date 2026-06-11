@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleLabelFilter : TeaModel {
+        /// <summary>
+        /// <para>The label filter.</para>
+        /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public Dictionary<string, string> Labels { get; set; }
 
         /// <summary>
+        /// <para>The relationship operator between multiple labels.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AND</para>
         /// </summary>

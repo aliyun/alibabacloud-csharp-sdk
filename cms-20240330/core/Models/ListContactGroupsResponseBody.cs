@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContactGroupsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of contact groups.</para>
+        /// </summary>
         [NameInMap("contactGroups")]
         [Validation(Required=false)]
         public List<ListContactGroupsResponseBodyContactGroups> ContactGroups { get; set; }
         public class ListContactGroupsResponseBodyContactGroups : TeaModel {
             /// <summary>
+            /// <para>The contact group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -21,11 +26,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [Validation(Required=false)]
             public string ContactGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The contact IDs in the group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>[&quot;Demo meeting&quot;]</para>
+            /// </summary>
             [NameInMap("contactIds")]
             [Validation(Required=false)]
             public List<string> ContactIds { get; set; }
 
             /// <summary>
+            /// <para>The name of the contact group.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -40,6 +53,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The returned page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -48,6 +63,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -56,7 +73,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
@@ -66,6 +83,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15</para>
         /// </summary>

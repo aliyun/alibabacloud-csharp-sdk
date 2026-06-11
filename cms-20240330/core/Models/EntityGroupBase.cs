@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class EntityGroupBase : TeaModel {
+        /// <summary>
+        /// <para>The entity description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS 实例</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The entity ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eg-1234567890</para>
         /// </summary>
@@ -21,15 +29,26 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string EntityGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The entity name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS 全部实体</para>
+        /// </summary>
         [NameInMap("entityGroupName")]
         [Validation(Required=false)]
         public string EntityGroupName { get; set; }
 
+        /// <summary>
+        /// <para>A collection of entity query rules.</para>
+        /// </summary>
         [NameInMap("entityQueries")]
         [Validation(Required=false)]
         public List<EntityGroupBaseEntityQueries> EntityQueries { get; set; }
         public class EntityGroupBaseEntityQueries : TeaModel {
             /// <summary>
+            /// <para>The entity type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acs.ecs.instance</para>
             /// </summary>
@@ -38,6 +57,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string EntityType { get; set; }
 
             /// <summary>
+            /// <para>The Structured Process Language (SPL) search statement.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</para>
             /// </summary>
@@ -47,11 +68,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         }
 
+        /// <summary>
+        /// <para>The rule for entity discovery.</para>
+        /// </summary>
         [NameInMap("entityRules")]
         [Validation(Required=false)]
         public EntityDiscoverRule EntityRules { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-heyuan</para>
         /// </summary>
@@ -60,6 +86,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1654218***343050</para>
         /// </summary>
@@ -68,6 +96,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string UserId { get; set; }
 
         /// <summary>
+        /// <para>The workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default-cms-1654218***343050-cn-hangzhou</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DirectNotifyChannel : TeaModel {
         /// <summary>
-        /// <para>通知对象标识列表</para>
+        /// <para>An array of recipient identifiers. The format of each identifier depends on the <c>type</c>. For example, if <c>type</c> is <c>email</c>, the identifiers are email addresses.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("identifiers")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public List<string> Identifiers { get; set; }
 
         /// <summary>
-        /// <para>通知渠道类型</para>
+        /// <para>The notification channel type. For example, <c>sms</c> or <c>email</c>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("type")]

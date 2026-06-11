@@ -11,9 +11,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
     public class CreateTicketRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>Access token expiration time (in seconds), which is the expiration time for the user to access the page interface. The default value is 86400 seconds (one day), and the range of values is from 0 to 86400 seconds (one day).</description></item>
-        /// <item><description>The access token expiration time is the minimum value between <c>accessTokenExpirationTime</c> and <c>expirationTime</c>.</description></item>
-        /// <item><description>If called through STS, the access token expiration time (i.e., the time during which the user can access the page interface) is the minimum value among <c>accessTokenExpirationTime</c>, <c>expirationTime</c>, and the STS expiration time.</description></item>
+        /// <item><description><para>The expiration time of the access token, in seconds. This is the period during which a user can access the page APIs. The value can range from 0 to 86,400 seconds (one day). The default value is 86,400 seconds (one day).</para>
+        /// </description></item>
+        /// <item><description><para>The effective expiration time of the access token is the minimum value of accessTokenExpirationTime and expirationTime.</para>
+        /// </description></item>
+        /// <item><description><para>If you call the operation using a Security Token Service (STS) token, the effective expiration time of the access token is the minimum value of accessTokenExpirationTime, expirationTime, and the expiration time of the STS token.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>Expiration time (in seconds), which is the expiration time for the embedded page URL. The default value is 86400 seconds (one day), and the range of values is from 0 to 2592000 seconds (30 days).</description></item>
+        /// <item><description>The expiration time of the URL for the embedded page, in seconds. The value can range from 0 to 2,592,000 seconds (30 days). The default value is 86,400 seconds (one day).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

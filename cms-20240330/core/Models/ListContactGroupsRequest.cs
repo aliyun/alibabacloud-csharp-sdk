@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListContactGroupsRequest : TeaModel {
+        /// <summary>
+        /// <para>The contact group IDs.</para>
+        /// </summary>
         [NameInMap("contactGroupIds")]
         [Validation(Required=false)]
         public List<string> ContactGroupIds { get; set; }
 
         /// <summary>
+        /// <para>The name of the contact group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number. The default is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page. The default is 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

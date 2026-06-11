@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateNotifyStrategyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The UUID of the notification policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12312-31-23-123-1-23123</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NotifyStrategyId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request. This is a unique identifier for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

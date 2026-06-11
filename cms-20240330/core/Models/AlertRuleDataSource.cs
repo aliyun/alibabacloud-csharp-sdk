@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleDataSource : TeaModel {
         /// <summary>
-        /// <para>Applicable data source type: APM_DS.
-        /// Application type: </para>
+        /// <para>Applies to the APM_DS data source type.</para>
+        /// <para>The type of the application. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>apm.</description></item>
+        /// <item><description>apm</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,15 +24,15 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AppType { get; set; }
 
         /// <summary>
-        /// <para>Applicable data source type: SLS_MULTI_DS.
-        /// List of sub-data sources.</para>
+        /// <para>Applies to the SLS_MULTI_DS data source type.</para>
+        /// <para>A list of sub-data sources.</para>
         /// </summary>
         [NameInMap("dsList")]
         [Validation(Required=false)]
         public List<AlertRuleDataSourceDsList> DsList { get; set; }
         public class AlertRuleDataSourceDsList : TeaModel {
             /// <summary>
-            /// <para>SLS project</para>
+            /// <para>The SLS project.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mySlsProject</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>LogStore/MetricStore name.</para>
+            /// <para>The name of the LogStore or MetricStore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mySlsLogStore</para>
@@ -62,10 +62,12 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Store { get; set; }
 
             /// <summary>
-            /// <para>Type of SLS data sub-source:</para>
+            /// <para>The type of the SLS sub-data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SLS_LOG_DS: LogStore data source.</description></item>
-            /// <item><description>SLS_METRIC_DS: MetricStore data source.</description></item>
+            /// <item><description><para>SLS_LOG_DS: A LogStore data source.</para>
+            /// </description></item>
+            /// <item><description><para>SLS_METRIC_DS: A MetricStore data source.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,8 +80,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
-        /// <para>Applicable data source type: PROMETHEUS_DS.
-        /// Prometheus instance ID.</para>
+        /// <para>Applies to the PROMETHEUS_DS data source type.</para>
+        /// <para>The ID of the Prometheus instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rw-bbe8961b4a59be0</para>
@@ -89,8 +91,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Applicable data source type: ENTERPRISE_DS.
-        /// Name of the enterprise cloud monitoring metric repository.</para>
+        /// <para>Applies to the ENTERPRISE_DS data source type.</para>
+        /// <para>The name of the Hybrid Cloud Monitoring metric repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-default</para>
@@ -100,8 +102,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>Applicable data source types: APM_DS, PROMETHEUS_DS.
-        /// The regionId to which the data source belongs.</para>
+        /// <para>Applies to the APM_DS and PROMETHEUS_DS data source types.</para>
+        /// <para>The ID of the region where the data source is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -115,14 +117,19 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>Data source type.
-        /// Valid values:</para>
+        /// <para>The data source type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PROMETHEUS_DS: Prometheus data source.</description></item>
-        /// <item><description>SLS_MULTI_DS: SLS data source.</description></item>
-        /// <item><description>APM_DS: Application monitoring data source.</description></item>
-        /// <item><description>CMS_BASIC_DS: Basic cloud monitoring data source.</description></item>
-        /// <item><description>ENTERPRISE_DS: Enterprise cloud monitoring data source.</description></item>
+        /// <item><description><para>PROMETHEUS_DS: A Prometheus data source.</para>
+        /// </description></item>
+        /// <item><description><para>SLS_MULTI_DS: An SLS data source.</para>
+        /// </description></item>
+        /// <item><description><para>APM_DS: An Application Monitoring data source.</para>
+        /// </description></item>
+        /// <item><description><para>CMS_BASIC_DS: A basic Cloud Monitor data source.</para>
+        /// </description></item>
+        /// <item><description><para>ENTERPRISE_DS: A Hybrid Cloud Monitoring data source.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

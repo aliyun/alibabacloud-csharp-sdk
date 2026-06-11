@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ExecuteQueryRequest : TeaModel {
         /// <summary>
+        /// <para>The query statement to execute.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>The query type. Valid values: SQL and SPL.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

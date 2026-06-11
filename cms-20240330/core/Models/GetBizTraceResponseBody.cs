@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetBizTraceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The business trace.</para>
+        /// </summary>
         [NameInMap("item")]
         [Validation(Required=false)]
         public BizTraceConfig Item { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>

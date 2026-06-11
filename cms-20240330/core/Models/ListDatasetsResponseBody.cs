@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListDatasetsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of dataset objects.</para>
+        /// </summary>
         [NameInMap("datasets")]
         [Validation(Required=false)]
         public List<ListDatasetsResponseBodyDatasets> Datasets { get; set; }
         public class ListDatasetsResponseBodyDatasets : TeaModel {
             /// <summary>
+            /// <para>The time the dataset was created, as a UNIX timestamp.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +28,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The name of the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_dataset</para>
             /// </summary>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string DatasetName { get; set; }
 
             /// <summary>
+            /// <para>The description of the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test dataset</para>
             /// </summary>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The ID of the region where the dataset resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -48,6 +58,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The time the dataset was last updated, as a UNIX timestamp.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</para>
             /// 
             /// <b>Example:</b>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the workspace that contains the dataset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>workspace-test</para>
             /// </summary>
@@ -68,6 +81,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of results returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -76,6 +91,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>A token to retrieve the next page of results. This element is returned only when the result set is truncated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>d9a48d977f45aa6fcf6981ed13b885b3fab0b124c12dcbbe70edce5d81ba****************</para>
         /// </summary>
@@ -84,6 +101,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>
         /// </summary>
@@ -92,6 +111,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of datasets that match the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>96</para>
         /// </summary>

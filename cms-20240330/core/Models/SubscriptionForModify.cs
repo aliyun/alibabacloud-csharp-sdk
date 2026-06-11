@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Filtering settings.</para>
+        /// <para>Filter settings.</para>
         /// </summary>
         [NameInMap("filterSetting")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public SubscriptionForModifyPushingSetting PushingSetting { get; set; }
         public class SubscriptionForModifyPushingSetting : TeaModel {
             /// <summary>
-            /// <para>Alert push action plan ID list.</para>
+            /// <para>A list of alert push action plan IDs.</para>
             /// </summary>
             [NameInMap("alertActionIds")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResponsePlanId { get; set; }
 
             /// <summary>
-            /// <para>Action integration plan ID list.</para>
+            /// <para>A list of action integration plan IDs.</para>
             /// </summary>
             [NameInMap("restoreActionIds")]
             [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test subscription.</para>
+        /// <para>测试订阅</para>
         /// </summary>
         [NameInMap("subscriptionName")]
         [Validation(Required=false)]

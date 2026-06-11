@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>写入上下文</para>
+        /// <para>Write to the context</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>写入上下文</para>
+        /// <para>Write to the context</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>写入上下文</para>
+        /// <para>Write to the context</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>写入上下文</para>
+        /// <para>Write to the context</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加记忆</para>
+        /// <para>Add new facts, messages, or metadata to a user’s memory store. The AddMemories endpoint accepts raw text or conversation turns and commits them asynchronously, preparing the memories for subsequent search, retrieval, and graph queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加记忆</para>
+        /// <para>Add new facts, messages, or metadata to a user’s memory store. The AddMemories endpoint accepts raw text or conversation turns and commits them asynchronously, preparing the memories for subsequent search, retrieval, and graph queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加记忆</para>
+        /// <para>Add new facts, messages, or metadata to a user’s memory store. The AddMemories endpoint accepts raw text or conversation turns and commits them asynchronously, preparing the memories for subsequent search, retrieval, and graph queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加记忆</para>
+        /// <para>Add new facts, messages, or metadata to a user’s memory store. The AddMemories endpoint accepts raw text or conversation turns and commits them asynchronously, preparing the memories for subsequent search, retrieval, and graph queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -387,7 +387,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源所属资源组</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源所属资源组</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -495,7 +495,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源所属资源组</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -514,7 +514,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改资源所属资源组</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -533,12 +533,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install the access component, representing a single access attempt</para>
+        /// <para>Installs an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to create a site monitoring task</para>
+        /// <para>Creates a release for an add-on.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -620,12 +620,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install the access component, representing a single access attempt</para>
+        /// <para>Installs an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to create a site monitoring task</para>
+        /// <para>Creates a release for an add-on.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -707,12 +707,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install the access component, representing a single access attempt</para>
+        /// <para>Installs an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to create a site monitoring task</para>
+        /// <para>Creates a release for an add-on.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -731,12 +731,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install the access component, representing a single access attempt</para>
+        /// <para>Installs an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to create a site monitoring task</para>
+        /// <para>Creates a release for an add-on.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -755,7 +755,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Aggregation Task Group</para>
+        /// <para>Creates an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -867,7 +867,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Aggregation Task Group</para>
+        /// <para>Creates an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -979,7 +979,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Aggregation Task Group</para>
+        /// <para>Creates an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -998,7 +998,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Aggregation Task Group</para>
+        /// <para>Creates an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1017,8 +1017,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Webhook</para>
+        /// <para>Create a webhook</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an alert webhook to use as a notification recipient.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAlertWebhookRequest
@@ -1091,8 +1096,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Webhook</para>
+        /// <para>Create a webhook</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an alert webhook to use as a notification recipient.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAlertWebhookRequest
@@ -1165,8 +1175,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Webhook</para>
+        /// <para>Create a webhook</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an alert webhook to use as a notification recipient.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAlertWebhookRequest
@@ -1184,8 +1199,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Webhook</para>
+        /// <para>Create a webhook</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an alert webhook to use as a notification recipient.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAlertWebhookRequest
@@ -1203,7 +1223,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务链路</para>
+        /// <para>Creates a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1265,7 +1285,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务链路</para>
+        /// <para>Creates a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1327,7 +1347,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务链路</para>
+        /// <para>Creates a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1346,7 +1366,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务链路</para>
+        /// <para>Creates a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1365,7 +1385,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云资源中心</para>
+        /// <para>Creates a cloud resource.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1401,7 +1421,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云资源中心</para>
+        /// <para>Creates a cloud resource.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1437,7 +1457,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云资源中心</para>
+        /// <para>Creates a cloud resource.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1452,7 +1472,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建云资源中心</para>
+        /// <para>Creates a cloud resource.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1467,7 +1487,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文库</para>
+        /// <para>Creates a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1529,7 +1549,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文库</para>
+        /// <para>Creates a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1591,7 +1611,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文库</para>
+        /// <para>Creates a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1610,7 +1630,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文库</para>
+        /// <para>Creates a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1629,7 +1649,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 API Key</para>
+        /// <para>Creates an API key for a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1675,7 +1695,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 API Key</para>
+        /// <para>Creates an API key for a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1721,7 +1741,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 API Key</para>
+        /// <para>Creates an API key for a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1740,7 +1760,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 API Key</para>
+        /// <para>Creates an API key for a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1759,7 +1779,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1813,7 +1833,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1867,7 +1887,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1886,7 +1906,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据集</para>
+        /// <para>Creates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1905,7 +1925,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据投递任务</para>
+        /// <para>Create a data delivery task to deliver metric data from a data source to a storage destination or message queue. This task supports three delivery types: Prometheus Remote Write, Kafka, and MaxCompute. You can also use tags to filter which metrics are delivered and attach custom tags to them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1983,7 +2003,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据投递任务</para>
+        /// <para>Create a data delivery task to deliver metric data from a data source to a storage destination or message queue. This task supports three delivery types: Prometheus Remote Write, Kafka, and MaxCompute. You can also use tags to filter which metrics are delivered and attach custom tags to them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2061,7 +2081,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据投递任务</para>
+        /// <para>Create a data delivery task to deliver metric data from a data source to a storage destination or message queue. This task supports three delivery types: Prometheus Remote Write, Kafka, and MaxCompute. You can also use tags to filter which metrics are delivered and attach custom tags to them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2080,7 +2100,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建数据投递任务</para>
+        /// <para>Create a data delivery task to deliver metric data from a data source to a storage destination or message queue. This task supports three delivery types: Prometheus Remote Write, Kafka, and MaxCompute. You can also use tags to filter which metrics are delivered and attach custom tags to them.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2099,7 +2119,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create storage related to EntityStore</para>
+        /// <para>Creates storage for an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2139,7 +2159,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create storage related to EntityStore</para>
+        /// <para>Creates storage for an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2179,7 +2199,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create storage related to EntityStore</para>
+        /// <para>Creates storage for an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2198,7 +2218,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create storage related to EntityStore</para>
+        /// <para>Creates storage for an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2217,12 +2237,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Access Center Policy</para>
+        /// <para>Creates an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is used to support users in creating event integration.</para>
+        /// <para>This operation creates an event integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2288,12 +2308,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Access Center Policy</para>
+        /// <para>Creates an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is used to support users in creating event integration.</para>
+        /// <para>This operation creates an event integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2359,12 +2379,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Access Center Policy</para>
+        /// <para>Creates an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is used to support users in creating event integration.</para>
+        /// <para>This operation creates an event integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2383,12 +2403,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Access Center Policy</para>
+        /// <para>Creates an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is used to support users in creating event integration.</para>
+        /// <para>This operation creates an event integration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2407,7 +2427,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记忆库</para>
+        /// <para>Creates a MemoryStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2477,7 +2497,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记忆库</para>
+        /// <para>Creates a MemoryStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2547,7 +2567,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记忆库</para>
+        /// <para>Creates a MemoryStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2566,7 +2586,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建记忆库</para>
+        /// <para>Creates a MemoryStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2585,7 +2605,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流水线</para>
+        /// <para>Create a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2651,7 +2671,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流水线</para>
+        /// <para>Create a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2717,7 +2737,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流水线</para>
+        /// <para>Create a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2736,7 +2756,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建流水线</para>
+        /// <para>Create a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2755,7 +2775,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Prometheus monitoring instance</para>
+        /// <para>Creates a Prometheus instance for monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2845,7 +2865,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Prometheus monitoring instance</para>
+        /// <para>Creates a Prometheus instance for monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2935,7 +2955,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Prometheus monitoring instance</para>
+        /// <para>Creates a Prometheus instance for monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2954,7 +2974,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a Prometheus monitoring instance</para>
+        /// <para>Creates a Prometheus instance for monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2973,12 +2993,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Prometheus View</para>
+        /// <para>Creates a Prometheus view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to create a site monitoring task</para>
+        /// <para>用于创建一个站点监控任务</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3060,12 +3080,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Prometheus View</para>
+        /// <para>Creates a Prometheus view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to create a site monitoring task</para>
+        /// <para>用于创建一个站点监控任务</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3147,12 +3167,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Prometheus View</para>
+        /// <para>Creates a Prometheus view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to create a site monitoring task</para>
+        /// <para>用于创建一个站点监控任务</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3171,12 +3191,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Prometheus View</para>
+        /// <para>Creates a Prometheus view.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to create a site monitoring task</para>
+        /// <para>用于创建一个站点监控任务</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3195,12 +3215,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Prometheus Monitoring Instance</para>
+        /// <para>Creates a virtual instance for Prometheus monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Create a Prometheus monitoring virtual instance.</para>
+        /// <para>Creates a virtual instance for Prometheus monitoring.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3250,12 +3270,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Prometheus Monitoring Instance</para>
+        /// <para>Creates a virtual instance for Prometheus monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Create a Prometheus monitoring virtual instance.</para>
+        /// <para>Creates a virtual instance for Prometheus monitoring.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3305,12 +3325,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Prometheus Monitoring Instance</para>
+        /// <para>Creates a virtual instance for Prometheus monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Create a Prometheus monitoring virtual instance.</para>
+        /// <para>Creates a virtual instance for Prometheus monitoring.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3329,12 +3349,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Prometheus Monitoring Instance</para>
+        /// <para>Creates a virtual instance for Prometheus monitoring.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Create a Prometheus monitoring virtual instance.</para>
+        /// <para>Creates a virtual instance for Prometheus monitoring.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3353,7 +3373,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Service</para>
+        /// <para>Creates a service for application observability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3431,7 +3451,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Service</para>
+        /// <para>Creates a service for application observability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3509,7 +3529,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Service</para>
+        /// <para>Creates a service for application observability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3528,7 +3548,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Service</para>
+        /// <para>Creates a service for application observability.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3547,7 +3567,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用可观测实例</para>
+        /// <para>Creates application observability and prepares the prerequisite resources required for integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3587,7 +3607,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用可观测实例</para>
+        /// <para>Creates application observability and prepares the prerequisite resources required for integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3627,7 +3647,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用可观测实例</para>
+        /// <para>Creates application observability and prepares the prerequisite resources required for integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3646,7 +3666,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建应用可观测实例</para>
+        /// <para>Creates application observability and prepares the prerequisite resources required for integration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3665,7 +3685,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Ticket</para>
+        /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3715,7 +3735,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Ticket</para>
+        /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3765,7 +3785,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Ticket</para>
+        /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3784,7 +3804,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Ticket</para>
+        /// <para>To share a console page or embed it into a third-party system without requiring a password, you can call the CreateTicket operation to generate a ticket. You can then use the ticket to create a password-free link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3803,12 +3823,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Umodel configuration</para>
+        /// <para>Creates a Umodel configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Create Umodel configuration in the specified workspace</para>
+        /// <para>Creates a Umodel configuration in a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3854,12 +3874,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Umodel configuration</para>
+        /// <para>Creates a Umodel configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Create Umodel configuration in the specified workspace</para>
+        /// <para>Creates a Umodel configuration in a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3905,12 +3925,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Umodel configuration</para>
+        /// <para>Creates a Umodel configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Create Umodel configuration in the specified workspace</para>
+        /// <para>Creates a Umodel configuration in a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3929,12 +3949,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Umodel configuration</para>
+        /// <para>Creates a Umodel configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Create Umodel configuration in the specified workspace</para>
+        /// <para>Creates a Umodel configuration in a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3953,7 +3973,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete addon release information</para>
+        /// <para>Deletes add-on release information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4007,7 +4027,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete addon release information</para>
+        /// <para>Deletes add-on release information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4061,7 +4081,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete addon release information</para>
+        /// <para>Deletes add-on release information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4080,7 +4100,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete addon release information</para>
+        /// <para>Deletes add-on release information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4099,7 +4119,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Aggregation Task Group</para>
+        /// <para>Deletes an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4139,7 +4159,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Aggregation Task Group</para>
+        /// <para>Deletes an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4179,7 +4199,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Aggregation Task Group</para>
+        /// <para>Deletes an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4198,7 +4218,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Aggregation Task Group</para>
+        /// <para>Deletes an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4217,7 +4237,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Webhook</para>
+        /// <para>Deletes one or more alert webhooks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4269,7 +4289,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Webhook</para>
+        /// <para>Deletes one or more alert webhooks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4321,7 +4341,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Webhook</para>
+        /// <para>Deletes one or more alert webhooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4340,7 +4360,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Webhook</para>
+        /// <para>Deletes one or more alert webhooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4359,7 +4379,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务链路</para>
+        /// <para>Deletes a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4399,7 +4419,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务链路</para>
+        /// <para>Deletes a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4439,7 +4459,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务链路</para>
+        /// <para>Deletes a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4458,7 +4478,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务链路</para>
+        /// <para>Deletes a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4477,7 +4497,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云资源中心</para>
+        /// <para>Deletes a cloud resource.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4513,7 +4533,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云资源中心</para>
+        /// <para>Deletes a cloud resource.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4549,7 +4569,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云资源中心</para>
+        /// <para>Deletes a cloud resource.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4564,7 +4584,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除云资源中心</para>
+        /// <para>Deletes a cloud resource.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4579,7 +4599,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文</para>
+        /// <para>Deletes a context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4619,7 +4639,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文</para>
+        /// <para>Deletes a context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4659,7 +4679,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文</para>
+        /// <para>Deletes a context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4678,7 +4698,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文</para>
+        /// <para>Deletes a context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4697,7 +4717,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文库</para>
+        /// <para>Deletes a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4737,7 +4757,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文库</para>
+        /// <para>Deletes a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4777,7 +4797,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文库</para>
+        /// <para>Deletes a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4796,7 +4816,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文库</para>
+        /// <para>Deletes a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4815,7 +4835,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 API Key</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4855,7 +4875,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 API Key</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4895,7 +4915,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 API Key</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4914,7 +4934,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 API Key</para>
+        /// <para>Deletes an API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4933,7 +4953,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除上下文</para>
+        /// <para>Deletes contexts in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4983,7 +5003,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除上下文</para>
+        /// <para>Deletes contexts in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5033,7 +5053,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除上下文</para>
+        /// <para>Deletes contexts in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5052,7 +5072,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除上下文</para>
+        /// <para>Deletes contexts in bulk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5071,7 +5091,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集</para>
+        /// <para>Deletes a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5111,7 +5131,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集</para>
+        /// <para>Deletes a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5151,7 +5171,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集</para>
+        /// <para>Deletes a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5170,7 +5190,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据集</para>
+        /// <para>Deletes a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5189,7 +5209,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据投递任务</para>
+        /// <para>Deletes a delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5229,7 +5249,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据投递任务</para>
+        /// <para>Deletes a delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5269,7 +5289,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据投递任务</para>
+        /// <para>Deletes a delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5288,7 +5308,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除数据投递任务</para>
+        /// <para>Deletes a delivery task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5307,7 +5327,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete EntityStore related storage</para>
+        /// <para>Deletes an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5347,7 +5367,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete EntityStore related storage</para>
+        /// <para>Deletes an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5387,7 +5407,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete EntityStore related storage</para>
+        /// <para>Deletes an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5406,7 +5426,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete EntityStore related storage</para>
+        /// <para>Deletes an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5425,7 +5445,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Access Center Policy</para>
+        /// <para>Deletes an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5471,7 +5491,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Access Center Policy</para>
+        /// <para>Deletes an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5517,7 +5537,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Access Center Policy</para>
+        /// <para>Deletes an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5536,7 +5556,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Access Center Policy</para>
+        /// <para>Deletes an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5555,7 +5575,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除记忆</para>
+        /// <para>Deletes memories based on filter properties. You must set at least one filter property. If no filter properties are set, a validation error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5613,7 +5633,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除记忆</para>
+        /// <para>Deletes memories based on filter properties. You must set at least one filter property. If no filter properties are set, a validation error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5671,7 +5691,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除记忆</para>
+        /// <para>Deletes memories based on filter properties. You must set at least one filter property. If no filter properties are set, a validation error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5690,7 +5710,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除记忆</para>
+        /// <para>Deletes memories based on filter properties. You must set at least one filter property. If no filter properties are set, a validation error is returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5709,7 +5729,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆</para>
+        /// <para>Deletes a memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5749,7 +5769,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆</para>
+        /// <para>Deletes a memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5789,7 +5809,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆</para>
+        /// <para>Deletes a memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5808,7 +5828,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆</para>
+        /// <para>Deletes a memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5827,7 +5847,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆库</para>
+        /// <para>Deletes a Memory Store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5867,7 +5887,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆库</para>
+        /// <para>Deletes a Memory Store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5907,7 +5927,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆库</para>
+        /// <para>Deletes a Memory Store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5926,7 +5946,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆库</para>
+        /// <para>Deletes a Memory Store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5945,7 +5965,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除流水线</para>
+        /// <para>Deletes a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5985,7 +6005,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除流水线</para>
+        /// <para>Deletes a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6025,7 +6045,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除流水线</para>
+        /// <para>Deletes a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6044,7 +6064,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除流水线</para>
+        /// <para>Deletes a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6063,12 +6083,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete prom instance</para>
+        /// <para>Deletes a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete a Prometheus instance.</para>
+        /// <para>Deletes a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6108,12 +6128,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete prom instance</para>
+        /// <para>Deletes a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete a Prometheus instance.</para>
+        /// <para>Deletes a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6153,12 +6173,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete prom instance</para>
+        /// <para>Deletes a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete a Prometheus instance.</para>
+        /// <para>Deletes a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6177,12 +6197,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete prom instance</para>
+        /// <para>Deletes a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete a Prometheus instance.</para>
+        /// <para>Deletes a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6201,12 +6221,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete prometheus view instance</para>
+        /// <para>Deletes a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete prometheus view instance.</para>
+        /// <para>Deletes a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6246,12 +6266,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete prometheus view instance</para>
+        /// <para>Deletes a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete prometheus view instance.</para>
+        /// <para>Deletes a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6291,12 +6311,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete prometheus view instance</para>
+        /// <para>Deletes a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete prometheus view instance.</para>
+        /// <para>Deletes a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6315,12 +6335,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete prometheus view instance</para>
+        /// <para>Deletes a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete prometheus view instance.</para>
+        /// <para>Deletes a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6339,7 +6359,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Prometheus 虚拟实例</para>
+        /// <para>Deletes a Prometheus virtual instance by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6379,7 +6399,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Prometheus 虚拟实例</para>
+        /// <para>Deletes a Prometheus virtual instance by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6419,7 +6439,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Prometheus 虚拟实例</para>
+        /// <para>Deletes a Prometheus virtual instance by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6438,7 +6458,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 Prometheus 虚拟实例</para>
+        /// <para>Deletes a Prometheus virtual instance by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6457,7 +6477,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Service</para>
+        /// <para>Deletes an Application Monitoring service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6497,7 +6517,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Service</para>
+        /// <para>Deletes an Application Monitoring service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6537,7 +6557,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Service</para>
+        /// <para>Deletes an Application Monitoring service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6556,7 +6576,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Service</para>
+        /// <para>Deletes an Application Monitoring service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6575,12 +6595,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Umodel configuration information</para>
+        /// <para>Deletes a Umodel configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete the Umodel under the specified workspace</para>
+        /// <para>Deletes a Umodel from a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6620,12 +6640,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Umodel configuration information</para>
+        /// <para>Deletes a Umodel configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete the Umodel under the specified workspace</para>
+        /// <para>Deletes a Umodel from a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6665,12 +6685,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Umodel configuration information</para>
+        /// <para>Deletes a Umodel configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete the Umodel under the specified workspace</para>
+        /// <para>Deletes a Umodel from a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6689,12 +6709,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Umodel configuration information</para>
+        /// <para>Deletes a Umodel configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete the Umodel under the specified workspace</para>
+        /// <para>Deletes a Umodel from a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6713,7 +6733,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Umodel配置信息</para>
+        /// <para>Deletes a public Umodel schema reference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6759,7 +6779,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Umodel配置信息</para>
+        /// <para>Deletes a public Umodel schema reference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6805,7 +6825,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Umodel配置信息</para>
+        /// <para>Deletes a public Umodel schema reference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6824,7 +6844,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Umodel配置信息</para>
+        /// <para>Deletes a public Umodel schema reference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6843,12 +6863,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Umodel Elements</para>
+        /// <para>Deletes Umodel elements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete the Umodel Data under a specified workspace</para>
+        /// <para>Deletes Umodel data from a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6902,12 +6922,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Umodel Elements</para>
+        /// <para>Deletes Umodel elements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete the Umodel Data under a specified workspace</para>
+        /// <para>Deletes Umodel data from a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6961,12 +6981,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Umodel Elements</para>
+        /// <para>Deletes Umodel elements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete the Umodel Data under a specified workspace</para>
+        /// <para>Deletes Umodel data from a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6985,12 +7005,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Umodel Elements</para>
+        /// <para>Deletes Umodel elements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Delete the Umodel Data under a specified workspace</para>
+        /// <para>Deletes Umodel data from a specified workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7009,7 +7029,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Workspace</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7049,7 +7069,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Workspace</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7089,7 +7109,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Workspace</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7108,7 +7128,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Workspace</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7127,8 +7147,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询元数据meta</para>
+        /// <para>Query metadata</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of CloudMonitor metric metadata.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeMetricMetaListRequest
@@ -7203,8 +7228,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询元数据meta</para>
+        /// <para>Query metadata</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of CloudMonitor metric metadata.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeMetricMetaListRequest
@@ -7279,8 +7309,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询元数据meta</para>
+        /// <para>Query metadata</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of CloudMonitor metric metadata.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMetricMetaListRequest
@@ -7298,8 +7333,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询元数据meta</para>
+        /// <para>Query metadata</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of CloudMonitor metric metadata.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMetricMetaListRequest
@@ -7317,7 +7357,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域信息列表</para>
+        /// <para>Retrieves a list of regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7363,7 +7403,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域信息列表</para>
+        /// <para>Retrieves a list of regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7409,7 +7449,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域信息列表</para>
+        /// <para>Retrieves a list of regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7428,7 +7468,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询地域信息列表</para>
+        /// <para>Retrieves a list of regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7447,7 +7487,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行查询语句</para>
+        /// <para>Executes SQL and SPL queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7497,7 +7537,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行查询语句</para>
+        /// <para>Executes SQL and SPL queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7547,7 +7587,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行查询语句</para>
+        /// <para>Executes SQL and SPL queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7566,7 +7606,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>执行查询语句</para>
+        /// <para>Executes SQL and SPL queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7585,8 +7625,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件详情(Addon)</para>
+        /// <para>Retrieves the details of an add-on.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of an add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonRequest
@@ -7635,8 +7680,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件详情(Addon)</para>
+        /// <para>Retrieves the details of an add-on.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of an add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonRequest
@@ -7685,8 +7735,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件详情(Addon)</para>
+        /// <para>Retrieves the details of an add-on.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of an add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonRequest
@@ -7704,8 +7759,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件详情(Addon)</para>
+        /// <para>Retrieves the details of an add-on.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of an add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonRequest
@@ -7723,8 +7783,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件schema详情(Addon)</para>
+        /// <para>Details of an add-on schema.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of how to modify version <c>1</c> of alert template <c>123456</c>. In this example, the alert level is set to <c>Critical</c>, the statistical method is set to <c>Average</c>, the comparison operator for the alert threshold is set to <c>GreaterThanOrEqualToThreshold</c>, the alert threshold is set to <c>90</c>, and the number of retries is set to <c>3</c>. The response indicates that the alert template was successfully modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonCodeTemplateRequest
@@ -7777,8 +7842,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件schema详情(Addon)</para>
+        /// <para>Details of an add-on schema.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of how to modify version <c>1</c> of alert template <c>123456</c>. In this example, the alert level is set to <c>Critical</c>, the statistical method is set to <c>Average</c>, the comparison operator for the alert threshold is set to <c>GreaterThanOrEqualToThreshold</c>, the alert threshold is set to <c>90</c>, and the number of retries is set to <c>3</c>. The response indicates that the alert template was successfully modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonCodeTemplateRequest
@@ -7831,8 +7901,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件schema详情(Addon)</para>
+        /// <para>Details of an add-on schema.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of how to modify version <c>1</c> of alert template <c>123456</c>. In this example, the alert level is set to <c>Critical</c>, the statistical method is set to <c>Average</c>, the comparison operator for the alert threshold is set to <c>GreaterThanOrEqualToThreshold</c>, the alert threshold is set to <c>90</c>, and the number of retries is set to <c>3</c>. The response indicates that the alert template was successfully modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonCodeTemplateRequest
@@ -7850,8 +7925,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件schema详情(Addon)</para>
+        /// <para>Details of an add-on schema.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of how to modify version <c>1</c> of alert template <c>123456</c>. In this example, the alert level is set to <c>Critical</c>, the statistical method is set to <c>Average</c>, the comparison operator for the alert threshold is set to <c>GreaterThanOrEqualToThreshold</c>, the alert threshold is set to <c>90</c>, and the number of retries is set to <c>3</c>. The response indicates that the alert template was successfully modified.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonCodeTemplateRequest
@@ -7869,7 +7949,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check addon release (view connection status)</para>
+        /// <para>Queries the details and accessed state of an add-on release.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7909,7 +7989,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check addon release (view connection status)</para>
+        /// <para>Queries the details and accessed state of an add-on release.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7949,7 +8029,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check addon release (view connection status)</para>
+        /// <para>Queries the details and accessed state of an add-on release.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7968,7 +8048,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check addon release (view connection status)</para>
+        /// <para>Queries the details and accessed state of an add-on release.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7987,8 +8067,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件schema详情(Addon)</para>
+        /// <para>The details of an add-on schema.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the schema of an add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonSchemaRequest
@@ -8041,8 +8126,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件schema详情(Addon)</para>
+        /// <para>The details of an add-on schema.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the schema of an add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonSchemaRequest
@@ -8095,8 +8185,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件schema详情(Addon)</para>
+        /// <para>The details of an add-on schema.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the schema of an add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonSchemaRequest
@@ -8114,8 +8209,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>插件schema详情(Addon)</para>
+        /// <para>The details of an add-on schema.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the schema of an add-on.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAddonSchemaRequest
@@ -8133,7 +8233,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the aggregation task group</para>
+        /// <para>Queries an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8173,7 +8273,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the aggregation task group</para>
+        /// <para>Queries an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8213,7 +8313,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the aggregation task group</para>
+        /// <para>Queries an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8232,7 +8332,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes the aggregation task group</para>
+        /// <para>Queries an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8251,7 +8351,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务链路</para>
+        /// <para>Queries a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8291,7 +8391,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务链路</para>
+        /// <para>Queries a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8331,7 +8431,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务链路</para>
+        /// <para>Queries a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8350,7 +8450,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询业务链路</para>
+        /// <para>Queries a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8369,7 +8469,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源中心</para>
+        /// <para>Retrieves information about cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8405,7 +8505,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源中心</para>
+        /// <para>Retrieves information about cloud resources.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8441,7 +8541,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源中心</para>
+        /// <para>Retrieves information about cloud resources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8456,7 +8556,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源中心</para>
+        /// <para>Retrieves information about cloud resources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8471,7 +8571,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源中心数据</para>
+        /// <para>Queries data from the Cloud Resource Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8525,7 +8625,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源中心数据</para>
+        /// <para>Queries data from the Cloud Resource Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8579,7 +8679,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源中心数据</para>
+        /// <para>Queries data from the Cloud Resource Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8598,7 +8698,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询云资源中心数据</para>
+        /// <para>Queries data from the Cloud Resource Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8617,8 +8717,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云监控开通状态</para>
+        /// <para>Checks whether a Prometheus service or product is activated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The product and service request parameters cannot be specified in the same request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCmsServiceRequest
@@ -8667,8 +8772,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云监控开通状态</para>
+        /// <para>Checks whether a Prometheus service or product is activated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The product and service request parameters cannot be specified in the same request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCmsServiceRequest
@@ -8717,8 +8827,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云监控开通状态</para>
+        /// <para>Checks whether a Prometheus service or product is activated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The product and service request parameters cannot be specified in the same request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCmsServiceRequest
@@ -8736,8 +8851,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取云监控开通状态</para>
+        /// <para>Checks whether a Prometheus service or product is activated.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The product and service request parameters cannot be specified in the same request.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCmsServiceRequest
@@ -8755,7 +8875,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单条上下文</para>
+        /// <para>Retrieves a single context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8801,7 +8921,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单条上下文</para>
+        /// <para>Retrieves a single context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8847,7 +8967,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单条上下文</para>
+        /// <para>Retrieves a single context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8866,7 +8986,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单条上下文</para>
+        /// <para>Retrieves a single context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8885,7 +9005,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上下文库</para>
+        /// <para>Retrieves the details of a specified context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8925,7 +9045,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上下文库</para>
+        /// <para>Retrieves the details of a specified context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8965,7 +9085,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上下文库</para>
+        /// <para>Retrieves the details of a specified context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8984,7 +9104,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上下文库</para>
+        /// <para>Retrieves the details of a specified context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9003,7 +9123,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集</para>
+        /// <para>Retrieves the details of a specified dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9043,7 +9163,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集</para>
+        /// <para>Retrieves the details of a specified dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9083,7 +9203,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集</para>
+        /// <para>Retrieves the details of a specified dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9102,7 +9222,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集</para>
+        /// <para>Retrieves the details of a specified dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9121,7 +9241,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据投递任务详情</para>
+        /// <para>View data delivery task details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9161,7 +9281,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据投递任务详情</para>
+        /// <para>View data delivery task details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9201,7 +9321,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据投递任务详情</para>
+        /// <para>View data delivery task details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9220,7 +9340,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据投递任务详情</para>
+        /// <para>View data delivery task details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9239,7 +9359,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get EntityStore related storage information</para>
+        /// <para>Retrieves the storage information of an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9279,7 +9399,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get EntityStore related storage information</para>
+        /// <para>Retrieves the storage information of an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9319,7 +9439,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get EntityStore related storage information</para>
+        /// <para>Retrieves the storage information of an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9338,7 +9458,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get EntityStore related storage information</para>
+        /// <para>Retrieves the storage information of an EntityStore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9357,7 +9477,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the entity and relationship data under a specified Workspace, returning the entity data within a certain time range (the returned result is transmitted after compression).</para>
+        /// <para>Queries the entity and relational data in a specified workspace to retrieve entity data for a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9420,7 +9540,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the entity and relationship data under a specified Workspace, returning the entity data within a certain time range (the returned result is transmitted after compression).</para>
+        /// <para>Queries the entity and relational data in a specified workspace to retrieve entity data for a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9483,7 +9603,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the entity and relationship data under a specified Workspace, returning the entity data within a certain time range (the returned result is transmitted after compression).</para>
+        /// <para>Queries the entity and relational data in a specified workspace to retrieve entity data for a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9502,7 +9622,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the entity and relationship data under a specified Workspace, returning the entity data within a certain time range (the returned result is transmitted after compression).</para>
+        /// <para>Queries the entity and relational data in a specified workspace to retrieve entity data for a specific time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9521,7 +9641,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of access center policies</para>
+        /// <para>Retrieves the details of an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9561,7 +9681,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of access center policies</para>
+        /// <para>Retrieves the details of an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9601,7 +9721,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of access center policies</para>
+        /// <para>Retrieves the details of an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9620,7 +9740,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of access center policies</para>
+        /// <para>Retrieves the details of an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9639,8 +9759,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询接入中心在CS的版本</para>
+        /// <para>Queries the Integration Center version for a container cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is not available in the API Explorer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIntegrationVersionForCSRequest
@@ -9689,8 +9814,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询接入中心在CS的版本</para>
+        /// <para>Queries the Integration Center version for a container cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is not available in the API Explorer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIntegrationVersionForCSRequest
@@ -9739,8 +9869,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询接入中心在CS的版本</para>
+        /// <para>Queries the Integration Center version for a container cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is not available in the API Explorer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIntegrationVersionForCSRequest
@@ -9758,8 +9893,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询接入中心在CS的版本</para>
+        /// <para>Queries the Integration Center version for a container cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is not available in the API Explorer.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIntegrationVersionForCSRequest
@@ -9777,7 +9917,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全部记忆</para>
+        /// <para>Retrieves all memories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9847,7 +9987,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全部记忆</para>
+        /// <para>Retrieves all memories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9917,7 +10057,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全部记忆</para>
+        /// <para>Retrieves all memories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9936,7 +10076,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询全部记忆</para>
+        /// <para>Retrieves all memories.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9955,7 +10095,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆</para>
+        /// <para>Retrieves a single memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9995,7 +10135,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆</para>
+        /// <para>Retrieves a single memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10035,7 +10175,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆</para>
+        /// <para>Retrieves a single memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10054,7 +10194,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆</para>
+        /// <para>Retrieves a single memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10073,7 +10213,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆历史记录</para>
+        /// <para>Retrieve memory history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10113,7 +10253,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆历史记录</para>
+        /// <para>Retrieve memory history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10153,7 +10293,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆历史记录</para>
+        /// <para>Retrieve memory history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10172,7 +10312,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆历史记录</para>
+        /// <para>Retrieve memory history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10191,7 +10331,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆库</para>
+        /// <para>Query a memory store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10231,7 +10371,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆库</para>
+        /// <para>Query a memory store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10271,7 +10411,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆库</para>
+        /// <para>Query a memory store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10290,7 +10430,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆库</para>
+        /// <para>Query a memory store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10309,7 +10449,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流水线</para>
+        /// <para>Query pipeline</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10349,7 +10489,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流水线</para>
+        /// <para>Query pipeline</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10389,7 +10529,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流水线</para>
+        /// <para>Query pipeline</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10408,7 +10548,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流水线</para>
+        /// <para>Query pipeline</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10427,12 +10567,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the instance in a specified environment</para>
+        /// <para>Retrieves the details of a specific Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve details of a Prometheus instance.</para>
+        /// <para>Gets the details of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10482,12 +10622,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the instance in a specified environment</para>
+        /// <para>Retrieves the details of a specific Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve details of a Prometheus instance.</para>
+        /// <para>Gets the details of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10537,12 +10677,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the instance in a specified environment</para>
+        /// <para>Retrieves the details of a specific Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve details of a Prometheus instance.</para>
+        /// <para>Gets the details of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10561,12 +10701,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the instance in a specified environment</para>
+        /// <para>Retrieves the details of a specific Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve details of a Prometheus instance.</para>
+        /// <para>Gets the details of a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10585,7 +10725,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定环境实例</para>
+        /// <para>Retrieves the user settings for Prometheus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10631,7 +10771,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定环境实例</para>
+        /// <para>Retrieves the user settings for Prometheus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10677,7 +10817,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定环境实例</para>
+        /// <para>Retrieves the user settings for Prometheus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10696,7 +10836,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定环境实例</para>
+        /// <para>Retrieves the user settings for Prometheus.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10715,12 +10855,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a specified Prometheus view instance</para>
+        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query a specified Prometheus view instance.</para>
+        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10770,12 +10910,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a specified Prometheus view instance</para>
+        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query a specified Prometheus view instance.</para>
+        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10825,12 +10965,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a specified Prometheus view instance</para>
+        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query a specified Prometheus view instance.</para>
+        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10849,12 +10989,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query a specified Prometheus view instance</para>
+        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query a specified Prometheus view instance.</para>
+        /// <para>Retrieves the details of a specified Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10873,7 +11013,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Service</para>
+        /// <para>Retrieves the details of an Application Monitoring service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10913,7 +11053,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Service</para>
+        /// <para>Retrieves the details of an Application Monitoring service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10953,7 +11093,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Service</para>
+        /// <para>Retrieves the details of an Application Monitoring service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10972,7 +11112,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Service</para>
+        /// <para>Retrieves the details of an Application Monitoring service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10991,7 +11131,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Application Observability Instance</para>
+        /// <para>Retrieves an application observability instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11031,7 +11171,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Application Observability Instance</para>
+        /// <para>Retrieves an application observability instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11071,7 +11211,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Application Observability Instance</para>
+        /// <para>Retrieves an application observability instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11090,7 +11230,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Application Observability Instance</para>
+        /// <para>Retrieves an application observability instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11109,12 +11249,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Umodel configuration information</para>
+        /// <para>Retrieves the configuration of a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get Umodel configuration information</para>
+        /// <para>Retrieves the configuration of a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11154,12 +11294,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Umodel configuration information</para>
+        /// <para>Retrieves the configuration of a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get Umodel configuration information</para>
+        /// <para>Retrieves the configuration of a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11199,12 +11339,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Umodel configuration information</para>
+        /// <para>Retrieves the configuration of a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get Umodel configuration information</para>
+        /// <para>Retrieves the configuration of a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11223,12 +11363,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Umodel configuration information</para>
+        /// <para>Retrieves the configuration of a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get Umodel configuration information</para>
+        /// <para>Retrieves the configuration of a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11247,7 +11387,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Umodel配置信息</para>
+        /// <para>Retrieves the referenced common Umodel schema.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11287,7 +11427,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Umodel配置信息</para>
+        /// <para>Retrieves the referenced common Umodel schema.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11327,7 +11467,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Umodel配置信息</para>
+        /// <para>Retrieves the referenced common Umodel schema.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11346,7 +11486,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Umodel配置信息</para>
+        /// <para>Retrieves the referenced common Umodel schema.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11365,12 +11505,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve associated Umodel graph data</para>
+        /// <para>Retrieves graph data associated with a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Find Umodel</para>
+        /// <para>This operation retrieves the graph data associated with a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11422,12 +11562,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve associated Umodel graph data</para>
+        /// <para>Retrieves graph data associated with a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Find Umodel</para>
+        /// <para>This operation retrieves the graph data associated with a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11479,12 +11619,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve associated Umodel graph data</para>
+        /// <para>Retrieves graph data associated with a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Find Umodel</para>
+        /// <para>This operation retrieves the graph data associated with a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11503,12 +11643,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve associated Umodel graph data</para>
+        /// <para>Retrieves graph data associated with a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Find Umodel</para>
+        /// <para>This operation retrieves the graph data associated with a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11527,7 +11667,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Workspace</para>
+        /// <para>Retrieves a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11567,7 +11707,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Workspace</para>
+        /// <para>Retrieves a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11607,7 +11747,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Workspace</para>
+        /// <para>Retrieves a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11626,7 +11766,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Workspace</para>
+        /// <para>Retrieves a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11645,12 +11785,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of addon releases</para>
+        /// <para>Lists the releases for an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of access configurations</para>
+        /// <para>This operation retrieves a list of integration configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11673,6 +11813,14 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
             {
                 query["addonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentAddonReleaseId))
             {
@@ -11700,12 +11848,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of addon releases</para>
+        /// <para>Lists the releases for an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of access configurations</para>
+        /// <para>This operation retrieves a list of integration configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11728,6 +11876,14 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddonName))
             {
                 query["addonName"] = request.AddonName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentAddonReleaseId))
             {
@@ -11755,12 +11911,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of addon releases</para>
+        /// <para>Lists the releases for an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of access configurations</para>
+        /// <para>This operation retrieves a list of integration configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11779,12 +11935,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of addon releases</para>
+        /// <para>Lists the releases for an add-on.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of access configurations</para>
+        /// <para>This operation retrieves a list of integration configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11803,8 +11959,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版接入中心产品列表(分组)</para>
+        /// <para>Lists the products in the new Integration Center by group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a site monitoring job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAddonsRequest
@@ -11861,8 +12022,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版接入中心产品列表(分组)</para>
+        /// <para>Lists the products in the new Integration Center by group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a site monitoring job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAddonsRequest
@@ -11919,8 +12085,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版接入中心产品列表(分组)</para>
+        /// <para>Lists the products in the new Integration Center by group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a site monitoring job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAddonsRequest
@@ -11938,8 +12109,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版接入中心产品列表(分组)</para>
+        /// <para>Lists the products in the new Integration Center by group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a site monitoring job.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAddonsRequest
@@ -11957,7 +12133,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Aggregation Task Groups</para>
+        /// <para>Queries a list of aggregation task groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12037,7 +12213,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Aggregation Task Groups</para>
+        /// <para>Queries a list of aggregation task groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12117,7 +12293,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Aggregation Task Groups</para>
+        /// <para>Queries a list of aggregation task groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12136,7 +12312,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Aggregation Task Groups</para>
+        /// <para>Queries a list of aggregation task groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12155,7 +12331,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Alert Actions</para>
+        /// <para>Queries alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12223,7 +12399,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Alert Actions</para>
+        /// <para>Queries alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12291,7 +12467,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Alert Actions</para>
+        /// <para>Queries alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12310,7 +12486,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Alert Actions</para>
+        /// <para>Queries alert action integrations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12329,7 +12505,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询机器人</para>
+        /// <para>Queries a list of alert webhooks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12405,7 +12581,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询机器人</para>
+        /// <para>Queries a list of alert webhooks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12481,7 +12657,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询机器人</para>
+        /// <para>Queries a list of alert webhooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12500,7 +12676,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询机器人</para>
+        /// <para>Queries a list of alert webhooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12519,7 +12695,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Webhook</para>
+        /// <para>Query webhooks</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12587,7 +12763,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Webhook</para>
+        /// <para>Query webhooks</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12655,7 +12831,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Webhook</para>
+        /// <para>Query webhooks</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12674,7 +12850,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Webhook</para>
+        /// <para>Query webhooks</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12693,7 +12869,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>业务链路列表</para>
+        /// <para>Lists business traces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12747,7 +12923,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>业务链路列表</para>
+        /// <para>Lists business traces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12801,7 +12977,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>业务链路列表</para>
+        /// <para>Lists business traces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12820,7 +12996,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>业务链路列表</para>
+        /// <para>Lists business traces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12839,7 +13015,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人组</para>
+        /// <para>Queries contact groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12907,7 +13083,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人组</para>
+        /// <para>Queries contact groups.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12975,7 +13151,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人组</para>
+        /// <para>Queries contact groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12994,7 +13170,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人组</para>
+        /// <para>Queries contact groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13013,7 +13189,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人</para>
+        /// <para>Query contacts</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13097,7 +13273,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人</para>
+        /// <para>Query contacts</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13181,7 +13357,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人</para>
+        /// <para>Query contacts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13200,7 +13376,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询联系人</para>
+        /// <para>Query contacts</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13219,7 +13395,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 API Key 列表</para>
+        /// <para>Lists API keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13269,7 +13445,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 API Key 列表</para>
+        /// <para>Lists API keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13319,7 +13495,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 API Key 列表</para>
+        /// <para>Lists API keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13338,7 +13514,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 API Key 列表</para>
+        /// <para>Lists API keys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13357,7 +13533,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上下文库列表</para>
+        /// <para>Retrieves a list of context stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13415,7 +13591,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上下文库列表</para>
+        /// <para>Retrieves a list of context stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13473,7 +13649,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上下文库列表</para>
+        /// <para>Retrieves a list of context stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13492,7 +13668,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上下文库列表</para>
+        /// <para>Retrieves a list of context stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13511,7 +13687,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集列表</para>
+        /// <para>Retrieves a list of datasets in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13565,7 +13741,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集列表</para>
+        /// <para>Retrieves a list of datasets in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13619,7 +13795,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集列表</para>
+        /// <para>Retrieves a list of datasets in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13638,7 +13814,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据集列表</para>
+        /// <para>Retrieves a list of datasets in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13657,7 +13833,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据投递任务列表</para>
+        /// <para>Retrieves a list of data delivery tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13725,7 +13901,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据投递任务列表</para>
+        /// <para>Retrieves a list of data delivery tasks.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13793,7 +13969,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据投递任务列表</para>
+        /// <para>Retrieves a list of data delivery tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13812,7 +13988,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据投递任务列表</para>
+        /// <para>Retrieves a list of data delivery tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13831,12 +14007,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Center Policy List Information</para>
+        /// <para>Queries a list of policies in the Integration Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query integration list</para>
+        /// <para>Queries a list of integrations.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -13940,12 +14116,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Center Policy List Information</para>
+        /// <para>Queries a list of policies in the Integration Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query integration list</para>
+        /// <para>Queries a list of integrations.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -14049,12 +14225,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Center Policy List Information</para>
+        /// <para>Queries a list of policies in the Integration Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query integration list</para>
+        /// <para>Queries a list of integrations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14073,12 +14249,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Center Policy List Information</para>
+        /// <para>Queries a list of policies in the Integration Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query integration list</para>
+        /// <para>Queries a list of integrations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14097,8 +14273,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略addon列表</para>
+        /// <para>Lists the add-ons that are installed for a specified policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the add-ons that are installed for a specified policy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIntegrationPolicyAddonsRequest
@@ -14137,8 +14318,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略addon列表</para>
+        /// <para>Lists the add-ons that are installed for a specified policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the add-ons that are installed for a specified policy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIntegrationPolicyAddonsRequest
@@ -14177,8 +14363,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略addon列表</para>
+        /// <para>Lists the add-ons that are installed for a specified policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the add-ons that are installed for a specified policy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIntegrationPolicyAddonsRequest
@@ -14196,8 +14387,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>策略addon列表</para>
+        /// <para>Lists the add-ons that are installed for a specified policy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the add-ons that are installed for a specified policy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIntegrationPolicyAddonsRequest
@@ -14215,7 +14411,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接入中心策略的存储要求信息</para>
+        /// <para>Returns information about collectors for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14269,7 +14465,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接入中心策略的存储要求信息</para>
+        /// <para>Returns information about collectors for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14323,7 +14519,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接入中心策略的存储要求信息</para>
+        /// <para>Returns information about collectors for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14342,7 +14538,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接入中心策略的存储要求信息</para>
+        /// <para>Returns information about collectors for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14361,7 +14557,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get storage requirement information for the access center policy</para>
+        /// <para>Lists the custom service discovery rules for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14415,7 +14611,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get storage requirement information for the access center policy</para>
+        /// <para>Lists the custom service discovery rules for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14469,7 +14665,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get storage requirement information for the access center policy</para>
+        /// <para>Lists the custom service discovery rules for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14488,7 +14684,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get storage requirement information for the access center policy</para>
+        /// <para>Lists the custom service discovery rules for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14507,12 +14703,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Dashboard List</para>
+        /// <para>Queries a list of integration policy dashboards.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query a list of integration policy dashboards.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14566,12 +14762,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Dashboard List</para>
+        /// <para>Queries a list of integration policy dashboards.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query a list of integration policy dashboards.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14625,12 +14821,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Dashboard List</para>
+        /// <para>Queries a list of integration policy dashboards.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query a list of integration policy dashboards.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14649,12 +14845,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Dashboard List</para>
+        /// <para>Queries a list of integration policy dashboards.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This article provides an example of querying the alarm template list. The result shows that there are 2 alarm templates in the list, which are <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to query a list of integration policy dashboards.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14673,12 +14869,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get PodMonitor Resources of Access Center Policy</para>
+        /// <para>Lists the PodMonitor resources for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14732,12 +14928,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get PodMonitor Resources of Access Center Policy</para>
+        /// <para>Lists the PodMonitor resources for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14791,12 +14987,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get PodMonitor Resources of Access Center Policy</para>
+        /// <para>Lists the PodMonitor resources for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14815,12 +15011,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get PodMonitor Resources of Access Center Policy</para>
+        /// <para>Lists the PodMonitor resources for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This article provides an example to query the alarm template list. The result shows that there are 2 alarm templates in the alarm template list, which are <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// <para>This topic provides an example of how to list the PodMonitor resources for an Integration Center policy.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14839,7 +15035,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接入中心策略的存储要求信息</para>
+        /// <para>Retrieves the ServiceMonitor information for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14893,7 +15089,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接入中心策略的存储要求信息</para>
+        /// <para>Retrieves the ServiceMonitor information for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14947,7 +15143,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接入中心策略的存储要求信息</para>
+        /// <para>Retrieves the ServiceMonitor information for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14966,7 +15162,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取接入中心策略的存储要求信息</para>
+        /// <para>Retrieves the ServiceMonitor information for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14985,13 +15181,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Storage Requirements Information for Access Center Policy</para>
+        /// <para>Lists the storage requirements for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the effective period of the policy, all alarms within the application group will no longer send notifications.</para>
-        /// <para>This article provides an example of creating a pause alarm notification policy <c>PauseNotify</c> for the application group <c>7301****</c>. This application group will pause alarms from <c>1622949300000</c> to <c>1623208500000</c> (Beijing Time <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
+        /// <para>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
+        /// This topic provides an example of creating a policy named <c>PauseNotify</c>. This policy pauses alert notifications for application group <c>7301****</c> from <c>1622949300000</c> to <c>1623208500000</c> (from <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c> UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15045,13 +15241,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Storage Requirements Information for Access Center Policy</para>
+        /// <para>Lists the storage requirements for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the effective period of the policy, all alarms within the application group will no longer send notifications.</para>
-        /// <para>This article provides an example of creating a pause alarm notification policy <c>PauseNotify</c> for the application group <c>7301****</c>. This application group will pause alarms from <c>1622949300000</c> to <c>1623208500000</c> (Beijing Time <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
+        /// <para>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
+        /// This topic provides an example of creating a policy named <c>PauseNotify</c>. This policy pauses alert notifications for application group <c>7301****</c> from <c>1622949300000</c> to <c>1623208500000</c> (from <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c> UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15105,13 +15301,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Storage Requirements Information for Access Center Policy</para>
+        /// <para>Lists the storage requirements for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the effective period of the policy, all alarms within the application group will no longer send notifications.</para>
-        /// <para>This article provides an example of creating a pause alarm notification policy <c>PauseNotify</c> for the application group <c>7301****</c>. This application group will pause alarms from <c>1622949300000</c> to <c>1623208500000</c> (Beijing Time <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
+        /// <para>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
+        /// This topic provides an example of creating a policy named <c>PauseNotify</c>. This policy pauses alert notifications for application group <c>7301****</c> from <c>1622949300000</c> to <c>1623208500000</c> (from <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c> UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15130,13 +15326,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Storage Requirements Information for Access Center Policy</para>
+        /// <para>Lists the storage requirements for an Integration Center policy.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>During the effective period of the policy, all alarms within the application group will no longer send notifications.</para>
-        /// <para>This article provides an example of creating a pause alarm notification policy <c>PauseNotify</c> for the application group <c>7301****</c>. This application group will pause alarms from <c>1622949300000</c> to <c>1623208500000</c> (Beijing Time <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c>).</para>
+        /// <para>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
+        /// This topic provides an example of creating a policy named <c>PauseNotify</c>. This policy pauses alert notifications for application group <c>7301****</c> from <c>1622949300000</c> to <c>1623208500000</c> (from <c>2021-06-06 11:15:00</c> to <c>2021-06-09 11:15:00</c> UTC+8).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15155,7 +15351,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆库列表</para>
+        /// <para>Retrieves a list of memory stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15209,7 +15405,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆库列表</para>
+        /// <para>Retrieves a list of memory stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15263,7 +15459,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆库列表</para>
+        /// <para>Retrieves a list of memory stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15282,7 +15478,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆库列表</para>
+        /// <para>Retrieves a list of memory stores.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15301,7 +15497,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流水线列表</para>
+        /// <para>Queries a list of pipelines in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15355,7 +15551,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流水线列表</para>
+        /// <para>Queries a list of pipelines in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15409,7 +15605,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流水线列表</para>
+        /// <para>Queries a list of pipelines in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15428,7 +15624,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询流水线列表</para>
+        /// <para>Queries a list of pipelines in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15447,12 +15643,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Prometheus Instance Dashboard List</para>
+        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get the list of Prometheus instance dashboards.</para>
+        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15502,12 +15698,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Prometheus Instance Dashboard List</para>
+        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get the list of Prometheus instance dashboards.</para>
+        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15557,12 +15753,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Prometheus Instance Dashboard List</para>
+        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get the list of Prometheus instance dashboards.</para>
+        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15581,12 +15777,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Prometheus Instance Dashboard List</para>
+        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get the list of Prometheus instance dashboards.</para>
+        /// <para>Retrieves a list of dashboards for a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15605,12 +15801,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of Prometheus instance information</para>
+        /// <para>Lists Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get the list of Prometheus instances.</para>
+        /// <para>Lists Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15698,12 +15894,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of Prometheus instance information</para>
+        /// <para>Lists Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get the list of Prometheus instances.</para>
+        /// <para>Lists Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15791,12 +15987,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of Prometheus instance information</para>
+        /// <para>Lists Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get the list of Prometheus instances.</para>
+        /// <para>Lists Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15815,12 +16011,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of Prometheus instance information</para>
+        /// <para>Lists Prometheus instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Get the list of Prometheus instances.</para>
+        /// <para>Lists Prometheus instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15839,12 +16035,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of Prometheus view instance information</para>
+        /// <para>Lists the Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve a list of Prometheus view instance information.</para>
+        /// <para>Lists the Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -15932,12 +16128,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of Prometheus view instance information</para>
+        /// <para>Lists the Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve a list of Prometheus view instance information.</para>
+        /// <para>Lists the Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16025,12 +16221,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of Prometheus view instance information</para>
+        /// <para>Lists the Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve a list of Prometheus view instance information.</para>
+        /// <para>Lists the Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16049,12 +16245,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve a list of Prometheus view instance information</para>
+        /// <para>Lists the Prometheus view instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieve a list of Prometheus view instance information.</para>
+        /// <para>Lists the Prometheus view instances.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16073,13 +16269,8 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Prometheus Virtual Instance</para>
+        /// <para>Retrieves Prometheus virtual instances.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Used for creating a site monitoring task</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListPrometheusVirtualInstancesRequest
@@ -16136,13 +16327,8 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Prometheus Virtual Instance</para>
+        /// <para>Retrieves Prometheus virtual instances.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Used for creating a site monitoring task</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListPrometheusVirtualInstancesRequest
@@ -16199,13 +16385,8 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Prometheus Virtual Instance</para>
+        /// <para>Retrieves Prometheus virtual instances.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Used for creating a site monitoring task</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListPrometheusVirtualInstancesRequest
@@ -16223,13 +16404,8 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Prometheus Virtual Instance</para>
+        /// <para>Retrieves Prometheus virtual instances.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Used for creating a site monitoring task</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListPrometheusVirtualInstancesRequest
@@ -16247,7 +16423,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Resource Services</para>
+        /// <para>Queries a list of application observability services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16319,7 +16495,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Resource Services</para>
+        /// <para>Queries a list of application observability services.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16391,7 +16567,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Resource Services</para>
+        /// <para>Queries a list of application observability services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16410,7 +16586,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List Resource Services</para>
+        /// <para>Queries a list of application observability services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16429,7 +16605,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Queries the tags attached to resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16501,7 +16677,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Queries the tags attached to resources.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16573,7 +16749,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Queries the tags attached to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16592,7 +16768,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Queries the tags attached to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16611,7 +16787,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Workspace List</para>
+        /// <para>Retrieves a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16679,7 +16855,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Workspace List</para>
+        /// <para>Retrieves a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16747,7 +16923,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Workspace List</para>
+        /// <para>Retrieves a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16766,7 +16942,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Workspace List</para>
+        /// <para>Retrieves a list of workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16785,7 +16961,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>管理告警规则</para>
+        /// <para>Manages alert rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16837,7 +17013,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>管理告警规则</para>
+        /// <para>Manages alert rules.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16889,7 +17065,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>管理告警规则</para>
+        /// <para>Manages alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16908,7 +17084,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>管理告警规则</para>
+        /// <para>Manages alert rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16927,7 +17103,125 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Workspace</para>
+        /// <para>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenCmsServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenCmsServiceResponse
+        /// </returns>
+        public OpenCmsServiceResponse OpenCmsServiceWithOptions(OpenCmsServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenCmsService",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/cmsservice",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenCmsServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenCmsServiceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenCmsServiceResponse
+        /// </returns>
+        public async Task<OpenCmsServiceResponse> OpenCmsServiceWithOptionsAsync(OpenCmsServiceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OpenCmsService",
+                Version = "2024-03-30",
+                Protocol = "HTTPS",
+                Pathname = "/cmsservice",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OpenCmsServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenCmsServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenCmsServiceResponse
+        /// </returns>
+        public OpenCmsServiceResponse OpenCmsService(OpenCmsServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OpenCmsServiceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>This operation enables monitoring services, including CloudMonitor Enterprise, Managed Service for Prometheus, and Log Service.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// OpenCmsServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OpenCmsServiceResponse
+        /// </returns>
+        public async Task<OpenCmsServiceResponse> OpenCmsServiceAsync(OpenCmsServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OpenCmsServiceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16981,7 +17275,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Workspace</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17035,7 +17329,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Workspace</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17054,7 +17348,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Workspace</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17073,8 +17367,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询告警规则</para>
+        /// <para>Retrieves a list of alert rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// QueryAlertRulesRequest
@@ -17139,8 +17438,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询告警规则</para>
+        /// <para>Retrieves a list of alert rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// QueryAlertRulesRequest
@@ -17205,8 +17509,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询告警规则</para>
+        /// <para>Retrieves a list of alert rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAlertRulesRequest
@@ -17224,8 +17533,13 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询告警规则</para>
+        /// <para>Retrieves a list of alert rules.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This topic provides an example of how to retrieve a list of alert rules. In this example, a successful response returns two alert rules: <c>ECS_Template1</c> and <c>ECS_Template2</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAlertRulesRequest
@@ -17243,7 +17557,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索上下文</para>
+        /// <para>Search context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17309,7 +17623,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索上下文</para>
+        /// <para>Search context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17375,7 +17689,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索上下文</para>
+        /// <para>Search context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17394,7 +17708,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索上下文</para>
+        /// <para>Search context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17413,7 +17727,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索记忆</para>
+        /// <para>Search memories using query conditions and filters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17499,7 +17813,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索记忆</para>
+        /// <para>Search memories using query conditions and filters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17585,7 +17899,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索记忆</para>
+        /// <para>Search memories using query conditions and filters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17604,7 +17918,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>搜索记忆</para>
+        /// <para>Search memories using query conditions and filters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17623,7 +17937,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Adds tags to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17677,7 +17991,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Adds tags to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17731,7 +18045,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Adds tags to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17750,7 +18064,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Adds tags to one or more resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17769,7 +18083,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Deletes a tag</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17837,7 +18151,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Deletes a tag</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17905,7 +18219,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Deletes a tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17924,7 +18238,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Deletes a tag</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17943,7 +18257,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrade Access Component</para>
+        /// <para>Upgrades an add-on component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18001,7 +18315,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrade Access Component</para>
+        /// <para>Upgrades an add-on component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18059,7 +18373,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrade Access Component</para>
+        /// <para>Upgrades an add-on component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18078,7 +18392,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upgrade Access Component</para>
+        /// <para>Upgrades an add-on component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18097,7 +18411,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply Aggregation Task Group</para>
+        /// <para>Updates an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18203,7 +18517,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply Aggregation Task Group</para>
+        /// <para>Updates an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18309,7 +18623,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply Aggregation Task Group</para>
+        /// <para>Updates an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18328,7 +18642,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply Aggregation Task Group</para>
+        /// <para>Updates an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18347,7 +18661,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Aggregation Task Group Status</para>
+        /// <para>Updates the status of an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18393,7 +18707,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Aggregation Task Group Status</para>
+        /// <para>Updates the status of an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18439,7 +18753,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Aggregation Task Group Status</para>
+        /// <para>Updates the status of an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18458,7 +18772,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Aggregation Task Group Status</para>
+        /// <para>Updates the status of an aggregation task group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18477,7 +18791,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警 Webhook 通知配置。</para>
+        /// <para>Updates a webhook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18543,7 +18857,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警 Webhook 通知配置。</para>
+        /// <para>Updates a webhook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18609,7 +18923,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警 Webhook 通知配置。</para>
+        /// <para>Updates a webhook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18628,7 +18942,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警 Webhook 通知配置。</para>
+        /// <para>Updates a webhook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18647,7 +18961,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改业务链路</para>
+        /// <para>Modifies a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18705,7 +19019,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改业务链路</para>
+        /// <para>Modifies a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18763,7 +19077,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改业务链路</para>
+        /// <para>Modifies a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18782,7 +19096,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改业务链路</para>
+        /// <para>Modifies a business trace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18801,7 +19115,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文</para>
+        /// <para>Updates a context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18863,7 +19177,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文</para>
+        /// <para>Updates a context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18925,7 +19239,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文</para>
+        /// <para>Updates a context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18944,7 +19258,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文</para>
+        /// <para>Updates a context.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18963,7 +19277,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文库配置</para>
+        /// <para>Updates the configuration of a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19021,7 +19335,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文库配置</para>
+        /// <para>Updates the configuration of a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19079,7 +19393,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文库配置</para>
+        /// <para>Updates the configuration of a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19098,7 +19412,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文库配置</para>
+        /// <para>Updates the configuration of a context store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19117,7 +19431,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据集</para>
+        /// <para>Updates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19163,7 +19477,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据集</para>
+        /// <para>Updates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19209,7 +19523,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据集</para>
+        /// <para>Updates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19228,7 +19542,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据集</para>
+        /// <para>Updates a dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19247,7 +19561,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据投递任务</para>
+        /// <para>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19325,7 +19639,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据投递任务</para>
+        /// <para>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19403,7 +19717,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据投递任务</para>
+        /// <para>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19422,7 +19736,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数据投递任务</para>
+        /// <para>Updates a delivery task. This operation uses PATCH semantics, meaning unspecified fields in the request body remain unchanged.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19441,7 +19755,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the specified policy</para>
+        /// <para>Updates the specified policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19499,7 +19813,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the specified policy</para>
+        /// <para>Updates the specified policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19557,7 +19871,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the specified policy</para>
+        /// <para>Updates the specified policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19576,7 +19890,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update the specified policy</para>
+        /// <para>Updates the specified policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19595,7 +19909,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆</para>
+        /// <para>Updates a specific Memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19645,7 +19959,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆</para>
+        /// <para>Updates a specific Memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19695,7 +20009,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆</para>
+        /// <para>Updates a specific Memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19714,7 +20028,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆</para>
+        /// <para>Updates a specific Memory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19733,7 +20047,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆库配置</para>
+        /// <para>Modify a memory store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19791,7 +20105,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆库配置</para>
+        /// <para>Modify a memory store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19849,7 +20163,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆库配置</para>
+        /// <para>Modify a memory store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19868,7 +20182,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆库配置</para>
+        /// <para>Modify a memory store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19887,7 +20201,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警通知策略</para>
+        /// <para>Updates a notification policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19934,7 +20248,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警通知策略</para>
+        /// <para>Updates a notification policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19981,7 +20295,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警通知策略</para>
+        /// <para>Updates a notification policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20000,7 +20314,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改已存在的告警通知策略</para>
+        /// <para>Updates a notification policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20019,7 +20333,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新流水线</para>
+        /// <para>Update pipeline</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20081,7 +20395,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新流水线</para>
+        /// <para>Update pipeline</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20143,7 +20457,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新流水线</para>
+        /// <para>Update pipeline</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20162,7 +20476,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新流水线</para>
+        /// <para>Update pipeline</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20181,12 +20495,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Prometheus instance information</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Prometheus instance information.</para>
+        /// <para>This topic describes how to update a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20272,12 +20586,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Prometheus instance information</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Prometheus instance information.</para>
+        /// <para>This topic describes how to update a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20363,12 +20677,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Prometheus instance information</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Prometheus instance information.</para>
+        /// <para>This topic describes how to update a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20387,12 +20701,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Prometheus instance information</para>
+        /// <para>Updates the information of a Prometheus instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Prometheus instance information.</para>
+        /// <para>This topic describes how to update a Prometheus instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20411,7 +20725,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Prom实例信息</para>
+        /// <para>Updates the user settings for Prometheus. Note: If you set <c>settingKey</c> to <c>financeUsageRegion</c>, Prometheus usage data is sent to Simple Log Service (SLS) in the specified region. Historical usage data will no longer be available in the Prometheus console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20457,7 +20771,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Prom实例信息</para>
+        /// <para>Updates the user settings for Prometheus. Note: If you set <c>settingKey</c> to <c>financeUsageRegion</c>, Prometheus usage data is sent to Simple Log Service (SLS) in the specified region. Historical usage data will no longer be available in the Prometheus console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20503,7 +20817,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Prom实例信息</para>
+        /// <para>Updates the user settings for Prometheus. Note: If you set <c>settingKey</c> to <c>financeUsageRegion</c>, Prometheus usage data is sent to Simple Log Service (SLS) in the specified region. Historical usage data will no longer be available in the Prometheus console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20522,7 +20836,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Prom实例信息</para>
+        /// <para>Updates the user settings for Prometheus. Note: If you set <c>settingKey</c> to <c>financeUsageRegion</c>, Prometheus usage data is sent to Simple Log Service (SLS) in the specified region. Historical usage data will no longer be available in the Prometheus console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20541,12 +20855,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Prometheus view instance information</para>
+        /// <para>Updates the information about a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Prometheus view instance information.</para>
+        /// <para>Updates the information about a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20616,12 +20930,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Prometheus view instance information</para>
+        /// <para>Updates the information about a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Prometheus view instance information.</para>
+        /// <para>Updates the information about a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20691,12 +21005,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Prometheus view instance information</para>
+        /// <para>Updates the information about a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Prometheus view instance information.</para>
+        /// <para>Updates the information about a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20715,12 +21029,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Prometheus view instance information</para>
+        /// <para>Updates the information about a Prometheus view instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Prometheus view instance information.</para>
+        /// <para>Updates the information about a Prometheus view instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20739,7 +21053,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Service</para>
+        /// <para>Updates an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20797,7 +21111,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Service</para>
+        /// <para>Updates an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20855,7 +21169,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Service</para>
+        /// <para>Updates an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20874,7 +21188,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Service</para>
+        /// <para>Updates an application observability service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20893,7 +21207,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个已存在的订阅配置</para>
+        /// <para>Updates a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20940,7 +21254,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个已存在的订阅配置</para>
+        /// <para>Updates a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20987,7 +21301,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个已存在的订阅配置</para>
+        /// <para>Updates a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21006,7 +21320,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新一个已存在的订阅配置</para>
+        /// <para>Updates a subscription.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21025,12 +21339,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Umodel configuration information</para>
+        /// <para>Updates the configuration of a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Umodel configuration information</para>
+        /// <para>Updates the configuration of a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21076,12 +21390,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Umodel configuration information</para>
+        /// <para>Updates the configuration of a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Umodel configuration information</para>
+        /// <para>Updates the configuration of a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21127,12 +21441,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Umodel configuration information</para>
+        /// <para>Updates the configuration of a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Umodel configuration information</para>
+        /// <para>Updates the configuration of a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21151,12 +21465,12 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Umodel configuration information</para>
+        /// <para>Updates the configuration of a Umodel.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Update Umodel configuration information</para>
+        /// <para>Updates the configuration of a Umodel.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21175,7 +21489,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Umodel配置信息</para>
+        /// <para>Upserts a common Umodel schema reference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21225,7 +21539,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Umodel配置信息</para>
+        /// <para>Upserts a common Umodel schema reference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21275,7 +21589,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Umodel配置信息</para>
+        /// <para>Upserts a common Umodel schema reference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21294,7 +21608,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Umodel配置信息</para>
+        /// <para>Upserts a common Umodel schema reference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21313,7 +21627,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Write Umodel Elements</para>
+        /// <para>Inserts or updates Umodel elements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21365,7 +21679,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Write Umodel Elements</para>
+        /// <para>Inserts or updates Umodel elements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21417,7 +21731,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Write Umodel Elements</para>
+        /// <para>Inserts or updates Umodel elements.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21436,7 +21750,7 @@ namespace AlibabaCloud.SDK.Cms20240330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Write Umodel Elements</para>
+        /// <para>Inserts or updates Umodel elements.</para>
         /// </summary>
         /// 
         /// <param name="request">

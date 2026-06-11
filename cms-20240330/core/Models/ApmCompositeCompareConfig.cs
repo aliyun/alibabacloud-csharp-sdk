@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ApmCompositeCompareConfig : TeaModel {
         /// <summary>
-        /// <para>聚合函数</para>
+        /// <para>The aggregation method for metric data. For example, <c>AVG</c>, <c>SUM</c>, or <c>MAX</c>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("aggregate")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Aggregate { get; set; }
 
         /// <summary>
-        /// <para>比较操作符</para>
+        /// <para>The operator for comparing the aggregated metric data against the <c>threshold</c>. For example, <c>GREATER_THAN</c> or <c>LESS_THAN</c>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("operator")]
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>单阈值</para>
+        /// <para>The value to compare the aggregated metric data against. An alert is triggered when the metric data meets the condition defined by the <c>operator</c>.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("threshold")]

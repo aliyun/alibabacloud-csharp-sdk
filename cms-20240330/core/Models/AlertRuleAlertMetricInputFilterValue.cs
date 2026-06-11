@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class AlertRuleAlertMetricInputFilterValue : TeaModel {
         /// <summary>
-        /// <para>Dimension of the filter condition.</para>
+        /// <para>The dimension of the filter condition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Dim { get; set; }
 
         /// <summary>
-        /// <para>Filter Condition Operator.</para>
+        /// <para>The operator for the filter condition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Opt { get; set; }
 
         /// <summary>
-        /// <para>Filter Condition Value.</para>
+        /// <para>The value of the filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>

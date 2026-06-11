@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateContextStoreAPIKeyRequest : TeaModel {
         /// <summary>
+        /// <para>The display name of the API key. Use this name to identify its purpose.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

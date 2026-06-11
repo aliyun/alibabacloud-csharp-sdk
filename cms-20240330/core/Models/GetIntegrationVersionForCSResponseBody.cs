@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetIntegrationVersionForCSResponseBody : TeaModel {
         /// <summary>
+        /// <para>The version of the Integration Center.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>V1</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IntegrationVersion { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD9BCF34-EA09-5643-BC11-AF41C8DFAE5A</para>

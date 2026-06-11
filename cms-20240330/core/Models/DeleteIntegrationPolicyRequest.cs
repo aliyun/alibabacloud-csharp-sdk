@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteIntegrationPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to forcibly delete the cloud-native all-in-one machine,
-        /// default value: <c>false</c>.</para>
+        /// <para>Specifies whether to force delete the cloud native appliance.
+        /// Default: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Optional cloud product</para>
+        /// <para>The namespace of the cloud product. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ack-csi-fuse</para>
@@ -27,6 +27,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The tenant ID.</para>
+        /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }

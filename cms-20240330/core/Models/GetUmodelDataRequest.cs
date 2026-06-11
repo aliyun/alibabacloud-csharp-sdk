@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class GetUmodelDataRequest : TeaModel {
         /// <summary>
-        /// <para>Query conditions</para>
+        /// <para>The query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public object Content { get; set; }
 
         /// <summary>
-        /// <para>Method</para>
+        /// <para>The method.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

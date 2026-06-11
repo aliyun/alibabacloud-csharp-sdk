@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusVirtualInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Each cloud product can only create one virtual instance in each region.</para>
+        /// <para>Each cloud product supports only one virtual instance per region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

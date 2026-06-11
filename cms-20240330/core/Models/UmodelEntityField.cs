@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UmodelEntityField : TeaModel {
         /// <summary>
-        /// <para>实体字段名</para>
+        /// <para>The name of the entity field.</para>
         /// </summary>
         [NameInMap("field")]
         [Validation(Required=false)]
         public string Field { get; set; }
 
         /// <summary>
-        /// <para>字段别名或展示值</para>
+        /// <para>The field alias or display value.</para>
         /// </summary>
         [NameInMap("value")]
         [Validation(Required=false)]

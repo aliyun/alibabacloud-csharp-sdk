@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreateDeliveryTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique ID for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4CB23A2E-B426-5D4B-9AA2-6C7A508D954B</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the delivery task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>98e367d8fb8cc83b</para>
         /// </summary>

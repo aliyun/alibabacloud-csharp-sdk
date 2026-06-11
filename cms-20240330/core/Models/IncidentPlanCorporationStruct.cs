@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentPlanCorporationStruct : TeaModel {
         /// <summary>
-        /// <para>Channel name.</para>
+        /// <para>The channel name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Robot ID.</para>
+        /// <para>The unique ID of the robot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>robotId-cs-api-test</para>

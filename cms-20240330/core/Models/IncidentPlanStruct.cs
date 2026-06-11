@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class IncidentPlanStruct : TeaModel {
         /// <summary>
-        /// <para>Automatic recovery wait time.</para>
+        /// <para>The wait time for automatic recovery.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? AutoRecoverSeconds { get; set; }
 
         /// <summary>
-        /// <para>Event closure timeout.</para>
+        /// <para>The timeout period for closing an event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400000</para>
@@ -30,31 +30,31 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? CloseExpire { get; set; }
 
         /// <summary>
-        /// <para>List of teams or roles involved in collaboration.</para>
+        /// <para>A list of collaborating teams or roles.</para>
         /// </summary>
         [NameInMap("corporation")]
         [Validation(Required=false)]
         public List<IncidentPlanCorporationStruct> Corporation { get; set; }
 
         /// <summary>
-        /// <para>Contingency plan description.</para>
+        /// <para>The description of the plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Emergency response plan for excessively high database connection count.</para>
+        /// <para>针对数据库连接数过高的应急处理方案</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>List of escalation policy IDs.</para>
+        /// <para>A list of escalation policy IDs.</para>
         /// </summary>
         [NameInMap("escalationId")]
         [Validation(Required=false)]
         public List<string> EscalationId { get; set; }
 
         /// <summary>
-        /// <para>Creation time.</para>
+        /// <para>The time when the plan was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>Last modification time.</para>
+        /// <para>The time when the plan was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741234567890</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// <para>Grouping field path.</para>
+        /// <para>The grouping field path.</para>
         /// </summary>
         [NameInMap("groupBy")]
         [Validation(Required=false)]
         public List<IncidentPlanFieldPath> GroupBy { get; set; }
 
         /// <summary>
-        /// <para>Event contingency plan ID.</para>
+        /// <para>The incident plan ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>plan-001</para>
@@ -91,24 +91,24 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string IncidentPlanId { get; set; }
 
         /// <summary>
-        /// <para>Contingency plan name.</para>
+        /// <para>The name of the plan.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Database connection count alert contingency plan.</para>
+        /// <para>数据库连接数告警预案</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>List of resource field mapping paths.</para>
+        /// <para>A list of resource field mapping paths.</para>
         /// </summary>
         [NameInMap("resourceFiled")]
         [Validation(Required=false)]
         public List<IncidentPlanFieldPath> ResourceFiled { get; set; }
 
         /// <summary>
-        /// <para>Status.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>User ID.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>uesr-12345</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? UserId { get; set; }
 
         /// <summary>
-        /// <para>Workspace name.</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

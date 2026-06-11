@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdateAggTaskGroupStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Status of the aggregation task group, either “Running” or “Stopped”. Default is Running.</para>
+        /// <para>The status of the aggregation task group. Valid values are &quot;Running&quot; and &quot;Stopped&quot;. The default value is Running.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

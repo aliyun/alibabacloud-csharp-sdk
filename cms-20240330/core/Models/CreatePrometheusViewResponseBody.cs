@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class CreatePrometheusViewResponseBody : TeaModel {
         /// <summary>
-        /// <para>Prometheus view ID.</para>
+        /// <para>The ID of the Prometheus view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cd5237f7dbd574cf9bbd648ff9efb16cd</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewId { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8FDE2569-626B-5176-9844-28877A*****</para>

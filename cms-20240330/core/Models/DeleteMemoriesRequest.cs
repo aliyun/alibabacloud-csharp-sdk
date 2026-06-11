@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DeleteMemoriesRequest : TeaModel {
         /// <summary>
+        /// <para>The agent ID of the application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>952730733889060865</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>98ea19fe-128b-4841-b318-0359bec3c65d</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The run ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>jr-dd7c645fd6fe50d4</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string RunId { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_user_001</para>
         /// </summary>

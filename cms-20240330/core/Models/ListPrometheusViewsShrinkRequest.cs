@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListPrometheusViewsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Filter by RegionID.</para>
+        /// <para>The region IDs by which to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou,cn-beijing</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string FilterRegionIds { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of records to return.</para>
+        /// <para>The maximum number of records to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Query token.</para>
+        /// <para>The query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>List of Prometheus view instance IDs.</para>
+        /// <para>The IDs of the Prometheus view instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>view-xxx</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewIds { get; set; }
 
         /// <summary>
-        /// <para>Prometheus view name.</para>
+        /// <para>The name of the Prometheus view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>view1</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusViewName { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm3gn5i6bigbi</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Resource type.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PROMETHEUSVIEW</para>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>List of tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("tag")]
         [Validation(Required=false)]
         public string TagShrink { get; set; }
 
         /// <summary>
-        /// <para>Instance version: V1 or V2</para>
+        /// <para>The instance version. Valid values: V1 and V2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>V2</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>Workspace name</para>
+        /// <para>The name of the workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-test</para>

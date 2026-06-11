@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class ListAlertRobotsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the robot. Fuzzy search by prefix is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The number of the page to return. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -33,10 +39,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The robot IDs.</para>
+        /// </summary>
         [NameInMap("robotIds")]
         [Validation(Required=false)]
         public string RobotIdsShrink { get; set; }
 
+        /// <summary>
+        /// <para>The robot types.</para>
+        /// </summary>
         [NameInMap("types")]
         [Validation(Required=false)]
         public string TypesShrink { get; set; }

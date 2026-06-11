@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UntagResourcesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to remove all tags from the specified resources. Valid values:</para>
+        /// <para>false (default): No
+        /// true: Yes</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +22,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>A list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("resourceId")]
@@ -25,6 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string ResourceIdShrink { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +40,10 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The tag key.</para>
+        /// <para>You can detach tags with up to 20 tag keys.</para>
+        /// </summary>
         [NameInMap("tagKey")]
         [Validation(Required=false)]
         public string TagKeyShrink { get; set; }
