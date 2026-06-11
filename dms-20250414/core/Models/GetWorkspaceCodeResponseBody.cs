@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message returned when the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This record is being collected, please wait for a moment.</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates if the request succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

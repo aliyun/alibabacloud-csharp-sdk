@@ -7003,12 +7003,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<c>mtime</c>).</para>
+        /// <para>Reads the content of a code file in the workspace and returns the file content along with mtime (in the header).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the content of a specified code file from a workspace.</para>
+        /// <para>Obtains the resource configuration limit information and the instance purchase status of the workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7058,12 +7058,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<c>mtime</c>).</para>
+        /// <para>Reads the content of a code file in the workspace and returns the file content along with mtime (in the header).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the content of a specified code file from a workspace.</para>
+        /// <para>Obtains the resource configuration limit information and the instance purchase status of the workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7113,12 +7113,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<c>mtime</c>).</para>
+        /// <para>Reads the content of a code file in the workspace and returns the file content along with mtime (in the header).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the content of a specified code file from a workspace.</para>
+        /// <para>Obtains the resource configuration limit information and the instance purchase status of the workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7136,12 +7136,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<c>mtime</c>).</para>
+        /// <para>Reads the content of a code file in the workspace and returns the file content along with mtime (in the header).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the content of a specified code file from a workspace.</para>
+        /// <para>Obtains the resource configuration limit information and the instance purchase status of the workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12227,12 +12227,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves code in a workspace and creates the file if it does not exist.</para>
+        /// <para>Saves workspace code. If the file does not exist, a new file is automatically created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Saves code in a workspace and optionally publishes it to a repository.</para>
+        /// <para>发布工作空间的代码</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12300,12 +12300,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves code in a workspace and creates the file if it does not exist.</para>
+        /// <para>Saves workspace code. If the file does not exist, a new file is automatically created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Saves code in a workspace and optionally publishes it to a repository.</para>
+        /// <para>发布工作空间的代码</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12373,12 +12373,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves code in a workspace and creates the file if it does not exist.</para>
+        /// <para>Saves workspace code. If the file does not exist, a new file is automatically created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Saves code in a workspace and optionally publishes it to a repository.</para>
+        /// <para>发布工作空间的代码</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12396,12 +12396,12 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Saves code in a workspace and creates the file if it does not exist.</para>
+        /// <para>Saves workspace code. If the file does not exist, a new file is automatically created.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Saves code in a workspace and optionally publishes it to a repository.</para>
+        /// <para>发布工作空间的代码</para>
         /// </description>
         /// 
         /// <param name="request">

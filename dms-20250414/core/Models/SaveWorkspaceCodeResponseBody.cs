@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class SaveWorkspaceCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>返回数据</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>错误码</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidTid</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>http状态码</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message for a failed request. This parameter is not returned for successful requests.</para>
+        /// <para>错误信息，在接口失败时，返回具体错误信息，成功时则为空</para>
         /// 
         /// <b>Example:</b>
         /// <para>Failed to publish，repo branch empty</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>67E910F2-4B62-5B0C-ACA3-7547695C****</para>
@@ -60,12 +60,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>是否调用成功。</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>：调用成功。</description></item>
+        /// <item><description><b>false</b>：调用失败。</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
