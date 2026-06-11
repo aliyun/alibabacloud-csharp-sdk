@@ -3258,7 +3258,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical group of nodes that share the same properties. Node pools allow you to manage nodes and perform operations and maintenance (O&amp;M) tasks, such as upgrades and auto scaling, on them as a group. You can use the automated O&amp;M features of a node pool to automatically fix operating system (OS) Common Vulnerabilities and Exposures (CVE) vulnerabilities, recover failed nodes, and upgrade kubelet and containerd versions. This helps reduce your O&amp;M costs. Call the CreateClusterNodePool operation to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3364,7 +3364,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical group of nodes that share the same properties. Node pools allow you to manage nodes and perform operations and maintenance (O&amp;M) tasks, such as upgrades and auto scaling, on them as a group. You can use the automated O&amp;M features of a node pool to automatically fix operating system (OS) Common Vulnerabilities and Exposures (CVE) vulnerabilities, recover failed nodes, and upgrade kubelet and containerd versions. This helps reduce your O&amp;M costs. Call the CreateClusterNodePool operation to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3470,7 +3470,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical group of nodes that share the same properties. Node pools allow you to manage nodes and perform operations and maintenance (O&amp;M) tasks, such as upgrades and auto scaling, on them as a group. You can use the automated O&amp;M features of a node pool to automatically fix operating system (OS) Common Vulnerabilities and Exposures (CVE) vulnerabilities, recover failed nodes, and upgrade kubelet and containerd versions. This helps reduce your O&amp;M costs. Call the CreateClusterNodePool operation to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3489,7 +3489,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes that share the same properties, enabling unified management and O&amp;M operations such as node upgrades and Auto Scaling. You can further leverage the automated O&amp;M capabilities of node pools to reduce operational costs—for example, by automatically patching OS CVE vulnerabilities, automatically recovering failed nodes, and automatically upgrading kubelet and containerd versions. You can invoke CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical group of nodes that share the same properties. Node pools allow you to manage nodes and perform operations and maintenance (O&amp;M) tasks, such as upgrades and auto scaling, on them as a group. You can use the automated O&amp;M features of a node pool to automatically fix operating system (OS) Common Vulnerabilities and Exposures (CVE) vulnerabilities, recover failed nodes, and upgrade kubelet and containerd versions. This helps reduce your O&amp;M costs. Call the CreateClusterNodePool operation to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7450,7 +7450,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</para>
+        /// <para>You can call the DescribeClusterNodePoolDetail operation to query the details of a node pool in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7486,7 +7486,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</para>
+        /// <para>You can call the DescribeClusterNodePoolDetail operation to query the details of a node pool in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7522,7 +7522,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</para>
+        /// <para>You can call the DescribeClusterNodePoolDetail operation to query the details of a node pool in a cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7537,7 +7537,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the DescribeClusterNodePoolDetail operation with a node pool ID to query the configuration of a specific node pool in a cluster.</para>
+        /// <para>You can call the DescribeClusterNodePoolDetail operation to query the details of a node pool in a cluster.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7552,7 +7552,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all node pools in a cluster.</para>
+        /// <para>Queries the node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7598,7 +7598,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all node pools in a cluster.</para>
+        /// <para>Queries the node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7644,7 +7644,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all node pools in a cluster.</para>
+        /// <para>Queries the node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7663,7 +7663,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists all node pools in a cluster.</para>
+        /// <para>Queries the node pools in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15952,7 +15952,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</para>
+        /// <para>Call the ModifyClusterNodePool operation to update the configurations of a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16026,7 +16026,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</para>
+        /// <para>Call the ModifyClusterNodePool operation to update the configurations of a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16100,7 +16100,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</para>
+        /// <para>Call the ModifyClusterNodePool operation to update the configurations of a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16119,7 +16119,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can call the ModifyClusterNodePool API to update the configuration of a node pool by specifying its node pool ID.</para>
+        /// <para>Call the ModifyClusterNodePool operation to update the configurations of a node pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18416,6 +18416,144 @@ namespace AlibabaCloud.SDK.CS20151215
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RunClusterInspectWithOptionsAsync(clusterId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行节点上的运维操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunNodeOperationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunNodeOperationResponse
+        /// </returns>
+        public RunNodeOperationResponse RunNodeOperationWithOptions(string clusterId, string nodepoolId, string nodeName, RunNodeOperationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationAction))
+            {
+                body["operationAction"] = request.OperationAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationArgs))
+            {
+                body["operationArgs"] = request.OperationArgs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunNodeOperation",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/nodes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodeName) + "/operation",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunNodeOperationResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行节点上的运维操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunNodeOperationRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunNodeOperationResponse
+        /// </returns>
+        public async Task<RunNodeOperationResponse> RunNodeOperationWithOptionsAsync(string clusterId, string nodepoolId, string nodeName, RunNodeOperationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationAction))
+            {
+                body["operationAction"] = request.OperationAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationArgs))
+            {
+                body["operationArgs"] = request.OperationArgs;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunNodeOperation",
+                Version = "2015-12-15",
+                Protocol = "HTTPS",
+                Pathname = "/clusters/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(clusterId) + "/nodepools/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodepoolId) + "/nodes/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(nodeName) + "/operation",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunNodeOperationResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行节点上的运维操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunNodeOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunNodeOperationResponse
+        /// </returns>
+        public RunNodeOperationResponse RunNodeOperation(string clusterId, string nodepoolId, string nodeName, RunNodeOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunNodeOperationWithOptions(clusterId, nodepoolId, nodeName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>执行节点上的运维操作</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunNodeOperationRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunNodeOperationResponse
+        /// </returns>
+        public async Task<RunNodeOperationResponse> RunNodeOperationAsync(string clusterId, string nodepoolId, string nodeName, RunNodeOperationRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunNodeOperationWithOptionsAsync(clusterId, nodepoolId, nodeName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

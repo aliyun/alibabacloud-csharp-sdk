@@ -8,34 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.CS20151215.Models
 {
-    public class CreateClusterNodePoolResponseBody : TeaModel {
+    public class RunNodeOperationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The node pool ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>np31da1b38983f4511b490fc62108a****</para>
+        /// <para>c2230fxxxxx</para>
         /// </summary>
-        [NameInMap("nodepool_id")]
+        [NameInMap("clusterId")]
         [Validation(Required=false)]
-        public string NodepoolId { get; set; }
+        public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>0527ac9a-c899-4341-a21a-****</para>
+        /// <para>xxxx</para>
         /// </summary>
-        [NameInMap("request_id")]
+        [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>T-613b19bbd160ad492800****</para>
+        /// <para>T-xxxx</para>
         /// </summary>
-        [NameInMap("task_id")]
+        [NameInMap("taskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 

@@ -10,17 +10,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 {
     public class CreateClusterNodePoolRequest : TeaModel {
         /// <summary>
-        /// <para>Intelligent managed configuration for the node pool.</para>
+        /// <para>The intelligent managed node pool configurations.</para>
         /// </summary>
         [NameInMap("auto_mode")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestAutoMode AutoMode { get; set; }
         public class CreateClusterNodePoolRequestAutoMode : TeaModel {
             /// <summary>
-            /// <para>Whether to enable the intelligent managed mode.<br>Valid values:  </para>
+            /// <para>Specifies whether to enable the intelligent managed mode.
+            /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Enables the intelligent managed mode. This can be enabled only when the cluster has the intelligent managed mode enabled.  </description></item>
-            /// <item><description>false: Disables the intelligent managed mode.</description></item>
+            /// <item><description><para>true: Enables the intelligent managed mode. You can enable this mode only when the intelligent managed mode is enabled for the cluster.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disables the intelligent managed mode.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +36,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The configurations of auto scaling.</para>
+        /// <para>The auto scaling configurations.</para>
         /// </summary>
         [NameInMap("auto_scaling")]
         [Validation(Required=false)]
@@ -42,10 +45,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
-            /// <para>The maximum bandwidth of the EIP. Unit: Mbit/s.</para>
-            /// <para>**</para>
-            /// <para><b>Important</b> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</para>
+            /// <para>[This parameter is deprecated] Use \<c>internet_charge_type\\</c> and \<c>internet_max_bandwidth_out\\</c> instead.</para>
+            /// <para>The peak bandwidth of the EIP. Unit: Mbps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -58,15 +59,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
-            /// <para>The metering method of the EIP. Valid values:</para>
+            /// <para>[This parameter is deprecated] Use \<c>internet_charge_type\\</c> and \<c>internet_max_bandwidth_out\\</c> instead.</para>
+            /// <para>The billing method of the EIP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PayByBandwidth</c>: pay-by-bandwidth.</description></item>
-            /// <item><description><c>PayByTraffic</c>: pay-by-data-transfer.</description></item>
+            /// <item><description><para><c>PayByBandwidth</c>: pay-by-bandwidth.</para>
+            /// </description></item>
+            /// <item><description><para><c>PayByTraffic</c>: pay-by-traffic.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>PayByBandwidth</c>.</para>
-            /// <para>**</para>
-            /// <para><b>Important</b> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -77,11 +78,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string EipInternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable auto scaling for the node pool. Valid values:</para>
+            /// <para>Specifies whether to enable auto scaling. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables auto scaling.</description></item>
-            /// <item><description><c>false</c>: disables auto scaling. If you set this parameter to false, other parameters in the <c>auto_scaling</c> section do not take effect.</description></item>
+            /// <item><description><para><c>true</c>: Enables auto scaling for the node pool. If the resources planned for the cluster cannot meet the scheduling requirements of pods, Container Service for Kubernetes (ACK) automatically scales out or scales in nodes based on the configured minimum and maximum numbers of instances. For clusters of Kubernetes 1.24 or later, instant scaling is enabled by default. For clusters of a Kubernetes version earlier than 1.24, node autoscaling is enabled by default. For more information, see <a href="https://help.aliyun.com/document_detail/2746785.html">Node scaling</a>.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disables auto scaling. ACK adjusts the number of nodes in the node pool based on the value of \<c>desired_size\\</c> to maintain a specific number of nodes.</para>
+            /// </description></item>
             /// </list>
+            /// <para>If you set this parameter to false, other parameters in \<c>auto_scaling\\</c> do not take effect.</para>
             /// <para>Default value: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -94,15 +98,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
-            /// <para>Specifies whether to associate an elastic IP address (EIP) with the node pool. Valid values:</para>
+            /// <para>[This parameter is deprecated] This parameter is deprecated. Use \<c>internet_charge_type\\</c> and \<c>internet_max_bandwidth_out\\</c> instead.</para>
+            /// <para>Specifies whether to associate an EIP with the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: associates an EIP with the node pool.</description></item>
-            /// <item><description><c>false</c>: does not associate an EIP with the node pool.</description></item>
+            /// <item><description><para><c>true</c>: associates an EIP with the node.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: does not associate an EIP with the node.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>false</c>.</para>
-            /// <para>**</para>
-            /// <para><b>Important</b> This parameter is deprecated. Use the internet_charge_type and internet_max_bandwidth_out parameters instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -113,7 +117,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? IsBondEip { get; set; }
 
             /// <summary>
-            /// <para>The maximum number to which the Elastic Compute Service (ECS) instances in the node pool can be scaled. The number of nodes in the node pool cannot be greater than this value. This parameter takes effect only when <c>enable</c> is set to true. Valid values: [min_instances, 2000]. Default value: 0.</para>
+            /// <para>The maximum number of instances that can be created in the node pool. This does not include existing instances. This parameter takes effect only if \<c>enable\\</c> is set to \<c>true\\</c>.</para>
+            /// <para>The value must be in the range of [\<c>min_instances\\</c>, 2000]. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -123,7 +128,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxInstances { get; set; }
 
             /// <summary>
-            /// <para>The minimum number to which the ECS instances in the node pool can be scaled. The number of nodes in the node pool cannot be smaller than this value. This parameter takes effect only when <c>enable</c> is set to true. Valid values: [0, max_instances]. Default value: 0.</para>
+            /// <para>The minimum number of instances that can be created in the node pool. This does not include existing instances. This parameter takes effect only if \<c>enable\\</c> is set to \<c>true\\</c>.</para>
+            /// <para>The value must be in the range of [0, \<c>max_instances\\</c>]. Default value: 0.</para>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description><para>If the minimum number of instances is not 0, the specified number of ECS instances are automatically created after the scaling group is created.</para>
+            /// </description></item>
+            /// <item><description><para>We recommend that you set the maximum number of instances to a value that is not smaller than the current number of nodes in the node pool. Otherwise, nodes in the node pool are scaled in after auto scaling is enabled.</para>
+            /// </description></item>
+            /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -133,16 +147,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MinInstances { get; set; }
 
             /// <summary>
-            /// <para>The instance type that is used for auto scaling. This parameter takes effect only when <c>enable</c> is set to true. Valid values:</para>
+            /// <para>The type of instances that are automatically scaled. This parameter takes effect only if \<c>enable\\</c> is set to \<c>true\\</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cpu</c>: regular instance.</description></item>
-            /// <item><description><c>gpu</c>: GPU-accelerated instance.</description></item>
-            /// <item><description><c>gpushare</c>: shared GPU-accelerated instance.</description></item>
-            /// <item><description><c>spot</c>: preemptible instance.</description></item>
+            /// <item><description><para><c>cpu</c>: regular instance.</para>
+            /// </description></item>
+            /// <item><description><para><c>gpu</c>: GPU-accelerated instance.</para>
+            /// </description></item>
+            /// <item><description><para><c>gpushare</c>: shared GPU-accelerated instance.</para>
+            /// </description></item>
+            /// <item><description><para><c>spot</c>: spot instance.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>cpu</c>.</para>
             /// <remarks>
-            /// <para> You cannot modify this parameter after the node pool is created.</para>
+            /// <para>Notice: You cannot change the value of this parameter after the node pool is created.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -157,7 +175,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated. Use the desired_size parameter instead.</para>
+        /// <para>[This parameter is deprecated] Use desired_size instead.</para>
         /// <para>The number of nodes in the node pool.</para>
         /// 
         /// <b>Example:</b>
@@ -169,14 +187,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>Lingjun node pool configuration.</para>
+        /// <para>The Lingjun node pool configurations.</para>
         /// </summary>
         [NameInMap("eflo_node_group")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestEfloNodeGroup EfloNodeGroup { get; set; }
         public class CreateClusterNodePoolRequestEfloNodeGroup : TeaModel {
             /// <summary>
-            /// <para>The Lingjun cluster ID that must be associated when creating a Lingjun node pool.</para>
+            /// <para>The ID of the Lingjun cluster that you want to associate with the Lingjun node pool when you create the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i1169130516633730****</para>
@@ -186,7 +204,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Lingjun group in the Lingjun cluster to associate when creating a Lingjun node pool.</para>
+            /// <para>The ID of the Lingjun group in the Lingjun cluster that you want to associate with the Lingjun node pool when you create the node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ng-ec3c96ff0aa****</para>
@@ -198,10 +216,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to set the network type of the pod to host network.</para>
+        /// <para>Specifies whether to use the host network for the pod network.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: sets to host network.</description></item>
-        /// <item><description><c>false</c>: sets to container network.</description></item>
+        /// <item><description><para><c>true</c>: host network. Pods directly use the network stack of the host and share the IP address and ports with the host.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: container network. Pods have an independent network stack and do not occupy host network ports.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,7 +234,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
+        /// <para>[This parameter is deprecated]</para>
         /// <para>The configurations of the edge node pool.</para>
         /// </summary>
         [NameInMap("interconnect_config")]
@@ -223,8 +243,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public CreateClusterNodePoolRequestInterconnectConfig InterconnectConfig { get; set; }
         public class CreateClusterNodePoolRequestInterconnectConfig : TeaModel {
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
-            /// <para>The bandwidth of the enhanced edge node pool. Unit: Mbit/s.</para>
+            /// <para>[This parameter is deprecated]</para>
+            /// <para>The network bandwidth of the enhanced edge node pool. Unit: Mbps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -234,8 +254,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Bandwidth { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
-            /// <para>The ID of the Cloud Connect Network (CCN) instance that is associated with the enhanced edge node pool.</para>
+            /// <para>[This parameter is deprecated]</para>
+            /// <para>The ID of the CCN instance that is associated with the enhanced edge node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -245,8 +265,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CcnId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
-            /// <para>The region to which the CCN instance that is associated with the enhanced edge node pool belongs.</para>
+            /// <para>[This parameter is deprecated]</para>
+            /// <para>The region of the CCN instance that is associated with the enhanced edge node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -256,8 +276,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CcnRegionId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
-            /// <para>The ID of the Cloud Enterprise Network (CEN) instance that is associated with the enhanced edge node pool.</para>
+            /// <para>[This parameter is deprecated]</para>
+            /// <para>The ID of the CEN instance that is associated with the enhanced edge node pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -267,8 +287,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>This parameter is deprecated.</para>
-            /// <para>The subscription duration of the enhanced edge node pool. The duration is measured in months.</para>
+            /// <para>[This parameter is deprecated]</para>
+            /// <para>The subscription duration of the enhanced edge node pool. Unit: months.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -280,10 +300,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The network type of the edge node pool. This parameter takes effect only when the <c>type</c> of the node pool is set to <c>edge</c>. Valid values:</para>
+        /// <para>The network type of the edge node pool. This parameter takes effect only for node pools of the \<c>edge\\</c> type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>basic</c>: Internet.</description></item>
-        /// <item><description><c>private</c>: private network.</description></item>
+        /// <item><description><para><c>basic</c>: public network. Nodes in the node pool interact with cloud nodes over the Internet. Applications in the node pool cannot directly access the VPC in the cloud.</para>
+        /// </description></item>
+        /// <item><description><para><c>private</c>: private network. Nodes in the node pool connect to the cloud over a leased line, VPN, or CEN to achieve higher communication quality and better security.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -294,10 +316,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string InterconnectMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether all nodes in the edge node pool can communicate with each other at Layer 3.</para>
+        /// <para>Specifies whether nodes in the edge node pool can communicate with each other at Layer 3.</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c>: The nodes in the edge node pool can communicate with each other at Layer 3.</description></item>
-        /// <item><description><c>false</c>: The nodes in the edge node pool cannot communicate with each other at Layer 3.</description></item>
+        /// <item><description><para><c>true</c>: All nodes in the node pool can communicate with each other at Layer 3.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: All hosts in the node pool cannot communicate with each other at Layer 3.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -308,19 +332,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public bool? Intranet { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the cluster.</para>
+        /// <para>The cluster-related configurations.</para>
         /// </summary>
         [NameInMap("kubernetes_config")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestKubernetesConfig KubernetesConfig { get; set; }
         public class CreateClusterNodePoolRequestKubernetesConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to install the CloudMonitor agent on ECS nodes. After the CloudMonitor agent is installed on ECS nodes, you can view monitoring information about the instances in the CloudMonitor console. We recommend that you install the CloudMonitor agent. Valid values:</para>
+            /// <para>Specifies whether to install Cloud Monitor on the ECS nodes. After Cloud Monitor is installed, you can view the monitoring information of the created ECS instances in the Cloud Monitor console. We recommend that you enable this feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: installs the CloudMonitor agent on ECS nodes.</description></item>
-            /// <item><description><c>false</c>: does not install the CloudMonitor agent on ECS nodes.</description></item>
+            /// <item><description><para><c>true</c>: Installs Cloud Monitor on the ECS nodes.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Does not install Cloud Monitor on the ECS nodes.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: <c>false</c></para>
+            /// <para>Default value: <c>false</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -330,10 +356,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CmsEnabled { get; set; }
 
             /// <summary>
-            /// <para>The CPU management policy of nodes in the node pool. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</para>
+            /// <para>The CPU management policy of the node. The following policies are supported if the Kubernetes version of the cluster is 1.12.6 or later:</para>
             /// <list type="bullet">
-            /// <item><description><c>static</c>: allows pods with specific resource characteristics on the node to be granted with enhanced CPU affinity and exclusivity.</description></item>
-            /// <item><description><c>none</c>: specifies that the default CPU affinity is used.</description></item>
+            /// <item><description><para><c>static</c>: Allows pods with specific resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</para>
+            /// </description></item>
+            /// <item><description><para><c>none</c>: Enables the default CPU affinity scheme.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>none</c>.</para>
             /// 
@@ -345,19 +373,35 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string CpuPolicy { get; set; }
 
             /// <summary>
-            /// <para>The labels that you want to add to the nodes in the cluster.</para>
+            /// <para>The labels that you want to add to the nodes in the Kubernetes cluster.</para>
             /// </summary>
             [NameInMap("labels")]
             [Validation(Required=false)]
             public List<Tag> Labels { get; set; }
 
             /// <summary>
-            /// <para>A custom node name consists of a prefix, a node IP address, and a suffix.</para>
+            /// <para>The custom node name. If you customize the node name, the node name, ECS instance name, and ECS instance hostname are changed.</para>
+            /// <remarks>
+            /// <para>For Windows instances for which custom node names are enabled, the hostname is fixed as the IP address. Hyphens (-) are used to replace periods (.) in the IP address. The hostname does not contain a prefix or a suffix.</para>
+            /// </remarks>
+            /// <para>A node name consists of a prefix, the node IP address, and a suffix.</para>
             /// <list type="bullet">
-            /// <item><description>The prefix and the suffix can contain multiple parts that are separated by periods (.). Each part can contain lowercase letters, digits, and hyphens (-). A custom node name must start and end with a digit or lowercase letter.</description></item>
-            /// <item><description>The node IP address in a custom node name is the private IP address of the node.</description></item>
+            /// <item><description><para>The total length must be 2 to 64 characters. The node name must start and end with a lowercase letter or a digit.</para>
+            /// </description></item>
+            /// <item><description><para>The prefix and suffix can contain uppercase letters, lowercase letters, digits, hyphens (-), and periods (.). They must start with an uppercase or lowercase letter. They cannot start or end with a hyphen (-) or a period (.). You cannot use consecutive hyphens (-)or periods (.). You cannot use consecutive hyphens (-) or periods (.).</para>
+            /// </description></item>
+            /// <item><description><para>The prefix is required (due to an ECS limit). The suffix is optional.</para>
+            /// </description></item>
+            /// <item><description><para>The node IP address is the complete private IP address of the node.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Set the parameter to a value in the customized,aliyun,ip,com format. The value consists of four parts that are separated by commas (,). customized and ip are fixed content. aliyun is the prefix and com is the suffix. Example: aliyun.192.168.xxx.xxx.com.</para>
+            /// <para>For example, if the node IP address is 192.XX.YY.55, the prefix is aliyun.com, and the suffix is test.</para>
+            /// <list type="bullet">
+            /// <item><description><para>If the node is a Linux node, the node name, ECS instance name, and ECS instance hostname are all aliyun.com192.XX.YY.55test.</para>
+            /// </description></item>
+            /// <item><description><para>If the node is a Windows node, the ECS instance hostname is 192-XX-YY-55, and the node name and ECS instance name are both aliyun.com192.XX.YY.55test.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun.com192.XX.YY.55test</para>
@@ -367,7 +411,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string NodeNameMode { get; set; }
 
             /// <summary>
-            /// <para>The user-defined data of nodes. You can specify custom scripts that are automatically executed before the nodes are initialized.</para>
+            /// <para>The pre-join instance user data. The specified user data script is run before the node joins the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User-Data scripts</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dGhpcyBpcyBhIGV4YW1wbGU</para>
@@ -377,11 +421,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string PreUserData { get; set; }
 
             /// <summary>
-            /// <para>The name of the container runtime. The following types of runtime are supported by ACK:</para>
+            /// <para>The name of the container runtime. ACK supports the following three container runtimes.</para>
             /// <list type="bullet">
-            /// <item><description>containerd: containerd is the recommended runtime and supports all Kubernetes versions.</description></item>
-            /// <item><description>Sandboxed-Container.runv: The Sandbox-Container runtime provides improved isolation and supports Kubernetes 1.24 and earlier.</description></item>
-            /// <item><description>docker: The Docker runtime supports Kubernetes 1.22 and earlier.</description></item>
+            /// <item><description><para>containerd: We recommend that you use this runtime. It is supported by all cluster versions.</para>
+            /// </description></item>
+            /// <item><description><para>Sandboxed-Container.runv: a sandboxed container that provides higher isolation. It is supported by clusters of Kubernetes 1.31 or earlier.</para>
+            /// </description></item>
+            /// <item><description><para>docker: no longer maintained. It is supported by clusters of Kubernetes 1.22 or earlier.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: containerd.</para>
             /// 
@@ -403,14 +450,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RuntimeVersion { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the taints.</para>
+            /// <para>The taint configurations.</para>
             /// </summary>
             [NameInMap("taints")]
             [Validation(Required=false)]
             public List<Taint> Taints { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the nodes are schedulable after a scale-out operation is performed.</para>
+            /// <para>Specifies whether the scaled-out nodes are unschedulable.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: The nodes are unschedulable.</para>
+            /// </description></item>
+            /// <item><description><para>false: The nodes are schedulable.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -420,7 +473,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? Unschedulable { get; set; }
 
             /// <summary>
-            /// <para>The user-defined data of nodes. You can specify custom scripts that are automatically executed after the nodes are initialized.</para>
+            /// <para>The instance user data. After the node joins the cluster, the specified user data script is run. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User-Data scripts</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dGhpcyBpcyBhIGV4YW1wbGU=</para>
@@ -443,12 +496,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoFaultDiagnosis { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable auto node repair. This parameter takes effect only when <c>enable</c> is set to true.</para>
+            /// <para>Specifies whether to enable auto node repair. This parameter takes effect only if \<c>enable\\</c> is set to \<c>true\\</c>.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables auto node repair.</description></item>
-            /// <item><description><c>false</c>: disables auto node repair.</description></item>
+            /// <item><description><para><c>true</c>: Enables auto node repair.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disables auto node repair.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If <c>enable</c> is set to true, the default value of this parameter is <c>true</c>. If <c>enable</c> is set to false, the default value of this parameter is <c>false</c>.</para>
+            /// <para>Default value: <c>true</c></para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -465,19 +520,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public CreateClusterNodePoolRequestManagementAutoRepairPolicy AutoRepairPolicy { get; set; }
             public class CreateClusterNodePoolRequestManagementAutoRepairPolicy : TeaModel {
                 /// <summary>
-                /// <para>Whether manual approval is required for edge zone repair.</para>
+                /// <para>Specifies whether manual approval is required for node repair.</para>
                 /// </summary>
                 [NameInMap("approval_required")]
                 [Validation(Required=false)]
                 public bool? ApprovalRequired { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to allow node restart. This parameter takes effect only when <c>auto_repair</c> is set to true. Valid values:</para>
+                /// <para>Specifies whether to allow node restart. This parameter takes effect only if \<c>auto_repair\\</c> is set to \<c>true\\</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: allows node restart.</description></item>
-                /// <item><description><c>false</c>: does not allow node restart.</description></item>
+                /// <item><description><para><c>true</c>: Allows node restart.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Disallows node restart.</para>
+                /// </description></item>
                 /// </list>
-                /// <para>If <c>auto_repair</c> is set to true, the default value of this parameter is <c>true</c>. If <c>auto_repair</c> is set to false, the default value of this parameter is <c>false</c>.</para>
+                /// <para>Default value: <c>true</c></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -489,12 +546,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable auto node upgrade. This parameter takes effect only when <c>enable</c> is set to true.</para>
+            /// <para>Specifies whether to enable auto node upgrade. This parameter takes effect only if \<c>enable\\</c> is set to \<c>true\\</c>.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables auto node upgrade.</description></item>
-            /// <item><description><c>false</c>: disables auto node upgrade.</description></item>
+            /// <item><description><para><c>true</c>: Enables auto node upgrade.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disables auto node upgrade.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If <c>enable</c> is set to true, the default value of this parameter is <c>true</c>. If <c>enable</c> is set to false, the default value of this parameter is <c>false</c>.</para>
+            /// <para>Default value: <c>true</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -511,12 +570,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public CreateClusterNodePoolRequestManagementAutoUpgradePolicy AutoUpgradePolicy { get; set; }
             public class CreateClusterNodePoolRequestManagementAutoUpgradePolicy : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to allow the auto upgrade of the kubelet. This parameter takes effect only when <c>auto_upgrade</c> is set to true. Valid values:</para>
+                /// <para>Specifies whether to allow auto kubelet upgrade. This parameter takes effect only if \<c>auto_upgrade\\</c> is set to \<c>true\\</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: allows the auto upgrade of the kubelet.</description></item>
-                /// <item><description><c>false</c>: does not allow the auto upgrade of the kubelet.</description></item>
+                /// <item><description><para><c>true</c>: Allows auto kubelet upgrade.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Disallows auto kubelet upgrade.</para>
+                /// </description></item>
                 /// </list>
-                /// <para>If <c>auto_upgrade</c> is set to true, the default value of this parameter is <c>true</c>. If <c>auto_upgrade</c> is set to false, the default value of this parameter is <c>false</c>.</para>
+                /// <para>Default value: <c>true</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -526,10 +587,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? AutoUpgradeKubelet { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to allow the auto upgrade of the OS. This parameter takes effect only when <c>auto_upgrade</c> is set to true. Valid values:</para>
+                /// <para>Specifies whether to allow auto OS upgrade. This parameter takes effect only if \<c>auto_upgrade\\</c> is set to \<c>true\\</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: allows the auto upgrade of the OS.</description></item>
-                /// <item><description><c>false</c>: does not allow the auto upgrade of the OS.</description></item>
+                /// <item><description><para><c>true</c>: Allows auto OS upgrade.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Disallows auto OS upgrade.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>Default value: <c>false</c>.</para>
                 /// 
@@ -541,12 +604,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? AutoUpgradeOs { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to allow the auto upgrade of the runtime. This parameter takes effect only when <c>auto_upgrade</c> is set to true. Valid values:</para>
+                /// <para>Specifies whether to allow auto runtime upgrade. This parameter takes effect only if \<c>auto_upgrade\\</c> is set to \<c>true\\</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: allows the auto upgrade of the runtime.</description></item>
-                /// <item><description><c>false</c>: does not allow the auto upgrade of the runtime.</description></item>
+                /// <item><description><para><c>true</c>: Allows auto runtime upgrade.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Disallows auto runtime upgrade.</para>
+                /// </description></item>
                 /// </list>
-                /// <para>Default value: <c>false</c>.</para>
+                /// <para>Default value: <c>true</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -558,12 +623,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>Specifies whether to enable auto Common Vulnerabilities and Exposures (CVE) patching. This parameter takes effect only when <c>enable</c> is set to true.</para>
+            /// <para>Specifies whether to automatically fix CVE vulnerabilities. This parameter takes effect only if \<c>enable\\</c> is set to \<c>true\\</c>.</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables auto CVE patching.</description></item>
-            /// <item><description><c>false</c>: disables auto CVE patching.</description></item>
+            /// <item><description><para><c>true</c>: Automatically fixes CVE vulnerabilities.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Does not automatically fix CVE vulnerabilities.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If <c>enable</c> is set to true, the default value of this parameter is <c>true</c>. If <c>enable</c> is set to false, the default value of this parameter is <c>false</c>.</para>
+            /// <para>Default value: <c>true</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -573,15 +640,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? AutoVulFix { get; set; }
 
             /// <summary>
-            /// <para>The auto CVE patching policy.</para>
+            /// <para>The policy for automatically fixing CVE vulnerabilities.</para>
             /// </summary>
             [NameInMap("auto_vul_fix_policy")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestManagementAutoVulFixPolicy AutoVulFixPolicy { get; set; }
             public class CreateClusterNodePoolRequestManagementAutoVulFixPolicy : TeaModel {
                 /// <summary>
-                /// <para>Packages to exclude during vulnerability remediation.</para>
-                /// <para>Default Value: <c>kernel</c>.</para>
+                /// <para>The packages that should be excluded from vulnerability fixing.</para>
+                /// <para>Default value: <c>kernel</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kernel</para>
@@ -591,11 +658,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string ExcludePackages { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to allow node restart. This parameter takes effect only when <c>auto_vul_fix</c> is set to true. Valid values:</para>
+                /// <para>Specifies whether to allow node restart. This parameter takes effect only if \<c>auto_vul_fix\\</c> is set to \<c>true\\</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: allows node restart.</description></item>
-                /// <item><description><c>false</c>: does not allow node restart. If <c>auto_vul_fix</c> is set to true, the default value of this parameter is <c>false</c>. If <c>auto_vul_fix</c> is set to false, the default value of this parameter is <c>false</c>.</description></item>
+                /// <item><description><para><c>true</c>: Allows node restart.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Disallows node restart.</para>
+                /// </description></item>
                 /// </list>
+                /// <para>Default value: <c>true</c></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -605,13 +675,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? RestartNode { get; set; }
 
                 /// <summary>
-                /// <para>The severity levels of CVEs that can be automatically patched. Separate multiple levels with commas (,). Example: <c>asap,later</c>. Valid values:</para>
+                /// <para>The vulnerability levels that are allowed to be automatically fixed. Separate multiple levels with commas. Example: <c>asap,later</c>. Supported vulnerability levels:</para>
                 /// <list type="bullet">
-                /// <item><description><c>asap</c>: high.</description></item>
-                /// <item><description><c>later</c>: medium.</description></item>
-                /// <item><description><c>nntf</c>: low.</description></item>
+                /// <item><description><para><c>asap</c>: high</para>
+                /// </description></item>
+                /// <item><description><para><c>later</c>: medium</para>
+                /// </description></item>
+                /// <item><description><para><c>nntf</c>: low</para>
+                /// </description></item>
                 /// </list>
-                /// <para>If <c>auto_vul_fix</c> is set to true, the default value of this parameter is <c>asap</c>.</para>
+                /// <para>Default value: <c>asap</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>asap,nntf</para>
@@ -625,8 +698,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>Specifies whether to enable the managed node pool feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables the managed node pool feature.</description></item>
-            /// <item><description><c>false</c>: disables the managed node pool feature. Other parameters in this section take effect only when enable is set to true.</description></item>
+            /// <item><description><para><c>true</c>: Enables the managed node pool feature.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disables the managed node pool feature. If you set this parameter to \<c>false\\</c>, the other parameters of \<c>management\\</c> do not take effect.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -640,7 +715,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The configurations of auto upgrade. The configurations take effect only when <c>enable</c> is set to true.</para>
+            /// <para>[This parameter is deprecated] Use the \<c>auto_upgrade\\</c> parameter instead.</para>
+            /// <para>The auto upgrade configurations. This parameter takes effect only if \<c>enable\\</c> is set to \<c>true\\</c>.</para>
             /// </summary>
             [NameInMap("upgrade_config")]
             [Validation(Required=false)]
@@ -650,13 +726,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
+                /// <para>[This parameter is deprecated] Use the \<c>auto_upgrade\\</c> parameter instead.</para>
                 /// <para>Specifies whether to enable auto upgrade. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>true</c>: enables auto OS upgrade.</description></item>
-                /// <item><description><c>false</c>: disables auto OS upgrade.</description></item>
+                /// <item><description><para><c>true</c>: enables auto upgrade.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: disables auto upgrade.</para>
+                /// </description></item>
                 /// </list>
-                /// <para>**</para>
-                /// <para><b>Caution</b> This parameter is deprecated. Use the preceding auto_upgrade parameter instead.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -667,7 +744,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public bool? AutoUpgrade { get; set; }
 
                 /// <summary>
-                /// <para>The maximum number of nodes that can be in the Unavailable state. Valid values: 1 to 1000.</para>
+                /// <para>The maximum number of unavailable nodes.
+                /// The value must be in the range of [1, 1000].</para>
                 /// <para>Default value: 1.</para>
                 /// 
                 /// <b>Example:</b>
@@ -678,7 +756,11 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? MaxUnavailable { get; set; }
 
                 /// <summary>
-                /// <para>The number of nodes that are temporarily added to the node pool during an auto upgrade.</para>
+                /// <para>The number of extra nodes. You can specify only one of \<c>surge\\</c> and \<c>surge_percentage\\</c>.</para>
+                /// <para>Nodes become unavailable during an upgrade. You can create extra nodes to compensate for the load on the cluster.</para>
+                /// <remarks>
+                /// <para>We recommend that the number of extra nodes does not exceed the current number of nodes.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -688,7 +770,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public long? Surge { get; set; }
 
                 /// <summary>
-                /// <para>The percentage of additional nodes that are temporarily added to the node pool during an auto upgrade. You must set this parameter or <c>surge</c>.</para>
+                /// <para>The percentage of extra nodes. You can specify only one of \<c>surge\\</c> and \<c>surge_percentage\\</c>.</para>
+                /// <para>Number of extra nodes = Percentage of extra nodes × Number of nodes. For example, if you set the percentage of extra nodes to 50% and the number of existing nodes is 6, three extra nodes are created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -704,8 +787,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>This parameter is deprecated.</para>
-        /// <para>The maximum number of nodes that can be contained in the edge node pool.</para>
+        /// <para>[This parameter is deprecated]</para>
+        /// <para>The maximum number of nodes that the edge node pool can contain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -716,21 +799,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public long? MaxNodes { get; set; }
 
         /// <summary>
-        /// <para>List of edge zone widgets.</para>
+        /// <para>A list of node components.</para>
         /// </summary>
         [NameInMap("node_components")]
         [Validation(Required=false)]
         public List<CreateClusterNodePoolRequestNodeComponents> NodeComponents { get; set; }
         public class CreateClusterNodePoolRequestNodeComponents : TeaModel {
             /// <summary>
-            /// <para>Configuration of the edge zone widget.</para>
+            /// <para>The configurations of the node component.</para>
             /// </summary>
             [NameInMap("config")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestNodeComponentsConfig Config { get; set; }
             public class CreateClusterNodePoolRequestNodeComponentsConfig : TeaModel {
                 /// <summary>
-                /// <para>Custom Configuration of the edge zone widget.</para>
+                /// <para>The custom configurations of the node component.</para>
                 /// </summary>
                 [NameInMap("custom_config")]
                 [Validation(Required=false)]
@@ -739,7 +822,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>Name of the edge zone widget.</para>
+            /// <para>The name of the node component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kubelet</para>
@@ -749,7 +832,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Version of the edge zone widget.</para>
+            /// <para>The version of the node component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.33.3-aliyun.1</para>
@@ -768,7 +851,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public CreateClusterNodePoolRequestNodeConfig NodeConfig { get; set; }
         public class CreateClusterNodePoolRequestNodeConfig : TeaModel {
             /// <summary>
-            /// <para>The configurations of the kubelet.</para>
+            /// <para>The Kubelet parameter settings.</para>
             /// </summary>
             [NameInMap("kubelet_configuration")]
             [Validation(Required=false)]
@@ -777,7 +860,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The configurations of the node pool.</para>
+        /// <para>The node pool configurations.</para>
         /// </summary>
         [NameInMap("nodepool_info")]
         [Validation(Required=false)]
@@ -795,7 +878,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group to which the node pool belongs. Instances that are added to the node pool belong to this resource group.</para>
+            /// <para>The ID of the resource group. Instances that are created in the node pool belong to this resource group.</para>
+            /// <para>A resource can belong to only one resource group. You can map resource groups to concepts such as projects, applications, or organizations based on your business scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmyvw3wjmb****</para>
@@ -805,11 +889,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The type of node pool. Valid values:</para>
+            /// <para>The type of the node pool. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>ess</c>: regular node pool, which supports the managed node pool feature and the auto scaling feature.</description></item>
-            /// <item><description><c>edge</c>: edge node pool.</description></item>
-            /// <item><description><c>lingjun</c>: Lingjun node pool.</description></item>
+            /// <item><description><para><c>ess</c>: a regular node pool. This type of node pool provides managed features and auto scaling.</para>
+            /// </description></item>
+            /// <item><description><para><c>edge</c>: an edge node pool.</para>
+            /// </description></item>
+            /// <item><description><para><c>lingjun</c>: a Lingjun node pool.</para>
+            /// </description></item>
+            /// <item><description><para><c>hybrid</c>: a hybrid cloud node pool.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -822,17 +911,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The configurations of the scaling group that is used by the node pool.</para>
+        /// <para>The configurations of the scaling group for the node pool.</para>
         /// </summary>
         [NameInMap("scaling_group")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestScalingGroup ScalingGroup { get; set; }
         public class CreateClusterNodePoolRequestScalingGroup : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable auto-renewal for nodes in the node pool. This parameter takes effect only when you set <c>instance_charge_type</c> to <c>PrePaid</c>. Valid values:</para>
+            /// <para>Specifies whether to enable auto-renewal for the nodes in the node pool. This parameter takes effect only if \<c>instance_charge_type\\</c> is set to \<c>PrePaid\\</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables auto-renewal.</description></item>
-            /// <item><description><c>false</c>: disables auto-renewal.</description></item>
+            /// <item><description><para><c>true</c>: enables auto-renewal.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: disables auto-renewal.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>false</c>.</para>
             /// 
@@ -846,8 +937,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The auto-renewal period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Valid values when PeriodUnit is set to Week: 1, 2, and 3.</description></item>
-            /// <item><description>Valid values when PeriodUnit is set to Month: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</description></item>
+            /// <item><description><para>If \<c>PeriodUnit\\</c> is set to \<c>Week\\</c>: 1, 2, and 3.</para>
+            /// </description></item>
+            /// <item><description><para>If \<c>PeriodUnit\\</c> is set to \<c>Month\\</c>: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: 1.</para>
             /// 
@@ -861,7 +954,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>This parameter is deprecated. Use security_hardening_os instead.</para>
+            /// <para>[Deprecated] Use the \<c>security_hardening_os\\</c> parameter instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>null</para>
@@ -872,10 +965,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CisEnabled { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to automatically create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created due to reasons such as the price or insufficient inventory. This parameter takes effect when you set <c>multi_az_policy</c> to <c>COST_OPTIMIZED</c>. Valid values:</para>
+            /// <para>Specifies whether to automatically create pay-as-you-go instances to meet the instance quantity requirement when \<c>multi_az_policy\\</c> is set to \<c>COST_OPTIMIZED\\</c> and spot instances cannot be created due to issues such as price or insufficient inventory. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: automatically creates pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</description></item>
-            /// <item><description><c>false</c>: does not create pay-as-you-go instances to meet the required number of ECS instances if preemptible instances cannot be created.</description></item>
+            /// <item><description><para><c>true</c>: Allows the system to automatically create pay-as-you-go instances to meet the required number of ECS instances.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Does not allow the system to automatically create pay-as-you-go instances to meet the required number of ECS instances.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -886,14 +981,18 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? CompensateWithOnDemand { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the data disks that are attached to nodes in the node pool.</para>
+            /// <para>The data disk configurations of the nodes in the node pool.</para>
             /// </summary>
             [NameInMap("data_disks")]
             [Validation(Required=false)]
             public List<DataDisk> DataDisks { get; set; }
 
             /// <summary>
-            /// <para>The ID of the deployment set.</para>
+            /// <para>The ID of the deployment set. You can use a deployment set to distribute the ECS instances created in the node pool across different physical servers to ensure high availability and underlying disaster recovery. When you create ECS instances in a deployment set, the instances are launched in the specified region based on the deployment strategy that you set.</para>
+            /// <remarks>
+            /// <para>Notice: </para>
+            /// </remarks>
+            /// <para>After you select a deployment set, the maximum number of nodes in the node pool is limited. By default, a deployment set supports a maximum of 20 × Number of zones (the number of zones is determined by the vSwitches) nodes. Select a deployment set with sufficient quota to prevent node creation failures.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds-bp1d19mmbsv3jf6xxxxx</para>
@@ -904,6 +1003,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The expected number of nodes in the node pool.</para>
+            /// <para>The total number of nodes that the node pool should maintain. We recommend that you configure at least two nodes to ensure that cluster components run as expected. You can adjust the expected number of nodes to scale out or scale in the node pool.</para>
+            /// <para>If you do not need to create nodes, set this parameter to 0. You can manually adjust the number of nodes later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -913,14 +1014,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? DesiredSize { get; set; }
 
             /// <summary>
-            /// <para>Block device initialization configuration.</para>
+            /// <para>The block device initialization configurations.</para>
             /// </summary>
             [NameInMap("disk_init")]
             [Validation(Required=false)]
             public List<DiskInit> DiskInit { get; set; }
 
             /// <summary>
-            /// <para>The custom image ID. By default, the image provided by Container Service for Kubernetes (ACK) is used.</para>
+            /// <para>The ID of the custom image. By default, the system-provided image is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_2_1903_x64_20G_alibase_20200529.vhd</para>
@@ -930,18 +1031,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The type of the OS image. You must specify this parameter or <c>platform</c>. Valid values:</para>
+            /// <para>The OS image type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>AliyunLinux</c>: Alibaba Cloud Linux 2.</description></item>
-            /// <item><description><c>AliyunLinuxSecurity</c>: Alibaba Cloud Linux 2 (UEFI).</description></item>
-            /// <item><description><c>AliyunLinux3</c>: Alibaba Cloud Linux 3</description></item>
-            /// <item><description><c>AliyunLinux3Arm64</c>: Alibaba Cloud Linux 3 for ARM.</description></item>
-            /// <item><description><c>AliyunLinux3Security</c>: Alibaba Cloud Linux 3 for ARM.</description></item>
-            /// <item><description><c>CentOS</c>: CentOS.</description></item>
-            /// <item><description><c>Windows</c>: Windows.</description></item>
-            /// <item><description><c>WindowsCore</c>: Windows Core.</description></item>
-            /// <item><description><c>ContainerOS</c>: ContainerOS.</description></item>
-            /// <item><description><c>AliyunLinux3ContainerOptimized</c>: Alibaba Cloud Linux 3 Container-optimized.</description></item>
+            /// <item><description><para><c>AliyunLinux</c>: Alinux2 image.</para>
+            /// </description></item>
+            /// <item><description><para><c>AliyunLinuxSecurity</c>: Alinux2 UEFI image.</para>
+            /// </description></item>
+            /// <item><description><para><c>AliyunLinux3</c>: Alinux3 image.</para>
+            /// </description></item>
+            /// <item><description><para><c>AliyunLinux3Arm64</c>: Alinux3 ARM image.</para>
+            /// </description></item>
+            /// <item><description><para><c>AliyunLinux3Security</c>: Alinux3 UEFI image.</para>
+            /// </description></item>
+            /// <item><description><para><c>CentOS</c>: CentOS image.</para>
+            /// </description></item>
+            /// <item><description><para><c>Windows</c>: Windows image.</para>
+            /// </description></item>
+            /// <item><description><para><c>WindowsCore</c>: WindowsCore image.</para>
+            /// </description></item>
+            /// <item><description><para><c>ContainerOS</c>: Container-Optimized OS.</para>
+            /// </description></item>
+            /// <item><description><para><c>AliyunLinux3ContainerOptimized</c>: Alinux3 Container-Optimized OS.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -952,12 +1063,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string ImageType { get; set; }
 
             /// <summary>
-            /// <para>The billing method of nodes in the node pool. Valid values:</para>
+            /// <para>The billing method of the nodes in the node pool. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>PrePaid</c>: subscription.</description></item>
-            /// <item><description><c>PostPaid</c>: pay-as-you-go.</description></item>
+            /// <item><description><para><c>PrePaid</c>: subscription.</para>
+            /// </description></item>
+            /// <item><description><para><c>PostPaid</c>: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: <c>PostPaid</c></para>
+            /// <para>Default value: <c>PostPaid</c>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -968,23 +1081,24 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InstanceChargeType { get; set; }
 
             /// <summary>
-            /// <para>Access configuration for ECS instance metadata.</para>
+            /// <para>The ECS instance metadata access configurations.</para>
             /// </summary>
             [NameInMap("instance_metadata_options")]
             [Validation(Required=false)]
             public InstanceMetadataOptions InstanceMetadataOptions { get; set; }
 
             /// <summary>
-            /// <para>The instance attributes.</para>
+            /// <para>The instance property configurations.</para>
             /// </summary>
             [NameInMap("instance_patterns")]
             [Validation(Required=false)]
             public List<InstancePatterns> InstancePatterns { get; set; }
 
             /// <summary>
-            /// <para>The instance types of nodes in the node pool. When the system adds a node to the node pool, the system selects the most appropriate one from the specified instance types for the node. You can specify 1 to 10 instance types.</para>
+            /// <para>A list of instance types for the nodes in the node pool. When the system creates nodes in the node pool, it selects an instance type from the list that meets the requirements.</para>
+            /// <para>The number of instance types must be in the range of [1, 10].</para>
             /// <remarks>
-            /// <para> To ensure high availability, we recommend that you specify multiple instance types.</para>
+            /// <para>For high availability, we recommend that you select multiple instance types.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// </summary>
@@ -993,10 +1107,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public List<string> InstanceTypes { get; set; }
 
             /// <summary>
-            /// <para>The metering method of the public IP address. Valid values:</para>
+            /// <para>The billing method of the public IP address. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PayByBandwidth: pay-by-bandwidth.</description></item>
-            /// <item><description>PayByTraffic: pay-by-data-transfer.</description></item>
+            /// <item><description><para>PayByBandwidth: pay-by-bandwidth.</para>
+            /// </description></item>
+            /// <item><description><para>PayByTraffic: pay-by-traffic.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1007,7 +1123,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string InternetChargeType { get; set; }
 
             /// <summary>
-            /// <para>The maximum outbound bandwidth of the public IP address. Unit: Mbit/s. Valid values: 1 to 100.</para>
+            /// <para>The maximum outbound public bandwidth of the node. Unit: Mbit/s. The value must be in the range of [1, 100].</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -1017,9 +1133,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? InternetMaxBandwidthOut { get; set; }
 
             /// <summary>
-            /// <para>The name of the key pair used to log on to nodes in the node pool. You must set this parameter or <c>login_password</c>.</para>
+            /// <para>The name of the key pair that is used for passwordless logon. You must specify one of \<c>key_pair\\</c> and \<c>login_password\\</c>.</para>
             /// <remarks>
-            /// <para> If you select ContainerOS as the OS of nodes in the node pool, you must specify <c>key_pair</c>.</para>
+            /// <para>If you select Container-Optimized OS for the node pool, you can use only \<c>key_pair\\</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -1030,7 +1146,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string KeyPair { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to allow a non-root user to log on to an ECS instance that is added to the node pool.</para>
+            /// <para>Specifies whether to log on to the created ECS instances as a non-root user.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Logs on as the ecs-user.</para>
+            /// </description></item>
+            /// <item><description><para>false: Logs on as the root user.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1040,7 +1162,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? LoginAsNonRoot { get; set; }
 
             /// <summary>
-            /// <para>The password for SSH logon. You must specify this parameter or the <c>key_pair</c> parameter. The password must be 8 to 30 characters in length, and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+            /// <para>The SSH logon password. You must specify one of \<c>key_pair\\</c> and \<c>login_password\\</c>. The password must be 8 to 30 characters in length, and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -1050,15 +1172,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string LoginPassword { get; set; }
 
             /// <summary>
-            /// <para>The ECS instance scaling policy for the multi-zone scaling group. Valid values:</para>
+            /// <para>The scaling policy for the ECS instances in the multi-zone scaling group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>PRIORITY</c>: ECS instances are scaled based on the value of VSwitchIds.N. If an ECS instance cannot be created in the zone where the vSwitch that has the highest priority resides, the system creates the ECS instance in the zone where the vSwitch that has the next highest priority resides.</para>
+            /// <item><description><para><c>PRIORITY</c>: Scales instances based on the vSwitch priority. The system scales instances based on the order of vSwitches that you specify in \<c>VSwitchIds.N\\</c>. If the system fails to create an ECS instance in the zone where the vSwitch with the highest priority resides, it automatically uses the vSwitch with the next highest priority to create the instance.</para>
             /// </description></item>
-            /// <item><description><para><c>COST_OPTIMIZED</c>: ECS instances are created based on the vCPU unit price in ascending order. Preemptible instances are preferably created if preemptible instance types are specified in the scaling configurations. You can set the <c>CompensateWithOnDemand</c> parameter to specify whether to automatically create pay-as-you-go instances when preemptible instances cannot be created due to insufficient inventory.</para>
-            /// <para>**</para>
-            /// <para><b>Note</b> <c>COST_OPTIMIZED</c> takes effect only when multiple instance types are specified or at least one preemptible instance type is specified.</para>
+            /// <item><description><para><c>COST_OPTIMIZED</c>: Creates instances based on the vCPU unit price in ascending order. When multiple instance types are specified and the preemptible instance policy is configured, the system gives priority to creating the lowest-cost instance type. You can also use the \<c>CompensateWithOnDemand\\</c> parameter to specify whether to automatically create pay-as-you-go instances when preemptible instances cannot be created due to insufficient inventory.</para>
+            /// <remarks>
+            /// <para><c>COST_OPTIMIZED</c> takes effect only when multiple instance types are specified or the preemptible instance policy is configured.</para>
+            /// </remarks>
             /// </description></item>
-            /// <item><description><para><c>BALANCE</c>: ECS instances are evenly distributed across multiple zones for the scaling group. If ECS instances become imbalanced among multiple zones due to insufficient inventory, you can call the <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a> operation of Auto Scaling to evenly distribute the ECS instances among zones.</para>
+            /// <item><description><para><c>BALANCE</c>: Evenly distributes ECS instances across the specified zones. If the distribution of ECS instances becomes unbalanced due to insufficient inventory, you can call the API <a href="https://help.aliyun.com/document_detail/71516.html">RebalanceInstances</a> operation to balance the resource distribution.</para>
             /// </description></item>
             /// </list>
             /// <para>Default value: <c>PRIORITY</c>.</para>
@@ -1071,7 +1194,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string MultiAzPolicy { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of pay-as-you-go instances that must be kept in the scaling group. Valid values: 0 to 1000. If the number of pay-as-you-go instances is less than the value of this parameter, the system preferably creates pay-as-you-go instances.</para>
+            /// <para>The minimum number of pay-as-you-go instances that must be included in the scaling group. The value must be in the range of [0, 1000]. If the number of pay-as-you-go instances is less than this value, the system gives priority to creating pay-as-you-go instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -1081,7 +1204,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? OnDemandBaseCapacity { get; set; }
 
             /// <summary>
-            /// <para>The percentage of pay-as-you-go instances among the extra instances that exceed the number specified by <c>on_demand_base_capacity</c>. Valid values: 0 to 100.</para>
+            /// <para>The percentage of pay-as-you-go instances among the extra instances that are created after the minimum number of pay-as-you-go instances (\<c>on_demand_base_capacity\\</c>) is met. The value must be in the range of [0, 100].</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -1091,10 +1214,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? OnDemandPercentageAboveBaseCapacity { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration of nodes in the node pool. This parameter takes effect and is required if you set <c>instance_charge_type</c> to <c>PrePaid</c>.</para>
+            /// <para>The subscription duration of the nodes in the node pool. This parameter is required and takes effect only if \<c>instance_charge_type\\</c> is set to \<c>PrePaid\\</c>.</para>
             /// <list type="bullet">
-            /// <item><description>If <c>period_unit</c> is set to Week, the valid values of <c>period</c> are 1, 2, 3, and 4.</description></item>
-            /// <item><description>If <c>period_unit</c> is set to Month, the valid values of <c>period</c> are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
+            /// <item><description><para>If \<c>period_unit\\</c> is set to \<c>Week\\</c>, the valid values of \<c>period\\</c> are 1, 2, 3, and 4.</para>
+            /// </description></item>
+            /// <item><description><para>If \<c>period_unit\\</c> is set to \<c>Month\\</c>, the valid values of \<c>period\\</c> are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1105,10 +1230,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? Period { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle of nodes in the node pool. This parameter takes effect and is required only when you set <c>instance_charge_type</c> to <c>PrePaid</c>. Valid values:</para>
+            /// <para>The billing cycle of the nodes in the node pool. This parameter is required and takes effect only if \<c>instance_charge_type\\</c> is set to \<c>PrePaid\\</c>.</para>
             /// <list type="bullet">
-            /// <item><description><c>Month</c>: The subscription duration is measured in months.</description></item>
-            /// <item><description><c>Week</c>: The subscription duration is measured in weeks.</description></item>
+            /// <item><description><para><c>Month</c>: The billing cycle is measured in months.</para>
+            /// </description></item>
+            /// <item><description><para><c>Week</c>: The billing cycle is measured in weeks.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>Month</c>.</para>
             /// 
@@ -1122,12 +1249,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The operating system distribution. Valid values:</para>
+            /// <para>[This parameter is deprecated] Use the \<c>image_type\\</c> parameter instead.</para>
+            /// <para>The OS distribution. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>CentOS</c></description></item>
-            /// <item><description><c>AliyunLinux</c></description></item>
-            /// <item><description><c>Windows</c></description></item>
-            /// <item><description><c>WindowsCore</c></description></item>
+            /// <item><description><para><c>CentOS</c></para>
+            /// </description></item>
+            /// <item><description><para><c>AliyunLinux</c></para>
+            /// </description></item>
+            /// <item><description><para><c>Windows</c></para>
+            /// </description></item>
+            /// <item><description><para><c>WindowsCore</c></para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>AliyunLinux</c>.</para>
             /// 
@@ -1140,14 +1272,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the private node pool.</para>
+            /// <para>The private pool configurations.</para>
             /// </summary>
             [NameInMap("private_pool_options")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions PrivatePoolOptions { get; set; }
             public class CreateClusterNodePoolRequestScalingGroupPrivatePoolOptions : TeaModel {
                 /// <summary>
-                /// <para>The ID of the private node pool.</para>
+                /// <para>The ID of the private pool. You must specify the private pool ID when \<c>match_criteria\\</c> is set to \<c>Target\\</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eap-bp67acfmxazb4****</para>
@@ -1157,11 +1289,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The type of private node pool. This parameter specifies the type of private pool that you want to use to create instances. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. The system selects a private pool to start instances. Valid values:</para>
+                /// <para>The type of the private pool. This parameter specifies the capacity of the private pool that you want to use to launch instances. An elastic assurance service or a capacity reservation service takes effect after it is generated. You can select a capacity type when you launch an instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>Open</c>: uses an open private pool. The system selects an open private pool to start instances. If no matching open private pools are available, the resources in the public pool are used.</description></item>
-                /// <item><description><c>Target</c>: uses a specified private pool. The system uses the resources of the specified private pool to start instances. If the specified private pool is unavailable, instances cannot be started.</description></item>
-                /// <item><description><c>None</c>: no private pool is used. The resources of private pools are not used to launch the instances.</description></item>
+                /// <item><description><para><c>Open</c>: Open mode. The system automatically matches the capacity of open private pools. If no matching private pool is found, the instance is launched using public pool resources.</para>
+                /// </description></item>
+                /// <item><description><para><c>Target</c>: Target mode. The instance is launched using the capacity of the specified private pool. If the capacity of the private pool is unavailable, the instance fails to be launched.</para>
+                /// </description></item>
+                /// <item><description><para><c>None</c>: The instance is launched without using the capacity of a private pool.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -1176,12 +1311,15 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The name of the worker RAM role.</para>
             /// <list type="bullet">
-            /// <item><description>If you do not specify this parameter, the default worker RAM role created by the cluster is used.</description></item>
-            /// <item><description>The specified RAM role must be a <b>regular service role</b> and the <b>Select Trusted Service</b> parameter must be set to <b>Elastic Compute Service</b>. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a normal service role</a>. If the specified RAM role is not the default worker RAM role created by the cluster, the name of the RAM role cannot start with <c>KubernetesMasterRole-</c> or <c>KubernetesWorkerRole-</c>.</description></item>
+            /// <item><description><para>If this parameter is left empty, the default worker RAM role of the cluster is used.</para>
+            /// </description></item>
+            /// <item><description><para>If this parameter is not empty, the specified RAM role must be a <b>service role</b>, and its <b>trusted service</b> must be <b>Elastic Compute Service</b>. For more information, see <a href="https://help.aliyun.com/document_detail/116800.html">Create a service role</a>. If the specified RAM role is not the default worker RAM role of the cluster, the name of the role cannot start with \<c>KubernetesMasterRole-\\</c> or \<c>KubernetesWorkerRole-\\</c>.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is available only for ACK managed clusters that run Kubernetes 1.22 or later.</para>
+            /// <para>Notice: </para>
             /// </remarks>
+            /// <para>This parameter is supported only by ACK managed clusters of Kubernetes 1.22 or later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example-role</para>
@@ -1191,34 +1329,34 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string RamRoleName { get; set; }
 
             /// <summary>
-            /// <para>The IDs of ApsaraDB RDS instances.</para>
+            /// <para>A list of RDS instances.</para>
             /// </summary>
             [NameInMap("rds_instances")]
             [Validation(Required=false)]
             public List<string> RdsInstances { get; set; }
 
             /// <summary>
-            /// <para>The resource pool and resource pool policy used when creating instances. After you set this parameter, note the following:</para>
-            /// <para>This parameter takes effect only when pay-as-you-go instances are created.</para>
-            /// <para>This parameter cannot be set together with <c>private_pool_options.match_criteria</c> or <c>private_pool_options.id</c>.</para>
+            /// <para>The resource pool and policy used to create instances. Note:
+            /// This parameter takes effect only when you create pay-as-you-go instances.
+            /// This parameter cannot be set at the same time as \<c>private_pool_options.match_criteria\\</c> and \<c>private_pool_options.id\\</c>.</para>
             /// </summary>
             [NameInMap("resource_pool_options")]
             [Validation(Required=false)]
             public CreateClusterNodePoolRequestScalingGroupResourcePoolOptions ResourcePoolOptions { get; set; }
             public class CreateClusterNodePoolRequestScalingGroupResourcePoolOptions : TeaModel {
                 /// <summary>
-                /// <para>A list of private pool IDs, which are either Elasticity Assurance service IDs or Capacity Reservation service IDs. This parameter accepts only private pool IDs in Target pattern. The value range for N is 1 to 20.</para>
+                /// <para>A list of private pool IDs. These are the IDs of elastic assurance services or capacity reservation services. You can only specify the IDs of private pools in Target mode. The number of IDs must be in the range of 1 to 20.</para>
                 /// </summary>
                 [NameInMap("private_pool_ids")]
                 [Validation(Required=false)]
                 public List<string> PrivatePoolIds { get; set; }
 
                 /// <summary>
-                /// <para>The resource pool policy used when creating an instance. Resource pools include private pools generated after Elasticity Assurance or Capacity Reservation services take effect, as well as the public pool, which are available for selection when starting an instance. Valid values:
-                /// PrivatePoolFirst: Private pool first. With this policy, if <c>resource_pool_options.private_pool_ids</c> is specified, the specified private pool is used first. If no private pool is specified or the specified private pool lacks sufficient capacity, an open-type private pool is automatically matched. If no eligible private pool exists, the instance is created using the public pool.
-                /// PrivatePoolOnly: Private pool only. With this policy, you must specify <c>resource_pool_options.private_pool_ids</c>. If the specified private pool lacks sufficient capacity, instance startup fails.
-                /// None: Do not use a resource pool policy.
-                /// Default Value: None.</para>
+                /// <para>The resource pool policy for instance creation. Resource pools include private pools (generated by elastic assurance or capacity reservation services) and public pools. Valid values:
+                /// PrivatePoolFirst: Prioritizes private pools. If you specify \<c>resouce_pool_options.private_pool_ids\\</c>, the specified private pools are used first. If no private pool is specified or the specified pools have insufficient capacity, the system automatically tries to use open private pools. If no suitable private pool is found, the public pool is used.
+                /// PrivatePoolOnly: Uses only private pools. You must specify \<c>resouce_pool_options.private_pool_ids\\</c>. If the specified private pools have insufficient capacity, the instance fails to launch.
+                /// None: No resource pool policy is used.
+                /// Default value: None.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PrivatePoolFirst</para>
@@ -1232,8 +1370,10 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <summary>
             /// <para>The scaling mode of the scaling group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>release</c>: the standard mode. ECS instances are created and released based on resource usage.</description></item>
-            /// <item><description><c>recycle</c>: the swift mode. ECS instances are created, stopped, or started during scaling events. This reduces the time required for the next scale-out event. When the instance is stopped, you are charged only for the storage service. This does not apply to ECS instances that are attached with local disks.</description></item>
+            /// <item><description><para><c>release</c>: standard mode. The system creates and releases ECS instances to scale the group.</para>
+            /// </description></item>
+            /// <item><description><para><c>recycle</c>: accelerated mode. The system creates, stops, and starts ECS instances to scale the group. This improves the scaling speed. When an instance is stopped, its computing resources are not billed, but its storage resources are. This does not apply to instances with local disks.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>release</c>.</para>
             /// 
@@ -1247,7 +1387,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The ID of the security group to which you want to add the node pool. You must specify this parameter or the <c>security_group_ids</c> parameter. We recommend that you specify <c>security_group_ids</c>.</para>
+            /// <para>The ID of the security group for the node pool. You must specify one of \<c>security_group_ids\\</c> and \<c>security_group_id\\</c>. We recommend that you specify \<c>security_group_ids\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-wz9a8g2mt6x5llu0****</para>
@@ -1258,17 +1398,19 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The IDs of security groups. You must specify this parameter or <c>security_group_id</c>. We recommend that you specify <c>security_group_ids</c>. If you specify both <c>security_group_id</c> and <c>security_group_ids</c>, <c>security_group_ids</c> is used.</para>
+            /// <para>A list of security group IDs. You must specify one of \<c>security_group_ids\\</c> and \<c>security_group_id\\</c>. We recommend that you specify \<c>security_group_ids\\</c>. If you specify both \<c>security_group_id\\</c> and \<c>security_group_ids\\</c>, \<c>security_group_ids\\</c> takes precedence.</para>
             /// </summary>
             [NameInMap("security_group_ids")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Alibaba Cloud Linux Security Hardening is enabled. Valid values:</para>
+            /// <para>Alibaba Cloud OS security hardening. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables Alibaba Cloud Linux Security Hardening.</description></item>
-            /// <item><description><c>false</c>: disables Alibaba Cloud Linux Security Hardening.</description></item>
+            /// <item><description><para><c>true</c>: Enables Alibaba Cloud OS security hardening.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disables Alibaba Cloud OS security hardening.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>false</c>.</para>
             /// 
@@ -1280,7 +1422,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SecurityHardeningOs { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable MLPS Security Hardening. You can enable security hardening based on Multi-Level Protection Scheme (MLPS) only when Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3 is installed on nodes. Alibaba Cloud provides standards for baseline checks and a scanner to ensure the compliance of Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 images with the level 3 standards of MLPS 2.0.</para>
+            /// <para>Specifies whether to enable MLPS 2.0 security hardening. You can enable MLPS 2.0 security hardening for nodes only when you select Alibaba Cloud Linux 2 or Alibaba Cloud Linux 3 for the OS image. Alibaba Cloud provides baseline check standards and scanning programs for Alibaba Cloud Linux 2 and Alibaba Cloud Linux 3 Level 3 of MLPS 2.0 to ensure classified protection compliance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -1290,7 +1432,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SocEnabled { get; set; }
 
             /// <summary>
-            /// <para>The number of instance types that are available for creating preemptible instances. Auto Scaling creates preemptible instances of multiple instance types that are available at the lowest cost. Valid values: 1 to 10.</para>
+            /// <para>The number of instance types that you can specify. The scaling group creates preemptible instances of multiple instance types that are available at the lowest cost. The value must be in the range of [1, 10].</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -1300,10 +1442,12 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SpotInstancePools { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether preemptible instances can be supplemented. If you set this parameter to true, when the scaling group receives a system message indicating that a preemptible instance is to be reclaimed, the scaling group attempts to create a new instance to replace this instance. Valid values:</para>
+            /// <para>Specifies whether to enable the instance reclaim mode. After this mode is enabled, when the system receives a message that a spot instance is about to be reclaimed, the scaling group attempts to create a new instance to replace the instance that is about to be reclaimed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>true</c>: enables the supplementation of preemptible instances.</description></item>
-            /// <item><description><c>false</c>: disables the supplementation of preemptible instances.</description></item>
+            /// <item><description><para><c>true</c>: Enables the instance reclaim mode.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disables the instance reclaim mode.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1314,14 +1458,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SpotInstanceRemedy { get; set; }
 
             /// <summary>
-            /// <para>The instance type of preemptible instances and the price cap for the instance type.</para>
+            /// <para>The configurations of the price range for a single spot instance.</para>
             /// </summary>
             [NameInMap("spot_price_limit")]
             [Validation(Required=false)]
             public List<CreateClusterNodePoolRequestScalingGroupSpotPriceLimit> SpotPriceLimit { get; set; }
             public class CreateClusterNodePoolRequestScalingGroupSpotPriceLimit : TeaModel {
                 /// <summary>
-                /// <para>The instance type of preemptible instances.</para>
+                /// <para>The instance type of the spot instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ecs.c6.large</para>
@@ -1331,7 +1475,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The price cap of a preemptible instance of the type.</para>
+                /// <para>The maximum bid price for a single instance.</para>
+                /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+                /// <para>Unit: USD/hour.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.39</para>
@@ -1343,13 +1489,16 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The bidding policy of preemptible instances. Valid values:</para>
+            /// <para>The bidding policy for the spot instances. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>NoSpot</c>: non-preemptible.</description></item>
-            /// <item><description><c>SpotWithPriceLimit</c>: specifies the highest bid for the preemptible instance.</description></item>
-            /// <item><description><c>SpotAsPriceGo</c>: automatically submits bids based on the up-to-date market price.</description></item>
+            /// <item><description><para><c>NoSpot</c>: The instance is not a spot instance.</para>
+            /// </description></item>
+            /// <item><description><para><c>SpotWithPriceLimit</c>: Sets the maximum bid price for the spot instance.</para>
+            /// </description></item>
+            /// <item><description><para><c>SpotAsPriceGo</c>: The system automatically bids based on the current market price.</para>
+            /// </description></item>
             /// </list>
-            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/165053.html">Use preemptible instances</a>.</para>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/165053.html">Spot instances</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NoSpot</para>
@@ -1359,12 +1508,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SpotStrategy { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the burst feature for the system disk. Valid values:</para>
+            /// <para>Specifies whether to enable the performance burst feature for the system disk of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enables the burst feature.</description></item>
-            /// <item><description>false: disables the burst feature.</description></item>
+            /// <item><description><para>true: Yes.</para>
+            /// </description></item>
+            /// <item><description><para>false: No.</para>
+            /// </description></item>
             /// </list>
-            /// <para>This parameter is available only when <c>SystemDiskCategory</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+            /// <para>This parameter can be set only when \<c>system_disk_category\\</c> is set to \<c>cloud_auto\\</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1374,29 +1525,25 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public bool? SystemDiskBurstingEnabled { get; set; }
 
             /// <summary>
-            /// <para>The categories of the system disk for nodes. The system attempts to create system disks of a disk category with a lower priority if the disk category with a higher priority is unavailable. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><c>cloud</c>: basic disk.</description></item>
-            /// <item><description><c>cloud_efficiency</c>: ultra disk.</description></item>
-            /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
-            /// <item><description><c>cloud_essd</c>: ESSD.</description></item>
-            /// <item><description><c>cloud_auto</c>: ESSD AutoPL disk.</description></item>
-            /// <item><description><c>cloud_essd_entry</c>: ESSD Entry disk.</description></item>
-            /// </list>
+            /// <para>The types of system disks. If a disk of a high-priority type is unavailable, the system automatically uses a disk of the next priority type to create the system disk.</para>
             /// </summary>
             [NameInMap("system_disk_categories")]
             [Validation(Required=false)]
             public List<string> SystemDiskCategories { get; set; }
 
             /// <summary>
-            /// <para>The category of the system disk. Valid values:</para>
+            /// <para>The type of the system disk of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>cloud</c>: basic disk.</description></item>
-            /// <item><description><c>cloud_efficiency</c>: ultra disk.</description></item>
-            /// <item><description><c>cloud_ssd</c>: standard SSD.</description></item>
-            /// <item><description><c>cloud_essd</c>: ESSD.</description></item>
-            /// <item><description><c>cloud_auto</c>: ESSD AutoPL disk.</description></item>
-            /// <item><description><c>cloud_essd_entry</c>: ESSD Entry disk.</description></item>
+            /// <item><description><para><c>cloud_efficiency</c>: ultra disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_ssd</c>: standard SSD.</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_essd</c>: ESSD.</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_auto</c>: ESSD AutoPL disk.</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_essd_entry</c>: ESSD Entry disk.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: <c>cloud_efficiency</c>.</para>
             /// 
@@ -1408,7 +1555,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>The encryption algorithm that is used to encrypt the system disk. Set the value to aes-256.</para>
+            /// <para>The encryption algorithm that is used to encrypt the system disk. Valid value: aes-256.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aes-256</para>
@@ -1418,7 +1565,13 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskEncryptAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to encrypt the system disk. true: encrypts the system disk. false: does not encrypt the system disk.</para>
+            /// <para>Specifies whether to encrypt the system disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: encrypts the system disk.</para>
+            /// </description></item>
+            /// <item><description><para>false: does not encrypt the system disk.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -1438,16 +1591,17 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskKmsKeyId { get; set; }
 
             /// <summary>
-            /// <para>The PL of the system disk. This parameter takes effect only for an ESSD.</para>
+            /// <para>The performance level of the system disk for each node. This parameter applies only to Enhanced SSD (ESSD) disks. The performance level of an ESSD is determined by its size. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</para>
             /// <list type="bullet">
-            /// <item><description>PL0: moderate maximum concurrent I/O performance and low I/O latency.</description></item>
-            /// <item><description>PL1: moderate maximum concurrent I/O performance and low I/O latency.</description></item>
-            /// <item><description>PL2: high maximum concurrent I/O performance and low I/O latency.</description></item>
-            /// <item><description>PL3: ultra-high maximum concurrent I/O performance and ultra-low I/O latency.</description></item>
+            /// <item><description><para>PL0: A moderate maximum concurrent I/O performance and a relatively stable read/write latency.</para>
+            /// </description></item>
+            /// <item><description><para>PL1: A moderate maximum concurrent I/O performance and a relatively stable read/write latency.</para>
+            /// </description></item>
+            /// <item><description><para>PL2: A high maximum concurrent I/O performance and a stable read/write latency.</para>
+            /// </description></item>
+            /// <item><description><para>PL3: A very high maximum concurrent I/O performance and a very stable read/write latency.</para>
+            /// </description></item>
             /// </list>
-            /// <remarks>
-            /// <para> Alibaba Cloud disks support the preceding PLs. However, when you create a disk, the available PLs vary based on the ECS instance type that you selected. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of ECS instance families</a>.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -1457,8 +1611,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public string SystemDiskPerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The preset IOPS of the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
-            /// <para>This parameter is supported only when <c>SystemDiskCategory</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+            /// <para>The provisioned read/write IOPS of the system disk of the node.</para>
+            /// <para>Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}. Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+            /// <para>This parameter can be set only when \<c>system_disk_category\\</c> is set to \<c>cloud_auto\\</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -1468,8 +1623,8 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskProvisionedIops { get; set; }
 
             /// <summary>
-            /// <para>The size of the system disk. Unit: GiB.</para>
-            /// <para>Valid values: 20 to 20248.</para>
+            /// <para>The size of the system disk of the node. Unit: GiB.</para>
+            /// <para>The value must be in the range of [20, 2048].</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -1479,7 +1634,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? SystemDiskSize { get; set; }
 
             /// <summary>
-            /// <para>Snapshot policy for the system disk.</para>
+            /// <para>The snapshot policy for the system disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-0jl6xnmme8v7o935****</para>
@@ -1490,14 +1645,14 @@ namespace AlibabaCloud.SDK.CS20151215.Models
 
             /// <summary>
             /// <para>The tags that you want to add only to ECS instances.</para>
-            /// <para>The tag key must be unique and cannot exceed 128 characters in length. The tag key and value cannot start with aliyun or acs: or contain https:// or http://.</para>
+            /// <para>A tag key cannot be repeated. The tag key can be up to 128 characters in length. The tag key and the tag value cannot start with “aliyun” or “acs:”, and cannot contain “https\://” or “http\://”.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<CreateClusterNodePoolRequestScalingGroupTags> Tags { get; set; }
             public class CreateClusterNodePoolRequestScalingGroupTags : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>The name of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>node-k-1</para>
@@ -1519,9 +1674,9 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             }
 
             /// <summary>
-            /// <para>The vSwitch IDs. You can specify one to eight vSwitch IDs.</para>
+            /// <para>A list of vSwitch IDs. The number of vSwitch IDs must be in the range of [1, 8].</para>
             /// <remarks>
-            /// <para> To ensure high availability, we recommend that you select vSwitches that reside in different zones.</para>
+            /// <para>For high availability, we recommend that you select vSwitches in different zones.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// </summary>
@@ -1532,14 +1687,20 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The configurations of confidential computing for the cluster.</para>
+        /// <para>The configurations of the confidential computing cluster.</para>
         /// </summary>
         [NameInMap("tee_config")]
         [Validation(Required=false)]
         public CreateClusterNodePoolRequestTeeConfig TeeConfig { get; set; }
         public class CreateClusterNodePoolRequestTeeConfig : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable confidential computing for the cluster.</para>
+            /// <para>Specifies whether to enable the confidential computing cluster.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enables confidential computing.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disables confidential computing.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
