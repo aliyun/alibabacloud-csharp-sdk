@@ -8,21 +8,11 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
 {
-    public class MmAppBindingRagRequest : TeaModel {
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
+    public class QueryAppQuotaRequest : TeaModel {
         [NameInMap("AppId")]
         [Validation(Required=false)]
         public string AppId { get; set; }
 
-        [NameInMap("KnowledgeBaseCodeList")]
-        [Validation(Required=false)]
-        public List<string> KnowledgeBaseCodeList { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

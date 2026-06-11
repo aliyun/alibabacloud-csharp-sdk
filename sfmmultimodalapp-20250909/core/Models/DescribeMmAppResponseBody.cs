@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         [Validation(Required=false)]
         public DescribeMmAppResponseBodyAppConfig AppConfig { get; set; }
         public class DescribeMmAppResponseBodyAppConfig : TeaModel {
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>true</para>
-            /// </summary>
             [NameInMap("EnableTransition")]
             [Validation(Required=false)]
             public bool? EnableTransition { get; set; }
@@ -75,7 +71,7 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
             public class DescribeMmAppResponseBodyBindingConfigMcps : TeaModel {
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>mcp-xxxx</para>
+                /// <para>xxx</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -268,8 +264,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         public long? PublishVersion { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>

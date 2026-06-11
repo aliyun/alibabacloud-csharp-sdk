@@ -117,10 +117,18 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
             [Validation(Required=false)]
             public string ModifyUserName { get; set; }
 
+            [NameInMap("ReplyMode")]
+            [Validation(Required=false)]
+            public string ReplyMode { get; set; }
+
             [NameInMap("ToolExamples")]
             [Validation(Required=false)]
             public List<ListCommandResponseBodyToolInfoListToolExamples> ToolExamples { get; set; }
             public class ListCommandResponseBodyToolInfoListToolExamples : TeaModel {
+                [NameInMap("Parameters")]
+                [Validation(Required=false)]
+                public Dictionary<string, object> Parameters { get; set; }
+
                 /// <summary>
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -174,6 +182,14 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
                 [NameInMap("ParamName")]
                 [Validation(Required=false)]
                 public string ParamName { get; set; }
+
+                [NameInMap("ParamType")]
+                [Validation(Required=false)]
+                public string ParamType { get; set; }
+
+                [NameInMap("Required")]
+                [Validation(Required=false)]
+                public bool? Required { get; set; }
 
             }
 

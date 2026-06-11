@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
     public class UpdateMmAppRagRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>mm_c617650fbd9e49e8916189e23c62</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -21,9 +18,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -31,9 +25,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>llm-6uhm7nfev4k8pwcz</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]

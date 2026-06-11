@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("ReplyMode")]
+        [Validation(Required=false)]
+        public string ReplyMode { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,6 +53,10 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         [Validation(Required=false)]
         public List<UpdateCommandRequestToolExamples> ToolExamples { get; set; }
         public class UpdateCommandRequestToolExamples : TeaModel {
+            [NameInMap("Parameters")]
+            [Validation(Required=false)]
+            public Dictionary<string, string> Parameters { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>给我xxx</para>
@@ -106,6 +114,14 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
             [NameInMap("ParamName")]
             [Validation(Required=false)]
             public string ParamName { get; set; }
+
+            [NameInMap("ParamType")]
+            [Validation(Required=false)]
+            public string ParamType { get; set; }
+
+            [NameInMap("Required")]
+            [Validation(Required=false)]
+            public bool? Required { get; set; }
 
         }
 

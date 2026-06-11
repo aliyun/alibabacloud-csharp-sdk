@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        [NameInMap("ReplyMode")]
+        [Validation(Required=false)]
+        public string ReplyMode { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 

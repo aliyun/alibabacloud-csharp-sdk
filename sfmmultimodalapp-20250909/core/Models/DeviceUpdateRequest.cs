@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
 {
-    public class UpdateMmAppRagConfigRequest : TeaModel {
+    public class DeviceUpdateRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -19,27 +19,20 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("PromptStrategy")]
+        [NameInMap("DeviceName")]
         [Validation(Required=false)]
-        public string PromptStrategy { get; set; }
+        public string DeviceName { get; set; }
+
+        [NameInMap("Remark")]
+        [Validation(Required=false)]
+        public string Remark { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("RetrieveMaxLength")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public int? RetrieveMaxLength { get; set; }
-
-        [NameInMap("TopK")]
-        [Validation(Required=false)]
-        public int? TopK { get; set; }
-
-        /// <summary>
-        /// <para>This parameter is required.</para>
-        /// </summary>
-        [NameInMap("WorkspaceId")]
-        [Validation(Required=false)]
-        public string WorkspaceId { get; set; }
+        public int? Status { get; set; }
 
     }
 

@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
     public class CreateProfileRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>mm_bfaf7e110b6d4359977d1686a3f8</para>
         /// </summary>
         [NameInMap("AppId")]
         [Validation(Required=false)]
@@ -34,10 +31,6 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
-            /// <summary>
-            /// <b>Example:</b>
-            /// <para>False</para>
-            /// </summary>
             [NameInMap("Immutable")]
             [Validation(Required=false)]
             public bool? Immutable { get; set; }
@@ -65,19 +58,12 @@ namespace AlibabaCloud.SDK.SfmMultiModalApp20250909.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>6e18191727f747ec9de06a2</para>
-        /// </summary>
         [NameInMap("UserDefinedId")]
         [Validation(Required=false)]
         public string UserDefinedId { get; set; }
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>llm-jb5sabg80b4ts71g</para>
         /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
