@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单导出文件</para>
+        /// <para>Query bill export files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单导出文件</para>
+        /// <para>Query bill export files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单导出文件</para>
+        /// <para>Query bill export files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单导出文件</para>
+        /// <para>Query bill export files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴佣金明细</para>
+        /// <para>Query partner commission details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -332,7 +332,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴佣金明细</para>
+        /// <para>Query partner commission details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -398,7 +398,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴佣金明细</para>
+        /// <para>Query partner commission details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴佣金明细</para>
+        /// <para>Query partner commission details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -434,7 +434,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴拓客订单</para>
+        /// <para>Query partner customer acquisition orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴拓客订单</para>
+        /// <para>Query partner customer acquisition orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -666,7 +666,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴拓客订单</para>
+        /// <para>Query partner customer acquisition orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -684,7 +684,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴拓客订单</para>
+        /// <para>Query partner customer acquisition orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -702,7 +702,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴续费率</para>
+        /// <para>Query partner renewal rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -744,7 +744,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴续费率</para>
+        /// <para>Query partner renewal rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -786,7 +786,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴续费率</para>
+        /// <para>Query partner renewal rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -804,7 +804,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询伙伴续费率</para>
+        /// <para>Query partner renewal rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -822,7 +822,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询二级分销商列表</para>
+        /// <para>Query the list of second-tier distributors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -876,7 +876,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询二级分销商列表</para>
+        /// <para>Query the list of second-tier distributors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -930,7 +930,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询二级分销商列表</para>
+        /// <para>Query the list of second-tier distributors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -948,7 +948,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询二级分销商列表</para>
+        /// <para>Query the list of second-tier distributors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -966,7 +966,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询拓渠订单</para>
+        /// <para>Query channel expansion orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1078,7 +1078,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询拓渠订单</para>
+        /// <para>Query channel expansion orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1190,7 +1190,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询拓渠订单</para>
+        /// <para>Query channel expansion orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1208,7 +1208,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询拓渠订单</para>
+        /// <para>Query channel expansion orders.</para>
         /// </summary>
         /// 
         /// <param name="request">

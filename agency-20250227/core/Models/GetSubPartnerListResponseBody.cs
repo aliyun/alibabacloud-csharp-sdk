@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetSubPartnerListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Current page number</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,6 +30,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string PageNo { get; set; }
 
         /// <summary>
+        /// <para>Number of second-tier distributors returned per page, up to 100</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +41,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>
         /// </summary>
@@ -39,54 +50,129 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>List of second-tier distributors</para>
+        /// </summary>
         [NameInMap("SubPartnerList")]
         [Validation(Required=false)]
         public List<GetSubPartnerListResponseBodySubPartnerList> SubPartnerList { get; set; }
         public class GetSubPartnerListResponseBodySubPartnerList : TeaModel {
+            /// <summary>
+            /// <para>Detailed address of registration</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx街道xxx号</para>
+            /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
             public string Address { get; set; }
 
+            /// <summary>
+            /// <para>Contract status encoding</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ACTIVE_PERIOD</para>
+            /// </summary>
             [NameInMap("AgreementStatus")]
             [Validation(Required=false)]
             public string AgreementStatus { get; set; }
 
+            /// <summary>
+            /// <para>Agreement status description</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>生效期</para>
+            /// </summary>
             [NameInMap("AgreementStatusDesc")]
             [Validation(Required=false)]
             public string AgreementStatusDesc { get; set; }
 
+            /// <summary>
+            /// <para>City of registration</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>杭州市</para>
+            /// </summary>
             [NameInMap("City")]
             [Validation(Required=false)]
             public string City { get; set; }
 
+            /// <summary>
+            /// <para>Name of the second-tier distributor</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx有限公司</para>
+            /// </summary>
             [NameInMap("CompanyName")]
             [Validation(Required=false)]
             public string CompanyName { get; set; }
 
+            /// <summary>
+            /// <para>Contact name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>张三</para>
+            /// </summary>
             [NameInMap("Contact")]
             [Validation(Required=false)]
             public string Contact { get; set; }
 
+            /// <summary>
+            /// <para>District or county of registration</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>西湖区</para>
+            /// </summary>
             [NameInMap("District")]
             [Validation(Required=false)]
             public string District { get; set; }
 
+            /// <summary>
+            /// <para>Initial onboarding time</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2000-01-01</para>
+            /// </summary>
             [NameInMap("JoinTime")]
             [Validation(Required=false)]
             public string JoinTime { get; set; }
 
+            /// <summary>
+            /// <para>Master account name of the secondary distributor</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxxxxx有限公司主账号</para>
+            /// </summary>
             [NameInMap("MasterAccount")]
             [Validation(Required=false)]
             public string MasterAccount { get; set; }
 
+            /// <summary>
+            /// <para>UID of the Master account of the second-tier distributor</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>123456</para>
+            /// </summary>
             [NameInMap("MasterUid")]
             [Validation(Required=false)]
             public string MasterUid { get; set; }
 
+            /// <summary>
+            /// <para>PID of the secondary distributor</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>P123456</para>
+            /// </summary>
             [NameInMap("Pid")]
             [Validation(Required=false)]
             public string Pid { get; set; }
 
+            /// <summary>
+            /// <para>Province of registration</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>浙江省</para>
+            /// </summary>
             [NameInMap("Province")]
             [Validation(Required=false)]
             public string Province { get; set; }
@@ -94,6 +180,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the invocation succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -102,6 +190,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total amount of data under the current request conditions</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

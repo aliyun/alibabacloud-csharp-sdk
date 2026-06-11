@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetRenewalRateListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Returned data</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetRenewalRateListResponseBodyData> Data { get; set; }
         public class GetRenewalRateListResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Adjusted amount due for Gold customer renewal</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? CustomerAdjustedRenewalAmountDue { get; set; }
 
             /// <summary>
+            /// <para>Rewind amount for new customer acquisition upgrade</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? CustomerOtherBillAmount { get; set; }
 
             /// <summary>
+            /// <para>Amount due for Gold customer renewal</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalCustomerRenewalAmountDue { get; set; }
 
             /// <summary>
+            /// <para>Gold customer commission renewal rate</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.9</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalCustomerRenewalRate { get; set; }
 
             /// <summary>
+            /// <para>Renewed amount from customer acquisition</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalCustomerRenewedAmount { get; set; }
 
             /// <summary>
+            /// <para>Total rewind amount for new upgrades</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalOtherBillAmount { get; set; }
 
             /// <summary>
+            /// <para>Final amount due for renewal</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalRenewalAmountDue { get; set; }
 
             /// <summary>
+            /// <para>Final commission renewal rate</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.9</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalRenewalRate { get; set; }
 
             /// <summary>
+            /// <para>Final renewed amount</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalRenewedAmount { get; set; }
 
             /// <summary>
+            /// <para>Renewal amount due from channel partner acquisition</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalSubPartnerRenewalAmountDue { get; set; }
 
             /// <summary>
+            /// <para>Channel expansion commission renewal rate</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.85</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalSubPartnerRenewalRate { get; set; }
 
             /// <summary>
+            /// <para>Renewed amount from channel partner acquisition</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? FinalSubPartnerRenewedAmount { get; set; }
 
             /// <summary>
+            /// <para>Fiscal year and quarter</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025Q4</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string FiscalYearAndQuarter { get; set; }
 
             /// <summary>
+            /// <para>Partner PID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>P123423453</para>
             /// </summary>
@@ -133,11 +166,19 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             [Validation(Required=false)]
             public string MasterPid { get; set; }
 
+            /// <summary>
+            /// <para>Partner PID name</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>XX有限公司</para>
+            /// </summary>
             [NameInMap("MasterPidName")]
             [Validation(Required=false)]
             public string MasterPidName { get; set; }
 
             /// <summary>
+            /// <para>Gold customer commission renewal rate including special approval</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7</para>
             /// </summary>
@@ -146,6 +187,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialCustomerRenewRatio { get; set; }
 
             /// <summary>
+            /// <para>Renewal amount due including specially approved customer acquisition</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -154,6 +197,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialCustomerRenewalAmountDue { get; set; }
 
             /// <summary>
+            /// <para>Renewed amount including specially approved customer acquisition</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -162,6 +207,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialCustomerRenewedAmount { get; set; }
 
             /// <summary>
+            /// <para>Renewal rate including specially approved final quarter commission</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.7</para>
             /// </summary>
@@ -170,6 +217,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialFinalRenewRatio { get; set; }
 
             /// <summary>
+            /// <para>Renewal amount due for final quarterly commission including special approvals</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -178,6 +227,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialFinalRenewalAmountDue { get; set; }
 
             /// <summary>
+            /// <para>Renewed amount including specially approved final quarter commission</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -186,6 +237,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialFinalRenewedAmount { get; set; }
 
             /// <summary>
+            /// <para>Channel expansion commission renewal rate including special approval</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.8</para>
             /// </summary>
@@ -194,6 +247,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialSubPartnerRenewRatio { get; set; }
 
             /// <summary>
+            /// <para>Amount due for renewal including specially approved channel partner</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -202,6 +257,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialSubPartnerRenewalAmountDue { get; set; }
 
             /// <summary>
+            /// <para>Renewed amount including specially approved channel partner renewals</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -210,6 +267,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SpecialSubPartnerRenewedAmount { get; set; }
 
             /// <summary>
+            /// <para>Adjusted amount due for channel partner renewal</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -218,6 +277,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? SubPartnerAdjustedRenewalAmountDue { get; set; }
 
             /// <summary>
+            /// <para>Channel partner new upgrade rewind amount</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -227,6 +288,12 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 
         }
 
+        /// <summary>
+        /// <para>Message</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>成功</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
@@ -242,6 +309,8 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the invocation succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
