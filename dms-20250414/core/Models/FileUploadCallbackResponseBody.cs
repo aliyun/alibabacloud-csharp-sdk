@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class FileUploadCallbackResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public FileUploadCallbackResponseBodyData Data { get; set; }
         public class FileUploadCallbackResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The file ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>f-8*******01m</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned when the call fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
         /// </summary>
@@ -40,7 +49,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>841BC14F-8E21-56B0-A7D6-593C5841AC84</para>
@@ -50,6 +59,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. The following values are returned:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

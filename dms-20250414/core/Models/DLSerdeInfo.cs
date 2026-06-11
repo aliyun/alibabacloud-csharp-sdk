@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLSerdeInfo : TeaModel {
         /// <summary>
+        /// <para>The description of the serialization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;serialize&quot;</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The name of the class used for deserialization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>org.apache.hadoop.hive.serde2.OpenCSVSerde</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DeserializerClass { get; set; }
 
         /// <summary>
+        /// <para>The name of the serialization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The key-value pairs of parameters related to serialization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///   &quot;serialization.format&quot;: &quot;1&quot;
@@ -44,6 +52,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
+        /// <para>The type of serialization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -52,6 +62,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? SerdeType { get; set; }
 
         /// <summary>
+        /// <para>The class name of the serialization library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</para>
         /// </summary>
@@ -60,6 +72,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SerializationLib { get; set; }
 
         /// <summary>
+        /// <para>The name of the class used for serialization.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe</para>
         /// </summary>

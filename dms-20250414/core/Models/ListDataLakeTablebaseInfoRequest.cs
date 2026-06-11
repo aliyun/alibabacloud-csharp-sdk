@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataLakeTablebaseInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the data catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The name of the database where the table is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>The page number of the list for a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of rows on each page for a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? Rows { get; set; }
 
         /// <summary>
+        /// <para>The keyword used to search for table names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SearchKey { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID. Call the GetUserActiveTenant operation to get the value of this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3****</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? Tid { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****</para>
         /// </summary>

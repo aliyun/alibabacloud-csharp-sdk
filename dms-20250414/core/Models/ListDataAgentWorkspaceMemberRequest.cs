@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentWorkspaceMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The current DMS unit.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NesLoK****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The sort order.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Desc</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The sort field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gmt_create</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OrderBy { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The prefix of the member ID to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20273</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SearchMemberId { get; set; }
 
         /// <summary>
+        /// <para>The prefix of the member name to query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yunqi</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SearchRoleName { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20923*****7291</para>
         /// </summary>

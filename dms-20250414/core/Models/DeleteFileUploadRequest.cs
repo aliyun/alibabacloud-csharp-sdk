@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteFileUploadRequest : TeaModel {
         /// <summary>
+        /// <para>Used by frontend only</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TrailCenter</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CallFrom { get; set; }
 
         /// <summary>
+        /// <para>Current DMS unit</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DmsUnit { get; set; }
 
         /// <summary>
+        /// <para>File ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

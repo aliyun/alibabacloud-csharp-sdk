@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentWorkspaceInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataAgentWorkspaceInfoResponseBodyData Data { get; set; }
         public class GetDataAgentWorkspaceInfoResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The time when the workspace was created. This value is a UNIX timestamp in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1765960516</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The user ID (UID) of the workspace creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20282*****7591</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether session sharing is enabled.</para>
+            /// </summary>
             [NameInMap("IsSessionShareEnabled")]
             [Validation(Required=false)]
             public bool? IsSessionShareEnabled { get; set; }
 
             /// <summary>
+            /// <para>The time when the workspace was last modified. This value is a UNIX timestamp in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1765961516</para>
             /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The user\&quot;s role in the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>admin</para>
             /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string RoleName { get; set; }
 
             /// <summary>
+            /// <para>The number of members in the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>11</para>
             /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string TotalMember { get; set; }
 
             /// <summary>
+            /// <para>The description of the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>space for test</para>
             /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string WorkspaceDesc { get; set; }
 
             /// <summary>
+            /// <para>The workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20923*****7291</para>
             /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
+            /// <para>The name of the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>workspaceTest</para>
             /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string WorkspaceName { get; set; }
 
             /// <summary>
+            /// <para>The status of the workspace.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>active</para>
             /// </summary>
@@ -92,6 +116,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DMS-DA-40114</para>
         /// </summary>
@@ -100,6 +126,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Specified parameter is not valid.</para>
         /// </summary>
@@ -108,6 +136,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E0D2-*****-A63B6</para>
         /// </summary>
@@ -116,6 +146,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

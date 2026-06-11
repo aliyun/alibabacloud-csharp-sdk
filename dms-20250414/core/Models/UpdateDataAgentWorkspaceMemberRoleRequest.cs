@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateDataAgentWorkspaceMemberRoleRequest : TeaModel {
         /// <summary>
+        /// <para>The current DMS unit.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
+        /// <para>The UID of the member whose role you want to change.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20282*****7591</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string MemberId { get; set; }
 
         /// <summary>
+        /// <para>The role to assign to the member.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RoleName { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****</para>
         /// </summary>

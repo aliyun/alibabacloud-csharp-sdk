@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLSkewedInfo : TeaModel {
+        /// <summary>
+        /// <para>A list of skewed column names.</para>
+        /// </summary>
         [NameInMap("SkewedColNames")]
         [Validation(Required=false)]
         public List<string> SkewedColNames { get; set; }
 
         /// <summary>
+        /// <para>A mapping of skewed column values to their locations.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{“col1”:&quot;val1&quot;}</para>
         /// </summary>
@@ -21,6 +26,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public Dictionary<string, object> SkewedColValueLocationMaps { get; set; }
 
+        /// <summary>
+        /// <para>A list of skewed column values. Each list provides a set of associated values.</para>
+        /// </summary>
         [NameInMap("SkewedColValues")]
         [Validation(Required=false)]
         public List<List<string>> SkewedColValues { get; set; }

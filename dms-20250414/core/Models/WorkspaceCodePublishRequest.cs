@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class WorkspaceCodePublishRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration for the code deployment, specified as a JSON string. The <c>repos</c> array identifies the Git repositories in the workspace and specifies the branch to deploy. The <c>exclude</c> array lists directories to skip during the deployment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID (numeric ID) for the code deployment.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

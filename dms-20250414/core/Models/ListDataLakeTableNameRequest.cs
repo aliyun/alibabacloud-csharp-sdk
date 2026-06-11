@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataLakeTableNameRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the data catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The name of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -38,6 +42,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to retrieve the next page of results. Set this parameter to the value of NextToken that is returned from the last call. You do not need to specify this parameter for the first call.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If <b>NextToken</b> is empty, no subsequent query is required.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>NextToken</b> has a return value, the value is the token for the next query.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>f056501ada12****</para>
         /// </summary>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The regular expression used to match table names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>.*</para>
         /// </summary>
@@ -54,6 +68,20 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string TableNamePattern { get; set; }
 
         /// <summary>
+        /// <para>The type of the table. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>MANAGED_TABLE: Internal table.</para>
+        /// </description></item>
+        /// <item><description><para>EXTERNAL_TABLE: Foreign table.</para>
+        /// </description></item>
+        /// <item><description><para>VIRTUAL_VIEW: Virtual view.</para>
+        /// </description></item>
+        /// <item><description><para>INDEX_TABLE: Index table.</para>
+        /// </description></item>
+        /// <item><description><para>MATERIALIZED_VIEW: Materialized view.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MANAGED_TABLE</para>
         /// </summary>
@@ -62,6 +90,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string TableType { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
+        /// <remarks>
+        /// <para>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3****</para>
         /// </summary>
@@ -70,6 +103,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? Tid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****</para>
         /// </summary>

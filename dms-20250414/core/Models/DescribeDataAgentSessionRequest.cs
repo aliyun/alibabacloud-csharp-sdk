@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DescribeDataAgentSessionRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the DMS unit.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,14 +20,18 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
+        /// <para>The ID of the agent session.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>c61n7gmopfvuascr70xmavzrj</para>
+        /// <para>c61n7gm******rj</para>
         /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****</para>
         /// </summary>

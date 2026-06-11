@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteAirflowRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Airflow instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowId { get; set; }
 
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>token-****</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

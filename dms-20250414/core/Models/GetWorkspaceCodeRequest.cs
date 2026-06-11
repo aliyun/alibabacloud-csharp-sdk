@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetWorkspaceCodeRequest : TeaModel {
         /// <summary>
+        /// <para>If the file is in JSON format, set this parameter to <c>true</c> to convert the returned content to YAML format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Iac { get; set; }
 
         /// <summary>
+        /// <para>The path to the code file. For example: <c>/Workspace/code/test.py</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

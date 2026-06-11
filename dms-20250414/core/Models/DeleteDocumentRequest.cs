@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteDocumentRequest : TeaModel {
         /// <summary>
+        /// <para>The document name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DocumentName { get; set; }
 
         /// <summary>
+        /// <para>The knowledge base ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

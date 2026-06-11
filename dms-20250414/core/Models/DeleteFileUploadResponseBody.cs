@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteFileUploadResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Return struct</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteFileUploadResponseBodyData Data { get; set; }
         public class DeleteFileUploadResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>File ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>f-8*******01m</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
+        /// <para>Error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Error message returned when the invocation fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
         /// </summary>
@@ -50,6 +59,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request succeeded.                                 </description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

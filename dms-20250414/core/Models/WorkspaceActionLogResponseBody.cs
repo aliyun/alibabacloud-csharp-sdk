@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class WorkspaceActionLogResponseBody : TeaModel {
         /// <summary>
+        /// <para>The log.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>log info</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message. This can be an error message or an informational notice.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This record is being collected, please wait for a moment.</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</para>
         /// </summary>
@@ -50,6 +60,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates if the request succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

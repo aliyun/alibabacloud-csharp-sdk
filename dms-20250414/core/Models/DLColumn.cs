@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLColumn : TeaModel {
         /// <summary>
+        /// <para>The comment of the column.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>from deserializer</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The name of the column.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>col</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The data type of the column. Valid values include array, bigint, binary, boolean, char, date, decimal, double, float, int, interval, map, set, smallint, string, struct, timestamp, tinyint, union, and varchar.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>string</para>
         /// </summary>

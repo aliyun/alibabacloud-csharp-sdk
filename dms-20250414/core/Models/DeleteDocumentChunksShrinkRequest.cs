@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteDocumentChunksShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>A list of chunk IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ChunkIds")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ChunkIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The name of the document.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DocumentName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

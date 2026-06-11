@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateAirflowShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the Airflow instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowName { get; set; }
 
         /// <summary>
+        /// <para>The Airflow version. Supported versions: 2.10 and 3.1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3.1</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowVersion { get; set; }
 
         /// <summary>
+        /// <para>The compute specifications for the Airflow instance. Valid values: <b>SMALL</b>, <b>MEDIUM</b>, <b>LARGE</b>, <b>XLARGE</b>, or <b>X2LARGE</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AppSpec { get; set; }
 
         /// <summary>
+        /// <para>A client token to ensure request idempotence.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>token-****</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The path to the DAG directory for Airflow to scan.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default/dags</para>
         /// </summary>
@@ -53,11 +61,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string DagsDir { get; set; }
 
+        /// <summary>
+        /// <para>A list of data mount configurations.</para>
+        /// </summary>
         [NameInMap("DataMountInfoList")]
         [Validation(Required=false)]
         public string DataMountInfoListShrink { get; set; }
 
         /// <summary>
+        /// <para>The description of the Airflow instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>order scheduler</para>
         /// </summary>
@@ -65,11 +78,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable worker elasticity.</para>
+        /// </summary>
         [NameInMap("EnableServerless")]
         [Validation(Required=false)]
         public bool? EnableServerless { get; set; }
 
         /// <summary>
+        /// <para>The graceful shutdown timeout for workers, in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -78,6 +96,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? GracefulShutdownTimeout { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS bucket.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,6 +107,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
+        /// <para>The OSS path for log storage.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,6 +118,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OssPath { get; set; }
 
         /// <summary>
+        /// <para>The path to the plugin directory for the Airflow instance to scan.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default/plugins</para>
         /// </summary>
@@ -106,6 +128,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PluginsDir { get; set; }
 
         /// <summary>
+        /// <para>The path to the Python requirements file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default/requirements.txt</para>
         /// </summary>
@@ -114,6 +138,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequirementFile { get; set; }
 
         /// <summary>
+        /// <para>The security group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,6 +149,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The path to the startup script in the Airflow container.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default/startup.sh</para>
         /// </summary>
@@ -132,6 +159,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string StartupFile { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -142,7 +170,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
+        /// <para>The VPC ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -153,6 +181,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The number of elastic worker nodes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -163,6 +192,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? WorkerServerlessReplicas { get; set; }
 
         /// <summary>
+        /// <para>The ID of the DMS workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -173,6 +203,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the zone where the instance will be created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
         /// </summary>

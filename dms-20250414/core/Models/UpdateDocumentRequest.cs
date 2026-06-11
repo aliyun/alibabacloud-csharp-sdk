@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateDocumentRequest : TeaModel {
         /// <summary>
+        /// <para>The document name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DocumentName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string KbUuid { get; set; }
 
         /// <summary>
+        /// <para>The new document description.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

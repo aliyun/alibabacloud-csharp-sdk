@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class OneMetaKnowledgeBaseChunk : TeaModel {
         /// <summary>
+        /// <para>The time when the chunk was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-04-20 15:51:27</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ChunkMtime { get; set; }
 
         /// <summary>
+        /// <para>The title of the chunk.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>titile1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ChunkTitle { get; set; }
 
         /// <summary>
+        /// <para>The content of the chunk.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>abc</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>The name of the document.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test.md</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DocName { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the chunk.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2e12aeb5-52cd-4834-bcd8-****</para>
         /// </summary>

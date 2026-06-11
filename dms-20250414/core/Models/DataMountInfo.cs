@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DataMountInfo : TeaModel {
         /// <summary>
+        /// <para>The name of the mount directory. The actual mount path is prefixed with /Workspace/data/.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>image</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string MountFolderName { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS bucket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test-bucket</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OssBucket { get; set; }
 
         /// <summary>
+        /// <para>The prefix. If this parameter is not specified, the root directory is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/prod</para>
         /// </summary>
@@ -34,6 +40,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Prefix { get; set; }
 
         /// <summary>
+        /// <para>Whether to mount the data volume as read-only.</para>
+        /// <para>Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

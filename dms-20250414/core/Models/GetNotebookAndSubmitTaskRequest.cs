@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetNotebookAndSubmitTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The input parameters for the Notebook file. Pass the parameters in a dictionary format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Params { get; set; }
 
         /// <summary>
+        /// <para>The path of the Notebook file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>The number of retries if scheduling fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? Retry { get; set; }
 
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8630242382****</para>
         /// </summary>

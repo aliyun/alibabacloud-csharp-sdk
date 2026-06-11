@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLTableInput : TeaModel {
         /// <summary>
+        /// <para>The time when the table was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1731586286</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who created the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? CreatorId { get; set; }
 
         /// <summary>
+        /// <para>The description of the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The time when the table was last accessed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1608707407</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? LastAccessTime { get; set; }
 
         /// <summary>
+        /// <para>The storage path of the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://xxx</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Location { get; set; }
 
         /// <summary>
+        /// <para>The user who last modified the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1410769</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? ModifierId { get; set; }
 
         /// <summary>
+        /// <para>The name of the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100g_customer</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The owner of the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zhangsan</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The type of the owner. Valid values: USER, ROLE, and GROUP.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>USER</para>
         /// </summary>
@@ -81,15 +99,23 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string OwnerType { get; set; }
 
+        /// <summary>
+        /// <para>The key-value pair parameters.</para>
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, string> Parameters { get; set; }
 
+        /// <summary>
+        /// <para>The list of attribute columns for the table.</para>
+        /// </summary>
         [NameInMap("PartitionKeys")]
         [Validation(Required=false)]
         public List<DLColumn> PartitionKeys { get; set; }
 
         /// <summary>
+        /// <para>The retention period of the table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>300</para>
         /// </summary>
@@ -97,11 +123,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public int? Retention { get; set; }
 
+        /// <summary>
+        /// <para>The storage description. This includes the storage features and format details of the table.</para>
+        /// </summary>
         [NameInMap("StorageDescriptor")]
         [Validation(Required=false)]
         public DLStorageDescriptor StorageDescriptor { get; set; }
 
         /// <summary>
+        /// <para>The type of the metadata table. Examples: MANAGED_TABLE, EXTERNAL_TABLE, VIRTUAL_VIEW, INDEX_TABLE, and MATERIALIZED_VIEW.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EXTERNAL_TABLE</para>
         /// </summary>
@@ -110,6 +141,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string TableType { get; set; }
 
         /// <summary>
+        /// <para>If the table is a view, this parameter indicates the expanded text of the view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>
@@ -118,6 +151,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ViewExpandedText { get; set; }
 
         /// <summary>
+        /// <para>If the table is a view, this parameter indicates the original text of the view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
         /// </summary>

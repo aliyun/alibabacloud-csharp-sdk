@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetChatContentRequest : TeaModel {
         /// <summary>
+        /// <para>The agent ID. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx-xxxx-xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The service returns output starting from this checkpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Checkpoint { get; set; }
 
         /// <summary>
+        /// <para>The DMS unit. For users on the Alibaba Cloud China site, the default value is cn-hangzhou.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
+        /// <para>The session ID. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sess_12345</para>
         /// </summary>

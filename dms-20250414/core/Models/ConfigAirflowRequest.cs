@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ConfigAirflowRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the Airflow instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowId { get; set; }
 
         /// <summary>
+        /// <para>The list of custom Airflow configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CustomAirflowCfg")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public List<string> CustomAirflowCfg { get; set; }
 
         /// <summary>
+        /// <para>The DMS workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

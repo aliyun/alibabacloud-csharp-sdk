@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLDatabase : TeaModel {
         /// <summary>
+        /// <para>The name of the data catalog.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hive</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? DbId { get; set; }
 
         /// <summary>
+        /// <para>The description of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Default database for catalog hive</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The storage path of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://xxx</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Location { get; set; }
 
         /// <summary>
+        /// <para>The name of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The parameters of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>key/value</para>
         /// </summary>

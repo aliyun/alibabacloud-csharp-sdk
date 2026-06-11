@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为空间添加用户</para>
+        /// <para>Adds a user to a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为空间添加用户</para>
+        /// <para>Adds a user to a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为空间添加用户</para>
+        /// <para>Adds a user to a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为空间添加用户</para>
+        /// <para>Adds a user to a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新建湖仓表分区</para>
+        /// <para>Creates partitions for a data lake table in a batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新建湖仓表分区</para>
+        /// <para>Creates partitions for a data lake table in a batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新建湖仓表分区</para>
+        /// <para>Creates partitions for a data lake table in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量新建湖仓表分区</para>
+        /// <para>Creates partitions for a data lake table in a batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -375,7 +375,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除湖仓表分区</para>
+        /// <para>Batch deletes partitions from a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除湖仓表分区</para>
+        /// <para>Batch deletes partitions from a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -507,7 +507,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除湖仓表分区</para>
+        /// <para>Batch deletes partitions from a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -525,7 +525,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除湖仓表分区</para>
+        /// <para>Batch deletes partitions from a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -543,7 +543,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量更新湖仓表分区</para>
+        /// <para>Update partitions in a data lake table in batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -613,7 +613,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量更新湖仓表分区</para>
+        /// <para>Update partitions in a data lake table in batch.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -683,7 +683,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量更新湖仓表分区</para>
+        /// <para>Update partitions in a data lake table in batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -701,7 +701,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量更新湖仓表分区</para>
+        /// <para>Update partitions in a data lake table in batch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -719,8 +719,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Airflow实例的自定义配置</para>
+        /// <para>Update an Airflow instance\&quot;s custom configuration</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configure the airflow\.cfg file for DMS Airflow.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ConfigAirflowRequest
@@ -775,8 +780,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Airflow实例的自定义配置</para>
+        /// <para>Update an Airflow instance\&quot;s custom configuration</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configure the airflow\.cfg file for DMS Airflow.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ConfigAirflowRequest
@@ -831,8 +841,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Airflow实例的自定义配置</para>
+        /// <para>Update an Airflow instance\&quot;s custom configuration</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configure the airflow\.cfg file for DMS Airflow.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigAirflowRequest
@@ -849,8 +864,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Airflow实例的自定义配置</para>
+        /// <para>Update an Airflow instance\&quot;s custom configuration</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Configure the airflow\.cfg file for DMS Airflow.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfigAirflowRequest
@@ -867,8 +887,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Airflow</para>
+        /// <para>Creates an Airflow instance in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an Airflow instance in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAirflowRequest
@@ -991,8 +1016,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Airflow</para>
+        /// <para>Creates an Airflow instance in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an Airflow instance in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAirflowRequest
@@ -1115,8 +1145,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Airflow</para>
+        /// <para>Creates an Airflow instance in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an Airflow instance in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAirflowRequest
@@ -1133,8 +1168,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Airflow</para>
+        /// <para>Creates an Airflow instance in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an Airflow instance in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAirflowRequest
@@ -1151,7 +1191,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Airflow logon credential. You can use this credential to log on to the DMS-managed Airflow instance.</para>
+        /// <para>Obtains logon credentials for an Airflow instance hosted by Data Management Service (DMS). Use the returned token and host endpoint to construct a logon URL for the Airflow web UI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1193,7 +1233,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Airflow logon credential. You can use this credential to log on to the DMS-managed Airflow instance.</para>
+        /// <para>Obtains logon credentials for an Airflow instance hosted by Data Management Service (DMS). Use the returned token and host endpoint to construct a logon URL for the Airflow web UI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1235,7 +1275,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Airflow logon credential. You can use this credential to log on to the DMS-managed Airflow instance.</para>
+        /// <para>Obtains logon credentials for an Airflow instance hosted by Data Management Service (DMS). Use the returned token and host endpoint to construct a logon URL for the Airflow web UI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1253,7 +1293,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Airflow logon credential. You can use this credential to log on to the DMS-managed Airflow instance.</para>
+        /// <para>Obtains logon credentials for an Airflow instance hosted by Data Management Service (DMS). Use the returned token and host endpoint to construct a logon URL for the Airflow web UI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1271,7 +1311,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateCustomAgent</para>
+        /// <para>Create a custom agent in your personal space or a workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1383,7 +1423,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateCustomAgent</para>
+        /// <para>Create a custom agent in your personal space or a workspace.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1495,7 +1535,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateCustomAgent</para>
+        /// <para>Create a custom agent in your personal space or a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1513,7 +1553,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateCustomAgent</para>
+        /// <para>Create a custom agent in your personal space or a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1531,7 +1571,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDataAgentKnowledgeBase</para>
+        /// <para>Creates a DataAgent knowledge base. The knowledge base creator has read and write permissions. Other workspace members have permission to use it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1589,7 +1629,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDataAgentKnowledgeBase</para>
+        /// <para>Creates a DataAgent knowledge base. The knowledge base creator has read and write permissions. Other workspace members have permission to use it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1647,7 +1687,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDataAgentKnowledgeBase</para>
+        /// <para>Creates a DataAgent knowledge base. The knowledge base creator has read and write permissions. Other workspace members have permission to use it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1665,7 +1705,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDataAgentKnowledgeBase</para>
+        /// <para>Creates a DataAgent knowledge base. The knowledge base creator has read and write permissions. Other workspace members have permission to use it.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1683,7 +1723,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDataAgentSession</para>
+        /// <para>Create a DataAgent session</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1747,7 +1787,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDataAgentSession</para>
+        /// <para>Create a DataAgent session</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1811,7 +1851,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDataAgentSession</para>
+        /// <para>Create a DataAgent session</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1829,7 +1869,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateDataAgentSession</para>
+        /// <para>Create a DataAgent session</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1847,7 +1887,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DataAgent工作空间</para>
+        /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1901,7 +1941,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DataAgent工作空间</para>
+        /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1955,7 +1995,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DataAgent工作空间</para>
+        /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1973,7 +2013,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建DataAgent工作空间</para>
+        /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1991,7 +2031,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓数据库</para>
+        /// <para>Creates a data lake database.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2063,7 +2103,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓数据库</para>
+        /// <para>Creates a data lake database.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2135,7 +2175,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓数据库</para>
+        /// <para>Creates a data lake database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2153,7 +2193,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓数据库</para>
+        /// <para>Creates a data lake database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2171,7 +2211,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓自定义函数</para>
+        /// <para>Creates a user-defined function (UDF) for a data lake.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2237,7 +2277,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓自定义函数</para>
+        /// <para>Creates a user-defined function (UDF) for a data lake.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2303,7 +2343,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓自定义函数</para>
+        /// <para>Creates a user-defined function (UDF) for a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2321,7 +2361,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓自定义函数</para>
+        /// <para>Creates a user-defined function (UDF) for a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2339,7 +2379,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓表分区</para>
+        /// <para>Creates a partition for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2417,7 +2457,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓表分区</para>
+        /// <para>Creates a partition for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2495,7 +2535,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓表分区</para>
+        /// <para>Creates a partition for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2513,7 +2553,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓表分区</para>
+        /// <para>Creates a partition for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2531,7 +2571,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓表</para>
+        /// <para>Creates a data lake table in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2597,7 +2637,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓表</para>
+        /// <para>Creates a data lake table in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2663,7 +2703,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓表</para>
+        /// <para>Creates a data lake table in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2681,7 +2721,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新建湖仓表</para>
+        /// <para>Creates a data lake table in Data Management (DMS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2699,7 +2739,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Airflow</para>
+        /// <para>Deletes an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2749,7 +2789,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Airflow</para>
+        /// <para>Deletes an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2799,7 +2839,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Airflow</para>
+        /// <para>Deletes an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2817,7 +2857,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Airflow</para>
+        /// <para>Deletes an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2835,7 +2875,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteCustomAgent</para>
+        /// <para>Delete a custom agent in your personal workspace or a shared workspace. Note: Only custom agents that are newly created or offline can be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2881,7 +2921,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteCustomAgent</para>
+        /// <para>Delete a custom agent in your personal workspace or a shared workspace. Note: Only custom agents that are newly created or offline can be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2927,7 +2967,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteCustomAgent</para>
+        /// <para>Delete a custom agent in your personal workspace or a shared workspace. Note: Only custom agents that are newly created or offline can be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2945,7 +2985,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteCustomAgent</para>
+        /// <para>Delete a custom agent in your personal workspace or a shared workspace. Note: Only custom agents that are newly created or offline can be deleted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2963,7 +3003,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteDataAgentKnowledgeBase</para>
+        /// <para>Deletes a DataAgent knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3013,7 +3053,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteDataAgentKnowledgeBase</para>
+        /// <para>Deletes a DataAgent knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3063,7 +3103,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteDataAgentKnowledgeBase</para>
+        /// <para>Deletes a DataAgent knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3081,7 +3121,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DeleteDataAgentKnowledgeBase</para>
+        /// <para>Deletes a DataAgent knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3099,7 +3139,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DataAgent工作空间</para>
+        /// <para>Deletes a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3145,7 +3185,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DataAgent工作空间</para>
+        /// <para>Deletes a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3191,7 +3231,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DataAgent工作空间</para>
+        /// <para>Deletes a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3209,7 +3249,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除DataAgent工作空间</para>
+        /// <para>Deletes a DataAgent workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3227,7 +3267,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓数据库</para>
+        /// <para>Deletes a data lake database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3281,7 +3321,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓数据库</para>
+        /// <para>Deletes a data lake database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3335,7 +3375,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓数据库</para>
+        /// <para>Deletes a data lake database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3353,7 +3393,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓数据库</para>
+        /// <para>Deletes a data lake database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3371,7 +3411,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓自定义函数</para>
+        /// <para>Deletes a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3429,7 +3469,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓自定义函数</para>
+        /// <para>Deletes a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3487,7 +3527,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓自定义函数</para>
+        /// <para>Deletes a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3505,7 +3545,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓自定义函数</para>
+        /// <para>Deletes a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3523,7 +3563,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓表分区</para>
+        /// <para>Deletes a partition from a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3595,7 +3635,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓表分区</para>
+        /// <para>Deletes a partition from a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3667,7 +3707,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓表分区</para>
+        /// <para>Deletes a partition from a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3685,7 +3725,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓表分区</para>
+        /// <para>Deletes a partition from a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3703,7 +3743,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓表</para>
+        /// <para>Deletes a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3761,7 +3801,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓表</para>
+        /// <para>Deletes a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3819,7 +3859,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓表</para>
+        /// <para>Deletes a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3837,7 +3877,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除湖仓表</para>
+        /// <para>Deletes a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3855,7 +3895,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文档</para>
+        /// <para>Deletes a document from a specified knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3901,7 +3941,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文档</para>
+        /// <para>Deletes a document from a specified knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3947,7 +3987,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文档</para>
+        /// <para>Deletes a document from a specified knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3965,7 +4005,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文档</para>
+        /// <para>Deletes a document from a specified knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3983,7 +4023,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除onemeta3.0的知识库chunks</para>
+        /// <para>Deletes chunks from a document in a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4039,7 +4079,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除onemeta3.0的知识库chunks</para>
+        /// <para>Deletes chunks from a document in a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4095,7 +4135,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除onemeta3.0的知识库chunks</para>
+        /// <para>Deletes chunks from a document in a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4113,7 +4153,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除onemeta3.0的知识库chunks</para>
+        /// <para>Deletes chunks from a document in a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4267,8 +4307,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作空间代码以及目录</para>
+        /// <para>Deletes a code file or directory from a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation permanently removes a specified code file or directory.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkspaceCodeRequest
@@ -4321,8 +4366,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作空间代码以及目录</para>
+        /// <para>Deletes a code file or directory from a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation permanently removes a specified code file or directory.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkspaceCodeRequest
@@ -4375,8 +4425,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作空间代码以及目录</para>
+        /// <para>Deletes a code file or directory from a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation permanently removes a specified code file or directory.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkspaceCodeRequest
@@ -4393,8 +4448,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作空间代码以及目录</para>
+        /// <para>Deletes a code file or directory from a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation permanently removes a specified code file or directory.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkspaceCodeRequest
@@ -4411,7 +4471,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeCustomAgent</para>
+        /// <para><c>DescribeCustomAgent</c> retrieves the details of a custom agent by its agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4457,7 +4517,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeCustomAgent</para>
+        /// <para><c>DescribeCustomAgent</c> retrieves the details of a custom agent by its agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4503,7 +4563,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeCustomAgent</para>
+        /// <para><c>DescribeCustomAgent</c> retrieves the details of a custom agent by its agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4521,7 +4581,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeCustomAgent</para>
+        /// <para><c>DescribeCustomAgent</c> retrieves the details of a custom agent by its agent ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4539,7 +4599,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeDataAgentSession</para>
+        /// <para>Gets the details of a DataAgent session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4589,7 +4649,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeDataAgentSession</para>
+        /// <para>Gets the details of a DataAgent session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4639,7 +4699,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeDataAgentSession</para>
+        /// <para>Gets the details of a DataAgent session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4657,7 +4717,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DescribeDataAgentSession</para>
+        /// <para>Gets the details of a DataAgent session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4675,7 +4735,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档详情</para>
+        /// <para>Retrieves the details of a specific document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4721,7 +4781,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档详情</para>
+        /// <para>Retrieves the details of a specific document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4767,7 +4827,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档详情</para>
+        /// <para>Retrieves the details of a specific document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4785,7 +4845,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档详情</para>
+        /// <para>Retrieves the details of a specific document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4931,7 +4991,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取onemeta3.0的知识库统计信息</para>
+        /// <para>Retrieves the statistics of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4973,7 +5033,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取onemeta3.0的知识库统计信息</para>
+        /// <para>Retrieves the statistics of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5015,7 +5075,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取onemeta3.0的知识库统计信息</para>
+        /// <para>Retrieves the statistics of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5033,7 +5093,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取onemeta3.0的知识库统计信息</para>
+        /// <para>Retrieves the statistics of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5051,7 +5111,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库中的上传签名</para>
+        /// <para>Generates a signature to upload a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5093,7 +5153,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库中的上传签名</para>
+        /// <para>Generates a signature to upload a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5135,7 +5195,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库中的上传签名</para>
+        /// <para>Generates a signature to upload a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5153,7 +5213,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库中的上传签名</para>
+        /// <para>Generates a signature to upload a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5331,7 +5391,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Airflow</para>
+        /// <para>Queries the configuration and status of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5377,7 +5437,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Airflow</para>
+        /// <para>Queries the configuration and status of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5423,7 +5483,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Airflow</para>
+        /// <para>Queries the configuration and status of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5441,7 +5501,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 Airflow</para>
+        /// <para>Queries the configuration and status of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5459,8 +5519,17 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetChatContent</para>
+        /// <para>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>The response is an SSE stream. Each event follows the<c>SSEEvent</c> schema and includes metadata, such as the message level.</description></item>
+        /// <item><description>The <c>content</c> field contains either message text or a JSON object, as determined by the <c>content_type</c> field.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetChatContentRequest
@@ -5513,8 +5582,17 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetChatContent</para>
+        /// <para>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>The response is an SSE stream. Each event follows the<c>SSEEvent</c> schema and includes metadata, such as the message level.</description></item>
+        /// <item><description>The <c>content</c> field contains either message text or a JSON object, as determined by the <c>content_type</c> field.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetChatContentRequest
@@ -5567,8 +5645,17 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetChatContent</para>
+        /// <para>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>The response is an SSE stream. Each event follows the<c>SSEEvent</c> schema and includes metadata, such as the message level.</description></item>
+        /// <item><description>The <c>content</c> field contains either message text or a JSON object, as determined by the <c>content_type</c> field.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetChatContentRequest
@@ -5585,8 +5672,17 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GetChatContent</para>
+        /// <para>Retrieves chat content from a specific checkpoint by specifying a session ID and an agent ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>The response is an SSE stream. Each event follows the<c>SSEEvent</c> schema and includes metadata, such as the message level.</description></item>
+        /// <item><description>The <c>content</c> field contains either message text or a JSON object, as determined by the <c>content_type</c> field.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetChatContentRequest
@@ -5603,7 +5699,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主账号下的子账号信息</para>
+        /// <para>Retrieves information about a RAM user that belongs to an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5649,7 +5745,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主账号下的子账号信息</para>
+        /// <para>Retrieves information about a RAM user that belongs to an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5695,7 +5791,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主账号下的子账号信息</para>
+        /// <para>Retrieves information about a RAM user that belongs to an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5713,7 +5809,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主账号下的子账号信息</para>
+        /// <para>Retrieves information about a RAM user that belongs to an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5731,7 +5827,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间信息</para>
+        /// <para>Retrieves workspace details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5777,7 +5873,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间信息</para>
+        /// <para>Retrieves workspace details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5823,7 +5919,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间信息</para>
+        /// <para>Retrieves workspace details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5841,7 +5937,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间信息</para>
+        /// <para>Retrieves workspace details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5859,7 +5955,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取uc的数据库目录</para>
+        /// <para>Retrieves the data catalog of a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5909,7 +6005,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取uc的数据库目录</para>
+        /// <para>Retrieves the data catalog of a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5959,7 +6055,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取uc的数据库目录</para>
+        /// <para>Retrieves the data catalog of a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5977,7 +6073,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取uc的数据库目录</para>
+        /// <para>Retrieves the data catalog of a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5995,7 +6091,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UC的数据库</para>
+        /// <para>Retrieves information about a database in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6049,7 +6145,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UC的数据库</para>
+        /// <para>Retrieves information about a database in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6103,7 +6199,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UC的数据库</para>
+        /// <para>Retrieves information about a database in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6121,7 +6217,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取UC的数据库</para>
+        /// <para>Retrieves information about a database in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6139,7 +6235,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取湖仓自定义函数详细信息</para>
+        /// <para>Retrieves the details of a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6197,7 +6293,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取湖仓自定义函数详细信息</para>
+        /// <para>Retrieves the details of a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6255,7 +6351,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取湖仓自定义函数详细信息</para>
+        /// <para>Retrieves the details of a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6273,7 +6369,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取湖仓自定义函数详细信息</para>
+        /// <para>Retrieves the details of a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6291,7 +6387,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取湖仓表分区详情</para>
+        /// <para>Retrieves the details of a data lakehouse table partition.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6359,7 +6455,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取湖仓表分区详情</para>
+        /// <para>Retrieves the details of a data lakehouse table partition.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6427,7 +6523,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取湖仓表分区详情</para>
+        /// <para>Retrieves the details of a data lakehouse table partition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6445,7 +6541,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取湖仓表分区详情</para>
+        /// <para>Retrieves the details of a data lakehouse table partition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6463,7 +6559,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表信息</para>
+        /// <para>Retrieves information about a table in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6521,7 +6617,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表信息</para>
+        /// <para>Retrieves information about a table in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6579,7 +6675,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表信息</para>
+        /// <para>Retrieves information about a table in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6597,7 +6693,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表信息</para>
+        /// <para>Retrieves information about a table in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6615,7 +6711,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度运行Notebook文件</para>
+        /// <para>Submits a task to schedule and run a Notebook file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6675,7 +6771,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度运行Notebook文件</para>
+        /// <para>Submits a task to schedule and run a Notebook file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6735,7 +6831,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度运行Notebook文件</para>
+        /// <para>Submits a task to schedule and run a Notebook file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6753,7 +6849,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调度运行Notebook文件</para>
+        /// <para>Submits a task to schedule and run a Notebook file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6771,7 +6867,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Notebook任务运行结果</para>
+        /// <para>Retrieves the execution status of a Notebook task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6821,7 +6917,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Notebook任务运行结果</para>
+        /// <para>Retrieves the execution status of a Notebook task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6871,7 +6967,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Notebook任务运行结果</para>
+        /// <para>Retrieves the execution status of a Notebook task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6889,7 +6985,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看Notebook任务运行结果</para>
+        /// <para>Retrieves the execution status of a Notebook task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6907,8 +7003,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取工作空间的代码文件内容</para>
+        /// <para>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<c>mtime</c>).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the content of a specified code file from a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceCodeRequest
@@ -6957,8 +7058,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取工作空间的代码文件内容</para>
+        /// <para>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<c>mtime</c>).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the content of a specified code file from a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceCodeRequest
@@ -7007,8 +7113,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取工作空间的代码文件内容</para>
+        /// <para>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<c>mtime</c>).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the content of a specified code file from a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceCodeRequest
@@ -7025,8 +7136,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取工作空间的代码文件内容</para>
+        /// <para>Retrieves the content of a code file from a workspace. The response header includes the file\&quot;s modification time (<c>mtime</c>).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the content of a specified code file from a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceCodeRequest
@@ -7043,8 +7159,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间发布配置</para>
+        /// <para>Retrieves the deployment configuration of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves the deployment configuration of a workspace. The configuration includes details such as repository and branch information, and directories to exclude.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceCodePublishSettingRequest
@@ -7085,8 +7206,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间发布配置</para>
+        /// <para>Retrieves the deployment configuration of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves the deployment configuration of a workspace. The configuration includes details such as repository and branch information, and directories to exclude.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceCodePublishSettingRequest
@@ -7127,8 +7253,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间发布配置</para>
+        /// <para>Retrieves the deployment configuration of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves the deployment configuration of a workspace. The configuration includes details such as repository and branch information, and directories to exclude.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceCodePublishSettingRequest
@@ -7145,8 +7276,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间发布配置</para>
+        /// <para>Retrieves the deployment configuration of a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves the deployment configuration of a workspace. The configuration includes details such as repository and branch information, and directories to exclude.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceCodePublishSettingRequest
@@ -7163,8 +7299,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间配额</para>
+        /// <para>Returns the quota for a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the resource quotas and instance status for a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceQuotaRequest
@@ -7205,8 +7346,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间配额</para>
+        /// <para>Returns the quota for a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the resource quotas and instance status for a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceQuotaRequest
@@ -7247,8 +7393,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间配额</para>
+        /// <para>Returns the quota for a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the resource quotas and instance status for a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceQuotaRequest
@@ -7265,8 +7416,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间配额</para>
+        /// <para>Returns the quota for a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the resource quotas and instance status for a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkspaceQuotaRequest
@@ -7283,8 +7439,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的Airflow版本列表</para>
+        /// <para>Lists the available Airflow versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the available Airflow versions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAirflowVersionsRequest
@@ -7325,8 +7486,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的Airflow版本列表</para>
+        /// <para>Lists the available Airflow versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the available Airflow versions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAirflowVersionsRequest
@@ -7367,8 +7533,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的Airflow版本列表</para>
+        /// <para>Lists the available Airflow versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the available Airflow versions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAirflowVersionsRequest
@@ -7385,8 +7556,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取可用的Airflow版本列表</para>
+        /// <para>Lists the available Airflow versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the available Airflow versions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAirflowVersionsRequest
@@ -7403,7 +7579,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源Airflow</para>
+        /// <para>Retrieves a list of Airflow instances in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7461,7 +7637,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源Airflow</para>
+        /// <para>Retrieves a list of Airflow instances in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7519,7 +7695,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源Airflow</para>
+        /// <para>Retrieves a list of Airflow instances in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7537,7 +7713,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出资源Airflow</para>
+        /// <para>Retrieves a list of Airflow instances in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7555,7 +7731,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCustomAgent</para>
+        /// <para>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7617,7 +7793,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCustomAgent</para>
+        /// <para>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7679,7 +7855,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCustomAgent</para>
+        /// <para>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7697,7 +7873,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListCustomAgent</para>
+        /// <para>ListCustomAgent returns a list of all custom agents from the personal space and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7715,7 +7891,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataAgentSession</para>
+        /// <para>Retrieve a list of Data Agent session descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7793,7 +7969,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataAgentSession</para>
+        /// <para>Retrieve a list of Data Agent session descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7871,7 +8047,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataAgentSession</para>
+        /// <para>Retrieve a list of Data Agent session descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7889,7 +8065,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataAgentSession</para>
+        /// <para>Retrieve a list of Data Agent session descriptions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7907,7 +8083,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主账号下的空间（分页）</para>
+        /// <para>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7981,7 +8157,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主账号下的空间（分页）</para>
+        /// <para>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8055,7 +8231,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主账号下的空间（分页）</para>
+        /// <para>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8073,7 +8249,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主账号下的空间（分页）</para>
+        /// <para>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8091,7 +8267,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间所有成员</para>
+        /// <para>Lists all members in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8169,7 +8345,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间所有成员</para>
+        /// <para>Lists all members in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8247,7 +8423,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间所有成员</para>
+        /// <para>Lists all members in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8265,7 +8441,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取空间所有成员</para>
+        /// <para>Lists all members in a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8283,7 +8459,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataCenterDatabase</para>
+        /// <para>Lists user-uploaded files in a data center, excluding databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8341,7 +8517,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataCenterDatabase</para>
+        /// <para>Lists user-uploaded files in a data center, excluding databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8399,7 +8575,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataCenterDatabase</para>
+        /// <para>Lists user-uploaded files in a data center, excluding databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8417,7 +8593,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataCenterDatabase</para>
+        /// <para>Lists user-uploaded files in a data center, excluding databases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8435,7 +8611,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataCenterTable</para>
+        /// <para>Retrieves a list of user-uploaded tables from the data center, for file types only.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8509,7 +8685,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataCenterTable</para>
+        /// <para>Retrieves a list of user-uploaded tables from the data center, for file types only.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8583,7 +8759,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataCenterTable</para>
+        /// <para>Retrieves a list of user-uploaded tables from the data center, for file types only.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8601,7 +8777,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListDataCenterTable</para>
+        /// <para>Retrieves a list of user-uploaded tables from the data center, for file types only.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8619,7 +8795,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取uc的数据库目录列表</para>
+        /// <para>Retrieves a list of data lake catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8669,7 +8845,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取uc的数据库目录列表</para>
+        /// <para>Retrieves a list of data lake catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8719,7 +8895,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取uc的数据库目录列表</para>
+        /// <para>Retrieves a list of data lake catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8737,7 +8913,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取uc的数据库目录列表</para>
+        /// <para>Retrieves a list of data lake catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8755,7 +8931,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据库列表</para>
+        /// <para>Retrieves a list of databases in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8817,7 +8993,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据库列表</para>
+        /// <para>Retrieves a list of databases in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8879,7 +9055,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据库列表</para>
+        /// <para>Retrieves a list of databases in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8897,7 +9073,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据库列表</para>
+        /// <para>Retrieves a list of databases in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8915,7 +9091,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖函数列表</para>
+        /// <para>Retrieves a list of data lake functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8981,7 +9157,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖函数列表</para>
+        /// <para>Retrieves a list of data lake functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9047,7 +9223,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖函数列表</para>
+        /// <para>Retrieves a list of data lake functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9065,7 +9241,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖函数列表</para>
+        /// <para>Retrieves a list of data lake functions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9083,7 +9259,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖函数名列表</para>
+        /// <para>Retrieves a list of data lake function names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9149,7 +9325,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖函数名列表</para>
+        /// <para>Retrieves a list of data lake function names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9215,7 +9391,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖函数名列表</para>
+        /// <para>Retrieves a list of data lake function names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9233,7 +9409,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖函数名列表</para>
+        /// <para>Retrieves a list of data lake function names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9251,7 +9427,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表分区列表</para>
+        /// <para>Retrieves the list of partitions of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9329,7 +9505,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表分区列表</para>
+        /// <para>Retrieves the list of partitions of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -9407,7 +9583,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表分区列表</para>
+        /// <para>Retrieves the list of partitions of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9425,7 +9601,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表分区列表</para>
+        /// <para>Retrieves the list of partitions of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9443,7 +9619,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据筛选条件获取数据湖表分区列表</para>
+        /// <para>Retrieves a list of partitions for a data lake table based on filter conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9515,7 +9691,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据筛选条件获取数据湖表分区列表</para>
+        /// <para>Retrieves a list of partitions for a data lake table based on filter conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9587,7 +9763,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据筛选条件获取数据湖表分区列表</para>
+        /// <para>Retrieves a list of partitions for a data lake table based on filter conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9605,7 +9781,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据筛选条件获取数据湖表分区列表</para>
+        /// <para>Retrieves a list of partitions for a data lake table based on filter conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9623,7 +9799,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表分区名列表</para>
+        /// <para>Retrieves a list of partition names for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9689,7 +9865,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表分区名列表</para>
+        /// <para>Retrieves a list of partition names for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9755,7 +9931,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表分区名列表</para>
+        /// <para>Retrieves a list of partition names for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9773,7 +9949,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表分区名列表</para>
+        /// <para>Retrieves a list of partition names for a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9791,7 +9967,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表列表</para>
+        /// <para>Retrieves a list of data lake tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9861,7 +10037,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表列表</para>
+        /// <para>Retrieves a list of data lake tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9931,7 +10107,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表列表</para>
+        /// <para>Retrieves a list of data lake tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9949,7 +10125,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表列表</para>
+        /// <para>Retrieves a list of data lake tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9967,7 +10143,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表名列表</para>
+        /// <para>Retrieves a list of data lake table names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10037,7 +10213,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表名列表</para>
+        /// <para>Retrieves a list of data lake table names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10107,7 +10283,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表名列表</para>
+        /// <para>Retrieves a list of data lake table names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10125,7 +10301,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据湖表名列表</para>
+        /// <para>Retrieves a list of data lake table names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10143,7 +10319,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表信息</para>
+        /// <para>Retrieves the basic information about tables in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10209,7 +10385,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表信息</para>
+        /// <para>Retrieves the basic information about tables in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10275,7 +10451,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表信息</para>
+        /// <para>Retrieves the basic information about tables in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10293,7 +10469,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取表信息</para>
+        /// <para>Retrieves the basic information about tables in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10311,7 +10487,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询onemeta3.0的知识库chunks</para>
+        /// <para>Queries a list of chunks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10377,7 +10553,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询onemeta3.0的知识库chunks</para>
+        /// <para>Queries a list of chunks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10443,7 +10619,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询onemeta3.0的知识库chunks</para>
+        /// <para>Queries a list of chunks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10461,7 +10637,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询onemeta3.0的知识库chunks</para>
+        /// <para>Queries a list of chunks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10479,7 +10655,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档列表</para>
+        /// <para>Lists the documents in a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10545,7 +10721,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档列表</para>
+        /// <para>Lists the documents in a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10611,7 +10787,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档列表</para>
+        /// <para>Lists the documents in a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10629,7 +10805,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文档列表</para>
+        /// <para>Lists the documents in a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10831,7 +11007,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询onemeta3.0的知识库</para>
+        /// <para>Returns a paginated list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10897,7 +11073,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询onemeta3.0的知识库</para>
+        /// <para>Returns a paginated list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10963,7 +11139,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询onemeta3.0的知识库</para>
+        /// <para>Returns a paginated list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10981,7 +11157,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询onemeta3.0的知识库</para>
+        /// <para>Returns a paginated list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10999,8 +11175,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作空间目录下的code文件</para>
+        /// <para>Lists code files and directories at a specified path in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lists the code files and directories at a specified path in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkspaceCodeRequest
@@ -11045,8 +11226,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作空间目录下的code文件</para>
+        /// <para>Lists code files and directories at a specified path in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lists the code files and directories at a specified path in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkspaceCodeRequest
@@ -11091,8 +11277,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作空间目录下的code文件</para>
+        /// <para>Lists code files and directories at a specified path in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lists the code files and directories at a specified path in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkspaceCodeRequest
@@ -11109,8 +11300,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作空间目录下的code文件</para>
+        /// <para>Lists code files and directories at a specified path in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation lists the code files and directories at a specified path in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkspaceCodeRequest
@@ -11127,7 +11323,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyCustomAgent</para>
+        /// <para>Modify a custom agent in a personal space or workspace</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11243,7 +11439,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyCustomAgent</para>
+        /// <para>Modify a custom agent in a personal space or workspace</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11359,7 +11555,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyCustomAgent</para>
+        /// <para>Modify a custom agent in a personal space or workspace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11377,7 +11573,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyCustomAgent</para>
+        /// <para>Modify a custom agent in a personal space or workspace</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11395,7 +11591,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OperateCustomAgent</para>
+        /// <para>Operate custom agents in personal spaces and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11445,7 +11641,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OperateCustomAgent</para>
+        /// <para>Operate custom agents in personal spaces and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11495,7 +11691,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OperateCustomAgent</para>
+        /// <para>Operate custom agents in personal spaces and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11513,7 +11709,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>OperateCustomAgent</para>
+        /// <para>Operate custom agents in personal spaces and workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11531,8 +11727,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新部署Airflow实例</para>
+        /// <para>Redeploy an Airflow instance</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Redeploys an Airflow instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RedeployAirflowRequest
@@ -11577,8 +11778,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新部署Airflow实例</para>
+        /// <para>Redeploy an Airflow instance</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Redeploys an Airflow instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RedeployAirflowRequest
@@ -11623,8 +11829,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新部署Airflow实例</para>
+        /// <para>Redeploy an Airflow instance</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Redeploys an Airflow instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RedeployAirflowRequest
@@ -11641,8 +11852,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新部署Airflow实例</para>
+        /// <para>Redeploy an Airflow instance</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Redeploys an Airflow instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RedeployAirflowRequest
@@ -11659,7 +11875,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从空间中移除用户</para>
+        /// <para>Removes a user from a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11709,7 +11925,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从空间中移除用户</para>
+        /// <para>Removes a user from a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11759,7 +11975,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从空间中移除用户</para>
+        /// <para>Removes a user from a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11777,7 +11993,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从空间中移除用户</para>
+        /// <para>Removes a user from a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11795,7 +12011,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检索知识库</para>
+        /// <para>Query a knowledge base</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11885,7 +12101,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检索知识库</para>
+        /// <para>Query a knowledge base</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11975,7 +12191,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检索知识库</para>
+        /// <para>Query a knowledge base</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11993,7 +12209,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检索知识库</para>
+        /// <para>Query a knowledge base</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12011,8 +12227,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存工作空间代码，如果文件不存在则自动新建</para>
+        /// <para>Saves code in a workspace and creates the file if it does not exist.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves code in a workspace and optionally publishes it to a repository.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveWorkspaceCodeRequest
@@ -12028,34 +12249,34 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
-            {
-                query["Content"] = request.Content;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
-            {
-                query["Force"] = request.Force;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iac))
-            {
-                query["Iac"] = request.Iac;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mtime))
-            {
-                query["Mtime"] = request.Mtime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repo))
-            {
-                query["Repo"] = request.Repo;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                body["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iac))
+            {
+                body["Iac"] = request.Iac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mtime))
+            {
+                body["Mtime"] = request.Mtime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
             {
                 body["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repo))
+            {
+                body["Repo"] = request.Repo;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -12079,8 +12300,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存工作空间代码，如果文件不存在则自动新建</para>
+        /// <para>Saves code in a workspace and creates the file if it does not exist.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves code in a workspace and optionally publishes it to a repository.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveWorkspaceCodeRequest
@@ -12096,34 +12322,34 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
-            {
-                query["Content"] = request.Content;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
-            {
-                query["Force"] = request.Force;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iac))
-            {
-                query["Iac"] = request.Iac;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mtime))
-            {
-                query["Mtime"] = request.Mtime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repo))
-            {
-                query["Repo"] = request.Repo;
-            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
             {
                 query["WorkspaceId"] = request.WorkspaceId;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                body["Force"] = request.Force;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Iac))
+            {
+                body["Iac"] = request.Iac;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mtime))
+            {
+                body["Mtime"] = request.Mtime;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Path))
             {
                 body["Path"] = request.Path;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Repo))
+            {
+                body["Repo"] = request.Repo;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -12147,8 +12373,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存工作空间代码，如果文件不存在则自动新建</para>
+        /// <para>Saves code in a workspace and creates the file if it does not exist.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves code in a workspace and optionally publishes it to a repository.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveWorkspaceCodeRequest
@@ -12165,8 +12396,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>保存工作空间代码，如果文件不存在则自动新建</para>
+        /// <para>Saves code in a workspace and creates the file if it does not exist.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Saves code in a workspace and optionally publishes it to a repository.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SaveWorkspaceCodeRequest
@@ -12183,8 +12419,21 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SendChatMessage</para>
+        /// <para>Sends a user message to a specified session or ends the session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>The <c>agent_id</c> and <c>session_id</c> fields are required.</description></item>
+        /// <item><description>The <c>message_type</c> field defaults to <c>primary</c>. Set it to <c>additional</c> to append information or to <c>cancel</c> to end the session.</description></item>
+        /// <item><description>The <c>reply_to</c> field specifies which agent message the current message is a response to. It defaults to <c>0</c>.</description></item>
+        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
+        /// <item><description>Use the <c>quoted_message</c> field to reference a previous user message.</description></item>
+        /// <item><description>The optional fields <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> provide more detailed context.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SendChatMessageRequest
@@ -12283,8 +12532,21 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SendChatMessage</para>
+        /// <para>Sends a user message to a specified session or ends the session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>The <c>agent_id</c> and <c>session_id</c> fields are required.</description></item>
+        /// <item><description>The <c>message_type</c> field defaults to <c>primary</c>. Set it to <c>additional</c> to append information or to <c>cancel</c> to end the session.</description></item>
+        /// <item><description>The <c>reply_to</c> field specifies which agent message the current message is a response to. It defaults to <c>0</c>.</description></item>
+        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
+        /// <item><description>Use the <c>quoted_message</c> field to reference a previous user message.</description></item>
+        /// <item><description>The optional fields <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> provide more detailed context.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SendChatMessageRequest
@@ -12383,8 +12645,21 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SendChatMessage</para>
+        /// <para>Sends a user message to a specified session or ends the session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>The <c>agent_id</c> and <c>session_id</c> fields are required.</description></item>
+        /// <item><description>The <c>message_type</c> field defaults to <c>primary</c>. Set it to <c>additional</c> to append information or to <c>cancel</c> to end the session.</description></item>
+        /// <item><description>The <c>reply_to</c> field specifies which agent message the current message is a response to. It defaults to <c>0</c>.</description></item>
+        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
+        /// <item><description>Use the <c>quoted_message</c> field to reference a previous user message.</description></item>
+        /// <item><description>The optional fields <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> provide more detailed context.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendChatMessageRequest
@@ -12401,8 +12676,21 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SendChatMessage</para>
+        /// <para>Sends a user message to a specified session or ends the session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request</h2>
+        /// <list type="bullet">
+        /// <item><description>The <c>agent_id</c> and <c>session_id</c> fields are required.</description></item>
+        /// <item><description>The <c>message_type</c> field defaults to <c>primary</c>. Set it to <c>additional</c> to append information or to <c>cancel</c> to end the session.</description></item>
+        /// <item><description>The <c>reply_to</c> field specifies which agent message the current message is a response to. It defaults to <c>0</c>.</description></item>
+        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
+        /// <item><description>Use the <c>quoted_message</c> field to reference a previous user message.</description></item>
+        /// <item><description>The optional fields <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> provide more detailed context.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendChatMessageRequest
@@ -12419,8 +12707,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置工作空间代码发布配置</para>
+        /// <para>Sets the code deployment configuration for a workspace. This is an asynchronous operation that returns a key. Use this key to query the operation\&quot;s status by calling the WorkspaceActionStatus operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the default code deployment configuration for a workspace. This configuration includes the Git repository branch and the directories to exclude from deployment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetWorkspaceCodePublishSettingRequest
@@ -12467,8 +12760,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置工作空间代码发布配置</para>
+        /// <para>Sets the code deployment configuration for a workspace. This is an asynchronous operation that returns a key. Use this key to query the operation\&quot;s status by calling the WorkspaceActionStatus operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the default code deployment configuration for a workspace. This configuration includes the Git repository branch and the directories to exclude from deployment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetWorkspaceCodePublishSettingRequest
@@ -12515,8 +12813,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置工作空间代码发布配置</para>
+        /// <para>Sets the code deployment configuration for a workspace. This is an asynchronous operation that returns a key. Use this key to query the operation\&quot;s status by calling the WorkspaceActionStatus operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the default code deployment configuration for a workspace. This configuration includes the Git repository branch and the directories to exclude from deployment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetWorkspaceCodePublishSettingRequest
@@ -12533,8 +12836,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置工作空间代码发布配置</para>
+        /// <para>Sets the code deployment configuration for a workspace. This is an asynchronous operation that returns a key. Use this key to query the operation\&quot;s status by calling the WorkspaceActionStatus operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the default code deployment configuration for a workspace. This configuration includes the Git repository branch and the directories to exclude from deployment.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetWorkspaceCodePublishSettingRequest
@@ -12551,8 +12859,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置工作空间配额</para>
+        /// <para>Sets the quota for a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the quota for a specific workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetWorkspaceQuotaRequest
@@ -12609,8 +12922,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置工作空间配额</para>
+        /// <para>Sets the quota for a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the quota for a specific workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetWorkspaceQuotaRequest
@@ -12667,8 +12985,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置工作空间配额</para>
+        /// <para>Sets the quota for a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the quota for a specific workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetWorkspaceQuotaRequest
@@ -12685,8 +13008,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置工作空间配额</para>
+        /// <para>Sets the quota for a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Sets the quota for a specific workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SetWorkspaceQuotaRequest
@@ -12703,7 +13031,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateAirflow</para>
+        /// <para>Updates the properties of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12803,7 +13131,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateAirflow</para>
+        /// <para>Updates the properties of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12903,7 +13231,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateAirflow</para>
+        /// <para>Updates the properties of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12921,7 +13249,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新UpdateAirflow</para>
+        /// <para>Updates the properties of an Airflow instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12939,7 +13267,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新空间的信息</para>
+        /// <para>Updates workspace information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12997,7 +13325,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新空间的信息</para>
+        /// <para>Updates workspace information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13055,7 +13383,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新空间的信息</para>
+        /// <para>Updates workspace information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13073,7 +13401,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新空间的信息</para>
+        /// <para>Updates workspace information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13091,7 +13419,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调整空间成员的角色</para>
+        /// <para>Changes the role of a workspace member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13145,7 +13473,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调整空间成员的角色</para>
+        /// <para>Changes the role of a workspace member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13199,7 +13527,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调整空间成员的角色</para>
+        /// <para>Changes the role of a workspace member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13217,7 +13545,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>调整空间成员的角色</para>
+        /// <para>Changes the role of a workspace member.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13235,7 +13563,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓数据库</para>
+        /// <para>Updates the information of a data lakehouse database.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13307,7 +13635,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓数据库</para>
+        /// <para>Updates the information of a data lakehouse database.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13379,7 +13707,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓数据库</para>
+        /// <para>Updates the information of a data lakehouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13397,7 +13725,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓数据库</para>
+        /// <para>Updates the information of a data lakehouse database.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13415,7 +13743,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓自定义函数</para>
+        /// <para>Update a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13485,7 +13813,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓自定义函数</para>
+        /// <para>Update a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13555,7 +13883,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓自定义函数</para>
+        /// <para>Update a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13573,7 +13901,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓自定义函数</para>
+        /// <para>Update a user-defined function in a data lake.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13591,7 +13919,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓表分区</para>
+        /// <para>Updates the partition information of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13661,7 +13989,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓表分区</para>
+        /// <para>Updates the partition information of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13731,7 +14059,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓表分区</para>
+        /// <para>Updates the partition information of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13749,7 +14077,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓表分区</para>
+        /// <para>Updates the partition information of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13767,7 +14095,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓表信息</para>
+        /// <para>Updates the information of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13837,7 +14165,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓表信息</para>
+        /// <para>Updates the information of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13907,7 +14235,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓表信息</para>
+        /// <para>Updates the information of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13925,7 +14253,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新湖仓表信息</para>
+        /// <para>Updates the information of a data lake table.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13943,7 +14271,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文档</para>
+        /// <para>Updates the description of a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13993,7 +14321,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文档</para>
+        /// <para>Updates the description of a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14043,7 +14371,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文档</para>
+        /// <para>Updates the description of a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14061,7 +14389,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新文档</para>
+        /// <para>Updates the description of a document.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14079,7 +14407,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新onemeta3.0的知识库</para>
+        /// <para>Updates a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14129,7 +14457,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新onemeta3.0的知识库</para>
+        /// <para>Updates a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14179,7 +14507,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新onemeta3.0的知识库</para>
+        /// <para>Updates a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14197,7 +14525,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新onemeta3.0的知识库</para>
+        /// <para>Updates a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14215,7 +14543,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传文档</para>
+        /// <para>Uploads a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14307,7 +14635,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传文档</para>
+        /// <para>Uploads a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14399,7 +14727,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传文档</para>
+        /// <para>Uploads a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14417,7 +14745,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传文档</para>
+        /// <para>Uploads a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14435,7 +14763,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新或插入onemeta3.0的知识库chunks</para>
+        /// <para>Upserts document chunks into a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14485,7 +14813,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新或插入onemeta3.0的知识库chunks</para>
+        /// <para>Upserts document chunks into a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14535,7 +14863,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新或插入onemeta3.0的知识库chunks</para>
+        /// <para>Upserts document chunks into a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14553,7 +14881,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新或插入onemeta3.0的知识库chunks</para>
+        /// <para>Upserts document chunks into a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14571,8 +14899,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间异步操作日志查询接口</para>
+        /// <para>Queries the log of an asynchronous task in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pass the <c>key</c> to view the execution log of the corresponding asynchronous task. Use this API for troubleshooting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceActionLogRequest
@@ -14617,8 +14950,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间异步操作日志查询接口</para>
+        /// <para>Queries the log of an asynchronous task in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pass the <c>key</c> to view the execution log of the corresponding asynchronous task. Use this API for troubleshooting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceActionLogRequest
@@ -14663,8 +15001,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间异步操作日志查询接口</para>
+        /// <para>Queries the log of an asynchronous task in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pass the <c>key</c> to view the execution log of the corresponding asynchronous task. Use this API for troubleshooting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceActionLogRequest
@@ -14681,8 +15024,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间异步操作日志查询接口</para>
+        /// <para>Queries the log of an asynchronous task in a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Pass the <c>key</c> to view the execution log of the corresponding asynchronous task. Use this API for troubleshooting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceActionLogRequest
@@ -14699,8 +15047,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间异步操作状态查询接口</para>
+        /// <para>Queries the status of an asynchronous task in a workspace. Operations such as a deployment return a key. Call this operation with the key to retrieve the task\&quot;s status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Provide the key returned by an asynchronous action, such as a deployment, to retrieve the task\&quot;s status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceActionStatusRequest
@@ -14745,8 +15098,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间异步操作状态查询接口</para>
+        /// <para>Queries the status of an asynchronous task in a workspace. Operations such as a deployment return a key. Call this operation with the key to retrieve the task\&quot;s status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Provide the key returned by an asynchronous action, such as a deployment, to retrieve the task\&quot;s status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceActionStatusRequest
@@ -14791,8 +15149,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间异步操作状态查询接口</para>
+        /// <para>Queries the status of an asynchronous task in a workspace. Operations such as a deployment return a key. Call this operation with the key to retrieve the task\&quot;s status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Provide the key returned by an asynchronous action, such as a deployment, to retrieve the task\&quot;s status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceActionStatusRequest
@@ -14809,8 +15172,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间异步操作状态查询接口</para>
+        /// <para>Queries the status of an asynchronous task in a workspace. Operations such as a deployment return a key. Call this operation with the key to retrieve the task\&quot;s status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Provide the key returned by an asynchronous action, such as a deployment, to retrieve the task\&quot;s status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceActionStatusRequest
@@ -14827,8 +15195,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</para>
+        /// <para>This asynchronous API returns a key. Use this key to query the WorkspaceActionStatus API for the code deployment status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deploys the code in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceCodePublishRequest
@@ -14875,8 +15248,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</para>
+        /// <para>This asynchronous API returns a key. Use this key to query the WorkspaceActionStatus API for the code deployment status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deploys the code in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceCodePublishRequest
@@ -14923,8 +15301,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</para>
+        /// <para>This asynchronous API returns a key. Use this key to query the WorkspaceActionStatus API for the code deployment status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deploys the code in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceCodePublishRequest
@@ -14941,8 +15324,13 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作空间代码发布。这是个异步接口，请求返回一个key，请根据key查询 WorkspaceActionStatus接口获取状态</para>
+        /// <para>This asynchronous API returns a key. Use this key to query the WorkspaceActionStatus API for the code deployment status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deploys the code in a workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// WorkspaceCodePublishRequest

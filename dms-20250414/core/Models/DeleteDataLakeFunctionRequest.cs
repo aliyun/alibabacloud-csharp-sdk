@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteDataLakeFunctionRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the data catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The name of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>The name of the function.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string FunctionName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the tenant.</para>
+        /// <remarks>
+        /// <para>Hover over your profile picture in the upper-right corner of the DMS console to obtain the tenant ID. For details, see <a href="https://help.aliyun.com/document_detail/181330.html">View tenant information</a>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>3****</para>
         /// </summary>
@@ -48,6 +56,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? Tid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****</para>
         /// </summary>

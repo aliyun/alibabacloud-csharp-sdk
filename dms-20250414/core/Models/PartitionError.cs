@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class PartitionError : TeaModel {
         /// <summary>
+        /// <para>The details of the error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>auth failed</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string ErrorDetail { get; set; }
 
+        /// <summary>
+        /// <para>The partition values.</para>
+        /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]
         public List<string> Values { get; set; }

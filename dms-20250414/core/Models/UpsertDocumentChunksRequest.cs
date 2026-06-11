@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpsertDocumentChunksRequest : TeaModel {
         /// <summary>
+        /// <para>A list of document chunks to upsert.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Chunks { get; set; }
 
         /// <summary>
+        /// <para>The name of the document.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,6 +41,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DocumentName { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

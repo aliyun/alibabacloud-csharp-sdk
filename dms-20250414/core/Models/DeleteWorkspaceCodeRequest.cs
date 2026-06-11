@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteWorkspaceCodeRequest : TeaModel {
         /// <summary>
+        /// <para>The full path of the code file or directory. The path must be prefixed with <c>/Workspace/code/</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>The repository information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>database/adb</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Repo { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the item to delete is a symbolic link.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Symlink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

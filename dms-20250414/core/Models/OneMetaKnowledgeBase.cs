@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class OneMetaKnowledgeBase : TeaModel {
         /// <summary>
+        /// <para>The creator of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20464374909***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Creator { get; set; }
 
         /// <summary>
+        /// <para>The description of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>order knowledgebase</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The domain of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vehicle</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>Additional information about the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;keywords&quot;:&quot;sales,vehicle brand&quot;}</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ExtraInfo { get; set; }
 
         /// <summary>
+        /// <para>The time when the knowledge base was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-05-14 11:30:00</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
+        /// <para>The time when the knowledge base was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-05-14 11:30:39</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string GmtModified { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>kb-***</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string KbUuid { get; set; }
 
         /// <summary>
+        /// <para>The name of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>order_kb</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The state of the knowledge base. Valid values include 0 (No data) and 1 (Available).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? State { get; set; }
 
         /// <summary>
+        /// <para>The tag of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4phsj52f81ymlm***</para>
         /// </summary>

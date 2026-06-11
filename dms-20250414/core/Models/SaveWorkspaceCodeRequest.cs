@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class SaveWorkspaceCodeRequest : TeaModel {
         /// <summary>
+        /// <para>The content of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to overwrite the file if it already exists. The default value is <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Force { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the file is an IaC template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -36,6 +41,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Iac { get; set; }
 
         /// <summary>
+        /// <para>The modification time of the file.</para>
+        /// <para>The time must be in the ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-01-01T10:11:12Z</para>
         /// </summary>
@@ -44,6 +52,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Mtime { get; set; }
 
         /// <summary>
+        /// <para>The publishing configuration, specified as a JSON string. The <c>repos</c> array specifies the target repository and branch. The <c>exclude</c> array specifies the directories to ignore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +63,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>Information about the repository.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>computing/ecs</para>
         /// </summary>
@@ -62,6 +73,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Repo { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

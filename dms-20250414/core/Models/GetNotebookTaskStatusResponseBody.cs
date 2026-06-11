@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetNotebookTaskStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of Success indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,22 +19,49 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The scheduling result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetNotebookTaskStatusResponseBodyData Data { get; set; }
         public class GetNotebookTaskStatusResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The URL to preview the scheduling result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://dms.aliyun.com/web-ide">https://dms.aliyun.com/web-ide</a>?***</para>
+            /// </summary>
             [NameInMap("NotebookSchedulePreviewUrl")]
             [Validation(Required=false)]
             public string NotebookSchedulePreviewUrl { get; set; }
 
+            /// <summary>
+            /// <para>The progress of the scheduling task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>5/6</para>
+            /// </summary>
             [NameInMap("Progress")]
             [Validation(Required=false)]
             public string Progress { get; set; }
 
+            /// <summary>
+            /// <para>The output of the scheduling task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Result")]
             [Validation(Required=false)]
             public string Result { get; set; }
 
+            /// <summary>
+            /// <para>The status of the scheduling result.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Success</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -40,6 +69,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -48,6 +79,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -56,6 +89,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Instance not found.</para>
         /// </summary>
@@ -64,6 +99,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</para>
         /// </summary>
@@ -72,6 +109,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

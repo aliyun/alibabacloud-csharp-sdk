@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateAirflowLoginTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code. A value of 200 indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of the site monitoring task.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateAirflowLoginTokenResponseBodyData Data { get; set; }
         public class CreateAirflowLoginTokenResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The endpoint that is used to access the Airflow instance.</para>
+            /// <para>The endpoint of the Airflow instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://data-dms.aliyuncs.com/airflow/x/xxxx/af-ehrmszbxxxxxxx">https://data-dms.aliyuncs.com/airflow/x/xxxx/af-ehrmszbxxxxxxx</a></para>
+            /// <para><a href="https://data-dms.aliyuncs.com/airflow/x/xxxx/af-ehrmszb">https://data-dms.aliyuncs.com/airflow/x/xxxx/af-ehrmszb</a>****</para>
             /// </summary>
             [NameInMap("Host")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The generated token.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>f432d77de03b6b95fc24f91414e29c</para>
+            /// <para>f432d77de03b6b95fc24f9****</para>
             /// </summary>
             [NameInMap("Token")]
             [Validation(Required=false)]
@@ -49,12 +49,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code returned if the call failed. Variable description:</para>
+        /// <para>The error code.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, this parameter is not returned.</description></item>
-        /// <item><description>This parameter is returned only if the request failed.</description></item>
+        /// <item><description><para>If the request is successful, this parameter is not returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request fails, this parameter is returned.</para>
+        /// </description></item>
         /// </list>
-        /// <para>For more information, see the &quot;Error codes&quot; section in this topic.</para>
+        /// <para>For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The description of the error code.</para>
+        /// <para>The error code description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID. You can use the ID to locate logs and troubleshoot issues.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4284D079-30F4-5B23-ADC4-28F291622C9A</para>
@@ -96,8 +98,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True</description></item>
-        /// <item><description>False</description></item>
+        /// <item><description><para>True: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>False: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

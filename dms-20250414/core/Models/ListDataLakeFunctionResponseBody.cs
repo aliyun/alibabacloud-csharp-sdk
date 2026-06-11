@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataLakeFunctionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        /// <summary>
+        /// <para>A list of functions.</para>
+        /// </summary>
         [NameInMap("FunctionList")]
         [Validation(Required=false)]
         public List<DLFunction> FunctionList { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to retrieve the next page of results. If this parameter is not returned, it indicates that all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f056501ada12****</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID, used for log tracing and troubleshooting.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7FAD400F-7A5C-4193-8F9A-39D86C4F****</para>
         /// </summary>
@@ -54,6 +67,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentSubAccountInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The current DMS unit.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DmsUnit { get; set; }
 
         /// <summary>
+        /// <para>The UID of the RAM user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20282*****7591</para>
         /// </summary>

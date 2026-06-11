@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateAirflowLoginTokenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Airflow instance. You can view the instance ID on the <a href="https://help.aliyun.com/document_detail/2881043.html">Airflow Instances</a> page.</para>
+        /// <para>The ID of the Airflow instance. For more information, see <a href="">Airflow instances</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

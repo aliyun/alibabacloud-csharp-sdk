@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLFunctionInput : TeaModel {
         /// <summary>
+        /// <para>The Java class that contains the function code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>com.example.hive.MyCustomUDF</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ClassName { get; set; }
 
         /// <summary>
+        /// <para>The time when the function was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1731586286</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who created the function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? CreatorId { get; set; }
 
         /// <summary>
+        /// <para>The function name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my_funciton</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string FunctionName { get; set; }
 
         /// <summary>
+        /// <para>The function type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>JAVA</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string FunctionType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user who modified the function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>26****</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? ModifierId { get; set; }
 
         /// <summary>
+        /// <para>The owner of the function.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zhangsan</para>
         /// </summary>
@@ -66,6 +80,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OwnerName { get; set; }
 
         /// <summary>
+        /// <para>The type of the owner. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ROLE</para>
+        /// </description></item>
+        /// <item><description><para>GROUP</para>
+        /// </description></item>
+        /// <item><description><para>USER</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>USER</para>
         /// </summary>
@@ -73,6 +97,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string OwnerType { get; set; }
 
+        /// <summary>
+        /// <para>The resource URIs of the function. This parameter cannot be modified after the function is created.</para>
+        /// </summary>
         [NameInMap("ResourceUris")]
         [Validation(Required=false)]
         public List<DLResourceUri> ResourceUris { get; set; }

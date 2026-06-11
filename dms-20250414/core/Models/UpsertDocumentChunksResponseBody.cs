@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpsertDocumentChunksResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the update was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The update succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The update failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +26,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>The error code returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>KnowledgeBaseNotFound</para>
         /// </summary>
@@ -26,6 +36,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Resource not found kb-***</para>
         /// </summary>
@@ -34,6 +46,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The unique request ID. Use this ID to troubleshoot errors.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>67E910F2-4B62-5B0C-ACA3-7547695C****</para>
         /// </summary>
@@ -42,6 +56,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLCatalog : TeaModel {
         /// <summary>
+        /// <para>The description of the data catalog.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>init default catalog</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The storage path of the data catalog.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss://xxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Location { get; set; }
 
         /// <summary>
+        /// <para>The name of the data catalog.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hive</para>
         /// </summary>

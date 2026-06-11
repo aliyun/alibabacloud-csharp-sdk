@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DescribeFileUploadSignatureRequest : TeaModel {
+        /// <summary>
+        /// <para>Used by the frontend only</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>仅前端使用</para>
+        /// </summary>
         [NameInMap("CallFrom")]
         [Validation(Required=false)]
         public string CallFrom { get; set; }
 
         /// <summary>
+        /// <para>Current DMS unit</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

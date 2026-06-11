@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataLakeCatalogRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the data catalog.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,6 +24,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogName { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID. You can call the GetUserActiveTenant or ListUserTenants operation to obtain this value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3****</para>
         /// </summary>
@@ -31,6 +34,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public long? Tid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12****</para>
         /// </summary>

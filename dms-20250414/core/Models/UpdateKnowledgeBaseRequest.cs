@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateKnowledgeBaseRequest : TeaModel {
         /// <summary>
+        /// <para>The new knowledge base description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>updated kb desc</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The knowledge base ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string KbUuid { get; set; }
 
         /// <summary>
+        /// <para>The new knowledge base name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>updated kb name</para>
         /// </summary>

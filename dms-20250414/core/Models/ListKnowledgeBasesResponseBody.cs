@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListKnowledgeBasesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of knowledge base objects.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<OneMetaKnowledgeBase> Data { get; set; }
 
         /// <summary>
+        /// <para>The error code returned if the request fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>UnknownError</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tag is not valid.</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -38,6 +47,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token used to retrieve the next page of results.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If this parameter is empty, all results have been returned.</para>
+        /// </description></item>
+        /// <item><description><para>If a value is returned, use it in the next request to retrieve the next page of results.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>NesLoKLEdIZrKhDT7I2gS****</para>
         /// </summary>
@@ -46,6 +63,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</para>
         /// </summary>
@@ -54,6 +73,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. <c>true</c> indicates success, and <c>false</c> indicates failure.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -62,6 +83,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of knowledge bases matching the query. This feature is not currently supported and the returned value is always <c>0</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

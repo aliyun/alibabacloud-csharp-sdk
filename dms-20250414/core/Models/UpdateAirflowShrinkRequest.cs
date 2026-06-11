@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class UpdateAirflowShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the Airflow instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowId { get; set; }
 
         /// <summary>
+        /// <para>The name of the Airflow instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testairflow</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AirflowName { get; set; }
 
         /// <summary>
+        /// <para>The specifications of the Airflow instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SMALL</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AppSpec { get; set; }
 
         /// <summary>
+        /// <para>A client token to ensure request idempotence.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>token-****</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The directory path where Airflow scans for DAGs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default/dags</para>
         /// </summary>
@@ -56,6 +65,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DataMountInfoListShrink { get; set; }
 
         /// <summary>
+        /// <para>The description of the Airflow instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test airflow</para>
         /// </summary>
@@ -76,6 +87,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? GracefulShutdownTimeout { get; set; }
 
         /// <summary>
+        /// <para>The directory path where Airflow scans for plugins.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default/plugins</para>
         /// </summary>
@@ -84,6 +97,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PluginsDir { get; set; }
 
         /// <summary>
+        /// <para>The path to the requirements file for package dependencies.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default/requirements.txt</para>
         /// </summary>
@@ -92,6 +107,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequirementFile { get; set; }
 
         /// <summary>
+        /// <para>The path to the startup script for the Airflow instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default/startup.sh</para>
         /// </summary>
@@ -100,6 +117,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string StartupFile { get; set; }
 
         /// <summary>
+        /// <para>The number of worker nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -108,6 +127,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? WorkerServerlessReplicas { get; set; }
 
         /// <summary>
+        /// <para>The Data Management Service (DMS) workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

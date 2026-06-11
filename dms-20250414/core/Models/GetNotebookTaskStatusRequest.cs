@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetNotebookTaskStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The Notebook session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8141456676986429894916354</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The scheduling task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c2b4cb5a-7420-49a8-aa7c-528becd6e1bf</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8630242382****</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLPartitionInput : TeaModel {
         /// <summary>
+        /// <para>The time when the partition was created. This is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1735109884</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The time when the partition was last accessed. This is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1735109884</para>
         /// </summary>
@@ -25,14 +29,23 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public int? LastAccessTime { get; set; }
 
+        /// <summary>
+        /// <para>The key-value pair parameters for the partition.</para>
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, string> Parameters { get; set; }
 
+        /// <summary>
+        /// <para>The data storage information of the data lakehouse table.</para>
+        /// </summary>
         [NameInMap("StorageDescriptor")]
         [Validation(Required=false)]
         public DLStorageDescriptor StorageDescriptor { get; set; }
 
+        /// <summary>
+        /// <para>The partition values.</para>
+        /// </summary>
         [NameInMap("Values")]
         [Validation(Required=false)]
         public List<string> Values { get; set; }

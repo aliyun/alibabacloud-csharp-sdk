@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DeleteCustomAgentResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Return struct</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteCustomAgentResponseBodyData Data { get; set; }
         public class DeleteCustomAgentResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Custom Agent ID</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ca-4y3ca4khkcu**********ysf</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CustomAgentId { get; set; }
 
             /// <summary>
+            /// <para>Deletion operation message</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Custom agent successfully deleted</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Message { get; set; }
 
             /// <summary>
+            /// <para>Is deletion successful?</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
+        /// <para>Error code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
+        /// <para>Returns an error message if the call fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
         /// </summary>
@@ -66,6 +79,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Return value description.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Deletion successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Deletion failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

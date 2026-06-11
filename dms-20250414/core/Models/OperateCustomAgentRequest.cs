@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class OperateCustomAgentRequest : TeaModel {
         /// <summary>
+        /// <para>Custom Agent ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CustomAgentId { get; set; }
 
         /// <summary>
+        /// <para>Operation type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OperateType { get; set; }
 
         /// <summary>
+        /// <para>Workspace ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>56kv1pvl9uvt9**********bb</para>
         /// </summary>

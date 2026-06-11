@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DescribeKnowledgeBaseUploadSignatureRequest : TeaModel {
         /// <summary>
+        /// <para>The knowledge base ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

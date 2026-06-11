@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class DLOrder : TeaModel {
         /// <summary>
+        /// <para>The name of the column.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>col1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Col { get; set; }
 
         /// <summary>
+        /// <para>The position of the column in the sort order.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
