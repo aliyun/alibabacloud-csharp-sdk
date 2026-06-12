@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
     public class GetSchemaRequest : TeaModel {
         /// <summary>
+        /// <para>The project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The topic name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string TopicName { get; set; }
 
         /// <summary>
+        /// <para>The schema version number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

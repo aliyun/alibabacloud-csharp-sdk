@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
     public class ListProjectsRequest : TeaModel {
         /// <summary>
+        /// <para>The filter keyword for a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of records to return in a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token. If NextToken is empty, paged query starts from the beginning. Otherwise, paged query starts from where the previous query ended based on the token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9892074a2a89600ae4b0d5a34fb99a3f</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return only primary key information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public bool? Pure { get; set; }
 
         /// <summary>
+        /// <para>The number of records to skip in a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

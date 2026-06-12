@@ -39,8 +39,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Project资源</para>
+        /// <para>Creates a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateProjectRequest
@@ -85,8 +90,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Project资源</para>
+        /// <para>Creates a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateProjectRequest
@@ -131,8 +141,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Project资源</para>
+        /// <para>Creates a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateProjectRequest
@@ -149,8 +164,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Project资源</para>
+        /// <para>Creates a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateProjectRequest
@@ -167,8 +187,185 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Topic资源</para>
+        /// <para>创建Subscription资源</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建订阅信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionResponse
+        /// </returns>
+        public CreateSubscriptionResponse CreateSubscriptionWithOptions(CreateSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Application))
+            {
+                query["Application"] = request.Application;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionId))
+            {
+                query["SubscriptionId"] = request.SubscriptionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSubscription",
+                Version = "2024-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Subscription资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建订阅信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionResponse
+        /// </returns>
+        public async Task<CreateSubscriptionResponse> CreateSubscriptionWithOptionsAsync(CreateSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Application))
+            {
+                query["Application"] = request.Application;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Comment))
+            {
+                query["Comment"] = request.Comment;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionId))
+            {
+                query["SubscriptionId"] = request.SubscriptionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSubscription",
+                Version = "2024-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Subscription资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建订阅信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionResponse
+        /// </returns>
+        public CreateSubscriptionResponse CreateSubscription(CreateSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSubscriptionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建Subscription资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>创建订阅信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSubscriptionResponse
+        /// </returns>
+        public async Task<CreateSubscriptionResponse> CreateSubscriptionAsync(CreateSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSubscriptionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>A topic is the smallest unit for DataHub subscription and publishing. You can use a topic to represent a type or category of streaming data.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a topic resource.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTopicRequest
@@ -241,8 +438,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Topic资源</para>
+        /// <para>A topic is the smallest unit for DataHub subscription and publishing. You can use a topic to represent a type or category of streaming data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a topic resource.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTopicRequest
@@ -315,8 +517,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Topic资源</para>
+        /// <para>A topic is the smallest unit for DataHub subscription and publishing. You can use a topic to represent a type or category of streaming data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a topic resource.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTopicRequest
@@ -333,8 +540,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Topic资源</para>
+        /// <para>A topic is the smallest unit for DataHub subscription and publishing. You can use a topic to represent a type or category of streaming data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a topic resource.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTopicRequest
@@ -351,8 +563,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Project资源</para>
+        /// <para>Deletes a project. Before deleting a project, delete all resources under the project, including topics, synchronization tasks, and subscription tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteProjectRequest
@@ -393,8 +610,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Project资源</para>
+        /// <para>Deletes a project. Before deleting a project, delete all resources under the project, including topics, synchronization tasks, and subscription tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteProjectRequest
@@ -435,8 +657,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Project资源</para>
+        /// <para>Deletes a project. Before deleting a project, delete all resources under the project, including topics, synchronization tasks, and subscription tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteProjectRequest
@@ -453,8 +680,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Project资源</para>
+        /// <para>Deletes a project. Before deleting a project, delete all resources under the project, including topics, synchronization tasks, and subscription tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteProjectRequest
@@ -471,8 +703,169 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Topic资源</para>
+        /// <para>删除Subscription资源</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除订阅任务</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionResponse
+        /// </returns>
+        public DeleteSubscriptionResponse DeleteSubscriptionWithOptions(DeleteSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionId))
+            {
+                query["SubscriptionId"] = request.SubscriptionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSubscription",
+                Version = "2024-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSubscriptionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Subscription资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除订阅任务</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionResponse
+        /// </returns>
+        public async Task<DeleteSubscriptionResponse> DeleteSubscriptionWithOptionsAsync(DeleteSubscriptionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectName))
+            {
+                query["ProjectName"] = request.ProjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubscriptionId))
+            {
+                query["SubscriptionId"] = request.SubscriptionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopicName))
+            {
+                query["TopicName"] = request.TopicName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSubscription",
+                Version = "2024-06-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSubscriptionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Subscription资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除订阅任务</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionResponse
+        /// </returns>
+        public DeleteSubscriptionResponse DeleteSubscription(DeleteSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSubscriptionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除Subscription资源</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除订阅任务</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSubscriptionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSubscriptionResponse
+        /// </returns>
+        public async Task<DeleteSubscriptionResponse> DeleteSubscriptionAsync(DeleteSubscriptionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSubscriptionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a topic resource. Before deleting a topic resource, delete all subscriptions and sync tasks under the topic.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a topic resource.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTopicRequest
@@ -517,8 +910,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Topic资源</para>
+        /// <para>Deletes a topic resource. Before deleting a topic resource, delete all subscriptions and sync tasks under the topic.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a topic resource.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTopicRequest
@@ -563,8 +961,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Topic资源</para>
+        /// <para>Deletes a topic resource. Before deleting a topic resource, delete all subscriptions and sync tasks under the topic.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a topic resource.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTopicRequest
@@ -581,8 +984,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Topic资源</para>
+        /// <para>Deletes a topic resource. Before deleting a topic resource, delete all subscriptions and sync tasks under the topic.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a topic resource.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTopicRequest
@@ -599,8 +1007,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Connector信息</para>
+        /// <para>Queries the information about a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about a synchronization task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConnectorRequest
@@ -649,8 +1062,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Connector信息</para>
+        /// <para>Queries the information about a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about a synchronization task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConnectorRequest
@@ -699,8 +1117,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Connector信息</para>
+        /// <para>Queries the information about a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about a synchronization task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConnectorRequest
@@ -717,8 +1140,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Connector信息</para>
+        /// <para>Queries the information about a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about a synchronization task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetConnectorRequest
@@ -735,8 +1163,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Group信息</para>
+        /// <para>Queries the information about a consumer group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about a consumer group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetGroupRequest
@@ -781,8 +1214,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Group信息</para>
+        /// <para>Queries the information about a consumer group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about a consumer group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetGroupRequest
@@ -827,8 +1265,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Group信息</para>
+        /// <para>Queries the information about a consumer group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about a consumer group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetGroupRequest
@@ -845,8 +1288,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Group信息</para>
+        /// <para>Queries the information about a consumer group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about a consumer group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetGroupRequest
@@ -863,8 +1311,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Project资源详细信息</para>
+        /// <para>Queries project information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries project information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetProjectRequest
@@ -905,8 +1358,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Project资源详细信息</para>
+        /// <para>Queries project information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries project information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetProjectRequest
@@ -947,8 +1405,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Project资源详细信息</para>
+        /// <para>Queries project information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries project information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetProjectRequest
@@ -965,8 +1428,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Project资源详细信息</para>
+        /// <para>Queries project information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries project information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetProjectRequest
@@ -983,8 +1451,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取Topic数据</para>
+        /// <para>Reads data from a specified topic. This operation is primarily used for debugging. For high-volume data reading, refer to the SDK documentation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is intended for debugging purposes. Do not use this operation to read large amounts of data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRecordsRequest
@@ -1037,8 +1510,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取Topic数据</para>
+        /// <para>Reads data from a specified topic. This operation is primarily used for debugging. For high-volume data reading, refer to the SDK documentation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is intended for debugging purposes. Do not use this operation to read large amounts of data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRecordsRequest
@@ -1091,8 +1569,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取Topic数据</para>
+        /// <para>Reads data from a specified topic. This operation is primarily used for debugging. For high-volume data reading, refer to the SDK documentation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is intended for debugging purposes. Do not use this operation to read large amounts of data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRecordsRequest
@@ -1109,8 +1592,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>读取Topic数据</para>
+        /// <para>Reads data from a specified topic. This operation is primarily used for debugging. For high-volume data reading, refer to the SDK documentation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is intended for debugging purposes. Do not use this operation to read large amounts of data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetRecordsRequest
@@ -1127,8 +1615,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Schema信息</para>
+        /// <para>Queries schema information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries schema information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSchemaRequest
@@ -1177,8 +1670,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Schema信息</para>
+        /// <para>Queries schema information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries schema information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSchemaRequest
@@ -1227,8 +1725,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Schema信息</para>
+        /// <para>Queries schema information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries schema information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSchemaRequest
@@ -1245,8 +1748,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Schema信息</para>
+        /// <para>Queries schema information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries schema information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSchemaRequest
@@ -1263,8 +1771,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Subscription信息</para>
+        /// <para>Queries subscription information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscription information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSubscriptionRequest
@@ -1313,8 +1826,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Subscription信息</para>
+        /// <para>Queries subscription information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscription information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSubscriptionRequest
@@ -1363,8 +1881,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Subscription信息</para>
+        /// <para>Queries subscription information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscription information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSubscriptionRequest
@@ -1381,8 +1904,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Subscription信息</para>
+        /// <para>Queries subscription information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscription information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSubscriptionRequest
@@ -1399,8 +1927,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Topic信息</para>
+        /// <para>Queries topic information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries topic information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTopicRequest
@@ -1445,8 +1978,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Topic信息</para>
+        /// <para>Queries topic information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries topic information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTopicRequest
@@ -1491,8 +2029,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Topic信息</para>
+        /// <para>Queries topic information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries topic information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTopicRequest
@@ -1509,8 +2052,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Topic信息</para>
+        /// <para>Queries topic information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries topic information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTopicRequest
@@ -1527,8 +2075,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Connector列表信息</para>
+        /// <para>Retrieves a list of synchronization tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of synchronization tasks.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConnectorsRequest
@@ -1593,8 +2146,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Connector列表信息</para>
+        /// <para>Retrieves a list of synchronization tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of synchronization tasks.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConnectorsRequest
@@ -1659,8 +2217,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Connector列表信息</para>
+        /// <para>Retrieves a list of synchronization tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of synchronization tasks.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConnectorsRequest
@@ -1677,8 +2240,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Connector列表信息</para>
+        /// <para>Retrieves a list of synchronization tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of synchronization tasks.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListConnectorsRequest
@@ -1695,8 +2263,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Group列表信息</para>
+        /// <para>Retrieves a list of consumer groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of consumer groups.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListGroupsRequest
@@ -1757,8 +2330,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Group列表信息</para>
+        /// <para>Retrieves a list of consumer groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of consumer groups.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListGroupsRequest
@@ -1819,8 +2397,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Group列表信息</para>
+        /// <para>Retrieves a list of consumer groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of consumer groups.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListGroupsRequest
@@ -1837,8 +2420,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Group列表信息</para>
+        /// <para>Retrieves a list of consumer groups.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of consumer groups.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListGroupsRequest
@@ -1855,8 +2443,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Project列表信息</para>
+        /// <para>Retrieves a list of projects.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of projects.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListProjectsRequest
@@ -1913,8 +2506,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Project列表信息</para>
+        /// <para>Retrieves a list of projects.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of projects.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListProjectsRequest
@@ -1971,8 +2569,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Project列表信息</para>
+        /// <para>Retrieves a list of projects.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of projects.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListProjectsRequest
@@ -1989,8 +2592,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Project列表信息</para>
+        /// <para>Retrieves a list of projects.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of projects.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListProjectsRequest
@@ -2007,8 +2615,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Schema列表信息</para>
+        /// <para>Lists schemas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries schema list information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSchemasRequest
@@ -2065,8 +2678,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Schema列表信息</para>
+        /// <para>Lists schemas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries schema list information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSchemasRequest
@@ -2123,8 +2741,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Schema列表信息</para>
+        /// <para>Lists schemas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries schema list information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSchemasRequest
@@ -2141,8 +2764,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Schema列表信息</para>
+        /// <para>Lists schemas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries schema list information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSchemasRequest
@@ -2159,8 +2787,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Subscription列表信息</para>
+        /// <para>Retrieves a list of subscriptions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscription list information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSubscriptionsRequest
@@ -2221,8 +2854,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Subscription列表信息</para>
+        /// <para>Retrieves a list of subscriptions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscription list information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSubscriptionsRequest
@@ -2283,8 +2921,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Subscription列表信息</para>
+        /// <para>Retrieves a list of subscriptions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscription list information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSubscriptionsRequest
@@ -2301,8 +2944,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Subscription列表信息</para>
+        /// <para>Retrieves a list of subscriptions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries subscription list information.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSubscriptionsRequest
@@ -2319,8 +2967,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Topic列表信息</para>
+        /// <para>Retrieves a list of topics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of topics.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTopicsRequest
@@ -2381,8 +3034,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Topic列表信息</para>
+        /// <para>Retrieves a list of topics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of topics.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTopicsRequest
@@ -2443,8 +3101,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Topic列表信息</para>
+        /// <para>Retrieves a list of topics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of topics.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTopicsRequest
@@ -2461,8 +3124,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Topic列表信息</para>
+        /// <para>Retrieves a list of topics.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of topics.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTopicsRequest
@@ -2479,8 +3147,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>写入数据</para>
+        /// <para>Writes data to a specified topic. This operation is primarily intended for debugging. For high-volume data writes, refer to the SDK documentation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is primarily intended for debugging. Do not use this operation to write large amounts of data.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// PutRecordsRequest
@@ -2539,8 +3212,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>写入数据</para>
+        /// <para>Writes data to a specified topic. This operation is primarily intended for debugging. For high-volume data writes, refer to the SDK documentation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is primarily intended for debugging. Do not use this operation to write large amounts of data.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// PutRecordsRequest
@@ -2599,8 +3277,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>写入数据</para>
+        /// <para>Writes data to a specified topic. This operation is primarily intended for debugging. For high-volume data writes, refer to the SDK documentation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is primarily intended for debugging. Do not use this operation to write large amounts of data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutRecordsRequest
@@ -2617,8 +3300,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>写入数据</para>
+        /// <para>Writes data to a specified topic. This operation is primarily intended for debugging. For high-volume data writes, refer to the SDK documentation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is primarily intended for debugging. Do not use this operation to write large amounts of data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutRecordsRequest
@@ -2635,8 +3323,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Project资源属性</para>
+        /// <para>Updates the description of a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description of a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateProjectRequest
@@ -2681,8 +3374,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Project资源属性</para>
+        /// <para>Updates the description of a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description of a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateProjectRequest
@@ -2727,8 +3425,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Project资源属性</para>
+        /// <para>Updates the description of a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description of a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateProjectRequest
@@ -2745,8 +3448,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Project资源属性</para>
+        /// <para>Updates the description of a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description of a project.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateProjectRequest
@@ -2763,8 +3471,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Topic资源属性</para>
+        /// <para>Updates the description of a topic.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description of a topic.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTopicRequest
@@ -2813,8 +3526,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Topic资源属性</para>
+        /// <para>Updates the description of a topic.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description of a topic.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTopicRequest
@@ -2863,8 +3581,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Topic资源属性</para>
+        /// <para>Updates the description of a topic.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description of a topic.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTopicRequest
@@ -2881,8 +3604,13 @@ namespace AlibabaCloud.SDK.Datahub20240620
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Topic资源属性</para>
+        /// <para>Updates the description of a topic.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description of a topic.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTopicRequest

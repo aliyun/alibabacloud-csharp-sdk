@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
     public class GetSubscriptionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The name of the application to which the subscription belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_application_name</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string Application { get; set; }
 
         /// <summary>
+        /// <para>The description of the subscription.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_comment</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1724041098000</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The creator of the subscription.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1559031978056215</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string Creator { get; set; }
 
         /// <summary>
+        /// <para>The project name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_project</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</para>
         /// </summary>
@@ -58,6 +70,12 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: offline.</description></item>
+        /// <item><description>1: online.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public int? State { get; set; }
 
         /// <summary>
+        /// <para>The subscription ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1741072334529RFEF7</para>
         /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string SubscriptionId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The topic name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_topic</para>
         /// </summary>
@@ -90,6 +114,12 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string TopicName { get; set; }
 
         /// <summary>
+        /// <para>The type of the subscription. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>USER: created by a user.</description></item>
+        /// <item><description>SYSTEM: created by the system.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>USER</para>
         /// </summary>
@@ -98,6 +128,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The last update time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1724041098000</para>
         /// </summary>

@@ -8,9 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
-    public class GetSubscriptionRequest : TeaModel {
+    public class DeleteSubscriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +20,16 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The subscription ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1764122860063VIIZ2</para>
+        /// <para>1713853462590KA0YP</para>
         /// </summary>
         [NameInMap("SubscriptionId")]
         [Validation(Required=false)]
         public string SubscriptionId { get; set; }
 
         /// <summary>
-        /// <para>The topic name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

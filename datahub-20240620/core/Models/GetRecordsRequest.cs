@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
     public class GetRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The shard ID from which to read data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string ShardId { get; set; }
 
         /// <summary>
+        /// <para>The start time for reading data. By default, data is read starting from 5 minutes before the current time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1769065251123</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The topic name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

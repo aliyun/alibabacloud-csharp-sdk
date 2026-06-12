@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
     public class PutRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The data to be written.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Records")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public List<PutRecordsRequestRecords> Records { get; set; }
         public class PutRecordsRequestRecords : TeaModel {
             /// <summary>
+            /// <para>The additional information of the record. You can leave this parameter empty if no additional information is available.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;key1&quot;:&quot;val1&quot;,&quot;key2&quot;:&quot;val2&quot;}</para>
             /// </summary>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
             public Dictionary<string, string> Attributes { get; set; }
 
             /// <summary>
+            /// <para>The data content of the record.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -47,6 +52,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         }
 
         /// <summary>
+        /// <para>The ID of the shard to which data is written. If this parameter is not specified, data is randomly written to a shard.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -55,6 +62,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string ShardId { get; set; }
 
         /// <summary>
+        /// <para>The topic name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

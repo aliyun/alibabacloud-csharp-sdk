@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of records returned in this query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -70,6 +72,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next query. If NextToken is empty, no more results are available. If NextToken has a value, it indicates the token for the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9892074a2a89600ae4b0d5a34fb99a3f</para>
         /// </summary>
@@ -78,6 +82,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</para>
         /// </summary>
@@ -86,6 +92,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -94,6 +102,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of query results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>

@@ -8,36 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
-    public class CreateTopicResponseBody : TeaModel {
+    public class DeleteSubscriptionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>2026020210000022c53d0b06900170</para>
+        /// <para>2026031915480122c53d0b00c2d347</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
-
-        /// <summary>
-        /// <para>The topic name.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>test01</para>
-        /// </summary>
-        [NameInMap("TopicName")]
-        [Validation(Required=false)]
-        public string TopicName { get; set; }
 
     }
 

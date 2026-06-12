@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
     public class DeleteProjectRequest : TeaModel {
         /// <summary>
+        /// <para>The project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

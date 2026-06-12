@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
 {
     public class GetTopicResponseBody : TeaModel {
         /// <summary>
+        /// <para>The topic description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_comment</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1724041098000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The topic creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1397493986831962</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string Creator { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether multiple versions are supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public bool? EnableSchemaRegistry { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the extended mode is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public bool? ExpandMode { get; set; }
 
         /// <summary>
+        /// <para>The lifecycle.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public int? Lifecycle { get; set; }
 
         /// <summary>
+        /// <para>The project name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_project</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The data schema for the TUPLE type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;Type\&quot;:\&quot;STRING\&quot;,\&quot;AllowNull\&quot;:true,\&quot;Name\&quot;:\&quot;str\&quot;},{\&quot;Type\&quot;:\&quot;STRING\&quot;,\&quot;AllowNull\&quot;:true,\&quot;Name\&quot;:\&quot;dt\&quot;}]</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string RecordSchema { get; set; }
 
         /// <summary>
+        /// <para>The topic type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TUPLE</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string RecordType { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A20A7093-8FE0-058C-BE0C-3C8057D5F1A1</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of shards.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public int? ShardCount { get; set; }
 
         /// <summary>
+        /// <para>The total storage of the topic.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12252454</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public long? Storage { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The topic name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_topic</para>
         /// </summary>
@@ -122,6 +150,8 @@ namespace AlibabaCloud.SDK.Datahub20240620.Models
         public string TopicName { get; set; }
 
         /// <summary>
+        /// <para>The last update time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1724041098000</para>
         /// </summary>
