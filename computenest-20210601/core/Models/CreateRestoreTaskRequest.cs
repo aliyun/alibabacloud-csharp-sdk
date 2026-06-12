@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         /// <summary>
         /// <para>The ID of the service instance.</para>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> to obtain the ID of the service instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

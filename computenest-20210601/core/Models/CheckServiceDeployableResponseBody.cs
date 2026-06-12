@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CheckServiceDeployableResponseBody : TeaModel {
         /// <summary>
-        /// <para>Inspection result.</para>
+        /// <para>The check results.</para>
         /// </summary>
         [NameInMap("CheckResults")]
         [Validation(Required=false)]
         public List<CheckServiceDeployableResponseBodyCheckResults> CheckResults { get; set; }
         public class CheckServiceDeployableResponseBodyCheckResults : TeaModel {
             /// <summary>
-            /// <para>Returns a hint message for the result.</para>
+            /// <para>The message returned for the result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;&quot;</para>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public bool? Skippable { get; set; }
 
             /// <summary>
-            /// <para>Check type, invalid values:</para>
+            /// <para>The type of precheck. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Balance ：Account balance.</para>
+            /// <item><description><para>Balance: The account balance.</para>
             /// </description></item>
-            /// <item><description><para>Quota:  Account quota.</para>
+            /// <item><description><para>Quota: The resource quota.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Inspection result.</para>
+            /// <para>The check result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>06BF8F22-02DC-4750-83DF-3FFC11C065EA</para>

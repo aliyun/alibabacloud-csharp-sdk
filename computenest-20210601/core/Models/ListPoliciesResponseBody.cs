@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListPoliciesResponseBody : TeaModel {
         /// <summary>
-        /// <para>分页大小。</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Next Token</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAZ9FmxgN6wKfeK/GOKRnnjU=</para>
@@ -30,24 +30,24 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Permission policy list</para>
+        /// <para>The list of access policies.</para>
         /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
         public List<ListPoliciesResponseBodyPolicies> Policies { get; set; }
         public class ListPoliciesResponseBodyPolicies : TeaModel {
             /// <summary>
-            /// <para>Permission policy description.</para>
+            /// <para>The description of the access policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Only read permission policy</para>
+            /// <para>Read-only permission</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Policy content.</para>
+            /// <para>The content of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Action&quot;:[&quot;<em>:Describe</em>&quot;,&quot;<em>:List</em>&quot;,&quot;<em>:Get</em>&quot;,&quot;<em>:BatchGet</em>&quot;,&quot;<em>:Query</em>&quot;,&quot;<em>:BatchQuery</em>&quot;,&quot;actiontrail:LookupEvents&quot;],&quot;Resource&quot;:[&quot;*&quot;],&quot;Effect&quot;:&quot;Allow&quot;}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string PolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>Permission policy name.</para>
+            /// <para>The name of the access policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AliyunComputeNestPolicyForReadOnly</para>
@@ -67,10 +67,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string PolicyName { get; set; }
 
             /// <summary>
-            /// <para>Permission policy type.</para>
+            /// <para>The type of the access policy.</para>
             /// <list type="bullet">
-            /// <item><description>Custom: Custom policy.</description></item>
-            /// <item><description>System: System policy.</description></item>
+            /// <item><description><para>Custom: A custom policy.</para>
+            /// </description></item>
+            /// <item><description><para>System: A system policy.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51945B04-6AA6-410D-93BA-236E0248B104</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the restore task.</para>
+        /// <para>The ID of the restore job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>restore-fdsafda</para>
@@ -32,9 +32,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The status of the service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Restoring</description></item>
-        /// <item><description>Restored</description></item>
-        /// <item><description>RestoreFailed</description></item>
+        /// <item><description><para>Restoring: The service instance is being restored.</para>
+        /// </description></item>
+        /// <item><description><para>Restored: The service instance is restored.</para>
+        /// </description></item>
+        /// <item><description><para>RestoreFailed: The service instance failed to be restored.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

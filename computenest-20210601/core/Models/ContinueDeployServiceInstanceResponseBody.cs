@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ContinueDeployServiceInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dry run result.</para>
+        /// <para>The check result.</para>
         /// </summary>
         [NameInMap("DryRunResult")]
         [Validation(Required=false)]
         public ContinueDeployServiceInstanceResponseBodyDryRunResult DryRunResult { get; set; }
         public class ContinueDeployServiceInstanceResponseBodyDryRunResult : TeaModel {
             /// <summary>
-            /// <para>The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.</para>
+            /// <para>The parameters that can be modified. Modifying these parameters does not cause a check error.</para>
             /// <remarks>
             /// <para>This parameter is returned only if DryRun is set to true.</para>
             /// </remarks>
@@ -27,7 +27,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public List<string> ParametersAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// <para>The parameters that can be modified under specific conditions. The new values of the parameters determine whether the operation that is performed to modify the parameters causes a validation error.</para>
+            /// <para>The parameters that can be conditionally modified.
+            /// Whether modifying these parameters causes a check error depends on their values.</para>
             /// <remarks>
             /// <para>This parameter is returned only if DryRun is set to true.</para>
             /// </remarks>
@@ -37,7 +38,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public List<string> ParametersConditionallyAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// <para>The parameters that cannot be modified. The operation that is performed to modify the parameters causes a validation error.</para>
+            /// <para>The parameters that cannot be modified. Modifying these parameters always causes a check error.</para>
             /// <remarks>
             /// <para>This parameter is returned only if DryRun is set to true.</para>
             /// </remarks>

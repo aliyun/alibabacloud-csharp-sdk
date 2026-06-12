@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceRequest : TeaModel {
         /// <summary>
-        /// <para>Region Id.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The service instance id.</para>
+        /// <para>The service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-b58c874912fc4294****</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>The service name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Wordpress</para>
+        /// <para>WordPress Community Edition</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>Whether to disclose service details.</para>
+        /// <para>Specifies whether to return the detailed information of the service.</para>
         /// </summary>
         [NameInMap("ShowDetails")]
         [Validation(Required=false)]

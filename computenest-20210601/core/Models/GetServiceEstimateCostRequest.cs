@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceEstimateCostRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value for each request. The <b>ClientToken</b> supports only ASCII characters and cannot be longer than 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwertyuiop</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the subscription duration.</para>
+        /// <para>The subscription period for the purchase order.</para>
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string CouponId { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration of the instance.</para>
+            /// <para>The subscription duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -49,9 +49,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The unit of the subscription duration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Year.</description></item>
-            /// <item><description>Month.</description></item>
-            /// <item><description>Day.</description></item>
+            /// <item><description><para>Year: Year.</para>
+            /// </description></item>
+            /// <item><description><para>Month: Month.</para>
+            /// </description></item>
+            /// <item><description><para>Day: Day.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string PayPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The PrivateOffer ID of the Alibaba Cloud Marketplace.</para>
+            /// <para>The ID of the private offer in Alibaba Cloud Marketplace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17cde2e8-2f5d-xxxx-xxxx-5120dd215d66</para>
@@ -74,17 +77,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The name of the configuration change operation.</para>
+        /// <para>The name of the upgrade or downgrade operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Parameter change</para>
+        /// <para>Parameter configuration change</para>
         /// </summary>
         [NameInMap("OperationName")]
         [Validation(Required=false)]
         public string OperationName { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are specified to deploy the service instance.</para>
+        /// <para>The parameters to deploy the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ \&quot;RegionId\&quot;: \&quot;cn-hangzhou\&quot;, \&quot;InstanceType\&quot;: \&quot;ecs.g5.large\&quot;}</para>
@@ -135,7 +138,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the package specification.</para>
+        /// <para>The specification name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Package 1</para>
@@ -155,10 +158,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The trial policy. Valid values:</para>
+        /// <para>The usage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Trial: Trials are supported.</description></item>
-        /// <item><description>NotTrial: Trials are not supported.</description></item>
+        /// <item><description><para>Trial: The service supports a free trial.</para>
+        /// </description></item>
+        /// <item><description><para>NotTrial: The service does not support a free trial.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

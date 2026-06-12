@@ -17,13 +17,18 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public List<ListBackupsRequestFilter> Filter { get; set; }
         public class ListBackupsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</para>
+            /// <para>The name of the filter. You can query by one or more filter names. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>BackupId: the ID of the backup.</description></item>
-            /// <item><description>ServiceInstanceId: The ID of the service instance.</description></item>
-            /// <item><description>Status: the state of the service.</description></item>
-            /// <item><description>StartTime</description></item>
-            /// <item><description>EndTime</description></item>
+            /// <item><description><para>BackupId: The backup ID.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceInstanceId: The service instance ID.</para>
+            /// </description></item>
+            /// <item><description><para>Status: The status.</para>
+            /// </description></item>
+            /// <item><description><para>StartTime: The start time.</para>
+            /// </description></item>
+            /// <item><description><para>EndTime: The end time.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,7 +39,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The list of filters.</para>
+            /// <para>The filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -53,7 +58,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLYoaeZA6xVdkCrmG9EmGshtmECUGpq9Qm7x5vQkpz9NXH0XzUc9t4Kxaf3UtuPY4a0=</para>

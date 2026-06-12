@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CreateBackupRequest : TeaModel {
         /// <summary>
-        /// <para>Backup description</para>
+        /// <para>The backup description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No description</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service instance to be transferred to official version.</para>
+        /// <para>The ID of the service instance to back up.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

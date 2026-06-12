@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token for the next query, an empty nextToken indicates there is no next page.</para>
+        /// <para>The token that is used to retrieve the next page of results. If this parameter is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBBAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

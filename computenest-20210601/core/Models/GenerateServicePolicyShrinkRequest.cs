@@ -8,29 +8,21 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
-    public class CheckServiceDeployableRequest : TeaModel {
+    public class GenerateServicePolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The total pay-as-you-go amount.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1.29</para>
+        /// <para>The types of operations for which to generate policy information.</para>
         /// </summary>
-        [NameInMap("PostPaidAmount")]
+        [NameInMap("OperationTypes")]
         [Validation(Required=false)]
-        public string PostPaidAmount { get; set; }
+        public List<string> OperationTypes { get; set; }
 
-        /// <summary>
-        /// <para>The total upfront payment amount.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>0.0</para>
-        /// </summary>
-        [NameInMap("PrePaidAmount")]
+        [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public string PrePaidAmount { get; set; }
+        public string ParametersShrink { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -44,7 +36,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>service-0e6fca6a51a544xxxxxx</para>
+        /// <para>service-b3e9ed878b0c4xxxxxx</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
@@ -54,7 +46,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>The service version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>draft</para>
         /// </summary>
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]
@@ -71,7 +63,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The trial type. Valid values:</para>
+        /// <para>The trial type. The default value is NotTrial. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>Trial: The service supports trial use.</para>
         /// </description></item>

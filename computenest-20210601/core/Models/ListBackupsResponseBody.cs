@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListBackupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the backup.</para>
+        /// <para>The backups.</para>
         /// </summary>
         [NameInMap("Backups")]
         [Validation(Required=false)]
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string BackupId { get; set; }
 
             /// <summary>
-            /// <para>The backup mode. Valid values:</para>
+            /// <para>The backup mode. The return value is:</para>
             /// <list type="bullet">
-            /// <item><description><b>Manual</b>: manual backup</description></item>
+            /// <item><description><b>Manual</b>: The backup is created manually.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string BackupMode { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the backup was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-03T19:54:38+08:00</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the backup task.</para>
+            /// <para>The description of the backup.</para>
             /// 
             /// <b>Example:</b>
             /// <para>No description</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The end time of the backup task.</para>
+            /// <para>The time when the backup ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-15T02:24:00Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the backup was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-03T19:54:38+08:00</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>Retention Days. Resources will be cleared upon expiration. Defaults to no expiration if left blank.</para>
+            /// <para>The retention period in days. Backups are deleted after the retention period expires. By default, this parameter is empty, which means that the backups do not expire.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public int? RetentionDays { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service instance.</para>
+            /// <para>The service instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>si-7b6138dfce1e4c41ab71</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ServiceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The start time of the backup task.</para>
+            /// <para>The time when the backup started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30T16:00:00Z</para>
@@ -110,14 +110,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the backup task. Valid values:</para>
+            /// <para>The status.</para>
             /// <list type="bullet">
-            /// <item><description>Creating</description></item>
-            /// <item><description>Created</description></item>
-            /// <item><description>CreateFailed</description></item>
-            /// <item><description>Deleting</description></item>
-            /// <item><description>Deleted</description></item>
-            /// <item><description>DeleteFailed</description></item>
+            /// <item><description><para>Creating: The backup is being created.</para>
+            /// </description></item>
+            /// <item><description><para>Created: The backup is created.</para>
+            /// </description></item>
+            /// <item><description><para>CreateFailed: The backup failed to be created.</para>
+            /// </description></item>
+            /// <item><description><para>Deleting: The backup is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para>Deleted: The backup is deleted.</para>
+            /// </description></item>
+            /// <item><description><para>DeleteFailed: The backup failed to be deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The description of the service instance deployment information.</para>
+            /// <para>The details of the status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Disk i-xxxx backup failed, error message: error</para>
@@ -140,7 +146,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of records returned in this request.</para>
+        /// <para>The maximum number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -150,7 +156,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Indicates the read position returned by the current call. An empty value means all data has been read.</para>
+        /// <para>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BB58FE53-ED8F-5D12-9746-CD3A5F463D95</para>
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total data count under the current request conditions (optional; not returned by default).</para>
+        /// <para>The total number of entries that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

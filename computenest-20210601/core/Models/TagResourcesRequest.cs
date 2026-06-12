@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify up to 50 resource IDs.</para>
+        /// <para>The resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -31,10 +31,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service: service</description></item>
-        /// <item><description>serviceinstance: service instance</description></item>
-        /// <item><description>artifact: artifact</description></item>
-        /// <item><description>dataset: dataset</description></item>
+        /// <item><description><para>service: a service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: a service instance.</para>
+        /// </description></item>
+        /// <item><description><para>artifact: a deployment.</para>
+        /// </description></item>
+        /// <item><description><para>dataset: a dataset.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag key and value.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

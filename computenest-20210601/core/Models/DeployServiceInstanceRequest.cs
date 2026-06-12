@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class DeployServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures idempotency of the request. Generate a unique value for this parameter from your client to ensure it is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters.</para>
+        /// <para>A client token to ensure the idempotence of a request. Generate a unique value from the client for this parameter. The token can contain only ASCII characters and must be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Region ID. Allowed values:</para>
+        /// <para>The region ID. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: East China 1 (Hangzhou).</para>
+        /// <item><description><para>cn-hangzhou: China (Hangzhou).</para>
         /// </description></item>
         /// <item><description><para>ap-southeast-1: Singapore.</para>
         /// </description></item>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Service instance ID.</para>
+        /// <para>The ID of the service instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

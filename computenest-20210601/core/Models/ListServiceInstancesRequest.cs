@@ -17,16 +17,38 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public List<ListServiceInstancesRequestFilter> Filter { get; set; }
         public class ListServiceInstancesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</para>
+            /// <para>The name of the filter. You can specify one or more filter names to query resources. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Name：Query by service name.</description></item>
-            /// <item><description>ServiceInstanceName：Query by service  instance name.</description></item>
-            /// <item><description>ServiceInstanceId：Query by service  instance ID.</description></item>
-            /// <item><description>ServiceId：Query by service ID.</description></item>
-            /// <item><description>Version：Query by service version.</description></item>
-            /// <item><description>Status：Query by service status.</description></item>
-            /// <item><description>DeployType: Query by service deployType.</description></item>
-            /// <item><description>ServiceType：Query by service deployType.</description></item>
+            /// <item><description><para>Name: The name of the service. To perform a fuzzy search, enter the value in the \<em>xxx\</em> format. For example, if the service name is My Service, you can enter \<em>My\</em> or \<em>Service\</em> for a fuzzy search.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceInstanceName: The name of the service instance. A fuzzy query is performed if you enter one service instance name. A term query is performed if you enter multiple service instance names.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceInstanceId: The service instance ID.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceId: The service ID.</para>
+            /// </description></item>
+            /// <item><description><para>Version: The service version.</para>
+            /// </description></item>
+            /// <item><description><para>Status: The instance status.</para>
+            /// </description></item>
+            /// <item><description><para>DeployType: The deployment type.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceType: The service type.</para>
+            /// </description></item>
+            /// <item><description><para>OperationStartTimeBefore: The time before the start of the Alibaba Cloud Managed Services.</para>
+            /// </description></item>
+            /// <item><description><para>OperationStartTimeAfter: The time after the start of the Alibaba Cloud Managed Services.</para>
+            /// </description></item>
+            /// <item><description><para>OperationEndTimeBefore: The time before the end of the Alibaba Cloud Managed Services.</para>
+            /// </description></item>
+            /// <item><description><para>OperationEndTimeAfter: The time after the end of the Alibaba Cloud Managed Services.</para>
+            /// </description></item>
+            /// <item><description><para>OperatedServiceInstanceId: The ID of the managed service instance under a private service.</para>
+            /// </description></item>
+            /// <item><description><para>OperationServiceInstanceId: The ID of the service instance under a pure managed service.</para>
+            /// </description></item>
+            /// <item><description><para>EnableInstanceOps: Indicates whether the Alibaba Cloud Managed Services feature is enabled for the service instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -37,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter values of the filter.</para>
+            /// <para>The list of filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -46,7 +68,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The number of entries page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -56,7 +78,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The query token. Set it to the <b>NextToken</b> value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBBAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -87,7 +109,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tag key and value.</para>
+        /// <para>The custom tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

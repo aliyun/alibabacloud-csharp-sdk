@@ -10,20 +10,25 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListRestoreTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The list of the filters.</para>
+        /// <para>The filter.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListRestoreTasksRequestFilter> Filter { get; set; }
         public class ListRestoreTasksRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</para>
+            /// <para>The name of the filter. You can query by one or more filter names. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RestoreTaskId: the ID of the restore task.</description></item>
-            /// <item><description>ServiceInstanceId: The ID of the service instance.</description></item>
-            /// <item><description>Status</description></item>
-            /// <item><description>StartTime</description></item>
-            /// <item><description>EndTime</description></item>
+            /// <item><description><para>RestoreTaskId: The restore job ID.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceInstanceId: The service instance ID.</para>
+            /// </description></item>
+            /// <item><description><para>Status: The status.</para>
+            /// </description></item>
+            /// <item><description><para>StartTime: The start time.</para>
+            /// </description></item>
+            /// <item><description><para>EndTime: The end time.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -34,7 +39,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter values of the filter.</para>
+            /// <para>A list of filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -43,7 +48,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The number of rows displayed per page in paginated queries. Maximum: 100 rows per page. Default: 20 rows.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -53,7 +58,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>NextToken</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>

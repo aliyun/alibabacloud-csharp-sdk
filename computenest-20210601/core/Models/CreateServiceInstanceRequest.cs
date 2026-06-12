@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CreateServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated, unique token that ensures the idempotence of the request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,17 +20,19 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The information about the order placed in Alibaba Cloud Marketplace. You do not need to specify this parameter if the service is not published in Alibaba Cloud Marketplace or uses the pay-as-you-go billing method.</para>
+        /// <para>The information about the Alibaba Cloud Marketplace purchase order. You do not need to specify this parameter if the service is not listed in Alibaba Cloud Marketplace or if you use the pay-as-you-go billing method.</para>
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
         public CreateServiceInstanceRequestCommodity Commodity { get; set; }
         public class CreateServiceInstanceRequestCommodity : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
+            /// <para>Indicates whether to enable automatic payment for the order. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enable automatic payment.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disable automatic payment.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +43,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public bool? AutoPay { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable auto-renewal for the service instance. Valid values:</para>
+            /// <para>Indicates whether to enable auto-renewal. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Enable.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Disable.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,9 +81,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The unit of the subscription duration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Year</b></description></item>
-            /// <item><description><b>Month</b></description></item>
-            /// <item><description><b>Day</b></description></item>
+            /// <item><description><para><b>Year</b>: Year.</para>
+            /// </description></item>
+            /// <item><description><para><b>Month</b>: Month.</para>
+            /// </description></item>
+            /// <item><description><para><b>Day</b>: Day.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,7 +97,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string PayPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>privet offer Id</para>
+            /// <para>The ID of the private offer in Alibaba Cloud Marketplace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx-xxxx-xxxx-xxxx</para>
@@ -102,20 +109,22 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The alert contact group.</para>
+        /// <para>The CloudMonitor alert contact group that receives alerts.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Default Group</para>
+        /// <para>Cloud account alert contact</para>
         /// </summary>
         [NameInMap("ContactGroup")]
         [Validation(Required=false)]
         public string ContactGroup { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Indicates whether to perform a dry run for the request. The dry run checks for permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run for the request, but does not create a service instance.</description></item>
-        /// <item><description><b>false</b>: performs a dry run for the request, and creates a service instance if the request passes the dry run.</description></item>
+        /// <item><description><para><b>true</b>: Sends the request without creating the service instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Sends the request and creates the service instance after the check is passed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,10 +135,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the service instance supports the hosted O\&amp;M feature. Valid values:</para>
+        /// <para>Indicates whether the service instance has the O\&amp;M feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The service instance has the O\&amp;M feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The service instance does not have the O\&amp;M feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,10 +151,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? EnableInstanceOps { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the Prometheus monitoring feature. Valid values:</para>
+        /// <para>Indicates whether to enable Prometheus monitoring. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enable.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,7 +167,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? EnableUserPrometheus { get; set; }
 
         /// <summary>
-        /// <para>The serviceInstance name.</para>
+        /// <para>The name of the service instance. The name must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description><para>The name can be up to 64 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter or a digit and can contain letters, digits, hyphens (-), and underscores (_).</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>TestName</para>
@@ -164,14 +183,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The operation metadata.</para>
+        /// <para>The O\&amp;M configuration.</para>
         /// </summary>
         [NameInMap("OperationMetadata")]
         [Validation(Required=false)]
         public CreateServiceInstanceRequestOperationMetadata OperationMetadata { get; set; }
         public class CreateServiceInstanceRequestOperationMetadata : TeaModel {
             /// <summary>
-            /// <para>The operation end time.</para>
+            /// <para>The end time of the O\&amp;M window. This parameter is valid only in managed O\&amp;M mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-28T06:48:56Z</para>
@@ -181,7 +200,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The additional information.</para>
+            /// <para>Additional information about the managed O\&amp;M service.</para>
             /// 
             /// <b>Example:</b>
             /// <pre><code class="language-json">  {
@@ -201,7 +220,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ExtraInfo { get; set; }
 
             /// <summary>
-            /// <para>Imported resource.</para>
+            /// <para>The list of imported resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,   &quot;Type&quot;: &quot;ResourceIds&quot;,   &quot;ResourceIds&quot;: {     &quot;ALIYUN::ECS::INSTANCE&quot;: [&quot;i-xxx&quot;, &quot;i-yyy&quot;],     &quot;ALIYUN::RDS::INSTANCE&quot;: [&quot;rm-xxx&quot;, &quot;rm-yyy&quot;],     &quot;ALIYUN::VPC::VPC&quot;: [&quot;vpc-xxx&quot;, &quot;vpc-yyy&quot;],     &quot;ALIYUN::SLB::INSTANCE&quot;: [&quot;lb-xxx&quot;, &quot;lb-yyy&quot;]   } }</para>
@@ -211,7 +230,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Resources { get; set; }
 
             /// <summary>
-            /// <para>The ID of the service instance.</para>
+            /// <para>The ID of the imported service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>si-d6ab3a63ccbb4b17****</para>
@@ -221,7 +240,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ServiceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The operation start time.</para>
+            /// <para>The start time of the O\&amp;M window. This parameter is valid only in managed O\&amp;M mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-29T06:48:56Z</para>
@@ -233,13 +252,18 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The parameters that the customer specifies to deploy the service instance.</para>
+        /// <para>The parameters for deploying the user instance.</para>
         /// <remarks>
-        /// <para> If region information is required to create a service instance, you must specify the region ID in the value of Parameters.</para>
+        /// <para>If the service instance contains deployment region information, you must specify the region in the deployment parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</para>
+        /// <para>{
+        ///       &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
+        ///       &quot;NodeCount&quot;: 3,
+        ///       &quot;SystemDiskSize&quot;: 40,
+        ///       &quot;InstancePassword&quot;: &quot;******&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
@@ -248,8 +272,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The region ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: China (Hangzhou).</description></item>
-        /// <item><description>ap-southeast-1: Singapore.</description></item>
+        /// <item><description><para>cn-hangzhou: China (Hangzhou).</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: Singapore.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -261,10 +287,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically deduct the resource fees from the account balance. Valid values:</para>
+        /// <para>Indicates whether to automatically deduct the payment from your account balance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enable automatic payment.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disable automatic payment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -296,7 +324,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The trial service instance id witch you want to convert to formal</para>
+        /// <para>The ID of the service instance to convert to a paid instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-d32fbcef30664721b785</para>
@@ -316,7 +344,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>Specification code.</para>
+        /// <para>The commodity specification code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yuncode5425200001</para>
@@ -326,17 +354,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string SpecificationCode { get; set; }
 
         /// <summary>
-        /// <para>The package name.</para>
+        /// <para>The name of the specification package.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Default Ppackage</para>
+        /// <para>Package 1</para>
         /// </summary>
         [NameInMap("SpecificationName")]
         [Validation(Required=false)]
         public string SpecificationName { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The custom tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -365,20 +393,22 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The name of the template.</para>
+        /// <para>The template name. You must specify this parameter if the service supports multiple templates.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS Template</para>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The trial type of the service instance. Valid values:</para>
+        /// <para>The type of the service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Trial</b>: Trials are supported.</description></item>
-        /// <item><description><b>NotTrial</b>: Trials are not supported.</description></item>
+        /// <item><description><para><b>Trial</b>: The service instance supports trial.</para>
+        /// </description></item>
+        /// <item><description><para><b>NotTrial</b>: The service instance does not support trial.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

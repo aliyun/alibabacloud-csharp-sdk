@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -33,10 +33,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service: service</description></item>
-        /// <item><description>serviceinstance: service instance</description></item>
-        /// <item><description>artifact: artifact</description></item>
-        /// <item><description>dataset: dataset</description></item>
+        /// <item><description><para>service: service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: service instance.</para>
+        /// </description></item>
+        /// <item><description><para>artifact: artifact.</para>
+        /// </description></item>
+        /// <item><description><para>dataset: dataset.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

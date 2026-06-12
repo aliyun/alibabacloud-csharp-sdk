@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CreateServiceInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The MartketInstance ID.</para>
+        /// <para>The ID of the Alibaba Cloud Marketplace instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>786***45</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</para>
@@ -52,14 +52,22 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The status of the service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Created</b></description></item>
-        /// <item><description><b>Deploying</b></description></item>
-        /// <item><description><b>DeployedFailed</b></description></item>
-        /// <item><description><b>Deployed</b></description></item>
-        /// <item><description><b>Upgrading</b></description></item>
-        /// <item><description><b>Deleting</b></description></item>
-        /// <item><description><b>Deleted</b></description></item>
-        /// <item><description><b>DeletedFailed</b></description></item>
+        /// <item><description><para><b>Created</b>: The service instance is created.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deploying</b>: The service instance is being deployed.</para>
+        /// </description></item>
+        /// <item><description><para><b>DeployedFailed</b>: The service instance failed to be deployed.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deployed</b>: The service instance is deployed.</para>
+        /// </description></item>
+        /// <item><description><para><b>Upgrading</b>: The service instance is being upgraded.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleting</b>: The service instance is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>Deleted</b>: The service instance is deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>DeletedFailed</b>: The service instance failed to be deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

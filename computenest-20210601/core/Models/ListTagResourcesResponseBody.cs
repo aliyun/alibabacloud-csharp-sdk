@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAVz7BQqj2xtiNSC3d3RAD38=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The collection of details about resources and tags, such as resource IDs, resource types, and tag key-value pairs.</para>
+        /// <para>A collection of resources and their tags. This collection includes information such as resource IDs, resource types, and tag key-value pairs.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
@@ -49,10 +49,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>service: service</description></item>
-            /// <item><description>serviceinstance: service instance</description></item>
-            /// <item><description>artifact: deployment package</description></item>
-            /// <item><description>dataset: dataset</description></item>
+            /// <item><description><para>service: a service.</para>
+            /// </description></item>
+            /// <item><description><para>serviceinstance: a service instance.</para>
+            /// </description></item>
+            /// <item><description><para>artifact: an artifact.</para>
+            /// </description></item>
+            /// <item><description><para>dataset: a dataset.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

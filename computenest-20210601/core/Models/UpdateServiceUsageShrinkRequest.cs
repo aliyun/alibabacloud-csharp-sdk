@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class UpdateServiceUsageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <b>token</b> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYChudnQUoBH+mGWFpb6oP0=</para>
@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -35,7 +41,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The information about the applicant.</para>
+        /// <para>The user information.</para>
         /// </summary>
         [NameInMap("UserInformation")]
         [Validation(Required=false)]

@@ -10,40 +10,47 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions. Vaild values:</para>
+        /// <para>The filter conditions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>ExpireTimeStart：
-        /// Query start time for Subscription resource expiration.
-        /// <notice>Notice Note: Only supports querying service instances on private deployments.&gt;Notice: </para>
+        /// <item><description><para>ExpireTimeStart: The start of the time range to query the expiration time of subscription resources.</para>
+        /// <remarks>
+        /// <para>Notice: This parameter applies only to service instances in private deployments.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para>ExpireTimeEnd：Query end time for Subscription resource expiration.
-        /// <notice>Notice Note: Only supports querying service instances on private deployments.&gt;Notice: </para>
+        /// <item><description><para>ExpireTimeEnd: The end of the time range to query the expiration time of subscription resources.</para>
+        /// <remarks>
+        /// <para>Notice: This parameter applies only to service instances in private deployments.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para>PayType：The billing method of the read-only instance. 
-        /// <notice>Notice Note: Only supports querying service instances on private deployments.<notice> </para>
-        /// <para> Valid values:</para>
+        /// <item><description><para>PayType: The billing method.&gt;Notice:  This parameter applies only to service instances in private deployments.
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PayAsYouGo</para>
+        /// <item><description><para>Subscription: subscription.</para>
         /// </description></item>
-        /// <item><description><para>Subscription</para>
+        /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>ResourceARN：The Alibaba Cloud Resource Name (ARN) of a resource.</para>
+        /// <item><description><para>ResourceARN: The Alibaba Cloud Resource Name (ARN) of the resource.</para>
         /// </description></item>
         /// </list>
+        /// <para>resource name (ARN).</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<ListServiceInstanceResourcesRequestFilters> Filters { get; set; }
         public class ListServiceInstanceResourcesRequestFilters : TeaModel {
             /// <summary>
-            /// <para>Vaild values:</para>
+            /// <para>The name of the filter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ExpireTimeStart</description></item>
-            /// <item><description>ExpireTimeEnd</description></item>
-            /// <item><description>PayType</description></item>
-            /// <item><description>ResourceARN</description></item>
+            /// <item><description><para>ExpireTimeStart</para>
+            /// </description></item>
+            /// <item><description><para>ExpireTimeEnd</para>
+            /// </description></item>
+            /// <item><description><para>PayType</para>
+            /// </description></item>
+            /// <item><description><para>ResourceARN</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +61,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter condition.</para>
+            /// <para>The filter condition values.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -63,7 +70,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -73,11 +80,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is not returned, it indicates that no additional results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> was returned in the previous query, specify the value to obtain the next set of results.</description></item>
-        /// </list>
+        /// <para>The token that is used to retrieve the next page of results. Set this to the NextToken value from a previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</para>
@@ -87,11 +90,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>cn-hangzhou: China (Hangzhou).</description></item>
-        /// <item><description>ap-southeast-1: Singapore.</description></item>
-        /// </list>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -112,7 +111,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Service Instance resource type，include AliyunResource and ContainerResource.</para>
+        /// <para>The resource type of the service instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>AliyunResource: an Alibaba Cloud resource.</para>
+        /// </description></item>
+        /// <item><description><para>ContainerResource: a container group (pod) resource.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunResource</para>
@@ -122,14 +127,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceInstanceResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag key and value.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListServiceInstanceResourcesRequestTag> Tag { get; set; }
         public class ListServiceInstanceResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the resource tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -139,7 +144,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the resource tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>

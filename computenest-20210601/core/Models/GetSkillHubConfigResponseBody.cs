@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetSkillHubConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the configuration was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-05-20T00:00:00Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS bucket.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mybucket</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
+        /// <para>The region where the OSS bucket is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou</para>
         /// </summary>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string OssRegionId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2849EE73-AFFA-5AFD-9575-12FA886451DA</para>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The time when the configuration was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-05-20T00:00:00Z</para>
         /// </summary>

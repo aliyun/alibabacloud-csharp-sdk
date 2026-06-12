@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CreateSkillFileDetectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The unique identifier for the detection task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2aceb074-fa72-44d2-99d9-45b17cffe0e7</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string HashKey { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3F976EF8-C10A-57DC-917C-BB7BEB508FFB</para>

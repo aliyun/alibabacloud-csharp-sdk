@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ChangeResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the new resource group.</para>
-        /// <para>You can view resource group IDs in the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a> .</para>
+        /// <para>The ID of the destination resource group.</para>
+        /// <para>You can obtain the resource group ID from the <a href="https://resourcemanager.console.aliyun.com/resource-groups">Resource Management console</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmzmhzo******</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud resource that you want to move to a new resource group.</para>
+        /// <para>The ID of the cloud resource whose resource group you want to change.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-5dc794a7fd254e******</para>
@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service: service</description></item>
-        /// <item><description>serviceinstance: service instance</description></item>
+        /// <item><description><para>service: The resource is a service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: The resource is a service instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

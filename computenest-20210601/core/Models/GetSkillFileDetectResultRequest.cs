@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetSkillFileDetectResultRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier for the detection task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string HashKey { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

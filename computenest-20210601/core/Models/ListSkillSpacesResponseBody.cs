@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListSkillSpacesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results. If this parameter is not returned, no more results are available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4DB0F536-B3BE-4F0D-BD29-E83FB56D550C</para>
@@ -35,11 +39,16 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of SkillSpaces.</para>
+        /// </summary>
         [NameInMap("SkillSpaces")]
         [Validation(Required=false)]
         public List<ListSkillSpacesResponseBodySkillSpaces> SkillSpaces { get; set; }
         public class ListSkillSpacesResponseBodySkillSpaces : TeaModel {
             /// <summary>
+            /// <para>The time when the SkillSpace was created. The time is in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-11-03T22:58:52Z</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The SkillSpace description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -56,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string SkillSpaceDescription { get; set; }
 
             /// <summary>
-            /// <para>SkillSpace ID</para>
+            /// <para>The SkillSpace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ss-111111</para>
@@ -66,6 +77,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string SkillSpaceId { get; set; }
 
             /// <summary>
+            /// <para>The SkillSpace name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1111</para>
             /// </summary>
@@ -74,6 +87,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string SkillSpaceName { get; set; }
 
             /// <summary>
+            /// <para>The time when the SkillSpace was last updated. The time is in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-11-03T22:57:29Z</para>
             /// </summary>
@@ -84,6 +99,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

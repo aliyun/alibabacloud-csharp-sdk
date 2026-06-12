@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetSkillRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

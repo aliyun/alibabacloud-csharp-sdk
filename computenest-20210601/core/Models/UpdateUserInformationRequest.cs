@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class UpdateUserInformationRequest : TeaModel {
         /// <summary>
-        /// <para>The modified delivery settings.</para>
+        /// <para>The configurations to modify.</para>
         /// </summary>
         [NameInMap("DeliverySettings")]
         [Validation(Required=false)]
         public UpdateUserInformationRequestDeliverySettings DeliverySettings { get; set; }
         public class UpdateUserInformationRequestDeliverySettings : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable screencast delivery to OSS. Valid values:</para>
+            /// <para>Specifies whether to deliver ActionTrail events to OSS. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Delivery is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Delivery is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +43,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable screencast delivery to Object Storage Service (OSS). Valid values:</para>
+            /// <para>Specifies whether to deliver data to Object Storage Service (OSS). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Delivery is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Delivery is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public bool? OssEnabled { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which the screencasts are saved.</para>
+            /// <para>The number of days to retain screen recordings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>

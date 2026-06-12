@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceBillRequest : TeaModel {
         /// <summary>
-        /// <para>The billing cycle. Format: YYYY-MM.</para>
+        /// <para>The billing cycle in YYYY-MM format. Only billing cycles in the last 18 months are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The billing date. This parameter is required only if the <b>Granularity</b> parameter is set to DAILY. Format: YYYY-MM-DD.</para>
+        /// <para>The billing date. This parameter is required only when <b>Granularity</b> is set to DAILY. The format is YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-04-01</para>
@@ -31,12 +31,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string BillingDate { get; set; }
 
         /// <summary>
-        /// <para>The granularity at which bills are queried. Valid values:</para>
+        /// <para>The granularity of the bills to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</description></item>
-        /// <item><description>DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</description></item>
+        /// <item><description><para>MONTHLY: monthly. The data is consistent with the bills aggregated by billing cycle in the User Center.</para>
+        /// </description></item>
+        /// <item><description><para>DAILY: daily. The data is consistent with the bills aggregated by day in the User Center.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You must set the <b>BillingDate</b> parameter before you can set the Granularity parameter to DAILY.</para>
+        /// <para>If you set this parameter to DAILY, you must also specify <b>BillingDate</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DAILY</para>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The number of entries page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAVz7BQqj2xtiNSC3d3RAD38=</para>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The service instance ID.</para>
+        /// <para>The ID of the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-49793f3bfa034ec6a990</para>

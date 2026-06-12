@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceProvisionsRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters configured for the service instance.</para>
+        /// <para>The parameters for deploying the user instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-hangzhou-g\&quot;,\&quot;EcsInstanceType\&quot;:\&quot;ecs.g5.large\&quot;,\&quot;InstancePassword\&quot;:\&quot;xxxxxxxx\&quot;,\&quot;PayType\&quot;:\&quot;PostPaid\&quot;,\&quot;PayPeriodUnit\&quot;:\&quot;Month\&quot;,\&quot;PayPeriod\&quot;:1}</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The version of the service.</para>
+        /// <para>The service version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,17 +54,19 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS</para>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The trial policy. Valid values:</para>
+        /// <para>The usage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Trial: Trials are supported.</description></item>
-        /// <item><description>NotTrial: Trials are not supported.</description></item>
+        /// <item><description><para>Trial: The service supports trial use.</para>
+        /// </description></item>
+        /// <item><description><para>NotTrial: The service does not support trial use.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceInstanceSubscriptionEstimateCostResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>464C8CB6-A548-5206-B83C-D32A8E43EC21</para>
@@ -20,18 +20,21 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of resource price information.</para>
+        /// <para>The list of resource price information.</para>
         /// </summary>
         [NameInMap("ResourcePrices")]
         [Validation(Required=false)]
         public List<GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePrices> ResourcePrices { get; set; }
         public class GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePrices : TeaModel {
             /// <summary>
-            /// <para>Currency. Valid values:</para>
+            /// <para>The currency. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CNY: Chinese Yuan.</description></item>
-            /// <item><description>USD: US Dollar.</description></item>
-            /// <item><description>JPY: Japanese Yen.</description></item>
+            /// <item><description><para>CNY: Chinese Yuan.</para>
+            /// </description></item>
+            /// <item><description><para>USD: US Dollar.</para>
+            /// </description></item>
+            /// <item><description><para>JPY: Japanese Yen.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public List<GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePricesDetailInfos> DetailInfos { get; set; }
             public class GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePricesDetailInfos : TeaModel {
                 /// <summary>
-                /// <para>Discount amount.</para>
+                /// <para>The discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public float? DiscountAmount { get; set; }
 
                 /// <summary>
-                /// <para>Original price.</para>
+                /// <para>The original price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>900</para>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public float? OriginalAmount { get; set; }
 
                 /// <summary>
-                /// <para>Pricing module identifier.</para>
+                /// <para>The identifier of the pricing module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>instance</para>
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public string Resource { get; set; }
 
                 /// <summary>
-                /// <para>Discounted price.</para>
+                /// <para>The discounted price.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>500</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             }
 
             /// <summary>
-            /// <para>Discount.</para>
+            /// <para>The discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public float? DiscountAmount { get; set; }
 
             /// <summary>
-            /// <para>Original price.</para>
+            /// <para>The original price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>900</para>
@@ -111,7 +114,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public float? OriginalAmount { get; set; }
 
             /// <summary>
-            /// <para>Renewal duration. The unit is specified by PeriodUnit.</para>
+            /// <para>The renewal duration. The unit is specified by PeriodUnit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public int? Period { get; set; }
 
             /// <summary>
-            /// <para>The time unit for the renewal duration, which is the unit of the Period parameter. Valid values: Month, Year. Default value: Month.</para>
+            /// <para>The unit of the renewal duration. This is the unit for the Period parameter. Valid values: Month and Year. Default value: Month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Month</para>
@@ -131,7 +134,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string PeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>Resource ARN (Aliyun Resource Name).</para>
+            /// <para>The ARN of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ecs:cn-hongkong:1488317743351199:instance/i-j6c6f3lbky38o8rpeqw2</para>
@@ -141,14 +144,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ResourceArn { get; set; }
 
             /// <summary>
-            /// <para>Promotion details.</para>
+            /// <para>The discount details.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePricesRules> Rules { get; set; }
             public class GetServiceInstanceSubscriptionEstimateCostResponseBodyResourcePricesRules : TeaModel {
                 /// <summary>
-                /// <para>Promotion description.</para>
+                /// <para>The description of the discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -158,7 +161,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Promotion name.</para>
+                /// <para>The name of the discount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -168,7 +171,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Promotion ID.</para>
+                /// <para>The discount ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1021199213</para>
@@ -180,7 +183,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             }
 
             /// <summary>
-            /// <para>Discounted price.</para>
+            /// <para>The discounted price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>

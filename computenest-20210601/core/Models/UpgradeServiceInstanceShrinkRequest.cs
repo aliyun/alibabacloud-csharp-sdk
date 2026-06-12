@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class UpgradeServiceInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that ensures the idempotence of the request. The token must be unique for each request. It can contain only ASCII characters and must be no more than 64 characters long.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. A dry run checks for issues such as permissions and the instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run for the request, but does not upgrade service instance.</description></item>
-        /// <item><description><b>false</b>: performs a dry run for the request, and upgrade service instance if the request passes the dry run.</description></item>
+        /// <item><description><para>true: Sends the request without upgrading the service instance.</para>
+        /// </description></item>
+        /// <item><description><para>false: Sends the request and upgrades the service instance after the check is passed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string DryRun { get; set; }
 
         /// <summary>
-        /// <para>The parameters required for the upgrade. This parameter is required if the destination version of the service has new parameters.</para>
+        /// <para>The parameters required for the upgrade. This is used when new parameters are added to the new service version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ \&quot;RegionId\&quot;: \&quot;cn-hangzhou\&quot;, \&quot;InstanceType\&quot;: \&quot;ecs.g5.large\&quot;}</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service instance.</para>
+        /// <para>The service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-d6ab3a63ccbb4bxxxxxx</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The destination version.</para>
+        /// <para>The service version to upgrade to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

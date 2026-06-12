@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetSkillSpaceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the SkillSpace.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ss-11111</para>
         /// </summary>
         [NameInMap("SkillSpaceId")]
         [Validation(Required=false)]

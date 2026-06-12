@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The MarketInstance ID.</para>
+        /// <para>The Alibaba Cloud Marketplace instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>704***59</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The service instance ID.</para>
         /// <remarks>
-        /// <para> You must specify either <c>ServiceInstanceId</c> or <c>MarketInstanceId</c>. Otherwise, the operation fails.</para>
+        /// <para>You must specify either <c>ServiceInstanceId</c> or <c>MarketInstanceId</c> to query the detailed information about the service instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

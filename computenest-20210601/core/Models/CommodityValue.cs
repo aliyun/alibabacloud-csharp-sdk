@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class CommodityValue : TeaModel {
         /// <summary>
-        /// <para>The result model.</para>
+        /// <para>The Result model.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CommodityValueResult Result { get; set; }
         public class CommodityValueResult : TeaModel {
             /// <summary>
-            /// <para>The information about the order.</para>
+            /// <para>The order information.</para>
             /// </summary>
             [NameInMap("Order")]
             [Validation(Required=false)]
             public CommodityValueResultOrder Order { get; set; }
             public class CommodityValueResultOrder : TeaModel {
                 /// <summary>
-                /// <para>The code of the native currency.</para>
+                /// <para>The currency code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>Amount after the discount.</para>
+                /// <para>The amount after the discount is applied.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9.99</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 public string DiscountAmount { get; set; }
 
                 /// <summary>
-                /// <para>Amount before the discount.</para>
+                /// <para>The original amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>11.98</para>
@@ -66,10 +66,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             }
 
             /// <summary>
-            /// <para>The RFQ type. Valid values:</para>
+            /// <para>The inquiry type. Valid values:</para>
             /// <ol>
-            /// <item><description>Buy: price inquiry for new resources.</description></item>
-            /// <item><description>ModificationBuy: price inquiry for resource configuration changes.</description></item>
+            /// <item><description><para>Buy: an inquiry for a new purchase.</para>
+            /// </description></item>
+            /// <item><description><para>ModificationBuy: an inquiry for an upgrade or downgrade.</para>
+            /// </description></item>
             /// </ol>
             /// 
             /// <b>Example:</b>
@@ -80,21 +82,21 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string InquiryType { get; set; }
 
             /// <summary>
-            /// <para>The order sub-items.</para>
+            /// <para>The sub-orders.</para>
             /// </summary>
             [NameInMap("SubOrders")]
             [Validation(Required=false)]
             public CommodityValueResultSubOrders SubOrders { get; set; }
             public class CommodityValueResultSubOrders : TeaModel {
                 /// <summary>
-                /// <para>The order sub-item.</para>
+                /// <para>The sub-orders.</para>
                 /// </summary>
                 [NameInMap("SubOrder")]
                 [Validation(Required=false)]
                 public List<CommodityValueResultSubOrdersSubOrder> SubOrder { get; set; }
                 public class CommodityValueResultSubOrdersSubOrder : TeaModel {
                     /// <summary>
-                    /// <para>The information about the module (instance).</para>
+                    /// <para>The module or instance information.</para>
                     /// </summary>
                     [NameInMap("ModuleInstance")]
                     [Validation(Required=false)]
@@ -114,7 +116,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                         /// <para>The module name.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Rds</para>
+                        /// <para>数据库类型</para>
                         /// </summary>
                         [NameInMap("ModuleName")]
                         [Validation(Required=false)]
@@ -131,7 +133,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                         public string ModuleCode { get; set; }
 
                         /// <summary>
-                        /// <para>The original price (RMB).</para>
+                        /// <para>The original price of the product, in CNY.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>10.00</para>
@@ -141,7 +143,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                         public double? TotalProductFee { get; set; }
 
                         /// <summary>
-                        /// <para>The discount amount (RMB).</para>
+                        /// <para>The discount, in CNY.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1.99</para>
@@ -151,7 +153,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                         public double? DiscountFee { get; set; }
 
                         /// <summary>
-                        /// <para>The amount actually paid (RMB).</para>
+                        /// <para>The amount payable, in CNY.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>8.01</para>
@@ -164,14 +166,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                         /// <para>The unit of the price.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Yuan/GB/hour</para>
+                        /// <para>元/GB/小时</para>
                         /// </summary>
                         [NameInMap("PriceUnit")]
                         [Validation(Required=false)]
                         public string PriceUnit { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the item is billed.</para>
+                        /// <para>Indicates whether the module is a billing item.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -181,7 +183,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                         public bool? IsPricingModule { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the order is paid.</para>
+                        /// <para>Indicates whether payment is required for the module in the order.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -208,12 +210,16 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                         public List<CommodityValueResultSubOrdersSubOrderModuleInstanceModuleAttrs> ModuleAttrs { get; set; }
                         public class CommodityValueResultSubOrdersSubOrderModuleInstanceModuleAttrs : TeaModel {
                             /// <summary>
-                            /// <para>The type of the attribute. Valid values:</para>
+                            /// <para>The attribute type. Valid values:</para>
                             /// <ol>
-                            /// <item><description>1: product</description></item>
-                            /// <item><description>2\. specifications</description></item>
-                            /// <item><description>3: module</description></item>
-                            /// <item><description>4: external parameters (backup)</description></item>
+                            /// <item><description><para>1: product attribute</para>
+                            /// </description></item>
+                            /// <item><description><para>2: specification attribute</para>
+                            /// </description></item>
+                            /// <item><description><para>3: module attribute</para>
+                            /// </description></item>
+                            /// <item><description><para>4: external parameter (reserved)</para>
+                            /// </description></item>
                             /// </ol>
                             /// 
                             /// <b>Example:</b>
@@ -266,20 +272,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                         }
 
                         /// <summary>
-                        /// <para>Module English name.</para>
+                        /// <para>The English name of the module.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>data unit</para>
+                        /// <para>数据单元</para>
                         /// </summary>
                         [NameInMap("ModuleNameEn")]
                         [Validation(Required=false)]
                         public string ModuleNameEn { get; set; }
 
                         /// <summary>
-                        /// <para>Price Unit English Name</para>
+                        /// <para>The English name of the price unit.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Yuan/Month</para>
+                        /// <para>元/月</para>
                         /// </summary>
                         [NameInMap("PriceUnitEn")]
                         [Validation(Required=false)]
@@ -312,7 +318,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 /// <para>The description of the coupon.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CNY 10 coupon (valid until September 8, 2024)</para>
+                /// <para>10元优惠券（有效期至2024年9月8日）</para>
                 /// </summary>
                 [NameInMap("CouponDesc")]
                 [Validation(Required=false)]
@@ -322,14 +328,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
                 /// <para>The name of the coupon.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>CNY 10 coupon</para>
+                /// <para>10元优惠券</para>
                 /// </summary>
                 [NameInMap("CouponName")]
                 [Validation(Required=false)]
                 public string CouponName { get; set; }
 
                 /// <summary>
-                /// <para>The coupon ID.</para>
+                /// <para>The coupon number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50008800000xxxx</para>

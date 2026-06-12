@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The token to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resources.</para>
+        /// <para>The list of resources.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
@@ -69,8 +69,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Subscription</description></item>
-            /// <item><description>PayAsYouGo</description></item>
+            /// <item><description><para>Subscription: subscription.</para>
+            /// </description></item>
+            /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service.</para>
+            /// <para>The product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud service.</para>
+            /// <para>The product type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -101,11 +103,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The renewal state. Valid values:</para>
+            /// <para>The renewal status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AutoRenewal</description></item>
-            /// <item><description>ManualRenewal</description></item>
-            /// <item><description>NotRenewal</description></item>
+            /// <item><description><para>AutoRenewal: auto-renewal.</para>
+            /// </description></item>
+            /// <item><description><para>ManualRenewal: manual renewal.</para>
+            /// </description></item>
+            /// <item><description><para>NotRenewal: no renewal.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,8 +133,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The unit of the renewal period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Month</description></item>
-            /// <item><description>Year</description></item>
+            /// <item><description><para>Month: month.</para>
+            /// </description></item>
+            /// <item><description><para>Year: year.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,14 +157,17 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ResourceARN { get; set; }
 
             /// <summary>
-            /// <para>The state of the resource. Valid values:</para>
+            /// <para>The status of the resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>running</description></item>
-            /// <item><description>waiting</description></item>
-            /// <item><description>terminated</description></item>
+            /// <item><description><para>running: The resource is running.</para>
+            /// </description></item>
+            /// <item><description><para>waiting: The resource is pending.</para>
+            /// </description></item>
+            /// <item><description><para>terminated: The resource is terminated.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is returned only for containers.</para>
+            /// <para>This parameter is returned only for container resources.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GenerateServicePolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The policies that are missing.</para>
+        /// <para>The missing access policies.</para>
         /// </summary>
         [NameInMap("MissingPolicy")]
         [Validation(Required=false)]
         public List<GenerateServicePolicyResponseBodyMissingPolicy> MissingPolicy { get; set; }
         public class GenerateServicePolicyResponseBodyMissingPolicy : TeaModel {
             /// <summary>
-            /// <para>Operations on specific resources.</para>
+            /// <para>The access policy information.</para>
             /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public List<string> Action { get; set; }
 
             /// <summary>
-            /// <para>The specific objects authorized. An asterisk (*) denotes all resources.</para>
+            /// <para>The object to which the permissions are granted. An asterisk (\*) indicates all resources.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>The name of the service.</para>
+            /// <para>The name of the service to which the access policy belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The RAM policy.</para>
+        /// <para>The required access policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{Statement&quot;: [{ &quot;Action&quot;: [&quot;oos:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;</em>&quot;},{ &quot;Action&quot;: [&quot;ecs:DescribeInstances&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;<em>&quot;},{ &quot;Action&quot;: [&quot;ecs:RunInstance&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: &quot;</em>&quot;}], &quot;Version&quot;: &quot;1&quot;}</para>

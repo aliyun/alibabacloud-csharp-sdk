@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceTemplateParameterConstraintsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client for each request. The token can contain only ASCII characters and cannot be more than 64 characters long.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the service instance.</para>
+        /// <para>The deployment region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string DeployRegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the private connection. Valid values:</para>
+        /// <para>Indicates whether PrivateLink is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: enabled</para>
+        /// </description></item>
+        /// <item><description><para>false: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,9 +54,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public List<GetServiceTemplateParameterConstraintsRequestParameters> Parameters { get; set; }
         public class GetServiceTemplateParameterConstraintsRequestParameters : TeaModel {
             /// <summary>
-            /// <para>The name of the parameter. If you do not specify Parameters, the parameters and values in the template are used.</para>
+            /// <para>The name of the parameter. If you do not specify the name and value of the parameter, Resource Orchestration Service (ROS) uses the default value that is specified in the template.</para>
             /// <remarks>
-            /// <para> Parameters is an optional parameter. ParameterKey is required if you specify Parameters.</para>
+            /// <para>The Parameters parameter is optional. If you specify Parameters, ParameterKey is required.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -65,9 +67,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// <para>The parameter value that is defined in the template.</para>
+            /// <para>The value of the parameter that is defined in the template.</para>
             /// <remarks>
-            /// <para> Parameters is an optional parameter. ParameterValue is required if you specify Parameters.</para>
+            /// <para>The Parameters parameter is optional. If you specify Parameters, ParameterValue is required.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -122,10 +124,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the specification package.</para>
+        /// <para>The specification name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>套餐一</para>
+        /// <para>Package 1</para>
         /// </summary>
         [NameInMap("SpecificationName")]
         [Validation(Required=false)]
@@ -136,17 +138,19 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>模板1</para>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The trial policy. Valid values:</para>
+        /// <para>The usage type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Trial: Trials are supported.</description></item>
-        /// <item><description>NotTrial: Trials are not supported.</description></item>
+        /// <item><description><para>Trial: The service supports a trial.</para>
+        /// </description></item>
+        /// <item><description><para>NotTrial: The service does not support a trial.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

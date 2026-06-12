@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token to retrieve the next page of results. Set this parameter to the \<c>NextToken\\</c> value from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -40,9 +40,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service: service</description></item>
-        /// <item><description>serviceinstance: service instance</description></item>
-        /// <item><description>artifact: deployment package</description></item>
+        /// <item><description><para>service: a service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: a service instance.</para>
+        /// </description></item>
+        /// <item><description><para>artifact: an artifact.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string BackupId { get; set; }
 
         /// <summary>
-        /// <para>The creation time of the backup task.</para>
+        /// <para>The time when the backup was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-20T00:00:00Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The description of the backup task.</para>
+        /// <para>The backup description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No description</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The end time of the backup task.</para>
+        /// <para>The time when the backup ended.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-01T12:00:00</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The update time of the backup task.</para>
+        /// <para>The time when the backup was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-10T19:26:20Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-b58c874912fc4294****</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the backup task.</para>
+        /// <para>The time when the backup started.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-01-01T11:00:00</para>
@@ -90,14 +90,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the backup task.</para>
+        /// <para>The status.</para>
         /// <list type="bullet">
-        /// <item><description>Creating</description></item>
-        /// <item><description>Created</description></item>
-        /// <item><description>CreateFailed</description></item>
-        /// <item><description>Deleting</description></item>
-        /// <item><description>Deleted</description></item>
-        /// <item><description>DeleteFailed</description></item>
+        /// <item><description><para>Creating: The backup is being created.</para>
+        /// </description></item>
+        /// <item><description><para>Created: The backup is created.</para>
+        /// </description></item>
+        /// <item><description><para>CreateFailed: The backup failed to be created.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting: The backup is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para>Deleted: The backup is deleted.</para>
+        /// </description></item>
+        /// <item><description><para>DeleteFailed: The backup failed to be deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The description of the deployment instance status.</para>
+        /// <para>The detailed status of the deployment instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Disk i-xxxx backup failed, error message: error</para>

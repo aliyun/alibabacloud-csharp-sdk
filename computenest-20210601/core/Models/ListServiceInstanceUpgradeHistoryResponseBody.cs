@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListServiceInstanceUpgradeHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned per page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI41</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The upgrade history.</para>
+        /// <para>The upgrade history records.</para>
         /// </summary>
         [NameInMap("UpgradeHistory")]
         [Validation(Required=false)]
         public List<ListServiceInstanceUpgradeHistoryResponseBodyUpgradeHistory> UpgradeHistory { get; set; }
         public class ListServiceInstanceUpgradeHistoryResponseBodyUpgradeHistory : TeaModel {
             /// <summary>
-            /// <para>The time when the update ended.</para>
+            /// <para>The time when the upgrade ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-26T09:09:51Z</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string FromVersion { get; set; }
 
             /// <summary>
-            /// <para>The upgrade result.</para>
+            /// <para>The upgrade results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;PreUpgradeExecutionId\&quot;:\&quot;exec-123\&quot;}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Results { get; set; }
 
             /// <summary>
-            /// <para>The time when the update started.</para>
+            /// <para>The time when the upgrade started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-26T08:09:51Z</para>
@@ -97,11 +97,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the update. Valid values:</para>
+            /// <para>The status of the upgrade. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>upgrading: The service instance is being upgraded.</description></item>
-            /// <item><description>UpgradeSuccessful: The service instance is upgraded.</description></item>
-            /// <item><description>UpgradeFailed: The service instance failed to be upgraded.</description></item>
+            /// <item><description><para>upgrading</para>
+            /// </description></item>
+            /// <item><description><para>UpgradeSuccessful</para>
+            /// </description></item>
+            /// <item><description><para>UpgradeFailed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,7 +125,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ToVersion { get; set; }
 
             /// <summary>
-            /// <para>The update type.</para>
+            /// <para>The type of upgrade. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Upgrade</para>
+            /// </description></item>
+            /// <item><description><para>Rollback</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Upgrade</para>
@@ -132,7 +141,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The ID of the upgrade record.</para>
+            /// <para>The ID of the upgrade history.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exec-123</para>

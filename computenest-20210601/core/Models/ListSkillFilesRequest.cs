@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListSkillFilesRequest : TeaModel {
+        /// <summary>
+        /// <para>The filter conditions.</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListSkillFilesRequestFilter> Filter { get; set; }
         public class ListSkillFilesRequestFilter : TeaModel {
             /// <summary>
+            /// <para>No filter names are currently supported.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111111</para>
             /// </summary>
@@ -21,6 +26,9 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The filter values. You can specify 1 to 10 values.</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -36,6 +46,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that was returned from a previous call to this operation. Use this token to retrieve the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAVz7BQqj2xtiNSC3d3RAD38=</para>
         /// </summary>
@@ -44,7 +56,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Skill ID</para>
+        /// <para>The ID of the Skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

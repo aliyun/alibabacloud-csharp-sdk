@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ContinueDeployServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. A dry run checks items such as permissions and the instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run for the request, but does not create a service instance.</description></item>
-        /// <item><description>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</description></item>
+        /// <item><description><para>true: performs a dry run to check the request. The service instance is not deployed.</para>
+        /// </description></item>
+        /// <item><description><para>false: sends a regular request. If the request passes the check, the service instance is deployed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,14 +36,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The options that the system adopts when the system continues to create the service instance.</para>
+        /// <para>The recreation options.</para>
         /// </summary>
         [NameInMap("Option")]
         [Validation(Required=false)]
         public List<string> Option { get; set; }
 
         /// <summary>
-        /// <para>The parameters configured for the service instance.</para>
+        /// <para>The configuration parameters of the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</para>

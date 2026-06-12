@@ -10,20 +10,15 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GenerateServicePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The type of operation N for which you want to generate the policy information.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CreateServiceInstance: creates a serviceInstance by calling the CreateServiceInstance operation.</description></item>
-        /// <item><description>UpdateServiceInstance: updates a serviceInstance by calling the UpdateServiceInstance operation.</description></item>
-        /// <item><description>DeleteServiceInstance: deletes a serviceInstance by calling the DeleteServiceInstance operation.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> The default value is the combination of all valid values.</para>
-        /// </remarks>
+        /// <para>The types of operations for which to generate policy information.</para>
         /// </summary>
         [NameInMap("OperationTypes")]
         [Validation(Required=false)]
         public List<string> OperationTypes { get; set; }
+
+        [NameInMap("Parameters")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
@@ -58,20 +53,22 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the template.</para>
+        /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>GPU-单机版</para>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The trial policy. Valid values:</para>
+        /// <para>The trial type. The default value is NotTrial. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Trial: Trials are supported.</description></item>
-        /// <item><description>NotTrial: Trials are not supported.</description></item>
+        /// <item><description><para>Trial: The service supports trial use.</para>
+        /// </description></item>
+        /// <item><description><para>NotTrial: The service does not support trial use.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

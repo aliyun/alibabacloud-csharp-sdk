@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The parameters required for the upgrade. This parameter is returned only if DryRun is set to true in the request. You can specify the required parameters based on the returned value when you perform an actual request.</para>
+        /// <para>The new parameters required for the service upgrade. This parameter is returned only when DryRun is set to true. Include these parameters in the request when you perform the upgrade.</para>
         /// </summary>
         [NameInMap("UpgradeRequiredParameters")]
         [Validation(Required=false)]

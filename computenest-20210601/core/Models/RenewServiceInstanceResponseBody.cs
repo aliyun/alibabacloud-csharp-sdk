@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class RenewServiceInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BB58FE53-ED8F-5D12-9746-CD3A5F463D95</para>
         /// </summary>

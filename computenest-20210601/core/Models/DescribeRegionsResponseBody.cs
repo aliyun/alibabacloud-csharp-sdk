@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The available regions.</para>
+        /// <para>The list of available regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>The region endpoint.</para>
+            /// <para>The endpoint of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>computenest.cn-hangzhou.aliyuncs.com</para>

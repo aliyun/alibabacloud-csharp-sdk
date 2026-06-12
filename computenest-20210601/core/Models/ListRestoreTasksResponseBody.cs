@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListRestoreTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records returned in this request.</para>
+        /// <para>The maximum number of entries returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Indicates the read position returned by the current call. An empty value means all data has been read.</para>
+        /// <para>The token that is used to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>464C8CB6-A548-5206-B83C-D32A8E43EC21</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of restore tasks.</para>
+        /// <para>The list of restore jobs.</para>
         /// </summary>
         [NameInMap("RestoreTasks")]
         [Validation(Required=false)]
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string BackupId { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the job was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-09-07T11:37:37Z</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the service instance.</para>
+            /// <para>The time when the restore job ended.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-27T18:00:00Z</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the job was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-07T12:16:16Z</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the restore task.</para>
+            /// <para>The ID of the restore job.</para>
             /// 
             /// <b>Example:</b>
             /// <para>restore-xxxxxx</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ServiceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the update started.</para>
+            /// <para>The time when the restore job started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-27T16:00:00Z</para>
@@ -120,9 +120,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The status of the service instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Restoring</description></item>
-            /// <item><description>Restored</description></item>
-            /// <item><description>RestoreFailed</description></item>
+            /// <item><description><para>Restoring: The service instance is being restored.</para>
+            /// </description></item>
+            /// <item><description><para>Restored: The service instance was restored.</para>
+            /// </description></item>
+            /// <item><description><para>RestoreFailed: The service instance failed to be restored.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The description of the service instance deployment information.</para>
+            /// <para>The details of the instance status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-xxxx  failed, error message: error</para>
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>Total data count under the current request conditions (optional; not returned by default).</para>
+        /// <para>The total number of entries that meet the filter criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

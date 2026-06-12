@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class StartServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value on your client. This value can contain only ASCII characters and must be no more than 64 characters long.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -21,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID where the service instance resides.</para>
+        /// <para>The ID of the region where the service instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,6 +32,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 
         /// <summary>
         /// <para>The ID of the service instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

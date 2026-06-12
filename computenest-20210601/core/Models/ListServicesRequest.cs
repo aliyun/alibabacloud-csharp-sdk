@@ -17,12 +17,16 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public List<ListServicesRequestFilter> Filter { get; set; }
         public class ListServicesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</para>
+            /// <para>The filter name. You can specify one or more filter names to query services. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ServiceId: the ID of the service.</description></item>
-            /// <item><description>Name: the name of the service.</description></item>
-            /// <item><description>Status: the state of the service.</description></item>
-            /// <item><description>SupplierName: the name of the service provider.</description></item>
+            /// <item><description><para>ServiceId: The service ID.</para>
+            /// </description></item>
+            /// <item><description><para>Name: The service name.</para>
+            /// </description></item>
+            /// <item><description><para>Status: The service status.</para>
+            /// </description></item>
+            /// <item><description><para>SupplierName: The service provider name.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>A value of the filter condition.</para>
+            /// <para>The filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>Keyword fuzzy query.</para>
+        /// <para>The keyword for a fuzzy query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -52,11 +56,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string FuzzyKeyword { get; set; }
 
         /// <summary>
-        /// <para>Whether it is used. Optional values:</para>
+        /// <para>Specifies whether the service is in use. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>false: not being used.</para>
+        /// <item><description><para>false: The service is not in use.</para>
         /// </description></item>
-        /// <item><description><para>true: already in use.</para>
+        /// <item><description><para>true: The service is in use.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -68,7 +72,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public bool? InUsed { get; set; }
 
         /// <summary>
-        /// <para>The number of entries page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token that is used to retrieve the next page of results. Set this to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBBAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Service ordering type.</para>
+        /// <para>The sorting type for services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UpdateTime</para>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Service access type.</para>
+        /// <para>The service access type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>All</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string ServiceAccessType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The custom tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

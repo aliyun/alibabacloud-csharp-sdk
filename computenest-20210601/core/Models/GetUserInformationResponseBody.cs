@@ -17,10 +17,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public GetUserInformationResponseBodyDeliverySettings DeliverySettings { get; set; }
         public class GetUserInformationResponseBodyDeliverySettings : TeaModel {
             /// <summary>
-            /// <para>Indicates whether screencast delivery to OSS is enabled. Valid values:</para>
+            /// <para>Specifies whether to use the delivery feature. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +43,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether screencast delivery to Object Storage Service (OSS) is enabled. Valid values:</para>
+            /// <para>Specifies whether to deliver data to Object Storage Service (OSS). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public bool? OssEnabled { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which the screencasts are saved.</para>
+            /// <para>The number of days to save screen recordings.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public long? OssExpirationDays { get; set; }
 
             /// <summary>
-            /// <para>The OSS path.</para>
+            /// <para>The path in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/test</para>

@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
     public class ListTagValuesRequest : TeaModel {
         /// <summary>
         /// <para>The tag key.</para>
-        /// <remarks>
-        /// <para> This parameter is required.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,7 +21,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfmTH5rcd4YFfob4P0uDAAc=</para>
@@ -47,10 +44,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <summary>
         /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service: service</description></item>
-        /// <item><description>serviceinstance: service instance</description></item>
-        /// <item><description>artifact: artifact</description></item>
-        /// <item><description>dataset: dataset</description></item>
+        /// <item><description><para>service: service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: service instance.</para>
+        /// </description></item>
+        /// <item><description><para>artifact: deployment.</para>
+        /// </description></item>
+        /// <item><description><para>dataset: dataset.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

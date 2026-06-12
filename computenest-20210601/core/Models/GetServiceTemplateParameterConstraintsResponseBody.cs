@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class GetServiceTemplateParameterConstraintsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The package family constraints.</para>
+        /// <para>The constraints on the specification family.</para>
         /// </summary>
         [NameInMap("FamilyConstraints")]
         [Validation(Required=false)]
         public List<string> FamilyConstraints { get; set; }
 
         /// <summary>
-        /// <para>The constraints on the parameters.</para>
+        /// <para>The parameter constraints.</para>
         /// </summary>
         [NameInMap("ParameterConstraints")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public List<string> AllowedValues { get; set; }
 
             /// <summary>
-            /// <para>The names of the associated parameters.</para>
+            /// <para>The associated parameters.</para>
             /// </summary>
             [NameInMap("AssociationParameterNames")]
             [Validation(Required=false)]
@@ -40,12 +40,15 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The behavior of the parameter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NoLimit: No limit is imposed on the value of this parameter.</description></item>
-            /// <item><description>NotSupport: The value of this parameter cannot be queried.</description></item>
-            /// <item><description>QueryError: This parameter failed to be queried.</description></item>
+            /// <item><description><para>NoLimit: No limits are imposed on the value of this parameter.</para>
+            /// </description></item>
+            /// <item><description><para>NotSupport: The values of this parameter cannot be queried.</para>
+            /// </description></item>
+            /// <item><description><para>QueryError: The query failed.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If AllowedValues is not returned, Behavior and BehaviorReason are returned, which indicate the behavior of the parameter and the reason for the behavior.</para>
+            /// <para>If AllowedValues is not returned, Behavior and BehaviorReason are returned to describe the behavior of the parameter and the reason.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Behavior { get; set; }
 
             /// <summary>
-            /// <para>The reason why the behavior of the parameter is returned.</para>
+            /// <para>The reason for the parameter behavior.</para>
             /// 
             /// <b>Example:</b>
             /// <para>No resource property refer to the parameter</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string BehaviorReason { get; set; }
 
             /// <summary>
-            /// <para>The original constraint information.</para>
+            /// <para>The original constraints.</para>
             /// </summary>
             [NameInMap("OriginalConstraints")]
             [Validation(Required=false)]
@@ -122,14 +125,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// <para>The error details that are returned if the request fails.</para>
+            /// <para>The details of the query failure.</para>
             /// </summary>
             [NameInMap("QueryErrors")]
             [Validation(Required=false)]
             public List<GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> QueryErrors { get; set; }
             public class GetServiceTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors : TeaModel {
                 /// <summary>
-                /// <para>The error message.</para>
+                /// <para>The error details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>record not exist</para>
@@ -161,7 +164,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             }
 
             /// <summary>
-            /// <para>The data type of the parameter.</para>
+            /// <para>The type of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>String</para>
