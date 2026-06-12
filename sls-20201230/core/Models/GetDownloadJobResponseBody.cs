@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetDownloadJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>下载配置</para>
+        /// <para>The download configuration.</para>
         /// </summary>
         [NameInMap("configuration")]
         [Validation(Required=false)]
         public GetDownloadJobResponseBodyConfiguration Configuration { get; set; }
         public class GetDownloadJobResponseBodyConfiguration : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to allow downloading incomplete data.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? AllowInComplete { get; set; }
 
             /// <summary>
-            /// <para>起点时间戳（精确到秒）</para>
+            /// <para>The start time of the download task. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1722409860</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? FromTime { get; set; }
 
             /// <summary>
-            /// <para>源logstore</para>
+            /// <para>The source Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ali-test-logstore</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>是否启用powerSql</para>
+            /// <para>Specifies whether to enable PowerSQL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? PowerSql { get; set; }
 
             /// <summary>
-            /// <para>查询语句</para>
+            /// <para>The search statement.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -67,14 +69,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>导出配置</para>
+            /// <para>The export configuration.</para>
             /// </summary>
             [NameInMap("sink")]
             [Validation(Required=false)]
             public GetDownloadJobResponseBodyConfigurationSink Sink { get; set; }
             public class GetDownloadJobResponseBodyConfigurationSink : TeaModel {
                 /// <summary>
-                /// <para>对象存储桶</para>
+                /// <para>The Object Storage Service (OSS) bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ali-test-oss-bucket</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// <para>压缩格式</para>
+                /// <para>The compression format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>none</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string CompressionType { get; set; }
 
                 /// <summary>
-                /// <para>下载文件格式</para>
+                /// <para>The file format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>csv</para>
@@ -104,6 +106,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string ContentType { get; set; }
 
                 /// <summary>
+                /// <para>The prefix of the file that is saved to the bucket.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>download/</para>
                 /// </summary>
@@ -112,7 +116,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Prefix { get; set; }
 
                 /// <summary>
-                /// <para>下载使用roleArn</para>
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role that is used for the download.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:ram::0123456789:role/aliyunlogdefaultrole</para>
@@ -122,6 +126,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string RoleArn { get; set; }
 
                 /// <summary>
+                /// <para>The value is fixed to AliyunOSS.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>AliyunOSS</para>
                 /// </summary>
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
-            /// <para>结束时间戳（精确到秒）</para>
+            /// <para>The end time of the download task. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1722411060</para>
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// <para>代表创建时间的资源属性字段</para>
+        /// <para>The time when the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1722411060</para>
@@ -154,7 +160,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>任务描述</para>
+        /// <para>The description of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a download job</para>
@@ -164,7 +170,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>任务显示名称</para>
+        /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download-123456</para>
@@ -174,13 +180,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>任务执行细节</para>
+        /// <para>The execution details.</para>
         /// </summary>
         [NameInMap("executionDetails")]
         [Validation(Required=false)]
         public GetDownloadJobResponseBodyExecutionDetails ExecutionDetails { get; set; }
         public class GetDownloadJobResponseBodyExecutionDetails : TeaModel {
             /// <summary>
+            /// <para>The ETag of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>EXSFGSDASDASDG123ASD</para>
             /// </summary>
@@ -189,7 +197,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string CheckSum { get; set; }
 
             /// <summary>
-            /// <para>下载错误信息</para>
+            /// <para>The error message if the download fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>timeout</para>
@@ -199,7 +207,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>下载执行时间</para>
+            /// <para>The duration of the download task in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -209,7 +217,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? ExecuteTime { get; set; }
 
             /// <summary>
-            /// <para>下载结果链接</para>
+            /// <para>The URL of the download result.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.csv.zst?xxx">https://xxx.csv.zst?xxx</a></para>
@@ -219,7 +227,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>下载文件大小</para>
+            /// <para>The size of the downloaded file in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -229,7 +237,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// <para>下载日志条数</para>
+            /// <para>The number of downloaded log entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -238,12 +246,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public long? LogCount { get; set; }
 
+            /// <summary>
+            /// <para>Notification text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("notice")]
             [Validation(Required=false)]
             public string Notice { get; set; }
 
             /// <summary>
-            /// <para>下载进度</para>
+            /// <para>The download progress.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -255,7 +269,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// <para>代表资源名称的资源属性字段</para>
+        /// <para>The name of the download task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>download-123</para>
@@ -265,10 +279,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The status of the log download task.</para>
+        /// <para>The status of the download task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>running</para>
+        /// <para>STARTING、RUNNING、SUCCEEDED、ERROR</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

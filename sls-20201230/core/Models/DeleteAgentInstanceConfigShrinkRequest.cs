@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class DeleteAgentInstanceConfigShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The process to which the configuration applies.</para>
+        /// </summary>
         [NameInMap("attributes")]
         [Validation(Required=false)]
         public string AttributesShrink { get; set; }

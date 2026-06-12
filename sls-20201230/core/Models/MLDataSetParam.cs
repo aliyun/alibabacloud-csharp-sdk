@@ -51,6 +51,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The description of the dataset.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>数据集A</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

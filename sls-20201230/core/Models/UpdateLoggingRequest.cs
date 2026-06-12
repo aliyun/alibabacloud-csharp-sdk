@@ -31,14 +31,22 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <summary>
             /// <para>The type of service logs. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>consumergroup_log: the consumption delay logs of consumer groups.</description></item>
-            /// <item><description>logtail_alarm: the alert logs of Logtail.</description></item>
-            /// <item><description>operation_log: the operation logs.</description></item>
-            /// <item><description>logtail_profile: the collection logs of Logtail.</description></item>
-            /// <item><description>metering: the metering logs.</description></item>
-            /// <item><description>logtail_status: the status logs of Logtail.</description></item>
-            /// <item><description>scheduledsqlalert: the operational logs of Scheduled SQL jobs.</description></item>
-            /// <item><description>etl_alert: the operational logs of data transformation jobs.</description></item>
+            /// <item><description><para>consumergroup_log: the consumption delay logs of consumer groups.</para>
+            /// </description></item>
+            /// <item><description><para>logtail_alarm: the alert logs of Logtail.</para>
+            /// </description></item>
+            /// <item><description><para>operation_log: the operation logs.</para>
+            /// </description></item>
+            /// <item><description><para>logtail_profile: the collection logs of Logtail.</para>
+            /// </description></item>
+            /// <item><description><para>metering: the metering logs.</para>
+            /// </description></item>
+            /// <item><description><para>logtail_status: the status logs of Logtail.</para>
+            /// </description></item>
+            /// <item><description><para>scheduledsqlalert: the operational logs of Scheduled SQL jobs.</para>
+            /// </description></item>
+            /// <item><description><para>etl_alert: the operational logs of data transformation jobs.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

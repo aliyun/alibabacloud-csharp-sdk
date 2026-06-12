@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetAgentInstanceConfigShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The owner of the process-level configuration.</para>
+        /// </summary>
         [NameInMap("attributes")]
         [Validation(Required=false)]
         public string AttributesShrink { get; set; }

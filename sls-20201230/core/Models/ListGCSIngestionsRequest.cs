@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListGCSIngestionsRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the Logstore.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
+        /// <para>The position from which to start returning results. The default value is 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
+        /// <para>The number of results to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

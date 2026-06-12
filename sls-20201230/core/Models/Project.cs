@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class Project : TeaModel {
         /// <summary>
-        /// <para>The time at which the project was created.</para>
+        /// <para>The time when the project was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-07-07 14:08:09</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time at which the project was last modified.</para>
+        /// <para>The time when the project was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-18 13:30:19</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string LastModifyTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used to create the project.</para>
+        /// <para>The Alibaba Cloud account that owns the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The name of the project. The name is included in the value of the Host header. The name must be unique in a region. You cannot change the name after the project is created.</para>
+        /// <para>The name of the project. The name is a part of the endpoint. The project name must be unique in a region of Alibaba Cloud. After a project is created, its name cannot be changed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,13 +72,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>project quota</para>
+        /// <para>The quota of the project.</para>
         /// </summary>
         [NameInMap("quota")]
         [Validation(Required=false)]
         public Dictionary<string, object> Quota { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the recycle bin is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? RecycleBinEnabled { get; set; }
 
         /// <summary>
-        /// <para>The region to which the project belongs.</para>
+        /// <para>The region where the project resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -107,10 +109,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the project. Valid values:</para>
+        /// <para>The status of the project.</para>
         /// <list type="bullet">
-        /// <item><description>Normal</description></item>
-        /// <item><description>Disable</description></item>
+        /// <item><description><para>Normal: The project is in the normal state.</para>
+        /// </description></item>
+        /// <item><description><para>Disable: The project is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

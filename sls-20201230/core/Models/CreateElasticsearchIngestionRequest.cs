@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateElasticsearchIngestionRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration for the ES or OpenSearch import job.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public ESIngestionConfiguration Configuration { get; set; }
 
         /// <summary>
+        /// <para>The description of the job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>es ingestion</para>
         /// </summary>
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The display name of the job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the ES or OpenSearch import job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +49,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The schedule structure.</para>
+        /// </summary>
         [NameInMap("schedule")]
         [Validation(Required=false)]
         public Schedule Schedule { get; set; }

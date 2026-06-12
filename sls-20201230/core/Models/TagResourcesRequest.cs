@@ -20,11 +20,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>logstore</description></item>
-        /// <item><description>dashboard</description></item>
-        /// <item><description>machinegroup</description></item>
-        /// <item><description>logtailconfig</description></item>
+        /// <item><description><para>project</para>
+        /// </description></item>
+        /// <item><description><para>logstore</para>
+        /// </description></item>
+        /// <item><description><para>dashboard</para>
+        /// </description></item>
+        /// <item><description><para>machinegroup</para>
+        /// </description></item>
+        /// <item><description><para>logtailconfig</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,9 +51,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <summary>
             /// <para>The key of the tag. The key must meet the following requirements:</para>
             /// <list type="bullet">
-            /// <item><description>The key must be <c>1 to 128</c> characters in length.</description></item>
-            /// <item><description>The key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
-            /// <item><description>The key cannot start with <c>acs:</c> or <c>aliyun</c>.</description></item>
+            /// <item><description><para>The key must be <c>1 to 128</c> characters in length.</para>
+            /// </description></item>
+            /// <item><description><para>The key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </description></item>
+            /// <item><description><para>The key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -62,8 +70,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <summary>
             /// <para>The value of the tag. The value must meet the following requirements:</para>
             /// <list type="bullet">
-            /// <item><description>The value must be <c>1 to 128</c> characters in length.</description></item>
-            /// <item><description>The value cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description><para>The value must be <c>1 to 128</c> characters in length.</para>
+            /// </description></item>
+            /// <item><description><para>The value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The AccessKey ID that is used to grant the permissions to write data to the destination Logstore.</para>
+        /// <para>The AccessKey ID used to write to the destination Logstore.</para>
         /// </summary>
         [NameInMap("accessKeyId")]
         [Validation(Required=false)]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The AccessKey secret that is used to grant the permissions to write data to the destination Logstore.</para>
+        /// <para>The AccessKey Secret used to write to the destination Logstore.</para>
         /// </summary>
         [NameInMap("accessKeySecret")]
         [Validation(Required=false)]
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AccessKeySecret { get; set; }
 
         /// <summary>
-        /// <para>The result data to write.</para>
+        /// <para>The datasets to write to the sink.</para>
         /// </summary>
         [NameInMap("datasets")]
         [Validation(Required=false)]
         public List<string> Datasets { get; set; }
 
         /// <summary>
-        /// <para>The Simple Log Service endpoint for the region where the destination project resides.</para>
+        /// <para>The endpoint of the destination Project\&quot;s region.</para>
         /// </summary>
         [NameInMap("endpoint")]
         [Validation(Required=false)]
         public string Endpoint { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination Logstore.</para>
+        /// <para>The destination Logstore name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The name of the storage destination.</para>
+        /// <para>The sink name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination project.</para>
+        /// <para>The destination Project name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Project { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the role that is used to grant the permissions to write data to the destination Logstore.</para>
+        /// <para>The role ARN used to write to the destination Logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

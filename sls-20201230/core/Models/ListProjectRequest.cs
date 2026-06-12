@@ -13,12 +13,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to retrieve the quota information for the project.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("fetchQuota")]
         [Validation(Required=false)]
         public bool? FetchQuota { get; set; }
 
         /// <summary>
-        /// <para>The line from which the query starts. Default value: 0.</para>
+        /// <para>The line from which the query starts. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -28,7 +34,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>The name of the project. Fuzzy queries are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ali-test-project</para>
@@ -48,7 +54,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 100. This operation can return up to 500 projects.</para>
+        /// <para>The number of rows to return on each page for a paged query. The default value is 100. A maximum of 500 projects can be returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

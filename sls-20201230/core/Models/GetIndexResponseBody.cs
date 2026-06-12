@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <summary>
             /// <para>Indicates whether case sensitivity is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,8 +62,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <summary>
             /// <para>Indicates whether Chinese characters are included. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

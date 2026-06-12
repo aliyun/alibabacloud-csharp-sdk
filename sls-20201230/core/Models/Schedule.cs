@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string CronExpression { get; set; }
 
         /// <summary>
-        /// <para>The number of seconds for which the scheduled job is delayed.</para>
+        /// <para>The delay before a scheduled task is executed, in seconds (s).</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -33,14 +33,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The fixed interval.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1m/1h</para>
+        /// <para>60s</para>
         /// </summary>
         [NameInMap("interval")]
         [Validation(Required=false)]
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to run the scheduled job immediately.</para>
+        /// <para>Specifies whether to execute the scheduled task immediately.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? RunImmediately { get; set; }
 
         /// <summary>
-        /// <para>The time zone for the cron expression. This parameter is empty by default, which indicates that the time zone is UTC+8.</para>
+        /// <para>The time zone of the cron expression. If this parameter is left empty, the default time zone UTC+8 is used.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>&quot;+0800&quot;</para>
+        /// <para>+0800</para>
         /// </summary>
         [NameInMap("timeZone")]
         [Validation(Required=false)]
         public string TimeZone { get; set; }
 
         /// <summary>
-        /// <para>The scheduling type.</para>
+        /// <para>schedule type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Cron</para>
+        /// <para>FixedRate</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

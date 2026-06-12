@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class PullLogsRequest : TeaModel {
         /// <summary>
+        /// <para>The number of LogGroups to return. The value must be an integer from 1 to 1000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Count { get; set; }
 
         /// <summary>
+        /// <para>The cursor that specifies the start position from which to read data.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Cursor { get; set; }
 
         /// <summary>
+        /// <para>The cursor that specifies the end position at which to stop reading data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MTU1NzA1NzQwMTEwMjEzMDkwCg</para>
         /// </summary>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string EndCursor { get; set; }
 
         /// <summary>
-        /// <para>The SPL statement that is used to filter data. For more information, see <a href="https://help.aliyun.com/document_detail/2536530.html">SPL instructions</a>.</para>
+        /// <para>The filter statement in the Structured Process Language (SPL) syntax. For more information, see <a href="https://help.aliyun.com/document_detail/2536530.html">SPL instructions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <list type="bullet">

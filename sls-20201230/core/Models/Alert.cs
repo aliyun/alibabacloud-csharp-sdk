@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class Alert : TeaModel {
         /// <summary>
-        /// <para>The configurations of the alert rule.</para>
+        /// <para>The configuration of the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The time when the alert rule was created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1695090077</para>
         /// </summary>
         [NameInMap("createTime")]
         [Validation(Required=false)]
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The alert rule name.</para>
+        /// <para>The name of the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +50,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The time when the alert rule was last modified.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1714274900</para>
         /// </summary>
         [NameInMap("lastModifiedTime")]
         [Validation(Required=false)]
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The scheduling settings.</para>
+        /// <para>The scheduling configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("schedule")]
@@ -72,7 +78,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Schedule Schedule { get; set; }
 
         /// <summary>
-        /// <para>The alert status.</para>
+        /// <para>The status of the alert rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLED/DISABLED</para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The compression format. lz4 and gzip are supported.</para>
+        /// <para>The compression type of the logs. Valid values: lz4 and gzip.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

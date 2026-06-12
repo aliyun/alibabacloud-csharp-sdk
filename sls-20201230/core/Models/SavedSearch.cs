@@ -12,13 +12,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The display name of the saved search.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Method</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore.</para>
+        /// <para>The name of the logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +43,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string SavedsearchName { get; set; }
 
         /// <summary>
-        /// <para>The search statement or the analytic statement.</para>
+        /// <para>The search statement or analytic statement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,10 +54,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string SearchQuery { get; set; }
 
         /// <summary>
-        /// <para>The topic of the log. Default value: empty string (&quot;&quot;).</para>
+        /// <para>The topic of the log. The default value is an empty string (&quot;&quot;).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>topic</para>
+        /// <para>topic-test</para>
         /// </summary>
         [NameInMap("topic")]
         [Validation(Required=false)]

@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The name of the dataset.</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
-        /// <item><description>The name must start with a lowercase letter.</description></item>
-        /// <item><description>The name must be 3 to 62 characters in length.</description></item>
+        /// <item><description><para>The name can contain only lowercase letters, digits, and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>The name must start with a lowercase letter.</para>
+        /// </description></item>
+        /// <item><description><para>The name must be 3 to 62 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The type of the dataset. Valid values: metricstore and logstore.</para>
+        /// <para>The type of the dataset. Set this parameter to metricstore to create a Metricstore dataset. Set this parameter to logstore to create a Logstore dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string StoreType { get; set; }
 
         /// <summary>
-        /// <para>The Logstores or Metricstores.</para>
+        /// <para>A list of Logstores or Metricstores.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("stores")]

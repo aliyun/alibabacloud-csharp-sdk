@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The shard ID.</para>
         /// <list type="bullet">
-        /// <item><description>If the specified shard does not exist, an empty list is returned.</description></item>
-        /// <item><description>If no shard ID is specified, the checkpoints of all shards are returned.</description></item>
+        /// <item><description><para>If the specified shard does not exist, an empty list is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If no shard ID is specified, the checkpoints of all shards are returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateAnnotationDataSetRequest : TeaModel {
         /// <summary>
-        /// <para>The data structure of the request.</para>
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

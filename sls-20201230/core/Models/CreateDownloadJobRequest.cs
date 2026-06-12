@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class CreateDownloadJobRequest : TeaModel {
         /// <summary>
-        /// <para>下载配置</para>
+        /// <para>The download configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public CreateDownloadJobRequestConfiguration Configuration { get; set; }
         public class CreateDownloadJobRequestConfiguration : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to allow the download of incomplete results. Valid values: \<c>true\\</c> and \<c>false\\</c>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -28,7 +29,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? AllowInComplete { get; set; }
 
             /// <summary>
-            /// <para>起点时间戳（精确到秒）</para>
+            /// <para>The start time. This is a UNIX timestamp that is accurate to the second.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -39,7 +40,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? FromTime { get; set; }
 
             /// <summary>
-            /// <para>源logstore</para>
+            /// <para>The source Logstore.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -50,7 +51,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>是否启用powerSql</para>
+            /// <para>Specifies whether to enable PowerSQL. Valid values: \<c>true\\</c> and \<c>false\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -60,7 +61,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? PowerSql { get; set; }
 
             /// <summary>
-            /// <para>查询语句</para>
+            /// <para>The search statement.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -73,7 +74,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>导出配置</para>
+            /// <para>The export configuration.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("sink")]
@@ -81,7 +82,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public CreateDownloadJobRequestConfigurationSink Sink { get; set; }
             public class CreateDownloadJobRequestConfigurationSink : TeaModel {
                 /// <summary>
-                /// <para>对象存储桶</para>
+                /// <para>The destination Object Storage Service (OSS) bucket.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>oss-test-bucket</para>
@@ -91,7 +92,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Bucket { get; set; }
 
                 /// <summary>
-                /// <para>压缩格式</para>
+                /// <para>The compression format of the file. Valid values: \<c>zstd\\</c>, \<c>lz4\\</c>, \<c>gzip\\</c>, and \<c>none\\</c>.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -102,7 +103,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string CompressionType { get; set; }
 
                 /// <summary>
-                /// <para>下载文件格式</para>
+                /// <para>The format of the downloaded file. Valid values: \<c>csv\\</c> and \<c>json\\</c>.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -113,6 +114,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string ContentType { get; set; }
 
                 /// <summary>
+                /// <para>The prefix of the path in the destination OSS bucket.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>download/</para>
                 /// </summary>
@@ -121,7 +124,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string Prefix { get; set; }
 
                 /// <summary>
-                /// <para>下载使用roleArn</para>
+                /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role to use for the download.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:ram::0123456789:role/aliyunlogdefaultrole</para>
@@ -131,6 +134,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string RoleArn { get; set; }
 
                 /// <summary>
+                /// <para>The type of the destination. Set the value to \<c>AliyunOSS\\</c>.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
-            /// <para>结束时间戳（精确到秒）</para>
+            /// <para>The end time. This is a UNIX timestamp that is accurate to the second.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -156,14 +160,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
-        /// <para>任务描述</para>
+        /// <para>The description of the log download task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Log download task</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>任务显示名称</para>
+        /// <para>The display name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -174,7 +181,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>代表资源名称的资源属性字段</para>
+        /// <para>The name of the job. The name must meet the following requirements:</para>
+        /// <para>The job name must be unique within a project.</para>
+        /// <list type="bullet">
+        /// <item><description><para>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start and end with a lowercase letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>The name must be 2 to 64 characters in length.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

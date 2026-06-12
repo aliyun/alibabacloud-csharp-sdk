@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListETLsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of data transformation jobs that are returned.</para>
+        /// <para>The number of data transformation jobs returned in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public int? Count { get; set; }
 
+        /// <summary>
+        /// <para>A list of data transformation results.</para>
+        /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<ETL> Results { get; set; }

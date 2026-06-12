@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListAlertsRequest : TeaModel {
         /// <summary>
+        /// <para>The Logstore from which to obtain alert rules. The default value is empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ali-test-logstore</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
+        /// <para>The line from which to start the query. The default value is 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 200. Default value: 10.</para>
+        /// <para>The number of rows to return on each page for a paged query. The maximum value is 200. The default value is 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

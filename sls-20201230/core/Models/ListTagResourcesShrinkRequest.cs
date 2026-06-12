@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>logstore</description></item>
-        /// <item><description>dashboard</description></item>
-        /// <item><description>machinegroup</description></item>
-        /// <item><description>logtailconfig</description></item>
+        /// <item><description><para>project</para>
+        /// </description></item>
+        /// <item><description><para>logstore</para>
+        /// </description></item>
+        /// <item><description><para>dashboard</para>
+        /// </description></item>
+        /// <item><description><para>machinegroup</para>
+        /// </description></item>
+        /// <item><description><para>logtailconfig</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The description of the job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Update OSS-HDFS delivery task</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -29,7 +32,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ali-test-oss-hdfs-job</para>
+        /// <para>my-oss-hdfs-job</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]

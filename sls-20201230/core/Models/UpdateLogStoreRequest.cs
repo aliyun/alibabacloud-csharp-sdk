@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateLogStoreRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to record public IP addresses. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to record public IP addresses. Default value: false.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: records public IP addresses.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not record public IP addresses.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? AppendMeta { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic sharding. Valid values:</para>
+        /// <para>Specifies whether to automatically split a shard.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: automatically splits a shard.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not automatically split a shard.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +42,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? AutoSplit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the web tracking feature. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to enable web tracking. Default value: false.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: enables web tracking.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not enable web tracking.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,14 +58,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? EnableTracking { get; set; }
 
         /// <summary>
-        /// <para>The data structure of the encryption configuration.</para>
+        /// <para>The encryption configuration.</para>
         /// </summary>
         [NameInMap("encrypt_conf")]
         [Validation(Required=false)]
         public EncryptConf EncryptConf { get; set; }
 
         /// <summary>
-        /// <para>The retention period of data in the hot storage tier of the Logstore. Valid values: 7 to 3000. Unit: days. After the retention period that is specified for the hot storage tier elapses, the data is moved to the Infrequent Access (IA) storage tier. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Enable hot and cold-tiered storage for a Logstore</a>.</para>
+        /// <para>The retention period of data in the hot tier of the Logstore. Minimum value: 7. Unit: days. Valid values: 7 to 3000. After the retention period of the hot tier ends, the data is moved to the Infrequent Access (IA) storage class. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Automatic Storage Tiering</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -69,7 +75,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? HotTtl { get; set; }
 
         /// <summary>
-        /// <para>The retention period of data in the IA storage tier of the Logstore. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</para>
+        /// <para>The retention period for data in the IA storage class. Data in this storage class has no minimum retention period. Data must be stored for at least 30 days before it is moved to Archive storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -90,9 +96,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string LogstoreName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of shards into which existing shards can be automatically split. Valid values: 1 to 256.</para>
+        /// <para>The maximum number of shards to which a shard can be split. The value must be an integer from 1 to 256.</para>
         /// <remarks>
-        /// <para> If you set autoSplit to true, you must specify maxSplitShard.</para>
+        /// <para>This parameter is required if autoSplit is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -103,10 +109,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? MaxSplitShard { get; set; }
 
         /// <summary>
-        /// <para>The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:</para>
+        /// <para>SLS provides two types of Logstores: Standard and Query.</para>
         /// <list type="bullet">
-        /// <item><description><b>standard</b>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</description></item>
-        /// <item><description><b>query</b>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. If logs are stored for weeks or months, the log retention period is considered long.</description></item>
+        /// <item><description><para><b>standard</b>: supports one-stop data analytics. This type of Logstore is suitable for scenarios such as real-time monitoring, interactive analysis, and building a complete observability system.</para>
+        /// </description></item>
+        /// <item><description><para><b>query</b>: supports high-performance queries. The index traffic cost of a Query Logstore is about half that of a Standard Logstore. However, a Query Logstore does not support SQL analysis. This type of Logstore is suitable for scenarios that involve large data volumes, long retention periods of weeks or months, and no log analysis.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +129,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The number of shards.</para>
         /// <remarks>
-        /// <para> You cannot call the UpdateLogStore operation to change the number of shards. You can call the SplitShard or MergeShards operation to change the number of shards.</para>
+        /// <para>You cannot update the number of shards with this operation. To change the number of shards, call the SplitShard or MergeShards operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -132,6 +140,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Obsolete]
         public int? ShardCount { get; set; }
 
+        /// <summary>
+        /// <para>The hash-based write configuration.</para>
+        /// </summary>
         [NameInMap("shardingPolicy")]
         [Validation(Required=false)]
         public ShardingPolicy ShardingPolicy { get; set; }
@@ -139,10 +150,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The type of the observable data. Valid values:</para>
+        /// <para>The type of observable data. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>None (default): log data.</description></item>
-        /// <item><description>Metrics: metric data.</description></item>
+        /// <item><description><para>None: logs. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para>Metrics: metrics.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -154,7 +167,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TelemetryType { get; set; }
 
         /// <summary>
-        /// <para>The retention period of data. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, logs are permanently stored.</para>
+        /// <para>The data retention period. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, the data is permanently retained.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

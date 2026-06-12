@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListLogtailPipelineConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the Logtail pipeline configuration.</para>
+        /// <para>The name of the pipeline configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>logtail-config-sample</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string LogstoreName { get; set; }
 
         /// <summary>
-        /// <para>The line from which the query starts.</para>
+        /// <para>The line from which to start the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Offset { get; set; }
 
         /// <summary>
-        /// <para>The number of Logtail pipeline configurations per page.</para>
+        /// <para>The number of pipeline configurations to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

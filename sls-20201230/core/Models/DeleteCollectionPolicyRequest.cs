@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class DeleteCollectionPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The code of the log type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>access_log</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DataCode { get; set; }
 
         /// <summary>
+        /// <para>The code of the product.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>oss</para>
         /// </summary>

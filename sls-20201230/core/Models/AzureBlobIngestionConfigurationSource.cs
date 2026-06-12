@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class AzureBlobIngestionConfigurationSource : TeaModel {
         /// <summary>
+        /// <para>The access key for the Azure Blob Storage account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AccountKey { get; set; }
 
         /// <summary>
+        /// <para>The name of the Azure Blob Storage account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,11 +31,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
+        /// <summary>
+        /// <para>Advanced configuration options.</para>
+        /// </summary>
         [NameInMap("advancedParameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> AdvancedParameters { get; set; }
 
         /// <summary>
+        /// <para>The compression codec for the source data. Valid values are <c>none</c>, <c>snappy</c>, and <c>gzip</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +50,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string CompressionCodec { get; set; }
 
         /// <summary>
+        /// <para>The name of the container in Azure Blob Storage.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +61,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ContainerName { get; set; }
 
         /// <summary>
+        /// <para>The character encoding of the source files.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +72,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Encoding { get; set; }
 
         /// <summary>
+        /// <para>Ingests only files modified before this time, specified as a Unix timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714360481</para>
         /// </summary>
@@ -72,6 +82,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The service endpoint for Azure Blob Storage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://your-storage.blob.core.windows.net">https://your-storage.blob.core.windows.net</a></para>
         /// </summary>
@@ -80,6 +92,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// <para>The format of the source data.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("format")]
@@ -87,6 +100,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, object> Format { get; set; }
 
         /// <summary>
+        /// <para>The interval at which to check for new files to ingest.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,6 +111,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Interval { get; set; }
 
         /// <summary>
+        /// <para>A pattern used to filter files by path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>.*</para>
         /// </summary>
@@ -105,6 +121,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Pattern { get; set; }
 
         /// <summary>
+        /// <para>The file path prefix used to filter files.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prefix</para>
         /// </summary>
@@ -113,6 +131,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Prefix { get; set; }
 
         /// <summary>
+        /// <para>The ID of the processor that receives the data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ingest-processor-1756802123-953901</para>
         /// </summary>
@@ -121,6 +141,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProcessorId { get; set; }
 
         /// <summary>
+        /// <para>Ingests only files modified after this time, specified as a Unix timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714274081</para>
         /// </summary>
@@ -129,6 +151,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable context query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -137,6 +161,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? TagPackId { get; set; }
 
         /// <summary>
+        /// <para>The source field for the time value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b>time</b></para>
         /// </summary>
@@ -145,6 +171,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeField { get; set; }
 
         /// <summary>
+        /// <para>The format of the time field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yyyy-MM-dd HH:mm:ss</para>
         /// </summary>
@@ -153,6 +181,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeFormat { get; set; }
 
         /// <summary>
+        /// <para>The pattern used to extract the time value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</para>
         /// </summary>
@@ -161,6 +191,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimePattern { get; set; }
 
         /// <summary>
+        /// <para>The time zone of the time field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GMT+08:00</para>
         /// </summary>

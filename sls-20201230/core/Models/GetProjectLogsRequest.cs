@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>Specifies whether to enable the Dedicated SQL feature. For more information, see <a href="https://help.aliyun.com/document_detail/223777.html">Enable Dedicated SQL</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default): enables the Standard SQL feature.</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default): enables the Standard SQL feature.</para>
+        /// </description></item>
         /// </list>
         /// <para>You can use the powerSql or <b>query</b> parameter to configure Dedicated SQL.</para>
         /// 

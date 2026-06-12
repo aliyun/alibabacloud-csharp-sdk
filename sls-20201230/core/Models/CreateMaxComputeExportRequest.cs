@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The description of the MaxCompute data shipping job.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Create a MaxCompute delivery task</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

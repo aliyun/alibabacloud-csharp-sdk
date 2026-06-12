@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class PutConsumeProcessorRequest : TeaModel {
         /// <summary>
-        /// <para>Consumption processor configuration.</para>
+        /// <para>The configuration of the consume processor.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Filter only GET requests</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

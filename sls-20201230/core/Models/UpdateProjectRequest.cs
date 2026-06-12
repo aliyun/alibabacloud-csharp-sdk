@@ -21,12 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the recycle bin feature.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable the recycle bin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

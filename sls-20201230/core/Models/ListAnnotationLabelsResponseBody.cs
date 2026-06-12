@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListAnnotationLabelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The list of annotation label table structs.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<MLLabelParam> Data { get; set; }
 
         /// <summary>
-        /// <para>The total number of tags that meet the query conditions.</para>
+        /// <para>The total number of entries that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

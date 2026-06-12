@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class RefreshTokenResponseBody : TeaModel {
         /// <summary>
+        /// <para>The access token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJ***************.eyJ******************.KUT****************</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class AlertQuery : TeaModel {
         /// <summary>
-        /// <para>The name of the chart.</para>
+        /// <para>Chart name</para>
         /// 
         /// <b>Example:</b>
         /// <para>chartExmaple</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ChartTitle { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dashboard.</para>
+        /// <para>Dashboard ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>dashboardExample</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DashboardId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>End time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string End { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Dedicated SQL.</para>
+        /// <para>Whether to enable Dedicated SQL</para>
         /// 
         /// <b>Example:</b>
         /// <para>auto</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string PowerSqlMode { get; set; }
 
         /// <summary>
-        /// <para>The name of the project.</para>
+        /// <para>Project name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Project { get; set; }
 
         /// <summary>
-        /// <para>The query statement.</para>
+        /// <para>Query and analysis statement</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The region.</para>
+        /// <para>Region</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,14 +86,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the role.</para>
+        /// <para>Role ARN</para>
         /// </summary>
         [NameInMap("roleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>Start time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Start { get; set; }
 
         /// <summary>
-        /// <para>The name of the storage.</para>
+        /// <para>Store name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Store { get; set; }
 
         /// <summary>
-        /// <para>The storage type.</para>
+        /// <para>Store type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string StoreType { get; set; }
 
         /// <summary>
-        /// <para>The type of the time span.</para>
+        /// <para>Time span type</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeSpanType { get; set; }
 
         /// <summary>
-        /// <para>The page on which you can record frontend configurations in specified scenarios.</para>
+        /// <para>Used by the frontend for specific-scenario alerts</para>
         /// </summary>
         [NameInMap("ui")]
         [Validation(Required=false)]

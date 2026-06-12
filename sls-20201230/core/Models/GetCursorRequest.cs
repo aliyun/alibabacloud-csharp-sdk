@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetCursorRequest : TeaModel {
         /// <summary>
-        /// <para>The point in time that you want to use to query a cursor. Set the value to a UNIX timestamp or a string such as <c>begin</c> and <c>end</c>.</para>
+        /// <para>A point in time. This can be a UNIX timestamp or the string <c>begin</c> or <c>end</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

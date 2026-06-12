@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GroupConfiguration : TeaModel {
         /// <summary>
-        /// <para>The fields of group evaluation.</para>
+        /// <para>The group evaluation fields.</para>
         /// </summary>
         [NameInMap("fields")]
         [Validation(Required=false)]
         public List<string> Fields { get; set; }
 
         /// <summary>
-        /// <para>The type of group evaluation.</para>
+        /// <para>The group evaluation type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to skip for pagination. The default value is 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of OSS import tasks to return in a single request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

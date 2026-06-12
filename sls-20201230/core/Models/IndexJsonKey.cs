@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class IndexJsonKey : TeaModel {
         /// <summary>
-        /// <para>Alias.</para>
+        /// <para>The alias of the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myAlias</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>Case sensitivity.</para>
+        /// <para>Specifies whether queries on this field are case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? CaseSensitive { get; set; }
 
         /// <summary>
-        /// <para>Whether the field contains Chinese characters.</para>
+        /// <para>Specifies whether to enable Chinese tokenization for the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? Chn { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable statistics.</para>
+        /// <para>Specifies whether to enable doc_value for the field. This enables sorting, aggregation, and statistical analysis on the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? DocValue { get; set; }
 
         /// <summary>
-        /// <para>Delimiter.</para>
+        /// <para>The delimiters used for tokenization.</para>
         /// </summary>
         [NameInMap("token")]
         [Validation(Required=false)]
         public List<string> Token { get; set; }
 
         /// <summary>
-        /// <para>The data type of the field.</para>
+        /// <para>Specifies the field type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

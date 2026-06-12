@@ -25,9 +25,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <list type="bullet">
         /// <item><description><para>true</para>
         /// <list type="bullet">
-        /// <item><description>In a shard, data is consumed in ascending order based on the value of the \<em>\</em><b>tag</b>:<b>receive_time</b>\<em>\</em> field.</description></item>
-        /// <item><description>If a shard is split, data in the original shard is consumed first. Then, data in the new shards is consumed at the same time.</description></item>
-        /// <item><description>If shards are merged, data in the original shards is consumed first. Then, data in the new shard is consumed.</description></item>
+        /// <item><description><para>In a shard, data is consumed in ascending order based on the value of the \<em>\</em><b>tag</b>:<b>receive_time</b>\<em>\</em> field.</para>
+        /// </description></item>
+        /// <item><description><para>If a shard is split, data in the original shard is consumed first. Then, data in the new shards is consumed at the same time.</para>
+        /// </description></item>
+        /// <item><description><para>If shards are merged, data in the original shards is consumed first. Then, data in the new shard is consumed.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>false Data in all shards is consumed at the same time. If a new shard is generated after a shard is split or after shards are merged, data in the new shard is immediately consumed.</para>

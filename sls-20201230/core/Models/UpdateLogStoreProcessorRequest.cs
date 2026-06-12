@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class UpdateLogStoreProcessorRequest : TeaModel {
         /// <summary>
-        /// <para>The identifier of the ingest processor.</para>
+        /// <para>The name of the ingest processor.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListAlertsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of alert rules that are returned.</para>
+        /// <para>The number of alerts returned in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The alert rules.</para>
+        /// <para>The list of alert configurations.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<Alert> Results { get; set; }
 
         /// <summary>
-        /// <para>The total number of alert rules in the project.</para>
+        /// <para>The total number of alerts in the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>

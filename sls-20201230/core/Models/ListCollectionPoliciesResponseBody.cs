@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListCollectionPoliciesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of collection rules returned on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,20 +20,22 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? CurrentCount { get; set; }
 
         /// <summary>
-        /// <para>The data of the policies that are matched against the query conditions. The data is returned based on paginated results.</para>
+        /// <para>The collection rules that are returned on the current page.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListCollectionPoliciesResponseBodyData> Data { get; set; }
         public class ListCollectionPoliciesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The configuration for centralized storage.</para>
+            /// <para>The configuration for centralized data shipping.</para>
             /// </summary>
             [NameInMap("centralizeConfig")]
             [Validation(Required=false)]
             public ListCollectionPoliciesResponseBodyDataCentralizeConfig CentralizeConfig { get; set; }
             public class ListCollectionPoliciesResponseBodyDataCentralizeConfig : TeaModel {
                 /// <summary>
+                /// <para>The destination Logstore for centralized data shipping.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>your-sls-logstore-in-beijing</para>
                 /// </summary>
@@ -40,6 +44,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string DestLogstore { get; set; }
 
                 /// <summary>
+                /// <para>The destination project for centralized data shipping.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>your-sls-project-in-beijing</para>
                 /// </summary>
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string DestProject { get; set; }
 
                 /// <summary>
+                /// <para>The destination region for centralized data shipping.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
                 /// </summary>
@@ -56,10 +64,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string DestRegion { get; set; }
 
                 /// <summary>
-                /// <para>The data retention period for centralized storage. Unit: days.</para>
+                /// <para>The data retention period of the destination Logstore for centralized data shipping. Unit: days.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>your-sls-logstore-ttl</para>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("destTTL")]
                 [Validation(Required=false)]
@@ -68,6 +76,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether centralized data shipping is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -76,6 +86,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? CentralizeEnabled { get; set; }
 
             /// <summary>
+            /// <para>The code of the log type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>access_log</para>
             /// </summary>
@@ -83,11 +95,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string DataCode { get; set; }
 
+            /// <summary>
+            /// <para>Configurations for global log types, such as sls. This parameter is empty for other log types.</para>
+            /// </summary>
             [NameInMap("dataConfig")]
             [Validation(Required=false)]
             public ListCollectionPoliciesResponseBodyDataDataConfig DataConfig { get; set; }
             public class ListCollectionPoliciesResponseBodyDataDataConfig : TeaModel {
                 /// <summary>
+                /// <para>The project for global logs. This parameter is used only for global log types, such as sls. If this parameter is empty, logs are collected to the default project of the account in the region specified by dataRegion.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>&quot;&quot;</para>
                 /// </summary>
@@ -96,6 +113,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string DataProject { get; set; }
 
                 /// <summary>
+                /// <para>The region where global logs are first collected. This parameter is used only for global log types, such as sls.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
                 /// </summary>
@@ -106,6 +125,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether the collection rule is enabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -114,6 +135,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the policy is a built-in policy. Built-in policies cannot be modified or deleted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -121,19 +144,30 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public bool? InternalPolicy { get; set; }
 
+            /// <summary>
+            /// <para>The configuration of the collection rule.</para>
+            /// </summary>
             [NameInMap("policyConfig")]
             [Validation(Required=false)]
             public ListCollectionPoliciesResponseBodyDataPolicyConfig PolicyConfig { get; set; }
             public class ListCollectionPoliciesResponseBodyDataPolicyConfig : TeaModel {
+                /// <summary>
+                /// <para>The IDs of the instances.</para>
+                /// </summary>
                 [NameInMap("instanceIds")]
                 [Validation(Required=false)]
                 public List<string> InstanceIds { get; set; }
 
+                /// <summary>
+                /// <para>The regions to which the instances belong.</para>
+                /// </summary>
                 [NameInMap("regions")]
                 [Validation(Required=false)]
                 public List<string> Regions { get; set; }
 
                 /// <summary>
+                /// <para>The resource collection mode.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>all</para>
                 /// </summary>
@@ -142,6 +176,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string ResourceMode { get; set; }
 
                 /// <summary>
+                /// <para>The resource tags.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;tag1&quot;:&quot;value1&quot;,&quot;tag2&quot;:&quot;value2&quot;}</para>
                 /// </summary>
@@ -152,6 +188,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
+            /// <para>The name of the collection rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>your_log_policy</para>
             /// </summary>
@@ -160,6 +198,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string PolicyName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud account that owns the collection rule. If a resource directory administrator or delegated administrator creates the rule, this is the ID of that administrator\&quot;s account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>148***********50</para>
             /// </summary>
@@ -168,6 +208,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string PolicyUid { get; set; }
 
             /// <summary>
+            /// <para>The code of the Alibaba Cloud service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>oss</para>
             /// </summary>
@@ -175,11 +217,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            /// <summary>
+            /// <para>The configuration of the resource directory. This parameter is empty if no configuration is available.</para>
+            /// </summary>
             [NameInMap("resourceDirectory")]
             [Validation(Required=false)]
             public ListCollectionPoliciesResponseBodyDataResourceDirectory ResourceDirectory { get; set; }
             public class ListCollectionPoliciesResponseBodyDataResourceDirectory : TeaModel {
                 /// <summary>
+                /// <para>The mode for selecting accounts in the resource directory. Valid values: all and custom.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>all,custom</para>
                 /// </summary>
@@ -187,6 +234,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 [Validation(Required=false)]
                 public string AccountGroupType { get; set; }
 
+                /// <summary>
+                /// <para>The list of member accounts. This parameter is returned only if accountGroupType is set to custom.</para>
+                /// </summary>
                 [NameInMap("members")]
                 [Validation(Required=false)]
                 public List<string> Members { get; set; }
@@ -195,15 +245,23 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         }
 
+        /// <summary>
+        /// <para>Statistics returned based on the query conditions.</para>
+        /// </summary>
         [NameInMap("statistics")]
         [Validation(Required=false)]
         public List<ListCollectionPoliciesResponseBodyStatistics> Statistics { get; set; }
         public class ListCollectionPoliciesResponseBodyStatistics : TeaModel {
+            /// <summary>
+            /// <para>The list of collection rule sources.</para>
+            /// </summary>
             [NameInMap("policySourceList")]
             [Validation(Required=false)]
             public List<ListCollectionPoliciesResponseBodyStatisticsPolicySourceList> PolicySourceList { get; set; }
             public class ListCollectionPoliciesResponseBodyStatisticsPolicySourceList : TeaModel {
                 /// <summary>
+                /// <para>The name of the collection rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>policy_name1_from148</para>
                 /// </summary>
@@ -212,6 +270,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
                 public string PolicyName { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the Alibaba Cloud account that owns the collection rule. If a resource directory administrator or delegated administrator creates the rule, this is the ID of that administrator\&quot;s account.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>148***********50</para>
                 /// </summary>
@@ -222,6 +282,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             }
 
             /// <summary>
+            /// <para>The code of the Alibaba Cloud service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>oss</para>
             /// </summary>
@@ -232,6 +294,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         }
 
         /// <summary>
+        /// <para>The total number of collection rules.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

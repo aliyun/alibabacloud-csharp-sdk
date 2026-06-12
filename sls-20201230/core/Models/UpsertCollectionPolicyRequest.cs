@@ -157,9 +157,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>The name must start with a letter.</description></item>
-        /// <item><description>The name must be 3 to 63 characters in length.</description></item>
+        /// <item><description><para>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>The name must start with a letter.</para>
+        /// </description></item>
+        /// <item><description><para>The name must be 3 to 63 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

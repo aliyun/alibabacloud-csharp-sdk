@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>500</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]

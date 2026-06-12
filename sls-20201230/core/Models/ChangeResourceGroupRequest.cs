@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aek2i7nhaxifxey</para>
+        /// <para>rg-ae******ey</para>
         /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]

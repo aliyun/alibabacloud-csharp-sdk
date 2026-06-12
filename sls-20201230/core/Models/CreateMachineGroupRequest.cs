@@ -41,10 +41,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The name of the machine group. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name of each machine group in a project must be unique.</description></item>
-        /// <item><description>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</description></item>
-        /// <item><description>It must start and end with a lowercase letter or a digit.</description></item>
-        /// <item><description>It must be 3 to 128 characters in length.</description></item>
+        /// <item><description><para>The name of each machine group in a project must be unique.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain only lowercase letters, digits, hyphens (-), and underscores (_).</para>
+        /// </description></item>
+        /// <item><description><para>It must start and end with a lowercase letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 3 to 128 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,8 +72,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The type of the machine group identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ip: The machine group uses IP addresses as identifiers.</description></item>
-        /// <item><description>userdefined: The machine group uses custom identifiers.</description></item>
+        /// <item><description><para>ip: The machine group uses IP addresses as identifiers.</para>
+        /// </description></item>
+        /// <item><description><para>userdefined: The machine group uses custom identifiers.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,8 +89,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The identifiers of machine group.</para>
         /// <list type="bullet">
-        /// <item><description>If you set machineIdentifyType to ip, enter the IP address of the machine.</description></item>
-        /// <item><description>If you set machineIdentifyType to userdefined, enter a custom identifier.</description></item>
+        /// <item><description><para>If you set machineIdentifyType to ip, enter the IP address of the machine.</para>
+        /// </description></item>
+        /// <item><description><para>If you set machineIdentifyType to userdefined, enter a custom identifier.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>

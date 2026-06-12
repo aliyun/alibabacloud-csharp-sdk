@@ -22,14 +22,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<GetSqlInstanceResponseBody> Body { get; set; }
         public class GetSqlInstanceResponseBody : TeaModel {
             /// <summary>
+            /// <para>The value is group1. This is an internal parameter that you can ignore.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>project_name</para>
+            /// <para>group1</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of CUs that the Dedicated SQL version can use. A CU is a compute core that can be used for parallel processing when the Dedicated SQL version is running.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public int? Cu { get; set; }
 
             /// <summary>
+            /// <para>The time when the configuration for the Dedicated SQL version was created. This is a UNIX timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1710230272</para>
             /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public int? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The time when the configuration for the Dedicated SQL version was updated. This is a UNIX timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1710230272</para>
             /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public int? UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the Dedicated SQL version is enabled by default for the project. If this parameter is set to true, all query and analysis operations in the project, such as alerts and dashboards, use the Dedicated SQL version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>

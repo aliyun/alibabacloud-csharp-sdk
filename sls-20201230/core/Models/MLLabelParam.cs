@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The description of the tag table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>默认表</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -48,6 +51,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The name of the tag table.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>标签表</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

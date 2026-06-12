@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class IndexKey : TeaModel {
         /// <summary>
-        /// <para>Alias.</para>
+        /// <para>The alias of the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myAlias</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Alias { get; set; }
 
         /// <summary>
-        /// <para>Case sensitivity.</para>
+        /// <para>Specifies whether the field is case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? CaseSensitive { get; set; }
 
         /// <summary>
-        /// <para>Whether the field contains Chinese characters.</para>
+        /// <para>Specifies whether the field contains Chinese characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? Chn { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable statistics.</para>
+        /// <para>Specifies whether to enable statistics for the field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Embedding { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable auto indexing for all text fields in JSON.</para>
+        /// <para>Specifies whether to automatically create an index for all text fields in the JSON object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -64,28 +64,28 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? IndexAll { get; set; }
 
         /// <summary>
-        /// <para>json key</para>
+        /// <para>The JSON key.</para>
         /// </summary>
         [NameInMap("json_keys")]
         [Validation(Required=false)]
         public Dictionary<string, IndexJsonKey> JsonKeys { get; set; }
 
         /// <summary>
-        /// <para>Maximum depth.</para>
+        /// <para>The maximum depth.</para>
         /// </summary>
         [NameInMap("max_depth")]
         [Validation(Required=false)]
         public long? MaxDepth { get; set; }
 
         /// <summary>
-        /// <para>Delimiter.</para>
+        /// <para>The delimiters used for tokenization.</para>
         /// </summary>
         [NameInMap("token")]
         [Validation(Required=false)]
         public List<string> Token { get; set; }
 
         /// <summary>
-        /// <para>The data type of the field.</para>
+        /// <para>The type of the field.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class AlertConfiguration : TeaModel {
         /// <summary>
-        /// <para>The annotations of the alert rule.</para>
+        /// <para>The alert annotations.</para>
         /// </summary>
         [NameInMap("annotations")]
         [Validation(Required=false)]
         public List<AlertTag> Annotations { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow the system to automatically add annotations to the alert rule.</para>
+        /// <para>Specifies whether to enable automatic annotation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,24 +28,24 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? AutoAnnotation { get; set; }
 
         /// <summary>
-        /// <para>The alert trigger conditions.</para>
+        /// <para>The alert trigger condition.</para>
         /// </summary>
         [NameInMap("conditionConfiguration")]
         [Validation(Required=false)]
         public ConditionConfiguration ConditionConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dashboard associated with the alert rule.</para>
+        /// <para>The ID of the dashboard to which the alert is attached.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>dasnboardExample</para>
+        /// <para>DasnboardExample</para>
         /// </summary>
         [NameInMap("dashboard")]
         [Validation(Required=false)]
         public string Dashboard { get; set; }
 
         /// <summary>
-        /// <para>The configurations of group evaluation.</para>
+        /// <para>The group evaluation configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("groupConfiguration")]
@@ -53,21 +53,21 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public GroupConfiguration GroupConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The set operation configurations for the query statements of the alert rule.</para>
+        /// <para>The configurations for joining the results of query statements.</para>
         /// </summary>
         [NameInMap("joinConfigurations")]
         [Validation(Required=false)]
         public List<JoinConfiguration> JoinConfigurations { get; set; }
 
         /// <summary>
-        /// <para>The labels of the alert rule.</para>
+        /// <para>The alert labels.</para>
         /// </summary>
         [NameInMap("labels")]
         [Validation(Required=false)]
         public List<AlertTag> Labels { get; set; }
 
         /// <summary>
-        /// <para>The time when a paused alert rule is resumed.</para>
+        /// <para>The time until which the alert is muted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1698907508</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? MuteUntil { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the no-data alert feature.</para>
+        /// <para>Specifies whether to enable no-data alerts.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? NoDataFire { get; set; }
 
         /// <summary>
-        /// <para>The severity of the no-data alert.</para>
+        /// <para>The severity of no-data alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? NoDataSeverity { get; set; }
 
         /// <summary>
-        /// <para>The notification configurations of Simple Log Service.</para>
+        /// <para>The configuration for the SLS alert notification service.</para>
         /// </summary>
         [NameInMap("policyConfiguration")]
         [Validation(Required=false)]
         public PolicyConfiguration PolicyConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The query statements.</para>
+        /// <para>The list of query statements.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("queryList")]
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<AlertQuery> QueryList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to send a recovery notification after an alert is cleared.</para>
+        /// <para>Specifies whether to send recovery alerts.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,42 +132,42 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<SeverityConfiguration> SeverityConfigurations { get; set; }
 
         /// <summary>
-        /// <para>The configurations that allow alerts to be sent to the notification system of Simple Log Service.</para>
+        /// <para>The configuration for sending alerts to the SLS alert management service.</para>
         /// </summary>
         [NameInMap("sinkAlerthub")]
         [Validation(Required=false)]
         public SinkAlerthubConfiguration SinkAlerthub { get; set; }
 
         /// <summary>
-        /// <para>The configurations that allow alerts to be sent to CloudMonitor Event Center.</para>
+        /// <para>The configuration for sending alerts to Cloud Monitor.</para>
         /// </summary>
         [NameInMap("sinkCms")]
         [Validation(Required=false)]
         public SinkCmsConfiguration SinkCms { get; set; }
 
         /// <summary>
-        /// <para>The configurations that allow alerts to be sent to an Eventstore.</para>
+        /// <para>The configuration for sending alerts to the eventstore.</para>
         /// </summary>
         [NameInMap("sinkEventStore")]
         [Validation(Required=false)]
         public SinkEventStoreConfiguration SinkEventStore { get; set; }
 
         /// <summary>
-        /// <para>The custom tags of the alert rule.</para>
+        /// <para>The custom alert tags.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The alert template configurations.</para>
+        /// <para>The alert template configuration.</para>
         /// </summary>
         [NameInMap("templateConfiguration")]
         [Validation(Required=false)]
         public TemplateConfiguration TemplateConfiguration { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of consecutive times that the trigger condition is met.</para>
+        /// <para>The consecutive trigger threshold.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

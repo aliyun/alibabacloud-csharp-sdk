@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class PutLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The compressed Protobuf data.</para>
+        /// <para>The compressed log data in protobuf format.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

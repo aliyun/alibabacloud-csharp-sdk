@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AnnotationdataId { get; set; }
 
         /// <summary>
-        /// <para>The data structure of the request.</para>
+        /// <para>The data struct.</para>
         /// </summary>
         [NameInMap("mlDataParam")]
         [Validation(Required=false)]

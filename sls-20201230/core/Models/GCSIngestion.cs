@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GCSIngestion : TeaModel {
         /// <summary>
+        /// <para>The GCS ingestion configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public GCSIngestionConfiguration Configuration { get; set; }
 
         /// <summary>
+        /// <para>Output only. The creation time of the job, as a Unix timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714360481</para>
         /// </summary>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
-        /// <para>job description</para>
+        /// <para>A user-friendly description for the job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gcs ingestion</para>
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>job displayName</para>
+        /// <para>The display name for the job.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +49,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>Output only. The last modified time of the job, as a Unix timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714360581</para>
         /// </summary>
@@ -54,6 +59,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? LastModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The job name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +70,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The job ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c7f01719d9feb105fc9d8df92af62010</para>
         /// </summary>
@@ -72,6 +80,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
+        /// <para>Output only. The ingestion status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>

@@ -14,10 +14,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>The compression format.</para>
+        /// <para>The compression method.</para>
         /// <list type="bullet">
-        /// <item><description>For Java, Python, and Go, only the lz4 and gzip algorithms are supported for decompression.</description></item>
-        /// <item><description>For PHP, JavaScript, and C#, only the gzip algorithm is supported for decompression.</description></item>
+        /// <item><description><para>Java, Python, and Go support lz4 and gzip decompression.</para>
+        /// </description></item>
+        /// <item><description><para>PHP, JavaScript, and C# support gzip decompression only.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class LogItem : TeaModel {
         /// <summary>
-        /// <para>The log fields.</para>
+        /// <para>A list of log fields.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Contents")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<LogContent> Contents { get; set; }
 
         /// <summary>
-        /// <para>The log time. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time of the log, formatted as a Unix timestamp. It represents the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

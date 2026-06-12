@@ -11,9 +11,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
     public class RefreshTokenRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The validity period of the access token. Unit: seconds. Default value: 86400, which specifies one day. Valid values: 0 to 86400.</description></item>
-        /// <item><description>The validity period of the access token is the smaller value between accessTokenExpirationTime and expirationTime.</description></item>
-        /// <item><description>If you use a Security Token Service (STS) token to call this operation, the validity period of the access token is the smallest value among accessTokenExpirationTime, expirationTime, and the validity period of the STS token.</description></item>
+        /// <item><description><para>The expiration time of the access token in seconds. This specifies the period during which the token is valid for accessing page API operations. The default value is 86400 seconds (one day). The value must be an integer from 0 to 86400.</para>
+        /// </description></item>
+        /// <item><description><para>The actual expiration time of the access token is the minimum value of accessTokenExpirationTime and expirationTime.</para>
+        /// </description></item>
+        /// <item><description><para>If you call this operation using Security Token Service (STS), the actual expiration time of the access token is the minimum value of accessTokenExpirationTime, expirationTime, and the STS token expiration time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? AccessTokenExpirationTime { get; set; }
 
         /// <summary>
-        /// <para>The ticket that is used for logon-free access.</para>
+        /// <para>The logon-free ticket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJ***************.eyJ******************.KUT****************</para>

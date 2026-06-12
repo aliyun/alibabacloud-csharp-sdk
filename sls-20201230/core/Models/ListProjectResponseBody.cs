@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListProjectResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of returned projects on the current page.</para>
+        /// <para>The number of projects returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The projects that meet the query conditions.</para>
+        /// <para>The list of projects that meet the query criteria.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Not applicable</para>
         /// </summary>
         [NameInMap("projects")]
         [Validation(Required=false)]
         public List<Project> Projects { get; set; }
 
         /// <summary>
-        /// <para>The total number of projects that meet the query conditions.</para>
+        /// <para>The total number of projects that meet the query criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11</para>

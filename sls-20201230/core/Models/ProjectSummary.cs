@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ProjectSummary : TeaModel {
         /// <summary>
+        /// <para>The time when the project was created.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,13 +21,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The description of the project.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>描述信息</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The name of the project.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +43,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The region where the project resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +54,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Region { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,6 +65,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The time when the project was last updated.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class KafkaIngestionConfigurationSource : TeaModel {
         /// <summary>
+        /// <para>A list of bootstrap servers for the Kafka cluster, formatted as <c>host1:port1,host2:port2</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string BootstrapServers { get; set; }
 
         /// <summary>
+        /// <para>The authentication and communication protocol settings in JSON format. For example, you can use this parameter to configure SASL authentication.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{     &quot;protocol&quot;:&quot;SASL_PLAINTEXT&quot;,      &quot;sasl&quot;:{         &quot;mechanism&quot;:&quot;PLAIN&quot;,         &quot;username&quot;:&quot;用户名&quot;,         &quot;password&quot;:&quot;密码&quot;     } }</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Communication { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Kafka consumer group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>consumer</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ConsumerGroup { get; set; }
 
         /// <summary>
+        /// <para>The default time source to use if timestamp extraction from the log data fails. Valid values are <c>system</c> (the time of the ingestion server) and <c>kafka</c> (the timestamp from the Kafka message).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>system,kafka</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DefaultTimeSource { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to add Simple Log Service (SLS) context fields, such as <c>__topic__</c> and <c>__partition__</c>, to each log entry.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -51,11 +60,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? EnableSlsContext { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable NAT for VPC connections. Set this to <c>true</c> if your Kafka cluster is in a VPC and requires NAT for access.</para>
+        /// </summary>
         [NameInMap("enableVpcNat")]
         [Validation(Required=false)]
         public bool? EnableVpcNat { get; set; }
 
         /// <summary>
+        /// <para>The character encoding of the message. This parameter applies only when <c>valueType</c> is <c>text</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,11 +78,15 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Encoding { get; set; }
 
+        /// <summary>
+        /// <para>The data format configuration.</para>
+        /// </summary>
         [NameInMap("format")]
         [Validation(Required=false)]
         public Dictionary<string, object> Format { get; set; }
 
         /// <summary>
+        /// <para>The starting position for data consumption. Valid values: <c>earliest</c> and <c>latest</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string FromPosition { get; set; }
 
         /// <summary>
+        /// <para>Custom DNS resolutions in JSON format. Use this parameter to map hostnames to IP addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;hostname&quot;: &quot;192.168.1.28&quot;}</para>
         /// </summary>
@@ -88,6 +107,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string NameResolutions { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to parse a message as a JSON array. If <c>true</c>, each element in the array becomes a separate log entry. This parameter applies only when <c>valueType</c> is <c>json</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,6 +118,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? ParseArray { get; set; }
 
         /// <summary>
+        /// <para>The ID of the ingestion processor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ingest-processor-1756802123-953901</para>
         /// </summary>
@@ -105,11 +127,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ProcessorId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the security group to associate with the ingestion source. This parameter is required when connecting to a Kafka cluster in a VPC. Separate multiple IDs with a comma (<c>,</c>).</para>
+        /// </summary>
         [NameInMap("securityGroups")]
         [Validation(Required=false)]
         public string SecurityGroups { get; set; }
 
         /// <summary>
+        /// <para>The field that contains the log timestamp. This parameter applies only when <c>valueType</c> is <c>json</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b>time</b></para>
         /// </summary>
@@ -118,6 +145,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeField { get; set; }
 
         /// <summary>
+        /// <para>The format of the timestamp. For example, you can set this to <c>epoch</c> for a Unix timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>epoch</para>
         /// </summary>
@@ -126,6 +155,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeFormat { get; set; }
 
         /// <summary>
+        /// <para>The regular expression for extracting the timestamp from the field specified by <c>timeField</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2}</para>
         /// </summary>
@@ -134,6 +165,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimePattern { get; set; }
 
         /// <summary>
+        /// <para>The time zone of the timestamp, such as <c>+0800</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>+0800</para>
         /// </summary>
@@ -142,6 +175,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeZone { get; set; }
 
         /// <summary>
+        /// <para>The Kafka topics to subscribe to. Separate multiple topics with a comma (<c>,</c>).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -152,6 +186,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Topics { get; set; }
 
         /// <summary>
+        /// <para>The format of the message value. Valid values: <c>text</c> and <c>json</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -161,10 +196,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string ValueType { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the VPC that contains the Kafka cluster.</para>
+        /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the VSwitch in the specified VPC. This parameter is required when connecting to a Kafka cluster in a VPC.</para>
+        /// </summary>
         [NameInMap("vswitchId")]
         [Validation(Required=false)]
         public string VswitchId { get; set; }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListAnnotationDataRequest : TeaModel {
         /// <summary>
-        /// <para>The line from which the query starts.</para>
+        /// <para>The starting position of the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

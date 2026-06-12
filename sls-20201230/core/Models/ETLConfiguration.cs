@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The AccessKey ID used to grant the permissions to read data from the source logstore. This parameter is required. If you use a role to grant the required permissions, specify an empty string.</para>
+        /// <para>The AccessKey ID that is required to read data from the source Logstore. This parameter is required. If you use a RAM role for authorization, set this parameter to an empty string.</para>
         /// </summary>
         [NameInMap("accessKeyId")]
         [Validation(Required=false)]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The AccessKey secret used to grant the permissions to read data from the source logstore. This parameter is required. If you use a role to grant the required permissions, specify an empty string.</para>
+        /// <para>The AccessKey secret that is required to read data from the source Logstore. This parameter is required. If you use a RAM role for authorization, set this parameter to an empty string.</para>
         /// </summary>
         [NameInMap("accessKeySecret")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AccessKeySecret { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for transformation. Specify a Unix timestamp that is accurate to the second. This parameter is required. If you want to transform data from the first log in the source logstore, enter 0.</para>
+        /// <para>The start time of the data transformation. The value is a UNIX timestamp. Unit: seconds. This parameter is required. To start the data transformation from the earliest log in the source Logstore, set this parameter to 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? FromTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the data transformation syntax.</para>
+        /// <para>The language of the data transformation script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SPL</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The name of the source logstore.</para>
+        /// <para>The name of the source Logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,17 +62,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The advanced parameter settings.</para>
+        /// <para>Advanced parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>config.vpc.vpc_id.test1:vpc-uf6mskb0b****n9yj</para>
+        /// <para>config.vpc.vpc_id.test1：vpc-uf6mskb0b****n9yj</para>
         /// </summary>
         [NameInMap("parameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the role that is used to grant the permissions to read data from the source logstore.</para>
+        /// <para>The ARN of the RAM role that is authorized to read data from the source Logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,18 +83,20 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The transformation script.</para>
+        /// <para>The data transformation script.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>e_set(&quot;key&quot;,&quot;value&quot;)</para>
+        /// <list type="bullet">
+        /// <item><description>| extend key=\&quot;value\&quot;</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("script")]
         [Validation(Required=false)]
         public string Script { get; set; }
 
         /// <summary>
-        /// <para>The storage destinations.</para>
+        /// <para>The output destinations of the data transformation.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sinks")]
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<ETLConfigurationSink> Sinks { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for transformation. Specify a Unix timestamp that is accurate to the second. This parameter is required. If you want to transform data until the data transformation job is manually stopped, enter 0.</para>
+        /// <para>The end time of the data transformation. The value is a UNIX timestamp. Unit: seconds. This parameter is required. To continuously perform the data transformation until you manually stop it, set this parameter to 0.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

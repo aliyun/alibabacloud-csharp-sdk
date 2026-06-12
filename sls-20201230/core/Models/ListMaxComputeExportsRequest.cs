@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListMaxComputeExportsRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the Logstore.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-logstore</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
+        /// <para>The position from which to start the query. The default value is 0.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,10 +30,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Offset { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return. Default value: 10.</para>
+        /// <para>The number of entries to return. The default value is 10.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("size")]
         [Validation(Required=false)]

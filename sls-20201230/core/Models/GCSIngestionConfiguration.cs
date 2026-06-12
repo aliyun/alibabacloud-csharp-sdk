@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GCSIngestionConfiguration : TeaModel {
         /// <summary>
-        /// <para>logstore</para>
+        /// <para>The name of the destination logstore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Logstore { get; set; }
 
         /// <summary>
+        /// <para>The data source configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("source")]

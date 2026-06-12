@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class Dashboard : TeaModel {
+        /// <summary>
+        /// <para>The properties of the dashboard.</para>
+        /// </summary>
         [NameInMap("attribute")]
         [Validation(Required=false)]
         public Dictionary<string, string> Attribute { get; set; }
 
         /// <summary>
+        /// <para>The charts in the dashboard.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("charts")]
@@ -21,6 +25,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<Chart> Charts { get; set; }
 
         /// <summary>
+        /// <para>The internal display name of the dashboard.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,11 +35,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string DashboardName { get; set; }
 
+        /// <summary>
+        /// <para>The description of the dashboard.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>this is a dashboard</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The display name of the dashboard.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

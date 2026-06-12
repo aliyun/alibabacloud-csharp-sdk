@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ConsumeProcessor : TeaModel {
         /// <summary>
+        /// <para>Processor配置</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("configuration")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public ConsumeProcessorConfiguration Configuration { get; set; }
 
         /// <summary>
+        /// <para>创建时间</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1717171200</para>
         /// </summary>
@@ -24,12 +27,22 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public long? CreateTime { get; set; }
 
+        /// <summary>
+        /// <para>Processor描述</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>过滤content字段</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Processor名称</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>字段过滤处理</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
@@ -47,6 +60,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProcessorName { get; set; }
 
         /// <summary>
+        /// <para>更新时间</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1717171200</para>
         /// </summary>

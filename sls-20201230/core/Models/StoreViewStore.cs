@@ -21,14 +21,17 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Project { get; set; }
 
         /// <summary>
-        /// <para>The query statement that contains filter conditions.</para>
+        /// <para>The query filter statement.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>job: IT | select name, age, gender from log</para>
         /// </summary>
         [NameInMap("query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore or Metricstore.</para>
+        /// <para>The name of the LogStore or MetricStore.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

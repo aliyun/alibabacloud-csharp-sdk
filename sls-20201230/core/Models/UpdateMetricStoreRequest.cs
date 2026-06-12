@@ -23,16 +23,22 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? AutoSplit { get; set; }
 
+        /// <summary>
+        /// <para>The retention period of data in the hot storage layer. Unit: days.</para>
+        /// </summary>
         [NameInMap("hot_ttl")]
         [Validation(Required=false)]
         public int? HotTtl { get; set; }
 
+        /// <summary>
+        /// <para>The retention period for the IA storage class. Unit: days.</para>
+        /// </summary>
         [NameInMap("infrequentAccessTTL")]
         [Validation(Required=false)]
         public int? InfrequentAccessTTL { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of shards into which existing shards can be automatically split. This parameter is valid only when you set the autoSplit parameter to true.</para>
+        /// <para>The maximum number of shards for automatic sharding. This parameter is valid only when autoSplit is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>64</para>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public ShardingPolicy ShardingPolicy { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the metric data. Unit: days.</para>
+        /// <para>The data retention period. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

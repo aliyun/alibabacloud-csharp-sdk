@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListOSSIngestionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of OSS data import jobs that are returned.</para>
+        /// <para>The number of OSS import tasks returned in this response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The OSS data import jobs.</para>
+        /// <para>A list of OSS import tasks.</para>
         /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<OSSIngestion> Results { get; set; }
 
         /// <summary>
-        /// <para>The total number of OSS data import jobs in the project.</para>
+        /// <para>The total number of OSS import tasks in the Project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>

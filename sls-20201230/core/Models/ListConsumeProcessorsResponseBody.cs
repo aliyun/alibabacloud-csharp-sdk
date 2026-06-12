@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListConsumeProcessorsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of consumption processors for offset.</para>
+        /// <para>The number of consume processors returned in the current response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The list of consumption processor information.</para>
+        /// <para>The list of consume processors.</para>
         /// </summary>
         [NameInMap("processors")]
         [Validation(Required=false)]
         public List<ConsumeProcessor> Processors { get; set; }
 
         /// <summary>
-        /// <para>The total number of consumption processors that meet the query conditions.</para>
+        /// <para>The total number of consume processors that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

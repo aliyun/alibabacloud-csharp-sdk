@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetLogsV2Request : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to page forward or backward for the scan-based query or phrase search.</para>
+        /// <para>For a scan or phrase query, specifies whether to page forward or backward.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? Forward { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is the log time that is specified when log data is written.</para>
-        /// <para>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a timestamp that follows the UNIX time format. It is the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start of the time range to query. The value is the log time that was specified when the log was written.</para>
+        /// <para>The time range is a left-closed right-open interval. This means the range includes the start time but not the end time. If the from and to values are the same, the interval is invalid and an error is returned. The value is a UNIX timestamp that represents the number of seconds since 00:00:00 UTC on January 1, 1970.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? From { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to highlight the returned result.</para>
+        /// <para>Specifies whether to highlight the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -41,12 +41,18 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? Highlight { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable nanosecond-level sorting.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("isAccurate")]
         [Validation(Required=false)]
         public bool? IsAccurate { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of logs to return for the request. This parameter takes effect only when the query parameter is set to a search statement. Valid values: 0 to 100. Default value: 100.</para>
+        /// <para>The maximum number of logs to return. This parameter is valid only if the query parameter contains a query statement. The value must be an integer from 0 to 100. The default value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Line { get; set; }
 
         /// <summary>
-        /// <para>The line from which the query starts. This parameter takes effect only when the query parameter is set to a search statement. Default value: 0.</para>
+        /// <para>The line number from which to start the query. This parameter is valid only if the query parameter contains a query statement. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? Offset { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the SQL enhancement feature. By default, the feature is disabled.</para>
+        /// <para>Specifies whether to enable enhanced SQL. The default value is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -76,9 +82,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? PowerSql { get; set; }
 
         /// <summary>
-        /// <para>The search statement or query statement. For more information, see the &quot;Log search overview&quot; and &quot;Log analysis overview&quot; topics.</para>
-        /// <para>If you add set session parallel_sql=true; to the analytic statement in the query parameter, Dedicated SQL is used. Example: \* | set session parallel_sql=true; select count(\*) as pv.</para>
-        /// <para>Note: If you specify an analytic statement in the query parameter, the line and offset parameters do not take effect in this operation. In this case, we recommend that you set the line and offset parameters to 0 and use the LIMIT clause to specify the number of logs to return on each page. For more information, see the &quot;Perform paged queries&quot; topic.</para>
+        /// <para>The query statement or analytic statement. For more information, see <a href="https://help.aliyun.com/document_detail/43772.html">Query overview</a> and <a href="https://help.aliyun.com/document_detail/53608.html">Analysis overview</a>.</para>
+        /// <para>To use the Exclusive SQL feature, add set session parallel_sql=true; to the analytic statement in the query parameter. Example: \* | set session parallel_sql=true; select count(\*) as pv.</para>
+        /// <para>Note: If the query parameter contains an analytic statement (SQL statement), the line and offset parameters are invalid. Set them to 0. Use the LIMIT clause in the SQL statement for paging. For more information, see Paginate query and analysis results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>status: 401 | SELECT remote_addr,COUNT(*) as pv GROUP by remote_addr ORDER by pv desc limit 5</para>
@@ -88,8 +94,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return logs in reverse chronological order of log timestamps. The log timestamps are accurate to minutes. Valid values:</para>
-        /// <para>true: Logs are returned in reverse chronological order of log timestamps. false (default): Logs are returned in chronological order of log timestamps. Note: The reverse parameter takes effect only when the query parameter is set to a search statement. The reverse parameter specifies the method used to sort returned logs. If the query parameter is set to a query statement, the reverse parameter does not take effect. The method used to sort returned logs is specified by the ORDER BY clause in the analytic statement. If you use the keyword asc in the ORDER BY clause, the logs are sorted in chronological order. If you use the keyword desc in the ORDER BY clause, the logs are sorted in reverse chronological order. By default, asc is used in the ORDER BY clause.</para>
+        /// <para>Specifies whether to return logs in descending order of their timestamps. The precision is at the minute level.</para>
+        /// <para>true: Returns logs in descending order of their timestamps. false (default): Returns logs in ascending order of their timestamps. Note: If the query parameter contains a query statement, the reverse parameter is valid and specifies the sorting order. If the query parameter contains a query and analysis statement, the reverse parameter is invalid. The sorting order is specified by the ORDER BY clause in the analytic statement. If ORDER BY is asc (default), logs are sorted in ascending order. If ORDER BY is desc, logs are sorted in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
-        /// <para>The parameter that is used to query data.</para>
+        /// <para>The query parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mode=scan</para>
@@ -109,8 +115,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Session { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is the log time that is specified when log data is written.</para>
-        /// <para>The time range that is specified in this operation is a left-closed, right-open interval. The interval includes the start time specified by the from parameter, but does not include the end time specified by the to parameter. If you specify the same value for the from and to parameters, the interval is invalid, and an error message is returned. The value is a timestamp that follows the UNIX time format. It is the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end of the time range to query. The value is the log time that was specified when the log was written.</para>
+        /// <para>The time range is a left-closed right-open interval. This means the range includes the start time but not the end time. If the from and to values are the same, the interval is invalid and an error is returned. The value is a UNIX timestamp that represents the number of seconds since 00:00:00 UTC on January 1, 1970.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public int? To { get; set; }
 
         /// <summary>
-        /// <para>The topic of the logs. Default value: double quotation marks (&quot;&quot;).</para>
+        /// <para>The log topic. The default value is double quotation marks (&quot;&quot;).</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

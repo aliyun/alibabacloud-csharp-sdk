@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, object> AdvancedParameters { get; set; }
 
         /// <summary>
-        /// <para>aws access key</para>
+        /// <para>Amazon Web Services (AWS) access key ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AwsAccessKey { get; set; }
 
         /// <summary>
-        /// <para>aws access key secret</para>
+        /// <para>Amazon Web Services (AWS) secret access key</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AwsAccessKeySecret { get; set; }
 
         /// <summary>
-        /// <para>s3 region</para>
+        /// <para>Amazon S3 region</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AwsRegion { get; set; }
 
         /// <summary>
-        /// <para>sqs queue url</para>
+        /// <para>Amazon SQS queue URL</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan">https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan</a></para>
@@ -57,6 +57,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string AwsSQSQueueUrl { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to use SQS.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? AwsUseSQS { get; set; }
 
         /// <summary>
-        /// <para>s3 bucket</para>
+        /// <para>Amazon S3 bucket name</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,15 +77,28 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Bucket { get; set; }
 
+        /// <summary>
+        /// <para>The endpoint for the CloudFront distribution.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>dtfsb7voqy76q.cloudfront.net</para>
+        /// </summary>
         [NameInMap("cloudFrontEndpoint")]
         [Validation(Required=false)]
         public string CloudFrontEndpoint { get; set; }
 
+        /// <summary>
+        /// <para>The authentication token for accessing the CloudFront endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>@test-s3-access/ABS</para>
+        /// </summary>
         [NameInMap("cloudFrontToken")]
         [Validation(Required=false)]
         public string CloudFrontToken { get; set; }
 
         /// <summary>
+        /// <para>Compression codec. Valid values: none, snappy, gzip</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,6 +109,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string CompressionCodec { get; set; }
 
         /// <summary>
+        /// <para>Character encoding</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,6 +120,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Encoding { get; set; }
 
         /// <summary>
+        /// <para>Include only files modified before this Unix timestamp</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714360481</para>
         /// </summary>
@@ -112,7 +130,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>s3 endpoint</para>
+        /// <para>Amazon S3 endpoint</para>
         /// 
         /// <b>Example:</b>
         /// <para>s3.us-east-1.amazonaws.com</para>
@@ -122,6 +140,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Endpoint { get; set; }
 
         /// <summary>
+        /// <para>Format</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("format")]
@@ -129,6 +148,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, object> Format { get; set; }
 
         /// <summary>
+        /// <para>Polling interval for new files</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -139,6 +159,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Interval { get; set; }
 
         /// <summary>
+        /// <para>Regular expression to filter file paths</para>
+        /// 
         /// <b>Example:</b>
         /// <para>.*</para>
         /// </summary>
@@ -147,6 +169,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Pattern { get; set; }
 
         /// <summary>
+        /// <para>Prefix to filter file paths</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prefix</para>
         /// </summary>
@@ -155,6 +179,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Prefix { get; set; }
 
         /// <summary>
+        /// <para>Ingest processor ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ingest-processor-1756802123-953901</para>
         /// </summary>
@@ -163,6 +189,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProcessorId { get; set; }
 
         /// <summary>
+        /// <para>Include only files modified after this Unix timestamp</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1714274081</para>
         /// </summary>
@@ -171,6 +199,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>Enable context browsing</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -179,6 +209,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? TagPackId { get; set; }
 
         /// <summary>
+        /// <para>Name of the field that contains event timestamps</para>
+        /// 
         /// <b>Example:</b>
         /// <para><b>time</b></para>
         /// </summary>
@@ -187,6 +219,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeField { get; set; }
 
         /// <summary>
+        /// <para>Timestamp format in the time field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yyyy-MM-dd HH:mm:ss</para>
         /// </summary>
@@ -195,6 +229,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeFormat { get; set; }
 
         /// <summary>
+        /// <para>Regular expression to extract timestamps from file names or content</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[0-9]{0,2}\/[0-9a-zA-Z]+\/[0-9:,]+</para>
         /// </summary>
@@ -203,6 +239,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimePattern { get; set; }
 
         /// <summary>
+        /// <para>Time zone for the time field</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GMT+08:00</para>
         /// </summary>
@@ -211,6 +249,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string TimeZone { get; set; }
 
         /// <summary>
+        /// <para>Use only Amazon SQS to detect new files</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -218,6 +258,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public bool? UseAwsSQSOnly { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to access S3 through a CloudFront distribution.</para>
+        /// </summary>
         [NameInMap("useCloudFront")]
         [Validation(Required=false)]
         public bool? UseCloudFront { get; set; }

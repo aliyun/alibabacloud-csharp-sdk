@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>Specifies whether to unbind all tags. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: unbinds only the tags that match the value of tags.</description></item>
-        /// <item><description>true: unbinds all tags that are bound to the resource.</description></item>
+        /// <item><description><para>false: unbinds only the tags that match the value of tags.</para>
+        /// </description></item>
+        /// <item><description><para>true: unbinds all tags that are bound to the resource.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,11 +39,16 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>project</description></item>
-        /// <item><description>logstore</description></item>
-        /// <item><description>dashboard</description></item>
-        /// <item><description>machinegroup</description></item>
-        /// <item><description>logtailconfig</description></item>
+        /// <item><description><para>project</para>
+        /// </description></item>
+        /// <item><description><para>logstore</para>
+        /// </description></item>
+        /// <item><description><para>dashboard</para>
+        /// </description></item>
+        /// <item><description><para>machinegroup</para>
+        /// </description></item>
+        /// <item><description><para>logtailconfig</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

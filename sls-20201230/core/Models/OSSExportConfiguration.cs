@@ -10,55 +10,55 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class OSSExportConfiguration : TeaModel {
         /// <summary>
-        /// <para>The beginning of the time range to ship data. The value 1 specifies that the data shipping job ships data from the first log in the Logstore.</para>
+        /// <para>The start time for the export, specified as a Unix timestamp. Set to 1 to export from the earliest available data in the Logstore.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456789</para>
+        /// <para>1718380800</para>
         /// </summary>
         [NameInMap("fromTime")]
         [Validation(Required=false)]
         public long? FromTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the Logstore.</para>
+        /// <para>The name of the source Logstore.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>logstore-demo</para>
+        /// <para>my-logstore</para>
         /// </summary>
         [NameInMap("logstore")]
         [Validation(Required=false)]
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role that is used to read data from Simple Log Service.</para>
+        /// <para>The ARN of the Resource Access Management (RAM) role that Log Service assumes to read data from the Logstore. You must specify the ARN of your role.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::123456789:role/aliyunlogdefaultrole</para>
+        /// <para>acs:ram::1234567890:role/aliyunlogdefaultrole</para>
         /// </summary>
         [NameInMap("roleArn")]
         [Validation(Required=false)]
         public string RoleArn { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the OSS data shipping job.</para>
+        /// <para>The configuration of the destination OSS sink.</para>
         /// </summary>
         [NameInMap("sink")]
         [Validation(Required=false)]
         public OSSExportConfigurationSink Sink { get; set; }
         public class OSSExportConfigurationSink : TeaModel {
             /// <summary>
-            /// <para>The OSS bucket.</para>
+            /// <para>The name of the destination OSS bucket.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test-bucket</para>
+            /// <para>my-bucket</para>
             /// </summary>
             [NameInMap("bucket")]
             [Validation(Required=false)]
             public string Bucket { get; set; }
 
             /// <summary>
-            /// <para>The interval between two data shipping operations. Valid values: 300 to 900. Unit: seconds.</para>
+            /// <para>The time in seconds to buffer data before exporting. The value must be an integer from 300 to 900.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? BufferInterval { get; set; }
 
             /// <summary>
-            /// <para>The size of the OSS object to which data is shipped. Valid values: 5 to 256. Unit: MB.</para>
+            /// <para>The amount of data in MB to buffer before exporting. The value must be an integer from 5 to 256.</para>
             /// 
             /// <b>Example:</b>
             /// <para>256</para>
@@ -78,27 +78,27 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? BufferSize { get; set; }
 
             /// <summary>
-            /// <para>The compression type. Valid values: snappy, gizp, zstd, and none.</para>
+            /// <para>The compression type for the exported files. Valid values: <c>snappy</c>, <c>gzip</c>, <c>zstd</c>, and <c>none</c> (no compression).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>snappy/gizp/zstd/none</para>
+            /// <para>snappy</para>
             /// </summary>
             [NameInMap("compressionType")]
             [Validation(Required=false)]
             public string CompressionType { get; set; }
 
             /// <summary>
-            /// <para>The details of the OSS object. Note: The value of this parameter is in the JSON format and varies based on the value of contentType.</para>
+            /// <para>Format-specific settings. The structure of this JSON object depends on the <c>contentType</c> value.</para>
             /// </summary>
             [NameInMap("contentDetail")]
             [Validation(Required=false)]
             public Dictionary<string, object> ContentDetail { get; set; }
 
             /// <summary>
-            /// <para>The storage format of the OSS object. Valid values: json, parquet, csv, and orc.</para>
+            /// <para>The format of the files stored in OSS. Valid values: <c>json</c>, <c>parquet</c>, <c>csv</c>, and <c>orc</c>.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>json/parquet/csv/orc</para>
+            /// <para>csv</para>
             /// </summary>
             [NameInMap("contentType")]
             [Validation(Required=false)]
@@ -107,12 +107,12 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
-            /// <para>The latency of data shipping.</para>
+            /// <para>The delivery delay.</para>
             /// <remarks>
-            /// </remarks>
             /// <list type="bullet">
             /// <item><description>This parameter is deprecated.</description></item>
             /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public long? DelaySec { get; set; }
 
             /// <summary>
-            /// <para>The latency of data shipping. The value of this parameter cannot exceed the data retention period of the source Logstore.</para>
+            /// <para>The delivery delay, in seconds. This value cannot exceed the data retention period of the source Logstore.</para>
             /// 
             /// <b>Example:</b>
             /// <para>900</para>
@@ -134,63 +134,65 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
             /// <summary>
             /// <list type="bullet">
-            /// <item><description>The endpoint that is used to access OSS. You can specify only an internal OSS endpoint for the region where the Simple Log Service project resides. The value is in the <c>http://+OSS endpoint</c> format. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</description></item>
-            /// <item><description>The endpoint that is used to access OSS-HDFS. You can specify only an internal OSS-HDFS endpoint for the region where the Simple Log Service project resides.</description></item>
+            /// <item><description><para>For Object Storage Service (OSS): The OSS internal endpoint. You must use an endpoint in the same region as the Logstore. For more information, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS access domains and data centers</a>. The endpoint must use the HTTPS protocol.</para>
+            /// </description></item>
+            /// <item><description><para>For OSS-HDFS: The OSS-HDFS internal endpoint. You must use an endpoint in the same region as the Logstore.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://xxxxxxxx">http://xxxxxxxx</a></para>
+            /// <para><a href="https://oss-cn-hangzhou-internal.aliyuncs.com">https://oss-cn-hangzhou-internal.aliyuncs.com</a></para>
             /// </summary>
             [NameInMap("endpoint")]
             [Validation(Required=false)]
             public string Endpoint { get; set; }
 
             /// <summary>
-            /// <para>The partition format. For more information, see <a href="https://help.aliyun.com/document_detail/371934.html">Partition formats</a>.</para>
+            /// <para>The path format for exported files. For more information, see <a href="https://help.aliyun.com/document_detail/371934.html">Path format</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>%Y_%m_%d/good/bad</para>
+            /// <para>%Y/%m/%d/%H/%M</para>
             /// </summary>
             [NameInMap("pathFormat")]
             [Validation(Required=false)]
             public string PathFormat { get; set; }
 
             /// <summary>
-            /// <para>The partition format type.</para>
+            /// <para>The type of the path format.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>only support time</para>
+            /// <para>time</para>
             /// </summary>
             [NameInMap("pathFormatType")]
             [Validation(Required=false)]
             public string PathFormatType { get; set; }
 
             /// <summary>
-            /// <para>The prefix of the OSS object.</para>
+            /// <para>The prefix for files exported to the OSS bucket.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>prefixxxx/</para>
+            /// <para>prefix-demo/</para>
             /// </summary>
             [NameInMap("prefix")]
             [Validation(Required=false)]
             public string Prefix { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the RAM role that is used to write data to OSS.</para>
+            /// <para>The ARN of the RAM role that Log Service assumes to write data to the OSS bucket. You must specify the ARN of your role.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>acs:ram::xxxxxxx</para>
+            /// <para>acs:ram::1234567890:role/aliyunlogdefaultrole</para>
             /// </summary>
             [NameInMap("roleArn")]
             [Validation(Required=false)]
             public string RoleArn { get; set; }
 
             /// <summary>
-            /// <para>The suffix of the OSS object.</para>
+            /// <para>The suffix for the exported files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>.json</para>
@@ -200,7 +202,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
             public string Suffix { get; set; }
 
             /// <summary>
-            /// <para>The time zone. For more information, see <a href="https://help.aliyun.com/document_detail/375323.html">Time zones</a>.</para>
+            /// <para>The time zone used for the path format. For more information, see <a href="https://help.aliyun.com/document_detail/375323.html">Time zones</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>+0800</para>
@@ -216,10 +218,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public bool? SourceSecureTransport { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to ship data. The value 0 specifies that the data shipping job continuously ships data until the job is manually stopped.</para>
+        /// <para>The end time for the export, specified as a Unix timestamp. Set to 0 to run the task continuously until it is stopped.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456789</para>
+        /// <para>1718380800</para>
         /// </summary>
         [NameInMap("toTime")]
         [Validation(Required=false)]

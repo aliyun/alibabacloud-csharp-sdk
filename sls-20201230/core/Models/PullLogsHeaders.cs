@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
+        /// <para>The compression format of the data that the server returns. Only the lz4 format is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lz4</para>
         /// </summary>

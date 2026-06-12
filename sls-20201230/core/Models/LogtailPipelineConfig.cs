@@ -91,6 +91,8 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<Dictionary<string, object>> Processors { get; set; }
 
         /// <summary>
+        /// <para>任务配置</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Type&quot;: &quot;task_example&quot;}</para>
         /// </summary>

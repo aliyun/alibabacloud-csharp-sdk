@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The disaster recovery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LRS: locally redundant storage</description></item>
-        /// <item><description>ZRS: zone-redundant storage</description></item>
+        /// <item><description><para>LRS: locally redundant storage</para>
+        /// </description></item>
+        /// <item><description><para>ZRS: zone-redundant storage</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,10 +39,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The project name must be unique in a region. You cannot change the name after you create the project. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be globally unique.</description></item>
-        /// <item><description>The name can contain only lowercase letters, digits, and hyphens (-).</description></item>
-        /// <item><description>The name must start and end with a lowercase letter or a digit.</description></item>
-        /// <item><description>The name must be 3 to 63 characters in length.</description></item>
+        /// <item><description><para>The name must be globally unique.</para>
+        /// </description></item>
+        /// <item><description><para>The name can contain only lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>The name must start and end with a lowercase letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>The name must be 3 to 63 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,8 +61,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>Specifies whether to enable the recycle bin feature.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

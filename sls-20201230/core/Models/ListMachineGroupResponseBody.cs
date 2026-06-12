@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The number of machine groups that are returned on the current page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("count")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <para>The total number of machine groups that meet the query conditions.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

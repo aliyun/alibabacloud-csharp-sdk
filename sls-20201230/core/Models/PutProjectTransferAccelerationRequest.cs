@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class PutProjectTransferAccelerationRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable transfer acceleration.</para>
+        /// <para>Specifies whether to enable transfer acceleration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

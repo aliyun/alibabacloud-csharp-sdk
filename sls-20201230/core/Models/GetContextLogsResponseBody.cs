@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>Indicates whether the query and analysis results are complete. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Complete: The query is successful, and the complete query and analysis results are returned.</description></item>
-        /// <item><description>Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.</description></item>
+        /// <item><description><para>Complete: The query is successful, and the complete query and analysis results are returned.</para>
+        /// </description></item>
+        /// <item><description><para>Incomplete: The query is successful, but the query and analysis results are incomplete. To obtain the complete results, you must repeat the request.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

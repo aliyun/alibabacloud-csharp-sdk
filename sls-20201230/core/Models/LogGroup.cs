@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class LogGroup : TeaModel {
         /// <summary>
-        /// <para>The log list.</para>
+        /// <para>A list of logs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("LogItems")]
@@ -18,14 +18,14 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public List<LogItem> LogItems { get; set; }
 
         /// <summary>
-        /// <para>The log tags.</para>
+        /// <para>The list of tags for the log.</para>
         /// </summary>
         [NameInMap("LogTags")]
         [Validation(Required=false)]
         public List<LogTag> LogTags { get; set; }
 
         /// <summary>
-        /// <para>The log source. For example, the source of a log can be the IP address of the server where the log is generated.</para>
+        /// <para>The source of the log. For example, the IP address of the machine that generated the log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.1.1.1</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The log topic. This field is user-defined and is used to distinguish between logs.</para>
+        /// <para>The topic of the log. This is a user-defined field that distinguishes log data with different features.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic-test</para>

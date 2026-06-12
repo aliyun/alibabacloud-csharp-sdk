@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class S3IngestionConfiguration : TeaModel {
         /// <summary>
-        /// <para>logstore</para>
+        /// <para>The name of the Logstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myLogstore</para>
@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         [Validation(Required=false)]
         public string Logstore { get; set; }
 
+        /// <summary>
+        /// <para>The source.</para>
+        /// </summary>
         [NameInMap("source")]
         [Validation(Required=false)]
         public S3IngestionConfigurationSource Source { get; set; }

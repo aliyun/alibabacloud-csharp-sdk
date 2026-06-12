@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class ListConsumeProcessorsRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the consumption processor.</para>
+        /// <para>The display name of the consume processor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>filter-get-request</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The offset. Default value: 0.</para>
+        /// <para>The offset of the query. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Offset { get; set; }
 
         /// <summary>
-        /// <para>The identifier of the consumption processor.</para>
+        /// <para>The identity of the consume processor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>consume-processor-1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string ProcessorName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries. Default value: 200.</para>
+        /// <para>The number of entries to return. The default value is 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

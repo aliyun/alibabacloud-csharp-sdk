@@ -8,13 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Sls20201230.Models
 {
-    public class DeleteAgentInstanceConfigRequest : TeaModel {
+    public class GetMaterializedViewRequest : TeaModel {
         /// <summary>
-        /// <para>The process to which the configuration applies.</para>
+        /// <b>if can be null:</b>
+        /// <c>false</c>
         /// </summary>
-        [NameInMap("attributes")]
+        [NameInMap("returnStatus")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Attributes { get; set; }
+        public bool? ReturnStatus { get; set; }
 
     }
 

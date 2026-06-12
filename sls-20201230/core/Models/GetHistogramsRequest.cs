@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 {
     public class GetHistogramsRequest : TeaModel {
         /// <summary>
-        /// <para>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The beginning of the time range for the subinterval. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 1970-01-01 00:00:00 UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? From { get; set; }
 
         /// <summary>
-        /// <para>The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see <a href="https://help.aliyun.com/document_detail/43772.html">Log search overview</a>.</para>
+        /// <para>The search statement. Only search statements are supported. Analytic statements are not supported. For more information about the syntax of search statements, see <a href="https://help.aliyun.com/document_detail/43772.html">Search syntax</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>with_pack_meta</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The end time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end of the time range for the subinterval. The value is a UNIX timestamp that represents the number of seconds that have elapsed since 1970-01-01 00:00:00 UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         public long? To { get; set; }
 
         /// <summary>
-        /// <para>The topic of the logs.</para>
+        /// <para>The topic of the log.</para>
         /// 
         /// <b>Example:</b>
         /// <para>topic</para>

@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
 
         /// <summary>
         /// <para>The description of the ingest processor.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Extract fields from Nginx logs using regex.</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -27,6 +30,9 @@ namespace AlibabaCloud.SDK.Sls20201230.Models
         /// <summary>
         /// <para>The display name of the ingest processor.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Nginx log parsing</para>
         /// </summary>
         [NameInMap("displayName")]
         [Validation(Required=false)]
