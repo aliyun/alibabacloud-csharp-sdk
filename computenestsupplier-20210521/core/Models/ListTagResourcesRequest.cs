@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,18 +31,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify at most 50 resource IDs in each call.</para>
+        /// <para>The resource ID.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid value:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service</description></item>
-        /// <item><description>serviceinstance</description></item>
-        /// <item><description>artifact</description></item>
+        /// <item><description><para>service: a service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: a service instance.</para>
+        /// </description></item>
+        /// <item><description><para>artifact: a deployment.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The custom tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

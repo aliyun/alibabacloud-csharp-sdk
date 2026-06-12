@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceTemplateCriterionIssuesRequest : TeaModel {
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The service ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceId { get; set; }
 
         /// <summary>
+        /// <para>The service version.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/2264368.html">ListServices - Query service information</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

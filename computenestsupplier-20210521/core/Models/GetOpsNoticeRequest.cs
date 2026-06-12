@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetOpsNoticeRequest : TeaModel {
         /// <summary>
+        /// <para>The notice ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NoticeId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

@@ -11,8 +11,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
     public class ListServiceInstanceDeployDetailsRequest : TeaModel {
         /// <summary>
         /// <para>The time zone.</para>
-        /// <para>Reference Format: &quot;+08:00&quot;</para>
-        /// <para>Valid Range: &quot;-12:59&quot; to &quot;+13:00&quot;</para>
+        /// <para>Example: +08:00</para>
+        /// <para>Valid values: -12:59 to +13:00</para>
         /// 
         /// <b>Example:</b>
         /// <para>+08:00</para>
@@ -22,13 +22,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string CycleTimeZone { get; set; }
 
         /// <summary>
-        /// <para>Determines the time period over which data is aggregated. If no aggregation dimension is specified, the query defaults to providing detailed, unaggregated results.</para>
-        /// <para>Optional Values:</para>
+        /// <para>The aggregation period. If you do not specify this parameter, the system queries the details.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Year</description></item>
-        /// <item><description>Month</description></item>
-        /// <item><description>Day</description></item>
-        /// <item><description>All</description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Day</para>
+        /// </description></item>
+        /// <item><description><para>All</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,16 +43,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string CycleType { get; set; }
 
         /// <summary>
-        /// <para>The dimension names. (Equivalent to SQL\&quot;s GROUP BY Clause)
-        /// Optional Values:</para>
+        /// <para>The name of the dimension. This corresponds to the GROUP BY clause in SQL.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>UserId</description></item>
-        /// <item><description>ServiceId</description></item>
-        /// <item><description>ServiceVersion</description></item>
-        /// <item><description>ServiceInstanceId</description></item>
-        /// <item><description>DeploySucceeded</description></item>
-        /// <item><description>ErrorType</description></item>
-        /// <item><description>ErrorCode</description></item>
+        /// <item><description><para>UserId</para>
+        /// </description></item>
+        /// <item><description><para>ServiceId</para>
+        /// </description></item>
+        /// <item><description><para>ServiceVersion</para>
+        /// </description></item>
+        /// <item><description><para>ServiceInstanceId</para>
+        /// </description></item>
+        /// <item><description><para>DeploySucceeded</para>
+        /// </description></item>
+        /// <item><description><para>ErrorType</para>
+        /// </description></item>
+        /// <item><description><para>ErrorCode</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("Dimension")]
@@ -56,7 +67,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<string> Dimension { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query.</para>
+        /// <para>Use UTC+0 time in the yyyy-MM-ddTHH:mmZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-31T16:00:00Z</para>
@@ -73,16 +85,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<ListServiceInstanceDeployDetailsRequestFilter> Filter { get; set; }
         public class ListServiceInstanceDeployDetailsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>Filter Value Names (Equivalent to SQL\&quot;s WHERE Clause)</para>
-            /// <para>Available Options:</para>
+            /// <para>The name of the filter. This corresponds to the WHERE clause in SQL.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>UserId</description></item>
-            /// <item><description>ServiceId</description></item>
-            /// <item><description>ServiceVersion</description></item>
-            /// <item><description>ServiceInstanceId</description></item>
-            /// <item><description>DeploySucceeded (Accepts True or False and case-insensitive)</description></item>
-            /// <item><description>ErrorType</description></item>
-            /// <item><description>ErrorCode</description></item>
+            /// <item><description><para>UserId</para>
+            /// </description></item>
+            /// <item><description><para>ServiceId</para>
+            /// </description></item>
+            /// <item><description><para>ServiceVersion</para>
+            /// </description></item>
+            /// <item><description><para>ServiceInstanceId</para>
+            /// </description></item>
+            /// <item><description><para>DeploySucceeded (The value can be True or False. The value is case-insensitive.)</para>
+            /// </description></item>
+            /// <item><description><para>ErrorType</para>
+            /// </description></item>
+            /// <item><description><para>ErrorCode</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +112,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>A value of the filter condition.</para>
+            /// <para>A list of filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -102,7 +121,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -112,7 +131,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAZbOYA+x9UgM6xrgcMqFUjk=</para>
@@ -122,7 +141,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,7 +152,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query.</para>
+        /// <para>Use UTC+0 time in the yyyy-MM-ddTHH:mmZ format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-08-25T02:23:00Z</para>

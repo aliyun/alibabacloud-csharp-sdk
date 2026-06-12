@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListAcrImageRepositoriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned per page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The images.</para>
+        /// <para>The list of repositories.</para>
         /// </summary>
         [NameInMap("Repositories")]
         [Validation(Required=false)]
         public List<ListAcrImageRepositoriesResponseBodyRepositories> Repositories { get; set; }
         public class ListAcrImageRepositoriesResponseBodyRepositories : TeaModel {
             /// <summary>
-            /// <para>The time when the image was created.</para>
+            /// <para>The time when the repository was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-20T00:00:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was modified.</para>
+            /// <para>The time when the repository was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-20T00:00:00Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the repository</para>
+            /// <para>The namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>computenest</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The image repo ID.</para>
+            /// <para>The repository ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>crr-3gqhkza0wbxxxxxx</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The image repo name.</para>
+            /// <para>The repository name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>wordpress</para>
@@ -87,14 +87,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The type of the repository. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><c>Private</c>: a private repository</description></item>
-            /// <item><description><c>Public</c>: a public repository</description></item>
-            /// </list>
+            /// <para>The type of the repository. Valid values: Public and Private.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Private</para>
+            /// <para>Public</para>
             /// </summary>
             [NameInMap("RepoType")]
             [Validation(Required=false)]
@@ -113,7 +109,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

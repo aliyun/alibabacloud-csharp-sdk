@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>service-41ad58439b4b4bf8ae73</para>
+        /// <para>service-fd1aec438c974828bb7b</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>draft</para>
+        /// <para>beta</para>
         /// </summary>
         [NameInMap("ServiceVersion")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-1</para>
+        /// <para>ECS standalone</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

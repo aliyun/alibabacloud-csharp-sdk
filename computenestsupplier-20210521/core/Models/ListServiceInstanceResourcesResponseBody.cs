@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceInstanceResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned per page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of resources.</para>
+        /// <para>The resources.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<ListServiceInstanceResourcesResponseBodyResources> Resources { get; set; }
         public class ListServiceInstanceResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The time when the service instance was created.</para>
+            /// <para>The time when the resource was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-01T12:00:00</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource expires.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-01T12:00:00</para>
@@ -69,8 +69,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Subscription</description></item>
-            /// <item><description>PayAsYouGo</description></item>
+            /// <item><description><para>Subscription: subscription.</para>
+            /// </description></item>
+            /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service.</para>
+            /// <para>The product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud service.</para>
+            /// <para>The product type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -101,11 +103,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The renewal state. Valid values:</para>
+            /// <para>The renewal status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AutoRenewal</description></item>
-            /// <item><description>ManualRenewal</description></item>
-            /// <item><description>NotRenewal</description></item>
+            /// <item><description><para>AutoRenewal: auto-renewal.</para>
+            /// </description></item>
+            /// <item><description><para>ManualRenewal: manual renewal.</para>
+            /// </description></item>
+            /// <item><description><para>NotRenewal: no renewal.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,8 +133,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <summary>
             /// <para>The unit of the renewal period. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Month</description></item>
-            /// <item><description>Year</description></item>
+            /// <item><description><para>Month: month.</para>
+            /// </description></item>
+            /// <item><description><para>Year: year.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -140,7 +147,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RenewalPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>The ARN of the resource.</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arn:acs:sag:cn-hangzhou:130920852836****:ccn/ccn-b3qf0q439sq2de****</para>
@@ -150,16 +157,40 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ResourceARN { get; set; }
 
             /// <summary>
-            /// <para>The status of the service instance. Valid values:</para>
+            /// <para>The status of the resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Created</description></item>
-            /// <item><description>Deploying</description></item>
-            /// <item><description>DeployedFailed</description></item>
-            /// <item><description>Deployed</description></item>
-            /// <item><description>Upgrading</description></item>
-            /// <item><description>Deleting</description></item>
-            /// <item><description>Deleted</description></item>
-            /// <item><description>DeletedFailed</description></item>
+            /// <item><description><para>INIT_COMPLETE: The resource is pending creation.</para>
+            /// </description></item>
+            /// <item><description><para>CREATE_COMPLETE: The resource is created.</para>
+            /// </description></item>
+            /// <item><description><para>CREATE_FAILED: The resource failed to be created.</para>
+            /// </description></item>
+            /// <item><description><para>CREATE_IN_PROGRESS: The resource is being created.</para>
+            /// </description></item>
+            /// <item><description><para>UPDATE_IN_PROGRESS: The resource is being updated.</para>
+            /// </description></item>
+            /// <item><description><para>UPDATE_FAILED: The resource failed to be updated.</para>
+            /// </description></item>
+            /// <item><description><para>UPDATE_COMPLETE: The resource is updated.</para>
+            /// </description></item>
+            /// <item><description><para>DELETE_IN_PROGRESS: The resource is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para>DELETE_FAILED: The resource failed to be deleted.</para>
+            /// </description></item>
+            /// <item><description><para>DELETE_COMPLETE: The resource is deleted.</para>
+            /// </description></item>
+            /// <item><description><para>CHECK_IN_PROGRESS: The resource is being checked.</para>
+            /// </description></item>
+            /// <item><description><para>CHECK_FAILED: The resource failed to be checked.</para>
+            /// </description></item>
+            /// <item><description><para>CHECK_COMPLETE: The resource is checked.</para>
+            /// </description></item>
+            /// <item><description><para>IMPORT_IN_PROGRESS: The resource is being imported.</para>
+            /// </description></item>
+            /// <item><description><para>IMPORT_FAILED: The resource failed to be imported.</para>
+            /// </description></item>
+            /// <item><description><para>IMPORT_COMPLETE: The resource is imported.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

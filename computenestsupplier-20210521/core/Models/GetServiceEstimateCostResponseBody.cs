@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceEstimateCostResponseBody : TeaModel {
         /// <summary>
-        /// <para>The subscription duration information about the purchase order of Alibaba Cloud Marketplace.</para>
+        /// <para>The subscription details of the Alibaba Cloud Marketplace order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;PayPeriodUnit\&quot;:Month,\&quot;PayPeriod\&quot;:1}</para>

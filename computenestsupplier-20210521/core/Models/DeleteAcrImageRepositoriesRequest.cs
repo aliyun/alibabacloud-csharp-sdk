@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class DeleteAcrImageRepositoriesRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the artifact. The default value is AcrImage. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>HelmChart: A Helm Chart image.</para>
+        /// </description></item>
+        /// <item><description><para>AcrImage: A container image.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>AcrImage</para>
         /// </summary>
@@ -18,6 +26,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a value for this parameter from your client. Make sure that the value is unique among different requests. <b>ClientToken</b> can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10CM943JP0EN9D51H</para>
         /// </summary>
@@ -26,6 +36,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +47,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The image repository ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class DeleteAcrImageRepositoriesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9B55A3FD-B562-5BFE-A91A-DB1790717236</para>
         /// </summary>

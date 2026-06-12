@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceInstanceBillRequest : TeaModel {
         /// <summary>
-        /// <para>The billing cycle. Format: YYYY-MM.</para>
+        /// <para>The billing cycle in the YYYY-MM format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string BillingCycle { get; set; }
 
         /// <summary>
-        /// <para>The billing date. This parameter is required only if the <b>Granularity</b> parameter is set to DAILY. Format: YYYY-MM-DD.</para>
+        /// <para>The billing date. This parameter is required only when <b>Granularity</b> is set to DAILY. The format is YYYY-MM-DD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-05</para>
@@ -31,12 +31,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string BillingDate { get; set; }
 
         /// <summary>
-        /// <para>The granularity at which bills are queried. Valid values:</para>
+        /// <para>The granularity at which you want to query bills. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>MONTHLY: queries bills by month. The data queried is consistent with the data that is displayed for the specified billing cycle on the Billing Details tab of the Bill Details page in User Center.</description></item>
-        /// <item><description>DAILY: queries bills by day. The data queried is consistent with the data that is displayed for the specified day on the Billing Details tab of the Bill Details page in User Center.</description></item>
+        /// <item><description><para>MONTHLY: by month. The bill details are consistent with the bills on the By Billing Cycle tab of the Bill Details page in User Center.</para>
+        /// </description></item>
+        /// <item><description><para>DAILY: by day. The bill details are consistent with the bills on the By Day tab of the Bill Details page in User Center.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You must set the <b>BillingDate</b> parameter before you can set the Granularity parameter to DAILY.</para>
+        /// <remarks>
+        /// <para>If you set this parameter to DAILY, you must specify BillingDate.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>MONTHLY</para>
@@ -46,9 +50,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
-        /// <para>Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -58,7 +60,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token that is used to start the next query. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>If <b>NextToken</b> is empty, no more results exist.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>NextToken</b> has a value, the value is the token that is used to start the next query.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -79,6 +87,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         /// <summary>
         /// <para>The ID of the service instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> operation to obtain the service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-0d0d7bc9accc4e2e8a8f</para>

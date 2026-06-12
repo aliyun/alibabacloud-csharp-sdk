@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceUsagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned per page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token to retrieve the next page of results. If this parameter is not empty, more results can be retrieved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYChudnQUoBH+mGWFpb6oP0=</para>
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service applications.</para>
+        /// <para>The service usage details.</para>
         /// </summary>
         [NameInMap("ServiceUsages")]
         [Validation(Required=false)]
         public List<ListServiceUsagesResponseBodyServiceUsages> ServiceUsages { get; set; }
         public class ListServiceUsagesResponseBodyServiceUsages : TeaModel {
             /// <summary>
-            /// <para>The comment on the approval.</para>
+            /// <para>The remarks on the approval.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Reject</para>
+            /// <para>Review approved.</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was created.</para>
+            /// <para>The time when the request was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-25T02:02:02Z</para>
@@ -80,19 +80,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ServiceTest</para>
+            /// <para>Deployment link permission request</para>
             /// </summary>
             [NameInMap("ServiceName")]
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The status of the service application. Valid values:</para>
+            /// <para>The service status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Submitted: The application is submitted or is to be approved.</description></item>
-            /// <item><description>Approved: The application is approved.</description></item>
-            /// <item><description>Rejected: The application is rejected.</description></item>
-            /// <item><description>Canceled: The application is canceled.</description></item>
+            /// <item><description><para>Submitted: The request is submitted and is pending approval.</para>
+            /// </description></item>
+            /// <item><description><para>Approved: The request is approved.</para>
+            /// </description></item>
+            /// <item><description><para>Rejected: The request is rejected.</para>
+            /// </description></item>
+            /// <item><description><para>Canceled: The request is canceled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,17 +107,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The name of the service provider.</para>
+            /// <para>The supplier name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>SupplierAAA</para>
+            /// <para>Acceptance test</para>
             /// </summary>
             [NameInMap("SupplierName")]
             [Validation(Required=false)]
             public string SupplierName { get; set; }
 
             /// <summary>
-            /// <para>The time when the application was updated.</para>
+            /// <para>The time when the request was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-25T02:02:02Z</para>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account.</para>
+            /// <para>The Alibaba Cloud account ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127383705958xxxx</para>
@@ -133,7 +137,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public long? UserAliUid { get; set; }
 
             /// <summary>
-            /// <para>The user information.</para>
+            /// <para>The information about the user who submitted the request.</para>
             /// </summary>
             [NameInMap("UserInformation")]
             [Validation(Required=false)]
@@ -142,7 +146,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

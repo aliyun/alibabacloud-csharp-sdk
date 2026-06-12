@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListOpsNoticesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to start the next page of results. If this parameter is not returned, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The O\&amp;M notices.</para>
+        /// </summary>
         [NameInMap("OpsNotices")]
         [Validation(Required=false)]
         public List<ListOpsNoticesResponseBodyOpsNotices> OpsNotices { get; set; }
         public class ListOpsNoticesResponseBodyOpsNotices : TeaModel {
             /// <summary>
+            /// <para>The O\&amp;M item properties.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;cveId&quot;:&quot;CVE-2021-4034&quot;}</para>
             /// </summary>
@@ -38,6 +47,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Attributes { get; set; }
 
             /// <summary>
+            /// <para>The category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Availability</para>
+            /// </description></item>
+            /// <item><description><para>Cost</para>
+            /// </description></item>
+            /// <item><description><para>Performance</para>
+            /// </description></item>
+            /// <item><description><para>Recovery</para>
+            /// </description></item>
+            /// <item><description><para>Security</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Security</para>
             /// </summary>
@@ -46,6 +69,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// <para>The content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>content</para>
             /// </summary>
@@ -54,6 +79,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The O\&amp;M notice ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>notice-1749693290</para>
             /// </summary>
@@ -62,6 +89,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string NoticeId { get; set; }
 
             /// <summary>
+            /// <para>The service ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>service-e10349089de34exxxxxx</para>
             /// </summary>
@@ -70,6 +99,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceId { get; set; }
 
             /// <summary>
+            /// <para>The service name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -77,11 +108,26 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string ServiceName { get; set; }
 
+            /// <summary>
+            /// <para>The service versions.</para>
+            /// </summary>
             [NameInMap("ServiceVersions")]
             [Validation(Required=false)]
             public List<string> ServiceVersions { get; set; }
 
             /// <summary>
+            /// <para>The severity level. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Critical</para>
+            /// </description></item>
+            /// <item><description><para>High</para>
+            /// </description></item>
+            /// <item><description><para>Medium</para>
+            /// </description></item>
+            /// <item><description><para>Low</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>High</para>
             /// </summary>
@@ -90,6 +136,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Severity { get; set; }
 
             /// <summary>
+            /// <para>The solution.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>You need to upgrade service instance</para>
             /// </summary>
@@ -98,6 +146,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Solutions { get; set; }
 
             /// <summary>
+            /// <para>The start time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2022-10-12T02:03:37Z</para>
             /// </summary>
@@ -106,6 +156,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string StartTime { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the request was successful.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>True</para>
             /// </summary>
@@ -114,6 +166,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Success { get; set; }
 
             /// <summary>
+            /// <para>The type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>ServiceInstanceUpgrade: upgrade</para>
+            /// </description></item>
+            /// <item><description><para>VulnerabilityFix: vulnerability</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Vulnerability</para>
             /// </summary>
@@ -124,6 +184,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>51945B04-6AA6-410D-93BA-236E0248B104</para>
         /// </summary>
@@ -132,6 +194,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

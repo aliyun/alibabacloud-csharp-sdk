@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The Task Execution Region</para>
+        /// <para>The region where the task is executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string TaskRegionId { get; set; }
 
         /// <summary>
-        /// <para>The service test case ids.</para>
+        /// <para>The service test use cases.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TestCaseIds")]

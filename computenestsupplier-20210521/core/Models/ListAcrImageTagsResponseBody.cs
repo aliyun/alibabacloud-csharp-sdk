@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListAcrImageTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of images.</para>
+        /// <para>A list of images.</para>
         /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The image size. Unit: bytes.</para>
+            /// <para>The size of the image in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>188394616</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ImageSize { get; set; }
 
             /// <summary>
-            /// <para>The time when the image was modified.</para>
+            /// <para>The time when the image was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-20T00:00:00Z</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ey14..</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceInstanceUpgradeHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of items to return per page when paginating results. The maximum is 100, and the default is 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token to use for the next query.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86CAC31E-3527-562C-869F-347E931C9B25</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total count of upgrade history</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>List of upgrade histories.</para>
+        /// <para>The list of upgrade history records.</para>
         /// </summary>
         [NameInMap("UpgradeHistory")]
         [Validation(Required=false)]
         public List<ListServiceInstanceUpgradeHistoryResponseBodyUpgradeHistory> UpgradeHistory { get; set; }
         public class ListServiceInstanceUpgradeHistoryResponseBodyUpgradeHistory : TeaModel {
             /// <summary>
-            /// <para>End time of the upgrade.</para>
+            /// <para>The upgrade end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-26T09:09:51Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>Version before the upgrade.</para>
+            /// <para>The version before the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string FromVersion { get; set; }
 
             /// <summary>
-            /// <para>Upgrade result.</para>
+            /// <para>The upgrade results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;PreUpgradeExecutionId\&quot;:\&quot;exec-123\&quot;}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Results { get; set; }
 
             /// <summary>
-            /// <para>Start time of the upgrade.</para>
+            /// <para>The upgrade start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-26T08:09:51Z</para>
@@ -97,13 +97,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>Upgrade status. Possible values:</para>
+            /// <para>The upgrade status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>upgrading: In progress.</para>
+            /// <item><description><para>upgrading: The upgrade is in progress.</para>
             /// </description></item>
-            /// <item><description><para>UpgradeSuccessful: Upgrade successful.</para>
+            /// <item><description><para>UpgradeSuccessful: The upgrade is successful.</para>
             /// </description></item>
-            /// <item><description><para>UpgradeFailed: Upgrade failed.</para>
+            /// <item><description><para>UpgradeFailed: The upgrade failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Version after the upgrade.</para>
+            /// <para>The version after the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -125,10 +125,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ToVersion { get; set; }
 
             /// <summary>
-            /// <para>Upgrade type.</para>
+            /// <para>The upgrade type.</para>
             /// <list type="bullet">
-            /// <item><description>Upgrade</description></item>
-            /// <item><description>Rollback</description></item>
+            /// <item><description><para>Upgrade</para>
+            /// </description></item>
+            /// <item><description><para>Rollback</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -139,10 +141,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Upgrade history ID.</para>
+            /// <para>The ID of the upgrade history record.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>uh-1b21d65f75e94fa09745</para>
+            /// <para>exec-123</para>
             /// </summary>
             [NameInMap("UpgradeHistoryId")]
             [Validation(Required=false)]

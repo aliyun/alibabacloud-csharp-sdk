@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateArtifactResponseBody : TeaModel {
         /// <summary>
-        /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+        /// <para>The properties for building the artifact. This is used for managed artifact builds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;{\&quot;RegionId\&quot;:\&quot;xxx\&quot;, \&quot;SourceImageId\&quot;:\&quot;xxx\&quot;, \&quot;\&quot;:\&quot;xxx\&quot;, \&quot;CommandType\&quot;:\&quot;xxx\&quot;, \&quot;CommandContent\&quot;:\&quot;xxx\&quot;}&quot;</para>
@@ -20,37 +20,37 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactBuildProperty { get; set; }
 
         /// <summary>
-        /// <para>The type of the deployment package to be built.</para>
+        /// <para>The build type of the artifact.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Dockerfile</para>
+        /// <para>&quot;{\&quot;RegionId\&quot;:\&quot;xxx\&quot;, \&quot;SourceImageId\&quot;:\&quot;xxx\&quot;, \&quot;\&quot;:\&quot;xxx\&quot;, \&quot;CommandType\&quot;:\&quot;xxx\&quot;, \&quot;CommandContent\&quot;:\&quot;xxx\&quot;}&quot;</para>
         /// </summary>
         [NameInMap("ArtifactBuildType")]
         [Validation(Required=false)]
         public string ArtifactBuildType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the deployment package.</para>
+        /// <para>The artifact ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>artifact-eea08d1e2d3a43aexxxx</para>
+        /// <para>artifact-eea08d1e2d3a43ae****</para>
         /// </summary>
         [NameInMap("ArtifactId")]
         [Validation(Required=false)]
         public string ArtifactId { get; set; }
 
         /// <summary>
-        /// <para>The properties of the deployment package.</para>
+        /// <para>The content of the artifact.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;CommodityCode\&quot;:\&quot;cmjj0005xxxx\&quot;,\&quot;CommodityVersion\&quot;:\&quot;V2022xxxx\&quot;}</para>
+        /// <para>{\&quot;CommodityCode\&quot;:\&quot;cmjj0005****\&quot;,\&quot;CommodityVersion\&quot;:\&quot;V2022****\&quot;}</para>
         /// </summary>
         [NameInMap("ArtifactProperty")]
         [Validation(Required=false)]
         public string ArtifactProperty { get; set; }
 
         /// <summary>
-        /// <para>The type of the deployment package.</para>
+        /// <para>The artifact type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EcsImage</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// <para>The version of the deployment package.</para>
+        /// <para>The artifact version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -70,17 +70,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactVersion { get; set; }
 
         /// <summary>
-        /// <para>The description of the deployment package.</para>
+        /// <para>The description of the artifact.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Description</para>
+        /// <para>Redhat8_0 image</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the deployment package was modified.</para>
+        /// <para>The time when the artifact was modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-10-20T02:19:55Z</para>
@@ -93,21 +93,28 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</para>
+        /// <para>9F350409-2ACC-5B61-ACD9-3C8995792F8F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the deployment package. Valid values:</para>
+        /// <para>The status of the artifact.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Created: The deployment package is created.</description></item>
-        /// <item><description>Scanning: The deployment package is being scanned.</description></item>
-        /// <item><description>ScanFailed: The deployment package failed to be scanned.</description></item>
-        /// <item><description>Delivering: The deployment package is being distributed.</description></item>
-        /// <item><description>Available: The deployment package is available.</description></item>
-        /// <item><description>Deleted: The deployment package is deleted.</description></item>
+        /// <item><description><para>Created: The artifact is created.</para>
+        /// </description></item>
+        /// <item><description><para>Scanning: The artifact is being scanned.</para>
+        /// </description></item>
+        /// <item><description><para>ScanFailed: The artifact failed to be scanned.</para>
+        /// </description></item>
+        /// <item><description><para>Delivering: The artifact is being distributed.</para>
+        /// </description></item>
+        /// <item><description><para>Available: The artifact is available.</para>
+        /// </description></item>
+        /// <item><description><para>Deleted: The artifact is deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +125,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The status of the deployment package.</para>
+        /// <para>The details of the artifact status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;/usr/local/share/aliyun-assist/work/script/t-hz04zm90y6og0sg.sh: line 1: pip: command not found&quot;</para>
@@ -128,7 +135,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string StatusDetail { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region that supports the deployment package.</para>
+        /// <para>The IDs of the regions to which the artifact can be distributed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -142,7 +149,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string SupportRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the deployment package.</para>
+        /// <para>The version name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

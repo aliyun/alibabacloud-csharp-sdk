@@ -10,46 +10,66 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class PushMeteringDataRequest : TeaModel {
         /// <summary>
-        /// <para>The metering data. Parameters in the example value:</para>
+        /// <para>The parameters are described as follows:</para>
         /// <list type="bullet">
-        /// <item><description><para>InstanceId: the ID of an instance in Alibaba Cloud Marketplace. Parameter type: STRING.</para>
+        /// <item><description><para>InstanceId: The ID of the Alibaba Cloud Marketplace instance. The parameter type is String.</para>
         /// </description></item>
-        /// <item><description><para>StartTime: the time when the metering operation started. Set the parameter to a UNIX timestamp. Unit: seconds. Parameter type: LONG.</para>
+        /// <item><description><para>StartTime: The start time of the metering. The unit is seconds. The format is a UNIX timestamp. The parameter type is Long.</para>
         /// </description></item>
-        /// <item><description><para>EndTime: the time when the metering operation ended. Set the parameter to a UNIX timestamp. Unit: seconds. Parameter type: LONG.</para>
+        /// <item><description><para>EndTime: The end time of the metering. The unit is seconds. The format is a UNIX timestamp. The parameter type is Long.</para>
         /// </description></item>
-        /// <item><description><para>Entities: the metering entities. Parameter type: LIST.</para>
+        /// <item><description><para><c>Entities</c>: The metering entity object. The parameter type is List\<Map>.</para>
         /// <list type="bullet">
-        /// <item><description><para>Key: the name of the metering item. Parameter type: STRING.</para>
+        /// <item><description><para>Key: The name of the metering item property. The parameter type is String.</para>
         /// <list type="bullet">
-        /// <item><description>Frequency: the number of times the instance was used.</description></item>
-        /// <item><description>Period: the usage duration of the instance. Unit: seconds.</description></item>
+        /// <item><description><para>Frequency: The number of times used.</para>
+        /// </description></item>
+        /// <item><description><para><c>Period</c>: The usage duration in seconds.
+        /// &lt;props=&quot;intl&quot;&gt;Note: The duration in the request parameter is measured in seconds, but the billing unit is hours. The duration is converted to hours for billing. For example, if you push a usage of 1800 for the period from 19:00 to 20:00 and the price is USD 1/hour, the hourly bill for this period is 1800 / 3600 × 1 = USD 0.5. If the fee is a decimal, it is truncated to two decimal places.</para>
+        /// </description></item>
+        /// <item><description><para><c>Storage</c>: The storage space used, in bytes.
+        /// &lt;props=&quot;intl&quot;&gt;Note: The unit in the request parameter is bytes, but the billing unit is MB. The value is converted to MB for billing. For example, if you push a usage of 524288 for the period from 19:00 to 20:00 and the price is USD 1/MB, the hourly bill for this period is 524288 / 1024 / 1024 × 1 = USD 0.5. If the fee is a decimal, it is truncated to two decimal places.</para>
+        /// </description></item>
+        /// <item><description><para><c>NetworkOut</c>: The outbound data transfer, in bits.
+        /// &lt;props=&quot;intl&quot;&gt;Note: The unit in the request parameter is bits, but the billing unit is Mb. The value is converted to Mb for billing. For example, if you push a usage of 524288 for the period from 19:00 to 20:00 and the price is USD 1/Mb, the hourly bill for this period is 524288 / 1024 / 1024 × 1 = USD 0.5. If the fee is a decimal, it is truncated to two decimal places.</para>
+        /// </description></item>
+        /// <item><description><para><c>NetworkIn</c>: The inbound data transfer, in bits.
+        /// &lt;props=&quot;intl&quot;&gt;Note: The unit in the request parameter is bits, but the billing unit is Mb. The value is converted to Mb for billing. For example, if you push a usage of 524288 for the period from 19:00 to 20:00 and the price is USD 1/Mb, the hourly bill for this period is 524288 / 1024 / 1024 × 1 = USD 0.5. If the fee is a decimal, it is truncated to two decimal places.</para>
+        /// </description></item>
+        /// <item><description><para>Character: The number of characters.</para>
+        /// </description></item>
+        /// <item><description><para>DailyActiveUser: The number of daily active users (DAU).</para>
+        /// </description></item>
+        /// <item><description><para>PeriodMin: The usage duration in minutes.</para>
+        /// </description></item>
+        /// <item><description><para>VirtualCpu: The number of vCPU cores.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Unit: The number of units.</para>
+        /// </description></item>
+        /// <item><description><para>Memory: The memory size in GB.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <para>Note: The metering unit is second, whereas the billing unit is hour. Therefore, when bills are generated, seconds are converted to hours. For example, the usage metered from 19:00 to 20:00 is 1800 seconds and the price is USD 1 per hour. In this case, the hourly bill for 19:00 to 20:00 is calculated by using the following formula: 1800/3600 x 1 = 0.5. If the result is a decimal, only the first two decimal places are retained.</para>
-        /// <pre><c>  - Storage: The used storage space. Unit: bytes.   
-        ///    Note: The metering unit is byte, whereas the billing unit is MB. Therefore, when bills are generated, bytes are converted to megabytes. For example, the usage metered from 19:00 to 20:00 is 524,288 bytes and the price is USD 1 per MB. In this case, the hourly bill for 19:00 to 20:00 is calculated by using the following formula: 524288/1024/1024 x 1 = 0.5. If the result is a decimal, only the first two decimal places are retained.  - NetworkOut: the upstream traffic consumed. Unit: bit.  
-        ///    Note: The metering unit is bit, whereas the billing unit is Mbit. Therefore, when bills are generated, bits are converted to megabits. For example, the usage metered from 19:00 to 20:00 is 524,288 bits and the price is USD 1 per Mbit. In this case, the hourly bill for 19:00 to 20:00 is calculated by using the following formula: 524288/1024/1024 x 1 = 0.5. If the result is a decimal, only the first two decimal places are retained.  - NetworkIn: the downstream traffic consumed. Unit: bit.  
-        ///    Note: The metering unit is bit, whereas the billing unit is Mbit. Therefore, when bills are generated, bits are converted to megabits. For example, the usage metered from 19:00 to 20:00 is 524,288 bits and the price is USD 1 per Mbit. In this case, the hourly bill for 19:00 to 20:00 is calculated by using the following formula: 524288/1024/1024 x 1 = 0.5. If the result is a decimal, only the first two decimal places are retained.  - Character: the number of characters.
-        ///   - DailyActiveUser: the number of daily active users (DAU).
-        ///   - PeriodMin: the usage duration of the instance. Unit: minutes.  - VirtualCpu: the number of virtual CPU cores.
-        /// </c></pre>
-        /// <list type="bullet">
-        /// <item><description>Value: the value of the metering item. The value is equal to or greater than 0. Parameter type: INTEGER.</description></item>
+        /// </description></item>
+        /// <item><description><para>Value: The metering value. The value must be greater than or equal to 0. The parameter type is Integer.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <para><b>Note</b>:</para>
         /// <list type="bullet">
-        /// <item><description>If bills are generated for the commodity in real time, the difference between the values of StartTime and EndTime is not limited. However, the time specified by EndTime must be later than that specified by StartTime.</description></item>
-        /// <item><description>If bills are generated for the commodity by billing cycle, such as by hour, by day, or by month, the difference between the values of StartTime and EndTime must be greater than 5 minutes.</description></item>
-        /// <item><description>In a request for pushing multiple metering data records, the values of InstanceId must indicate instances of the same commodity. You cannot push metering data of instances of multiple commodities at a time.</description></item>
+        /// <item><description><para>For products with real-time billing, the interval between StartTime and EndTime can be of any length. EndTime must be later than StartTime.</para>
+        /// </description></item>
+        /// <item><description><para>For products that are not billed in real-time, such as those billed by the hour, day, or month, the interval between StartTime and EndTime must be longer than 5 minutes.</para>
+        /// </description></item>
+        /// <item><description><para>When pushing metering data in batches, the InstanceId property must be for instances of the same product. Pushing data for instances of multiple products at the same time is not supported.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;StartTime\&quot;:1681264800,\&quot;EndTime\&quot;:1681268400,\&quot;Entities\&quot;:[{\&quot;Key\&quot;:\&quot;Unit\&quot;,\&quot;Value\&quot;:\&quot;0\&quot;}]}]</para>
+        /// <para>[{&quot;StartTime&quot;:1711527396,&quot;EndTime&quot;:1711527397,&quot;Entities&quot;:[{&quot;Key&quot;:&quot;Unit&quot;,&quot;Value&quot;:&quot;0&quot;}]}]</para>
         /// </summary>
         [NameInMap("Metering")]
         [Validation(Required=false)]

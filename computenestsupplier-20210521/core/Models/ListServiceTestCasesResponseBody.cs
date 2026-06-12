@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test-1</para>
+            /// <para>Template 1</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The service test case id.</para>
+            /// <para>The ID of the test case.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stc-83fcee1383354e35b151</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string TestCaseId { get; set; }
 
             /// <summary>
-            /// <para>The service test case name.</para>
+            /// <para>The name of the test case.</para>
             /// 
             /// <b>Example:</b>
             /// <para>case1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string TestCaseName { get; set; }
 
             /// <summary>
-            /// <para>The service test config.</para>
+            /// <para>The user-configured YAML file.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CA3AE512-6D30-549A-B52D-B9042CA8D515</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records that meet the filter criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18</para>

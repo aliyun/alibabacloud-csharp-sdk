@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ModifyServiceInstanceResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The imported resources.</para>
+        /// <para>The resources to import.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of operation performed on the service instance resource. Valid values:</para>
+        /// <para>The operation to perform on the resources of the service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Import: The resource is imported.</description></item>
-        /// <item><description>UnImport: The resource import is canceled.</description></item>
+        /// <item><description><para>Import: Imports resources.</para>
+        /// </description></item>
+        /// <item><description><para>UnImport: Removes imported resources.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

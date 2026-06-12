@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServicesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return all versions of a service. Default value: false, which specifies that only the default version of a service is returned.</para>
+        /// <para>Specifies whether to return all versions of the service. The default value is false. If this parameter is set to false, only the default version of each service is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,19 +20,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? AllVersions { get; set; }
 
         /// <summary>
-        /// <para>The filters.</para>
+        /// <para>The filter.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListServicesRequestFilter> Filter { get; set; }
         public class ListServicesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</para>
+            /// <para>The name of the filter. You can query by one or more filter names. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ServiceId: the ID of the service.</description></item>
-            /// <item><description>Name: the name of the service.</description></item>
-            /// <item><description>Status: the state of the service.</description></item>
-            /// <item><description>SupplierName: the name of the service provider.</description></item>
+            /// <item><description><para>ServiceId: The service ID.</para>
+            /// </description></item>
+            /// <item><description><para>Name: The service name.</para>
+            /// </description></item>
+            /// <item><description><para>Status: The service status.</para>
+            /// </description></item>
+            /// <item><description><para>SupplierName: The name of the service provider.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter values of the filter.</para>
+            /// <para>The filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to retrieve the next page of results. Set this parameter to the NextToken value returned by a previous call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBBAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -83,10 +87,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aekzkt5buxxxxxx</para>
+        /// <para>rg-aekzkt5bu****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

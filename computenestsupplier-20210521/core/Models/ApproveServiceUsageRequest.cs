@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ApproveServiceUsageRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client token that ensures the idempotence of the request. Generate a unique value from your client for each request. The token can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10CM943JP0EN9D51H</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Approval comments.</para>
+        /// <para>The approval comments.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Welcome to TuGraph. Your application has been approved. Should you have any questions, please feel free to email us at <a href="mailto:tugraph@service.alipay.com">tugraph@service.alipay.com</a> or call our contact number 400-903-0809. Contact person: Yuansu.</para>
+        /// <para>Welcome to ComputeNest service</para>
         /// </summary>
         [NameInMap("Comments")]
         [Validation(Required=false)]
@@ -51,7 +51,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>ServiceSharedAccountType，</para>
+        /// <para>The service sharing type. The default value is SharedAccount. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>SharedAccount: The regular sharing type.</para>
+        /// </description></item>
+        /// <item><description><para>Reseller: The reseller sharing type.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>SharedAccount</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? Type { get; set; }
 
         /// <summary>
-        /// <para>User ali uid.</para>
+        /// <para>The UID of the user\&quot;s Alibaba Cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateServiceInstanceSpecShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A unique identifier that you provide to ensure the idempotence of the request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10CM943JP0EN9D51H</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Prometheus on the customer side. Valid values:</para>
+        /// <para>Specifies whether to enable Prometheus on the client. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enables Prometheus.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables Prometheus.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +36,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? EnableUserPrometheus { get; set; }
 
         /// <summary>
-        /// <para>The name of the configuration update operation.</para>
+        /// <para>The name of the upgrade or downgrade action.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>package modify</para>
+        /// <para>Plan configuration change</para>
         /// </summary>
         [NameInMap("OperationName")]
         [Validation(Required=false)]
@@ -54,17 +56,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the specification package.</para>
+        /// <para>The package name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>package one</para>
+        /// <para>Package 1</para>
         /// </summary>
         [NameInMap("PredefinedParametersName")]
         [Validation(Required=false)]
         public string PredefinedParametersName { get; set; }
 
         /// <summary>
-        /// <para>The service instance ID.</para>
+        /// <para>The ID of the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-0e6fca6a51a54420****</para>

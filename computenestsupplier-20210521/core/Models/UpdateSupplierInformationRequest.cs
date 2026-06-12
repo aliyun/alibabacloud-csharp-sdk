@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateSupplierInformationRequest : TeaModel {
         /// <summary>
-        /// <para>The delivery settings.</para>
+        /// <para>The custom settings.</para>
         /// </summary>
         [NameInMap("DeliverySettings")]
         [Validation(Required=false)]
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable screencast delivery to Object Storage Service (OSS). Valid values:</para>
+            /// <para>Specifies whether to deliver the execution results of Cloud Assistant O\&amp;M tasks to Object Storage Service (OSS). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false (default): Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public bool? OssEnabled { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which the screencasts are saved.</para>
+            /// <para>The retention period for screen recordings, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public long? OssExpirationDays { get; set; }
 
             /// <summary>
-            /// <para>The OSS path.</para>
+            /// <para>The path in OSS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>path1/path2/</para>
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The Ip of operation.</para>
+        /// <para>The IP address segments for managed O\&amp;M access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.xxx.xxx.xxx/16,192.xxx.xxx.xxx</para>
@@ -73,7 +75,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string OperationIp { get; set; }
 
         /// <summary>
-        /// <para>The MFA of operation.</para>
+        /// <para>Specifies whether to enable multi-factor authentication (MFA). The default value is true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Yes.</para>
+        /// </description></item>
+        /// <item><description><para>false: No.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -83,7 +91,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? OperationMfaPresent { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,17 +102,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The description of service provider.</para>
+        /// <para>The description of the supplier.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test supplier</para>
+        /// <para>Alibaba Cloud Compute Nest</para>
         /// </summary>
         [NameInMap("SupplierDesc")]
         [Validation(Required=false)]
         public string SupplierDesc { get; set; }
 
         /// <summary>
-        /// <para>The Logo of service provider.</para>
+        /// <para>The icon of the supplier.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.aliyundoc.com/cover/34DB-4F4C-9373-003AA060****.png">http://example.aliyundoc.com/cover/34DB-4F4C-9373-003AA060****.png</a></para>
@@ -114,7 +122,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string SupplierLogo { get; set; }
 
         /// <summary>
-        /// <para>The URL of the service provider.</para>
+        /// <para>The URL of the supplier.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.xxx.xxx.cn">http://www.xxx.xxx.cn</a></para>
@@ -124,14 +132,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string SupplierUrl { get; set; }
 
         /// <summary>
-        /// <para>Contact information of the service provider</para>
+        /// <para>The contact information of the supplier.</para>
         /// </summary>
         [NameInMap("SupportContacts")]
         [Validation(Required=false)]
         public List<UpdateSupplierInformationRequestSupportContacts> SupportContacts { get; set; }
         public class UpdateSupplierInformationRequestSupportContacts : TeaModel {
             /// <summary>
-            /// <para>The type of  contact information</para>
+            /// <para>The type of contact method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Email</para>
@@ -141,7 +149,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The value of contact information</para>
+            /// <para>The contact information.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:supplier@example.com">supplier@example.com</a></para>

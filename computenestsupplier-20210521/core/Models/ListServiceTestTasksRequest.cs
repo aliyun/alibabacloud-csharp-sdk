@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceTestTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The filters.</para>
+        /// <para>One or more filters for the query.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListServiceTestTasksRequestFilter> Filter { get; set; }
         public class ListServiceTestTasksRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:</para>
+            /// <para>The property to filter by. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Status: the status of the task.</description></item>
-            /// <item><description>TaskId: the task id.</description></item>
+            /// <item><description><para>Status: The task status.</para>
+            /// </description></item>
+            /// <item><description><para>TaskId: The task ID.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter value N of the filter. Valid values of N: 1 to 10.</para>
+            /// <para>A list of filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Number of items per page in a paginated query. The maximum is 100, and the default is 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to retrieve the next page of results. Set this parameter to the value of NextToken returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>

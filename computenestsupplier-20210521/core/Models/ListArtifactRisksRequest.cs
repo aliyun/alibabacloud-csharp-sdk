@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListArtifactRisksRequest : TeaModel {
         /// <summary>
-        /// <para>Artifact ID.</para>
+        /// <para>The artifact ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>artifact-3fd95cdfdf0d4b1fa00c</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactId { get; set; }
 
         /// <summary>
-        /// <para>Artifact version.</para>
+        /// <para>The artifact version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

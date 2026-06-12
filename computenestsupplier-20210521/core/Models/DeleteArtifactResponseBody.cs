@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</para>
+        /// <para>1B3AD3CC-E938-5042-A771-7FD9A2FE03F3</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The ID of the service test task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stt-xxxx</para>

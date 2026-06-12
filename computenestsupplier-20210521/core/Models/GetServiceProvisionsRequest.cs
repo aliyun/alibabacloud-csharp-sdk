@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceProvisionsRequest : TeaModel {
         /// <summary>
-        /// <para>The parameters that are specified to deploy the service instance.</para>
+        /// <para>The parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;}</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>模板1</para>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CreateServiceInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4DB0F536-B3BE-4F0D-BD29-E83FB56D****</para>
@@ -32,14 +32,22 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <summary>
         /// <para>The status of the service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Created</description></item>
-        /// <item><description>Deploying</description></item>
-        /// <item><description>DeployedFailed</description></item>
-        /// <item><description>Deployed</description></item>
-        /// <item><description>Upgrading</description></item>
-        /// <item><description>Deleting</description></item>
-        /// <item><description>Deleted</description></item>
-        /// <item><description>DeletedFailed</description></item>
+        /// <item><description><para>Created: The service instance is created.</para>
+        /// </description></item>
+        /// <item><description><para>Deploying: The service instance is being deployed.</para>
+        /// </description></item>
+        /// <item><description><para>DeployedFailed: The service instance failed to be deployed.</para>
+        /// </description></item>
+        /// <item><description><para>Deployed: The service instance is deployed.</para>
+        /// </description></item>
+        /// <item><description><para>Upgrading: The service instance is being upgraded.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting: The service instance is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para>Deleted: The service instance is deleted.</para>
+        /// </description></item>
+        /// <item><description><para>DeletedFailed: The service instance failed to be deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

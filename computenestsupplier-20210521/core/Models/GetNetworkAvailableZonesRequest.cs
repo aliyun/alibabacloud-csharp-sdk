@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetNetworkAvailableZonesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the service is a trial service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? IsPoc { get; set; }
 
         /// <summary>
+        /// <para>The region of the virtual Internet.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NetworkRegionId { get; set; }
 
         /// <summary>
+        /// <para>The connection mode. Valid values: \<c>PrivateLink\\</c> and \<c>OverlayLink\\</c>. \<c>OverlayLink\\</c> is an overlay link that is based on Application-aware Network Service Mesh (ANSM).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>VirtualInternet</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string PrivateVpcConnectionMode { get; set; }
 
         /// <summary>
+        /// <para>The service ID. This parameter is used with the \<c>IsPoc\\</c> parameter when \<c>IsPoc\\</c> is set to \<c>true\\</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>service-63b8a060e9d54cxxxxxx</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceId { get; set; }
 
         /// <summary>
+        /// <para>The direction of the internal-facing access. Valid values: \<c>Forward\\</c> and \<c>Reverse\\</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Forward</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceInstanceEndpointServiceType { get; set; }
 
         /// <summary>
+        /// <para>The region where the service is deployed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceRegionId { get; set; }
 
         /// <summary>
+        /// <para>The service version. This parameter is used with the \<c>IsPoc\\</c> parameter when \<c>IsPoc\\</c> is set to \<c>true\\</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>draft</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
+        /// <para>The zone where the service is deployed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-k</para>
         /// </summary>

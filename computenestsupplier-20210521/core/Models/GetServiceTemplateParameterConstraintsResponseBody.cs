@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceTemplateParameterConstraintsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The constraint families.</para>
+        /// <para>The family constraints.</para>
         /// </summary>
         [NameInMap("FamilyConstraints")]
         [Validation(Required=false)]
         public List<string> FamilyConstraints { get; set; }
 
         /// <summary>
-        /// <para>The parameters in the template.</para>
+        /// <para>The parameter information.</para>
         /// </summary>
         [NameInMap("ParameterConstraints")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public List<string> AllowedValues { get; set; }
 
             /// <summary>
-            /// <para>The names of the associated parameters.</para>
+            /// <para>The list of associated parameters.</para>
             /// </summary>
             [NameInMap("AssociationParameterNames")]
             [Validation(Required=false)]
@@ -40,12 +40,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <summary>
             /// <para>The behavior of the parameter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NoLimit: The value of this parameter is not limited.</description></item>
-            /// <item><description>NotSupport: The value of this parameter cannot be queried.</description></item>
-            /// <item><description>QueryError: The query failed.</description></item>
+            /// <item><description><para>NoLimit: The parameter has no value limit.</para>
+            /// </description></item>
+            /// <item><description><para>NotSupport: The parameter does not support value queries.</para>
+            /// </description></item>
+            /// <item><description><para>QueryError: The query failed.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If AllowedValues is not returned, Behavior and BehaviorReason are returned.</para>
+            /// <para>If the query result does not include AllowedValues, Behavior and BehaviorReason are returned to describe the behavior of the parameter and the reason for the behavior.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Behavior { get; set; }
 
             /// <summary>
-            /// <para>The reason why the behavior of the parameter is returned.</para>
+            /// <para>The reason for the parameter behavior.</para>
             /// 
             /// <b>Example:</b>
             /// <para>none</para>

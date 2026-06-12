@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceTestTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution details.</para>
+        /// <para>The execution details of the task. This includes the running details for different use cases.</para>
         /// </summary>
         [NameInMap("ExecutionDetails")]
         [Validation(Required=false)]
         public List<GetServiceTestTaskResponseBodyExecutionDetails> ExecutionDetails { get; set; }
         public class GetServiceTestTaskResponseBodyExecutionDetails : TeaModel {
             /// <summary>
-            /// <para>The service test case name.</para>
+            /// <para>The use case name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>case1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CaseName { get; set; }
 
             /// <summary>
-            /// <para>The execution report</para>
+            /// <para>The execution report.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ExecutionReport { get; set; }
 
             /// <summary>
-            /// <para>The sub task status.</para>
+            /// <para>The execution status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Runing</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The sub task id.</para>
+            /// <para>The subtask ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stt-xxxx</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A361BA9E-xxxx-xxxx-xxxx-C26E5180456E</para>
@@ -73,12 +73,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the service test task. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Running</description></item>
-        /// <item><description>Success</description></item>
-        /// <item><description>Failure</description></item>
-        /// </list>
+        /// <para>The running status of the service test task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -91,14 +86,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nametest</para>
+        /// <para>Automated test task 1</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The task execution region.</para>
+        /// <para>The region where the task runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

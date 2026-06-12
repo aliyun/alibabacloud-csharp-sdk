@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The License Data</para>
+        /// <para>The license data.</para>
         /// </summary>
         [NameInMap("LicenseData")]
         [Validation(Required=false)]
         public string LicenseDataShrink { get; set; }
 
         /// <summary>
-        /// <para>Application reason, currently used for trial application extension.</para>
+        /// <para>The reason for the request. This parameter is used to extend a trial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>\&quot;\&quot;</para>
+        /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]

@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ContinueDeployServiceInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dry run result.</para>
+        /// <para>The result of the dry run.</para>
         /// </summary>
         [NameInMap("DryRunResult")]
         [Validation(Required=false)]
         public ContinueDeployServiceInstanceResponseBodyDryRunResult DryRunResult { get; set; }
         public class ContinueDeployServiceInstanceResponseBodyDryRunResult : TeaModel {
             /// <summary>
-            /// <para>The parameters that can be modified. The operation that is performed to modify the parameters does not cause a validation error.</para>
+            /// <para>The parameters that can be modified. No error is reported if you modify these parameters.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if DryRun is set to true.</para>
+            /// <para>This parameter is returned only when DryRun is set to true.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ParametersAllowedToBeModified")]
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public List<string> ParametersAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// <para>The parameters that can be modified under specific conditions. The new values of the parameters determine whether the operation that is performed to modify the parameters causes a validation error.</para>
+            /// <para>The parameters that can be conditionally modified. Whether an error is reported depends on the new values of these parameters.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if DryRun is set to true.</para>
+            /// <para>This parameter is returned only when DryRun is set to true.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ParametersConditionallyAllowedToBeModified")]
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public List<string> ParametersConditionallyAllowedToBeModified { get; set; }
 
             /// <summary>
-            /// <para>The parameters that cannot be modified. The operation that is performed to modify the parameters causes a validation error.</para>
+            /// <para>The parameters that cannot be modified. An error is reported if you modify these parameters.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if DryRun is set to true.</para>
+            /// <para>This parameter is returned only when DryRun is set to true.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ParametersNotAllowedToBeModified")]

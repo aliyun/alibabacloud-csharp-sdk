@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfmTH5rcd4YFfob4P0uDAAc=</para>
@@ -42,11 +42,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values: </para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service</description></item>
-        /// <item><description>service instance</description></item>
-        /// <item><description>artifact</description></item>
+        /// <item><description><para>service: service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: service instance.</para>
+        /// </description></item>
+        /// <item><description><para>artifact: artifact</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

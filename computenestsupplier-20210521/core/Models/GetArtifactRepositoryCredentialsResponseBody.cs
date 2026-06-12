@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetArtifactRepositoryCredentialsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the resources that can be uploaded.</para>
+        /// <para>Information about the resources that can be uploaded.</para>
         /// </summary>
         [NameInMap("AvailableResources")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The repository name.</para>
+            /// <para>The name of the repository.</para>
             /// 
             /// <b>Example:</b>
             /// <para>computenest-artifacts-draft-cn-hangzhou</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The credentials.</para>
+        /// <para>The access credential.</para>
         /// </summary>
         [NameInMap("Credentials")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The Security Token Service (STS) token.</para>
+            /// <para>The security token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The time when the credentials expired.</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1526549792000</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ExpireDate { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>94E89857-B994-44B6-9C4F-DBD200E9XXXX</para>

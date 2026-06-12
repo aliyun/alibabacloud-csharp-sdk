@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceTestTaskLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The number of items to return per page when paginating results. The maximum is 100, and the default is 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Sort Order. Possible values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Ascending: Ascending order</para>
+        /// <item><description><para><b>Ascending</b>: sorts the results in ascending order.</para>
         /// </description></item>
-        /// <item><description><para>Descending (default value): Descending order</para>
+        /// <item><description><para><b>Descending</b> (default): sorts the results in descending order.</para>
         /// </description></item>
         /// </list>
         /// 

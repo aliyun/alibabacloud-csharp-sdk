@@ -17,15 +17,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<ListSupplierRegistrationsRequestFilter> Filter { get; set; }
         public class ListSupplierRegistrationsRequestFilter : TeaModel {
             /// <summary>
-            /// <para>Name of the filter field. Allowed values:</para>
+            /// <para>The name of the filter. You can query by one or more filter names. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>SupplierUid: The aliUid of supplier.</para>
+            /// <item><description><para>SupplierUid: The UID of the service provider.</para>
             /// </description></item>
-            /// <item><description><para>SupplierName: The name of supplier.</para>
+            /// <item><description><para>RegistrationId: The review ID.</para>
             /// </description></item>
-            /// <item><description><para>RegistrationId: Registration ID.</para>
+            /// <item><description><para>Status: The review status.</para>
             /// </description></item>
-            /// <item><description><para>Status: Registration status. Allowed values: Submitted, Approved, Rejected.</para>
+            /// <item><description><para>SupplierName: The name of the service provider.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Filter value.</para>
+            /// <para>The value of the filter condition.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Number of items per page in a paginated query. The maximum is 100, and the default is 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYChudnQUoBH+mGWFpb6oP0=</para>

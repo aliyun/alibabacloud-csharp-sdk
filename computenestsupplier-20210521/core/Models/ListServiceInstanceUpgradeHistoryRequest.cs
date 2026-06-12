@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceInstanceUpgradeHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The number of items to return per page when paginating results. The maximum is 100, and the default is 20.</para>
+        /// <para>The number of entries to return on each page for a paged query. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query, which should be the value of the NextToken parameter from the previous API call.</para>
+        /// <para>The token that is used to retrieve the next page of results. Set this to the NextToken value from a previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbAx7BkQzyYC+ONO+WudHGKEdB0uWSY7AGnM3qCgm/Ynge7zU6NWdbj0Tegyajyqyc=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Service instance ID.</para>
+        /// <para>The service instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

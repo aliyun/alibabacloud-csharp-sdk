@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The tag keys.</para>
+        /// <para>The list of tag keys.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public List<string> Keys { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token to retrieve the next page of results. This token is returned when the response is truncated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAZ9FmxgN6wKfeK/GOKRnnjU=</para>

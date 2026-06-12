@@ -11,24 +11,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
     public class GetServiceResponseBody : TeaModel {
         /// <summary>
         /// <para>The alert configurations of the service.</para>
-        /// <remarks>
-        /// <para> This parameter takes effect only when you specify an alert policy for <b>PolicyNames</b>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{
-        ///   &quot;TemplateUrl&quot;: &quot;<a href="http://template.file.url">http://template.file.url</a>&quot;,
-        ///   // 应用分组级别告警元数据
-        ///   &quot;ApplicationGroups&quot;: [
-        ///     {
-        ///       &quot;Name&quot;: &quot;applicationGroup1&quot;,
-        ///       &quot;TemplateUrl&quot;: &quot;url1&quot;
-        ///     },
-        ///     {
-        ///       &quot;Name&quot;: &quot;applicationGroup2&quot;,
-        ///       &quot;TemplateUrl&quot;: &quot;url2&quot;
-        ///     }
-        ///   ]
+        ///   &quot;TemplateUrl&quot;: &quot;<a href="http://template.file.url">http://template.file.url</a>&quot;,
+        ///   // Application group level alarm metadata
+        ///   &quot;ApplicationGroups&quot;: [
+        ///     {
+        ///       &quot;Name&quot;: &quot;applicationGroup1&quot;,
+        ///       &quot;TemplateUrl&quot;: &quot;url1&quot;
+        ///     },
+        ///     {
+        ///       &quot;Name&quot;: &quot;applicationGroup2&quot;,
+        ///       &quot;TemplateUrl&quot;: &quot;url2&quot;
+        ///     }
+        ///   ]
         /// }</para>
         /// </summary>
         [NameInMap("AlarmMetadata")]
@@ -36,10 +33,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string AlarmMetadata { get; set; }
 
         /// <summary>
-        /// <para>The approval type of the service usage application. Valid values:</para>
+        /// <para>The approval type of the service usage application.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Manual: The application is manually approved.</description></item>
-        /// <item><description>AutoPass: The application is automatically approved.</description></item>
+        /// <item><description><para>Manual: The application is manually approved.</para>
+        /// </description></item>
+        /// <item><description><para>AutoPass: The application is automatically approved.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ApprovalType { get; set; }
 
         /// <summary>
-        /// <para>The information of build service information.</para>
+        /// <para>The information about the build service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;RepoUrl&quot;: &quot;<a href="https://github.com/user/repo.git">https://github.com/user/repo.git</a>&quot;, &quot;Brancn&quot;: &quot;main&quot;}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string BuildInfo { get; set; }
 
         /// <summary>
-        /// <para>The parameters for building the service</para>
+        /// <para>The parameters of the build service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;ServiceTemplateId&quot;: &quot;st-xxxxx&quot;}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string BuildParameters { get; set; }
 
         /// <summary>
-        /// <para>The category of the service.</para>
+        /// <para>The service category.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DevOps</para>
@@ -80,17 +80,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Categories { get; set; }
 
         /// <summary>
-        /// <para>The commodity details.</para>
+        /// <para>The commodity specifications.</para>
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
         public GetServiceResponseBodyCommodity Commodity { get; set; }
         public class GetServiceResponseBodyCommodity : TeaModel {
             /// <summary>
-            /// <para>The billing method of the service. Valid values:</para>
+            /// <para>The billing method.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PREPAY</b> (default): subscription.</description></item>
-            /// <item><description><b>POSTPAY</b>: pay-as-you-go.</description></item>
+            /// <item><description><para><b>PREPAY</b> (default): subscription.</para>
+            /// </description></item>
+            /// <item><description><para><b>POSTPAY</b>: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +104,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The commodity code of the service in Alibaba Cloud Marketplace.</para>
+            /// <para>The commodity code of Alibaba Cloud Marketplace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cmjj00xxxx</para>
@@ -118,21 +121,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public List<string> Components { get; set; }
 
             /// <summary>
-            /// <para>The configuration metadata related to Lingxiao.</para>
+            /// <para>The configuration metadata of Lingxiao.</para>
             /// </summary>
             [NameInMap("CssMetadata")]
             [Validation(Required=false)]
             public GetServiceResponseBodyCommodityCssMetadata CssMetadata { get; set; }
             public class GetServiceResponseBodyCommodityCssMetadata : TeaModel {
                 /// <summary>
-                /// <para>The mapping information about the billing items.</para>
+                /// <para>The billing item mapping.</para>
                 /// </summary>
                 [NameInMap("ComponentsMappings")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityCssMetadataComponentsMappings> ComponentsMappings { get; set; }
                 public class GetServiceResponseBodyCommodityCssMetadataComponentsMappings : TeaModel {
                     /// <summary>
-                    /// <para>The mappings.</para>
+                    /// <para>The mapping.</para>
                     /// </summary>
                     [NameInMap("Mappings")]
                     [Validation(Required=false)]
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     /// <para>The template name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Template 1</para>
+                    /// <para>模板1</para>
                     /// </summary>
                     [NameInMap("TemplateName")]
                     [Validation(Required=false)]
@@ -151,14 +154,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// <para>Metering item configuration information.</para>
+                /// <para>The configuration information of the metering item.</para>
                 /// </summary>
                 [NameInMap("MeteringEntityExtraInfos")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos> MeteringEntityExtraInfos { get; set; }
                 public class GetServiceResponseBodyCommodityCssMetadataMeteringEntityExtraInfos : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the entity.</para>
+                    /// <para>The metering item ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cmgj0048****-Frequency-1</para>
@@ -168,7 +171,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     public string EntityId { get; set; }
 
                     /// <summary>
-                    /// <para>Name of a measurement indicator.</para>
+                    /// <para>The metric name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AvgMemory</para>
@@ -178,7 +181,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     public string MetricName { get; set; }
 
                     /// <summary>
-                    /// <para>Custom PromQL.</para>
+                    /// <para>The custom Prometheus statement.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>avg_over_time(count(kube_pod_info{namespace=\&quot;default\&quot;})[1h:1m])</para>
@@ -188,7 +191,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     public string Promql { get; set; }
 
                     /// <summary>
-                    /// <para>Measurement indicators.</para>
+                    /// <para>The metering metric.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ComputeNestPrometheus</para>
@@ -200,14 +203,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// <para>The binding relationship between package and measurement dimension.</para>
+                /// <para>The binding relationship between the package and the metering dimension.</para>
                 /// </summary>
                 [NameInMap("MeteringEntityMappings")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings> MeteringEntityMappings { get; set; }
                 public class GetServiceResponseBodyCommodityCssMetadataMeteringEntityMappings : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the entity.</para>
+                    /// <para>The metering item ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cmgj0015****-Frequency-1</para>
@@ -220,7 +223,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     /// <para>The package name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Pay-as-you-go package</para>
+                    /// <para>按量付费套餐</para>
                     /// </summary>
                     [NameInMap("SpecificationName")]
                     [Validation(Required=false)]
@@ -248,24 +251,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public GetServiceResponseBodyCommodityMarketplaceMetadata MarketplaceMetadata { get; set; }
             public class GetServiceResponseBodyCommodityMarketplaceMetadata : TeaModel {
                 /// <summary>
-                /// <para>The configurations of the billable items.</para>
+                /// <para>The configuration information of the metering item.</para>
                 /// </summary>
                 [NameInMap("MeteringEntityExtraInfos")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos> MeteringEntityExtraInfos { get; set; }
                 public class GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityExtraInfos : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the billable item.</para>
+                    /// <para>The metering item ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>cmgjxxxxxxxx-NetworkOut-2</para>
+                    /// <para>cmgj1596****-NetworkOut-2</para>
                     /// </summary>
                     [NameInMap("EntityId")]
                     [Validation(Required=false)]
                     public string EntityId { get; set; }
 
                     /// <summary>
-                    /// <para>The metric name.</para>
+                    /// <para>The name of the metering metric.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>NetworkLantency</para>
@@ -275,7 +278,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     public string MetricName { get; set; }
 
                     /// <summary>
-                    /// <para>The custom prometheus statement.</para>
+                    /// <para>The custom Prometheus statement.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>avg_over_time(count(kube_pod_info{namespace=\&quot;default\&quot;})[1h:1m])</para>
@@ -285,7 +288,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     public string Promql { get; set; }
 
                     /// <summary>
-                    /// <para>The metric.</para>
+                    /// <para>The metering metric.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>AvgPod</para>
@@ -297,27 +300,27 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// <para>The billable items that are associated with the package.</para>
+                /// <para>The binding relationship between the package and the metering dimension.</para>
                 /// </summary>
                 [NameInMap("MeteringEntityMappings")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings> MeteringEntityMappings { get; set; }
                 public class GetServiceResponseBodyCommodityMarketplaceMetadataMeteringEntityMappings : TeaModel {
                     /// <summary>
-                    /// <para>The ID of the billable item.</para>
+                    /// <para>The metering item ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>cmgjxxxxxxxx-NetworkOut-2</para>
+                    /// <para>cmgj1596****-NetworkOut-2</para>
                     /// </summary>
                     [NameInMap("EntityIds")]
                     [Validation(Required=false)]
                     public string EntityIds { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the specification package.</para>
+                    /// <para>The package name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Pay-as-you-go Package</para>
+                    /// <para>Pay-as-you-go plan</para>
                     /// </summary>
                     [NameInMap("SpecificationName")]
                     [Validation(Required=false)]
@@ -327,7 +330,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     /// <para>The template name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Template 1</para>
+                    /// <para>模板1</para>
                     /// </summary>
                     [NameInMap("TemplateName")]
                     [Validation(Required=false)]
@@ -336,24 +339,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// <para>The mappings between the service specifications and the template or package.</para>
+                /// <para>The relationship between commodity specifications and templates or packages.</para>
                 /// </summary>
                 [NameInMap("SpecificationMappings")]
                 [Validation(Required=false)]
                 public List<GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings> SpecificationMappings { get; set; }
                 public class GetServiceResponseBodyCommodityMarketplaceMetadataSpecificationMappings : TeaModel {
                     /// <summary>
-                    /// <para>The specification code of the service in Alibaba Cloud Marketplace.</para>
+                    /// <para>The commodity specification code of Alibaba Cloud Marketplace.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>cmjj00xxxx</para>
+                    /// <para>cmjj00****</para>
                     /// </summary>
                     [NameInMap("SpecificationCode")]
                     [Validation(Required=false)]
                     public string SpecificationCode { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the specification package.</para>
+                    /// <para>The package name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Pay-as-you-go</para>
@@ -373,10 +376,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     public string TemplateName { get; set; }
 
                     /// <summary>
-                    /// <para>The trial policy. Valid values:</para>
+                    /// <para>The trial type.</para>
+                    /// <para>Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Trial: Trials are supported.</description></item>
-                    /// <item><description>NotTrial: Trials are not supported.</description></item>
+                    /// <item><description><para>Trial: Trial is supported.</para>
+                    /// </description></item>
+                    /// <item><description><para>NotTrial: Trial is not supported.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -391,24 +397,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// <para>The information about the billable item.</para>
+            /// <para>The metering information.</para>
             /// </summary>
             [NameInMap("MeteringEntities")]
             [Validation(Required=false)]
             public List<GetServiceResponseBodyCommodityMeteringEntities> MeteringEntities { get; set; }
             public class GetServiceResponseBodyCommodityMeteringEntities : TeaModel {
                 /// <summary>
-                /// <para>The ID of the billable item.</para>
+                /// <para>The metering item ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cmgjxxxxxxxx-NetworkOut</para>
+                /// <para>cmgj5682****-NetworkOut</para>
                 /// </summary>
                 [NameInMap("EntityId")]
                 [Validation(Required=false)]
                 public string EntityId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the billable item.</para>
+                /// <para>The name of the metering item property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>spring-boot-demo</para>
@@ -420,17 +426,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// <para>The configuration metadata related to Saas Boost.</para>
+            /// <para>The configuration metadata of SaaS Boost.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{ &quot;Enabled&quot;:false // The public endpoint of the SaaS Boost instance. &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot; }</para>
+            /// <para>{
+            ///     &quot;Enabled&quot;:false
+            ///     //Public access URL
+            ///     &quot;PublicAccessUrl&quot;:&quot;<a href="https://example.com">https://example.com</a>&quot;
+            /// }</para>
             /// </summary>
             [NameInMap("SaasBoostMetadata")]
             [Validation(Required=false)]
             public string SaasBoostMetadata { get; set; }
 
             /// <summary>
-            /// <para>The specification details of the service in Alibaba Cloud Marketplace.</para>
+            /// <para>The details of the Alibaba Cloud Marketplace specifications.</para>
             /// </summary>
             [NameInMap("Specifications")]
             [Validation(Required=false)]
@@ -440,7 +450,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 /// <para>The commodity code.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cmjj00xxxx</para>
+                /// <para>cmjj00****</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -457,7 +467,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The subscription duration. Unit: week or year.</para>
+                /// <para>The purchasable duration. Unit: week or year.</para>
                 /// </summary>
                 [NameInMap("Times")]
                 [Validation(Required=false)]
@@ -466,10 +476,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// <para>The service type. Valid values:</para>
+            /// <para>The type.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>marketplace: Alibaba Cloud Marketplace.</description></item>
-            /// <item><description>Css: Lingxiao.</description></item>
+            /// <item><description><para>Marketplace: Alibaba Cloud Marketplace.</para>
+            /// </description></item>
+            /// <item><description><para>Css: Lingxiao.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -482,14 +495,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Compliance check metadata.</para>
+        /// <para>The compliance check metadata.</para>
         /// </summary>
         [NameInMap("ComplianceMetadata")]
         [Validation(Required=false)]
         public GetServiceResponseBodyComplianceMetadata ComplianceMetadata { get; set; }
         public class GetServiceResponseBodyComplianceMetadata : TeaModel {
             /// <summary>
-            /// <para>The compliance package is selected.</para>
+            /// <para>The selected compliance package.</para>
             /// </summary>
             [NameInMap("CompliancePacks")]
             [Validation(Required=false)]
@@ -508,7 +521,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The binding configurations of the commodity module.</para>
+        /// <para>The binding relationship of the commodity module.</para>
         /// 
         /// <b>Example:</b>
         /// <para>componesConfigs</para>
@@ -518,7 +531,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string CrossRegionConnectionStatus { get; set; }
 
         /// <summary>
-        /// <para>The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.</para>
+        /// <para>The information about the service deployment configuration.</para>
+        /// <para>The information varies based on the deployment type. Different deployment types use different data formats. Therefore, the information is stored as a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;TemplateConfigs\&quot;:[{\&quot;Name\&quot;:\&quot;模板1\&quot;,\&quot;Url\&quot;:\&quot;oss://computenest-test/template&quot; 
@@ -531,14 +545,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string DeployMetadata { get; set; }
 
         /// <summary>
-        /// <para>The deployment type of the service. Valid values:</para>
+        /// <para>The deployment type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ros: The service is deployed by using Resource Orchestration Service (ROS).</description></item>
-        /// <item><description>terraform: The service is deployed by using Terraform.</description></item>
-        /// <item><description>spi: The service is deployed by calling a service provider interface (SPI).</description></item>
-        /// <item><description>operation: The service is deployed by using a hosted O\&amp;M service.</description></item>
-        /// <item><description>container: The service is deployed by using a container.</description></item>
-        /// <item><description>pkg: The service is deployed by using a package.</description></item>
+        /// <item><description><para>ros: The service is deployed using ROS.</para>
+        /// </description></item>
+        /// <item><description><para>terraform: The service is deployed using Terraform.</para>
+        /// </description></item>
+        /// <item><description><para>spi: The service is deployed by calling SPI.</para>
+        /// </description></item>
+        /// <item><description><para>operation: The service is deployed using Alibaba Cloud Managed Services.</para>
+        /// </description></item>
+        /// <item><description><para>container: The service is deployed using containers.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -549,7 +568,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string DeployType { get; set; }
 
         /// <summary>
-        /// <para>The duration for which hosted O\&amp;M is implemented. Unit: seconds.</para>
+        /// <para>The duration of the Alibaba Cloud Managed Services. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>259200</para>
@@ -559,21 +578,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public long? Duration { get; set; }
 
         /// <summary>
-        /// <para>The report source.</para>
+        /// <para>The source of the reported data.</para>
         /// </summary>
         [NameInMap("EntitySource")]
         [Validation(Required=false)]
         public Dictionary<string, string> EntitySource { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the hosted O\&amp;M feature is enabled for the service. Default value: false. Valid values:</para>
+        /// <para>Indicates whether Alibaba Cloud Managed Services is enabled.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disabled.</para>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para> This parameter is returned if you set <b>ServiceType</b> to <b>private</b>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -586,24 +605,32 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The license metadata.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;renewType&quot;:&quot;MONTHLY&quot;}</para>
+        /// <para>{\&quot;PayType\&quot;:\&quot;CustomFixTime\&quot;,\&quot;DefaultLicenseDays\&quot;:7,\&quot;CustomMetadata\&quot;:[{\&quot;TemplateName\&quot;:\&quot; template1\&quot;,\&quot;SpecificationName\&quot;:\&quot;bandwith-0\&quot;,\&quot;CustomData\&quot;:\&quot;1\&quot;}]}</para>
         /// </summary>
         [NameInMap("LicenseMetadata")]
         [Validation(Required=false)]
         public string LicenseMetadata { get; set; }
 
         /// <summary>
-        /// <para>The logging configurations.</para>
+        /// <para>The application log configurations.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{ &quot;Logstores&quot;: [ { &quot;LogstoreName&quot;: &quot;access-log&quot;, &quot;LogPath&quot;: &quot;/home/admin/app/logs&quot;, # This parameter is not required for containers. Configure the parameter in the YAML file. &quot;FilePattern&quot;: &quot;access.log\*&quot; # This parameter is not required for containers. Configure the parameter in the YAML file. } ] }</para>
+        /// <para>{
+        ///   &quot;Logstores&quot;: [
+        ///     {
+        ///     &quot;LogstoreName&quot;: &quot;access-log&quot;,
+        ///   &quot;LogPath&quot;: &quot;/home/admin/app/logs&quot;, # Not required for containers. Configure in YAML
+        ///   &quot;FilePattern&quot;: &quot;access.log*&quot; # Not required for containers. Configure in YAML
+        ///     }
+        ///   ]
+        /// }</para>
         /// </summary>
         [NameInMap("LogMetadata")]
         [Validation(Required=false)]
         public string LogMetadata { get; set; }
 
         /// <summary>
-        /// <para>The hosted O\&amp;M configurations.</para>
+        /// <para>The configurations of Alibaba Cloud Managed Services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;PrometheusConfigMap\&quot;:{\&quot;New_Vpc_Ack_And_Jumpserver\&quot;:{}}}</para>
@@ -613,11 +640,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string OperationMetadata { get; set; }
 
         /// <summary>
-        /// <para>The source for which fees are generated. Valid values:</para>
+        /// <para>The payment source.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>None: No fees are generated.</description></item>
-        /// <item><description>Marketplace: Fees are generated for Alibaba Cloud Marketplace.</description></item>
-        /// <item><description>Custom: The custom fees.</description></item>
+        /// <item><description><para>None: The service is free of charge.</para>
+        /// </description></item>
+        /// <item><description><para>Marketplace: The service is paid on Alibaba Cloud Marketplace.</para>
+        /// </description></item>
+        /// <item><description><para>Custom: The service is paid using a custom payment method.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -628,10 +659,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string PayFromType { get; set; }
 
         /// <summary>
-        /// <para>The permissions on the service. Valid values:</para>
+        /// <para>The permission type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Deployable: Permissions to deploy the service.</description></item>
-        /// <item><description>Accessible: Permissions to access the service.</description></item>
+        /// <item><description><para>Deployable: The service can be deployed.</para>
+        /// </description></item>
+        /// <item><description><para>Accessible: The service can be accessed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -642,7 +676,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&amp;M policies are supported.</para>
+        /// <para>The policy names.</para>
+        /// <para>A policy name can be up to 128 characters in length. Multiple policy names are separated by commas (,). Only policies related to Alibaba Cloud Managed Services are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policyName1, policyName2</para>
@@ -652,7 +687,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string PolicyNames { get; set; }
 
         /// <summary>
-        /// <para>The deployment progress of the service instance. Unit: percentage.</para>
+        /// <para>The deployment progress of the service instance. Unit: %.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>
@@ -675,7 +710,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The registration ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>sr-04056c2ab4b94bxxxxxx</para>
+        /// <para>sr-1b4aabc1c9eb4109****</para>
         /// </summary>
         [NameInMap("RegistrationId")]
         [Validation(Required=false)]
@@ -685,17 +720,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B1A0198B-F316-1B72-B8DD-28B6F6D6XXXX</para>
+        /// <para>9AC8E73E-88DE-52C2-A29B-531FC13A5604</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the distribution is supported. Valid values:</para>
+        /// <para>Indicates whether the service can be distributed.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false: The service cannot be distributed.</para>
+        /// </description></item>
+        /// <item><description><para>true: The service can be distributed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -706,34 +744,40 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? Resellable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aekzuqyxxxxxx</para>
+        /// <para>rg-acfm2jfvb7b****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The service key. It is used for digital signature encryption.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>6cfc5d4649c54216****</para>
+        /// </summary>
         [NameInMap("SecretKey")]
         [Validation(Required=false)]
         public string SecretKey { get; set; }
 
         /// <summary>
-        /// <para>The URL of the service audit file.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para><a href="https://service-info-public.oss-cn-hangzhou.aliyuncs.com/1690707531xxxxxx/service-document/be3382cd-xxxx-xxxx-xxxx-f8707ec12879.docx">https://service-info-public.oss-cn-hangzhou.aliyuncs.com/1690707531xxxxxx/service-document/be3382cd-xxxx-xxxx-xxxx-f8707ec12879.docx</a></para>
+        /// <para>The URL of the service review file.</para>
         /// </summary>
         [NameInMap("ServiceAuditDocumentUrl")]
         [Validation(Required=false)]
         public string ServiceAuditDocumentUrl { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the service is visible. Valid values:</para>
+        /// <para>Indicates whether the service is discoverable.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INVISIBLE</description></item>
-        /// <item><description>DISCOVERABLE</description></item>
+        /// <item><description><para>INVISIBLE: The service is not discoverable.</para>
+        /// </description></item>
+        /// <item><description><para>DISCOVERABLE: The service is discoverable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -744,24 +788,30 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceDiscoverable { get; set; }
 
         /// <summary>
-        /// <para>Service document information.</para>
+        /// <para>The service document information.</para>
         /// </summary>
         [NameInMap("ServiceDocumentInfos")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodyServiceDocumentInfos> ServiceDocumentInfos { get; set; }
         public class GetServiceResponseBodyServiceDocumentInfos : TeaModel {
             /// <summary>
-            /// <para>The URL that is used to access the document.</para>
+            /// <para>The URL of the document.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://docurl">http://docurl</a></para>
+            /// <para><a href="http://doc.com">http://doc.com</a></para>
             /// </summary>
             [NameInMap("DocumentUrl")]
             [Validation(Required=false)]
             public string DocumentUrl { get; set; }
 
             /// <summary>
-            /// <para>The language of the return data. Valid values: zh-CN and en-US.</para>
+            /// <para>The language of the service configuration. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>zh-CN: Chinese.</para>
+            /// </description></item>
+            /// <item><description><para>en-US: English.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>zh-CN</para>
@@ -774,7 +824,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Default Template.</para>
+            /// <para>模板1</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
@@ -786,21 +836,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The service ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>service-70a3b15bb62643xxxxxx</para>
+        /// <para>service-ca83ff3cb6b14dbc****</para>
         /// </summary>
         [NameInMap("ServiceId")]
         [Validation(Required=false)]
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The information about the service.</para>
+        /// <para>The service information.</para>
         /// </summary>
         [NameInMap("ServiceInfos")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodyServiceInfos> ServiceInfos { get; set; }
         public class GetServiceResponseBodyServiceInfos : TeaModel {
             /// <summary>
-            /// <para>The agreement information about the service.</para>
+            /// <para>The information about the service agreement.</para>
             /// </summary>
             [NameInMap("Agreements")]
             [Validation(Required=false)]
@@ -817,7 +867,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The agreement URL.</para>
+                /// <para>The URL of the agreement.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://aliyun.com/xxxxxxxx.html">https://aliyun.com/xxxxxxxx.html</a></para>
@@ -832,17 +882,20 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <para>The URL of the service icon.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png">https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f356602462.png</a></para>
+            /// <para><a href="https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f35660****.png">https://example.com/service-image/c1c4a559-cc60-4af1-b976-98f35660****.png</a></para>
             /// </summary>
             [NameInMap("Image")]
             [Validation(Required=false)]
             public string Image { get; set; }
 
             /// <summary>
-            /// <para>The language of the service. Valid values:</para>
+            /// <para>The language of the service configuration.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>zh-CN: Chinese</description></item>
-            /// <item><description>en-US: English</description></item>
+            /// <item><description><para>zh-CN: Chinese.</para>
+            /// </description></item>
+            /// <item><description><para>en-US: English.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -866,31 +919,31 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>WordPress</para>
+            /// <para>Database B</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The description of the service.</para>
+            /// <para>The summary of the service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>B是A公司自主设计并研发的开源分布式的关系型数据库</para>
+            /// <para>B is an open-source distributed relational database independently designed and developed by Company A.</para>
             /// </summary>
             [NameInMap("ShortDescription")]
             [Validation(Required=false)]
             public string ShortDescription { get; set; }
 
             /// <summary>
-            /// <para>The list of the information about the software in the service.</para>
+            /// <para>The information about the software used in the service.</para>
             /// </summary>
             [NameInMap("Softwares")]
             [Validation(Required=false)]
             public List<GetServiceResponseBodyServiceInfosSoftwares> Softwares { get; set; }
             public class GetServiceResponseBodyServiceInfosSoftwares : TeaModel {
                 /// <summary>
-                /// <para>The name of the software</para>
+                /// <para>The software name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MySQL</para>
@@ -900,7 +953,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The version of the software.</para>
+                /// <para>The software version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5.7</para>
@@ -913,18 +966,39 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         }
 
+        /// <summary>
+        /// <para>The multi-language configurations of the service.</para>
+        /// </summary>
         [NameInMap("ServiceLocaleConfigs")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodyServiceLocaleConfigs> ServiceLocaleConfigs { get; set; }
         public class GetServiceResponseBodyServiceLocaleConfigs : TeaModel {
+            /// <summary>
+            /// <para>The English value of the business information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Service Name</para>
+            /// </summary>
             [NameInMap("EnValue")]
             [Validation(Required=false)]
             public string EnValue { get; set; }
 
+            /// <summary>
+            /// <para>The original value of the business information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Service Name</para>
+            /// </summary>
             [NameInMap("OriginalValue")]
             [Validation(Required=false)]
             public string OriginalValue { get; set; }
 
+            /// <summary>
+            /// <para>The Chinese value of the business information.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>服务名称</para>
+            /// </summary>
             [NameInMap("ZhValue")]
             [Validation(Required=false)]
             public string ZhValue { get; set; }
@@ -932,7 +1006,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The URL of the service page.</para>
+        /// <para>The URL of the product page.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example2.com">http://example2.com</a></para>
@@ -942,11 +1016,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceProductUrl { get; set; }
 
         /// <summary>
-        /// <para>The type of the service. Valid values:</para>
+        /// <para>The service type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>private: The service is a private service and is deployed within the account of a customer.</description></item>
-        /// <item><description>managed: The service is a fully managed service and is deployed within the account of a service provider.</description></item>
-        /// <item><description>operation: The service is a hosted O\&amp;M service.</description></item>
+        /// <item><description><para>private: The service is deployed in the user\&quot;s account.</para>
+        /// </description></item>
+        /// <item><description><para>managed: The service is deployed in the service provider\&quot;s account.</para>
+        /// </description></item>
+        /// <item><description><para>operation: The service is an Alibaba Cloud Managed Service.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -957,13 +1035,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceType { get; set; }
 
         /// <summary>
-        /// <para>The permission type of the deployment URL. Valid values:</para>
+        /// <para>The sharing type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Public: All users can go to the URL to create a service instance or a trial service instance.</description></item>
-        /// <item><description>Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.</description></item>
-        /// <item><description>OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.</description></item>
-        /// <item><description>OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.</description></item>
-        /// <item><description>Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.</description></item>
+        /// <item><description><para>Public: The service is public. Formal and trial deployments are not restricted.</para>
+        /// </description></item>
+        /// <item><description><para>Restricted: The service is restricted. Formal and trial deployments are restricted.</para>
+        /// </description></item>
+        /// <item><description><para>OnlyFormalRestricted: Only formal deployments are restricted.</para>
+        /// </description></item>
+        /// <item><description><para>OnlyTrailRestricted: Only trial deployments are restricted.</para>
+        /// </description></item>
+        /// <item><description><para>Hidden: The service is hidden. It is not visible and you cannot apply for deployment permissions.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -974,30 +1058,27 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ShareType { get; set; }
 
         /// <summary>
-        /// <para>The share status of the instance.</para>
-        /// <remarks>
-        /// <para>This parameter is discontinued.</para>
-        /// </remarks>
+        /// <para>The sharing status of the service. &gt;Notice: This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>This parameter is discontinued.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </summary>
         [NameInMap("ShareTypeStatus")]
         [Validation(Required=false)]
         public string ShareTypeStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the distribution source service.</para>
+        /// <para>The ID of the source service for distribution.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>service-70a3b15bb62643xxxxxx</para>
+        /// <para>service-70a3b15bb6264315****</para>
         /// </summary>
         [NameInMap("SourceServiceId")]
         [Validation(Required=false)]
         public string SourceServiceId { get; set; }
 
         /// <summary>
-        /// <para>The version of the distribution source service.</para>
+        /// <para>The version of the source service for distribution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -1007,7 +1088,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string SourceServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the distribution source service provider.</para>
+        /// <para>The name of the service provider of the source service for distribution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SourceSupplier</para>
@@ -1017,14 +1098,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string SourceSupplierName { get; set; }
 
         /// <summary>
-        /// <para>The statistics.</para>
+        /// <para>The statistics information.</para>
         /// </summary>
         [NameInMap("Statistic")]
         [Validation(Required=false)]
         public GetServiceResponseBodyStatistic Statistic { get; set; }
         public class GetServiceResponseBodyStatistic : TeaModel {
             /// <summary>
-            /// <para>The total number of service instances that belong to the service. The service instances that are deleted are counted.</para>
+            /// <para>The total number of service instances. This includes deleted instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>75</para>
@@ -1034,7 +1115,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public int? AccumulativeInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The total amount consumed for trial service instances. Unit: CNY.</para>
+            /// <para>The total consumption amount of the trial service. Unit: CNY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80.35</para>
@@ -1044,7 +1125,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public double? AccumulativePocAmount { get; set; }
 
             /// <summary>
-            /// <para>The total number of users who use the service. The historical users are counted.</para>
+            /// <para>The total number of users. This includes historical users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -1054,7 +1135,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public int? AccumulativeUserCount { get; set; }
 
             /// <summary>
-            /// <para>The average amount consumed for trial service instances per instance. Unit: CNY.</para>
+            /// <para>The average consumption amount of a trial service instance. Unit: CNY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40.17</para>
@@ -1064,7 +1145,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public double? AveragePocAmount { get; set; }
 
             /// <summary>
-            /// <para>The average duration for which trial service instances are in use. Unit: Hour.</para>
+            /// <para>The average trial duration of a service instance. Unit: hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -1074,7 +1155,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public double? AveragePocDuration { get; set; }
 
             /// <summary>
-            /// <para>The average amount consumed for trial service instances per a period of time. Unit: CNY.</para>
+            /// <para>The average consumption amount of a trial service instance per unit of time. Unit: CNY.</para>
             /// 
             /// <b>Example:</b>
             /// <para>167.9</para>
@@ -1084,7 +1165,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public double? AveragePocUnitAmount { get; set; }
 
             /// <summary>
-            /// <para>The number of online service instances. It means the number of service instances that are successfully deployed.</para>
+            /// <para>The number of online service instances. This indicates the number of service instances that are successfully deployed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -1094,7 +1175,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public int? DeployedServiceInstanceCount { get; set; }
 
             /// <summary>
-            /// <para>The number of online users. It means the number of users who successfully deployed the service instances.</para>
+            /// <para>The number of online users. This indicates the number of users who have successfully deployed service instances.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -1116,14 +1197,31 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The status of the service. Valid values:</para>
+        /// <para>The service status.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Draft: The service is a draft.</description></item>
-        /// <item><description>Submitted: The service is submitted for review. You cannot modify services in this state.</description></item>
-        /// <item><description>Approved: The service is approved. You cannot modify services in this state. You can publish services in this state.</description></item>
-        /// <item><description>Launching: The service is being published.</description></item>
-        /// <item><description>Online: The service is published.</description></item>
-        /// <item><description>Offline: The service is unpublished.</description></item>
+        /// <item><description><para>Draft: The service is in the draft state.</para>
+        /// </description></item>
+        /// <item><description><para>Submitted: The service is submitted for review. You cannot modify the service.</para>
+        /// </description></item>
+        /// <item><description><para>Approved: The service is approved. You cannot modify the service, but you can publish the service.</para>
+        /// </description></item>
+        /// <item><description><para>Launching: The service is being published.</para>
+        /// </description></item>
+        /// <item><description><para>Online: The service is published.</para>
+        /// </description></item>
+        /// <item><description><para>Offline: The service is unpublished.</para>
+        /// </description></item>
+        /// <item><description><para>Beta: The service is in beta.</para>
+        /// </description></item>
+        /// <item><description><para>Creating: The service is being created.</para>
+        /// </description></item>
+        /// <item><description><para>CreateFailed: The service failed to be created.</para>
+        /// </description></item>
+        /// <item><description><para>Updating: The service is being updated.</para>
+        /// </description></item>
+        /// <item><description><para>UpdateFailed: The service failed to be updated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1147,7 +1245,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The name of the service provider.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud</para>
+        /// <para>Company A</para>
         /// </summary>
         [NameInMap("SupplierName")]
         [Validation(Required=false)]
@@ -1164,14 +1262,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string SupplierUrl { get; set; }
 
         /// <summary>
-        /// <para>Contact information of the service provider.</para>
+        /// <para>The contact information of the service provider.</para>
         /// </summary>
         [NameInMap("SupportContacts")]
         [Validation(Required=false)]
         public List<GetServiceResponseBodySupportContacts> SupportContacts { get; set; }
         public class GetServiceResponseBodySupportContacts : TeaModel {
             /// <summary>
-            /// <para>The type of Contact information.</para>
+            /// <para>The type of the contact information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Email</para>
@@ -1181,7 +1279,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The value of Contact information.</para>
+            /// <para>The contact information.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:supplier@test.com">supplier@test.com</a></para>
@@ -1222,10 +1320,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The type of the tenant. Valid values:</para>
+        /// <para>The tenant type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SingleTenant</description></item>
-        /// <item><description>MultiTenant</description></item>
+        /// <item><description><para>SingleTenant: single-tenant.</para>
+        /// </description></item>
+        /// <item><description><para>MultiTenant: multitenancy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1236,11 +1337,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string TenantType { get; set; }
 
         /// <summary>
-        /// <para>The status of the test. Valid values:</para>
+        /// <para>The test status.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>CONFIG_IS_NULL</c>: No test configurations exist.</description></item>
-        /// <item><description><c>SERVICE_TEST_SUCCEED</c>: The service passed the test.</description></item>
-        /// <item><description><c>SERVICE_TSET_DOING</c>: The service does not pass the test.</description></item>
+        /// <item><description><para>CONFIG_IS_NULL: The test configuration does not exist.</para>
+        /// </description></item>
+        /// <item><description><para>SERVICE_TEST_SUCCEED: The service passed the test.</para>
+        /// </description></item>
+        /// <item><description><para>SERVICE_TSET_DOING: The service has not passed the test.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1251,7 +1356,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string TestStatus { get; set; }
 
         /// <summary>
-        /// <para>The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.</para>
+        /// <para>The trial duration. Unit: days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -1261,10 +1366,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public long? TrialDuration { get; set; }
 
         /// <summary>
-        /// <para>The trial policy. Valid values:</para>
+        /// <para>The trial type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Trial: Trials are supported.</description></item>
-        /// <item><description>NotTrial: Trials are not supported.</description></item>
+        /// <item><description><para>Trial: The service supports trial.</para>
+        /// </description></item>
+        /// <item><description><para>NotTrial: The service does not support trial.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1275,7 +1383,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string TrialType { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was updated.</para>
+        /// <para>The time when the service was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-22T00:00:00Z</para>
@@ -1285,10 +1393,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The metadata about the upgrade.</para>
+        /// <para>The upgrade metadata.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{\&quot;Description\&quot;:\&quot;xxx\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;]}</para>
+        /// <para>{\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;]}</para>
         /// </summary>
         [NameInMap("UpgradeMetadata")]
         [Validation(Required=false)]
@@ -1315,10 +1423,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string VersionName { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the service is a virtual Internet service. Valid values:</para>
+        /// <para>Indicates whether the service is a virtual Internet service.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false</description></item>
-        /// <item><description>true</description></item>
+        /// <item><description><para>false: No.</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1329,10 +1440,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string VirtualInternetService { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual Internet service.</para>
+        /// <para>The virtual Internet service ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>service-70a3b15bb62643xxxxxx</para>
+        /// <para>service-70a3b15bb6264345****</para>
         /// </summary>
         [NameInMap("VirtualInternetServiceId")]
         [Validation(Required=false)]

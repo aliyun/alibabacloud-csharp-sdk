@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The test case Id</para>
+        /// <para>The test case ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stc-5ba03a6a9a2746be8739</para>

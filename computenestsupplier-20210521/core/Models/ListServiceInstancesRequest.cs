@@ -17,23 +17,38 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<ListServiceInstancesRequestFilter> Filter { get; set; }
         public class ListServiceInstancesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more filters. Valid values:</para>
+            /// <para>The name of the filter. You can specify one or more filter names to query service instances. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Name: The service name. If you want to perform a fuzzy match, specify the service name in the <em>xxx</em> format. For example, if the service name is My Service, you can set the filter value to <em>My</em> or <em>Service</em>.</description></item>
-            /// <item><description>ServiceInstanceId: The ID of the service instance.</description></item>
-            /// <item><description>ServiceId: The service ID.</description></item>
-            /// <item><description>UserId: The user ID.</description></item>
-            /// <item><description>Version: The service version.</description></item>
-            /// <item><description>Status: The status of the service instance.</description></item>
-            /// <item><description>DeployType: The deployment type of the service.</description></item>
-            /// <item><description>ServiceType: The service type.</description></item>
-            /// <item><description>OperationStartTimeBefore: The time before the hosted O\&amp;M starts.</description></item>
-            /// <item><description>OperationStartTimeAfter: The time after the hosted O\&amp;M starts.</description></item>
-            /// <item><description>OperationEndTimeBefore: The time before the hosted O\&amp;M ends.</description></item>
-            /// <item><description>OperationEndTimeAfter: The time after the hosted O\&amp;M ends.</description></item>
-            /// <item><description>OperatedServiceInstanceId: The ID of the hosted O\&amp;M instance that belongs to a private service.</description></item>
-            /// <item><description>OperationServiceInstanceId: The ID of the hosted O\&amp;M service instance that belongs to a hosted O\&amp;M service.</description></item>
-            /// <item><description>EnableInstanceOps: Whether the hosted O\&amp;M feature is enabled for service instances.</description></item>
+            /// <item><description><para>Name: The name of the service. To perform a fuzzy search, enter the content in the \<em>xxx\</em> format for the value parameter. For example, if the service name is <c>My Service</c>, you can enter <c>*My*</c> or <c>*Service*</c> for a fuzzy search.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceInstanceId: The ID of the service instance.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceId: The ID of the service.</para>
+            /// </description></item>
+            /// <item><description><para>UserId: The ID of the user.</para>
+            /// </description></item>
+            /// <item><description><para>Version: The version of the service.</para>
+            /// </description></item>
+            /// <item><description><para>Status: The status of the service instance.</para>
+            /// </description></item>
+            /// <item><description><para>DeployType: The deployment type.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceType: The service type.</para>
+            /// </description></item>
+            /// <item><description><para>OperationStartTimeBefore: The time before the start of the Alibaba Cloud Managed Services.</para>
+            /// </description></item>
+            /// <item><description><para>OperationStartTimeAfter: The time after the start of the Alibaba Cloud Managed Services.</para>
+            /// </description></item>
+            /// <item><description><para>OperationEndTimeBefore: The time before the end of the Alibaba Cloud Managed Services.</para>
+            /// </description></item>
+            /// <item><description><para>OperationEndTimeAfter: The time after the end of the Alibaba Cloud Managed Services.</para>
+            /// </description></item>
+            /// <item><description><para>OperatedServiceInstanceId: The ID of the managed service instance for a private service.</para>
+            /// </description></item>
+            /// <item><description><para>OperationServiceInstanceId: The ID of the service instance for a pure Alibaba Cloud Managed Service.</para>
+            /// </description></item>
+            /// <item><description><para>EnableInstanceOps: Indicates whether Alibaba Cloud Managed Services are enabled for the service instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter values of the filter.</para>
+            /// <para>A list of filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -53,7 +68,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -63,7 +78,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The query token. Set it to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBBAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -93,10 +108,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display the information that the service instance is deleted. Valid values:</para>
+        /// <para>Specifies whether to display the deleted service instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Displays the deleted service instances.</para>
+        /// </description></item>
+        /// <item><description><para>false: Does not display the deleted service instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

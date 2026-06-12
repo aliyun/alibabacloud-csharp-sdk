@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceRegistrationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Number of items per page in a paginated query. The maximum is 100, and the default is 20.</para>
+        /// <para>The number of entries returned on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>51945B04-6AA6-410D-93BA-236E0248B104</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Service registration information.</para>
+        /// <para>The service review request information.</para>
         /// </summary>
         [NameInMap("ServiceRegistrations")]
         [Validation(Required=false)]
         public List<ListServiceRegistrationsResponseBodyServiceRegistrations> ServiceRegistrations { get; set; }
         public class ListServiceRegistrationsResponseBodyServiceRegistrations : TeaModel {
             /// <summary>
-            /// <para>Comment.</para>
+            /// <para>The review comments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>some info is missing</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Finish time.</para>
+            /// <para>The end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-23T00:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string FinishTime { get; set; }
 
             /// <summary>
-            /// <para>Registration ID.</para>
+            /// <para>The review request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sr-001</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RegistrationId { get; set; }
 
             /// <summary>
-            /// <para>Service ID.</para>
+            /// <para>The service ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service-f4c0026a254bxxxxxxxx</para>
@@ -87,19 +87,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>Registration status. Allowed values:</para>
+            /// <para>The status of the review request. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Submitted</para>
+            /// <item><description><para>Submitted: The request is submitted.</para>
             /// </description></item>
-            /// <item><description><para>Approved</para>
+            /// <item><description><para>Approved: The request is approved.</para>
             /// </description></item>
-            /// <item><description><para>Rejected</para>
+            /// <item><description><para>Rejected: The request is rejected.</para>
             /// </description></item>
-            /// <item><description><para>Canceled</para>
+            /// <item><description><para>Canceled: The request is canceled.</para>
             /// </description></item>
-            /// <item><description><para>Executed</para>
-            /// </description></item>
-            /// <item><description><para>Executed: Executed.</para>
+            /// <item><description><para>Executed: The request is executed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -111,7 +109,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Submit time.</para>
+            /// <para>The time when the request was submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-22T00:00:00Z</para>
@@ -123,7 +121,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Total number of records that meet the criteria.</para>
+        /// <para>The total number of matching records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

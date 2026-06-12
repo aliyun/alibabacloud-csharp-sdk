@@ -11,6 +11,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
     public class DeleteArtifactRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the artifact.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/469993.html">ListArtifacts</a> to obtain the artifact ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,6 +23,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         /// <summary>
         /// <para>The version of the artifact.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/469995.html">ListArtifactVersions</a> to obtain the artifact version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -31,11 +33,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactVersion { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that ensures the idempotence of the request. Make sure that the token is unique for each request. <b>ClientToken</b> supports only ASCII characters and must be no more than 64 characters long.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>788E7CP0EN9D51P</para>
+        /// <para>10CM943JP0EN9D51H</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]

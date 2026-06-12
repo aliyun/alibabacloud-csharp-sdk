@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceInstanceBillResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing information of the backup schedule.</para>
+        /// <para>The name of the item.</para>
         /// </summary>
         [NameInMap("Item")]
         [Validation(Required=false)]
         public List<ListServiceInstanceBillResponseBodyItem> Item { get; set; }
         public class ListServiceInstanceBillResponseBodyItem : TeaModel {
             /// <summary>
-            /// <para>The billing cycle. Format: YYYY-MM.</para>
+            /// <para>The billing cycle. The format is YYYY-MM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string BillingCycle { get; set; }
 
             /// <summary>
-            /// <para>The billing date. This parameter is required only if the <b>Granularity</b> parameter is set to DAILY. Format: YYYY-MM-DD.</para>
+            /// <para>The billing date. The format is YYYY-MM-DD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-12-05</para>
@@ -57,11 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string BillingItemCode { get; set; }
 
             /// <summary>
-            /// <para>The currency unit.</para>
-            /// <list type="bullet">
-            /// <item><description>China site: <b>CNY</b>.</description></item>
-            /// <item><description>International site: <b>USD</b>.</description></item>
-            /// </list>
+            /// <para>The currency.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CNY</para>
@@ -71,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Currency { get; set; }
 
             /// <summary>
-            /// <para>The amount deducted with resource plans.</para>
+            /// <para>The deduction by a resource plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -81,7 +77,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string DeductedByResourcePackage { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rm-wz9k051l23j3o3xa9</para>
@@ -101,7 +97,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string InvoiceDiscount { get; set; }
 
             /// <summary>
-            /// <para>The unit price.</para>
+            /// <para>The list price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.12</para>
@@ -111,7 +107,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ListPrice { get; set; }
 
             /// <summary>
-            /// <para>The unit of the unit price.</para>
+            /// <para>The unit of the list price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CNY/GB</para>
@@ -141,7 +137,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string PretaxGrossAmount { get; set; }
 
             /// <summary>
-            /// <para>The code of the service.</para>
+            /// <para>The product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss</para>
@@ -151,7 +147,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>The details of the service.</para>
+            /// <para>The product details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sls</para>
@@ -161,7 +157,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ProductDetail { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud service or the name of the service-linked role with which the cloud service is associated.</para>
+            /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oss</para>
@@ -171,7 +167,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>Service instance ID.</para>
+            /// <para>The ID of the service instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>si-bc5d6ac7022647d3a3bd</para>
@@ -181,7 +177,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle in which the bill is split.</para>
+            /// <para>The month of the split bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06</para>
@@ -191,10 +187,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string SplitBillingCycle { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values:</para>
+            /// <para>The billing method:</para>
             /// <list type="bullet">
-            /// <item><description>Subscription: the subscription billing method.</description></item>
-            /// <item><description>PayAsYouGo: the pay-as-you-go billing method.</description></item>
+            /// <item><description><para>Subscription: subscription.</para>
+            /// </description></item>
+            /// <item><description><para>PayAsYouGo: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -205,7 +203,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string SubscriptionType { get; set; }
 
             /// <summary>
-            /// <para>The amount of resource usage.</para>
+            /// <para>The resource usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -215,7 +213,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Usage { get; set; }
 
             /// <summary>
-            /// <para>The unit of usage.</para>
+            /// <para>The unit of the usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GB</para>
@@ -227,7 +225,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned per page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -237,7 +235,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>

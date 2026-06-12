@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceTestTaskLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of items to return per page when paginating results. The maximum is 100, and the default is 20.</para>
+        /// <para>The number of entries returned per page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAW8kZY+u1sYOaYf5JmgmDQQ=</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service test task logs.</para>
+        /// <para>The log entries.</para>
         /// </summary>
         [NameInMap("TaskLogs")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The UTC timestamp when the response is returned.</para>
+            /// <para>The timestamp.</para>
             /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
             /// 
             /// <b>Example:</b>

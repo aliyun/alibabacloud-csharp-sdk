@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListArtifactBuildLogsRequest : TeaModel {
         /// <summary>
+        /// <para>The artifact ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/469993.html">ListArtifacts</a> operation to obtain the artifact ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +22,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactId { get; set; }
 
         /// <summary>
+        /// <para>The artifact version.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/469993.html">ListArtifacts</a> operation to obtain the artifact version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>draft</para>
         /// </summary>
@@ -27,11 +32,29 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         [Validation(Required=false)]
         public string ArtifactVersion { get; set; }
 
+        /// <summary>
+        /// <para>The filter.</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListArtifactBuildLogsRequestFilter> Filter { get; set; }
         public class ListArtifactBuildLogsRequestFilter : TeaModel {
             /// <summary>
+            /// <para>The name of the filter.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>StartTime</para>
+            /// </description></item>
+            /// <item><description><para>EndTime</para>
+            /// </description></item>
+            /// <item><description><para>ApplicationGroupName</para>
+            /// </description></item>
+            /// <item><description><para>ResouceName</para>
+            /// </description></item>
+            /// <item><description><para>EventName</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>BuildStartTime</para>
             /// </summary>
@@ -39,6 +62,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The filter values.</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -46,6 +72,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -54,6 +82,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to start the next paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAbL3H6CZmy6oocwGDqzQ+Gc=</para>
         /// </summary>
@@ -62,6 +92,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +103,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Ascending</b>: sorts the results in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>Descending</b> (default): sorts the results in descending order.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Ascending</para>
         /// </summary>

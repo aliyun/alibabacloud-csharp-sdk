@@ -10,35 +10,35 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CreateServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The dry run result.</para>
+        /// <para>The check result.</para>
         /// </summary>
         [NameInMap("DryRunResult")]
         [Validation(Required=false)]
         public CreateServiceResponseBodyDryRunResult DryRunResult { get; set; }
         public class CreateServiceResponseBodyDryRunResult : TeaModel {
             /// <summary>
-            /// <para>The required ram policy for deploying role.</para>
+            /// <para>The access policy of the deployment role.</para>
             /// </summary>
             [NameInMap("RolePolicy")]
             [Validation(Required=false)]
             public CreateServiceResponseBodyDryRunResultRolePolicy RolePolicy { get; set; }
             public class CreateServiceResponseBodyDryRunResultRolePolicy : TeaModel {
                 /// <summary>
-                /// <para>The missing ram policy for deploying role.</para>
+                /// <para>The missing access policies for the deployment role.</para>
                 /// </summary>
                 [NameInMap("MissingPolicy")]
                 [Validation(Required=false)]
                 public List<CreateServiceResponseBodyDryRunResultRolePolicyMissingPolicy> MissingPolicy { get; set; }
                 public class CreateServiceResponseBodyDryRunResultRolePolicyMissingPolicy : TeaModel {
                     /// <summary>
-                    /// <para>The Actions.</para>
+                    /// <para>The operations in the access policy.</para>
                     /// </summary>
                     [NameInMap("Action")]
                     [Validation(Required=false)]
                     public List<string> Action { get; set; }
 
                     /// <summary>
-                    /// <para>Resource in ram policy.</para>
+                    /// <para>The resource in the access policy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <list type="bullet">
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     public string Resource { get; set; }
 
                     /// <summary>
-                    /// <para>The service name in ram policy.</para>
+                    /// <para>The service name in the access policy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ecs</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 }
 
                 /// <summary>
-                /// <para>The required ram policy for deploying role.</para>
+                /// <para>The access policy required for the deployment role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The status of the service.</para>
+        /// <para>The service status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Created</para>

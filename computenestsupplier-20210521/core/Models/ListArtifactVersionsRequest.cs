@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListArtifactVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the deployment package.</para>
+        /// <para>The artifact ID.</para>
+        /// <para>To obtain the artifact ID, call the <a href="https://help.aliyun.com/document_detail/469993.html">ListArtifacts</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>artifact-eea08d1e2d3a43aexxxx</para>
+        /// <para>artifact-eea08d1e2d3a43ae****</para>
         /// </summary>
         [NameInMap("ArtifactId")]
         [Validation(Required=false)]
@@ -28,8 +29,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<ListArtifactVersionsRequestFilters> Filters { get; set; }
         public class ListArtifactVersionsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more filters. Valid values:</para>
-            /// <para><b>Status</b>：The artifact status</para>
+            /// <para>The filter name. This parameter supports querying by one or more filter names. Valid values:</para>
+            /// <para><b>Status</b>: Filters by artifact status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Status</para>
@@ -39,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter values of the filter.</para>
+            /// <para>The list of filter values.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
@@ -48,7 +49,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -58,10 +59,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token to retrieve the next page of results. Set this to the NextToken value from the previous call.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</para>
+        /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hR****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

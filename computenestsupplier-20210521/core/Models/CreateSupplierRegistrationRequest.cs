@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CreateSupplierRegistrationRequest : TeaModel {
         /// <summary>
-        /// <para>Contact email</para>
+        /// <para>The email address of the contact person.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ContactEmail { get; set; }
 
         /// <summary>
-        /// <para>Contact number</para>
+        /// <para>The phone number of the contact person.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,18 +32,18 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ContactNumber { get; set; }
 
         /// <summary>
-        /// <para>Contact person</para>
+        /// <para>The contact person.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Mike</para>
+        /// <para>John Doe</para>
         /// </summary>
         [NameInMap("ContactPerson")]
         [Validation(Required=false)]
         public string ContactPerson { get; set; }
 
         /// <summary>
-        /// <para>Contact person tiltle</para>
+        /// <para>The title of the contact person.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ContactPersonTitle { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable the resell mode</para>
+        /// <para>Specifies whether to enable distribution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -64,17 +64,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? EnableResellerMode { get; set; }
 
         /// <summary>
-        /// <para>Annual product revenue</para>
+        /// <para>The annual revenue of the product.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1000</para>
+        /// <para>10000000</para>
         /// </summary>
         [NameInMap("ProductAnnualRevenue")]
         [Validation(Required=false)]
         public string ProductAnnualRevenue { get; set; }
 
         /// <summary>
-        /// <para>The business of product</para>
+        /// <para>The industry of the service provider\&quot;s product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>
@@ -84,7 +84,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ProductBusiness { get; set; }
 
         /// <summary>
-        /// <para>Product delivery type</para>
+        /// <para>The delivery methods of the service provider\&quot;s product. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>SaaS</para>
+        /// </description></item>
+        /// <item><description><para>License</para>
+        /// </description></item>
+        /// <item><description><para>API</para>
+        /// </description></item>
+        /// <item><description><para>DesktopSoftware</para>
+        /// </description></item>
+        /// <item><description><para>Others</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ProductDeliveryTypes")]
@@ -92,7 +104,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<string> ProductDeliveryTypes { get; set; }
 
         /// <summary>
-        /// <para>The publish time of product</para>
+        /// <para>The launch date of the product.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020.10.10</para>
@@ -102,7 +114,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ProductPublishTime { get; set; }
 
         /// <summary>
-        /// <para>Product sell type</para>
+        /// <para>The sales models of the service provider\&quot;s product. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Direct: Direct sales</para>
+        /// </description></item>
+        /// <item><description><para>Channel: Channel sales</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ProductSellTypes")]
@@ -121,38 +139,38 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The description of resell business.</para>
+        /// <para>The description of the distribution business.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>empty</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("ResellBusinessDesc")]
         [Validation(Required=false)]
         public string ResellBusinessDesc { get; set; }
 
         /// <summary>
-        /// <para>The demands of service providers.</para>
+        /// <para>The suggestions from the service provider.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>empty</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Suggestion")]
         [Validation(Required=false)]
         public string Suggestion { get; set; }
 
         /// <summary>
-        /// <para>The description of service provider.</para>
+        /// <para>The description of the service provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test supplier</para>
+        /// <para>Alibaba Cloud Compute Nest</para>
         /// </summary>
         [NameInMap("SupplierDesc")]
         [Validation(Required=false)]
         public string SupplierDesc { get; set; }
 
         /// <summary>
-        /// <para>The Logo of service provider.</para>
+        /// <para>The icon of the service provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.aliyundoc.com/cover/34DB-4F4C-9373-003AA060****.png">http://example.aliyundoc.com/cover/34DB-4F4C-9373-003AA060****.png</a></para>
@@ -166,14 +184,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud</para>
+        /// <para>Company A</para>
         /// </summary>
         [NameInMap("SupplierName")]
         [Validation(Required=false)]
         public string SupplierName { get; set; }
 
         /// <summary>
-        /// <para>The english name of the service provider.</para>
+        /// <para>The English name of the service provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -184,7 +202,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string SupplierNameEn { get; set; }
 
         /// <summary>
-        /// <para>The URL of the service provider.</para>
+        /// <para>The supplier\&quot;s address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetUploadCredentialsRequest : TeaModel {
         /// <summary>
-        /// <para>The file name to upload.</para>
+        /// <para>The name of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the file is publicly accessible. Valid values: <b>public</b> or <b>private</b>. The default value is <b>private</b>.</para>
+        /// <para>The visibility of the bucket to which the file is uploaded. Valid values: public and private. A value of <b>public</b> means the file is uploaded to a public bucket. A value of <b>private</b> means the file is uploaded to a private bucket that requires authorization for access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>public</para>

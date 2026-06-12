@@ -46,14 +46,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Custom_Image_Ecs</para>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>Service Test case name.</para>
+        /// <para>The name of the test case.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string TestCaseName { get; set; }
 
         /// <summary>
-        /// <para>The service test config</para>
+        /// <para>The test configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

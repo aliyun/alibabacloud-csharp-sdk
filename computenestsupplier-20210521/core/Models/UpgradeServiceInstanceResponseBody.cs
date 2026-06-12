@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service instance.</para>
+        /// <para>The service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-5cbae874da0e47xxxxxx</para>
@@ -30,16 +30,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The deployment state of the service instance. Valid values:</para>
+        /// <para>The deployment status of the service instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Created</description></item>
-        /// <item><description>Deploying</description></item>
-        /// <item><description>DeployedFailed</description></item>
-        /// <item><description>Deployed</description></item>
-        /// <item><description>Upgrading</description></item>
-        /// <item><description>Deleting</description></item>
-        /// <item><description>Deleted</description></item>
-        /// <item><description>DeletedFailed</description></item>
+        /// <item><description><para>Created: The service instance is created.</para>
+        /// </description></item>
+        /// <item><description><para>Deploying: The service instance is being deployed.</para>
+        /// </description></item>
+        /// <item><description><para>DeployedFailed: The service instance failed to be deployed.</para>
+        /// </description></item>
+        /// <item><description><para>Deployed: The service instance is deployed.</para>
+        /// </description></item>
+        /// <item><description><para>Upgrading: The service instance is being upgraded.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting: The service instance is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para>Deleted: The service instance is deleted.</para>
+        /// </description></item>
+        /// <item><description><para>DeletedFailed: The service instance failed to be deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +58,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The parameters required for the upgrade.</para>
+        /// <para>The parameters that are required for the upgrade.</para>
         /// </summary>
         [NameInMap("UpgradeRequiredParameters")]
         [Validation(Required=false)]

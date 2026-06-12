@@ -10,14 +10,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UnTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags from the resource. Valid values:</para>
+        /// <para>Specifies whether to remove all tags from the resources. This parameter takes effect only when TagKey is not specified. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para> If you specify both the All and TagKey.N parameters, the All parameter does not take effect.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -38,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify at most 50 resource IDs in each call.</para>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -46,11 +45,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. valid value:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service</description></item>
-        /// <item><description>serviceinstance</description></item>
-        /// <item><description>artifact</description></item>
+        /// <item><description><para>service: a service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: a service instance.</para>
+        /// </description></item>
+        /// <item><description><para>artifact: an artifact.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys. You can specify 1 to 20 tag keys.</para>
+        /// <para>The tag keys of the resource.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID.</para>
+        /// <para>The unique ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stt-568c2c5a687a409b977e</para>

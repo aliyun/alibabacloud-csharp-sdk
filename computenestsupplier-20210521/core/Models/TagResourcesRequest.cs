@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs. You can specify at most 50 resource IDs in each call.</para>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -29,11 +29,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid value:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>service</description></item>
-        /// <item><description>serviceinstance</description></item>
-        /// <item><description>artifact</description></item>
+        /// <item><description><para>service: a service.</para>
+        /// </description></item>
+        /// <item><description><para>serviceinstance: a service instance.</para>
+        /// </description></item>
+        /// <item><description><para>artifact: an artifact.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,14 +48,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The tag key of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Key1</para>
@@ -62,7 +65,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The tag value of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Value1</para>

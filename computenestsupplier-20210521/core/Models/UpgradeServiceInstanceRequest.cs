@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpgradeServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The <b>ClientToken</b> value can contain only ASCII characters and must be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10CM943JP0EN9D51H</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. A dry run checks for issues such as permission errors and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run for the request, but does not create a service instance.</description></item>
-        /// <item><description>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</description></item>
+        /// <item><description><para>true: Sends a dry run request to check whether the request is valid. The service instance is not upgraded.</para>
+        /// </description></item>
+        /// <item><description><para>false: Sends a regular request. The service instance is upgraded after the request passes the check.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service instance.</para>
+        /// <para>The service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-5cbae874da0e47xxxxxx</para>

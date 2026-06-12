@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ReleaseArtifactResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the artifact.</para>
+        /// <para>The artifact ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>artifact-9feded91880e4c78xxxx</para>
+        /// <para>artifact-9feded91880e4c78****</para>
         /// </summary>
         [NameInMap("ArtifactId")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactProperty { get; set; }
 
         /// <summary>
-        /// <para>The type of the artifact.</para>
+        /// <para>The artifact type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>File</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// <para>The version of the artifact.</para>
+        /// <para>The artifact version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>draft</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactVersion { get; set; }
 
         /// <summary>
-        /// <para>The description of the artifact.</para>
+        /// <para>The artifact description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Description</para>
+        /// <para>Redhat8_0 image</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the artifact was modified.</para>
+        /// <para>The time when the artifact was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1650954178000</para>
@@ -73,21 +73,28 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3818BA7D-3F50-1A44-9FF3-04A52A59XXXX</para>
+        /// <para>86CAC31E-3527-562C-869F-347E931C9B25</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the artifact. Valid values:</para>
+        /// <para>The status of the artifact.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Created: The artifact is created.</description></item>
-        /// <item><description>Scanning: The artifact is being scanned.</description></item>
-        /// <item><description>ScanFailed: The artifact failed to be scanned.</description></item>
-        /// <item><description>Delivering: The artifact is being distributed.</description></item>
-        /// <item><description>Available: The artifact is available.</description></item>
-        /// <item><description>Deleted: The artifact is deleted.</description></item>
+        /// <item><description><para>Created: The artifact is created.</para>
+        /// </description></item>
+        /// <item><description><para>Scanning: The artifact is being scanned.</para>
+        /// </description></item>
+        /// <item><description><para>ScanFailed: The artifact failed to be scanned.</para>
+        /// </description></item>
+        /// <item><description><para>Delivering: The artifact is being distributed.</para>
+        /// </description></item>
+        /// <item><description><para>Available: The artifact is available.</para>
+        /// </description></item>
+        /// <item><description><para>Deleted: The artifact is deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,10 +105,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The version name of the artifact.</para>
+        /// <para>The name of the artifact version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>V1.0</para>
+        /// <para>OSS association upgrade test</para>
         /// </summary>
         [NameInMap("VersionName")]
         [Validation(Required=false)]

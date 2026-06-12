@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetSupplierInformationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Acr container namespace</para>
+        /// <para>The namespace for the container image deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>computenest</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string AcrNamespace { get; set; }
 
         /// <summary>
-        /// <para>The delivery settings.</para>
+        /// <para>The computing resource configuration.</para>
         /// </summary>
         [NameInMap("DeliverySettings")]
         [Validation(Required=false)]
@@ -37,10 +37,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string OssBucketName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether screencast delivery to Object Storage Service (OSS) is enabled. Valid values:</para>
+            /// <para>Indicates whether the feature that delivers the execution results of Cloud Assistant O\&amp;M tasks to Object Storage Service (OSS) is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false (default): Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public bool? OssEnabled { get; set; }
 
             /// <summary>
-            /// <para>The number of days for which the screencasts are saved.</para>
+            /// <para>The expiration period for objects in OSS, in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7</para>
@@ -73,7 +75,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Whether to enable reseller</para>
+        /// <para>Indicates whether to enable resellers. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -83,7 +91,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? EnableReseller { get; set; }
 
         /// <summary>
-        /// <para>The Ip of the operation.</para>
+        /// <para>The IP address for the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.xxx.xxx.xxx/101</para>
@@ -93,7 +101,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string OperationIp { get; set; }
 
         /// <summary>
-        /// <para>The MFA of the operation.</para>
+        /// <para>Indicates whether a multi-factor authentication (MFA) device is used. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Yes.</para>
+        /// </description></item>
+        /// <item><description><para>false: No.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -113,17 +127,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The description of service provider.</para>
+        /// <para>The description of the service provider.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test supplier</para>
+        /// <para>Alibaba Cloud Compute Nest</para>
         /// </summary>
         [NameInMap("SupplierDesc")]
         [Validation(Required=false)]
         public string SupplierDesc { get; set; }
 
         /// <summary>
-        /// <para>The Logo of service provider.</para>
+        /// <para>The icon of the service provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://example.aliyundoc.com/cover/34DB-4F4C-9373-003AA060****.png">http://example.aliyundoc.com/cover/34DB-4F4C-9373-003AA060****.png</a></para>
@@ -136,7 +150,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The name of the service provider.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud</para>
+        /// <para>Company A</para>
         /// </summary>
         [NameInMap("SupplierName")]
         [Validation(Required=false)]
@@ -153,14 +167,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string SupplierUrl { get; set; }
 
         /// <summary>
-        /// <para>Contact information of the service provider</para>
+        /// <para>The contact information of the service provider.</para>
         /// </summary>
         [NameInMap("SupportContacts")]
         [Validation(Required=false)]
         public List<GetSupplierInformationResponseBodySupportContacts> SupportContacts { get; set; }
         public class GetSupplierInformationResponseBodySupportContacts : TeaModel {
             /// <summary>
-            /// <para>The type of contact information.</para>
+            /// <para>The type of the contact method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Email</para>
@@ -170,7 +184,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The value of contact information.</para>
+            /// <para>The contact method.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:supplier@example.com">supplier@example.com</a></para>

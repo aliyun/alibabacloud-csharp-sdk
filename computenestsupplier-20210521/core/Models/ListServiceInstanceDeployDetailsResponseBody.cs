@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceInstanceDeployDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the service instance deployment.</para>
+        /// <para>The deployment details of the service instance.</para>
         /// </summary>
         [NameInMap("DeployDetails")]
         [Validation(Required=false)]
         public List<ListServiceInstanceDeployDetailsResponseBodyDeployDetails> DeployDetails { get; set; }
         public class ListServiceInstanceDeployDetailsResponseBodyDeployDetails : TeaModel {
             /// <summary>
-            /// <para>The total number of entries that meet the specified conditions.</para>
+            /// <para>The number of rows in the aggregate data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Count { get; set; }
 
             /// <summary>
-            /// <para>The time when the service instance was created.</para>
+            /// <para>The time when the entry was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-04-10T01:58:20Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The period over which data is aggregated.</para>
+            /// <para>The aggregation period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Month</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Cycle { get; set; }
 
             /// <summary>
-            /// <para>The indicates whether the deployment was successful.</para>
+            /// <para>Indicates whether the deployment was successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string DeploySucceeded { get; set; }
 
             /// <summary>
-            /// <para>The error code.</para>
+            /// <para>The error code returned when the deployment failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>StackValidationFailed</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The error description.</para>
+            /// <para>The error details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{code: StackValidationFailed, message: \&quot;Failed to continue create ROS stack 89e724e2-84e6-4517-a372-30a545ab4145: Resource [LinuxInstanceRunCommand]: i-wz91nfbh1fxtmfb0try4 are not running. Command invocation only support running instances. ErrorCode: StackValidationFailed\&quot;, requestId: null}</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ErrorDetail { get; set; }
 
             /// <summary>
-            /// <para>The type of error that caused the deployment to fail.</para>
+            /// <para>The type of the error that occurred when the deployment failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ValidationError</para>
@@ -107,17 +107,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceInstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the service in Chinese.</para>
+            /// <para>The Chinese name of the service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试服务(Test Service)</para>
+            /// <para>测试服务</para>
             /// </summary>
             [NameInMap("ServiceNameChn")]
             [Validation(Required=false)]
             public string ServiceNameChn { get; set; }
 
             /// <summary>
-            /// <para>The name of the service in English.</para>
+            /// <para>The English name of the service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test Service</para>
@@ -127,12 +127,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceNameEng { get; set; }
 
             /// <summary>
-            /// <para>The type of service. </para>
-            /// <para>Possible values:</para>
+            /// <para>The service type.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>private: Deployed under the user\&quot;s account.</description></item>
-            /// <item><description>managed: Hosted under the service provider\&quot;s account.</description></item>
-            /// <item><description>operation: Managed operation service.</description></item>
+            /// <item><description><para>private: The service is deployed in the user\&quot;s account.</para>
+            /// </description></item>
+            /// <item><description><para>managed: The service is hosted in the service provider\&quot;s account.</para>
+            /// </description></item>
+            /// <item><description><para>operation: The service is an Alibaba Cloud Managed Service.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceVersion { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the response is returned.</para>
+            /// <para>The timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723946641994</para>
@@ -163,7 +166,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The aliuid of user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1591457835436382</para>
@@ -175,7 +178,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned per page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -185,7 +188,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAW8kZY+u1sYOaYf5JmgmDQQ=</para>
@@ -205,7 +208,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

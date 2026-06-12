@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class RollbackServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures idempotence of the request. Generate a value from your client to ensure it is unique across different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value on your client for each request. The <b>ClientToken</b> can contain only ASCII characters and must be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10CM943JP0EN9D51H</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,8 +30,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Service instance ID.</para>
-        /// <para>You can obtain the service instance ID by calling <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances - Query Service Instance List</a>.</para>
+        /// <para>The service instance ID.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/396200.html">ListServiceInstances</a> to obtain the service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-3a8f9a75da074f52b969</para>

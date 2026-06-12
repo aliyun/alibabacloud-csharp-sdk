@@ -20,27 +20,27 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The description of service provider.</para>
+        /// <para>The description of the supplier.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test supplier</para>
+        /// <para>Alibaba Cloud Compute Nest</para>
         /// </summary>
         [NameInMap("SupplierDesc")]
         [Validation(Required=false)]
         public string SupplierDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the service provider.</para>
+        /// <para>The name of the supplier.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alibaba Cloud</para>
+        /// <para>Company A</para>
         /// </summary>
         [NameInMap("SupplierName")]
         [Validation(Required=false)]
         public string SupplierName { get; set; }
 
         /// <summary>
-        /// <para>The URL of the service provider.</para>
+        /// <para>The URL of the supplier.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.xxx.xxx.cn">http://www.xxx.xxx.cn</a></para>

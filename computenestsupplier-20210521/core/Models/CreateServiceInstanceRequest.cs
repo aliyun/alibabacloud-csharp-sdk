@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CreateServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The token can be up to 64 characters in length and can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. A dry run checks for permissions and instance status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run for the request, but does not create a service instance.</description></item>
-        /// <item><description>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</description></item>
+        /// <item><description><para>true: The system checks the request but does not create the service instance.</para>
+        /// </description></item>
+        /// <item><description><para>false: The system sends the request. If the request passes the check, the service instance is created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,9 +36,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The time when the service instance was released.</para>
+        /// <para>The time when the service instance is released.</para>
         /// <remarks>
-        /// <para> This parameter is available only for the service instances that are managed by service providers.</para>
+        /// <para>Only service providers can set this parameter for their own service instances in managed scenarios.</para>
         /// </remarks>
         /// <para>Use the UTC time format: yyyy-MM-ddTHH:mmZ</para>
         /// 
@@ -48,10 +50,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the service instance. The value must meet the following requirements:</para>
+        /// <para>The name of the service instance. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name cannot exceed 64 characters in length.</description></item>
-        /// <item><description>It can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</description></item>
+        /// <item><description><para>It can be up to 64 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter or a digit and can contain letters, digits, hyphens (-), and underscores (_).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,23 +66,30 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are specified for service instance deployment.</para>
+        /// <para>The parameters used to deploy the service instance.</para>
         /// <remarks>
-        /// <para> If you want to specify the region in which the service instance is deployed, you must specify the information in Parameters.</para>
+        /// <para>If the service instance includes information about the deployment region, specify that information in the deployment parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;NodeCount&quot;: 3, &quot;SystemDiskSize&quot;: 40, &quot;InstancePassword&quot;: &quot;******&quot;}</para>
+        /// <para>{
+        ///       &quot;RegionId&quot;: &quot;cn-hangzhou&quot;
+        ///       &quot;NodeCount&quot;: 3,
+        ///       &quot;SystemDiskSize&quot;: 40,
+        ///       &quot;InstancePassword&quot;: &quot;******&quot;
+        /// }</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Valid values:</para>
+        /// <para>The ID of the region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn-hangzhou: China (Hangzhou)</description></item>
-        /// <item><description>ap-southeast-1: Singapore</description></item>
+        /// <item><description><para>cn-hangzhou: China (Hangzhou)</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: Singapore</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -100,7 +111,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The service ID.</para>
+        /// <para>The ID of the service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -111,7 +122,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The service version.</para>
+        /// <para>The version of the service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -121,10 +132,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>The name of the package specification.</para>
+        /// <para>The name of the specification package.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>套餐一</para>
+        /// <para>Package 1</para>
         /// </summary>
         [NameInMap("SpecificationName")]
         [Validation(Required=false)]
@@ -138,7 +149,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<CreateServiceInstanceRequestTag> Tag { get; set; }
         public class CreateServiceInstanceRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key1</para>
@@ -148,7 +159,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value1</para>
@@ -160,17 +171,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The template name. You must specify a template name if the service supports multiple templates.</para>
+        /// <para>The name of the template. Specify this parameter if the service supports multiple templates.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>模板1</para>
+        /// <para>Template 1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The user ID.</para>
+        /// <para>The ID of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1563457855xxxxxx</para>

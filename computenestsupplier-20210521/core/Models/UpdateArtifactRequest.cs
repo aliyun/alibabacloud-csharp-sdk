@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class UpdateArtifactRequest : TeaModel {
         /// <summary>
-        /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+        /// <para>The properties for building the artifact. This is used for managed artifact builds.</para>
         /// </summary>
         [NameInMap("ArtifactBuildProperty")]
         [Validation(Required=false)]
         public UpdateArtifactRequestArtifactBuildProperty ArtifactBuildProperty { get; set; }
         public class UpdateArtifactRequestArtifactBuildProperty : TeaModel {
             /// <summary>
-            /// <para>The build arguments used during the image build process.</para>
+            /// <para>The build arguments.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the ArtifactBuildType is Dockerfile type.</para>
+            /// <para>This parameter is available only when \<c>ArtifactBuildType\\</c> is set to \<c>Dockerfile\\</c>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("BuildArgs")]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public List<UpdateArtifactRequestArtifactBuildPropertyBuildArgs> BuildArgs { get; set; }
             public class UpdateArtifactRequestArtifactBuildPropertyBuildArgs : TeaModel {
                 /// <summary>
-                /// <para>The name of a specific build argument.</para>
+                /// <para>The name of the build argument.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENV</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string ArgumentName { get; set; }
 
                 /// <summary>
-                /// <para>The value of a specific build argument.</para>
+                /// <para>The value of the build argument.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nginx:latest</para>
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// <para>The address of the code repository.</para>
+            /// <para>The code repository address.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the ArtifactBuildType is Dockerfile or Buildpacks type.</para>
+            /// <para>This parameter is available only when \<c>ArtifactBuildType\\</c> is set to \<c>Dockerfile\\</c> or \<c>Buildpacks\\</c>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("CodeRepo")]
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public UpdateArtifactRequestArtifactBuildPropertyCodeRepo CodeRepo { get; set; }
             public class UpdateArtifactRequestArtifactBuildPropertyCodeRepo : TeaModel {
                 /// <summary>
-                /// <para>The name of the branch in the code repository.</para>
+                /// <para>The branch name of the code repository.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>main</para>
@@ -69,8 +69,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string Branch { get; set; }
 
                 /// <summary>
-                /// <para>The endpoint. 
-                /// The URL address used to access the privately deployed GitLab instance.</para>
+                /// <para>The endpoint. This parameter is required for a private GitLab deployment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://121.40.25.0">http://121.40.25.0</a></para>
@@ -92,7 +91,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 /// <summary>
                 /// <para>The owner of the code repository.</para>
                 /// <remarks>
-                /// <para> This parameter is available only if the git repository is private.</para>
+                /// <para>This parameter is required only if the code repository is private.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -103,7 +102,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string Owner { get; set; }
 
                 /// <summary>
-                /// <para>The platform type. Valid values:</para>
+                /// <para>The platform of the code repository. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>github</para>
                 /// </description></item>
@@ -133,7 +132,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public long? RepoId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the repository.</para>
+                /// <para>The repository name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyun-computenest/quickstart-Lobexxx</para>
@@ -145,9 +144,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// <para>The command content.</para>
+            /// <para>The content of the command.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is a ecs image type.</para>
+            /// <para>This parameter is available only for ECS image artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -160,12 +159,15 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <summary>
             /// <para>The command type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RunBatScript: batch command, applicable to Windows instances.</description></item>
-            /// <item><description>RunPowerShellScript: PowerShell command, applicable to Windows instances.</description></item>
-            /// <item><description>RunShellScript: shell command, applicable to Linux instances.</description></item>
+            /// <item><description><para>RunBatScript: The command is a batch script that runs on a Windows instance.</para>
+            /// </description></item>
+            /// <item><description><para>RunPowerShellScript: The command is a PowerShell script that runs on a Windows instance.</para>
+            /// </description></item>
+            /// <item><description><para>RunShellScript: The command is a shell script that runs on a Linux instance.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is a ecs image type.</para>
+            /// <para>This parameter is available only for ECS image artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -176,9 +178,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CommandType { get; set; }
 
             /// <summary>
-            /// <para>The relative path to the Dockerfile within the code repository.</para>
+            /// <para>The relative path of the Dockerfile in the code repository.</para>
+            /// <para>Default value: Dockerfile</para>
             /// <remarks>
-            /// <para> This parameter is available only if the ArtifactBuildType is Dockerfile type.</para>
+            /// <para>This parameter is available only when \<c>ArtifactBuildType\\</c> is set to \<c>Dockerfile\\</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -189,7 +192,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string DockerfilePath { get; set; }
 
             /// <summary>
-            /// <para>Whether GPU is required. CPU instance is used by default.</para>
+            /// <para>Specifies whether to use a GPU-accelerated instance for the build. By default, a CPU instance is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -199,9 +202,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public bool? EnableGpu { get; set; }
 
             /// <summary>
-            /// <para>The region ID where the source mirror image is located.</para>
+            /// <para>The ID of the region where the source image is located.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is a ecs image type.</para>
+            /// <para>This parameter is available only for ECS image artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -212,9 +215,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The pull location of the source container image. This is used for the command docker pull ${SourceContainerImage}.</para>
+            /// <para>The pull URL of the source container image.</para>
+            /// <para>Used for \<c>docker pull ${SourceContainerImage}\\</c>.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the ArtifactBuildType is ContainerImage type.</para>
+            /// <para>This parameter is available only when \<c>ArtifactBuildType\\</c> is set to \<c>ContainerImage\\</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -225,21 +229,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string SourceContainerImage { get; set; }
 
             /// <summary>
-            /// <para>The source image id. Supported Types:</para>
+            /// <para>The source image ID. The following types are supported:</para>
             /// <list type="bullet">
-            /// <item><description><para>Image ID: Pass the Image ID of the Ecs image directly.</para>
+            /// <item><description><para>Image ID: The ID of the ECS image.</para>
             /// </description></item>
-            /// <item><description><para>OOS Common Parameter Name: Obtain the corresponding Image ID automatically by using the OOS common parameter name.</para>
+            /// <item><description><para>OOS common parameter name: The system automatically obtains the corresponding image ID based on the OOS common parameter name.</para>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is a ecs image type.</para>
+            /// <para>This parameter is available only for ECS image artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>Image ID：m-t4nhenrdc38pe4*****
+            /// <para>Image ID: m-t4nhenrdc38pe4*****
             /// ubuntu_22_04_x64_20G_alibase_20240926.vhd
-            /// OOS Common Parameter Name：aliyun/services/computenest/images/aliyun_3_2104_python_3_11</para>
+            /// OOS public parameter name: aliyun/services/computenest/images/aliyun_3_2104_python_3_11</para>
             /// </summary>
             [NameInMap("SourceImageId")]
             [Validation(Required=false)]
@@ -247,9 +251,6 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
             /// <summary>
             /// <para>The size of the system disk. Unit: GiB.</para>
-            /// <remarks>
-            /// <para> The system disk must be at least as large as the image.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -261,40 +262,43 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The ID of the deployment package.</para>
+        /// <para>The ID of the artifact.</para>
+        /// <para>To obtain the artifact ID, call the <a href="https://help.aliyun.com/document_detail/469993.html">ListArtifacts</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>artifact-eea08d1e2d3a43aexxxx</para>
+        /// <para>artifact-eea08d1e2d3a43ae****</para>
         /// </summary>
         [NameInMap("ArtifactId")]
         [Validation(Required=false)]
         public string ArtifactId { get; set; }
 
         /// <summary>
-        /// <para>The properties of the deployment package.</para>
+        /// <para>The properties of the artifact.</para>
         /// </summary>
         [NameInMap("ArtifactProperty")]
         [Validation(Required=false)]
         public UpdateArtifactRequestArtifactProperty ArtifactProperty { get; set; }
         public class UpdateArtifactRequestArtifactProperty : TeaModel {
             /// <summary>
-            /// <para>The commodity code of the service in Alibaba Cloud Marketplace.</para>
+            /// <para>The code of the Alibaba Cloud Marketplace product.</para>
+            /// <para>You can obtain the product code in the <a href="https://market.console.aliyun.com/?spm=a2c4g.11186623.0.0.599d6787eMBBxu#/apiTools?_k=d7j8gk">Alibaba Cloud Marketplace console</a>.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is an image.</para>
+            /// <para>This parameter is available only for image artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>cmjj00xxxx</para>
+            /// <para>cmjj00****</para>
             /// </summary>
             [NameInMap("CommodityCode")]
             [Validation(Required=false)]
             public string CommodityCode { get; set; }
 
             /// <summary>
-            /// <para>The commodity version of the service in Alibaba Cloud Marketplace.</para>
+            /// <para>The version of the Alibaba Cloud Marketplace product.</para>
+            /// <para>You can view the product version on the <a href="https://market.aliyun.com/?spm=5176.24779694.0.0.b2144d22sksKM5">Alibaba Cloud Marketplace page</a>.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is an image.</para>
+            /// <para>This parameter is available only for image artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -305,22 +309,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CommodityVersion { get; set; }
 
             /// <summary>
-            /// <para>The image ID.</para>
+            /// <para>The ID of the image.</para>
+            /// <para>After you specify a region ID, call the <a href="https://help.aliyun.com/document_detail/2679797.html">DescribeImages</a> operation to query available image IDs in that region.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is an image.</para>
+            /// <para>This parameter is available only for image artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>m-0xij191j9cuev6ucxxxx</para>
+            /// <para>m-0xij191j9cuev6uc****</para>
             /// </summary>
             [NameInMap("ImageId")]
             [Validation(Required=false)]
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region of the image.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is an image.</para>
+            /// <para>This parameter is available only for image artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -331,40 +336,43 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Container Registry  repository.</para>
+            /// <para>The ID of the image repository.</para>
+            /// <para>To obtain the image repository ID, call the <a href="https://help.aliyun.com/document_detail/2539919.html">ListAcrImageRepositories</a> operation.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is a container image or of the Helm chart type.</para>
+            /// <para>This parameter is available only for container image artifacts and Helm Chart artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>crr-yy4g68uhi39ttkm8</para>
+            /// <para>crr-d8o1nponyc2t****</para>
             /// </summary>
             [NameInMap("RepoId")]
             [Validation(Required=false)]
             public string RepoId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Container Registry repository.</para>
+            /// <para>The name of the image repository.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is a container image or of the Helm chart type.</para>
+            /// <para>This parameter is available only for container image artifacts and Helm Chart artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>volcanosh/vc-webhook-manager</para>
+            /// <para>wordpress</para>
             /// </summary>
             [NameInMap("RepoName")]
             [Validation(Required=false)]
             public string RepoName { get; set; }
 
             /// <summary>
-            /// <para>The type of the repository.Valid values:</para>
+            /// <para>The permission type of the repository. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>Public</c>: a public repository.</description></item>
-            /// <item><description><c>Private</c>: a private repository.<remarks>
-            /// <para> This parameter is available only if the deployment package is a container image or of the Helm chart type.</para>
-            /// </remarks>
+            /// <item><description><para><c>Public</c>: public repository</para>
+            /// </description></item>
+            /// <item><description><para><c>Private</c>: private repository</para>
             /// </description></item>
             /// </list>
+            /// <remarks>
+            /// <para>This parameter is available only for container image artifacts and Helm Chart artifacts.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>Public</para>
@@ -374,9 +382,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RepoType { get; set; }
 
             /// <summary>
-            /// <para>The version tag of the image repository.</para>
+            /// <para>The version tag of the image in the repository.</para>
+            /// <para>To obtain the version tag, call the <a href="https://help.aliyun.com/document_detail/2539920.html">ListAcrImageTags</a> operation.</para>
             /// <remarks>
-            /// <para> This parameter is available only if the deployment package is a container image or of the Helm chart type.</para>
+            /// <para>This parameter is available only for container image artifacts and Helm Chart artifacts.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -387,13 +396,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Tag { get; set; }
 
             /// <summary>
-            /// <para>The URL of the deployment package object.</para>
-            /// <remarks>
-            /// <para>Note This parameter is available only if the deployment package is an file.</para>
-            /// </remarks>
-            /// 
-            /// <b>Example:</b>
-            /// <para><a href="https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1309208528xxxxxx/template/2e1ce8fc-xxxx-481c-9e8e-789ba9db487d.json">https://service-info-private.oss-cn-hangzhou.aliyuncs.com/1309208528xxxxxx/template/2e1ce8fc-xxxx-481c-9e8e-789ba9db487d.json</a></para>
+            /// <para>The URL of the file artifact.</para>
+            /// <para>You can upload the file and obtain its URL in the <a href="https://oss.console.aliyun.com/bucket">Object Storage Service console</a>.</para>
             /// </summary>
             [NameInMap("Url")]
             [Validation(Required=false)]
@@ -402,7 +406,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique token for each request from your client. The <b>ClientToken</b> can contain only ASCII characters and must be no more than 64 characters long.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10CM943JP0EN9D51H</para>
@@ -412,19 +416,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the deployment package.</para>
+        /// <para>The description of the artifact.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Description</para>
+        /// <para>Redhat8_0 image</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Permission fields are applicable to container image artifact and Helm Chart artifact. They can only change from Automatic to Public. Options:</para>
-        /// <para>Public</para>
-        /// <para>Automatic</para>
+        /// <para>The permission type. This parameter is valid for container image artifacts and Helm Chart artifacts. The value can be changed only from \<c>Automatic\\</c> to \<c>Public\\</c>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Public</para>
+        /// </description></item>
+        /// <item><description><para>Automatic</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Public</para>
@@ -434,14 +442,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string PermissionType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the regions that support the deployment package.</para>
+        /// <para>The IDs of regions to which the image can be distributed.</para>
         /// </summary>
         [NameInMap("SupportRegionIds")]
         [Validation(Required=false)]
         public List<string> SupportRegionIds { get; set; }
 
         /// <summary>
-        /// <para>The version name of the deployment package.</para>
+        /// <para>The name of the artifact version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

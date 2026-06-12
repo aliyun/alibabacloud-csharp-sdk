@@ -20,11 +20,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The mode of the service online. Valid Type</para>
+        /// <para>The type of the service publishing action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PublishNewVersion: Launch new version</description></item>
-        /// <item><description>PublishOfflineVersion:  The offline version is online again.</description></item>
-        /// <item><description>UpdateLatestVersion: Update the latest version online</description></item>
+        /// <item><description><para>PublishNewVersion: A new version is published.</para>
+        /// </description></item>
+        /// <item><description><para>PublishOfflineVersion: An unpublished version is republished.</para>
+        /// </description></item>
+        /// <item><description><para>UpdateLatestVersion: The latest online version is updated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CancelServiceRegistrationRequest : TeaModel {
         /// <summary>
-        /// <para>Client token, used to ensure the idempotence of requests. Generate a unique value for this parameter from your client to ensure it is unique across different requests. ClientToken supports only ASCII characters.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value from your client. This value must be unique for each request and can contain only ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Service registration ID.</para>
+        /// <para>The ID of the service review request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

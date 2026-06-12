@@ -17,9 +17,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<ListServiceTestCasesRequestFilters> Filters { get; set; }
         public class ListServiceTestCasesRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more filters. Valid values:</para>
-            /// <para><b>Status</b></para>
-            /// <para><b>TaskId</b></para>
+            /// <para>The name of the filter. You can specify one or more filter names. Valid values:</para>
+            /// <para><b>Status</b>: Filters by status. <b>TaskId</b>: Filters by task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Status</para>
@@ -29,7 +28,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The value of the filter condition.</para>
+            /// <para>The filter values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -38,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -48,7 +47,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>

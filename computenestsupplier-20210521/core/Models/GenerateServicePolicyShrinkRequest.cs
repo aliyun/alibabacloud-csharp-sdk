@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
-    public class GenerateServicePolicyRequest : TeaModel {
+    public class GenerateServicePolicyShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The operation types for which to generate policy information.</para>
         /// </summary>
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 
         [NameInMap("Parameters")]
         [Validation(Required=false)]
-        public Dictionary<string, object> Parameters { get; set; }
+        public string ParametersShrink { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

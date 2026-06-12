@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The License Data</para>
+        /// <para>The license data.</para>
         /// </summary>
         [NameInMap("LicenseData")]
         [Validation(Required=false)]
         public UpdateServiceInstanceAttributeRequestLicenseData LicenseData { get; set; }
         public class UpdateServiceInstanceAttributeRequestLicenseData : TeaModel {
             /// <summary>
-            /// <para>The Custom Data</para>
+            /// <para>The custom metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;Test&quot;}</para>
@@ -38,14 +38,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CustomData { get; set; }
 
             /// <summary>
-            /// <para>Mock response info.</para>
+            /// <para>The information about the impersonated return value.</para>
             /// </summary>
             [NameInMap("ResponseInfo")]
             [Validation(Required=false)]
             public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo ResponseInfo { get; set; }
             public class UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo : TeaModel {
                 /// <summary>
-                /// <para>Mock error code.</para>
+                /// <para>To impersonate an error message, specify an error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EntityNotExist.Service</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>Mock error message.</para>
+                /// <para>To impersonate an error message, specify the error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The provided parameter &quot;ServiceId&quot; is invalid.</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>if you want mock response, please open this option.</para>
+                /// <para>Specifies whether to modify the return value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Application reason, currently used for trial application extension.</para>
+        /// <para>The reason for the request. This parameter is used to extend a trial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>\&quot;\&quot;</para>
+        /// <para>&quot;&quot;</para>
         /// </summary>
         [NameInMap("Reason")]
         [Validation(Required=false)]

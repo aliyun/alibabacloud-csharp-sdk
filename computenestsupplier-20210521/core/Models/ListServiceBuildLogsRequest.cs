@@ -9,11 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceBuildLogsRequest : TeaModel {
+        /// <summary>
+        /// <para>The filter.</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListServiceBuildLogsRequestFilter> Filter { get; set; }
         public class ListServiceBuildLogsRequestFilter : TeaModel {
             /// <summary>
+            /// <para>The name of the filter. You can specify one or more filter names. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>ServiceId: The service ID.</para>
+            /// </description></item>
+            /// <item><description><para>Name: The service name.</para>
+            /// </description></item>
+            /// <item><description><para>Status: The service status.</para>
+            /// </description></item>
+            /// <item><description><para>SupplierName: The service provider name.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Name</para>
             /// </summary>
@@ -21,6 +36,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The list of filter values. The list can contain from 1 to 10 values.</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -28,6 +46,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -36,6 +56,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAYChudnQUoBH+mGWFpb6oP0=</para>
         /// </summary>
@@ -44,6 +66,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +77,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The service ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +88,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceId { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Ascending</b>: Ascending</para>
+        /// </description></item>
+        /// <item><description><para><b>Descending</b> (default): Descending</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Ascending</para>
         /// </summary>

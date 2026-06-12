@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceEstimateCostRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that you can use to ensure the idempotence of the request. You can use the client to generate a token, but you must make sure that the token is unique among different requests. The <b>ClientToken</b> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mRdxWuW2ts</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration information about the purchase order of Alibaba Cloud Marketplace.</para>
+        /// <para>The subscription details of the Alibaba Cloud Marketplace order.</para>
         /// </summary>
         [NameInMap("Commodity")]
         [Validation(Required=false)]
@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             /// <summary>
             /// <para>The unit of the subscription duration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Year</description></item>
-            /// <item><description>Month</description></item>
-            /// <item><description>Day</description></item>
+            /// <item><description><para>Year</para>
+            /// </description></item>
+            /// <item><description><para>Month</para>
+            /// </description></item>
+            /// <item><description><para>Day</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The parameters that are specified to deploy the service instance.</para>
+        /// <para>The parameters that you enter to deploy the service instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;PayType\&quot;:\&quot;PostPaid\&quot;,\&quot;InstancePassword\&quot;:\&quot;xxxxxxxxxx\&quot;,\&quot;EcsInstanceType\&quot;:\&quot;ecs.g6.large\&quot;,\&quot;VSwitchId\&quot;:\&quot;vsw-0jlueyydpuekoxxxxxxxx\&quot;,\&quot;VpcId\&quot;:\&quot;vpc-0jlps6mjbgvpqxxxxxxxx\&quot;,\&quot;ZoneId\&quot;:\&quot;cn-wulanchabu-a\&quot;,\&quot;Enable\&quot;:false,\&quot;RegionId\&quot;:\&quot;cn-wulanchabu\&quot;}</para>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the service instance.</para>
+        /// <para>The service instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>si-d6ab3a63ccbb4b17****</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>The package name.</para>
+        /// <para>The specification name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Package 1</para>

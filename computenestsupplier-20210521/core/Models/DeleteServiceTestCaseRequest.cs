@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class DeleteServiceTestCaseRequest : TeaModel {
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The service test case id.</para>
+        /// <para>The ID of the service test case.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resources and their tags.</para>
+        /// <para>A collection of resources and their tags. The collection includes resource IDs, resource types, and tag key-value pairs.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>Resource ID</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>service-xxx</para>
@@ -47,11 +47,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type. Valid value:</para>
+            /// <para>The resource type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>service</description></item>
-            /// <item><description>serviceinstance</description></item>
-            /// <item><description>artifact</description></item>
+            /// <item><description><para>service: a service.</para>
+            /// </description></item>
+            /// <item><description><para>serviceinstance: a service instance.</para>
+            /// </description></item>
+            /// <item><description><para>artifact: a deployment.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

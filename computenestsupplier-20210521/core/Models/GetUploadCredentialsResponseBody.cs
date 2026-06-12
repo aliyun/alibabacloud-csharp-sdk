@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetUploadCredentialsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The return code of the call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response parameters.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>The time when the AccessKey pair expires.</para>
+            /// <para>The time when the permissions expire.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-18T12:27:59Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>The name of the key.</para>
+            /// <para>The specific key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>221514575922756034/cn-hangzhou/d57c62fbd508xxxxxxxx.json</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. A value of true indicates the request was successful. A value of false indicates the request failed.</para>
+        /// <para>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

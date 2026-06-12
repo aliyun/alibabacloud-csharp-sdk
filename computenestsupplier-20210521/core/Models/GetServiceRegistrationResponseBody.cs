@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class GetServiceRegistrationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Comment from reviewer.</para>
+        /// <para>The review comments.</para>
         /// 
         /// <b>Example:</b>
         /// <para>comment message</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The details of service audit.</para>
+        /// <para>The review details.</para>
         /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]
         public GetServiceRegistrationResponseBodyDetail Detail { get; set; }
         public class GetServiceRegistrationResponseBodyDetail : TeaModel {
             /// <summary>
-            /// <para>Whether risk exists.</para>
+            /// <para>Indicates whether the service has risks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public bool? AtRisk { get; set; }
 
             /// <summary>
-            /// <para>Whether service is associated with artifact.</para>
+            /// <para>Indicates whether the service is associated with an artifact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public bool? HasRelatedArtifact { get; set; }
 
             /// <summary>
-            /// <para>The reports.</para>
+            /// <para>The review reports.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{ &quot;template1&quot;:&quot;<a href="https://compute-nest-security-audit-bucket.oss-cn-hangzhou.aliyuncs.com/report">https://compute-nest-security-audit-bucket.oss-cn-hangzhou.aliyuncs.com/report</a>&quot; }</para>
+            /// <para>{ &quot;template&quot;:&quot;<a href="https://compute-nest-security-audit-bucket.oss-cn-hangzhou.aliyuncs.com/report">https://compute-nest-security-audit-bucket.oss-cn-hangzhou.aliyuncs.com/report</a>&quot; }</para>
             /// </summary>
             [NameInMap("Reports")]
             [Validation(Required=false)]
             public string Reports { get; set; }
 
             /// <summary>
-            /// <para>The url of template diff file.</para>
+            /// <para>The URL to view the differences in the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://compute-nest-template-diff-bucket.oss-cn-hangzhou.aliyuncs.com/service-abc/diff">https://compute-nest-template-diff-bucket.oss-cn-hangzhou.aliyuncs.com/service-abc/diff</a></para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Finish time.</para>
+        /// <para>The time when the review was completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-07T11:05:50Z</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string FinishTime { get; set; }
 
         /// <summary>
-        /// <para>Service registration ID.</para>
+        /// <para>The ID of the review request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sr-1b4aabc1c9eb4109****</para>
@@ -116,12 +116,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public GetServiceRegistrationResponseBodyServiceInfo ServiceInfo { get; set; }
         public class GetServiceRegistrationResponseBodyServiceInfo : TeaModel {
             /// <summary>
-            /// <para>The type of the service. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>private: The service is a private service and is deployed within the account of a customer.</description></item>
-            /// <item><description>managed: The service is a fully managed service and is deployed within the account of a service provider.</description></item>
-            /// <item><description>operation: The service is a hosted O\&amp;M service.</description></item>
-            /// </list>
+            /// <para>The service type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>private</para>
@@ -131,10 +126,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceType { get; set; }
 
             /// <summary>
-            /// <para>The trial policy. Valid values:</para>
+            /// <para>The trial type.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Trial: Trials are supported.</description></item>
-            /// <item><description>NotTrial: Trials are not supported.</description></item>
+            /// <item><description><para>Trial: The service supports trial.</para>
+            /// </description></item>
+            /// <item><description><para>NotTrial: The service does not support trial.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -167,13 +165,18 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceVersion { get; set; }
 
         /// <summary>
-        /// <para>The status of service registration. Valid values:</para>
+        /// <para>The status of the review request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Submitted</description></item>
-        /// <item><description>Approved</description></item>
-        /// <item><description>Rejected</description></item>
-        /// <item><description>Canceled</description></item>
-        /// <item><description>Executed</description></item>
+        /// <item><description><para>Submitted</para>
+        /// </description></item>
+        /// <item><description><para>Approved</para>
+        /// </description></item>
+        /// <item><description><para>Rejected</para>
+        /// </description></item>
+        /// <item><description><para>Canceled</para>
+        /// </description></item>
+        /// <item><description><para>Executed: The service version is published.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -184,7 +187,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Submit time.</para>
+        /// <para>The time when the request was submitted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-07T11:05:50Z</para>

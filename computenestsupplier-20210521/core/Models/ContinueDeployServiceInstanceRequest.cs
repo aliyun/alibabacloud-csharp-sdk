@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ContinueDeployServiceInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that ensures the idempotence of the request. Generate a unique value from your client for this parameter. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run for the request. The dry run checks for permissions, the instance status, and other items. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run for the request, but does not create a service instance.</description></item>
-        /// <item><description>false: performs a dry run for the request, and creates a service instance if the request passes the dry run.</description></item>
+        /// <item><description><para>true: Sends a dry run request. The deployment of the service instance does not continue.</para>
+        /// </description></item>
+        /// <item><description><para>false: Sends a regular request. The deployment of the service instance continues after the request passes the check.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

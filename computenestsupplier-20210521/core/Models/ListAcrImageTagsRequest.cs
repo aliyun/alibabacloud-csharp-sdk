@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListAcrImageTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the deployment package. Default value: AcrImage. Valid values:</para>
+        /// <para>The artifact type. The default value is AcrImage. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description>HelmChart: Helm chart image.</description></item>
-        /// <item><description>AcrImage: container image.</description></item>
+        /// <item><description><para>HelmChart: A Helm Chart image.</para>
+        /// </description></item>
+        /// <item><description><para>AcrImage: A container image.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAW8kZY+u1sYOaYf5JmgmDQQ=</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The image ID.</para>
+        /// <para>The ID of the image repository.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crr-3gqhkza0wbxxxxxx</para>

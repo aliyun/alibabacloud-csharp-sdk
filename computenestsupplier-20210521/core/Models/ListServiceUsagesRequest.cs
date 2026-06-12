@@ -17,12 +17,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<ListServiceUsagesRequestFilter> Filter { get; set; }
         public class ListServiceUsagesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The parameter name of the filter. You can specify one or more filters. Valid values:</para>
+            /// <para>The filter name. You can query by one or more names. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ServiceId: the ID of the service.</description></item>
-            /// <item><description>ServiceName: the service name.</description></item>
-            /// <item><description>Status: the state of the service.</description></item>
-            /// <item><description>SupplierName: the name of the service provider.</description></item>
+            /// <item><description><para>ServiceId: The service ID.</para>
+            /// </description></item>
+            /// <item><description><para>ServiceName: The service name.</para>
+            /// </description></item>
+            /// <item><description><para>Status: The service status.</para>
+            /// </description></item>
+            /// <item><description><para>SupplierName: The supplier name.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter value N of the filter. Valid values of N: 1 to 10.</para>
+            /// <para>The filter values. You can specify 1 to 10 values.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -42,7 +46,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to retrieve the next page of results. You can obtain this token from the NextToken parameter in the response to the previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The role of the service provider.</para>
+        /// <para>The supplier role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Supplier</para>

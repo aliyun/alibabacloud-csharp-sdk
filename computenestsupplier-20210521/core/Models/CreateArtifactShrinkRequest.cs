@@ -10,56 +10,65 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class CreateArtifactShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+        /// <para>The content used to build the artifact. This parameter is used for managed artifact builds.</para>
         /// </summary>
         [NameInMap("ArtifactBuildProperty")]
         [Validation(Required=false)]
         public string ArtifactBuildPropertyShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the artifact build task. Valid values:</para>
+        /// <para>The type of the artifact to be built. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>EcsImage: Build ECS (Elastic Container Service) image.</para>
+        /// <item><description><para>EcsImage: builds an ECS image.</para>
         /// </description></item>
-        /// <item><description><para>Dockerfile: Build container image based on Dockerfile.</para>
+        /// <item><description><para>Dockerfile: builds a container image based on a Dockerfile.</para>
         /// </description></item>
-        /// <item><description><para>Buildpacks: Build container image based on Buildpacks.</para>
+        /// <item><description><para>Buildpacks: builds a container image based on Buildpacks.</para>
         /// </description></item>
-        /// <item><description><para>ContainerImage: Rebuild container image by renaming an existing container image.</para>
+        /// <item><description><para>ContainerImage: builds a container image by renaming an existing container image.</para>
         /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Dockerfile</para>
+        /// <para>Dockerflie</para>
         /// </summary>
         [NameInMap("ArtifactBuildType")]
         [Validation(Required=false)]
         public string ArtifactBuildType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the deployment package.</para>
+        /// <para>The artifact ID.</para>
+        /// <para>This parameter is required to create a new version of an existing artifact.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/469993.html">ListArtifacts</a> operation to obtain the artifact ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>artifact-eea08d1e2d3a43aexxxx</para>
+        /// <para>artifact-eea08d1e2d3a43ae****</para>
         /// </summary>
         [NameInMap("ArtifactId")]
         [Validation(Required=false)]
         public string ArtifactId { get; set; }
 
         /// <summary>
-        /// <para>The properties of the deployment object.</para>
+        /// <para>The content of the artifact.</para>
         /// </summary>
         [NameInMap("ArtifactProperty")]
         [Validation(Required=false)]
         public string ArtifactPropertyShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the deployment package. Valid values:</para>
+        /// <para>The artifact type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EcsImage: Elastic Compute Service (ECS) image.</description></item>
-        /// <item><description>AcrImage: container image.</description></item>
-        /// <item><description>File: Object Storage Service (OSS) object.</description></item>
-        /// <item><description>Script: script.</description></item>
+        /// <item><description><para>EcsImage: an ECS image artifact.</para>
+        /// </description></item>
+        /// <item><description><para>AcrImage: a container image artifact.</para>
+        /// </description></item>
+        /// <item><description><para>File: an Object Storage Service (OSS) file artifact.</para>
+        /// </description></item>
+        /// <item><description><para>Script: a script artifact.</para>
+        /// </description></item>
+        /// <item><description><para>HelmChart: a Helm chart artifact.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,7 +80,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotence of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10CM943JP0EN9D51H</para>
@@ -81,21 +90,21 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the deployment package.</para>
+        /// <para>The description of the artifact.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test artifact</para>
+        /// <para>Redhat8_0 image</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the deployment package.</para>
+        /// <para>The artifact name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Name</para>
+        /// <para>Redhat8_5 image</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -105,14 +114,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-aekzkt5buxxxxxx</para>
+        /// <para>rg-acfm2jfvb7b****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The supported regions.</para>
+        /// <para>The regions where the image can be distributed.</para>
         /// </summary>
         [NameInMap("SupportRegionIds")]
         [Validation(Required=false)]
@@ -148,7 +157,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The version name of the deployment package.</para>
+        /// <para>The name of the artifact version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

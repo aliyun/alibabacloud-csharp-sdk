@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceTestTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The number of items to return per page when paginating results. The maximum is 100, and the default is 20.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If this parameter is not returned, it indicates that no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The service test tasks.</para>
+        /// <para>The collection of service test tasks.</para>
         /// </summary>
         [NameInMap("ServiceTestTasks")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>the status of service task.</para>
+            /// <para>The execution status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dadadad</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The task region id.</para>
+            /// <para>The region where the task was executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>

@@ -20,17 +20,19 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the cloud services.</para>
+        /// <para>The details of the service.</para>
         /// </summary>
         [NameInMap("ServiceProvisions")]
         [Validation(Required=false)]
         public List<GetServiceProvisionsResponseBodyServiceProvisions> ServiceProvisions { get; set; }
         public class GetServiceProvisionsResponseBodyServiceProvisions : TeaModel {
             /// <summary>
-            /// <para>Indicates whether automatic activation for the service is defined in the template. Valid values:</para>
+            /// <para>Indicates whether the service is automatically activated. The service is automatically activated if it is defined in the template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Automatic activation for the service is defined in the template.</description></item>
-            /// <item><description>false: Manual activation for the service is defined in the template.</description></item>
+            /// <item><description><para>true: The service is automatically activated.</para>
+            /// </description></item>
+            /// <item><description><para>false: The service must be manually activated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,14 +43,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public bool? AutoEnableService { get; set; }
 
             /// <summary>
-            /// <para>Product details. Some services (such as ACS) involve the activation of multiple products</para>
+            /// <para>The details of the commodity. Some services, such as ACS, require you to activate multiple commodities.</para>
             /// </summary>
             [NameInMap("CommodityProvisions")]
             [Validation(Required=false)]
             public List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> CommodityProvisions { get; set; }
             public class GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions : TeaModel {
                 /// <summary>
-                /// <para>Commodity Code</para>
+                /// <para>The commodity code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs_postpaid_public_cn</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string CommodityCode { get; set; }
 
                 /// <summary>
-                /// <para>Product activation link.</para>
+                /// <para>The URL for activating the commodity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn">https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn</a></para>
@@ -68,7 +70,13 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string EnableURL { get; set; }
 
                 /// <summary>
-                /// <para>Cloud service activation status.</para>
+                /// <para>The activation status of the Alibaba Cloud service. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>Enabled: The service is activated.</para>
+                /// </description></item>
+                /// <item><description><para>Disabled: The service is not activated.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Disabled</para>
@@ -80,9 +88,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// <para>The URL that points to the activation page of the service.</para>
+            /// <para>The URL for activating the Alibaba Cloud service.</para>
             /// <remarks>
-            /// <para>This parameter is returned if Status is set to Disabled.</para>
+            /// <para>This parameter is returned when Status is set to Disabled.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -93,17 +101,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string EnableURL { get; set; }
 
             /// <summary>
-            /// <para>The information about the RAM roles of the cloud service. If this parameter is empty, no RAM roles is associated with the service.</para>
+            /// <para>The information about the service roles. If this parameter is empty, no service roles are associated with the service.</para>
             /// </summary>
             [NameInMap("RoleProvision")]
             [Validation(Required=false)]
             public GetServiceProvisionsResponseBodyServiceProvisionsRoleProvision RoleProvision { get; set; }
             public class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvision : TeaModel {
                 /// <summary>
-                /// <para>The authorization URL of the RAM role.</para>
-                /// <remarks>
-                /// <para>This parameter is returned if Created is set to false.</para>
-                /// </remarks>
+                /// <para>The URL for authorizing the service to access cloud resources. This parameter is returned if the role is not created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://ram.console.aliyun.com/role/authorization?request=%7B%22Services%22:%5B%7B%22Service%22:%22CS%22,%22Roles%22:%5B%7B%22RoleName%22:%22AliyunCSManagedVKRole%22,%22TemplateId%22:%22AliyunCSManagedVKRole%22%7D,%7B%22RoleName%22:%22AliyunCSDefaultRole%22,%22TemplateId%22:%22Default%22%7D%5D%7D%5D,%22ReturnUrl%22:%22https://cs.console.aliyun.com/%22%7D">https://ram.console.aliyun.com/role/authorization?request={&quot;Services&quot;:[{&quot;Service&quot;:&quot;CS&quot;,&quot;Roles&quot;:[{&quot;RoleName&quot;:&quot;AliyunCSManagedVKRole&quot;,&quot;TemplateId&quot;:&quot;AliyunCSManagedVKRole&quot;},{&quot;RoleName&quot;:&quot;AliyunCSDefaultRole&quot;,&quot;TemplateId&quot;:&quot;Default&quot;}]}],&quot;ReturnUrl&quot;:&quot;https://cs.console.aliyun.com/&quot;}</a></para>
@@ -113,14 +118,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                 public string AuthorizationURL { get; set; }
 
                 /// <summary>
-                /// <para>The RAM roles.</para>
+                /// <para>The list of service roles.</para>
                 /// </summary>
                 [NameInMap("Roles")]
                 [Validation(Required=false)]
                 public List<GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles> Roles { get; set; }
                 public class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRoles : TeaModel {
                     /// <summary>
-                    /// <para>The information about the API operation that is used to create the RAM role.</para>
+                    /// <para>The information about the API operation that is used to create the role.</para>
                     /// </summary>
                     [NameInMap("ApiForCreation")]
                     [Validation(Required=false)]
@@ -137,7 +142,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                         public string ApiName { get; set; }
 
                         /// <summary>
-                        /// <para>The ID of the Alibaba Cloud service to which the API operation belongs.</para>
+                        /// <para>The ID of the product to which the API operation belongs.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>ComputeNest</para>
@@ -149,8 +154,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                         /// <summary>
                         /// <para>The type of the API operation. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Open: public</description></item>
-                        /// <item><description>Inner: private</description></item>
+                        /// <item><description><para>Open: a public API operation.</para>
+                        /// </description></item>
+                        /// <item><description><para>Inner: an internal API operation.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -161,7 +168,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                         public string ApiType { get; set; }
 
                         /// <summary>
-                        /// <para>The parameters of the API operation. ${Variable name} indicates a dynamic parameter.</para>
+                        /// <para>The parameters of the API operation. Dynamic parameters are in the \<c>${Variable}\\</c> format. The \<c>${RegionId}\\</c> dynamic parameter is supported, which specifies the region.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{ &quot;ServiceLinkedRole&quot;: &quot;AliyunServiceRoleForRdsPgsqlOnEcs&quot;, &quot;RegionId&quot;: &quot;${RegionId}&quot; }</para>
@@ -173,10 +180,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     }
 
                     /// <summary>
-                    /// <para>Indicates whether the RAM role is created. Valid values:</para>
+                    /// <para>Indicates whether the role is created. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true</description></item>
-                    /// <item><description>false</description></item>
+                    /// <item><description><para>true: The role is created.</para>
+                    /// </description></item>
+                    /// <item><description><para>false: The role is not created.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -187,7 +196,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
                     public bool? Created { get; set; }
 
                     /// <summary>
-                    /// <para>The purpose for which the RAM role is used. Default value: Default. A value of Default indicates that the RAM role is the default role of the service.</para>
+                    /// <para>The purpose of the role. Default value: Default. This value indicates that the role is the default role for the service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Default</para>
@@ -211,7 +220,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             }
 
             /// <summary>
-            /// <para>The name of the cloud service.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>db</para>
@@ -221,12 +230,16 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The activation status of the cloud service. Valid values:</para>
+            /// <para>The activation status of the service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: The cloud service is activated.</description></item>
-            /// <item><description>EnabledByDefault: The cloud service is activated by default.</description></item>
-            /// <item><description>Disabled: The cloud service is not activated.</description></item>
-            /// <item><description>Unknown: The activation status of the cloud service is unknown.</description></item>
+            /// <item><description><para>Enabled: The service is activated.</para>
+            /// </description></item>
+            /// <item><description><para>EnabledByDefault: The service is activated by default.</para>
+            /// </description></item>
+            /// <item><description><para>Disabled: The service is not activated.</para>
+            /// </description></item>
+            /// <item><description><para>Unknown: The activation status is unknown.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -237,9 +250,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason why the service is in the Disabled or Unknown state.</para>
+            /// <para>The reason why the Alibaba Cloud service is not activated or the activation status is unknown.</para>
             /// <remarks>
-            /// <para>This parameter is returned if Status is set to Disabled or Unknown.</para>
+            /// <para>This parameter is returned when Status is set to Unknown.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

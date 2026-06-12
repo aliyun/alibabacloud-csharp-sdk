@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListArtifactRisksResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of artifact risks</para>
+        /// <para>The list of artifact risks.</para>
         /// </summary>
         [NameInMap("ArtifactRiskList")]
         [Validation(Required=false)]
         public List<ListArtifactRisksResponseBodyArtifactRiskList> ArtifactRiskList { get; set; }
         public class ListArtifactRisksResponseBodyArtifactRiskList : TeaModel {
             /// <summary>
-            /// <para>CVE numbers</para>
+            /// <para>The CVE ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CVE-2023-4911</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CveNos { get; set; }
 
             /// <summary>
-            /// <para>Extended information, in JSON format, to be parsed according to the risk category</para>
+            /// <para>The extended information in JSON format. Parse this information based on the risk type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -41,9 +41,9 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ExtendInfo { get; set; }
 
             /// <summary>
-            /// <para>Risk level:</para>
+            /// <para>The risk level.</para>
             /// <list type="bullet">
-            /// <item><description>high represents high</description></item>
+            /// <item><description>high: High</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>Risk name.</para>
+            /// <para>The name of the risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>USN-3686-1: file vulnerabilities</para>
@@ -64,13 +64,18 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RiskName { get; set; }
 
             /// <summary>
-            /// <para>Risk type. Values:</para>
+            /// <para>The risk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AcrCve  Container image system vulnerability</description></item>
-            /// <item><description>AcrSca  Container image application vulnerability</description></item>
-            /// <item><description>EcsVulnerability  ECS image vulnerability information</description></item>
-            /// <item><description>EcsAlarm  ECS image security alarm</description></item>
-            /// <item><description>EcsBaseline  ECS image baseline check</description></item>
+            /// <item><description><para>AcrCve: system vulnerabilities in a container image</para>
+            /// </description></item>
+            /// <item><description><para>AcrSca: application vulnerabilities in a container image</para>
+            /// </description></item>
+            /// <item><description><para>EcsVulnerability: ECS image vulnerabilities</para>
+            /// </description></item>
+            /// <item><description><para>EcsAlarm: ECS image security alerts</para>
+            /// </description></item>
+            /// <item><description><para>EcsBaseline: ECS image baseline checks</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,17 +86,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string RiskType { get; set; }
 
             /// <summary>
-            /// <para>Risk Type name</para>
+            /// <para>The name of the risk type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Container System Vulner</para>
+            /// <para>Container image system vulnerability</para>
             /// </summary>
             [NameInMap("RiskTypeName")]
             [Validation(Required=false)]
             public string RiskTypeName { get; set; }
 
             /// <summary>
-            /// <para>Solution for the risk item.</para>
+            /// <para>The solution to the risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apt-get update &amp;&amp; apt-get install ntpdate --only-upgrade</para>
@@ -103,7 +108,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>52919DB1-03A0-55F5-BDD4-DB6DEBB8267A</para>

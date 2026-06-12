@@ -10,7 +10,8 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ReleaseArtifactRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the artifact.</para>
+        /// <para>The artifact ID.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/469993.html">ListArtifacts</a> to obtain the artifact ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +22,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ArtifactId { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>A client-generated token that ensures the idempotence of the request. The token must be unique for each request. The value of <b>ClientToken</b> can contain only ASCII characters and must be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>788E7CP0EN9D51P</para>

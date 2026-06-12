@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListArtifactsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about deployment packages.</para>
+        /// <para>The information about the artifacts.</para>
         /// </summary>
         [NameInMap("Artifacts")]
         [Validation(Required=false)]
         public List<ListArtifactsResponseBodyArtifacts> Artifacts { get; set; }
         public class ListArtifactsResponseBodyArtifacts : TeaModel {
             /// <summary>
-            /// <para>The build properties of the artifact, utilized for hosting and building the deployment package.</para>
+            /// <para>The content used to build the artifact. This parameter is used for hosted artifact builds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{\&quot;CodeRepo\&quot;:{\&quot;Owner\&quot;:\&quot;wenle\&quot;,\&quot;Platform\&quot;:\&quot;github\&quot;,\&quot;Branch\&quot;:\&quot;main\&quot;,\&quot;RepoName\&quot;:\&quot;aliyun-computenest/java-springboot-demo\&quot;}}</para>
+            /// <para>{\&quot;CodeRepo\&quot;:{\&quot;Owner\&quot;:\&quot;wenle\&quot;,\&quot;Platform\&quot;:\&quot;github\&quot;,\&quot;Branch\&quot;:\&quot;main\&quot;,\&quot;RepoName\&quot;:\&quot;heroku/node-js-getting-started\&quot;}}</para>
             /// </summary>
             [NameInMap("ArtifactBuildProperty")]
             [Validation(Required=false)]
             public string ArtifactBuildProperty { get; set; }
 
             /// <summary>
-            /// <para>The ID of the deployment package.</para>
+            /// <para>The artifact ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>artifact-eea08d1e2d3a43aexxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ArtifactId { get; set; }
 
             /// <summary>
-            /// <para>The type of the deployment package.</para>
+            /// <para>The artifact type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EcsImage</para>
@@ -47,17 +47,17 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ArtifactType { get; set; }
 
             /// <summary>
-            /// <para>The description of the deployment package.</para>
+            /// <para>The description of the artifact.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Description</para>
+            /// <para>Redhat8_0 image</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the deployment package was modified.</para>
+            /// <para>The time when the artifact was modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-10-20T02:19:55Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The latest version of the deployment package.</para>
+            /// <para>The latest version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -77,20 +77,23 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string MaxVersion { get; set; }
 
             /// <summary>
-            /// <para>The name of the deployment package.</para>
+            /// <para>The artifact name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Name</para>
+            /// <para>Redhat8_5 image</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Permission fields are applicable to container image artifact and Helm Chart artifact They can only change from Automatic to Public. Options:</para>
+            /// <para>The permission field. This parameter is valid for artifacts of the container image, Helm chart, and file types. For other types of artifacts, you can only change the permission from Automatic to Public.
+            /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Public</description></item>
-            /// <item><description>Automatic</description></item>
+            /// <item><description><para>Public</para>
+            /// </description></item>
+            /// <item><description><para>Automatic</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,24 +104,31 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string PermissionType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rg-aek25rexxxxxxxx</para>
+            /// <para>rg-acfmzmhzoaa****</para>
             /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The status of the deployment package. Valid values:</para>
+            /// <para>The status of the artifact.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Created: The deployment package is created.</description></item>
-            /// <item><description>Scanning: The deployment package is being scanned.</description></item>
-            /// <item><description>ScanFailed: The deployment package failed to be scanned.</description></item>
-            /// <item><description>Delivering: The deployment package is being distributed.</description></item>
-            /// <item><description>Available: The deployment package is available.</description></item>
-            /// <item><description>Deleted: The deployment package is deleted.</description></item>
+            /// <item><description><para>Created: The artifact is created.</para>
+            /// </description></item>
+            /// <item><description><para>Scanning: The artifact is being scanned.</para>
+            /// </description></item>
+            /// <item><description><para>ScanFailed: The artifact failed to be scanned.</para>
+            /// </description></item>
+            /// <item><description><para>Delivering: The artifact is being distributed.</para>
+            /// </description></item>
+            /// <item><description><para>Available: The artifact is available.</para>
+            /// </description></item>
+            /// <item><description><para>Deleted: The artifact is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -160,7 +170,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned per page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -170,10 +180,10 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The query token. Set it to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hRQzE=</para>
+        /// <para>AAAAAc3HCuYhJi/wvpk4xOr0VLbfVwapgMwCN1wYzPVzLbItEdB0uWSY7AGnM3qCgm/YnjuEfwSnMwiMkcUoI0hR****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -183,14 +193,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>46577928-3162-15A6-9084-69820EB9xxxx</para>
+        /// <para>7B7AE429-B53E-5E73-A5EC-DC91F614F2D9</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the filter criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

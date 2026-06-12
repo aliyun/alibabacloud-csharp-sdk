@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class ListServiceSharedAccountsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries returned on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token.</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAWns8w4MmhzeptXVRG0PUEU=</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Service shared account information.</para>
+        /// <para>The information about the shared accounts.</para>
         /// </summary>
         [NameInMap("ShareAccount")]
         [Validation(Required=false)]
         public List<ListServiceSharedAccountsResponseBodyShareAccount> ShareAccount { get; set; }
         public class ListServiceSharedAccountsResponseBodyShareAccount : TeaModel {
             /// <summary>
-            /// <para>The time when the service was created.</para>
+            /// <para>The time when the sharing was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-28T02:47:46.000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Service logo.</para>
+            /// <para>The logo of the distributor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>logo</para>
@@ -67,11 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Logo { get; set; }
 
             /// <summary>
-            /// <para>The name of the service instance. The value must meet the following requirements:</para>
-            /// <list type="bullet">
-            /// <item><description>The name cannot exceed 64 characters in length.</description></item>
-            /// <item><description>It can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</description></item>
-            /// </list>
+            /// <para>The name of the distributor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -81,10 +77,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The permissions on the service. Valid values:</para>
+            /// <para>The permission type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Deployable: Permissions to deploy the service.</description></item>
-            /// <item><description>Accessible: Permissions to access the service.</description></item>
+            /// <item><description><para>Deployable: The service is deployable.</para>
+            /// </description></item>
+            /// <item><description><para>Accessible: The service is accessible.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +103,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string ServiceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the service was updated.</para>
+            /// <para>The time when the sharing was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-13T02:16:03.756Z</para>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The user aliUid.</para>
+            /// <para>The Alibaba Cloud account ID of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127383705xxxxxx</para>
@@ -127,7 +125,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries that meet the filter criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

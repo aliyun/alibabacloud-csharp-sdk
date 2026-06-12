@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
 {
     public class AddServiceSharedAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A unique identifier that you provide to ensure the idempotence of the request. The token can contain only ASCII characters and cannot be longer than 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBBAAfu+XtuBE55iRLHEYYuojI4=</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public string ServiceId { get; set; }
 
         /// <summary>
-        /// <para>The shared account and permissions of the service.</para>
+        /// <para>The shared accounts and their permissions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SharedAccounts")]
@@ -50,10 +50,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         public List<AddServiceSharedAccountsRequestSharedAccounts> SharedAccounts { get; set; }
         public class AddServiceSharedAccountsRequestSharedAccounts : TeaModel {
             /// <summary>
-            /// <para>The permissions on the service. Valid values:</para>
+            /// <para>The permission type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Deployable: Permissions to deploy the service.</description></item>
-            /// <item><description>Accessible: Permissions to access the service.</description></item>
+            /// <item><description><para>Deployable: The service can be deployed.</para>
+            /// </description></item>
+            /// <item><description><para>Accessible: The service can be accessed.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
             public string Permission { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the user.</para>
+            /// <para>The UID of the Alibaba Cloud account.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -78,10 +80,12 @@ namespace AlibabaCloud.SDK.ComputeNestSupplier20210521.Models
         }
 
         /// <summary>
-        /// <para>The share type of the service. Default value: SharedAccount. Valid values:</para>
+        /// <para>The service sharing type. The default value is SharedAccount. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SharedAccount: The service is shared by multiple accounts.</description></item>
-        /// <item><description>Reseller: The service is distributed.</description></item>
+        /// <item><description><para>SharedAccount: The service is shared with a specified account.</para>
+        /// </description></item>
+        /// <item><description><para>Reseller: The service is shared with a reseller.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
