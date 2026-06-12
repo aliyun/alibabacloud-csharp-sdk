@@ -167,6 +167,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public HttpApiVersionConfig VersionConfig { get; set; }
 
+        [NameInMap("withGatewayExtension")]
+        [Validation(Required=false)]
+        public bool? WithGatewayExtension { get; set; }
+
     }
 
 }

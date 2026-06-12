@@ -115,6 +115,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
                 }
 
+                [NameInMap("failureRoutes")]
+                [Validation(Required=false)]
+                public List<ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes> FailureRoutes { get; set; }
+                public class ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes : TeaModel {
+                    [NameInMap("errorMessage")]
+                    [Validation(Required=false)]
+                    public string ErrorMessage { get; set; }
+
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                }
+
                 [NameInMap("mcpToolsDefinition")]
                 [Validation(Required=false)]
                 public string McpToolsDefinition { get; set; }
@@ -206,6 +220,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [NameInMap("path")]
                     [Validation(Required=false)]
                     public string Path { get; set; }
+
+                }
+
+                [NameInMap("successRoutes")]
+                [Validation(Required=false)]
+                public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> SuccessRoutes { get; set; }
+                public class ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes : TeaModel {
+                    [NameInMap("action")]
+                    [Validation(Required=false)]
+                    public string Action { get; set; }
+
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
 
                 }
 
