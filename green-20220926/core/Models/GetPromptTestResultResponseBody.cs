@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public string Label { get; set; }
 
+                [NameInMap("Reason")]
+                [Validation(Required=false)]
+                public string Reason { get; set; }
+
             }
 
             /// <summary>

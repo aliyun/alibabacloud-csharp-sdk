@@ -13,10 +13,6 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public List<string> FailureRequestIds { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
-        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
