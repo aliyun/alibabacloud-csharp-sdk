@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class StartLifecyclePolicyExecutionRequest : TeaModel {
         /// <summary>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// <para>The lifecycle policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

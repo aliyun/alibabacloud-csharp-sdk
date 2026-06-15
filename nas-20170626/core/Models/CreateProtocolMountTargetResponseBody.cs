@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The ID of the export directory for the protocol service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exp-123****</para>
+        /// <para>exp-19abf5beab8d****</para>
         /// </summary>
         [NameInMap("ExportId")]
         [Validation(Required=false)]

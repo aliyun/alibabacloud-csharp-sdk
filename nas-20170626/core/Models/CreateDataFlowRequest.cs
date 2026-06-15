@@ -211,7 +211,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>oss://bucket1</para>
+        /// <para>oss://178321033379****:bucket-01</para>
         /// </summary>
         [NameInMap("SourceStorage")]
         [Validation(Required=false)]

@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>此协议服务的描述</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

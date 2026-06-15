@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public class GetProtocolMountTargetResponseBodyProtocolMountTarget : TeaModel {
             /// <summary>
             /// <para>The name of the permission group.</para>
-            /// <para>Default permission group: DEFAULT\_VPC\_GROUP\_NAME</para>
+            /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT_VPC_GROUP_NAME</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The description of the export directory.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The description of the export directory.</para>
+            /// <para>此协议服务导出的描述。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>The ID of the data flow.</para>
+        /// <para>The ID of the dataflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,9 +64,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string DataFlowId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data flow task.</para>
+        /// <para>The ID of the dataflow task.</para>
         /// <remarks>
-        /// <para> Only the IDs of data streaming tasks are supported.</para>
+        /// <para>Only the IDs of data streaming tasks are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

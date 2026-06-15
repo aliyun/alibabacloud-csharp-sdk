@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>If all the files and directories are incompletely returned in a query, the return value of the NextToken parameter is not empty. In this case, you can specify a valid value for the NextToken parameter to continue the query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CKuO8QMSIjE2OTc3NzI0NjI5MTcyMTYyNDVfMzEzNTUyMF81MjEzODY=</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

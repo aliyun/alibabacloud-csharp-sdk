@@ -53,6 +53,24 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         }
 
+        [NameInMap("RoleChain")]
+        [Validation(Required=false)]
+        public List<AttachVscToFilesystemsRequestRoleChain> RoleChain { get; set; }
+        public class AttachVscToFilesystemsRequestRoleChain : TeaModel {
+            [NameInMap("AssumeRoleFor")]
+            [Validation(Required=false)]
+            public string AssumeRoleFor { get; set; }
+
+            [NameInMap("RoleArn")]
+            [Validation(Required=false)]
+            public string RoleArn { get; set; }
+
+            [NameInMap("RoleType")]
+            [Validation(Required=false)]
+            public string RoleType { get; set; }
+
+        }
+
     }
 
 }

@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>此文件系统的描述。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required if EncryptType is set to 2.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3c0b3885-2adf-483d-8a65-5e280689****</para>
+        /// <para>fcbd****-62**-4a**-b605-c58cc1d5****</para>
         /// </summary>
         [NameInMap("KmsKeyId")]
         [Validation(Required=false)]
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>s-xxx</para>
+        /// <para>s-extreme-snapsho****</para>
         /// </summary>
         [NameInMap("SnapshotId")]
         [Validation(Required=false)]
@@ -305,7 +305,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-2ze37k6jh8ums2fw2****</para>
+        /// <para>vsw-bp131dkqilvw5pnlt****</para>
         /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
@@ -319,7 +319,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-bp1cbv1ljve4j5hlw****</para>
+        /// <para>vpc-bp18cx9a7zoh0h9b4****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

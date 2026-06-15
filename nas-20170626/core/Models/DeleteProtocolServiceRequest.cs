@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-123****</para>
+        /// <para>cpfs-099394bd928c****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ptc-123****</para>
+        /// <para>ptc-197ed6a00f2b****</para>
         /// </summary>
         [NameInMap("ProtocolServiceId")]
         [Validation(Required=false)]

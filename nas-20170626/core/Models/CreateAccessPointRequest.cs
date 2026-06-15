@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This field takes effect only if you specify the OwnerUserId and OwnerGroupId parameters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0777</para>
+        /// <para>0755</para>
         /// </summary>
         [NameInMap("Permission")]
         [Validation(Required=false)]

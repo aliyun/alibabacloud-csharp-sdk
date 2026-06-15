@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-test</para>
+        /// <para>classic-test</para>
         /// </summary>
         [NameInMap("AccessGroupName")]
         [Validation(Required=false)]
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard (default): General-purpose NAS file system.</description></item>
+        /// <item><description>standard: General-purpose Apsara File Storage NAS (NAS) file system</description></item>
         /// <item><description>extreme: Extreme NAS file system.</description></item>
         /// </list>
         /// 
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of the page to return.</para>
         /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>

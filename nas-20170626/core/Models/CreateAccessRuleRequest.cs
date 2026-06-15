@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The type of the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>standard (default): General-purpose NAS file system.</description></item>
+        /// <item><description>standard: General-purpose Apsara File Storage NAS (NAS) file system</description></item>
         /// <item><description>extreme: Extreme NAS file system.</description></item>
         /// </list>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RDWR (default): the read and write permissions.</description></item>
-        /// <item><description>RDONLY: the read-only permissions.</description></item>
+        /// <item><description>RDONLY: the read-only permission.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

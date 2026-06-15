@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListDirectoriesAndFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the files or directories.</para>
+        /// <para>The list of directory and file entries.</para>
         /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]
         public List<ListDirectoriesAndFilesResponseBodyEntries> Entries { get; set; }
         public class ListDirectoriesAndFilesResponseBodyEntries : TeaModel {
             /// <summary>
-            /// <para>The time when the file was queried.</para>
-            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
-            /// <para>This parameter is returned and valid only if the value of the Type parameter is File.</para>
+            /// <para>The last access time (atime) of the file.</para>
+            /// <para>The time is in the ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>This parameter is returned only when <c>Type</c> is <c>File</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-01T10:08:08Z</para>
@@ -29,9 +29,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Atime { get; set; }
 
             /// <summary>
-            /// <para>The time when the raw data was modified.</para>
-            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
-            /// <para>This parameter is returned and valid only if the value of the Type parameter is File.</para>
+            /// <para>The metadata change time (ctime) of the file.</para>
+            /// <para>The time is in the ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>This parameter is returned only when <c>Type</c> is <c>File</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:10Z</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Ctime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the directory or file.</para>
+            /// <para>The ID of the file or directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66</para>
@@ -51,12 +51,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the directory contains files stored in the Archive storage class.</para>
-            /// <para>This parameter is returned and valid only if the value of the Type parameter is Directory.</para>
+            /// <para>Specifies whether the directory contains any archive files.</para>
+            /// <para>This parameter is returned only when <c>Type</c> is <c>Directory</c>.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The directory contains files stored in the Archive storage class.</description></item>
-            /// <item><description>false: The directory does not contain files stored in the Archive storage class.</description></item>
+            /// <item><description><para><c>true</c>: Yes</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: No</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,12 +69,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string HasArchiveFile { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the directory contains files stored in the IA storage class.</para>
-            /// <para>This parameter is returned and valid only if the value of the Type parameter is Directory.</para>
+            /// <para>Specifies whether the directory contains any infrequent access files.</para>
+            /// <para>This parameter is returned only when <c>Type</c> is <c>Directory</c>.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The directory contains files stored in the IA storage class.</description></item>
-            /// <item><description>false: The directory does not contain files stored in the IA storage class.</description></item>
+            /// <item><description><para><c>true</c>: Yes</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: No</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? HasInfrequentAccessFile { get; set; }
 
             /// <summary>
-            /// <para>The file or directory inode.</para>
+            /// <para>The inode of the file or directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66</para>
@@ -93,9 +97,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Inode { get; set; }
 
             /// <summary>
-            /// <para>The time when the file was modified.</para>
-            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
-            /// <para>This parameter is returned and valid only if the value of the Type parameter is File.</para>
+            /// <para>The last modification time (mtime) of the file.</para>
+            /// <para>The time is in the ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>This parameter is returned only when <c>Type</c> is <c>File</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:08Z</para>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? OfflineUnchangedDuration { get; set; }
 
             /// <summary>
-            /// <para>The ID of the portable account. This parameter is returned and valid only if the value of the ProtocolType parameter is SMB and RAM-based access control is enabled.</para>
+            /// <para>The owner of the file or directory. This parameter is returned only when <c>ProtocolType</c> is <c>SMB</c> and access control is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>37862c****</para>
@@ -133,9 +137,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Owner { get; set; }
 
             /// <summary>
-            /// <para>The time when the last data retrieval task was run.</para>
-            /// <para>The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
-            /// <para>This parameter is returned and valid only if the value of the Type parameter is File.</para>
+            /// <para>The last data retrieval time.</para>
+            /// <para>The time is in the ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+            /// <para>This parameter is returned only when <c>Type</c> is <c>File</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-02-11T10:08:08Z</para>
@@ -145,9 +149,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string RetrieveTime { get; set; }
 
             /// <summary>
-            /// <para>The size of the file.</para>
-            /// <para>Unit: bytes.</para>
-            /// <para>This parameter is returned and valid only if the value of the Type parameter is File.</para>
+            /// <para>The size of the file, in bytes.</para>
+            /// <para>This parameter is returned only when <c>Type</c> is <c>File</c>.</para>
+            /// <para>This value is returned and is meaningful only when Type is File.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -157,12 +161,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The storage class.</para>
-            /// <para>This parameter is returned and valid only if the value of the Type parameter is File.</para>
+            /// <para>The storage class of the file.</para>
+            /// <para>This parameter is returned only when <c>Type</c> is <c>File</c>.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>InfrequentAccess: the IA storage class.</description></item>
-            /// <item><description>Archive: the Archive storage class.</description></item>
+            /// <item><description><para><c>InfrequentAccess</c></para>
+            /// </description></item>
+            /// <item><description><para><c>Archive</c></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -173,15 +179,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string StorageType { get; set; }
 
             /// <summary>
-            /// <para>The type of the query result.</para>
+            /// <para>The type of the entry.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>File</description></item>
-            /// <item><description>Directory</description></item>
+            /// <item><description><para><c>File</c>: a file</para>
+            /// </description></item>
+            /// <item><description><para><c>Directory</c>: a directory</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Directory</para>
+            /// <para>File</para>
             /// </summary>
             [NameInMap("Type")]
             [Validation(Required=false)]
@@ -190,7 +198,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token. If the response is truncated, include this token in the next request to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeMountTargetsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A collection of mount targets.</para>
+        /// </summary>
         [NameInMap("MountTargets")]
         [Validation(Required=false)]
         public DescribeMountTargetsResponseBodyMountTargets MountTargets { get; set; }
@@ -112,7 +115,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of mount targets per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

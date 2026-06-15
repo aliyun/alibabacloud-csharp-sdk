@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyMountTargetRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the permission group that is attached to the mount target.</para>
+        /// <para>The name of the access group that is associated with the mount target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>classic-test</para>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? AccessPointAccessOnly { get; set; }
 
         /// <summary>
-        /// <para>The dual-stack (IPv4 and IPv6) domain name of the mount target.</para>
+        /// <para>The domain name of the dual-stack mount target.</para>
         /// <remarks>
-        /// <para> Only Extreme NAS file systems that reside in the Chinese mainland support IPv6.</para>
+        /// <para>The IPv6 feature is available only for Extreme NAS file systems in the Chinese mainland.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The ID of the file system.</para>
         /// <list type="bullet">
-        /// <item><description>Sample ID of a General-purpose NAS file system: <c>31a8e4****</c>.</description></item>
-        /// <item><description>The IDs of Extreme NAS file systems must start with <c>extreme-</c>, for example, <c>extreme-0015****</c>.</description></item>
+        /// <item><description><para>For a General-purpose NAS file system, the ID is similar to <c>31a8e4****</c>.</para>
+        /// </description></item>
+        /// <item><description><para>For an Extreme NAS file system, the ID must start with <c>extreme-</c>, for example, <c>extreme-0015****</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 domain name of the mount target.</para>
+        /// <para>The domain name of the IPv4 mount target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</para>
@@ -65,11 +67,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The status of the mount target.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active: The mount target is available.</description></item>
-        /// <item><description>Inactive: The mount target is unavailable.</description></item>
+        /// <item><description><para>Active: The mount target is available.</para>
+        /// </description></item>
+        /// <item><description><para>Inactive: The mount target is unavailable.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Only General-purpose File Storage NAS (NAS) file systems support changing the mount target status.</para>
+        /// <para>You can change the status of a mount target only if the mount target is attached to a General-purpose NAS file system.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

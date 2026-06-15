@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Bucket01数据流动</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

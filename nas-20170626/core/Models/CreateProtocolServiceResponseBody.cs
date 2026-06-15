@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The ID of the protocol service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ptc-123****</para>
+        /// <para>ptc-197ed6a00f2b****</para>
         /// </summary>
         [NameInMap("ProtocolServiceId")]
         [Validation(Required=false)]

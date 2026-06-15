@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0,1,…23</para>
+        /// <para>0,1,…,23</para>
         /// </summary>
         [NameInMap("TimePoints")]
         [Validation(Required=false)]

@@ -10,14 +10,16 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ListDirectoriesAndFilesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to query only directories.</para>
+        /// <para>Whether to list only directories.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): queries both directories and files.</description></item>
-        /// <item><description>true: queries only directories.</description></item>
+        /// <item><description><para><c>false</c> (default): Lists both directories and files.</para>
+        /// </description></item>
+        /// <item><description><para><c>true</c>: Lists only directories.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</para>
+        /// <para>If you set <c>StorageType</c> to <c>All</c>, you must set <c>DirectoryOnly</c> to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,9 +41,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of directories or files to include in the results of each query.</para>
-        /// <para>Valid values: 10 to 128.</para>
-        /// <para>Default value: 100.</para>
+        /// <para>The maximum number of directories or files to return per page.</para>
+        /// <para>Value range: 10–128</para>
+        /// <para>Default value: 100</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>A continuation token used to retrieve the next page of results when the response is truncated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TGlzdFJlc291cmNlU****mVzJjE1MTI2NjY4NzY5MTAzOTEmMiZORnI4NDhVeEtrUT0=</para>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The absolute path of the directory.</para>
-        /// <para>The path must start with a forward slash (/) and must be a path that exists in the mount target.</para>
+        /// <para>The path must start with a forward slash (/) and exist on the mount target.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,14 +75,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The storage class.</para>
+        /// <para>The storage type.</para>
         /// <list type="bullet">
-        /// <item><description>InfrequentAccess: the Infrequent Access (IA) storage class.</description></item>
-        /// <item><description>Archive: the Archive storage class.</description></item>
-        /// <item><description>All: all stored data.</description></item>
+        /// <item><description><para><c>InfrequentAccess</c>: infrequent access.</para>
+        /// </description></item>
+        /// <item><description><para><c>Archive</c>: archive storage.</para>
+        /// </description></item>
+        /// <item><description><para><c>All</c>: all storage types.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set the StorageType parameter to All, you must set the DirectoryOnly parameter to true.</para>
+        /// <para>If you set <c>StorageType</c> to <c>All</c>, you must set <c>DirectoryOnly</c> to <c>true</c>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

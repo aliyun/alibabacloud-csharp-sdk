@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>此导出目录的描述</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-123****</para>
+        /// <para>cpfs-099394bd928c****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>fset-123****</para>
+        /// <para>fset-1902718ea0ae****</para>
         /// </summary>
         [NameInMap("FsetId")]
         [Validation(Required=false)]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ptc-123****</para>
+        /// <para>ptc-197ed6a00f2b****</para>
         /// </summary>
         [NameInMap("ProtocolServiceId")]
         [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>If the storage redundancy type of the file system is not zone-redundant (ZRS) and the VpcId is set, this field is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-123****</para>
+        /// <para>vsw-2vc3c2lybvdllxyq4****</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The VPC ID of the export directory.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-123****</para>
+        /// <para>vpc-2vct297b8157bth9z****</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

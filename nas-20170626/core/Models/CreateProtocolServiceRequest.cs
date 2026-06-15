@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>此协议服务的描述。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cpfs-123****</para>
+        /// <para>cpfs-099394bd928c****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The vSwitch ID of the protocol service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-123****</para>
+        /// <para>vsw-2vc3c2lybvdllxyq4****</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The virtual private cloud (VPC) ID of the protocol service. The VPC ID of the protocol service must be the same as the VPC ID of the file system.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-123****</para>
+        /// <para>vpc-2vct297b8157bth9z****</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

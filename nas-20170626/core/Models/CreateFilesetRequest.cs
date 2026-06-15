@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>123e4567-e89b-12d3-a456-42665544****</para>
+        /// <para>123e4567-e89b-12d3-a456-4266554*****</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>内部事务目录</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>bmcpfs-290w65p03ok64ya****</para>
+        /// <para>bmcpfs-290w65p03ok64y*****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

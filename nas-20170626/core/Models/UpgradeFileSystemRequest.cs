@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1ca404****</para>
+        /// <para>extreme-0015****</para>
         /// </summary>
         [NameInMap("FileSystemId")]
         [Validation(Required=false)]

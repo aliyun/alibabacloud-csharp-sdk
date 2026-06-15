@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>/test</para>
         /// </summary>
         [NameInMap("RootDirectory")]
         [Validation(Required=false)]

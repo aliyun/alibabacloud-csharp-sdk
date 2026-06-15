@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CancelDataFlowTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>A client-generated token that you can use to ensure the idempotence of the request. The token must be unique across different requests.</para>
+        /// <para>The <c>ClientToken</c> value must be an ASCII string of 64 characters or less. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the request ID as the <c>ClientToken</c>. The request ID is unique for each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dataflow.</para>
+        /// <para>The data flow ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,12 +35,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string DataFlowId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request.</para>
-        /// <para>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. The dry run does not cancel the specified dataflow task or incur fees.</para>
+        /// <para>Specifies whether to perform a dry run for the request.</para>
+        /// <para>A dry run checks for parameter validity and resource availability without actually canceling the task or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the required parameters, request syntax, service limits, and available NAS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, the specified dataflow task is canceled.</description></item>
+        /// <item><description><para><c>true</c>: Performs a dry run. The system checks the request for potential issues, including missing parameters, invalid formats, and service limits. If the check fails, the system returns an error message; otherwise, it returns a success code.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c> (default): Sends a normal request. After the request passes the check, the task is canceled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,10 +53,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <list type="bullet">
-        /// <item><description>The IDs of CPFS file systems must start with <c>cpfs-</c>. Example: cpfs-125487\<em>\</em>\<em>\</em>.</description></item>
-        /// <item><description>The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-0015\<em>\</em>\<em>\</em>.</description></item>
+        /// <item><description><para>For a general-purpose CPFS instance, the ID must start with <c>cpfs-</c>, for example, <c>cpfs-125487****</c>.</para>
+        /// </description></item>
+        /// <item><description><para>For a CPFS for AI Computing instance, the ID must start with <c>bmcpfs-</c>, for example, <c>bmcpfs-0015****</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dataflow task.</para>
+        /// <para>The data flow task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

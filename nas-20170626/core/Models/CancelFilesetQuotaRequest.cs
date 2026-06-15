@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no fileset quota is canceled and no fee is incurred.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the DataFlowld parameter.</description></item>
+        /// <item><description>true: performs a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the DataFlowld parameter.</description></item>
         /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, the fileset quota is canceled.</description></item>
         /// </list>
         /// 

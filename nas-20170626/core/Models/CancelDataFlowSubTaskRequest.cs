@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data flow.</para>
+        /// <para>The ID of the dataflow.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string DataFlowSubTaskId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data flow task.</para>
+        /// <para>The ID of the dataflow task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

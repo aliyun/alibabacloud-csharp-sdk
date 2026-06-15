@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>此导出目录的描述信息</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

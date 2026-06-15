@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>fset-1902718ea0ae****,fset-3212718ea0ae****</para>
+            /// <para>fset-1902718ea0ae****</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

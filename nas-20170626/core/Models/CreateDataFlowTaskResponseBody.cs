@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dataflow task.</para>
+        /// <para>The Dataflow task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>task-38aa8e890f45****</para>

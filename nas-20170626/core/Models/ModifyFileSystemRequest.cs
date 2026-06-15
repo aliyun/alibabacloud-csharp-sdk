@@ -13,9 +13,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The description of the file system.</para>
         /// <para>Limits:</para>
         /// <list type="bullet">
-        /// <item><description>The description must be 2 to 128 characters in length.</description></item>
-        /// <item><description>It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>The description can contain letters, digits, colons (:), underscores (_), and hyphens (-).</description></item>
+        /// <item><description><para>The description must be 2 to 128 characters.</para>
+        /// </description></item>
+        /// <item><description><para>It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,9 +31,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The ID of the file system.</para>
         /// <list type="bullet">
-        /// <item><description>Sample ID of a General-purpose NAS file system: <c>31a8e4****</c>.</description></item>
-        /// <item><description>The IDs of Extreme NAS file systems must start with <c>extreme-</c>. Example: <c>extreme-0015****</c>.</description></item>
-        /// <item><description>The IDs of Cloud Paralleled File System (CPFS) file systems must start with <c>cpfs-</c>. Example: <c>cpfs-125487****</c>.</description></item>
+        /// <item><description><para>General-purpose NAS: For example, <c>31a8e4****</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Extreme NAS: The ID must start with <c>extreme-</c>. For example, <c>extreme-0015****</c>.</para>
+        /// </description></item>
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>. For example, <c>cpfs-125487****</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,7 +48,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The options.</para>
+        /// <para>Additional options for the file system.</para>
         /// </summary>
         [NameInMap("Options")]
         [Validation(Required=false)]
@@ -53,13 +59,15 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public bool? EnableABE { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the oplock feature. Valid values:</para>
+            /// <para>Specifies whether to enable OpLock. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enables the feature.</description></item>
-            /// <item><description>false: disables the feature.</description></item>
+            /// <item><description><para>true: Enables OpLock.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disables OpLock.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> Only Server Message Block (SMB) file systems support this feature.</para>
+            /// <para>This feature is available only for file systems that use the SMB protocol.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
