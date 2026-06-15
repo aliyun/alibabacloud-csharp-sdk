@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryDevicesByAliasRequest : TeaModel {
         /// <summary>
+        /// <para>The alias. You can query only one alias at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>aliasName</para>
+        /// <para>test_alias</para>
         /// </summary>
         [NameInMap("Alias")]
         [Validation(Required=false)]
         public string Alias { get; set; }
 
         /// <summary>
+        /// <para>AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

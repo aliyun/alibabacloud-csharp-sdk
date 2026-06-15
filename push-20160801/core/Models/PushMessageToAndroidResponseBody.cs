@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class PushMessageToAndroidResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the message pushed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>501029</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string MessageId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</para>
         /// </summary>

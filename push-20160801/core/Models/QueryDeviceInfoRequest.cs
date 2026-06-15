@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryDeviceInfoRequest : TeaModel {
         /// <summary>
+        /// <para>AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The unique identity of the device in the push system. Query only one at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

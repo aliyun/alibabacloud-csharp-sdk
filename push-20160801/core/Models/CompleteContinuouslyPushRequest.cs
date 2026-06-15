@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class CompleteContinuouslyPushRequest : TeaModel {
         /// <summary>
+        /// <para>The AppKey value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,10 +21,12 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The message ID.</para>
+        /// <para>This ID is returned after you call the Push operation and set Target to TBD. It identifies a message saved in the push system.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4010290149170430</para>
+        /// <para>500131</para>
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]

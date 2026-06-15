@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryDevicesByAccountRequest : TeaModel {
         /// <summary>
+        /// <para>Account name. You can query only one account at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>accountName</para>
+        /// <para>test_account</para>
         /// </summary>
         [NameInMap("Account")]
         [Validation(Required=false)]
         public string Account { get; set; }
 
         /// <summary>
+        /// <para>AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

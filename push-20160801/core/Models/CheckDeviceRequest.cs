@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class CheckDeviceRequest : TeaModel {
         /// <summary>
+        /// <para>The AppKey value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The unique identity of the device in Push. It is 32 characters long and contains only digits and lowercase letters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

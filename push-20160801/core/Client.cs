@@ -96,8 +96,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定别名</para>
+        /// <para>Attach an alias to a device.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can attach up to 10 aliases in a single request. The attachment takes effect immediately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAliasRequest
@@ -146,8 +151,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定别名</para>
+        /// <para>Attach an alias to a device.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can attach up to 10 aliases in a single request. The attachment takes effect immediately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAliasRequest
@@ -196,8 +206,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定别名</para>
+        /// <para>Attach an alias to a device.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can attach up to 10 aliases in a single request. The attachment takes effect immediately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAliasRequest
@@ -214,8 +229,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定别名</para>
+        /// <para>Attach an alias to a device.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>You can attach up to 10 aliases in a single request. The attachment takes effect immediately.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindAliasRequest
@@ -232,7 +252,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定手机号码</para>
+        /// <para>Attaches a device to a phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -282,7 +302,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定手机号码</para>
+        /// <para>Attaches a device to a phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -332,7 +352,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定手机号码</para>
+        /// <para>Attaches a device to a phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -350,7 +370,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定手机号码</para>
+        /// <para>Attaches a device to a phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -368,7 +388,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定标签</para>
+        /// <para>Binds tags to specified device targets. Tag bindings take effect within 10 minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -422,7 +442,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定标签</para>
+        /// <para>Binds tags to specified device targets. Tag bindings take effect within 10 minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -476,7 +496,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定标签</para>
+        /// <para>Binds tags to specified device targets. Tag bindings take effect within 10 minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -494,7 +514,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定标签</para>
+        /// <para>Binds tags to specified device targets. Tag bindings take effect within 10 minutes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -512,7 +532,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消定时推送任务</para>
+        /// <para>Cancels a scheduled push task that has not yet been executed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -558,7 +578,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消定时推送任务</para>
+        /// <para>Cancels a scheduled push task that has not yet been executed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -604,7 +624,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消定时推送任务</para>
+        /// <para>Cancels a scheduled push task that has not yet been executed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -622,7 +642,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消定时推送任务</para>
+        /// <para>Cancels a scheduled push task that has not yet been executed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -638,6 +658,19 @@ namespace AlibabaCloud.SDK.Push20160801
             return await CancelPushWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the expiration time and current status of the iOS certificate for a specified app.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</description></item>
+        /// <item><description>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckCertificateRequest
         /// </param>
@@ -675,6 +708,19 @@ namespace AlibabaCloud.SDK.Push20160801
             return TeaModel.ToObject<CheckCertificateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the expiration time and current status of the iOS certificate for a specified app.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</description></item>
+        /// <item><description>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckCertificateRequest
         /// </param>
@@ -712,6 +758,19 @@ namespace AlibabaCloud.SDK.Push20160801
             return TeaModel.ToObject<CheckCertificateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the expiration time and current status of the iOS certificate for a specified app.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</description></item>
+        /// <item><description>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckCertificateRequest
         /// </param>
@@ -725,6 +784,19 @@ namespace AlibabaCloud.SDK.Push20160801
             return CheckCertificateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks the expiration time and current status of the iOS certificate for a specified app.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If the returned ExpireTime value is later than the current timestamp, the certificate is not necessarily valid. Also verify that the Status is OK.</description></item>
+        /// <item><description>The REVOKED status originates from the Apple Push Notification service (APNs) server. If a certificate has a REVOKED status, at least one push notification to APNs has failed in the corresponding environment.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckCertificateRequest
         /// </param>
@@ -744,7 +816,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>【废弃】验证设备有效性</para>
+        /// <para>Validates the specified (device).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -796,7 +868,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>【废弃】验证设备有效性</para>
+        /// <para>Validates the specified (device).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -848,7 +920,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>【废弃】验证设备有效性</para>
+        /// <para>Validates the specified (device).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -872,7 +944,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>【废弃】验证设备有效性</para>
+        /// <para>Validates the specified (device).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -892,7 +964,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量检查设备有效性</para>
+        /// <para>Validate a specified group of devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -938,7 +1010,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量检查设备有效性</para>
+        /// <para>Validate a specified group of devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -984,7 +1056,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量检查设备有效性</para>
+        /// <para>Validate a specified group of devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1002,7 +1074,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量检查设备有效性</para>
+        /// <para>Validate a specified group of devices.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1020,8 +1092,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成持续推送任务</para>
+        /// <para>Manually ends a continuous push task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not call this operation, the continuous push task automatically ends when it reaches its time-to-live (TTL).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CompleteContinuouslyPushRequest
@@ -1066,8 +1143,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成持续推送任务</para>
+        /// <para>Manually ends a continuous push task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not call this operation, the continuous push task automatically ends when it reaches its time-to-live (TTL).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CompleteContinuouslyPushRequest
@@ -1112,8 +1194,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成持续推送任务</para>
+        /// <para>Manually ends a continuous push task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not call this operation, the continuous push task automatically ends when it reaches its time-to-live (TTL).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CompleteContinuouslyPushRequest
@@ -1130,8 +1217,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成持续推送任务</para>
+        /// <para>Manually ends a continuous push task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you do not call this operation, the continuous push task automatically ends when it reaches its time-to-live (TTL).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CompleteContinuouslyPushRequest
@@ -1148,8 +1240,19 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>持续推送</para>
+        /// <para>Executes a predefined continuous push task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</para>
+        /// <list type="bullet">
+        /// <item><description>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</description></item>
+        /// <item><description>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</description></item>
+        /// <item><description>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</description></item>
+        /// <item><description>Each call to this API sends the message immediately. Scheduled pushes are not supported.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ContinuouslyPushRequest
@@ -1202,8 +1305,19 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>持续推送</para>
+        /// <para>Executes a predefined continuous push task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</para>
+        /// <list type="bullet">
+        /// <item><description>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</description></item>
+        /// <item><description>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</description></item>
+        /// <item><description>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</description></item>
+        /// <item><description>Each call to this API sends the message immediately. Scheduled pushes are not supported.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ContinuouslyPushRequest
@@ -1256,8 +1370,19 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>持续推送</para>
+        /// <para>Executes a predefined continuous push task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</para>
+        /// <list type="bullet">
+        /// <item><description>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</description></item>
+        /// <item><description>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</description></item>
+        /// <item><description>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</description></item>
+        /// <item><description>Each call to this API sends the message immediately. Scheduled pushes are not supported.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ContinuouslyPushRequest
@@ -1274,8 +1399,19 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>持续推送</para>
+        /// <para>Executes a predefined continuous push task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API addresses the limitations of the <a href="https://help.aliyun.com/document_detail/2249916.html">Push Advanced Push API</a>, where push-by-device, push-by-account, and push-by-alias operations each have a maximum target count per single call.</para>
+        /// <list type="bullet">
+        /// <item><description>You can use continuous push when your scenario requires sending the same message to many devices. In this case, you can call the continuous push API repeatedly, each time specifying a group of targets for aggregation (the current limit is 1,000 targets per call for device, account, or alias pushes). The total number of pushes for the same MessageId is restricted to 10,000. If you need a higher limit, contact technical support to evaluate your specific scenario.</description></item>
+        /// <item><description>Before using this API, you must first call the Push API with Target set to TBD (To Be Determined) and include your message content. This returns a MessageId from the push system. You can then use this MessageId to repeatedly call the continuous push API, specifying different target groups to deliver the same message.</description></item>
+        /// <item><description>After calling the Push API with Target set to TBD and obtaining a MessageId, the message is stored in the push system for 24 hours by default. You can use this API to push to specified targets at any time before expiration. Pushes are not allowed after expiration or after reaching the total push limit.</description></item>
+        /// <item><description>Each call to this API sends the message immediately. Scheduled pushes are not supported.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ContinuouslyPushRequest
@@ -1296,7 +1432,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>【废弃】查询用户已创建的app列表</para>
+        /// <para>Retrieve the list of all applications associated with your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -1332,7 +1468,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>【废弃】查询用户已创建的app列表</para>
+        /// <para>Retrieve the list of all applications associated with your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -1368,7 +1504,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>【废弃】查询用户已创建的app列表</para>
+        /// <para>Retrieve the list of all applications associated with your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1388,7 +1524,7 @@ namespace AlibabaCloud.SDK.Push20160801
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>【废弃】查询用户已创建的app列表</para>
+        /// <para>Retrieve the list of all applications associated with your Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1404,7 +1540,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标签列表</para>
+        /// <para>Queries the tags of an app. A maximum of 100 records are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1446,7 +1582,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标签列表</para>
+        /// <para>Queries the tags of an app. A maximum of 100 records are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1488,7 +1624,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标签列表</para>
+        /// <para>Queries the tags of an app. A maximum of 100 records are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1506,7 +1642,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取标签列表</para>
+        /// <para>Queries the tags of an app. A maximum of 100 records are returned.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1524,8 +1660,36 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量推送</para>
+        /// <para>Sends different messages or notifications to multiple devices in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// Some business scenarios require you to send many different messages to many devices in a short period. This can generate a high number of Queries Per Second (QPS) and cause requests to exceed the QPS limit for a single source IP address, resulting in push failures.
+        /// This API is designed to solve this issue. You can include up to 100 independent push tasks in a single call. This request aggregation reduces the QPS and improves the stability and success rate of individual pushes. A single account is limited to 500 batch push calls per second.
+        /// Each independent push task supports pushes to devices, accounts, or aliases. SMS integration is not supported.</para>
+        /// <remarks>
+        /// <para>You must upgrade the SDK to version 3.11.0 or later.</para>
+        /// </remarks>
+        /// <h2>PushTask properties</h2>
+        /// <list type="bullet">
+        /// <item><description>The format for PushTask properties is PushTask.N.Property. These properties include the following:<list type="bullet">
+        /// <item><description>Push target (destination)</description></item>
+        /// <item><description>Push configuration (config)</description></item>
+        /// <item><description>iOS notification task configuration</description></item>
+        /// <item><description>Android notification task configuration</description></item>
+        /// <item><description>Android auxiliary pop-up configuration</description></item>
+        /// <item><description>HarmonyOS notification task configuration</description></item>
+        /// <item><description>Push control</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Each PushTask represents an independent push task. A maximum of 100 tasks are supported per call. The push configurations are the same as those for the Push API.</description></item>
+        /// <item><description>The PushTask.N.Target parameter supports only the DEVICE, ACCOUNT, and ALIAS types.</description></item>
+        /// <item><description>PushTask does not support SMS filter interaction.</description></item>
+        /// <item><description>The product of the parent node and child nodes cannot exceed 10,000. If this limit is exceeded, the parameters are considered invalid.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MassPushRequest
@@ -1576,8 +1740,36 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量推送</para>
+        /// <para>Sends different messages or notifications to multiple devices in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// Some business scenarios require you to send many different messages to many devices in a short period. This can generate a high number of Queries Per Second (QPS) and cause requests to exceed the QPS limit for a single source IP address, resulting in push failures.
+        /// This API is designed to solve this issue. You can include up to 100 independent push tasks in a single call. This request aggregation reduces the QPS and improves the stability and success rate of individual pushes. A single account is limited to 500 batch push calls per second.
+        /// Each independent push task supports pushes to devices, accounts, or aliases. SMS integration is not supported.</para>
+        /// <remarks>
+        /// <para>You must upgrade the SDK to version 3.11.0 or later.</para>
+        /// </remarks>
+        /// <h2>PushTask properties</h2>
+        /// <list type="bullet">
+        /// <item><description>The format for PushTask properties is PushTask.N.Property. These properties include the following:<list type="bullet">
+        /// <item><description>Push target (destination)</description></item>
+        /// <item><description>Push configuration (config)</description></item>
+        /// <item><description>iOS notification task configuration</description></item>
+        /// <item><description>Android notification task configuration</description></item>
+        /// <item><description>Android auxiliary pop-up configuration</description></item>
+        /// <item><description>HarmonyOS notification task configuration</description></item>
+        /// <item><description>Push control</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Each PushTask represents an independent push task. A maximum of 100 tasks are supported per call. The push configurations are the same as those for the Push API.</description></item>
+        /// <item><description>The PushTask.N.Target parameter supports only the DEVICE, ACCOUNT, and ALIAS types.</description></item>
+        /// <item><description>PushTask does not support SMS filter interaction.</description></item>
+        /// <item><description>The product of the parent node and child nodes cannot exceed 10,000. If this limit is exceeded, the parameters are considered invalid.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MassPushRequest
@@ -1628,8 +1820,36 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量推送</para>
+        /// <para>Sends different messages or notifications to multiple devices in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// Some business scenarios require you to send many different messages to many devices in a short period. This can generate a high number of Queries Per Second (QPS) and cause requests to exceed the QPS limit for a single source IP address, resulting in push failures.
+        /// This API is designed to solve this issue. You can include up to 100 independent push tasks in a single call. This request aggregation reduces the QPS and improves the stability and success rate of individual pushes. A single account is limited to 500 batch push calls per second.
+        /// Each independent push task supports pushes to devices, accounts, or aliases. SMS integration is not supported.</para>
+        /// <remarks>
+        /// <para>You must upgrade the SDK to version 3.11.0 or later.</para>
+        /// </remarks>
+        /// <h2>PushTask properties</h2>
+        /// <list type="bullet">
+        /// <item><description>The format for PushTask properties is PushTask.N.Property. These properties include the following:<list type="bullet">
+        /// <item><description>Push target (destination)</description></item>
+        /// <item><description>Push configuration (config)</description></item>
+        /// <item><description>iOS notification task configuration</description></item>
+        /// <item><description>Android notification task configuration</description></item>
+        /// <item><description>Android auxiliary pop-up configuration</description></item>
+        /// <item><description>HarmonyOS notification task configuration</description></item>
+        /// <item><description>Push control</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Each PushTask represents an independent push task. A maximum of 100 tasks are supported per call. The push configurations are the same as those for the Push API.</description></item>
+        /// <item><description>The PushTask.N.Target parameter supports only the DEVICE, ACCOUNT, and ALIAS types.</description></item>
+        /// <item><description>PushTask does not support SMS filter interaction.</description></item>
+        /// <item><description>The product of the parent node and child nodes cannot exceed 10,000. If this limit is exceeded, the parameters are considered invalid.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MassPushRequest
@@ -1646,8 +1866,36 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量推送</para>
+        /// <para>Sends different messages or notifications to multiple devices in batches.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this API, make sure that you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// Some business scenarios require you to send many different messages to many devices in a short period. This can generate a high number of Queries Per Second (QPS) and cause requests to exceed the QPS limit for a single source IP address, resulting in push failures.
+        /// This API is designed to solve this issue. You can include up to 100 independent push tasks in a single call. This request aggregation reduces the QPS and improves the stability and success rate of individual pushes. A single account is limited to 500 batch push calls per second.
+        /// Each independent push task supports pushes to devices, accounts, or aliases. SMS integration is not supported.</para>
+        /// <remarks>
+        /// <para>You must upgrade the SDK to version 3.11.0 or later.</para>
+        /// </remarks>
+        /// <h2>PushTask properties</h2>
+        /// <list type="bullet">
+        /// <item><description>The format for PushTask properties is PushTask.N.Property. These properties include the following:<list type="bullet">
+        /// <item><description>Push target (destination)</description></item>
+        /// <item><description>Push configuration (config)</description></item>
+        /// <item><description>iOS notification task configuration</description></item>
+        /// <item><description>Android notification task configuration</description></item>
+        /// <item><description>Android auxiliary pop-up configuration</description></item>
+        /// <item><description>HarmonyOS notification task configuration</description></item>
+        /// <item><description>Push control</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>Each PushTask represents an independent push task. A maximum of 100 tasks are supported per call. The push configurations are the same as those for the Push API.</description></item>
+        /// <item><description>The PushTask.N.Target parameter supports only the DEVICE, ACCOUNT, and ALIAS types.</description></item>
+        /// <item><description>PushTask does not support SMS filter interaction.</description></item>
+        /// <item><description>The product of the parent node and child nodes cannot exceed 10,000. If this limit is exceeded, the parameters are considered invalid.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// MassPushRequest
@@ -1664,8 +1912,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版高级推送接口</para>
+        /// <para>Advanced push API v2.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing details</a> for EMAS Mobile Push.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// MassPushV2Request
@@ -1720,8 +1973,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版高级推送接口</para>
+        /// <para>Advanced push API v2.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing details</a> for EMAS Mobile Push.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// MassPushV2Request
@@ -1776,8 +2034,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版高级推送接口</para>
+        /// <para>Advanced push API v2.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing details</a> for EMAS Mobile Push.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MassPushV2Request
@@ -1794,8 +2057,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版高级推送接口</para>
+        /// <para>Advanced push API v2.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing details</a> for EMAS Mobile Push.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// MassPushV2Request
@@ -1812,8 +2080,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级推送接口</para>
+        /// <para>This advanced push API sends notifications or messages to various devices. It provides a rich set of custom parameters to implement push behaviors for various scenarios.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// This API supports pushes to Android, iOS, and HarmonyOS devices. For each platform, you must provide the corresponding AppKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// PushRequest
@@ -2066,6 +2340,14 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiImageUrl))
             {
                 query["AndroidXiaomiImageUrl"] = request.AndroidXiaomiImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiTemplateId))
+            {
+                query["AndroidXiaomiTemplateId"] = request.AndroidXiaomiTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiTemplateParams))
+            {
+                query["AndroidXiaomiTemplateParams"] = request.AndroidXiaomiTemplateParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
             {
@@ -2336,8 +2618,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级推送接口</para>
+        /// <para>This advanced push API sends notifications or messages to various devices. It provides a rich set of custom parameters to implement push behaviors for various scenarios.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// This API supports pushes to Android, iOS, and HarmonyOS devices. For each platform, you must provide the corresponding AppKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// PushRequest
@@ -2590,6 +2878,14 @@ namespace AlibabaCloud.SDK.Push20160801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiImageUrl))
             {
                 query["AndroidXiaomiImageUrl"] = request.AndroidXiaomiImageUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiTemplateId))
+            {
+                query["AndroidXiaomiTemplateId"] = request.AndroidXiaomiTemplateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AndroidXiaomiTemplateParams))
+            {
+                query["AndroidXiaomiTemplateParams"] = request.AndroidXiaomiTemplateParams;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppKey))
             {
@@ -2860,8 +3156,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级推送接口</para>
+        /// <para>This advanced push API sends notifications or messages to various devices. It provides a rich set of custom parameters to implement push behaviors for various scenarios.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// This API supports pushes to Android, iOS, and HarmonyOS devices. For each platform, you must provide the corresponding AppKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushRequest
@@ -2878,8 +3180,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高级推送接口</para>
+        /// <para>This advanced push API sends notifications or messages to various devices. It provides a rich set of custom parameters to implement push behaviors for various scenarios.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before you use this API, make sure you understand the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> of EMAS Mobile Push.</em>*
+        /// This API supports pushes to Android, iOS, and HarmonyOS devices. For each platform, you must provide the corresponding AppKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushRequest
@@ -2896,8 +3204,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送消息给Android设备</para>
+        /// <para>Sends a message to an Android device through the Alibaba Cloud Mobile Push proprietary channel. After the app on the device receives the message, it must handle subsequent actions, such as implementing business logic or displaying a local notification.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation will be deprecated soon. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a>, which provides enhanced push capabilities. To achieve the same result, set the <c>DeviceType</c> parameter to <c>ANDROID</c> and the <c>PushType</c> parameter to <c>MESSAGE</c> in the advanced push API.</em>*
+        /// <b>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</b>
+        /// By default, this operation sends messages only to online devices. If a device is offline, set the <c>StoreOffline</c> parameter. The push system then stores the message and delivers it automatically when the device comes online.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMessageToAndroidRequest
@@ -2962,8 +3277,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送消息给Android设备</para>
+        /// <para>Sends a message to an Android device through the Alibaba Cloud Mobile Push proprietary channel. After the app on the device receives the message, it must handle subsequent actions, such as implementing business logic or displaying a local notification.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation will be deprecated soon. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a>, which provides enhanced push capabilities. To achieve the same result, set the <c>DeviceType</c> parameter to <c>ANDROID</c> and the <c>PushType</c> parameter to <c>MESSAGE</c> in the advanced push API.</em>*
+        /// <b>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</b>
+        /// By default, this operation sends messages only to online devices. If a device is offline, set the <c>StoreOffline</c> parameter. The push system then stores the message and delivers it automatically when the device comes online.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMessageToAndroidRequest
@@ -3028,8 +3350,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送消息给Android设备</para>
+        /// <para>Sends a message to an Android device through the Alibaba Cloud Mobile Push proprietary channel. After the app on the device receives the message, it must handle subsequent actions, such as implementing business logic or displaying a local notification.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation will be deprecated soon. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a>, which provides enhanced push capabilities. To achieve the same result, set the <c>DeviceType</c> parameter to <c>ANDROID</c> and the <c>PushType</c> parameter to <c>MESSAGE</c> in the advanced push API.</em>*
+        /// <b>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</b>
+        /// By default, this operation sends messages only to online devices. If a device is offline, set the <c>StoreOffline</c> parameter. The push system then stores the message and delivers it automatically when the device comes online.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMessageToAndroidRequest
@@ -3046,8 +3375,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送消息给Android设备</para>
+        /// <para>Sends a message to an Android device through the Alibaba Cloud Mobile Push proprietary channel. After the app on the device receives the message, it must handle subsequent actions, such as implementing business logic or displaying a local notification.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation will be deprecated soon. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a>, which provides enhanced push capabilities. To achieve the same result, set the <c>DeviceType</c> parameter to <c>ANDROID</c> and the <c>PushType</c> parameter to <c>MESSAGE</c> in the advanced push API.</em>*
+        /// <b>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</b>
+        /// By default, this operation sends messages only to online devices. If a device is offline, set the <c>StoreOffline</c> parameter. The push system then stores the message and delivers it automatically when the device comes online.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMessageToAndroidRequest
@@ -3064,8 +3400,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送消息给iOS设备</para>
+        /// <para>Pushes messages to iOS devices. These messages are delivered through the proprietary channel of Alibaba Cloud Mobile Push. After the app on a device receives a message, it must handle subsequent actions, such as implementing business behaviors or creating local notifications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This API is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a> for more push capabilities. In that API, set the push platform <c>DeviceType</c> to <c>iOS</c> and the push type <c>PushType</c> to <c>MESSAGE</c> to achieve the same effect.</em>*
+        /// <b>Before you use this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</b>
+        /// By default, this API sends messages only to online devices. If a device is offline, you can set the <c>StoreOffline</c> parameter. The push system then saves the message and automatically delivers it when the device comes back online.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMessageToiOSRequest
@@ -3130,8 +3473,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送消息给iOS设备</para>
+        /// <para>Pushes messages to iOS devices. These messages are delivered through the proprietary channel of Alibaba Cloud Mobile Push. After the app on a device receives a message, it must handle subsequent actions, such as implementing business behaviors or creating local notifications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This API is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a> for more push capabilities. In that API, set the push platform <c>DeviceType</c> to <c>iOS</c> and the push type <c>PushType</c> to <c>MESSAGE</c> to achieve the same effect.</em>*
+        /// <b>Before you use this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</b>
+        /// By default, this API sends messages only to online devices. If a device is offline, you can set the <c>StoreOffline</c> parameter. The push system then saves the message and automatically delivers it when the device comes back online.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMessageToiOSRequest
@@ -3196,8 +3546,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送消息给iOS设备</para>
+        /// <para>Pushes messages to iOS devices. These messages are delivered through the proprietary channel of Alibaba Cloud Mobile Push. After the app on a device receives a message, it must handle subsequent actions, such as implementing business behaviors or creating local notifications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This API is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a> for more push capabilities. In that API, set the push platform <c>DeviceType</c> to <c>iOS</c> and the push type <c>PushType</c> to <c>MESSAGE</c> to achieve the same effect.</em>*
+        /// <b>Before you use this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</b>
+        /// By default, this API sends messages only to online devices. If a device is offline, you can set the <c>StoreOffline</c> parameter. The push system then saves the message and automatically delivers it when the device comes back online.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMessageToiOSRequest
@@ -3214,8 +3571,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送消息给iOS设备</para>
+        /// <para>Pushes messages to iOS devices. These messages are delivered through the proprietary channel of Alibaba Cloud Mobile Push. After the app on a device receives a message, it must handle subsequent actions, such as implementing business behaviors or creating local notifications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This API is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">advanced push API</a> for more push capabilities. In that API, set the push platform <c>DeviceType</c> to <c>iOS</c> and the push type <c>PushType</c> to <c>MESSAGE</c> to achieve the same effect.</em>*
+        /// <b>Before you use this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">billing methods and pricing</a> for EMAS Mobile Push.</b>
+        /// By default, this API sends messages only to online devices. If a device is offline, you can set the <c>StoreOffline</c> parameter. The push system then saves the message and automatically delivers it when the device comes back online.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMessageToiOSRequest
@@ -3232,8 +3596,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送通知给Android设备</para>
+        /// <para>Sends a notification to Android devices. The notification appears directly in the device’s notification tray and may be delivered through Alibaba Cloud’s proprietary channel or the device manufacturer’s channel, depending on the scenario.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. In that API, set the <c>DeviceType</c> parameter to <c>ANDROID</c> and the <c>PushType</c> parameter to <c>NOTICE</c>.</em>*
+        /// <b>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushNoticeToAndroidRequest
@@ -3302,8 +3672,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送通知给Android设备</para>
+        /// <para>Sends a notification to Android devices. The notification appears directly in the device’s notification tray and may be delivered through Alibaba Cloud’s proprietary channel or the device manufacturer’s channel, depending on the scenario.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. In that API, set the <c>DeviceType</c> parameter to <c>ANDROID</c> and the <c>PushType</c> parameter to <c>NOTICE</c>.</em>*
+        /// <b>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushNoticeToAndroidRequest
@@ -3372,8 +3748,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送通知给Android设备</para>
+        /// <para>Sends a notification to Android devices. The notification appears directly in the device’s notification tray and may be delivered through Alibaba Cloud’s proprietary channel or the device manufacturer’s channel, depending on the scenario.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. In that API, set the <c>DeviceType</c> parameter to <c>ANDROID</c> and the <c>PushType</c> parameter to <c>NOTICE</c>.</em>*
+        /// <b>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushNoticeToAndroidRequest
@@ -3390,8 +3772,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送通知给Android设备</para>
+        /// <para>Sends a notification to Android devices. The notification appears directly in the device’s notification tray and may be delivered through Alibaba Cloud’s proprietary channel or the device manufacturer’s channel, depending on the scenario.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. In that API, set the <c>DeviceType</c> parameter to <c>ANDROID</c> and the <c>PushType</c> parameter to <c>NOTICE</c>.</em>*
+        /// <b>Before using this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushNoticeToAndroidRequest
@@ -3408,8 +3796,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送通知给iOS设备</para>
+        /// <para>Send a notification to iOS devices. The notification uses Apple’s APNs channel and appears directly in the device notification center.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. Set the <c>DeviceType</c> parameter to <c>iOS</c> and the <c>PushType</c> parameter to <c>NOTICE</c>.</em>*
+        /// <b>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushNoticeToiOSRequest
@@ -3478,8 +3872,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送通知给iOS设备</para>
+        /// <para>Send a notification to iOS devices. The notification uses Apple’s APNs channel and appears directly in the device notification center.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. Set the <c>DeviceType</c> parameter to <c>iOS</c> and the <c>PushType</c> parameter to <c>NOTICE</c>.</em>*
+        /// <b>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushNoticeToiOSRequest
@@ -3548,8 +3948,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送通知给iOS设备</para>
+        /// <para>Send a notification to iOS devices. The notification uses Apple’s APNs channel and appears directly in the device notification center.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. Set the <c>DeviceType</c> parameter to <c>iOS</c> and the <c>PushType</c> parameter to <c>NOTICE</c>.</em>*
+        /// <b>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushNoticeToiOSRequest
@@ -3566,8 +3972,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送通知给iOS设备</para>
+        /// <para>Send a notification to iOS devices. The notification uses Apple’s APNs channel and appears directly in the device notification center.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>This operation is deprecated. Use the <a href="https://help.aliyun.com/document_detail/2249916.html">Advanced Push API</a> instead. Set the <c>DeviceType</c> parameter to <c>iOS</c> and the <c>PushType</c> parameter to <c>NOTICE</c>.</em>*
+        /// <b>Before you use this operation, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing model</a> for EMAS Mobile Push.</b></para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushNoticeToiOSRequest
@@ -3584,8 +3996,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版高级推送接口</para>
+        /// <para>This is the advanced push API v2.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing methods</a> for EMAS Mobile Push.</em>*
+        /// This API supports Android, iOS, and HarmonyOS. For each platform, pass its assigned AppKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// PushV2Request
@@ -3640,8 +4058,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版高级推送接口</para>
+        /// <para>This is the advanced push API v2.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing methods</a> for EMAS Mobile Push.</em>*
+        /// This API supports Android, iOS, and HarmonyOS. For each platform, pass its assigned AppKey.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// PushV2Request
@@ -3696,8 +4120,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版高级推送接口</para>
+        /// <para>This is the advanced push API v2.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing methods</a> for EMAS Mobile Push.</em>*
+        /// This API supports Android, iOS, and HarmonyOS. For each platform, pass its assigned AppKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushV2Request
@@ -3714,8 +4144,14 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新版高级推送接口</para>
+        /// <para>This is the advanced push API v2.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before using this API, review the <a href="https://help.aliyun.com/document_detail/434638.html">pricing and billing methods</a> for EMAS Mobile Push.</em>*
+        /// This API supports Android, iOS, and HarmonyOS. For each platform, pass its assigned AppKey.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushV2Request
@@ -3732,7 +4168,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询别名</para>
+        /// <para>Query the list of aliases attached to a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3778,7 +4214,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询别名</para>
+        /// <para>Query the list of aliases attached to a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3824,7 +4260,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询别名</para>
+        /// <para>Query the list of aliases attached to a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3842,7 +4278,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询别名</para>
+        /// <para>Query the list of aliases attached to a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3860,7 +4296,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备详情</para>
+        /// <para>Query details of a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3906,7 +4342,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备详情</para>
+        /// <para>Query details of a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3952,7 +4388,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备详情</para>
+        /// <para>Query details of a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3970,7 +4406,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询设备详情</para>
+        /// <para>Query details of a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3988,8 +4424,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设备新增与留存</para>
+        /// <para>Queries device statistics by application dimension.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, this API supports only daily data. The daily dimension lets you query data for up to 31 days. Days are calculated based on UTC+8.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryDeviceStatRequest
@@ -4046,8 +4489,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设备新增与留存</para>
+        /// <para>Queries device statistics by application dimension.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, this API supports only daily data. The daily dimension lets you query data for up to 31 days. Days are calculated based on UTC+8.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryDeviceStatRequest
@@ -4104,8 +4554,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设备新增与留存</para>
+        /// <para>Queries device statistics by application dimension.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, this API supports only daily data. The daily dimension lets you query data for up to 31 days. Days are calculated based on UTC+8.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryDeviceStatRequest
@@ -4122,8 +4579,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设备新增与留存</para>
+        /// <para>Queries device statistics by application dimension.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, this API supports only daily data. The daily dimension lets you query data for up to 31 days. Days are calculated based on UTC+8.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryDeviceStatRequest
@@ -4140,7 +4604,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过账户查询设备列表</para>
+        /// <para>Retrieve the list of devices associated with an account using the account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4186,7 +4650,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过账户查询设备列表</para>
+        /// <para>Retrieve the list of devices associated with an account using the account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4232,7 +4696,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过账户查询设备列表</para>
+        /// <para>Retrieve the list of devices associated with an account using the account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4250,7 +4714,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过账户查询设备列表</para>
+        /// <para>Retrieve the list of devices associated with an account using the account name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4268,7 +4732,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过别名查询设备列表</para>
+        /// <para>Query the list of devices by alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4314,7 +4778,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过别名查询设备列表</para>
+        /// <para>Query the list of devices by alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4360,7 +4824,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过别名查询设备列表</para>
+        /// <para>Query the list of devices by alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4378,7 +4842,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过别名查询设备列表</para>
+        /// <para>Query the list of devices by alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4396,7 +4860,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取推送历史记录</para>
+        /// <para>You can query push records with pagination and basic filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4474,7 +4938,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取推送历史记录</para>
+        /// <para>You can query push records with pagination and basic filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4552,7 +5016,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取推送历史记录</para>
+        /// <para>You can query push records with pagination and basic filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4570,7 +5034,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取推送历史记录</para>
+        /// <para>You can query push records with pagination and basic filtering.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4588,7 +5052,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>App维度推送统计</para>
+        /// <para>Query push statistics for an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4642,7 +5106,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>App维度推送统计</para>
+        /// <para>Query push statistics for an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4696,7 +5160,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>App维度推送统计</para>
+        /// <para>Query push statistics for an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4714,7 +5178,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>App维度推送统计</para>
+        /// <para>Query push statistics for an app.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4732,7 +5196,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务维度推送统计</para>
+        /// <para>Queries push statistics for a message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4778,7 +5242,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务维度推送统计</para>
+        /// <para>Queries push statistics for a message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4824,7 +5288,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务维度推送统计</para>
+        /// <para>Queries push statistics for a message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4842,7 +5306,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务维度推送统计</para>
+        /// <para>Queries push statistics for a message.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4860,7 +5324,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签列表</para>
+        /// <para>Queries tags for a specified object, such as a device, account, or alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4910,7 +5374,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签列表</para>
+        /// <para>Queries tags for a specified object, such as a device, account, or alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4960,7 +5424,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签列表</para>
+        /// <para>Queries tags for a specified object, such as a device, account, or alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4978,7 +5442,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标签列表</para>
+        /// <para>Queries tags for a specified object, such as a device, account, or alias.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4996,8 +5460,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>去重设备统计</para>
+        /// <para>Obtain deduplicated device statistics for an app.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation returns data only at the daily granularity. You can query up to 31 days of data. Deduplicated device counts reset on the first day of each month.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryUniqueDeviceStatRequest
@@ -5050,8 +5521,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>去重设备统计</para>
+        /// <para>Obtain deduplicated device statistics for an app.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation returns data only at the daily granularity. You can query up to 31 days of data. Deduplicated device counts reset on the first day of each month.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryUniqueDeviceStatRequest
@@ -5104,8 +5582,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>去重设备统计</para>
+        /// <para>Obtain deduplicated device statistics for an app.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation returns data only at the daily granularity. You can query up to 31 days of data. Deduplicated device counts reset on the first day of each month.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryUniqueDeviceStatRequest
@@ -5122,8 +5607,15 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>去重设备统计</para>
+        /// <para>Obtain deduplicated device statistics for an app.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>This operation returns data only at the daily granularity. You can query up to 31 days of data. Deduplicated device counts reset on the first day of each month.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryUniqueDeviceStatRequest
@@ -5140,8 +5632,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Removes a tag from an app.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a tag takes time. The time required depends on the number of tagged resources. Do not immediately recreate a tag with the same name after you delete it. Wait at least 5 minutes before you recreate a tag in the same app. If you delete multiple tags, wait at least 5 minutes for each deleted tag before you recreate them.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveTagRequest
@@ -5186,8 +5683,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Removes a tag from an app.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a tag takes time. The time required depends on the number of tagged resources. Do not immediately recreate a tag with the same name after you delete it. Wait at least 5 minutes before you recreate a tag in the same app. If you delete multiple tags, wait at least 5 minutes for each deleted tag before you recreate them.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveTagRequest
@@ -5232,8 +5734,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Removes a tag from an app.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a tag takes time. The time required depends on the number of tagged resources. Do not immediately recreate a tag with the same name after you delete it. Wait at least 5 minutes before you recreate a tag in the same app. If you delete multiple tags, wait at least 5 minutes for each deleted tag before you recreate them.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveTagRequest
@@ -5250,8 +5757,13 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除标签</para>
+        /// <para>Removes a tag from an app.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deleting a tag takes time. The time required depends on the number of tagged resources. Do not immediately recreate a tag with the same name after you delete it. Wait at least 5 minutes before you recreate a tag in the same app. If you delete multiple tags, wait at least 5 minutes for each deleted tag before you recreate them.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveTagRequest
@@ -5268,7 +5780,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑别名</para>
+        /// <para>Unbinds an alias. The change takes effect immediately.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5322,7 +5834,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑别名</para>
+        /// <para>Unbinds an alias. The change takes effect immediately.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5376,7 +5888,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑别名</para>
+        /// <para>Unbinds an alias. The change takes effect immediately.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5394,7 +5906,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑别名</para>
+        /// <para>Unbinds an alias. The change takes effect immediately.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5412,7 +5924,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑手机号码</para>
+        /// <para>Unbind the mobile phone number from a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5458,7 +5970,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑手机号码</para>
+        /// <para>Unbind the mobile phone number from a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5504,7 +6016,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑手机号码</para>
+        /// <para>Unbind the mobile phone number from a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5522,7 +6034,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑手机号码</para>
+        /// <para>Unbind the mobile phone number from a specified device.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5540,7 +6052,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定标签</para>
+        /// <para>Unbinds one or more tags from a specified target.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5594,7 +6106,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定标签</para>
+        /// <para>Unbinds one or more tags from a specified target.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5648,7 +6160,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定标签</para>
+        /// <para>Unbinds one or more tags from a specified target.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5666,7 +6178,7 @@ namespace AlibabaCloud.SDK.Push20160801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定标签</para>
+        /// <para>Unbinds one or more tags from a specified target.</para>
         /// </summary>
         /// 
         /// <param name="request">

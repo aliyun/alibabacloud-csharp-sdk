@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class ListTagsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6EEF262B-EA7D-41DC-89B9-20F3D1E28194</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryPushRecordsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Deprecated. This parameter is no longer used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i91D***********kXIh/dVBEQ==</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -86,6 +92,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9B24B396-249D-55E4-8CA1-66C9B50BB734</para>
         /// </summary>
@@ -94,6 +102,8 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>193</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class UnbindTagRequest : TeaModel {
         /// <summary>
+        /// <para>The AppKey of your application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The ID of the device.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string ClientKey { get; set; }
 
         /// <summary>
+        /// <para>The type of the ClientKey. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DEVICE</b>: The key is a device ID.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +46,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string KeyType { get; set; }
 
         /// <summary>
+        /// <para>Specifies the tag to unbind. To unbind multiple tags, separate them with commas. A maximum of 10 tags, each up to 128 characters long, can be unbound per request. The system supports a total of 10,000 tags.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

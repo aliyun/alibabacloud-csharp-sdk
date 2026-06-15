@@ -10,16 +10,20 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class CompleteContinuouslyPushResponseBody : TeaModel {
         /// <summary>
+        /// <para>The message ID for the push request.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>4010290149170430</para>
+        /// <para>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</para>
         /// </summary>
         [NameInMap("MessageId")]
         [Validation(Required=false)]
         public string MessageId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>9998B3CC-ED9E-4CB3-A8FB-DCC61296BFBC</para>
+        /// <para>500131</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryPushStatByAppRequest : TeaModel {
         /// <summary>
+        /// <para>The AppKey value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query. Specify the time in ISO 8601 format, YYYY-MM-DDThh:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The data granularity of the response. You can only query data for up to 31 days at daily granularity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DAY</b>: Query data at daily granularity.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +46,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string Granularity { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query. Specify the time in ISO 8601 format, YYYY-MM-DDThh:mm:ssZ.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

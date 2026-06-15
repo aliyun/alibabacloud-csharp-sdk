@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class CancelPushRequest : TeaModel {
         /// <summary>
+        /// <para>Your AppKey.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The message ID of the push task to cancel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

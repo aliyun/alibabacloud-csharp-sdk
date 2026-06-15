@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class BindPhoneRequest : TeaModel {
         /// <summary>
+        /// <para>AppKey information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The unique identity of the device, 32-bit, a combination of numbers and lowercase letters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public string DeviceId { get; set; }
 
         /// <summary>
+        /// <para>Phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class RemoveTagRequest : TeaModel {
         /// <summary>
+        /// <para>The AppKey value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The name of the tag to remove. You can remove only one tag at a time. Maximum length: 128 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

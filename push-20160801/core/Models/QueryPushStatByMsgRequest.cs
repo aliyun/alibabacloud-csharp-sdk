@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Push20160801.Models
 {
     public class QueryPushStatByMsgRequest : TeaModel {
         /// <summary>
+        /// <para>The AppKey.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.Push20160801.Models
         public long? AppKey { get; set; }
 
         /// <summary>
+        /// <para>The ID of the pushed message. This ID is returned after a message is pushed.</para>
+        /// <remarks>
+        /// <para>Push data is available the next day. You cannot query data for the current day.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
