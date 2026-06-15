@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ListModelFeatureAvailableFeaturesRequest : TeaModel {
         /// <summary>
+        /// <para>Filter by feature name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f1</para>
         /// </summary>

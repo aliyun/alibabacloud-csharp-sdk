@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetModelFeatureResponseBody : TeaModel {
         /// <summary>
+        /// <para>The script for exporting the training sample table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>from feature_store_py.fs_client import FeatureStoreClient\nfrom feature_store_py.fs_project import FeatureStoreProject\nfrom feature_store_py.fs_datasource import LabelInput, MaxComputeDataSource, TrainingSetOutput\nfrom feature_store_py.fs_features import FeatureSelector\nfrom feature_store_py.fs_config import LabelInputConfig, PartitionConfig, FeatureViewConfig\nfrom feature_store_py.fs_config import TrainSetOutputConfig, EASDeployConfig\nimport datetime\nimport sys\n\ncur_day = args[\&quot;dt\&quot;]\nprint(\&quot;cur_day = \&quot;, cur_day)\noffset = datetime.timedelta(days=-1)\npre_day = (datetime.datetime.strptime(cur_day, \&quot;%Y%m%d\&quot;) + offset).strftime(\&quot;%Y%m%d\&quot;)\nprint(\&quot;pre_day = \&quot;, pre_day)\n\n\naccess_key_id = o.account.access_id\naccess_key_secret = o.account.secret_access_key\nfs = FeatureStoreClient(access_key_id=access_key_id, access_key_secret=access_key_secret, region=\&quot;cn-beijing\&quot;)\ncur_project_name = \&quot;p1\&quot;\nproject = fs.get_project(cur_project_name)\n\nlabel_partitions = PartitionConfig(name = \&quot;ds\&quot;, value = cur_day)\nlabel_input_config = LabelInputConfig(partition_config=label_partitions)\n\nfeature_view_1_partitions = PartitionConfig(name = \&quot;ds\&quot;, value = pre_day)\nfeature_view_1_config = FeatureViewConfig(name = \&quot;user_fea\&quot;,\npartition_config=feature_view_1_partitions)\n\nfeature_view_2_partitions = PartitionConfig(name = \&quot;ds\&quot;, value = pre_day)\nfeature_view_2_config = FeatureViewConfig(name = \&quot;seq_fea\&quot;,\npartition_config=feature_view_2_partitions)\n\nfeature_view_3_partitions = PartitionConfig(name = \&quot;ds\&quot;, value = pre_day)\nfeature_view_3_config = FeatureViewConfig(name = \&quot;item_fea\&quot;,\npartition_config=feature_view_3_partitions)\n\nfeature_view_config_list = [feature_view_1_config,feature_view_2_config,feature_view_3_config]\ntrain_set_partitions = PartitionConfig(name = \&quot;ds\&quot;, value = cur_day)\ntrain_set_output_config = TrainSetOutputConfig(partition_config=train_set_partitions)\n\n\nmodel_name = \&quot;rank_v1\&quot;\ncur_model = project.get_model(model_name)\ntask = cur_model.export_train_set(label_input_config, feature_view_config_list, train_set_output_config)\ntask.wait()\nprint(\&quot;task_summary = \&quot;, task.task_summary)\n</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string ExportTrainingSetTableScript { get; set; }
 
+        /// <summary>
+        /// <para>The feature list.</para>
+        /// </summary>
         [NameInMap("Features")]
         [Validation(Required=false)]
         public List<GetModelFeatureResponseBodyFeatures> Features { get; set; }
         public class GetModelFeatureResponseBodyFeatures : TeaModel {
             /// <summary>
+            /// <para>The feature alias.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>feature2</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string AliasName { get; set; }
 
             /// <summary>
+            /// <para>The feature view ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureViewId { get; set; }
 
             /// <summary>
+            /// <para>The feature view name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>feature_view_1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureViewName { get; set; }
 
             /// <summary>
+            /// <para>The feature name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>feature1</para>
             /// </summary>
@@ -54,6 +67,25 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>cand_seq__</para>
+            /// </summary>
+            [NameInMap("PrefixName")]
+            [Validation(Required=false)]
+            public string PrefixName { get; set; }
+
+            /// <summary>
+            /// <para>The feature type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>INT32</description></item>
+            /// <item><description>INT64</description></item>
+            /// <item><description>FLOAT</description></item>
+            /// <item><description>DOUBLE</description></item>
+            /// <item><description>STRING</description></item>
+            /// <item><description>BOOLEAN</description></item>
+            /// <item><description>TIMESTAMP.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>INT32</para>
             /// </summary>
@@ -64,6 +96,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-07-04T14:46:22.227+08:00</para>
         /// </summary>
@@ -72,6 +106,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The update time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-07-04T14:46:22.227+08:00</para>
         /// </summary>
@@ -80,6 +116,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The priority level of the label table. Default value: 0. Set to 1 to prioritize the label table. Set to 2 to prioritize the feature view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -88,6 +126,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public long? LabelPriorityLevel { get; set; }
 
         /// <summary>
+        /// <para>The label table ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -96,6 +136,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string LabelTableId { get; set; }
 
         /// <summary>
+        /// <para>The label table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>label_table1</para>
         /// </summary>
@@ -104,6 +146,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string LabelTableName { get; set; }
 
         /// <summary>
+        /// <para>The model feature name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>model_feature1</para>
         /// </summary>
@@ -112,6 +156,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1231243253****</para>
         /// </summary>
@@ -120,6 +166,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -128,6 +176,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The project name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>project1</para>
         /// </summary>
@@ -135,15 +185,28 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <para>The feature relationships.</para>
+        /// </summary>
         [NameInMap("Relations")]
         [Validation(Required=false)]
         public GetModelFeatureResponseBodyRelations Relations { get; set; }
         public class GetModelFeatureResponseBodyRelations : TeaModel {
+            /// <summary>
+            /// <para>The domain list.</para>
+            /// </summary>
             [NameInMap("Domains")]
             [Validation(Required=false)]
             public List<GetModelFeatureResponseBodyRelationsDomains> Domains { get; set; }
             public class GetModelFeatureResponseBodyRelationsDomains : TeaModel {
                 /// <summary>
+                /// <para>The domain type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>FeatureEntity: feature entity.</description></item>
+                /// <item><description>FeatureView: feature view.</description></item>
+                /// <item><description>ModelFeature: model feature.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>FeatureEntity</para>
                 /// </summary>
@@ -162,6 +225,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string Id { get; set; }
 
                 /// <summary>
+                /// <para>The domain name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>feature_entity_1</para>
                 /// </summary>
@@ -171,11 +236,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
             }
 
+            /// <summary>
+            /// <para>The feature relationship link list.</para>
+            /// </summary>
             [NameInMap("Links")]
             [Validation(Required=false)]
             public List<GetModelFeatureResponseBodyRelationsLinks> Links { get; set; }
             public class GetModelFeatureResponseBodyRelationsLinks : TeaModel {
                 /// <summary>
+                /// <para>The source ID of the link.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>model_feature_2</para>
                 /// </summary>
@@ -184,6 +254,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string From { get; set; }
 
                 /// <summary>
+                /// <para>The dependency field of the link.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>user_id</para>
                 /// </summary>
@@ -192,6 +264,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string Link { get; set; }
 
                 /// <summary>
+                /// <para>The destination ID of the link.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>feature_entity_3</para>
                 /// </summary>
@@ -204,6 +278,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0C89F5E1-7F24-5EEC-9F05-508A39278CC8</para>
         /// </summary>
@@ -212,6 +288,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The name of the exported training set FG table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table2</para>
         /// </summary>
@@ -220,6 +298,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string TrainingSetFGTable { get; set; }
 
         /// <summary>
+        /// <para>The name of the exported training set table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table1</para>
         /// </summary>

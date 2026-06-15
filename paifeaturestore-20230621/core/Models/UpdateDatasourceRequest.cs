@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class UpdateDatasourceRequest : TeaModel {
         /// <summary>
+        /// <para>The resource configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;address&quot;: &quot;&quot;}</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The data source name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The resource URI.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

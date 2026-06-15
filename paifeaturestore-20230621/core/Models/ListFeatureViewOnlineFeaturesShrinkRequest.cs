@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The join IDs used to retrieve online features.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("JoinIds")]

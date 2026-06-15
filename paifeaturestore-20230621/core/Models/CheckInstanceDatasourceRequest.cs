@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class CheckInstanceDatasourceRequest : TeaModel {
         /// <summary>
+        /// <para>The resource configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;address&quot;: &quot;&quot;}</para>
         /// </summary>
@@ -18,6 +20,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The data source type.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Hologres</para>
+        /// </description></item>
+        /// <item><description><para>Redis</para>
+        /// </description></item>
+        /// <item><description><para>MaxCompute</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +39,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The resource URI.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

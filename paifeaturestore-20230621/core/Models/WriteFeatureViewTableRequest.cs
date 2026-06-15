@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class WriteFeatureViewTableRequest : TeaModel {
         /// <summary>
+        /// <para>The write mode.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Overwrite: Overwrites existing data.</para>
+        /// </description></item>
+        /// <item><description><para>Merge: Merges the new data with existing data.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,15 +26,23 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string Mode { get; set; }
 
+        /// <summary>
+        /// <para>The partitions to write to.</para>
+        /// </summary>
         [NameInMap("Partitions")]
         [Validation(Required=false)]
         public Dictionary<string, Dictionary<string, object>> Partitions { get; set; }
 
+        /// <summary>
+        /// <para>The file data source.</para>
+        /// </summary>
         [NameInMap("UrlDatasource")]
         [Validation(Required=false)]
         public WriteFeatureViewTableRequestUrlDatasource UrlDatasource { get; set; }
         public class WriteFeatureViewTableRequestUrlDatasource : TeaModel {
             /// <summary>
+            /// <para>The file delimiter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>,</para>
             /// </summary>
@@ -36,6 +51,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string Delimiter { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to omit the header from the source file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -44,6 +61,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public bool? OmitHeader { get; set; }
 
             /// <summary>
+            /// <para>The data source path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx.xxx.com/file.csv</para>
             /// </summary>

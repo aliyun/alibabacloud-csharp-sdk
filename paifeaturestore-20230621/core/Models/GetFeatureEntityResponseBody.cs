@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetFeatureEntityResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the feature entity was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The join ID used to associate with a feature view.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user_id</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string JoinId { get; set; }
 
         /// <summary>
+        /// <para>The name of the feature entity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>feature_entity_1</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456789*****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The ID of the parent feature entity. An empty value or 0 indicates a root feature entity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ParentFeatureEntityId { get; set; }
 
         /// <summary>
+        /// <para>The name of the parent feature entity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ParentFeatureEntityName { get; set; }
 
         /// <summary>
+        /// <para>The join ID of the parent feature entity.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>user_id</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ParentJoinId { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The name of the project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>project_1</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ProjectName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E23EFF09-58AA-5420-934F-8453AE01548D</para>
         /// </summary>

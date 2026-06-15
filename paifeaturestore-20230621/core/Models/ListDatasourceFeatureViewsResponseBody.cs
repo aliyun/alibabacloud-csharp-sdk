@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ListDatasourceFeatureViewsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Feature view list.</para>
+        /// </summary>
         [NameInMap("FeatureViews")]
         [Validation(Required=false)]
         public List<ListDatasourceFeatureViewsResponseBodyFeatureViews> FeatureViews { get; set; }
         public class ListDatasourceFeatureViewsResponseBodyFeatureViews : TeaModel {
             /// <summary>
+            /// <para>Feature view configuration. Only feature views using FeatureDB have values, showing number of shards and number of replicas.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;shard_count&quot;:5,&quot;replication_count&quot;:1}</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string Config { get; set; }
 
             /// <summary>
+            /// <para>Feature entity name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>user</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureEntityName { get; set; }
 
             /// <summary>
+            /// <para>Feature view ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureViewId { get; set; }
 
             /// <summary>
+            /// <para>Feature view name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>fv1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>Project name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>p1</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string ProjectName { get; set; }
 
             /// <summary>
+            /// <para>Lifecycle. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>86400</para>
             /// </summary>
@@ -62,6 +77,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public int? TTL { get; set; }
 
             /// <summary>
+            /// <para>Feature view type.</para>
+            /// <list type="bullet">
+            /// <item><description><para>Batch - offline feature</para>
+            /// </description></item>
+            /// <item><description><para>Stream - real-time feature</para>
+            /// </description></item>
+            /// <item><description><para>Sequence - sequence feature</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Batch</para>
             /// </summary>
@@ -69,11 +94,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <para>Usage statistics. Only displayed for feature views using FeatureDB.</para>
+            /// </summary>
             [NameInMap("UsageStatistics")]
             [Validation(Required=false)]
             public ListDatasourceFeatureViewsResponseBodyFeatureViewsUsageStatistics UsageStatistics { get; set; }
             public class ListDatasourceFeatureViewsResponseBodyFeatureViewsUsageStatistics : TeaModel {
                 /// <summary>
+                /// <para>Disk usage.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1.23</para>
                 /// </summary>
@@ -82,6 +112,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public double? DiskUsage { get; set; }
 
                 /// <summary>
+                /// <para>Memory usage.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.12</para>
                 /// </summary>
@@ -89,11 +121,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 [Validation(Required=false)]
                 public double? MemoryUsage { get; set; }
 
+                /// <summary>
+                /// <para>Read/write count statistics.</para>
+                /// </summary>
                 [NameInMap("ReadWriteCount")]
                 [Validation(Required=false)]
                 public List<ListDatasourceFeatureViewsResponseBodyFeatureViewsUsageStatisticsReadWriteCount> ReadWriteCount { get; set; }
                 public class ListDatasourceFeatureViewsResponseBodyFeatureViewsUsageStatisticsReadWriteCount : TeaModel {
                     /// <summary>
+                    /// <para>Date.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>2025-03-18T00:00:00+08:00</para>
                     /// </summary>
@@ -102,6 +139,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                     public string Date { get; set; }
 
                     /// <summary>
+                    /// <para>Read count.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
                     /// </summary>
@@ -110,6 +149,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                     public long? ReadCount { get; set; }
 
                     /// <summary>
+                    /// <para>Write count.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
                     /// </summary>
@@ -120,6 +161,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 }
 
                 /// <summary>
+                /// <para>Row count.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
                 /// </summary>
@@ -132,6 +175,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <summary>
+        /// <para>Total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -139,11 +184,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>Overall usage statistics. Only displayed for feature views using FeatureDB.</para>
+        /// </summary>
         [NameInMap("TotalUsageStatistics")]
         [Validation(Required=false)]
         public ListDatasourceFeatureViewsResponseBodyTotalUsageStatistics TotalUsageStatistics { get; set; }
         public class ListDatasourceFeatureViewsResponseBodyTotalUsageStatistics : TeaModel {
             /// <summary>
+            /// <para>Total disk usage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12.3</para>
             /// </summary>
@@ -152,6 +202,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public double? TotalDiskUsage { get; set; }
 
             /// <summary>
+            /// <para>Total memory usage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.23</para>
             /// </summary>
@@ -159,11 +211,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             [Validation(Required=false)]
             public double? TotalMemoryUsage { get; set; }
 
+            /// <summary>
+            /// <para>Total read/write count statistics.</para>
+            /// </summary>
             [NameInMap("TotalReadWriteCount")]
             [Validation(Required=false)]
             public List<ListDatasourceFeatureViewsResponseBodyTotalUsageStatisticsTotalReadWriteCount> TotalReadWriteCount { get; set; }
             public class ListDatasourceFeatureViewsResponseBodyTotalUsageStatisticsTotalReadWriteCount : TeaModel {
                 /// <summary>
+                /// <para>Date.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-03-18T00:00:00+08:00</para>
                 /// </summary>
@@ -172,6 +229,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string Date { get; set; }
 
                 /// <summary>
+                /// <para>Total read count.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>456</para>
                 /// </summary>
@@ -180,6 +239,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public long? TotalReadCount { get; set; }
 
                 /// <summary>
+                /// <para>Total write count.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
                 /// </summary>

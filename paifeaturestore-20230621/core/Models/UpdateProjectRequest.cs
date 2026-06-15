@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class UpdateProjectRequest : TeaModel {
         /// <summary>
+        /// <para>The project description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The project name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>project1</para>
         /// </summary>

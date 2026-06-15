@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class CreateDatasourceRequest : TeaModel {
         /// <summary>
+        /// <para>The configuration of the resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;address&quot;: &quot;&quot;}</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The name of the datasource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,11 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The datasource type. Valid values are:</para>
+        /// <para>● Hologres</para>
+        /// <para>● GraphCompute</para>
+        /// <para>● Redis</para>
+        /// <para>● MaxCompute</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +46,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The URI of the resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +57,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Uri { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace. Call the <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

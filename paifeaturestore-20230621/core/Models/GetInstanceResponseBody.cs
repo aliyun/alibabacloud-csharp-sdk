@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the FeatureDB instance.</para>
+        /// </summary>
         [NameInMap("FeatureDBInfo")]
         [Validation(Required=false)]
         public GetInstanceResponseBodyFeatureDBInfo FeatureDBInfo { get; set; }
         public class GetInstanceResponseBodyFeatureDBInfo : TeaModel {
+            /// <summary>
+            /// <para>The status of the instance.</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -20,11 +26,18 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>The information about the FeatureDB instance.</para>
+        /// </summary>
         [NameInMap("FeatureDBInstanceInfo")]
         [Validation(Required=false)]
         [Obsolete]
         public GetInstanceResponseBodyFeatureDBInstanceInfo FeatureDBInstanceInfo { get; set; }
         public class GetInstanceResponseBodyFeatureDBInstanceInfo : TeaModel {
+            /// <summary>
+            /// <para>The status of the instance.</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -32,6 +45,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <summary>
+        /// <para>The time when the instance was created. The time is in the ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-07-04T11:26:09.036+08:00</para>
         /// </summary>
@@ -40,6 +55,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The time when the instance was last updated. The time is in the ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-07-04T11:26:09.036+08:00</para>
         /// </summary>
@@ -48,6 +65,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The message that is returned for the instance provisioning.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -56,6 +75,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The progress of instance provisioning.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.8</para>
         /// </summary>
@@ -64,6 +85,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public double? Progress { get; set; }
 
         /// <summary>
+        /// <para>The region where the instance is deployed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -72,6 +95,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1C5B1511-8A5B-59C3-90AF-513F9210E882</para>
         /// </summary>
@@ -80,6 +105,18 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Initializing: The instance is being initialized.</para>
+        /// </description></item>
+        /// <item><description><para>Running: The instance is running.</para>
+        /// </description></item>
+        /// <item><description><para>Failure: The instance fails to be created.</para>
+        /// </description></item>
+        /// <item><description><para>Stopped: The instance is stopped.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -88,6 +125,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The type of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Basic</para>
         /// </summary>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检测资源连接状态。</para>
+        /// <para>Tests connectivity to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检测资源连接状态。</para>
+        /// <para>Tests connectivity to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检测资源连接状态。</para>
+        /// <para>Tests connectivity to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检测资源连接状态。</para>
+        /// <para>Tests connectivity to a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查FG配置内容是否正确，是否满足所有规则。</para>
+        /// <para>Verify that the FG configuration is correct and meets all rules.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查FG配置内容是否正确，是否满足所有规则。</para>
+        /// <para>Verify that the FG configuration is correct and meets all rules.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查FG配置内容是否正确，是否满足所有规则。</para>
+        /// <para>Verify that the FG configuration is correct and meets all rules.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>检查FG配置内容是否正确，是否满足所有规则。</para>
+        /// <para>Verify that the FG configuration is correct and meets all rules.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<b>MaxCompute</b>) or online storage (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>) for projects in the Instance.</para>
+        /// <para>Registers a datasource in a FeatureStore instance. A datasource provides offline or online storage for a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -349,7 +349,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<b>MaxCompute</b>) or online storage (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>) for projects in the Instance.</para>
+        /// <para>Registers a datasource in a FeatureStore instance. A datasource provides offline or online storage for a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<b>MaxCompute</b>) or online storage (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>) for projects in the Instance.</para>
+        /// <para>Registers a datasource in a FeatureStore instance. A datasource provides offline or online storage for a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -430,7 +430,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Register a datasource under a FeatureStore Instance. A datasource provides offline storage (<b>MaxCompute</b>) or online storage (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>) for projects in the Instance.</para>
+        /// <para>Registers a datasource in a FeatureStore instance. A datasource provides offline or online storage for a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -449,7 +449,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征实体</para>
+        /// <para>Creates a feature entity. A feature entity defines a join key that links multiple feature views to it, enabling feature joining.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -507,7 +507,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征实体</para>
+        /// <para>Creates a feature entity. A feature entity defines a join key that links multiple feature views to it, enabling feature joining.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -565,7 +565,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征实体</para>
+        /// <para>Creates a feature entity. A feature entity defines a join key that links multiple feature views to it, enabling feature joining.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -584,7 +584,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征实体</para>
+        /// <para>Creates a feature entity. A feature entity defines a join key that links multiple feature views to it, enabling feature joining.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -603,7 +603,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征视图。</para>
+        /// <para>You can create three types of feature views: offline, real-time, and behavior sequence. Each feature view uses fields to define its structure and links to a feature entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -697,7 +697,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征视图。</para>
+        /// <para>You can create three types of feature views: offline, real-time, and behavior sequence. Each feature view uses fields to define its structure and links to a feature entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -791,7 +791,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征视图。</para>
+        /// <para>You can create three types of feature views: offline, real-time, and behavior sequence. Each feature view uses fields to define its structure and links to a feature entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -810,7 +810,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征视图。</para>
+        /// <para>You can create three types of feature views: offline, real-time, and behavior sequence. Each feature view uses fields to define its structure and links to a feature entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -829,7 +829,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Feature Store实例。</para>
+        /// <para>Creates a FeatureStore instance. This operation is idempotent. If an instance is already running or initializing in the same account, this operation returns the existing instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -875,7 +875,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Feature Store实例。</para>
+        /// <para>Creates a FeatureStore instance. This operation is idempotent. If an instance is already running or initializing in the same account, this operation returns the existing instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -921,7 +921,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Feature Store实例。</para>
+        /// <para>Creates a FeatureStore instance. This operation is idempotent. If an instance is already running or initializing in the same account, this operation returns the existing instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -940,7 +940,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Feature Store实例。</para>
+        /// <para>Creates a FeatureStore instance. This operation is idempotent. If an instance is already running or initializing in the same account, this operation returns the existing instance ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -959,7 +959,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建大模型调用信息配置</para>
+        /// <para>Creates an LLM configuration that contains the call parameters and API key for an embedding model. During creation, the service validates the ApiKey and Model. For a DashScope model, the EmbeddingDimension must match one of the fixed, valid dimensions supported by the model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1045,7 +1045,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建大模型调用信息配置</para>
+        /// <para>Creates an LLM configuration that contains the call parameters and API key for an embedding model. During creation, the service validates the ApiKey and Model. For a DashScope model, the EmbeddingDimension must match one of the fixed, valid dimensions supported by the model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1131,7 +1131,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建大模型调用信息配置</para>
+        /// <para>Creates an LLM configuration that contains the call parameters and API key for an embedding model. During creation, the service validates the ApiKey and Model. For a DashScope model, the EmbeddingDimension must match one of the fixed, valid dimensions supported by the model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1150,7 +1150,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建大模型调用信息配置</para>
+        /// <para>Creates an LLM configuration that contains the call parameters and API key for an embedding model. During creation, the service validates the ApiKey and Model. For a DashScope model, the EmbeddingDimension must match one of the fixed, valid dimensions supported by the model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1169,7 +1169,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建label表</para>
+        /// <para>Creates a label table. A label table defines the schema for label data referenced by model features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1227,7 +1227,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建label表</para>
+        /// <para>Creates a label table. A label table defines the schema for label data referenced by model features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1285,7 +1285,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建label表</para>
+        /// <para>Creates a label table. A label table defines the schema for label data referenced by model features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1304,7 +1304,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建label表</para>
+        /// <para>Creates a label table. A label table defines the schema for label data referenced by model features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1323,7 +1323,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型特征。</para>
+        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1389,7 +1389,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型特征。</para>
+        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1455,7 +1455,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型特征。</para>
+        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1474,7 +1474,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型特征。</para>
+        /// <para>Creates a model feature. A model feature associates a label table with a set of feature view fields. It is used to generate the training dataset table required for model training and to specify the feature set used for model inference.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1493,7 +1493,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <b>MaxCompute</b> offline datasource and one online datasource (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>).</para>
+        /// <para>Creates a FeatureStore project. A project is a container for feature entities, feature views, and model features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1559,7 +1559,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <b>MaxCompute</b> offline datasource and one online datasource (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>).</para>
+        /// <para>Creates a FeatureStore project. A project is a container for feature entities, feature views, and model features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1625,7 +1625,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <b>MaxCompute</b> offline datasource and one online datasource (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>).</para>
+        /// <para>Creates a FeatureStore project. A project is a container for feature entities, feature views, and model features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1644,7 +1644,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a FeatureStore project under a PAI workspace. A project groups FeatureEntities, FeatureViews, and ModelFeatures sharing one <b>MaxCompute</b> offline datasource and one online datasource (<b>Hologres</b>, <b>TableStore</b>, or <b>FeatureDB</b>).</para>
+        /// <para>Creates a FeatureStore project. A project is a container for feature entities, feature views, and model features.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1663,7 +1663,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建feature store服务账户角色</para>
+        /// <para>Creates a service-linked role that authorizes the FeatureStore service to access other cloud resources of the user. Returns a conflict error if the role already exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1709,7 +1709,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建feature store服务账户角色</para>
+        /// <para>Creates a service-linked role that authorizes the FeatureStore service to access other cloud resources of the user. Returns a conflict error if the role already exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1755,7 +1755,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建feature store服务账户角色</para>
+        /// <para>Creates a service-linked role that authorizes the FeatureStore service to access other cloud resources of the user. Returns a conflict error if the role already exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1774,7 +1774,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建feature store服务账户角色</para>
+        /// <para>Creates a service-linked role that authorizes the FeatureStore service to access other cloud resources of the user. Returns a conflict error if the role already exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1793,7 +1793,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a datasource from a FeatureStore Instance.</para>
+        /// <para>Deletes a datasource from a FeatureStore instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1829,7 +1829,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a datasource from a FeatureStore Instance.</para>
+        /// <para>Deletes a datasource from a FeatureStore instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1865,7 +1865,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a datasource from a FeatureStore Instance.</para>
+        /// <para>Deletes a datasource from a FeatureStore instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1880,7 +1880,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a datasource from a FeatureStore Instance.</para>
+        /// <para>Deletes a datasource from a FeatureStore instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1895,7 +1895,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定特征实体</para>
+        /// <para>Deletes a feature entity.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1931,7 +1931,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定特征实体</para>
+        /// <para>Deletes a feature entity.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -1967,7 +1967,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定特征实体</para>
+        /// <para>Deletes a feature entity.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1982,7 +1982,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定特征实体</para>
+        /// <para>Deletes a feature entity.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -1997,7 +1997,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定特征视图。</para>
+        /// <para>Deletes a feature view. A feature view cannot be deleted if it is referenced by a model feature. To delete the feature view, you must first delete the associated model feature.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2033,7 +2033,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定特征视图。</para>
+        /// <para>Deletes a feature view. A feature view cannot be deleted if it is referenced by a model feature. To delete the feature view, you must first delete the associated model feature.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2069,7 +2069,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定特征视图。</para>
+        /// <para>Deletes a feature view. A feature view cannot be deleted if it is referenced by a model feature. To delete the feature view, you must first delete the associated model feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2084,7 +2084,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定特征视图。</para>
+        /// <para>Deletes a feature view. A feature view cannot be deleted if it is referenced by a model feature. To delete the feature view, you must first delete the associated model feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2099,7 +2099,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除大模型调用信息配置</para>
+        /// <para>Deletes an LLM call configuration. You cannot delete a configuration referenced by a feature view. You must first delete the associated feature view.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2135,7 +2135,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除大模型调用信息配置</para>
+        /// <para>Deletes an LLM call configuration. You cannot delete a configuration referenced by a feature view. You must first delete the associated feature view.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2171,7 +2171,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除大模型调用信息配置</para>
+        /// <para>Deletes an LLM call configuration. You cannot delete a configuration referenced by a feature view. You must first delete the associated feature view.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2186,7 +2186,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除大模型调用信息配置</para>
+        /// <para>Deletes an LLM call configuration. You cannot delete a configuration referenced by a feature view. You must first delete the associated feature view.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2201,7 +2201,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除label表</para>
+        /// <para>Deletes a label table. You cannot delete a label table that is referenced by a model feature. Delete the associated model feature first.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2237,7 +2237,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除label表</para>
+        /// <para>Deletes a label table. You cannot delete a label table that is referenced by a model feature. Delete the associated model feature first.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2273,7 +2273,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除label表</para>
+        /// <para>Deletes a label table. You cannot delete a label table that is referenced by a model feature. Delete the associated model feature first.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2288,7 +2288,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除label表</para>
+        /// <para>Deletes a label table. You cannot delete a label table that is referenced by a model feature. Delete the associated model feature first.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2303,7 +2303,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定模型特征。</para>
+        /// <para>Deletes a model feature and its associated training set table.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2339,7 +2339,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定模型特征。</para>
+        /// <para>Deletes a model feature and its associated training set table.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2375,7 +2375,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定模型特征。</para>
+        /// <para>Deletes a model feature and its associated training set table.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2390,7 +2390,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定模型特征。</para>
+        /// <para>Deletes a model feature and its associated training set table.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2405,7 +2405,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定Feature Store项目。</para>
+        /// <para>Deletes a FeatureStore project.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2441,7 +2441,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定Feature Store项目。</para>
+        /// <para>Deletes a FeatureStore project.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2477,7 +2477,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定Feature Store项目。</para>
+        /// <para>Deletes a FeatureStore project.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2492,7 +2492,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除指定Feature Store项目。</para>
+        /// <para>Deletes a FeatureStore project.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2507,7 +2507,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出训练集表。</para>
+        /// <para>Export a training set table for model features. Create an export task by configuring the Label table input, the data source partition for each feature view, and the training set output partition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2569,7 +2569,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出训练集表。</para>
+        /// <para>Export a training set table for model features. Create an export task by configuring the Label table input, the data source partition for each feature view, and the training set output partition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2631,7 +2631,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出训练集表。</para>
+        /// <para>Export a training set table for model features. Create an export task by configuring the Label table input, the data source partition for each feature view, and the training set output partition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2650,7 +2650,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导出训练集表。</para>
+        /// <para>Export a training set table for model features. Create an export task by configuring the Label table input, the data source partition for each feature view, and the training set output partition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2669,7 +2669,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of a datasource, including its type, connection info, and Config.</para>
+        /// <para>Gets the detailed information about a data source, including its type, connection information, and configuration.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2705,7 +2705,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of a datasource, including its type, connection info, and Config.</para>
+        /// <para>Gets the detailed information about a data source, including its type, connection information, and configuration.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2741,7 +2741,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of a datasource, including its type, connection info, and Config.</para>
+        /// <para>Gets the detailed information about a data source, including its type, connection information, and configuration.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2756,7 +2756,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the details of a datasource, including its type, connection info, and Config.</para>
+        /// <para>Gets the detailed information about a data source, including its type, connection information, and configuration.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2771,7 +2771,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下指定表的详细信息。</para>
+        /// <para>Gets the field information for a specified table in a data source. This operation supports only MaxCompute data sources.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2807,7 +2807,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下指定表的详细信息。</para>
+        /// <para>Gets the field information for a specified table in a data source. This operation supports only MaxCompute data sources.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2843,7 +2843,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下指定表的详细信息。</para>
+        /// <para>Gets the field information for a specified table in a data source. This operation supports only MaxCompute data sources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2858,7 +2858,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下指定表的详细信息。</para>
+        /// <para>Gets the field information for a specified table in a data source. This operation supports only MaxCompute data sources.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2873,7 +2873,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征实体详细信息</para>
+        /// <para>Retrieves the details of a feature entity.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2909,7 +2909,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征实体详细信息</para>
+        /// <para>Retrieves the details of a feature entity.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2945,7 +2945,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征实体详细信息</para>
+        /// <para>Retrieves the details of a feature entity.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2960,7 +2960,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征实体详细信息</para>
+        /// <para>Retrieves the details of a feature entity.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2975,7 +2975,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图详细信息。</para>
+        /// <para>Gets the details of a feature view, including its field definitions, data source binding, and synchronization status.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3011,7 +3011,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图详细信息。</para>
+        /// <para>Gets the details of a feature view, including its field definitions, data source binding, and synchronization status.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3047,7 +3047,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图详细信息。</para>
+        /// <para>Gets the details of a feature view, including its field definitions, data source binding, and synchronization status.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3062,7 +3062,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图详细信息。</para>
+        /// <para>Gets the details of a feature view, including its field definitions, data source binding, and synchronization status.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3077,7 +3077,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详细信息</para>
+        /// <para>Retrieves the details of a FeatureStore instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3113,7 +3113,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详细信息</para>
+        /// <para>Retrieves the details of a FeatureStore instance.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3149,7 +3149,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详细信息</para>
+        /// <para>Retrieves the details of a FeatureStore instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3164,7 +3164,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详细信息</para>
+        /// <para>Retrieves the details of a FeatureStore instance.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3179,7 +3179,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 LLMConfig 信息</para>
+        /// <para>Retrieves the details of an LLM call configuration.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3215,7 +3215,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 LLMConfig 信息</para>
+        /// <para>Retrieves the details of an LLM call configuration.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3251,7 +3251,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 LLMConfig 信息</para>
+        /// <para>Retrieves the details of an LLM call configuration.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3266,7 +3266,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 LLMConfig 信息</para>
+        /// <para>Retrieves the details of an LLM call configuration.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3281,7 +3281,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Label表详细信息。</para>
+        /// <para>Retrieves the details of a label table, including its field definitions and related models.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3317,7 +3317,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Label表详细信息。</para>
+        /// <para>Retrieves the details of a label table, including its field definitions and related models.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3353,7 +3353,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Label表详细信息。</para>
+        /// <para>Retrieves the details of a label table, including its field definitions and related models.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3368,7 +3368,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Label表详细信息。</para>
+        /// <para>Retrieves the details of a label table, including its field definitions and related models.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3383,7 +3383,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征详情。</para>
+        /// <para>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3419,7 +3419,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征详情。</para>
+        /// <para>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3455,7 +3455,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征详情。</para>
+        /// <para>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3470,7 +3470,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征详情。</para>
+        /// <para>Retrieves detailed information about a model feature, including the selected feature list, lineage relationships, and training set export script.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3485,7 +3485,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征的FG特征配置信息。</para>
+        /// <para>Retrieves the Feature Generation (FG) feature configuration of a model feature.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3521,7 +3521,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征的FG特征配置信息。</para>
+        /// <para>Retrieves the Feature Generation (FG) feature configuration of a model feature.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3557,7 +3557,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征的FG特征配置信息。</para>
+        /// <para>Retrieves the Feature Generation (FG) feature configuration of a model feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3572,7 +3572,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征的FG特征配置信息。</para>
+        /// <para>Retrieves the Feature Generation (FG) feature configuration of a model feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3587,7 +3587,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征的fg.json文件配置信息。</para>
+        /// <para>Retrieves the fg.json file configuration for a model feature.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3623,7 +3623,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征的fg.json文件配置信息。</para>
+        /// <para>Retrieves the fg.json file configuration for a model feature.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3659,7 +3659,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征的fg.json文件配置信息。</para>
+        /// <para>Retrieves the fg.json file configuration for a model feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3674,7 +3674,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征的fg.json文件配置信息。</para>
+        /// <para>Retrieves the fg.json file configuration for a model feature.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3689,7 +3689,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定Feature Store项目详细信息。</para>
+        /// <para>Gets the details of a project, including its data source bindings and resource counts.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3725,7 +3725,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定Feature Store项目详细信息。</para>
+        /// <para>Gets the details of a project, including its data source bindings and resource counts.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3761,7 +3761,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定Feature Store项目详细信息。</para>
+        /// <para>Gets the details of a project, including its data source bindings and resource counts.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3776,7 +3776,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取指定Feature Store项目详细信息。</para>
+        /// <para>Gets the details of a project, including its data source bindings and resource counts.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3791,7 +3791,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下特征实体详细信息</para>
+        /// <para>Retrieve details of a feature entity in a project by name.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3827,7 +3827,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下特征实体详细信息</para>
+        /// <para>Retrieve details of a feature entity in a project by name.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3863,7 +3863,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下特征实体详细信息</para>
+        /// <para>Retrieve details of a feature entity in a project by name.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3878,7 +3878,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下特征实体详细信息</para>
+        /// <para>Retrieve details of a feature entity in a project by name.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3893,7 +3893,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取feature store服务账户角色。</para>
+        /// <para>Queries the details of a service-linked role and verifies whether the role exists and is available.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3929,7 +3929,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取feature store服务账户角色。</para>
+        /// <para>Queries the details of a service-linked role and verifies whether the role exists and is available.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3965,7 +3965,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取feature store服务账户角色。</para>
+        /// <para>Queries the details of a service-linked role and verifies whether the role exists and is available.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3980,7 +3980,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取feature store服务账户角色。</para>
+        /// <para>Queries the details of a service-linked role and verifies whether the role exists and is available.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3995,7 +3995,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务详情</para>
+        /// <para>Gets the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4031,7 +4031,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务详情</para>
+        /// <para>Gets the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4067,7 +4067,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务详情</para>
+        /// <para>Gets the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4082,7 +4082,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务详情</para>
+        /// <para>Gets the details of an asynchronous task.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4097,7 +4097,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下所有特征视图信息。</para>
+        /// <para>Retrieve all feature view information from the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4191,7 +4191,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下所有特征视图信息。</para>
+        /// <para>Retrieve all feature view information from the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4285,7 +4285,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下所有特征视图信息。</para>
+        /// <para>Retrieve all feature view information from the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4304,7 +4304,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下所有特征视图信息。</para>
+        /// <para>Retrieve all feature view information from the data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4323,7 +4323,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下所有表。</para>
+        /// <para>Lists the tables in a datasource. This operation supports only MaxCompute datasources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4373,7 +4373,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下所有表。</para>
+        /// <para>Lists the tables in a datasource. This operation supports only MaxCompute datasources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4423,7 +4423,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下所有表。</para>
+        /// <para>Lists the tables in a datasource. This operation supports only MaxCompute datasources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4442,7 +4442,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取数据源下所有表。</para>
+        /// <para>Lists the tables in a datasource. This operation supports only MaxCompute datasources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4461,7 +4461,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</para>
+        /// <para>Lists the data sources in a FeatureStore instance. You can filter the results by workspace, type, and name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4531,7 +4531,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</para>
+        /// <para>Lists the data sources in a FeatureStore instance. You can filter the results by workspace, type, and name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4601,7 +4601,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</para>
+        /// <para>Lists the data sources in a FeatureStore instance. You can filter the results by workspace, type, and name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4620,7 +4620,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List datasources under a FeatureStore Instance, filtered by workspace, type, or name.</para>
+        /// <para>Lists the data sources in a FeatureStore instance. You can filter the results by workspace, type, and name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4639,7 +4639,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征实体列表</para>
+        /// <para>Lists the feature entities in a FeatureStore instance. You can filter the results by project, name, owner, and parent feature entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4723,7 +4723,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征实体列表</para>
+        /// <para>Lists the feature entities in a FeatureStore instance. You can filter the results by project, name, owner, and parent feature entity.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4807,7 +4807,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征实体列表</para>
+        /// <para>Lists the feature entities in a FeatureStore instance. You can filter the results by project, name, owner, and parent feature entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4826,7 +4826,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建特征实体列表</para>
+        /// <para>Lists the feature entities in a FeatureStore instance. You can filter the results by project, name, owner, and parent feature entity.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4845,7 +4845,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征字段血缘关系。</para>
+        /// <para>Retrieves the relationships for a specific field in a feature view, returning a list of models that reference the field and the names of the associated online and offline tables.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4881,7 +4881,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征字段血缘关系。</para>
+        /// <para>Retrieves the relationships for a specific field in a feature view, returning a list of models that reference the field and the names of the associated online and offline tables.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -4917,7 +4917,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征字段血缘关系。</para>
+        /// <para>Retrieves the relationships for a specific field in a feature view, returning a list of models that reference the field and the names of the associated online and offline tables.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4932,7 +4932,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征字段血缘关系。</para>
+        /// <para>Retrieves the relationships for a specific field in a feature view, returning a list of models that reference the field and the names of the associated online and offline tables.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4947,7 +4947,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图下的在线特征数据。</para>
+        /// <para>Retrieves online features from a feature view based on one or more join IDs. For each join ID provided, the operation returns the corresponding feature fields as key-value pairs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5003,7 +5003,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图下的在线特征数据。</para>
+        /// <para>Retrieves online features from a feature view based on one or more join IDs. For each join ID provided, the operation returns the corresponding feature fields as key-value pairs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5059,7 +5059,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图下的在线特征数据。</para>
+        /// <para>Retrieves online features from a feature view based on one or more join IDs. For each join ID provided, the operation returns the corresponding feature fields as key-value pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5078,7 +5078,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图下的在线特征数据。</para>
+        /// <para>Retrieves online features from a feature view based on one or more join IDs. For each join ID provided, the operation returns the corresponding feature fields as key-value pairs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5097,7 +5097,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图血缘关系。</para>
+        /// <para>Lists the relationships for a feature view, including the models that reference it.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5133,7 +5133,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图血缘关系。</para>
+        /// <para>Lists the relationships for a feature view, including the models that reference it.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5169,7 +5169,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图血缘关系。</para>
+        /// <para>Lists the relationships for a feature view, including the models that reference it.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5184,7 +5184,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图血缘关系。</para>
+        /// <para>Lists the relationships for a feature view, including the models that reference it.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5199,7 +5199,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图列表。</para>
+        /// <para>Lists feature views, filterable by project, name, type, tag, and feature name.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5291,7 +5291,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图列表。</para>
+        /// <para>Lists feature views, filterable by project, name, type, tag, and feature name.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5383,7 +5383,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图列表。</para>
+        /// <para>Lists feature views, filterable by project, name, type, tag, and feature name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5402,7 +5402,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图列表。</para>
+        /// <para>Lists feature views, filterable by project, name, type, tag, and feature name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5421,7 +5421,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Feature Store实例列表。</para>
+        /// <para>Lists FeatureStore instances in the current account. You can filter the instances by status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5483,7 +5483,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Feature Store实例列表。</para>
+        /// <para>Lists FeatureStore instances in the current account. You can filter the instances by status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5545,7 +5545,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Feature Store实例列表。</para>
+        /// <para>Lists FeatureStore instances in the current account. You can filter the instances by status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5564,7 +5564,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Feature Store实例列表。</para>
+        /// <para>Lists FeatureStore instances in the current account. You can filter the instances by status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5583,7 +5583,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取大模型调用信息配置</para>
+        /// <para>Lists LLM call configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5657,7 +5657,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取大模型调用信息配置</para>
+        /// <para>Lists LLM call configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5731,7 +5731,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取大模型调用信息配置</para>
+        /// <para>Lists LLM call configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5750,7 +5750,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取大模型调用信息配置</para>
+        /// <para>Lists LLM call configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5769,7 +5769,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Label表列表。</para>
+        /// <para>Lists label tables, filterable by project, name, owner, and ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5849,7 +5849,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Label表列表。</para>
+        /// <para>Lists label tables, filterable by project, name, owner, and ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5929,7 +5929,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Label表列表。</para>
+        /// <para>Lists label tables, filterable by project, name, owner, and ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5948,7 +5948,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Label表列表。</para>
+        /// <para>Lists label tables, filterable by project, name, owner, and ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5967,7 +5967,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取注册FG特征时模型特征下可选的所有特征。</para>
+        /// <para>Lists the available features for a model feature when you register a feature group (FG).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6013,7 +6013,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取注册FG特征时模型特征下可选的所有特征。</para>
+        /// <para>Lists the available features for a model feature when you register a feature group (FG).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6059,7 +6059,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取注册FG特征时模型特征下可选的所有特征。</para>
+        /// <para>Lists the available features for a model feature when you register a feature group (FG).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6078,7 +6078,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取注册FG特征时模型特征下可选的所有特征。</para>
+        /// <para>Lists the available features for a model feature when you register a feature group (FG).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6097,7 +6097,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征列表。</para>
+        /// <para>Lists model features, with sorting, pagination, and filtering by project, name, creator, and ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6177,7 +6177,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征列表。</para>
+        /// <para>Lists model features, with sorting, pagination, and filtering by project, name, creator, and ID.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6257,7 +6257,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征列表。</para>
+        /// <para>Lists model features, with sorting, pagination, and filtering by project, name, creator, and ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6276,7 +6276,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模型特征列表。</para>
+        /// <para>Lists model features, with sorting, pagination, and filtering by project, name, creator, and ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6295,7 +6295,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下的所有特征视图、特征信息。</para>
+        /// <para>Lists all feature views and their available features in a project. Use this operation to select feature views and features for the CreateModelFeature and UpdateModelFeature operations.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6331,7 +6331,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下的所有特征视图、特征信息。</para>
+        /// <para>Lists all feature views and their available features in a project. Use this operation to select feature views and features for the CreateModelFeature and UpdateModelFeature operations.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6367,7 +6367,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下的所有特征视图、特征信息。</para>
+        /// <para>Lists all feature views and their available features in a project. Use this operation to select feature views and features for the CreateModelFeature and UpdateModelFeature operations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6382,7 +6382,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下的所有特征视图、特征信息。</para>
+        /// <para>Lists all feature views and their available features in a project. Use this operation to select feature views and features for the CreateModelFeature and UpdateModelFeature operations.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6397,7 +6397,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下所有特征信息</para>
+        /// <para>Lists all features in a project. This operation supports filtering by name, alias, and feature view, as well as sorting and pagination. The response includes the data type, parent feature view, and the number of model features that reference each feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6467,7 +6467,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下所有特征信息</para>
+        /// <para>Lists all features in a project. This operation supports filtering by name, alias, and feature view, as well as sorting and pagination. The response includes the data type, parent feature view, and the number of model features that reference each feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6537,7 +6537,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下所有特征信息</para>
+        /// <para>Lists all features in a project. This operation supports filtering by name, alias, and feature view, as well as sorting and pagination. The response includes the data type, parent feature view, and the number of model features that reference each feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6556,7 +6556,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取项目下所有特征信息</para>
+        /// <para>Lists all features in a project. This operation supports filtering by name, alias, and feature view, as well as sorting and pagination. The response includes the data type, parent feature view, and the number of model features that reference each feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6575,7 +6575,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Feature Store项目列表。</para>
+        /// <para>Lists projects in a Feature Store instance, filterable by name, workspace, and owner.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6655,7 +6655,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Feature Store项目列表。</para>
+        /// <para>Lists projects in a Feature Store instance, filterable by name, workspace, and owner.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6735,7 +6735,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Feature Store项目列表。</para>
+        /// <para>Lists projects in a Feature Store instance, filterable by name, workspace, and owner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6754,7 +6754,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Feature Store项目列表。</para>
+        /// <para>Lists projects in a Feature Store instance, filterable by name, workspace, and owner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6773,7 +6773,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务日志列表</para>
+        /// <para>Lists the execution logs of an asynchronous task. This operation supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6823,7 +6823,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务日志列表</para>
+        /// <para>Lists the execution logs of an asynchronous task. This operation supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6873,7 +6873,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务日志列表</para>
+        /// <para>Lists the execution logs of an asynchronous task. This operation supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6892,7 +6892,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务日志列表</para>
+        /// <para>Lists the execution logs of an asynchronous task. This operation supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6911,7 +6911,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务列表</para>
+        /// <para>Lists asynchronous tasks for an instance, supporting pagination and filtering by project, object type, and status.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6991,7 +6991,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务列表</para>
+        /// <para>Lists asynchronous tasks for an instance, supporting pagination and filtering by project, object type, and status.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7071,7 +7071,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务列表</para>
+        /// <para>Lists asynchronous tasks for an instance, supporting pagination and filtering by project, object type, and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7090,7 +7090,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取任务列表</para>
+        /// <para>Lists asynchronous tasks for an instance, supporting pagination and filtering by project, object type, and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7109,7 +7109,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将特征视图的离线数据发布/同步到线上。</para>
+        /// <para>Creates a data synchronization task to synchronize data from a feature view\&quot;s offline table to its online store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7171,7 +7171,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将特征视图的离线数据发布/同步到线上。</para>
+        /// <para>Creates a data synchronization task to synchronize data from a feature view\&quot;s offline table to its online store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7233,7 +7233,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将特征视图的离线数据发布/同步到线上。</para>
+        /// <para>Creates a data synchronization task to synchronize data from a feature view\&quot;s offline table to its online store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7252,7 +7252,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将特征视图的离线数据发布/同步到线上。</para>
+        /// <para>Creates a data synchronization task to synchronize data from a feature view\&quot;s offline table to its online store.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7271,7 +7271,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止任务。</para>
+        /// <para>Stops an asynchronous task. You can only stop tasks in the Initializing or Running state.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7307,7 +7307,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止任务。</para>
+        /// <para>Stops an asynchronous task. You can only stop tasks in the Initializing or Running state.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7343,7 +7343,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止任务。</para>
+        /// <para>Stops an asynchronous task. You can only stop tasks in the Initializing or Running state.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7358,7 +7358,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止任务。</para>
+        /// <para>Stops an asynchronous task. You can only stop tasks in the Initializing or Running state.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7373,7 +7373,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</para>
+        /// <para>Updates information for a data source. Its type and workspace cannot be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7427,7 +7427,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</para>
+        /// <para>Updates information for a data source. Its type and workspace cannot be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7481,7 +7481,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</para>
+        /// <para>Updates information for a data source. Its type and workspace cannot be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7500,7 +7500,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a datasource\&quot;s info. The datasource type and workspace cannot be changed.</para>
+        /// <para>Updates information for a data source. Its type and workspace cannot be changed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7519,7 +7519,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新特征视图。</para>
+        /// <para>Updates a feature view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7565,7 +7565,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新特征视图。</para>
+        /// <para>Updates a feature view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7611,7 +7611,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新特征视图。</para>
+        /// <para>Updates a feature view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7630,7 +7630,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新特征视图。</para>
+        /// <para>Updates a feature view.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7649,7 +7649,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新大模型调用信息配置</para>
+        /// <para>Updates the large language model (LLM) call configuration. If you do not specify the <c>ApiKey</c> parameter, the existing key is retained. After the update, the system revalidates the model\&quot;s availability and its parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7731,7 +7731,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新大模型调用信息配置</para>
+        /// <para>Updates the large language model (LLM) call configuration. If you do not specify the <c>ApiKey</c> parameter, the existing key is retained. After the update, the system revalidates the model\&quot;s availability and its parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7813,7 +7813,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新大模型调用信息配置</para>
+        /// <para>Updates the large language model (LLM) call configuration. If you do not specify the <c>ApiKey</c> parameter, the existing key is retained. After the update, the system revalidates the model\&quot;s availability and its parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7832,7 +7832,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新大模型调用信息配置</para>
+        /// <para>Updates the large language model (LLM) call configuration. If you do not specify the <c>ApiKey</c> parameter, the existing key is retained. After the update, the system revalidates the model\&quot;s availability and its parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7851,7 +7851,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新label表。</para>
+        /// <para>Updates the attributes of fields in a label table. You can modify the attributes of existing fields, but you cannot add or delete fields, or change field names and types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7905,7 +7905,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新label表。</para>
+        /// <para>Updates the attributes of fields in a label table. You can modify the attributes of existing fields, but you cannot add or delete fields, or change field names and types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7959,7 +7959,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新label表。</para>
+        /// <para>Updates the attributes of fields in a label table. You can modify the attributes of existing fields, but you cannot add or delete fields, or change field names and types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7978,7 +7978,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新label表。</para>
+        /// <para>Updates the attributes of fields in a label table. You can modify the attributes of existing fields, but you cannot add or delete fields, or change field names and types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7997,7 +7997,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型特征。</para>
+        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8055,7 +8055,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型特征。</para>
+        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8113,7 +8113,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型特征。</para>
+        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8132,7 +8132,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型特征。</para>
+        /// <para>Updates the information of a model feature, including the associated label table, selected feature fields, and conflict priority policy. The update is a full replacement. The specified Features value overwrites the existing value.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8151,7 +8151,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型特征的FG特征配置信息。</para>
+        /// <para>Update the FG feature configuration for a model feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8209,7 +8209,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型特征的FG特征配置信息。</para>
+        /// <para>Update the FG feature configuration for a model feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8267,7 +8267,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型特征的FG特征配置信息。</para>
+        /// <para>Update the FG feature configuration for a model feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8286,7 +8286,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型特征的FG特征配置信息。</para>
+        /// <para>Update the FG feature configuration for a model feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8305,7 +8305,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定Feature Store项目信息。</para>
+        /// <para>Updates the description of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8355,7 +8355,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定Feature Store项目信息。</para>
+        /// <para>Updates the description of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8405,7 +8405,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定Feature Store项目信息。</para>
+        /// <para>Updates the description of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8424,7 +8424,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定Feature Store项目信息。</para>
+        /// <para>Updates the description of a project.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8443,7 +8443,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图血缘关系。</para>
+        /// <para>Imports data from a URL to the offline table of a feature view. This is an asynchronous operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8497,7 +8497,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图血缘关系。</para>
+        /// <para>Imports data from a URL to the offline table of a feature view. This is an asynchronous operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8551,7 +8551,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图血缘关系。</para>
+        /// <para>Imports data from a URL to the offline table of a feature view. This is an asynchronous operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8570,7 +8570,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取特征视图血缘关系。</para>
+        /// <para>Imports data from a URL to the offline table of a feature view. This is an asynchronous operation.</para>
         /// </summary>
         /// 
         /// <param name="request">

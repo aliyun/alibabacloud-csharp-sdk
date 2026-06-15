@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ListTaskLogsRequest : TeaModel {
         /// <summary>
+        /// <para>The page number. The minimum value is 1. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

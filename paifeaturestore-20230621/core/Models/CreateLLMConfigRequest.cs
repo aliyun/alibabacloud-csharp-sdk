@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class CreateLLMConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The API key for the model.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The base URL of the model service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://dashscope.aliyuncs.com/compatible-mode/v1">https://dashscope.aliyuncs.com/compatible-mode/v1</a></para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string BaseUrl { get; set; }
 
         /// <summary>
+        /// <para>The batch size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? BatchSize { get; set; }
 
         /// <summary>
+        /// <para>The embedding dimension. For a DashScope model, this value must match one of the fixed, valid dimensions supported by the model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1024</para>
         /// </summary>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public bool? EnableFusion { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of input tokens.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8192</para>
         /// </summary>
@@ -56,6 +65,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? MaxTokens { get; set; }
 
         /// <summary>
+        /// <para>The name of the model.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +80,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ModelType { get; set; }
 
         /// <summary>
+        /// <para>The name of the LLM configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,6 +91,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The number of requests per second.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -88,6 +101,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? Rps { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetProjectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The project description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>This is a test.</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The number of feature entities.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? FeatureEntityCount { get; set; }
 
         /// <summary>
+        /// <para>The number of feature views.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? FeatureViewCount { get; set; }
 
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The modification time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The number of models.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? ModelCount { get; set; }
 
         /// <summary>
+        /// <para>The project name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>project1</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The offline data source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string OfflineDatasourceId { get; set; }
 
         /// <summary>
+        /// <para>The offline data source name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>datasource1</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string OfflineDatasourceName { get; set; }
 
         /// <summary>
+        /// <para>The type of the offline data source. For example, <c>MaxCompute</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MaxCompute</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string OfflineDatasourceType { get; set; }
 
         /// <summary>
+        /// <para>The offline data lifecycle, in days.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>90</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? OfflineLifecycle { get; set; }
 
         /// <summary>
+        /// <para>The online data source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string OnlineDatasourceId { get; set; }
 
         /// <summary>
+        /// <para>The online data source name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>datasource2</para>
         /// </summary>
@@ -114,6 +140,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string OnlineDatasourceName { get; set; }
 
         /// <summary>
+        /// <para>The online data source type.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Hologres</para>
+        /// </description></item>
+        /// <item><description><para>Redis</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
         /// </summary>
@@ -122,6 +156,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string OnlineDatasourceType { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the project owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1232132543543****</para>
         /// </summary>
@@ -130,6 +166,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C33E160C-BFCA-5719-B958-942850E949F6</para>
         /// </summary>
@@ -138,6 +176,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35523</para>
         /// </summary>

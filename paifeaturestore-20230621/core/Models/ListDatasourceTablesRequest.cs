@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ListDatasourceTablesRequest : TeaModel {
         /// <summary>
+        /// <para>The schema name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string SchemaName { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>table1</para>
         /// </summary>

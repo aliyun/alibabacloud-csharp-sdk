@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class UpdateFeatureViewRequest : TeaModel {
         /// <summary>
+        /// <para>A list of fields.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Fields")]
@@ -17,6 +18,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public List<UpdateFeatureViewRequestFields> Fields { get; set; }
         public class UpdateFeatureViewRequestFields : TeaModel {
             /// <summary>
+            /// <para>A list of field attributes. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>Partition</c>: Indicates that the field is a partition field.</para>
+            /// </description></item>
+            /// <item><description><para><c>PrimaryKey</c>: Indicates that the field is a primary key.</para>
+            /// </description></item>
+            /// <item><description><para><c>EventTime</c>: Indicates that the field is the event time.</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Attributes")]
@@ -24,6 +34,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public List<string> Attributes { get; set; }
 
             /// <summary>
+            /// <para>The name of the field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -33,11 +44,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The feature generation configuration.</para>
+            /// </summary>
             [NameInMap("Transform")]
             [Validation(Required=false)]
             public List<UpdateFeatureViewRequestFieldsTransform> Transform { get; set; }
             public class UpdateFeatureViewRequestFieldsTransform : TeaModel {
                 /// <summary>
+                /// <para>The input fields.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("Input")]
@@ -45,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public List<UpdateFeatureViewRequestFieldsTransformInput> Input { get; set; }
                 public class UpdateFeatureViewRequestFieldsTransformInput : TeaModel {
                     /// <summary>
+                    /// <para>The modality of the input, such as text or image.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>NONE</para>
                     /// </summary>
@@ -53,6 +70,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                     public string Modality { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the input field.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -63,6 +81,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                     public string Name { get; set; }
 
                     /// <summary>
+                    /// <para>The data type of the input field.</para>
                     /// <para>This parameter is required.</para>
                     /// 
                     /// <b>Example:</b>
@@ -75,6 +94,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 }
 
                 /// <summary>
+                /// <para>The ID of the LLM configuration.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -85,6 +105,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public int? LLMConfigId { get; set; }
 
                 /// <summary>
+                /// <para>The type of feature generation.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -97,6 +118,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             }
 
             /// <summary>
+            /// <para>The data type of the field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

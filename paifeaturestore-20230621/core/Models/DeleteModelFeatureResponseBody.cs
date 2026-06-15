@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class DeleteModelFeatureResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6B662A64-E4BF-56F8-BF5F-4C63F34EC0A8</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class UpdateLabelTableRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the data source for the label table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string DatasourceId { get; set; }
 
         /// <summary>
+        /// <para>The fields to modify.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Fields")]
@@ -33,6 +36,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string AlignedEntityName { get; set; }
 
             /// <summary>
+            /// <para>The field\&quot;s attributes.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Attributes")]
@@ -40,6 +44,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public List<string> Attributes { get; set; }
 
             /// <summary>
+            /// <para>The name of the field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -50,6 +55,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The data type of the field.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,6 +68,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <summary>
+        /// <para>The name of the label table.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rec_test</para>
         /// </summary>

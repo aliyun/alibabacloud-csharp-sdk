@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetDatasourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The resource configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;address&quot;: &quot;&quot;}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Config { get; set; }
 
         /// <summary>
+        /// <para>The ID of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string DatasourceId { get; set; }
 
         /// <summary>
+        /// <para>The time the data source was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-07-04T11:26:09.036+08:00</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The time the data source was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-07-04T11:26:09.036+08:00</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The name of the data source.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>datasource1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AD7D9E95-BD31-53F2-B710-6C01866FCB05</para>
         /// </summary>
@@ -58,6 +70,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The type of the data source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Hologres</para>
+        /// </description></item>
+        /// <item><description><para>Redis</para>
+        /// </description></item>
+        /// <item><description><para>MaxCompute</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Hologres</para>
         /// </summary>
@@ -66,6 +88,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The URI of the resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>igraph_instance1</para>
         /// </summary>
@@ -74,6 +98,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Uri { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32244</para>
         /// </summary>

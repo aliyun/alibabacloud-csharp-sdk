@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class CreateInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance type. The only supported value is <c>Basic</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Basic</para>
         /// </summary>

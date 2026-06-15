@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ExportModelFeatureTrainingSetTableResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0FBBE454-9BD1-5D8F-9129-D14DB7FAFE0B</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>51</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

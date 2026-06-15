@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ListFeatureEntitiesShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Filters the results by a list of feature entity IDs.</para>
+        /// </summary>
         [NameInMap("FeatureEntityIds")]
         [Validation(Required=false)]
         public string FeatureEntityIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by feature entity name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>feature_entity_1</para>
         /// </summary>
@@ -22,6 +27,14 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>Asc</c>: Ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><c>Desc</c>: Descending order.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Desc</para>
         /// </summary>
@@ -30,6 +43,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1231432*****</para>
         /// </summary>
@@ -38,6 +53,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The page number. Values start at 1. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -46,6 +63,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -54,6 +73,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by parent feature entity ID. Omit this parameter to return all feature entities. Set it to <c>0</c> to return all root feature entities. Set it to a non-zero value to return all child feature entities of the specified parent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -62,6 +83,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ParentFeatureEntityId { get; set; }
 
         /// <summary>
+        /// <para>The project ID. You can obtain this ID by calling the <c>ListProjects</c> operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -70,6 +93,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The field to sort the results by.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>GmtModifiedTime</para>
         /// </summary>

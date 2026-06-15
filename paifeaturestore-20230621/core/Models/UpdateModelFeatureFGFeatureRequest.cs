@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class UpdateModelFeatureFGFeatureRequest : TeaModel {
+        /// <summary>
+        /// <para>Lookup feature information.</para>
+        /// </summary>
         [NameInMap("LookupFeatures")]
         [Validation(Required=false)]
         public List<UpdateModelFeatureFGFeatureRequestLookupFeatures> LookupFeatures { get; set; }
         public class UpdateModelFeatureFGFeatureRequestLookupFeatures : TeaModel {
             /// <summary>
+            /// <para>Default value.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +28,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string DefaultValue { get; set; }
 
             /// <summary>
+            /// <para>Generated feature name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -34,6 +39,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureName { get; set; }
 
             /// <summary>
+            /// <para>Key feature domain.</para>
+            /// <list type="bullet">
+            /// <item><description><para>User</para>
+            /// </description></item>
+            /// <item><description><para>Item</para>
+            /// </description></item>
+            /// <item><description><para>Context</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -44,6 +58,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string KeyFeatureDomain { get; set; }
 
             /// <summary>
+            /// <para>The name of the key feature.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -54,6 +69,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string KeyFeatureName { get; set; }
 
             /// <summary>
+            /// <para>Map feature domain.</para>
+            /// <list type="bullet">
+            /// <item><description><para>User</para>
+            /// </description></item>
+            /// <item><description><para>Item</para>
+            /// </description></item>
+            /// <item><description><para>Context</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -64,6 +88,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string MapFeatureDomain { get; set; }
 
             /// <summary>
+            /// <para>Map feature name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -74,6 +99,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string MapFeatureName { get; set; }
 
             /// <summary>
+            /// <para>Feature value type.</para>
+            /// <list type="bullet">
+            /// <item><description><para>INTEGER</para>
+            /// </description></item>
+            /// <item><description><para>DOUBLE</para>
+            /// </description></item>
+            /// <item><description><para>STRING</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -85,11 +119,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         }
 
+        /// <summary>
+        /// <para>Basic feature information.</para>
+        /// </summary>
         [NameInMap("RawFeatures")]
         [Validation(Required=false)]
         public List<UpdateModelFeatureFGFeatureRequestRawFeatures> RawFeatures { get; set; }
         public class UpdateModelFeatureFGFeatureRequestRawFeatures : TeaModel {
             /// <summary>
+            /// <para>Default value.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -100,6 +138,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string DefaultValue { get; set; }
 
             /// <summary>
+            /// <para>Input feature domain.</para>
+            /// <list type="bullet">
+            /// <item><description><para>User</para>
+            /// </description></item>
+            /// <item><description><para>Item</para>
+            /// </description></item>
+            /// <item><description><para>Context</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -110,6 +157,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureDomain { get; set; }
 
             /// <summary>
+            /// <para>Generated feature name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -120,6 +168,13 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureName { get; set; }
 
             /// <summary>
+            /// <para>FG basic feature type.</para>
+            /// <list type="bullet">
+            /// <item><description><para>IdFeature</para>
+            /// </description></item>
+            /// <item><description><para>RawFeature</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -130,6 +185,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureType { get; set; }
 
             /// <summary>
+            /// <para>The original name of the feature.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -140,6 +196,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string InputFeatureName { get; set; }
 
             /// <summary>
+            /// <para>Feature value type.</para>
+            /// <list type="bullet">
+            /// <item><description><para>INTEGER</para>
+            /// </description></item>
+            /// <item><description><para>DOUBLE</para>
+            /// </description></item>
+            /// <item><description><para>STRING</para>
+            /// </description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -151,15 +216,22 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 
         }
 
+        /// <summary>
+        /// <para>Reserved fields.</para>
+        /// </summary>
         [NameInMap("Reserves")]
         [Validation(Required=false)]
         public List<string> Reserves { get; set; }
 
+        /// <summary>
+        /// <para>Sequence feature information.</para>
+        /// </summary>
         [NameInMap("SequenceFeatures")]
         [Validation(Required=false)]
         public List<UpdateModelFeatureFGFeatureRequestSequenceFeatures> SequenceFeatures { get; set; }
         public class UpdateModelFeatureFGFeatureRequestSequenceFeatures : TeaModel {
             /// <summary>
+            /// <para>Feature attribute delimiter.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -170,6 +242,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string AttributeDelim { get; set; }
 
             /// <summary>
+            /// <para>Sequence feature name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -180,6 +253,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string FeatureName { get; set; }
 
             /// <summary>
+            /// <para>Sequence feature delimiter.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -190,6 +264,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string SequenceDelim { get; set; }
 
             /// <summary>
+            /// <para>Maximum length of the sequence feature.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -199,11 +274,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             [Validation(Required=false)]
             public long? SequenceLength { get; set; }
 
+            /// <summary>
+            /// <para>List of subfeatures for the sequence feature.</para>
+            /// </summary>
             [NameInMap("SubFeatures")]
             [Validation(Required=false)]
             public List<UpdateModelFeatureFGFeatureRequestSequenceFeaturesSubFeatures> SubFeatures { get; set; }
             public class UpdateModelFeatureFGFeatureRequestSequenceFeaturesSubFeatures : TeaModel {
                 /// <summary>
+                /// <para>Default value.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -214,6 +293,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string DefaultValue { get; set; }
 
                 /// <summary>
+                /// <para>Input feature domain.</para>
+                /// <list type="bullet">
+                /// <item><description><para>User</para>
+                /// </description></item>
+                /// <item><description><para>Item</para>
+                /// </description></item>
+                /// <item><description><para>Context</para>
+                /// </description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -224,6 +312,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string FeatureDomain { get; set; }
 
                 /// <summary>
+                /// <para>Generated subfeature name.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -234,6 +323,13 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string FeatureName { get; set; }
 
                 /// <summary>
+                /// <para>FG sequence subfeature type.</para>
+                /// <list type="bullet">
+                /// <item><description><para>IdFeature</para>
+                /// </description></item>
+                /// <item><description><para>RawFeature</para>
+                /// </description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -244,6 +340,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string FeatureType { get; set; }
 
                 /// <summary>
+                /// <para>Original feature name.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -254,6 +351,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
                 public string InputFeatureName { get; set; }
 
                 /// <summary>
+                /// <para>Feature value type.</para>
+                /// <list type="bullet">
+                /// <item><description><para>INTEGER</para>
+                /// </description></item>
+                /// <item><description><para>DOUBLE</para>
+                /// </description></item>
+                /// <item><description><para>STRING</para>
+                /// </description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>

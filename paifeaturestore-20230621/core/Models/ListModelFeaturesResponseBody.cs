@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class ListModelFeaturesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of model features.</para>
+        /// </summary>
         [NameInMap("ModelFeatures")]
         [Validation(Required=false)]
         public List<ListModelFeaturesResponseBodyModelFeatures> ModelFeatures { get; set; }
         public class ListModelFeaturesResponseBodyModelFeatures : TeaModel {
             /// <summary>
+            /// <para>The time the model feature was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-07-04T14:46:22.227+08:00</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string GmtCreateTime { get; set; }
 
             /// <summary>
+            /// <para>The time the model feature was last updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-07-04T14:46:22.227+08:00</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string GmtModifiedTime { get; set; }
 
             /// <summary>
+            /// <para>The label table name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>label_table_1</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string LabelTableName { get; set; }
 
             /// <summary>
+            /// <para>The model feature ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string ModelFeatureId { get; set; }
 
             /// <summary>
+            /// <para>The model feature name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>model_feature1</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The Alibaba Cloud account ID of the owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1231243253****</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string Owner { get; set; }
 
             /// <summary>
+            /// <para>The project ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string ProjectId { get; set; }
 
             /// <summary>
+            /// <para>The project name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>project1</para>
             /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2CA11923-2A3D-5E5A-8314-E699D2DD15DE</para>
         /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of model features.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>

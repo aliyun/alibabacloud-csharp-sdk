@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetServiceIdentityRoleResponseBody : TeaModel {
         /// <summary>
+        /// <para>关联策略。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         /// &quot;Version&quot;: &quot;1&quot;,
@@ -21,6 +23,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Policy { get; set; }
 
         /// <summary>
+        /// <para>请求ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6F629E92-F64D-502D-85AA-A9C54894CA3D</para>
         /// </summary>
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>服务账户角色名称。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AliyunServiceRoleForPaiFeatureStore</para>
         /// </summary>

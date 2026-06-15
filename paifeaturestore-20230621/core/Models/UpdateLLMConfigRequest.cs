@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class UpdateLLMConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The API key used to call the large language model (LLM).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The base URL for calling the large language model (LLM).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string BaseUrl { get; set; }
 
         /// <summary>
+        /// <para>The batch size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? BatchSize { get; set; }
 
         /// <summary>
+        /// <para>The embedding dimension. If you omit this parameter or set it to 0, the model uses its default dimension.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1024</para>
         /// </summary>
@@ -45,11 +51,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public int? EmbeddingDimension { get; set; }
 
+        /// <summary>
+        /// <para>Whether to enable data fusion.</para>
+        /// </summary>
         [NameInMap("EnableFusion")]
         [Validation(Required=false)]
         public bool? EnableFusion { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of input tokens per row.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +70,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public int? MaxTokens { get; set; }
 
         /// <summary>
+        /// <para>The model name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,11 +80,15 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string Model { get; set; }
 
+        /// <summary>
+        /// <para>The model type.</para>
+        /// </summary>
         [NameInMap("ModelType")]
         [Validation(Required=false)]
         public string ModelType { get; set; }
 
         /// <summary>
+        /// <para>The name of the large language model (LLM) call configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,6 +99,7 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of requests per second (RPS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

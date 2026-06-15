@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
 {
     public class GetLabelTableResponseBody : TeaModel {
         /// <summary>
+        /// <para>The data source ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string DatasourceId { get; set; }
 
         /// <summary>
+        /// <para>The data source name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>datasource1</para>
         /// </summary>
@@ -25,6 +29,9 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string DatasourceName { get; set; }
 
+        /// <summary>
+        /// <para>The fields in the label table.</para>
+        /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<GetLabelTableResponseBodyFields> Fields { get; set; }
@@ -37,11 +44,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             [Validation(Required=false)]
             public string AlignedEntityName { get; set; }
 
+            /// <summary>
+            /// <para>A list of field attributes.</para>
+            /// </summary>
             [NameInMap("Attributes")]
             [Validation(Required=false)]
             public List<string> Attributes { get; set; }
 
             /// <summary>
+            /// <para>The field name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>field1</para>
             /// </summary>
@@ -50,6 +62,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The field type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>INT32</para>
             /// </summary>
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         }
 
         /// <summary>
+        /// <para>The time when the label table was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
         /// </summary>
@@ -68,6 +84,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
+        /// <para>The time when the label table was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-12-15T23:24:33.132+08:00</para>
         /// </summary>
@@ -76,6 +94,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
+        /// <para>The label table name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>label_table1</para>
         /// </summary>
@@ -84,6 +104,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the creator.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12321312*****</para>
         /// </summary>
@@ -92,6 +114,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string Owner { get; set; }
 
         /// <summary>
+        /// <para>The project ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -100,6 +124,8 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The project name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>project1</para>
         /// </summary>
@@ -107,11 +133,16 @@ namespace AlibabaCloud.SDK.PaiFeatureStore20230621.Models
         [Validation(Required=false)]
         public string ProjectName { get; set; }
 
+        /// <summary>
+        /// <para>A list of related model feature names.</para>
+        /// </summary>
         [NameInMap("RelatedModelFeatures")]
         [Validation(Required=false)]
         public List<string> RelatedModelFeatures { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</para>
         /// </summary>
