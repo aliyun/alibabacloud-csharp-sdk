@@ -23,12 +23,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The type of the image component. Only image building components and image test components are supported.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Build</description></item>
-        /// <item><description>Test</description></item>
+        /// <item><description><para>Build</para>
+        /// </description></item>
+        /// <item><description><para>Test</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Build.</para>
         /// <remarks>
-        /// <para> Image building components can be used only in image building templates. Image test components can be used only in image test templates.</para>
+        /// <para>Image building components can be used only in image building templates. Image test components can be used only in image test templates.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Default value: (x + 1).0.0, in which x is the maximum major version number of the image component.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>1.0.0</para>
         /// </summary>
         [NameInMap("ComponentVersion")]
         [Validation(Required=false)]
@@ -53,7 +55,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The content of the image component. The image component consists of multiple commands. The command content cannot exceed 16 KB in size. For information about the commands supported by Image Builder and the formats of the commands, see <a href="https://help.aliyun.com/document_detail/200206.html">Commands supported by Image Builder</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RUN yum update -y</para>
+        /// <para>Tasks:</para>
+        /// <list type="bullet">
+        /// <item><description>Name: HelloWorld
+        /// Action: RunShellCommand
+        /// Properties:
+        ///   commandContent: echo hello world</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
@@ -70,9 +78,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the image component. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the image component. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <remarks>
-        /// <para> If you do not specify <c>Name</c>, the return value of <c>ImageComponentId</c> is used.</para>
+        /// <para>If you do not specify <c>Name</c>, the return value of <c>ImageComponentId</c> is used.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -123,8 +131,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The type of the operating system supported by the image component.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Linux</description></item>
-        /// <item><description>Windows</description></item>
+        /// <item><description><para>Linux</para>
+        /// </description></item>
+        /// <item><description><para>Windows</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Linux.</para>
         /// 

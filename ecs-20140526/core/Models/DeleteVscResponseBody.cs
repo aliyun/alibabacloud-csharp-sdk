@@ -10,8 +10,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteVscResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>745CEC9F-0DD7-4451-9FE7-8B752F39****</para>
         /// </summary>

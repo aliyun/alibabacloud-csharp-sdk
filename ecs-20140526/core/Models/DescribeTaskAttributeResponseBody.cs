@@ -116,8 +116,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Indicates whether the task can be canceled by calling the <a href="https://help.aliyun.com/document_detail/25624.html">CancelTask</a> operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

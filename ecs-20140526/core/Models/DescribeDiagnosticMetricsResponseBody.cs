@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The description of the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU diagnostic</para>
+            /// <para>CPU诊断</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The name of the diagnostic metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>CPU diagnostic</para>
+            /// <para>CPU诊断</para>
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -79,9 +79,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The operating system type supported by the diagnostic metric. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Windows</description></item>
-            /// <item><description>Linux</description></item>
-            /// <item><description>All: Windows and Linux</description></item>
+            /// <item><description><para>Windows</para>
+            /// </description></item>
+            /// <item><description><para>Linux</para>
+            /// </description></item>
+            /// <item><description><para>All: Windows and Linux</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

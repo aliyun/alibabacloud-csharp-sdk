@@ -20,9 +20,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The CIDR block in entry N to be added to the prefix list. Valid values of N: 0 to 200.</para>
             /// <para>Take note of the following items when you add the entries:</para>
             /// <list type="bullet">
-            /// <item><description>The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205872.html">DescribePrefixListAttributes</a> operation to query the maximum number of entries that the prefix list can contain.</description></item>
-            /// <item><description>You cannot specify duplicate CIDR blocks.</description></item>
-            /// <item><description>The CIDR blocks cannot be the same as the <c>RemoveEntry.N.Cidr</c> values.</description></item>
+            /// <item><description><para>The total number of entries in the prefix list cannot exceed the maximum number of entries you specified for the prefix list. You can call the <a href="https://help.aliyun.com/document_detail/205872.html">DescribePrefixListAttributes</a> operation to query the maximum number of entries that the prefix list can contain.</para>
+            /// </description></item>
+            /// <item><description><para>You cannot specify duplicate CIDR blocks.</para>
+            /// </description></item>
+            /// <item><description><para>The CIDR blocks cannot be the same as the <c>RemoveEntry.N.Cidr</c> values.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -106,8 +109,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The CIDR block in entry N to be deleted from the prefix list. Valid values of N: 0 to 200.</para>
             /// <para>Take note of the following items when you delete the entries:</para>
             /// <list type="bullet">
-            /// <item><description>You cannot specify duplicate CIDR blocks.</description></item>
-            /// <item><description>The CIDR blocks cannot be the same as the <c>AddEntry.N.Cidr</c> values.</description></item>
+            /// <item><description><para>You cannot specify duplicate CIDR blocks.</para>
+            /// </description></item>
+            /// <item><description><para>The CIDR blocks cannot be the same as the <c>AddEntry.N.Cidr</c> values.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

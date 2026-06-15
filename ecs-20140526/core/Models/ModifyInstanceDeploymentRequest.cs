@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to associate the instance with a dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>host: associates the instance with a dedicated host. When you start a stopped instance in economical mode, the instance remains on its original dedicated host.</description></item>
-        /// <item><description>default: does not associate the instance with a dedicated host. When you start a stopped instance in economical mode, the instance can be automatically deployed to another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</description></item>
+        /// <item><description><para>host: associates the instance with a dedicated host. When you start a stopped instance in economical mode, the instance remains on its original dedicated host.</para>
+        /// </description></item>
+        /// <item><description><para>default: does not associate the instance with a dedicated host. When you start a stopped instance in economical mode, the instance can be automatically deployed to another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</para>
+        /// </description></item>
         /// </list>
         /// <para>If you want to migrate the instance from a shared host to a dedicated host, use the default value. Default value: default.</para>
         /// 
@@ -38,8 +40,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The ID of the destination dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the most recent list of dedicated hosts.</para>
         /// <para>When you migrate an instance from a shared host to a dedicated host or between dedicated hosts, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>To migrate the instance to a specific dedicated host, specify this parameter.</description></item>
-        /// <item><description>To migrate the instance to a system-selected dedicated host, leave this parameter empty and set <c>Tenancy</c> to host.</description></item>
+        /// <item><description><para>To migrate the instance to a specific dedicated host, specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>To migrate the instance to a system-selected dedicated host, leave this parameter empty and set <c>Tenancy</c> to host.</para>
+        /// </description></item>
         /// </list>
         /// <para>For information about the automatic deployment feature, see <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</para>
         /// 
@@ -81,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to forcefully change the host of the instance when the deployment set of the instance is changed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: forcefully changes the host of the instance when the deployment set of the instance is changed. Hosts can be forcefully changed only for instances in the Running (Running) or Stopped (Stopped) state. The instances that are in the Stopped (Stopped) state do not include pay-as-you-go instances that are stopped in economical mode.</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b> If the specified instance has local disks attached, the local disks are forcefully changed when the host of the instance is forcefully changed. This may cause data loss in the local disks. Proceed with caution.</para>
         /// </description></item>
         /// <item><description><para>false: does not forcefully change the host of the instance when the deployment set of the instance is changed. You can add the instance to a deployment set only when the instance remains on the current host. When the Force parameter is set to false, the deployment set may fail to be changed.</para>
@@ -111,8 +115,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The instance type to which the instance is changed. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</para>
         /// <para>You can change the instance type of an instance when you migrate the instance to a dedicated host. The new instance type must match the type of the specified dedicated host. For more information, see <a href="https://help.aliyun.com/document_detail/68564.html">Dedicated host types</a>.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify this parameter, you must also specify <c>DedicatedHostId</c>.</description></item>
-        /// <item><description>You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.</description></item>
+        /// <item><description><para>If you specify this parameter, you must also specify <c>DedicatedHostId</c>.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot change the instance type of an instance if you use the automatic deployment feature to migrate the instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -125,8 +131,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>reboot: stops the instance before it is migrated.</description></item>
-        /// <item><description>live: migrates the instance without stopping it. If you set MigrationType to live, you must specify DedicatedHostId. In this case, you cannot change the instance type of the instance when the instance is migrated.</description></item>
+        /// <item><description><para>reboot: stops the instance before it is migrated.</para>
+        /// </description></item>
+        /// <item><description><para>live: migrates the instance without stopping it. If you set MigrationType to live, you must specify DedicatedHostId. In this case, you cannot change the instance type of the instance when the instance is migrated.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: reboot.</para>
         /// 
@@ -159,8 +167,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to remove the specified instance from the specified deployment set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>

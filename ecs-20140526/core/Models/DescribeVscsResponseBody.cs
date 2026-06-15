@@ -18,8 +18,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-**-B3DB-A3DC0DE3C83E</para>
         /// </summary>
@@ -27,9 +25,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>VSC</para>
-        /// </summary>
         [NameInMap("Vscs")]
         [Validation(Required=false)]
         public List<DescribeVscsResponseBodyVscs> Vscs { get; set; }
@@ -89,8 +84,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             }
 
             /// <summary>
-            /// <para>VSC ID。</para>
-            /// 
             /// <b>Example:</b>
             /// <para>vsc-hp34ue**g0wmycb27bwal</para>
             /// </summary>

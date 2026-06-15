@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The automatic release time of the dedicated host. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// <list type="bullet">
-        /// <item><description>The automatic release time must be at least 30 minutes later than the current time.</description></item>
-        /// <item><description>The automatic release time can be up to 3 years earlier than the current time.</description></item>
-        /// <item><description>If the value of the seconds (ss) is not 00, it is automatically set to 00.</description></item>
-        /// <item><description>If <c>AutoReleaseTime</c> is not configured, the automatic release feature is disabled, and the dedicated host will not be automatically released.</description></item>
+        /// <item><description><para>The automatic release time must be at least 30 minutes later than the current time.</para>
+        /// </description></item>
+        /// <item><description><para>The automatic release time can be up to 3 years earlier than the current time.</para>
+        /// </description></item>
+        /// <item><description><para>If the value of the seconds (ss) is not 00, it is automatically set to 00.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>AutoReleaseTime</c> is not configured, the automatic release feature is disabled, and the dedicated host will not be automatically released.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyDiskDeploymentRequest : TeaModel {
         /// <summary>
-        /// <para>The new disk category. The parameter can be used only when you migrate a disk between dedicated block storage clusters. Only ESSDs can be created in dedicated block storage clusters. Set this parameter to cloud_essd.</para>
-        /// <para>This parameter is empty by default, which indicates that the disk category is not changed.</para>
+        /// <para>The new category of the disk. This parameter is valid only when you migrate a disk between different dedicated block storage clusters. The only valid value is <c>cloud_essd</c> (ESSD disk).</para>
+        /// <para>Default value: An empty string. If you leave this parameter empty, the category of the disk remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_essd</para>
@@ -32,12 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and unavailable ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para><c>true</c>: Performs a dry run. The system checks the request for required parameters, format, service limits, and inventory. The system returns an error if the check fails, or the <c>DryRunOperation</c> error code if the check succeeds.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Sends the request. If the request passes the check, the system returns a 2xx HTTP status code and migrates the disk.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -55,12 +57,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new performance level of the ESSD. The parameter can be used only when you migrate data between dedicated block storage clusters. Valid values:</para>
+        /// <para>The new performance level of the ESSD disk. This parameter is valid only when you migrate a disk between different dedicated block storage clusters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</description></item>
-        /// <item><description>PL1: A single ESSD can deliver up to 50000 random read/write IOPS.</description></item>
+        /// <item><description><para><c>PL0</c>: A maximum of 10,000 random read/write IOPS per disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>PL1</c>: A maximum of 50,000 random read/write IOPS per disk.</para>
+        /// </description></item>
         /// </list>
-        /// <para>This parameter is empty by default, which indicates that the performance level is not modified.</para>
+        /// <para>Default value: An empty string. If you leave this parameter empty, the performance level of the disk remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -78,12 +82,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated block storage cluster to which data disk N belongs.</para>
+        /// <para>The ID of the dedicated block storage cluster.</para>
         /// <list type="bullet">
-        /// <item><description>When you migrate a disk to a dedicated block storage cluster, the<c> StorageClusterId</c> parameter must be specified.</description></item>
-        /// <item><description>When you migrate a disk to a public block storage cluster, the <c>StorageClusterId</c> parameter must be left empty.</description></item>
+        /// <item><description><para>To migrate the disk to a dedicated block storage cluster, specify <c>StorageClusterId</c>.</para>
+        /// </description></item>
+        /// <item><description><para>To migrate the disk to a public cloud block storage cluster, leave <c>StorageClusterId</c> empty.</para>
+        /// </description></item>
         /// </list>
-        /// <para>This parameter is empty by default, which indicates that the disk is migrated to a public block storage cluster.</para>
+        /// <para>Default value: An empty string. If you leave this parameter empty, the disk is migrated to a public cloud block storage cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dbsc-cn-c4d2uea****</para>

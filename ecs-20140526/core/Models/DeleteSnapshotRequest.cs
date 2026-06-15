@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to force delete the snapshot that has been used to create cloud disks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: force deletes the snapshot. After the snapshot is force deleted, the cloud disks created from the snapshot cannot be re-initialized.</description></item>
-        /// <item><description>false: does not force delete the snapshot.</description></item>
+        /// <item><description><para>true: force deletes the snapshot. After the snapshot is force deleted, the cloud disks created from the snapshot cannot be re-initialized.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not force delete the snapshot.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

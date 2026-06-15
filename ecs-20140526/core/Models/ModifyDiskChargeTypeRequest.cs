@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</description></item>
-        /// <item><description>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <b>Expenses and Costs console</b>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.</description></item>
+        /// <item><description><para>true (default): The payment is automatically completed. Maintain sufficient balance in your account. Otherwise, your order becomes invalid and must be canceled.</para>
+        /// </description></item>
+        /// <item><description><para>false: An order is generated but no payment is made. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, log on to the <b>Expenses and Costs console</b>, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Orders page</a>, and pay for the order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,11 +38,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The new billing method of the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</description></item>
-        /// <item><description>PostPaid: changes the billing method from subscription to pay-as-you-go.</description></item>
+        /// <item><description><para>PrePaid (default): changes the billing method from pay-as-you-go to subscription.</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: changes the billing method from subscription to pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk is automatically synchronized with that of the associated ECS instance.</para>
+        /// <para>When you change the billing method of a pay-as-you-go disk to subscription, the billing cycle of the disk is automatically synchronized with that of the associated ECS instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[“d-bp67acfmxazb4ph****”, “d-bp67acfmxazb4pi****”, … “d-bp67acfmxazb4pj****”]</para>
+        /// <para>[&quot;d-bp67acfmxazb4ph****&quot;, &quot;d-bp67acfmxazb4pi****&quot;, … &quot;d-bp67acfmxazb4pj****&quot;]</para>
         /// </summary>
         [NameInMap("DiskIds")]
         [Validation(Required=false)]

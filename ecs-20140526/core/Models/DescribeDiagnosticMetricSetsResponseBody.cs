@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The description of the diagnostic metric set.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>connection issue diagnostics</para>
+            /// <para>远程连接问题诊断</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The name of the diagnostic metric set.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>connection issue diagnostics</para>
+            /// <para>远程连接问题诊断</para>
             /// </summary>
             [NameInMap("MetricSetName")]
             [Validation(Required=false)]
@@ -66,8 +66,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The type of the diagnostic metric set. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>User: user-defined diagnostic metric set</description></item>
-            /// <item><description>Common: common diagnostic metric set</description></item>
+            /// <item><description><para>User: user-defined diagnostic metric set</para>
+            /// </description></item>
+            /// <item><description><para>Common: common diagnostic metric set</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The maximum number of entries to return on each page. Valid values: 10 to 500.</para>
         /// <para>Default values:</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</description></item>
-        /// <item><description>If this parameter is set to a value greater than 500, the default value is 500.</description></item>
+        /// <item><description><para>If this parameter is not specified or if this parameter is set to a value less than 10, the default value is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is set to a value greater than 500, the default value is 500.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Pages start from page 1.</para>
         /// <para>Default value: 1.</para>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Valid values: 1 to 1000.</para>
         /// <para>Default value: 10.</para>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -174,8 +176,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the security group to which the secondary ENI belongs.</para>
         /// <list type="bullet">
-        /// <item><description>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</description></item>
-        /// <item><description>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <c>SecurityGroupId</c> parameter.</description></item>
+        /// <item><description><para>To query the details of secondary ENIs based on the ID of a security group, specify this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>To query the details of primary ENIs based on the ID of a security group, call the <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> operation and specify the <c>SecurityGroupId</c> parameter.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -198,11 +202,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The state of the ENI. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Available: The ENI is available.</description></item>
-        /// <item><description>Attaching: The ENI is being attached to an instance.</description></item>
-        /// <item><description>InUse: The ENI is attached to an instance.</description></item>
-        /// <item><description>Detaching: The ENI is being detached from an instance.</description></item>
-        /// <item><description>Deleting: The ENI is being deleted.</description></item>
+        /// <item><description><para>Available: The ENI is available.</para>
+        /// </description></item>
+        /// <item><description><para>Attaching: The ENI is being attached to an instance.</para>
+        /// </description></item>
+        /// <item><description><para>InUse: The ENI is attached to an instance.</para>
+        /// </description></item>
+        /// <item><description><para>Detaching: The ENI is being detached from an instance.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting: The ENI is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that ENIs in all states are queried.</para>
         /// 
@@ -246,8 +255,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the ENI. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Primary</description></item>
-        /// <item><description>Secondary</description></item>
+        /// <item><description><para>Primary</para>
+        /// </description></item>
+        /// <item><description><para>Secondary</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that both primary and secondary ENIs are queried.</para>
         /// 
@@ -272,7 +283,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The ID of the virtual private cloud (VPC) to which the elastic network interface (ENI) belongs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vsw-bp16usj2p27htro3****</para>
+        /// <para>vpc-bp1j7w3gc1cexjqd****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]

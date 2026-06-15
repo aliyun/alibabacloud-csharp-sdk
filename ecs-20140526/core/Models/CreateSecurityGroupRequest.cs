@@ -80,8 +80,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: basic security group</description></item>
-        /// <item><description>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</description></item>
+        /// <item><description><para>normal: basic security group</para>
+        /// </description></item>
+        /// <item><description><para>enterprise: advanced security group For more information, see <a href="https://help.aliyun.com/document_detail/120621.html">Advanced security groups</a>.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: normal.</para>
         /// 

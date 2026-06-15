@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</description></item>
-        /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para>true: performs only a dry run. The system checks your AccessKey pair, the permissions of the RAM user, and the required parameters. If the request passes the dry run, the DryRunOperation error code is returned. Otherwise, an error message is returned.</para>
+        /// </description></item>
+        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -39,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to query the capacity of the security group. If you set this parameter to True, the <c>EcsCount</c> and <c>AvailableInstanceAmount</c> values in the response are valid.</para>
         /// <remarks>
-        /// <para> This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,8 +66,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>vpc</description></item>
-        /// <item><description>classic</description></item>
+        /// <item><description><para>vpc</para>
+        /// </description></item>
+        /// <item><description><para>classic</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +99,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -182,8 +186,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: basic security group</description></item>
-        /// <item><description>enterprise: advanced security group</description></item>
+        /// <item><description><para>normal: basic security group</para>
+        /// </description></item>
+        /// <item><description><para>enterprise: advanced security group</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>If you do not specify this parameter, both basic and advanced security groups are queried.</para>
@@ -199,8 +205,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to query managed security groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -38,8 +38,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The policy for migrating the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Migrate: The instances are migrated to another physical machine and then restarted.</description></item>
-        /// <item><description>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</description></item>
+        /// <item><description><para>Migrate: The instances are migrated to another physical machine and then restarted.</para>
+        /// </description></item>
+        /// <item><description><para>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</para>
+        /// </description></item>
         /// </list>
         /// <para>If the dedicated host has cloud disks attached, the default value is Migrate.</para>
         /// <para>If the dedicated host has local disks attached, the default value is Stop.</para>
@@ -54,8 +56,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you do not specify <b>DedicatedHostId</b> when you create an instance on a dedicated host, Alibaba Cloud automatically selects a dedicated host from the resource pool to host the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: adds the dedicated host to the resource pool for automatic deployment.</description></item>
-        /// <item><description>off: does not add the dedicated host to the resource pool for automatic deployment.</description></item>
+        /// <item><description><para>on: adds the dedicated host to the resource pool for automatic deployment.</para>
+        /// </description></item>
+        /// <item><description><para>off: does not add the dedicated host to the resource pool for automatic deployment.</para>
+        /// </description></item>
         /// </list>
         /// <para>For information about automatic deployment, see <a href="https://help.aliyun.com/document_detail/118938.html">Functions and features</a>.</para>
         /// 
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostId { get; set; }
 
         /// <summary>
-        /// <para>The name of the dedicated host. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the dedicated host. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDedicatedHostName</para>

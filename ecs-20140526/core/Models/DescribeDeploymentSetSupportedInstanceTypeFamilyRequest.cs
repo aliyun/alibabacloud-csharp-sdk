@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Availability: high availability strategy</description></item>
-        /// <item><description>AvailabilityGroup: high availability group strategy</description></item>
-        /// <item><description>LowLatency: low latency strategy</description></item>
+        /// <item><description><para>Availability: high availability strategy</para>
+        /// </description></item>
+        /// <item><description><para>AvailabilityGroup: high availability group strategy</para>
+        /// </description></item>
+        /// <item><description><para>LowLatency: low latency strategy</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Availability.</para>
         /// 

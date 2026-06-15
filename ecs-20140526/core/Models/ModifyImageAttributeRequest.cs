@@ -10,15 +10,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyImageAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The new boot mode of the image. Valid values:</para>
+        /// <para>The boot mode of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BIOS: BIOS mode</description></item>
-        /// <item><description>UEFI: Unified Extensible Firmware Interface (UEFI) mode</description></item>
-        /// <item><description>UEFI-Preferred: BIOS mode and UEFI mode</description></item>
+        /// <item><description><para><c>BIOS</c>: BIOS boot mode.</para>
+        /// </description></item>
+        /// <item><description><para><c>UEFI</c>: UEFI boot mode.</para>
+        /// </description></item>
+        /// <item><description><para><c>UEFI-Preferred</c>: UEFI-preferred boot mode.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Before you change this parameter, make sure that you are familiar with the boot modes supported by the image. If you specify a boot mode that is not supported by the image, ECS instances created from the image cannot start as expected. For information about the boot modes of images, see the <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes of custom images</a> section of the &quot;Best practices for ECS instance boot modes&quot; topic.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>To prevent startup failures, verify the boot modes that the image supports before you change its boot mode. For more information, see <a href="~~2244655#b9caa9b8bb1wf~~">Boot modes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BIOS</para>
@@ -28,8 +32,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string BootMode { get; set; }
 
         /// <summary>
-        /// <para>The new description of the custom image. The description must be 2 to 256 characters in length It cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></para>
-        /// <para>This parameter is empty by default, which specifies that the original description is retained.</para>
+        /// <para>The new description of the custom image. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>If you do not specify this parameter, the original description is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -38,12 +42,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run to check whether the request is valid. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>true</c>: performs a dry run to check the request for validity, syntax, and required permissions. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description><c>false</c> (default): sends the request. If the request passes the validation checks, the operation is performed.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The attributes of the custom image.</para>
+        /// <para>The features of the image.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -53,13 +64,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyImageAttributeRequestFeatures Features { get; set; }
         public class ModifyImageAttributeRequestFeatures : TeaModel {
             /// <summary>
-            /// <para>The image metadata access mode. Valid values:</para>
+            /// <para>The metadata access mode of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>v1: You cannot set the image metadata access mode to security hardening when you create instances from the image.</para>
+            /// <item><description><para><c>v1</c>: When you create an ECS instance from this image, you cannot set the metadata access mode to <c>enforced mode</c>.</para>
             /// </description></item>
-            /// <item><description><para>v2: You can set the image metadata access mode to security hardening when you create instances from the image.</para>
-            /// <para>**</para>
-            /// <para><b>Note</b> You cannot change the value of ImdsSupport from v2 to v1 for an image. To change the value of ImdsSupport from v2 to v1 for an image, use the snapshots associated with the image to create an image and set ImdsSupport to v1 for the new image.</para>
+            /// <item><description><para><c>v2</c>: When you create an ECS instance from this image, you can set the metadata access mode to <c>enforced mode</c>.</para>
+            /// <remarks>
+            /// <para>Notice: </para>
+            /// </remarks>
+            /// <para>You cannot change the value of <c>ImdsSupport</c> from <c>v2</c> to <c>v1</c>. To use the <c>v1</c> mode, create a new image from a snapshot that is associated with the image and set <c>ImdsSupport</c> to <c>v1</c>.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -71,10 +84,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string ImdsSupport { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the image supports the Non-Volatile Memory Express (NVMe) protocol. Valid values:</para>
+            /// <para>Specifies whether the image supports NVMe. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>supported: The image supports the NVMe protocol. Instances created from the image also support the NVMe protocol.</description></item>
-            /// <item><description>unsupported: The image does not support the NVMe protocol. Instances created from the image do not support the NVMe protocol.</description></item>
+            /// <item><description><para><c>supported</c>: The image supports NVMe. Instances that you create from this image support the NVMe protocol.</para>
+            /// </description></item>
+            /// <item><description><para><c>unsupported</c>: The image does not support NVMe. Instances that you create from this image do not support the NVMe protocol.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -90,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. <a href="http://https://%E3%80%82%E3%80%81%EF%BC%88.%EF%BC%89%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82">It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</a></para>
+        /// <para>The name of the image family. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character. The name cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
         /// <para>By default, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
@@ -112,8 +127,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with acs: or aliyun. <a href="http://https://%E3%80%82%E3%80%81%EF%BC%88.%EF%BC%89%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82">It cannot contain http:// or https://. It can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</a></para>
-        /// <para>By default, this parameter is empty. In this case, the original name is retained.</para>
+        /// <para>The name of the custom image. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character. The name cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>. It can contain digits, periods (.), colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>If you do not specify this parameter, the original name is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testImageName</para>
@@ -123,11 +138,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The type of the license that is used to activate the operating system after the image is imported. Set the value to BYOL.</para>
-        /// <para>BYOL: The license that comes with the source operating system is used. When you use the BYOL license, make sure that your license key is supported by Alibaba Cloud.</para>
+        /// <para>The license type for activating the operating system after you import the image. The only valid value is <c>BYOL</c>.</para>
+        /// <para><c>BYOL</c>: Bring Your Own License. If you use the BYOL license type, you must ensure that your license key is supported for use on Alibaba Cloud.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Auto</para>
+        /// <para>BYOL</para>
         /// </summary>
         [NameInMap("LicenseType")]
         [Validation(Required=false)]
@@ -142,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the custom image is located. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -161,13 +176,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The new state of the custom image. Valid values:</para>
+        /// <para>The image status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Deprecated: puts the image into the Deprecated state. If the custom image is shared, you must unshare it before you can put it into the Deprecated state. Images in the Deprecated state cannot be shared or copied, but can be used to create instances or replace system disks.</description></item>
-        /// <item><description>Available: puts the image into the Available state. You can restore an image from the Deprecated state to the Available state.</description></item>
+        /// <item><description><para><c>Deprecated</c>: Deprecates the image. If a custom image that you want to deprecate is shared, you must unshare it first. You cannot share or copy a deprecated image. However, you can use the image to create an instance or replace a system disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>Available</c>: Makes the image available. You can change the status of a deprecated image to <c>Available</c>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you want to roll back a custom image in the image family to a previous version, you can put the latest available custom image into the Deprecated state. If no custom images are in the Available state within the image family, an image family cannot be used to create instances. Proceed with caution if only a single custom image is in the Available state within the image family.</para>
+        /// <para>However, if this is the only available custom image in the image family, deprecating it prevents the creation of instances from any image in that family. Use this option with caution.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

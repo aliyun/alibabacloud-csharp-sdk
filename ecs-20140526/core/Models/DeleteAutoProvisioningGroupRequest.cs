@@ -50,11 +50,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to release instances in the auto provisioning group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> By default, this parameter inherits the value of <c>TerminateInstances</c> that you specified when you call the <c>CreateAutoProvisioningGroup</c> operation to create an auto provisioning group. You can also change the value of <c>TerminateInstances</c> when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.</para>
+        /// <para>By default, this parameter inherits the value of <c>TerminateInstances</c> that you specified when you call the <c>CreateAutoProvisioningGroup</c> operation to create an auto provisioning group. You can also change the value of <c>TerminateInstances</c> when you call the DeleteAutoProvisioningGroup operation to delete the auto provisioning group.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

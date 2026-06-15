@@ -16,8 +16,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The ID of the private pool. Set the value to the ID of the elasticity assurance or capacity reservation that generates the private pool.</para>
             /// <list type="bullet">
-            /// <item><description>This parameter is required when <c>PrivatePoolOptions.MatchCriteria</c> is set to <c>Target</c>.</description></item>
-            /// <item><description>This parameter must be empty when <c>PrivatePoolOptions.MatchCriteria</c> is set to <c>Open</c> or <c>None</c>.</description></item>
+            /// <item><description><para>This parameter is required when <c>PrivatePoolOptions.MatchCriteria</c> is set to <c>Target</c>.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter must be empty when <c>PrivatePoolOptions.MatchCriteria</c> is set to <c>Open</c> or <c>None</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -30,9 +32,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The new type of private pool. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Open: open private pool. The system matches the instance with an open private pool. If no matching open private pools exist, the system uses resources in the public pool to start the instance.</description></item>
-            /// <item><description>Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. You must use <c>PrivatePoolOptions.Id</c> to specify the ID of a private pool.</description></item>
-            /// <item><description>None: no private pool. The capacity in private pools is not used to start the instance.</description></item>
+            /// <item><description><para>Open: open private pool. The system matches the instance with an open private pool. If no matching open private pools exist, the system uses resources in the public pool to start the instance.</para>
+            /// </description></item>
+            /// <item><description><para>Target: specified private pool. The system uses the capacity in a specified private pool to start the instance. If the specified private pool is unavailable, the instance cannot be started. You must use <c>PrivatePoolOptions.Id</c> to specify the ID of a private pool.</para>
+            /// </description></item>
+            /// <item><description><para>None: no private pool. The capacity in private pools is not used to start the instance.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class StartTerminalSessionShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Ensures the idempotence of the request. Generate a unique parameter value from your client to guarantee uniqueness across different requests. <b>ClientToken</b> supports only ASCII characters and must not exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -16,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The command to run after the session is initiated. The command length cannot exceed 512 characters.</para>
         /// <remarks>
-        /// <para> If you specify the <c>CommandLine</c> parameter, you cannot specify the <c>PortNumber</c> or <c>TargetServer</c> parameter.</para>
+        /// <para>If you specify the <c>CommandLine</c> parameter, you cannot specify the <c>PortNumber</c> or <c>TargetServer</c> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,8 +35,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of the WebSocket URL required to connect to the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Internet (default)</description></item>
-        /// <item><description>Intranet</description></item>
+        /// <item><description><para>Internet (default)</para>
+        /// </description></item>
+        /// <item><description><para>Intranet</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,6 +48,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string ConnectionType { get; set; }
 
+        /// <summary>
+        /// <para>Session encryption configuration items.</para>
+        /// </summary>
         [NameInMap("EncryptionOptions")]
         [Validation(Required=false)]
         public string EncryptionOptionsShrink { get; set; }
@@ -60,6 +71,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The password name of the user when using Session Manager on a Windows instance. The length cannot exceed 255 characters.<br>
+        /// When you want to use Session Manager on a Windows instance as a non-default user (System), you must pass both Username and this parameter. To reduce the risk of password disclosure, store the plaintext password in the parameter repository of CloudOps Orchestration Service, and pass only the password name here. For more information, see <a href="https://help.aliyun.com/document_detail/186828.html">encrypted parameters</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>axtSecretPassword</para>
+        /// </summary>
         [NameInMap("PasswordName")]
         [Validation(Required=false)]
         public string PasswordName { get; set; }
@@ -97,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IP address of the instance. You can use the IP address to access the destination service in a virtual private cloud (VPC).</para>
         /// <remarks>
-        /// <para> If this parameter is not empty, <c>PortNumber</c> specifies the port number that is used by the managed instance to access the destination service in the VPC.</para>
+        /// <para>If this parameter is not empty, <c>PortNumber</c> specifies the port number that is used by the managed instance to access the destination service in the VPC.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

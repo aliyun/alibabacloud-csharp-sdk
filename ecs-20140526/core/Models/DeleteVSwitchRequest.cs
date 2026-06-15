@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID of the VSwitch. You can call the <del>DescribeRegions</del> operation to query the most recent list of regions.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -30,6 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VSwitch that you want to delete.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VSwitchId")]

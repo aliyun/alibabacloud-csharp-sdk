@@ -56,8 +56,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to add the dedicated host to the resource pool for automatic deployment. If you create an ECS instance on a dedicated host without specifying the <b>DedicatedHostId</b> parameter, Alibaba Cloud selects a dedicated host from the resource pool to host the instance. For more information, see <a href="https://help.aliyun.com/document_detail/118938.html">Automatic deployment</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: adds the dedicated host to the resource pool for automatic deployment.</description></item>
-        /// <item><description>off: does not add the dedicated host to the resource pool for automatic deployment.</description></item>
+        /// <item><description><para>on: adds the dedicated host to the resource pool for automatic deployment.</para>
+        /// </description></item>
+        /// <item><description><para>off: does not add the dedicated host to the resource pool for automatic deployment.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: on.</para>
         /// <remarks>
@@ -119,8 +121,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method of the dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient account balance or credits. Otherwise, <c>InvalidPayMethod</c> is returned.</description></item>
-        /// <item><description>PostPaid: pay-as-you-go.</description></item>
+        /// <item><description><para>PrePaid: subscription. If you set this parameter to PrePaid, make sure that you have sufficient account balance or credits. Otherwise, <c>InvalidPayMethod</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: PostPaid.</para>
         /// 
@@ -217,8 +221,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The subscription duration of the dedicated host. The <c>Period</c> parameter is required and takes effect only when the <c>ChargeType</c> parameter is set to <c>PrePaid</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
-        /// <item><description>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description><para>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -231,8 +237,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The unit of the subscription duration of the dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Month.</para>
         /// 

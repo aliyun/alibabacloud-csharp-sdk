@@ -12,12 +12,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The names of SSH key pairs. The value can be a JSON array that consists of up to 100 SSH key pair names. Separate the names with commas (,).</para>
         /// <remarks>
-        /// <para> Before you delete an SSH key pair, you can call the <a href="https://help.aliyun.com/document_detail/51773.html">DescribeKeyPairs</a> operation to query existing key pairs.</para>
+        /// <para>Before you delete an SSH key pair, you can call the <a href="https://help.aliyun.com/document_detail/51773.html">DescribeKeyPairs</a> operation to query existing key pairs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;skp-bp67acfmxazb41****&quot;, &quot;skp-bp67acfmxazb42****&quot;, … &quot;skp-bp67acfmxazb4p3***&quot;]</para>
+        /// <para>[&quot;TestKeyPairName-1&quot;, &quot;TestKeyPairName-2&quot;, … &quot;TestKeyPairName-100&quot;]</para>
         /// </summary>
         [NameInMap("KeyPairNames")]
         [Validation(Required=false)]

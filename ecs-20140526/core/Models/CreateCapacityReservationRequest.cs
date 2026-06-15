@@ -14,10 +14,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public CreateCapacityReservationRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class CreateCapacityReservationRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The type of the private pool to generate after the capacity reservation takes effect. Valid values:</para>
+            /// <para>The type of the private pool that is generated after the capacity reservation takes effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Open: open private pool</description></item>
-            /// <item><description>Target: targeted private pool</description></item>
+            /// <item><description><para>Open: open mode. When you launch an instance, it is automatically matched with the capacity of an open private pool. If no suitable private pool capacity is available, the instance is launched by using public pool resources.</para>
+            /// </description></item>
+            /// <item><description><para>Target: targeted mode. The instance is launched by using the capacity of a specified private pool. If the capacity is unavailable, the instance fails to launch.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: Open.</para>
             /// 
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string MatchCriteria { get; set; }
 
             /// <summary>
-            /// <para>The capacity reservation name. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+            /// <para>The name of the capacity reservation. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>crpTestName</para>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <c>token</c> can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>A client-generated token that ensures the request is idempotent. You can use the same token to retry a request. The <c>ClientToken</c> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe637760</para>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The description of the capacity reservation. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// <para>This parameter is empty by default.</para>
+        /// <para>Default value: empty string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is description.</para>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the capacity reservation expires. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// <para>The end time of the capacity reservation. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-10-30T06:32:00Z</para>
@@ -74,8 +76,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The release mode of the capacity reservation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Limited: The capacity reservation is automatically released at a specified time. If you specify this parameter, you must specify the <c>EndTime</c> parameter.</description></item>
-        /// <item><description>Unlimited: The capacity reservation is manually released. The capacity reservation can be released anytime.</description></item>
+        /// <item><description><para>Limited: The capacity reservation is automatically released at a specific time. You must also specify the <c>EndTime</c> parameter.</para>
+        /// </description></item>
+        /// <item><description><para>Unlimited: The capacity reservation must be released manually.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTimeType { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances for which the capacity of an instance type is reserved.</para>
+        /// <para>The number of instances of the specified instance type for which to reserve capacity.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceChargeType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. You can create a capacity reservation to reserve the capacity of only one instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the instance types provided by ECS.</para>
+        /// <para>The instance type for which to reserve capacity. You can call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to view the instance types that ECS provides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,14 +124,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The operating system of the image used by the instance. This parameter corresponds to the <c>Platform</c> parameter of regional reserved instances. If the operating system of a capacity reservation matches the operating system of a regional reserved instance, you can apply the regional reserved instance to offset fees of the unused capacity of the capacity reservation. Valid values:</para>
+        /// <para>The operating system of the image used by the instance. This parameter corresponds to the <c>Platform</c> parameter of a regional reserved instance. If this platform matches the platform of a regional reserved instance, the regional reserved instance can be used to offset the costs of unused capacity in the reservation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Windows: Windows Server operating system</description></item>
-        /// <item><description>Linux: Linux and UNIX-like operating system</description></item>
+        /// <item><description><para>Windows: Windows Server operating systems.</para>
+        /// </description></item>
+        /// <item><description><para>Linux: Linux and Unix-like operating systems.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Linux.</para>
         /// <remarks>
-        /// <para>This parameter is unavailable.</para>
+        /// <para>This parameter is not yet available for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region in which to create the capacity reservation. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region in which to create the capacity reservation. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -149,7 +155,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which you want to assign the capacity reservation.</para>
+        /// <para>The ID of the resource group to which the capacity reservation belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -167,9 +173,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The mode in which the capacity reservation takes effect. You can call the CreateCapacityReservation operation to create only immediate capacity reservations.</para>
+        /// <para>The time when the capacity reservation takes effect. The capacity reservation takes effect immediately after it is created.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the capacity reservation immediately takes effect.</para>
+        /// <para>If you do not specify this parameter, the capacity reservation takes effect immediately.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -187,7 +193,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateCapacityReservationRequestTag> Tag { get; set; }
         public class CreateCapacityReservationRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>acs:</c> or <c>aliyun</c>.</para>
+            /// <para>The tag key of the capacity reservation. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -197,7 +203,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>acs:</c>.</para>
+            /// <para>The tag value of the capacity reservation. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

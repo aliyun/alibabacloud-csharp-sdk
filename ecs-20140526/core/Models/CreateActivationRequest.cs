@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateActivationRequest : TeaModel {
+        /// <summary>
+        /// <para>Ensures the idempotence of the request. Generate a unique value for this parameter from your client to guarantee that the value differs across requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }

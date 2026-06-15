@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The description of the diagnostic metric set.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>connection diagnostics</para>
+        /// <para>远程连接诊断</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

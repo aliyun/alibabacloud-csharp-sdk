@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform the dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request is checked and is not executed. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the check fails, an error is returned. If the check is passed, the error code DryRunOperation is returned.</description></item>
-        /// <item><description>false (default): sends the request. If the request passes the check, the request is directly executed.</description></item>
+        /// <item><description><para>true: The request is checked and is not executed. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the check fails, an error is returned. If the check is passed, the error code DryRunOperation is returned.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): sends the request. If the request passes the check, the request is directly executed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

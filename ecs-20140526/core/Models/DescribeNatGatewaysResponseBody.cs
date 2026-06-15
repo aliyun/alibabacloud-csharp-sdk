@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNatGatewaysResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the NAT gateways.</para>
+        /// </summary>
         [NameInMap("NatGateways")]
         [Validation(Required=false)]
         public DescribeNatGatewaysResponseBodyNatGateways NatGateways { get; set; }
@@ -81,18 +84,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>The page number.</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries to return per page.</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The unique ID of the request.</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of entries that match the query.</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

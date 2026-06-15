@@ -111,9 +111,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The state of snapshot-consistent group N. Valid values of the second N: 1, 2, and 3. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>progressing: The snapshot-consistent group is being created.</description></item>
-        /// <item><description>accomplished: The snapshot-consistent group is created.</description></item>
-        /// <item><description>failed: The snapshot-consistent group fails to be created.</description></item>
+        /// <item><description><para>progressing: The snapshot-consistent group is being created.</para>
+        /// </description></item>
+        /// <item><description><para>accomplished: The snapshot-consistent group is created.</para>
+        /// </description></item>
+        /// <item><description><para>failed: The snapshot-consistent group fails to be created.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

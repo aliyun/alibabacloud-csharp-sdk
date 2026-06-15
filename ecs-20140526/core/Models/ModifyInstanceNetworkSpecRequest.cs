@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to assign a public IP address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -27,8 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: After you modify the bandwidth configurations, the payment is automatically completed. Make sure that your account balance is sufficient before you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.</description></item>
-        /// <item><description>false: After you modify the bandwidth configurations, an order is generated but the payment is not automatically completed. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</description></item>
+        /// <item><description><para>true: After you modify the bandwidth configurations, the payment is automatically completed. Make sure that your account balance is sufficient before you set AutoPay to true. If your account balance is insufficient, your order cannot be paid in the ECS console and becomes invalid. You must cancel the order.</para>
+        /// </description></item>
+        /// <item><description><para>false: After you modify the bandwidth configurations, an order is generated but the payment is not automatically completed. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to pay for the order.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The end time of the temporary bandwidth upgrade. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddThhZ format. The time must be in UTC and accurate to <b>hours</b> (hh).</para>
         /// <remarks>
-        /// <para> The interval between the end time and start time of temporary bandwidth upgrade must be greater than or equal to 3 hours.</para>
+        /// <para>The interval between the end time and start time of temporary bandwidth upgrade must be greater than or equal to 3 hours.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,8 +92,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum inbound bandwidth from the Internet. Unit: Mbit/s. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</description></item>
-        /// <item><description>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <c>InternetMaxBandwidthOut</c> value and the default value is the <c>InternetMaxBandwidthOut</c> value.</description></item>
+        /// <item><description><para>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10 and the default value is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the <c>InternetMaxBandwidthOut</c> value and the default value is the <c>InternetMaxBandwidthOut</c> value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,13 +112,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>Valid values when the pay-by-bandwidth billing method for network usage is used:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values for subscription instances: 0 to 200.</description></item>
-        /// <item><description>Valid values for pay-as-you-go instances: 0 to 100.</description></item>
+        /// <item><description><para>Valid values for subscription instances: 0 to 200.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values for pay-as-you-go instances: 0 to 100.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The maximum outbound bandwidth of a single instance is also limited by the <b>network baseline bandwidth (Gbit/s) and network burst bandwidth (Gbit/s)</b> of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// <para>The maximum outbound bandwidth of a single instance is also limited by the <b>network baseline bandwidth (Gbit/s) and network burst bandwidth (Gbit/s)</b> of the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,8 +133,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method for network usage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayByBandwidth</description></item>
-        /// <item><description>PayByTraffic</description></item>
+        /// <item><description><para>PayByBandwidth</para>
+        /// </description></item>
+        /// <item><description><para>PayByTraffic</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>When the <b>pay-by-traffic</b> billing method for network usage is used, the maximum inbound and outbound bandwidth values are used as the upper limits of bandwidths instead of guaranteed values. In scenarios where demand outstrips resource supplies, these maximum bandwidths may be limited. If you want guaranteed bandwidths for your instance, use the <b>pay-by-bandwidth</b> billing method for network usage.</para>

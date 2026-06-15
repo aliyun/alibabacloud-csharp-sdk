@@ -12,12 +12,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically complete the payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables automatic payment. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</description></item>
-        /// <item><description>false: disables automatic payment. An order is generated but no payment is made.</description></item>
+        /// <item><description><para>true: enables automatic payment. Maintain a sufficient account balance. Otherwise, your order becomes invalid and is canceled.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables automatic payment. An order is generated but no payment is made.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
-        /// <para> If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
+        /// <para>If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ECS console to pay for the order.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,8 +42,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -55,8 +59,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to change the billing method of all data disks on the instance from pay-as-you-go to subscription. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -70,8 +76,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The new billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription</description></item>
-        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// <item><description><para>PrePaid: subscription</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: PrePaid.</para>
         /// 
@@ -96,8 +104,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to return cost details of the order after the billing method is changed from subscription to pay-as-you-go. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class TerminatePhysicalConnectionRequest : TeaModel {
+        /// <summary>
+        /// <para>A client-generated token to ensure the idempotency of the request. The token must be unique across requests and can contain only ASCII characters, with a maximum length of 64 characters.</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -22,6 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the physical connection.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PhysicalConnectionId")]
@@ -29,6 +33,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the physical connection is deployed.\
+        /// You can call the <c>DescribeRegions</c> operation to get the most recent region list.\</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
@@ -43,6 +49,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is not used.</para>
+        /// </summary>
         [NameInMap("UserCidr")]
         [Validation(Required=false)]
         public string UserCidr { get; set; }

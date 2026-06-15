@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Indicates whether the managed instance is connected. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The managed instance is connected. You can manage the instance by using Cloud Assistant.</description></item>
-            /// <item><description>false: The managed instance is not connected. The managed instance may be down or Cloud Assistant Agent may be incorrectly installed.</description></item>
+            /// <item><description><para>true: The managed instance is connected. You can manage the instance by using Cloud Assistant.</para>
+            /// </description></item>
+            /// <item><description><para>false: The managed instance is not connected. The managed instance may be down or Cloud Assistant Agent may be incorrectly installed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

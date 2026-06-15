@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to remove all tags from the resource. This parameter takes effect only if you do not specify TagKey.N. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -65,23 +67,40 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: ECS instance</description></item>
-        /// <item><description>disk: disk</description></item>
-        /// <item><description>snapshot: snapshot</description></item>
-        /// <item><description>image: image</description></item>
-        /// <item><description>securitygroup: security group</description></item>
-        /// <item><description>volume: storage volume</description></item>
-        /// <item><description>eni: elastic network interface (ENI)</description></item>
-        /// <item><description>ddh: dedicated host</description></item>
-        /// <item><description>ddhcluster: dedicated host cluster</description></item>
-        /// <item><description>keypair: SSH key pair</description></item>
-        /// <item><description>launchtemplate: launch template</description></item>
-        /// <item><description>reservedinstance: reserved instance</description></item>
-        /// <item><description>snapshotpolicy: automatic snapshot policy</description></item>
-        /// <item><description>elasticityassurance: elasticity assurance</description></item>
-        /// <item><description>capacityreservation: capacity reservation</description></item>
-        /// <item><description>command: Cloud Assistant command</description></item>
-        /// <item><description>invocation: Cloud Assistant command execution result</description></item>
+        /// <item><description><para>instance: ECS instance</para>
+        /// </description></item>
+        /// <item><description><para>disk: disk</para>
+        /// </description></item>
+        /// <item><description><para>snapshot: snapshot</para>
+        /// </description></item>
+        /// <item><description><para>image: image</para>
+        /// </description></item>
+        /// <item><description><para>securitygroup: security group</para>
+        /// </description></item>
+        /// <item><description><para>volume: storage volume</para>
+        /// </description></item>
+        /// <item><description><para>eni: elastic network interface (ENI)</para>
+        /// </description></item>
+        /// <item><description><para>ddh: dedicated host</para>
+        /// </description></item>
+        /// <item><description><para>ddhcluster: dedicated host cluster</para>
+        /// </description></item>
+        /// <item><description><para>keypair: SSH key pair</para>
+        /// </description></item>
+        /// <item><description><para>launchtemplate: launch template</para>
+        /// </description></item>
+        /// <item><description><para>reservedinstance: reserved instance</para>
+        /// </description></item>
+        /// <item><description><para>snapshotpolicy: automatic snapshot policy</para>
+        /// </description></item>
+        /// <item><description><para>elasticityassurance: elasticity assurance</para>
+        /// </description></item>
+        /// <item><description><para>capacityreservation: capacity reservation</para>
+        /// </description></item>
+        /// <item><description><para>command: Cloud Assistant command</para>
+        /// </description></item>
+        /// <item><description><para>invocation: Cloud Assistant command execution result</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

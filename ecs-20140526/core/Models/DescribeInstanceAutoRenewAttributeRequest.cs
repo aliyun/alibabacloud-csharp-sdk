@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceAutoRenewAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instances. You can specify up to 100 subscription instance IDs in a single request. Separate multiple instance IDs with commas (,).</para>
+        /// <para>The instance IDs. You can specify up to 100 subscription instances at a time. Separate multiple instance IDs with commas.</para>
         /// <remarks>
-        /// <para><c>InstanceId</c> and <c>RenewalStatus</c> cannot be empty at the same time.</para>
+        /// <para>You must specify either <c>InstanceId</c> or <c>RenewalStatus</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,8 +31,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The number of the page to return.</para>
+        /// <para>Minimum value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,11 +66,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal state of the instance. Valid values:</para>
+        /// <para>The auto-renewal status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AutoRenewal: Auto-renewal is enabled for the instance.</description></item>
-        /// <item><description>Normal: Auto-renewal is disabled for the instance.</description></item>
-        /// <item><description>NotRenewal: The instance is not to be renewed. The system sends no more expiration reminders, but sends only a non-renewal reminder three days before the expiration date. For an instance that is not to be renewed, you can call the <a href="https://help.aliyun.com/document_detail/52843.html">ModifyInstanceAutoRenewAttribute</a> operation to change its auto-renewal status to <c>Normal</c>. Then, you can manually renew the instance or enable auto-renewal for the instance.</description></item>
+        /// <item><description><para>AutoRenewal: Auto-renewal is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>Normal: Auto-renewal is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>NotRenewal: The instance will not be renewed. The system does not send expiration reminders but sends a non-renewal reminder three days before the expiration date. To renew an ECS instance with this status, you must first call <a href="https://help.aliyun.com/document_detail/52843.html">ModifyInstanceAutoRenewAttribute</a> to change its status to <c>Normal</c>. You can then manually renew the instance or enable auto-renewal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

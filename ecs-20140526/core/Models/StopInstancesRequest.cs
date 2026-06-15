@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies the batch operation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AllTogether: The batch operation is successful only after all operations are successful. If any operation fails, the batch operation is considered failed, and all operations that have been performed are undone to restore the instances to the status before the batch operation.</description></item>
-        /// <item><description>SuccessFirst: allows each operation in a batch to be independently executed. If an operation fails, other operations can continue and confirm success. In this mode, successful operations are committed and failed operations are marked as failed, but the execution results of other operations are not affected.</description></item>
+        /// <item><description><para>AllTogether: The batch operation is successful only after all operations are successful. If any operation fails, the batch operation is considered failed, and all operations that have been performed are undone to restore the instances to the status before the batch operation.</para>
+        /// </description></item>
+        /// <item><description><para>SuccessFirst: allows each operation in a batch to be independently executed. If an operation fails, other operations can continue and confirm success. In this mode, successful operations are committed and failed operations are marked as failed, but the execution results of other operations are not affected.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: AllTogether.</para>
         /// 
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and instance status. If the check fails, the corresponding error message is returned. If the request passes the dry run, <c>DRYRUN.SUCCESS</c> is returned.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set <c>BatchOptimization</c> to <c>SuccessFirst</c> and <c>DryRun</c> to true, only <c>DRYRUN.SUCCESS</c> is returned, regardless of whether the request passes the dry run.</para>
+        /// <para>If you set <c>BatchOptimization</c> to <c>SuccessFirst</c> and <c>DryRun</c> to true, only <c>DRYRUN.SUCCESS</c> is returned, regardless of whether the request passes the dry run.</para>
         /// </remarks>
         /// <list type="bullet">
         /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, instances are stopped.</description></item>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to forcefully stop instances. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: forcefully stops the ECS instance.</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Alert</b> Force Stop: forcefully stops the instance. A force stop is equivalent to a physical shutdown and may cause data loss if instance data has not been written to disks.</para>
         /// </description></item>
         /// <item><description><para>false: normally stops the ECS instance.</para>
@@ -106,13 +108,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>StopCharging: economical mode. After an instance is stopped in economical mode:</para>
         /// <list type="bullet">
-        /// <item><description>Billing for the following resources of the instance stops: computing resources (vCPUs, memory, and GPUs), image licenses, and public bandwidth of the static public IP address (if any) that uses the pay-by-bandwidth metering method.</description></item>
-        /// <item><description>Billing for the following resources of the instance continues: system disk, data disks, and public bandwidth of the elastic IP address (EIP) (if any) that uses the pay-by-bandwidth metering method.</description></item>
-        /// <item><description>The instance may fail to restart due to the reclaimed computing resources or insufficient resources. Try again later or change the instance type of the instance.</description></item>
-        /// <item><description>If an EIP is associated with the instance before the instance is stopped, the EIP remains unchanged after the instance is restarted. If a static public IP address is associated with the instance before the instance is stopped, the static public IP address may change, but the private IP address does not change.</description></item>
+        /// <item><description><para>Billing for the following resources of the instance stops: computing resources (vCPUs, memory, and GPUs), image licenses, and public bandwidth of the static public IP address (if any) that uses the pay-by-bandwidth metering method.</para>
+        /// </description></item>
+        /// <item><description><para>Billing for the following resources of the instance continues: system disk, data disks, and public bandwidth of the elastic IP address (EIP) (if any) that uses the pay-by-bandwidth metering method.</para>
+        /// </description></item>
+        /// <item><description><para>The instance may fail to restart due to the reclaimed computing resources or insufficient resources. Try again later or change the instance type of the instance.</para>
+        /// </description></item>
+        /// <item><description><para>If an EIP is associated with the instance before the instance is stopped, the EIP remains unchanged after the instance is restarted. If a static public IP address is associated with the instance before the instance is stopped, the static public IP address may change, but the private IP address does not change.</para>
+        /// </description></item>
         /// </list>
         /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b> If the instance itself does not support the economical shutdown mode, the API side does not intercept errors, and the instance is preferentially stopped. The following types of instances are not supported: classic network instances, local disks, and monthly instances.</para>
         /// </description></item>
         /// <item><description><para>KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for the instance. If you want to change the operating system, re-initialize disks, change the instance type, or modify the private IP address, we recommend selecting this mode to avoid startup failures.</para>

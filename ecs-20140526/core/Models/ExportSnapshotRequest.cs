@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ExportSnapshotRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the destination OSS bucket. The bucket must be in the same region as the snapshot.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OssBucket")]
@@ -21,6 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the snapshot is located. You can call the <c>DescribeRegions</c> operation to query the latest region list.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
@@ -35,11 +37,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the RAM role that authorizes ECS to export the snapshot. This role must grant ECS permission to write to the specified OSS bucket. If you omit this parameter, ECS uses its default service-linked role.</para>
+        /// </summary>
         [NameInMap("RoleName")]
         [Validation(Required=false)]
         public string RoleName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the snapshot to export.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SnapshotId")]

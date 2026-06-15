@@ -42,9 +42,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The interval at which to retrieve monitoring data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>60</description></item>
-        /// <item><description>600</description></item>
-        /// <item><description>3600</description></item>
+        /// <item><description><para>60</para>
+        /// </description></item>
+        /// <item><description><para>600</para>
+        /// </description></item>
+        /// <item><description><para>3600</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 60.</para>
         /// 

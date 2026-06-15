@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The local disk is unavailable, the mount point is inaccessible, or files cannot be loaded.</para>
+        /// <para>本地盘不可用，挂载点拒绝访问，无法加载文件。</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -71,15 +71,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the exception. This parameter is applicable only to ECS bare metal instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>hardware-cpu-error: CPU failure</description></item>
-        /// <item><description>hardware-motherboard-error: motherboard failure</description></item>
-        /// <item><description>hardware-mem-error: memory failure</description></item>
-        /// <item><description>hardware-power-error: power failure</description></item>
-        /// <item><description>hardware-disk-error: disk failure</description></item>
-        /// <item><description>hardware-networkcard-error: network interface controller (NIC) failure</description></item>
-        /// <item><description>hardware-raidcard-error: SAS/RAID card failure</description></item>
-        /// <item><description>hardware-fan-error: fan failure</description></item>
-        /// <item><description>others: other failures</description></item>
+        /// <item><description><para>hardware-cpu-error: CPU failure</para>
+        /// </description></item>
+        /// <item><description><para>hardware-motherboard-error: motherboard failure</para>
+        /// </description></item>
+        /// <item><description><para>hardware-mem-error: memory failure</para>
+        /// </description></item>
+        /// <item><description><para>hardware-power-error: power failure</para>
+        /// </description></item>
+        /// <item><description><para>hardware-disk-error: disk failure</para>
+        /// </description></item>
+        /// <item><description><para>hardware-networkcard-error: network interface controller (NIC) failure</para>
+        /// </description></item>
+        /// <item><description><para>hardware-raidcard-error: SAS/RAID card failure</para>
+        /// </description></item>
+        /// <item><description><para>hardware-fan-error: fan failure</para>
+        /// </description></item>
+        /// <item><description><para>others: other failures</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,12 +109,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The impact of the exception on the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance-hang: The instance is unavailable or cannot be connected.</description></item>
-        /// <item><description>instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.</description></item>
-        /// <item><description>abnormal-network: The instance has a network exception.</description></item>
-        /// <item><description>abnormal-local-disk: A local disk attached to the instance has an exception.</description></item>
-        /// <item><description>abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.</description></item>
-        /// <item><description>others: other exception types. If the impact is not of the preceding types, you can set <c>Reason</c> to others and specify the <c>Description</c> parameter.</description></item>
+        /// <item><description><para>instance-hang: The instance is unavailable or cannot be connected.</para>
+        /// </description></item>
+        /// <item><description><para>instance-stuck-in-status: The instance is stuck in a state such as Starting or Stopping.</para>
+        /// </description></item>
+        /// <item><description><para>abnormal-network: The instance has a network exception.</para>
+        /// </description></item>
+        /// <item><description><para>abnormal-local-disk: A local disk attached to the instance has an exception.</para>
+        /// </description></item>
+        /// <item><description><para>abnormal-cloud-disk: A disk or a Shared Block Storage device attached to the instance has an exception.</para>
+        /// </description></item>
+        /// <item><description><para>others: other exception types. If the impact is not of the preceding types, you can set <c>Reason</c> to others and specify the <c>Description</c> parameter.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ActivationId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the managed instance is connected.</para>
+        /// <para>true: The managed instance is connected, and you can manage it by using Cloud Assistant.</para>
+        /// <para>false: The managed instance is not connected. The server may be shut down or the Cloud Assistant Agent may not be installed correctly.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -67,9 +71,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         ///   --ForceResue                 
         /// </c></pre>
         /// <list type="bullet">
-        /// <item><description>If the MachineId and ForceResult parameters are specified during registration, the Cloud Assistant generates a fixed managed instance ID for this MachineId.</description></item>
-        /// <item><description>If the MachineId parameter is not explicitly specified, the Cloud Assistant will automatically generate a MachineId value based on the hardware information of the machine.</description></item>
-        /// <item><description>We recommend that you explicitly specify the MachineId and ForceResult parameters to mark the mapping between a managed instance and an on-premises machine.</description></item>
+        /// <item><description><para>If the MachineId and ForceResult parameters are specified during registration, the Cloud Assistant generates a fixed managed instance ID for this MachineId.</para>
+        /// </description></item>
+        /// <item><description><para>If the MachineId parameter is not explicitly specified, the Cloud Assistant will automatically generate a MachineId value based on the hardware information of the machine.</para>
+        /// </description></item>
+        /// <item><description><para>We recommend that you explicitly specify the MachineId and ForceResult parameters to mark the mapping between a managed instance and an on-premises machine.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,9 +111,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The operating system type of the managed instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>windows</description></item>
-        /// <item><description>linux</description></item>
-        /// <item><description>FreeBSD</description></item>
+        /// <item><description><para>windows</para>
+        /// </description></item>
+        /// <item><description><para>linux</para>
+        /// </description></item>
+        /// <item><description><para>FreeBSD</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,7 +148,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

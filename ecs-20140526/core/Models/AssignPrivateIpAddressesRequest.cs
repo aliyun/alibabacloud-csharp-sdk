@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IPv4 prefixes to assign to the ENI. Valid values of N: 1 to 10.</para>
         /// <remarks>
-        /// <para> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</para>
+        /// <para>To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Ipv4Prefix")]
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of IPv4 prefixes to be randomly generated for the ENI. Valid values: 1 to 10.</para>
         /// <remarks>
-        /// <para> To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</para>
+        /// <para>To assign IPv4 prefixes to the ENI, you must specify the Ipv4Prefix.N or Ipv4PrefixCount parameter, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>hide</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Ipv4PrefixCount")]
         [Validation(Required=false)]
@@ -64,8 +64,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Secondary private IP address N to be automatically assigned from the CIDR block of the vSwitch that is connected to the ENI. Valid values of N:</para>
         /// <list type="bullet">
-        /// <item><description>When the ENI is in the Available (<c>Available</c>) state, the valid values of N are 1 to 50.</description></item>
-        /// <item><description>When the ENI is in the InUse (<c>InUse</c>) state, the valid values of N are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
+        /// <item><description><para>When the ENI is in the Available (<c>Available</c>) state, the valid values of N are 1 to 50.</para>
+        /// </description></item>
+        /// <item><description><para>When the ENI is in the InUse (<c>InUse</c>) state, the valid values of N are subject to the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
+        /// </description></item>
         /// </list>
         /// <para>To assign secondary private IP addresses to the ENI, you must specify <c>PrivateIpAddress.N</c> or <c>SecondaryPrivateIpAddressCount</c> but not both.</para>
         /// 

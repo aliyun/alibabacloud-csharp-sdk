@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the order.</para>
         /// <remarks>
-        /// <para> This parameter has a return value only when the dedicated host is a subscription one (request parameter <b>ChargeType set to PrePaid</b>).</para>
+        /// <para>This parameter has a return value only when the dedicated host is a subscription one (request parameter <b>ChargeType set to PrePaid</b>).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

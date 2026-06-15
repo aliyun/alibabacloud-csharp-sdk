@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The key of filter N. Only the image ID can be used to filter instance types. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>imagId: image ID</description></item>
-        /// <item><description>filter: image ID</description></item>
+        /// <item><description><para>imagId: image ID</para>
+        /// </description></item>
+        /// <item><description><para>filter: image ID</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,23 +55,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>{
-        ///     &quot;RequestId&quot;: &quot;CF661E2D-4AFE-4BCD-959A-A65E14416B44&quot;,
-        ///     &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
-        ///     &quot;ImageId&quot;: &quot;ubuntu_16_0402_64_20G_alibase_20180409.vhd&quot;,
-        ///     &quot;InstanceTypes&quot;: {
-        ///         &quot;InstanceType&quot;: [{
-        ///             &quot;InstanceTypeId&quot;: &quot;ecs.t1.xsmall&quot;,
-        ///             &quot;CpuCoreCount&quot;: 1,
-        ///             &quot;MemorySize&quot;: 0.5,
-        ///             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
-        ///         },
-        ///         {
-        ///             &quot;InstanceTypeId&quot;: &quot;ecs.t1.small&quot;,
-        ///             &quot;CpuCoreCount&quot;: 1,
-        ///             &quot;MemorySize&quot;: 1,
-        ///             &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
-        ///         }]
-        ///     }
+        /// &quot;RequestId&quot;: &quot;CF661E2D-4AFE-4BCD-959A-A65E14416B44&quot;,
+        /// &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
+        /// &quot;ImageId&quot;: &quot;ubuntu_16_0402_64_20G_alibase_20180409.vhd&quot;,
+        /// &quot;InstanceTypes&quot;: {
+        /// &quot;InstanceType&quot;: [{
+        /// &quot;InstanceTypeId&quot;: &quot;ecs.t1.xsmall&quot;,
+        /// &quot;CpuCoreCount&quot;: 1,
+        /// &quot;MemorySize&quot;: 0.5,
+        /// &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
+        /// },
+        /// {
+        /// &quot;InstanceTypeId&quot;: &quot;ecs.t1.small&quot;,
+        /// &quot;CpuCoreCount&quot;: 1,
+        /// &quot;MemorySize&quot;: 1,
+        /// &quot;InstanceTypeFamily&quot;: &quot;ecs.t1&quot;
+        /// }]
+        /// }
         /// }</para>
         /// 
         /// <b>Example:</b>

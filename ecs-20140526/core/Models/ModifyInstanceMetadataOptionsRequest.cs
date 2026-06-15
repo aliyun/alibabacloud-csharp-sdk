@@ -12,12 +12,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description><para>enabled</para>
+        /// </description></item>
+        /// <item><description><para>disabled</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: enabled.</para>
         /// <remarks>
-        /// <para> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Obtain instance metadata</a>.</para>
+        /// <para>For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/49122.html">Obtain instance metadata</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,11 +32,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("HttpPutResponseHopLimit")]
         [Validation(Required=false)]
@@ -43,12 +45,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to forcefully use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>optional: does not forcefully use the security hardening mode (IMDSv2).</description></item>
-        /// <item><description>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</description></item>
+        /// <item><description><para>optional: does not forcefully use the security hardening mode (IMDSv2).</para>
+        /// </description></item>
+        /// <item><description><para>required: forcefully uses the security hardening mode (IMDSv2). After you set this parameter to required, you cannot access instance metadata in normal mode.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: optional.</para>
         /// <remarks>
-        /// <para> For more information about modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Obtain instance metadata</a>.</para>
+        /// <para>For more information about modes of accessing instance metadata, see <a href="https://help.aliyun.com/document_detail/150575.html">Obtain instance metadata</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,16 +75,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description><para>enabled</para>
+        /// </description></item>
+        /// <item><description><para>disabled</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: disabled.</para>
         /// <remarks>
-        /// <para> The tag key must be a combination of letters, digits, @, colons (:), underscores (_), hyphens (-), periods (.), equal signs (=), and commas (,). The tag key cannot be &quot;.&quot; or &quot;..&quot;. Otherwise, the tag key cannot be accessed in the metadata.</para>
+        /// <para>The tag key must be a combination of letters, digits, @, colons (:), underscores (_), hyphens (-), periods (.), equal signs (=), and commas (,). The tag key cannot be &quot;.&quot; or &quot;..&quot;. Otherwise, the tag key cannot be accessed in the metadata.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>disabled</para>
         /// </summary>
         [NameInMap("InstanceMetadataTags")]
         [Validation(Required=false)]

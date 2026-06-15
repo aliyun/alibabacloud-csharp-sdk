@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateImagePipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the image template.</para>
+        /// <para>The ID of the image pipeline.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip-2ze5tsl5bp6nf2b3****</para>

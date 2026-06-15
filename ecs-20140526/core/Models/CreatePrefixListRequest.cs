@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IP address family. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4</description></item>
-        /// <item><description>IPv6</description></item>
+        /// <item><description><para>IPv4</para>
+        /// </description></item>
+        /// <item><description><para>IPv6</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -54,11 +56,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The CIDR block in entry N. Valid values of N: 0 to 200. Notes:</para>
             /// <list type="bullet">
-            /// <item><description>The total number of entries cannot exceed the <c>MaxEntries</c> value.</description></item>
-            /// <item><description>CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</description></item>
-            /// <item><description>CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</description></item>
-            /// <item><description>You can set a single IP address. The system automatically converts the IP address to a CIDR block. For example, if you set 192.168.1.100, the system automatically converts it to 192.168.1.100/32.</description></item>
-            /// <item><description>If you use an IPv6 CIDR block, the system automatically converts the CIDR block to zero and the letters to lowercase. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it to 2001:db8::/32.</description></item>
+            /// <item><description><para>The total number of entries cannot exceed the <c>MaxEntries</c> value.</para>
+            /// </description></item>
+            /// <item><description><para>CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</para>
+            /// </description></item>
+            /// <item><description><para>CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</para>
+            /// </description></item>
+            /// <item><description><para>You can set a single IP address. The system automatically converts the IP address to a CIDR block. For example, if you set 192.168.1.100, the system automatically converts it to 192.168.1.100/32.</para>
+            /// </description></item>
+            /// <item><description><para>If you use an IPv6 CIDR block, the system automatically converts the CIDR block to zero and the letters to lowercase. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it to 2001:db8::/32.</para>
+            /// </description></item>
             /// </list>
             /// <para>For more information about CIDR blocks, see <a href="~~185311#598efe6ef1v00~~">What is CIDR?</a></para>
             /// <para>This parameter is left empty by default.</para>

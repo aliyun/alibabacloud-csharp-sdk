@@ -41,8 +41,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The renewal duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
-        /// <item><description>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</description></item>
+        /// <item><description><para>Valid values when the PeriodUnit parameter is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values when the PeriodUnit parameter is set to Year: 1, 2, 3, 4, and 5.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,8 +58,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The unit of the renewal period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Month.</para>
         /// 

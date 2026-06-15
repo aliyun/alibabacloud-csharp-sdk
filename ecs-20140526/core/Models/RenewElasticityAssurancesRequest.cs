@@ -27,8 +27,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -42,8 +44,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -57,11 +61,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
         /// <list type="bullet">
-        /// <item><description>If you set <c>PeriodUnit</c> to Month, the default value is 1.</description></item>
-        /// <item><description>If you set <c>PeriodUnit</c> to Year, the default value is 12.</description></item>
+        /// <item><description><para>If you set <c>PeriodUnit</c> to Month, the default value is 1.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>PeriodUnit</c> to Year, the default value is 12.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if you set <c>AutoRenew</c> to <c>true</c>.</para>
+        /// <para>This parameter is required if you set <c>AutoRenew</c> to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,8 +99,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The renewal duration. The unit of the renewal duration is determined by the <c>PeriodUnit</c> value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values if you set <c>PeriodUnit</c> to <c>Month</c>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
-        /// <item><description>Valid values if you set <c>PeriodUnit</c> to <c>Year</c>: 1, 2, and 3.</description></item>
+        /// <item><description><para>Valid values if you set <c>PeriodUnit</c> to <c>Month</c>: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values if you set <c>PeriodUnit</c> to <c>Year</c>: 1, 2, and 3.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -108,8 +116,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The unit of the renewal duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Year.</para>
         /// 

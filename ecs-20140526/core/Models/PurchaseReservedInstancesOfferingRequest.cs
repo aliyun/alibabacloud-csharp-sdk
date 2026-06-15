@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance type that the reserved instance can match.</para>
         /// <remarks>
-        /// <para> The instance types that support reserved instances are subject to updates. For more information, see <a href="~~100370#3c1b682051vt4~~">Reserved instance overview</a>.</para>
+        /// <para>The instance types that support reserved instances are subject to updates. For more information, see <a href="~~100370#3c1b682051vt4~~">Reserved instance overview</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,9 +86,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The payment option of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>No Upfront</description></item>
-        /// <item><description>Partial Upfront</description></item>
-        /// <item><description>All Upfront</description></item>
+        /// <item><description><para>No Upfront</para>
+        /// </description></item>
+        /// <item><description><para>Partial Upfront</para>
+        /// </description></item>
+        /// <item><description><para>All Upfront</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: All Upfront.</para>
         /// 
@@ -132,8 +137,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The operating system of the image used by the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Windows: Windows Server operating system</description></item>
-        /// <item><description>Linux: Linux and UNIX-like operating system</description></item>
+        /// <item><description><para>Windows: Windows Server operating system</para>
+        /// </description></item>
+        /// <item><description><para>Linux: Linux and UNIX-like operating system</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Linux.</para>
         /// 
@@ -156,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the reserved instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the reserved instance. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testReservedInstanceName</para>
@@ -186,8 +193,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The scope of reserved instance N. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Region: regional</description></item>
-        /// <item><description>Zone: zonal</description></item>
+        /// <item><description><para>Region: regional</para>
+        /// </description></item>
+        /// <item><description><para>Zone: zonal</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Region.</para>
         /// 
@@ -201,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The time when you want the reserved instance to take effect. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601 standard</a> in the <c>yyyy-MM-ddTHHZ</c> format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the reserved instance takes effect starting on the hour when the reserved instance is purchased. For example, if you purchase a reserved instance at 13:45:35 on November 1, 2024, the reserved instance takes effect starting 13:00:00 on November 1, 2024.</para>
+        /// <para>If you do not specify this parameter, the reserved instance takes effect starting on the hour when the reserved instance is purchased. For example, if you purchase a reserved instance at 13:45:35 on November 1, 2024, the reserved instance takes effect starting 13:00:00 on November 1, 2024.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

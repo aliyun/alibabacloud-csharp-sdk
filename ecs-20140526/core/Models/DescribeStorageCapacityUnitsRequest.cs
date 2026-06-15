@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The allocation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal: queries SCUs that belong to the current Alibaba Cloud account.</description></item>
-        /// <item><description>Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</description></item>
+        /// <item><description><para>Normal: queries SCUs that belong to the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>Shared: queries SCUs shared between the Alibaba Cloud account and RAM users.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Normal.</para>
         /// 

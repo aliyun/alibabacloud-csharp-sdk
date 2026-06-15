@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of vCPU cores of the instance type.</para>
         /// <remarks>
-        /// <para> If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
+        /// <para>If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,8 +25,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PrePaid: subscription.</description></item>
-        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// <item><description><para>PrePaid: subscription.</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: PostPaid</para>
         /// 
@@ -40,9 +42,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The level of the instance family. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EntryLevel: entry level.</description></item>
-        /// <item><description>EnterpriseLevel: enterprise level.</description></item>
-        /// <item><description>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</description></item>
+        /// <item><description><para>EntryLevel: entry level.</para>
+        /// </description></item>
+        /// <item><description><para>EnterpriseLevel: enterprise level.</para>
+        /// </description></item>
+        /// <item><description><para>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</para>
         /// <remarks>
-        /// <para> If you specify <c>InstanceType</c>, you cannot specify <c>Cores</c> or <c>Memory</c>.</para>
+        /// <para>If you specify <c>InstanceType</c>, you cannot specify <c>Cores</c> or <c>Memory</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,8 +83,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether instances of the instance type are I/O optimized. You cannot specify IoOptimized if the instance type supports only non-I/O optimized instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>optimized: The instances are I/O optimized.</description></item>
-        /// <item><description>none: The instances are non-I/O optimized.</description></item>
+        /// <item><description><para>optimized: The instances are I/O optimized.</para>
+        /// </description></item>
+        /// <item><description><para>none: The instances are non-I/O optimized.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: optimized.</para>
         /// <para>If you query alternative instance types for retired instance types, this parameter is set to none by default.</para>
@@ -94,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum hourly price for pay-as-you-go instances or spot instances.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c>.</para>
+        /// <para>This parameter takes effect only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The memory size of the instance type. Unit: GiB.</para>
         /// <remarks>
-        /// <para> If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
+        /// <para>If you specify both <c>Cores</c> and <c>Memory</c>, the system returns all instance types that match the values of the parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,8 +127,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of ECS instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>classic</description></item>
-        /// <item><description>vpc</description></item>
+        /// <item><description><para>classic</para>
+        /// </description></item>
+        /// <item><description><para>vpc</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: vpc.</para>
         /// <para>This parameter is required.</para>
@@ -144,9 +153,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The policy for recommending instance types. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InventoryFirst: recommends instance types in descending order of resource availability.</description></item>
-        /// <item><description>PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</description></item>
-        /// <item><description>NewProductFirst: recommends the latest instance types first.</description></item>
+        /// <item><description><para>InventoryFirst: recommends instance types in descending order of resource availability.</para>
+        /// </description></item>
+        /// <item><description><para>PriceFirst: recommends the most cost-effective instance types. Recommended instance types appear based on the hourly prices of vCPUs in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>NewProductFirst: recommends the latest instance types first.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: InventoryFirst.</para>
         /// 
@@ -179,8 +191,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies the scenarios in which instance types are recommended. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>UPGRADE: instance type upgrade or downgrade</description></item>
-        /// <item><description>CREATE: instance creation</description></item>
+        /// <item><description><para>UPGRADE: instance type upgrade or downgrade</para>
+        /// </description></item>
+        /// <item><description><para>CREATE: instance creation</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: CREATE.</para>
         /// 
@@ -194,12 +208,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The bidding policy of the spot instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instance is created as a pay-as-you-go instance.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+        /// <item><description><para>NoSpot: The instance is created as a pay-as-you-go instance.</para>
+        /// </description></item>
+        /// <item><description><para>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</para>
+        /// </description></item>
+        /// <item><description><para>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you specify <c>SpotStrategy</c>, you must set <c>InstanceChargeType</c> to <c>PostPaid</c>.</para>
+        /// <para>If you specify <c>SpotStrategy</c>, you must set <c>InstanceChargeType</c> to <c>PostPaid</c>.</para>
         /// </remarks>
         /// <para>Default value: NoSpot.</para>
         /// 
@@ -213,10 +230,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The category of the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_efficiency: ultra disk</description></item>
-        /// <item><description>cloud_ssd: standard SSD</description></item>
-        /// <item><description>cloud_essd: Enterprise SSD (ESSD)</description></item>
-        /// <item><description>cloud: basic disk</description></item>
+        /// <item><description><para>cloud_efficiency: ultra disk</para>
+        /// </description></item>
+        /// <item><description><para>cloud_ssd: standard SSD</para>
+        /// </description></item>
+        /// <item><description><para>cloud_essd: Enterprise SSD (ESSD)</para>
+        /// </description></item>
+        /// <item><description><para>cloud: basic disk</para>
+        /// </description></item>
         /// </list>
         /// <para>For non-I/O optimized instances, the default value is cloud.</para>
         /// <para>For I/O optimized instances, the default value is cloud_efficiency.</para>
@@ -242,8 +263,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Strict: recommends only instance types that are available in the zone specified by ZoneId.</description></item>
-        /// <item><description>Include: recommends instance types that are available in the zone specified by ZoneId and instance types that are available in other zones within the same region.</description></item>
+        /// <item><description><para>Strict: recommends only instance types that are available in the zone specified by ZoneId.</para>
+        /// </description></item>
+        /// <item><description><para>Include: recommends instance types that are available in the zone specified by ZoneId and instance types that are available in other zones within the same region.</para>
+        /// </description></item>
         /// </list>
         /// <para>If <c>ZoneId</c> is specified, the default value of this parameter is Strict, which indicates that only instance types in the zone specified by ZoneId are recommended.</para>
         /// 

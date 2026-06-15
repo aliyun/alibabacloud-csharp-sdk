@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to query the configurations of the launch template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</description></item>
-        /// <item><description>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</description></item>
+        /// <item><description><para>true: queries the basic information and other details of the launch template. The details include the image ID and system disk size.</para>
+        /// </description></item>
+        /// <item><description><para>false: queries only the basic information of the launch template. The basic information includes the template ID, template name, and default version.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 

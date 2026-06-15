@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The version number of the launch template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("LaunchTemplateVersionNumber")]
         [Validation(Required=false)]

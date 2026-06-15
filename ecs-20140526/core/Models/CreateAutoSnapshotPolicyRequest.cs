@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>\-1: The snapshot copy is retained until it is deleted.</description></item>
-        /// <item><description>1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.</description></item>
+        /// <item><description><para>-1: The snapshot copy is retained until it is deleted.</para>
+        /// </description></item>
+        /// <item><description><para>1 to 65535: The snapshot copy is retained for the specified number of days. After the retention period of the snapshot copy expires, the snapshot copy is automatically deleted.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class CreateAutoSnapshotPolicyRequestCopyEncryptionConfiguration : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Arn")]
@@ -42,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class CreateAutoSnapshotPolicyRequestCopyEncryptionConfigurationArn : TeaModel {
                 /// <summary>
                 /// <remarks>
-                /// <para> This parameter is not publicly available.</para>
+                /// <para>This parameter is not publicly available.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 /// <summary>
                 /// <remarks>
-                /// <para> This parameter is not publicly available.</para>
+                /// <para>This parameter is not publicly available.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
                 /// <summary>
                 /// <remarks>
-                /// <para> This parameter is not publicly available.</para>
+                /// <para>This parameter is not publicly available.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -81,8 +83,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable cross-region snapshot replication and encryption. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -108,8 +112,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable cross-region replication for snapshots.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreateAutoSnapshotPolicyRequestTag> Tag { get; set; }
         public class CreateAutoSnapshotPolicyRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The key of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http\:// or https\://. The tag key cannot start with acs: or aliyun.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</para>
+            /// <para>The value of tag N to add to the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http\:// or https\://. The tag value cannot start with acs:.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -193,7 +199,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TargetCopyRegions { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// <para>By default, this parameter is left empty.</para>
         /// 
         /// <b>Example:</b>
@@ -217,8 +223,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The days of the week on which to create automatic snapshots. Valid values: 1 to 7, which correspond to Monday to Sunday. 1 indicates Monday. Format description:</para>
         /// <list type="bullet">
-        /// <item><description>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created every Monday.</description></item>
-        /// <item><description>To schedule multiple automatic snapshots to be created in a week, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of seven days. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created every Monday, Wednesday, and Friday.</description></item>
+        /// <item><description><para>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created every Monday.</para>
+        /// </description></item>
+        /// <item><description><para>To schedule multiple automatic snapshots to be created in a week, you can specify multiple values. Separate the values with commas (,). You can specify a maximum of seven days. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created every Monday, Wednesday, and Friday.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -232,8 +240,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of the automatic snapshot. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>\-1: The automatic snapshot is retained until it is deleted.</description></item>
-        /// <item><description>1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.</description></item>
+        /// <item><description><para>-1: The automatic snapshot is retained until it is deleted.</para>
+        /// </description></item>
+        /// <item><description><para>1 to 65535: The automatic snapshot is retained for the specified number of days. After the retention period of the automatic snapshot expires, the automatic snapshot is automatically deleted.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// <para>This parameter is required.</para>
@@ -248,11 +258,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values: 0 to 23, which correspond to the 24 on-the-hour points in time from 00:00:00 to 23:00:00. For example, 1 indicates 01:00:00. Format description:</para>
         /// <list type="bullet">
-        /// <item><description>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created at 01:00:00.</description></item>
-        /// <item><description>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify up to 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</description></item>
+        /// <item><description><para>Set this parameter to a JSON-formatted array. For example, a value of [&quot;1&quot;] specifies automatic snapshots to be created at 01:00:00.</para>
+        /// </description></item>
+        /// <item><description><para>To schedule multiple automatic snapshots to be created in a day, you can specify multiple values. Separate the values with commas (,). You can specify up to 24 points in time. For example, a value of [&quot;1&quot;,&quot;3&quot;,&quot;5&quot;] specifies automatic snapshots to be created at 01:00:00, 03:00:00, and 05:00:00.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you scheduled snapshots to be automatically created at 09:00, 10:00, 11:00, and 12:00. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.</para>
+        /// <para>If an automatic snapshot is being created when the time scheduled for creating another automatic snapshot is due, the new snapshot task is skipped. This may occur when a disk contains a large volume of data. For example, you scheduled snapshots to be automatically created at 09:00, 10:00, 11:00, and 12:00. The system starts to create a snapshot for the disk at 09:00:00. The process takes 80 minutes to complete because the disk contains a large volume of data and ends at 10:20:00. The system skips the automatic snapshot task scheduled for 10:00:00 and creates the next automatic snapshot for the disk at 11:00:00.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

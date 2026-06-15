@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IDs of ECS instances. You can specify up to 50 instance IDs in a single request.</para>
         /// <remarks>
-        /// <para> You must specify at least one parameter from <c>InstanceIds</c> and <c>RamRoleName</c>.</para>
+        /// <para>You must specify at least one parameter from <c>InstanceIds</c> and <c>RamRoleName</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the instance RAM role. If you specify this parameter, all ECS instances to which the instance RAM role is attached are returned in the response. You can call the <a href="https://help.aliyun.com/document_detail/28713.html">ListRoles</a> operation of RAM to query the names of available instance RAM roles.</para>
         /// <remarks>
-        /// <para> You must specify at least one parameter from <c>InstanceIds</c> and <c>RamRoleName</c>.</para>
+        /// <para>You must specify at least one parameter from <c>InstanceIds</c> and <c>RamRoleName</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

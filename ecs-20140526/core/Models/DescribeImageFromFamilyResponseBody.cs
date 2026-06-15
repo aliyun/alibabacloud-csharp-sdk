@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The architecture of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>i386</description></item>
-            /// <item><description>x86_64</description></item>
+            /// <item><description><para>i386</para>
+            /// </description></item>
+            /// <item><description><para>x86_64</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -123,10 +125,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The alias of the image owner. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: public images provided by Alibaba Cloud</description></item>
-            /// <item><description>self: your custom images</description></item>
-            /// <item><description>others: shared images from other Alibaba Cloud accounts</description></item>
-            /// <item><description>marketplace: Alibaba Cloud Marketplace images</description></item>
+            /// <item><description><para>system: public images provided by Alibaba Cloud</para>
+            /// </description></item>
+            /// <item><description><para>self: your custom images</para>
+            /// </description></item>
+            /// <item><description><para>others: shared images from other Alibaba Cloud accounts</para>
+            /// </description></item>
+            /// <item><description><para>marketplace: Alibaba Cloud Marketplace images</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,8 +215,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The type of the operating system. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>windows</description></item>
-            /// <item><description>linux</description></item>
+            /// <item><description><para>windows</para>
+            /// </description></item>
+            /// <item><description><para>linux</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -263,10 +271,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The state of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>UnAvailable</description></item>
-            /// <item><description>Available</description></item>
-            /// <item><description>Creating</description></item>
-            /// <item><description>CreateFailed</description></item>
+            /// <item><description><para>UnAvailable</para>
+            /// </description></item>
+            /// <item><description><para>Available</para>
+            /// </description></item>
+            /// <item><description><para>Creating</para>
+            /// </description></item>
+            /// <item><description><para>CreateFailed</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -299,8 +311,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Indicates whether the image has been used to create ECS instances. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>instance: The image was used to create one or more ECS instances.</description></item>
-            /// <item><description>none: The image was not used to create ECS instances.</description></item>
+            /// <item><description><para>instance: The image was used to create one or more ECS instances.</para>
+            /// </description></item>
+            /// <item><description><para>none: The image was not used to create ECS instances.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

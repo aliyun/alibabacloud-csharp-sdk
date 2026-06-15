@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The name of the Cloud Assistant plug-in. The name supports all character sets and must be 1 to 255 characters in length.</para>
         /// <list type="bullet">
         /// <item><description><para>If this parameter is not specified, the status of all Cloud Assistant plug-ins that are installed on the specified instances are queried.</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b> If this parameter is not specified, only a single instance ID can be specified.</para>
         /// </description></item>
         /// <item><description><para>If this parameter is specified, the status of the specified Cloud Assistant plug-in is queried.</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

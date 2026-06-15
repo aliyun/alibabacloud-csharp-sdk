@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeAutoSnapshotPolicyExRequestTag> Tag { get; set; }
         public class DescribeAutoSnapshotPolicyExRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The key of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http\:// or https\://. The tag key cannot start with acs: or aliyun.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://. The tag value cannot start with acs:.</para>
+            /// <para>The value of tag N of the automatic snapshot policy. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http\:// or https\://. The tag value cannot start with acs:.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

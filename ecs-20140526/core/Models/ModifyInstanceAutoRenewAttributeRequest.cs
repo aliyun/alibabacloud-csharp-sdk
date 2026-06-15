@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -27,8 +29,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The auto-renewal period of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values of <c>Duration</c> when <c>PeriodUnit</c> is set to <c>Year</c>: 1, 2, 3, 4, and 5.</description></item>
-        /// <item><description>Valid values of <c>Duration</c> when <c>PeriodUnit</c> is set to <c>Month</c>: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</description></item>
+        /// <item><description><para>Valid values of <c>Duration</c> when <c>PeriodUnit</c> is set to <c>Year</c>: 1, 2, 3, 4, and 5.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values of <c>Duration</c> when <c>PeriodUnit</c> is set to <c>Month</c>: 1, 2, 3, 6, 12, 24, 36, 48, and 60.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,8 +64,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The unit of the renewal period (<c>Duration</c>). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month (default)</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month (default)</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,9 +91,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The auto-renewal status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AutoRenewal: Auto-renewal is enabled for the instance.</description></item>
-        /// <item><description>Normal: Auto-renewal is disabled for the instance.</description></item>
-        /// <item><description>NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to <c>Normal</c> for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</description></item>
+        /// <item><description><para>AutoRenewal: Auto-renewal is enabled for the instance.</para>
+        /// </description></item>
+        /// <item><description><para>Normal: Auto-renewal is disabled for the instance.</para>
+        /// </description></item>
+        /// <item><description><para>NotRenewal: The instance is not renewed. The system no longer sends an expiration notification but sends only a renewal notification three days before the instance expires. You can change the value of this parameter from NotRenewal to <c>Normal</c> for an instance, and then manually renew the instance. Alternatively, you can set the RenewalStatus parameter to AutoRenewal.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para><c>RenewalStatus</c> takes precedence over <c>AutoRenew</c>. If you do not specify <c>RenewalStatus</c>, <c>AutoRenew</c> is used by default.</para>

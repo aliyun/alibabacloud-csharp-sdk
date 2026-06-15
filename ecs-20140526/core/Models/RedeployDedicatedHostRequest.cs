@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to stop the instance before it is migrated to the destination dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>reboot: stops the instance before migration.</description></item>
-        /// <item><description>LiveMigrationFirst: migrates the instance without stopping it. If you set MigrationType to LiveMigrationFirst, you must specify DedicatedHostId. In this case, you cannot change the instance type of the ECS instance when the instance is migrated. If the migration in LiveMigrationFirst mode fails, the system switches to the Reboot mode.</description></item>
+        /// <item><description><para>reboot: stops the instance before migration.</para>
+        /// </description></item>
+        /// <item><description><para>LiveMigrationFirst: migrates the instance without stopping it. If you set MigrationType to LiveMigrationFirst, you must specify DedicatedHostId. In this case, you cannot change the instance type of the ECS instance when the instance is migrated. If the migration in LiveMigrationFirst mode fails, the system switches to the Reboot mode.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: reboot.</para>
         /// 

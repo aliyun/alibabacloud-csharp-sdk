@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The description of the diagnostic metric set.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The ID of the request.</para>
+        /// <para>远程连接问题诊断</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The name of the diagnostic metric set.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The IDs of diagnostic metrics. You can specify up to 100 diagnostic metric IDs.</para>
+        /// <para>远程连接问题诊断</para>
         /// </summary>
         [NameInMap("MetricSetName")]
         [Validation(Required=false)]

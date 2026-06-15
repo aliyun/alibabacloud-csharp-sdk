@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifySnapshotCategoryRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the snapshot.</para>
+        /// <para>The snapshot type.</para>
         /// <list type="bullet">
-        /// <item><description>Archive: archive snapshot</description></item>
+        /// <item><description>Archive: archive snapshot.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,22 +39,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the snapshot. Unit: days. The retention period started at the point in time when the snapshot was created. You can archive only standard snapshots that have been retained for at least 14 days.</para>
-        /// <para>After the snapshot is archived, the minimum retention period (also called minimum archive period) is 60 days. When you calculate the retention period of archived snapshots, you must deduct the retention period of standard snapshots. If you delete the snapshot within 60 days after the snapshot is archived, you are charged archive tier storage fees for the snapshot for 60 days. For more information about the billing of snapshots, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshots</a>.</para>
-        /// <para>Value range [74,65536]</para>
+        /// <para>The number of days for which the snapshot is retained. The retention period starts from the snapshot creation time (CreationTime). A standard snapshot must have been retained for at least 14 days after creation before it can be archived.</para>
+        /// <para>Archive snapshots must be retained for at least 60 days. When the retention period of an archive snapshot is calculated, the retention period of the standard snapshot is deducted. If an archive snapshot is deleted before 60 days, you are charged for 60 days of archive storage. For more information, see <a href="https://help.aliyun.com/document_detail/56159.html">Snapshot billing</a>.</para>
+        /// <para>Valid values: [74, 65536].</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the snapshot is permanently retained.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>60</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("RetentionDays")]
         [Validation(Required=false)]
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot.</para>
+        /// <para>The snapshot ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

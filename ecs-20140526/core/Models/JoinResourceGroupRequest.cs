@@ -58,19 +58,32 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the ECS resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: instance</description></item>
-        /// <item><description>disk: Elastic Block Storage (EBS) device</description></item>
-        /// <item><description>snapshot: snapshot</description></item>
-        /// <item><description>image: image</description></item>
-        /// <item><description>securitygroup: security group</description></item>
-        /// <item><description>ddh: dedicated host</description></item>
-        /// <item><description>ddhcluster: dedicated host cluster</description></item>
-        /// <item><description>eni: ENI</description></item>
-        /// <item><description>keypair: SSH key pair</description></item>
-        /// <item><description>launchtemplate: launch template</description></item>
-        /// <item><description>command: Cloud Assistant command</description></item>
-        /// <item><description>activation: activation code for a Cloud Assistant managed instance</description></item>
-        /// <item><description>managedinstance: Cloud Assistant managed instance</description></item>
+        /// <item><description><para>instance: instance</para>
+        /// </description></item>
+        /// <item><description><para>disk: Elastic Block Storage (EBS) device</para>
+        /// </description></item>
+        /// <item><description><para>snapshot: snapshot</para>
+        /// </description></item>
+        /// <item><description><para>image: image</para>
+        /// </description></item>
+        /// <item><description><para>securitygroup: security group</para>
+        /// </description></item>
+        /// <item><description><para>ddh: dedicated host</para>
+        /// </description></item>
+        /// <item><description><para>ddhcluster: dedicated host cluster</para>
+        /// </description></item>
+        /// <item><description><para>eni: ENI</para>
+        /// </description></item>
+        /// <item><description><para>keypair: SSH key pair</para>
+        /// </description></item>
+        /// <item><description><para>launchtemplate: launch template</para>
+        /// </description></item>
+        /// <item><description><para>command: Cloud Assistant command</para>
+        /// </description></item>
+        /// <item><description><para>activation: activation code for a Cloud Assistant managed instance</para>
+        /// </description></item>
+        /// <item><description><para>managedinstance: Cloud Assistant managed instance</para>
+        /// </description></item>
         /// </list>
         /// <para>The values are case-sensitive.</para>
         /// 

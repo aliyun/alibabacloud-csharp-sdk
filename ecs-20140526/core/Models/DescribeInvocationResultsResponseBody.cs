@@ -14,32 +14,42 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>Running:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</description></item>
-        /// <item><description>One-time task: If the command is being run on instances, the execution state is Running.</description></item>
+        /// <item><description><para>Scheduled task: Before you stop the scheduled execution of the command, the execution state is always Running.</para>
+        /// </description></item>
+        /// <item><description><para>One-time task: If the command is being run on instances, the execution state is Running.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Finished:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled task: The execution state can never be Finished.</description></item>
-        /// <item><description>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</description></item>
+        /// <item><description><para>Scheduled task: The execution state can never be Finished.</para>
+        /// </description></item>
+        /// <item><description><para>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Success:</para>
         /// <list type="bullet">
-        /// <item><description>One-time task: The execution is complete, and the exit code is 0.</description></item>
-        /// <item><description>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</description></item>
+        /// <item><description><para>One-time task: The execution is complete, and the exit code is 0.</para>
+        /// </description></item>
+        /// <item><description><para>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Failed:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled task: The execution state can never be Failed.</description></item>
-        /// <item><description>One-time task: The execution fails on all instances.</description></item>
+        /// <item><description><para>Scheduled task: The execution state can never be Failed.</para>
+        /// </description></item>
+        /// <item><description><para>One-time task: The execution fails on all instances.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>PartialFailed:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled task: The execution state can never be PartialFailed.</description></item>
-        /// <item><description>One-time task: The execution fails on some instances.</description></item>
+        /// <item><description><para>Scheduled task: The execution state can never be PartialFailed.</para>
+        /// </description></item>
+        /// <item><description><para>One-time task: The execution fails on some instances.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Stopped: The task is stopped.</para>
@@ -182,7 +192,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+            /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -195,8 +205,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The encoding mode of the <c>CommandContent</c> and <c>Output</c> values in the response. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PlainText: returns the original command content and command output.</description></item>
-            /// <item><description>Base64: returns the Base64-encoded command content and command output.</description></item>
+            /// <item><description><para>PlainText: returns the original command content and command output.</para>
+            /// </description></item>
+            /// <item><description><para>Base64: returns the Base64-encoded command content and command output.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: Base64.</para>
             /// 
@@ -210,8 +222,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to return the results of historical scheduled executions. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</description></item>
-            /// <item><description>false: does not return the results of historical scheduled executions.</description></item>
+            /// <item><description><para>true: returns the results of historical scheduled executions. If you set this parameter to true, you must set InvokeId to the ID of a task that is run on a schedule (RepeatMode set to Period) or on each system startup (RepeatMode set to EveryReboot).</para>
+            /// </description></item>
+            /// <item><description><para>false: does not return the results of historical scheduled executions.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -224,7 +238,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+            /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

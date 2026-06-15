@@ -25,9 +25,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The direction in which the security group rule is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>egress: outbound</description></item>
-        /// <item><description>ingress: inbound</description></item>
-        /// <item><description>all: outbound and inbound</description></item>
+        /// <item><description><para>egress: outbound</para>
+        /// </description></item>
+        /// <item><description><para>ingress: inbound</para>
+        /// </description></item>
+        /// <item><description><para>all: outbound and inbound</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: all.</para>
         /// 
@@ -41,8 +44,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Minimum value: 10.</description></item>
-        /// <item><description>Maximum value: 1000.</description></item>
+        /// <item><description><para>Minimum value: 10.</para>
+        /// </description></item>
+        /// <item><description><para>Maximum value: 1000.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 500.</para>
         /// 
@@ -68,14 +73,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>Valid values for rules of security groups in the classic network:</para>
         /// <list type="bullet">
-        /// <item><description>internet (default)</description></item>
-        /// <item><description>intranet</description></item>
+        /// <item><description><para>internet (default)</para>
+        /// </description></item>
+        /// <item><description><para>intranet</para>
+        /// </description></item>
         /// </list>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b> You can query security group rules of only one NIC type in a single call. To query security group rules of both NIC types, call the operation twice.</para>
         /// </description></item>
         /// <item><description><para>When the security group is in a virtual private cloud (VPC), set the value to intranet, which is the default value for rules of security groups in VPCs.</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b> If you set this parameter to internet or leave this parameter empty, a value of intranet is automatically used.</para>
         /// </description></item>
         /// </list>

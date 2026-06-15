@@ -300,7 +300,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The returned pagination token which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token returned to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use <c>NextToken</c> and <c>MaxResults</c> for a paged query.</para>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>NextToken </c>and <c>MaxResults </c>parameters for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -323,7 +323,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use <c>NextToken</c> and <c>MaxResults</c> for a paged query.</para>
+        /// <para>This parameter is deprecated. We recommend that you use the <c>NextToken </c>and <c>MaxResults </c>parameters for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of entries returned.</para>
         /// <remarks>
-        /// <para>When using the <c>MaxResults</c> and <c>NextToken</c> parameters for a paginated query, the returned <c>TotalCount</c> parameter value is invalid.</para>
+        /// <para>When you use the<c>MaxResults</c> and<c>NextToken</c> parameters for pagination, the value of <c>TotalCount</c> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

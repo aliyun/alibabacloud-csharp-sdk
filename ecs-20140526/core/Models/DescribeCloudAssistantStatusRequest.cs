@@ -44,9 +44,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The operating system type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Windows</description></item>
-        /// <item><description>Linux</description></item>
-        /// <item><description>FreeBSD</description></item>
+        /// <item><description><para>Windows</para>
+        /// </description></item>
+        /// <item><description><para>Linux</para>
+        /// </description></item>
+        /// <item><description><para>FreeBSD</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

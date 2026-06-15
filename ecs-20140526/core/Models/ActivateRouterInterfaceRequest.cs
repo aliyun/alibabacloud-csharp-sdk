@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the router interface is deployed.</para>
+        /// <para>You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to get the latest list of regions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
@@ -29,6 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the router interface.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RouterInterfaceId")]

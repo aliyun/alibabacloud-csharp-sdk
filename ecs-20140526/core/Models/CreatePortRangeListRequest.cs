@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the port list. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the port list. The description must be 2 to 256 characters in length and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Description information of PortRangeList</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CreatePortRangeListRequestEntry> Entry { get; set; }
         public class CreatePortRangeListRequestEntry : TeaModel {
             /// <summary>
-            /// <para>The description of port range N. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</para>
+            /// <para>The description of port range N. The description must be 2 to 32 characters in length and cannot start with http\:// or https\://. Valid values of N: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Description information of Entry</para>
@@ -49,8 +49,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Port range N. Valid values of N: 0 to 200.</para>
             /// <list type="bullet">
-            /// <item><description>The total number of entries cannot exceed the <c>MaxEntries</c> value.</description></item>
-            /// <item><description><c>PortRange</c> in multiple entries cannot be duplicated.</description></item>
+            /// <item><description><para>The total number of entries cannot exceed the <c>MaxEntries</c> value.</para>
+            /// </description></item>
+            /// <item><description><para><c>PortRange</c> in multiple entries cannot be duplicated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum number of entries in the port list. The value cannot be changed after you create the port list. Valid values: 1 to 2000.</para>
         /// <remarks>
-        /// <para> When you reference a port list in a resource, such as a security group, the maximum number of entries (instead of the actual number of entries) in the port list counts against the rule quota for the resource. Set a proper value for MaxEntries.</para>
+        /// <para>When you reference a port list in a resource, such as a security group, the maximum number of entries (instead of the actual number of entries) in the port list counts against the rule quota for the resource. Set a proper value for MaxEntries.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http\://, https\://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,7 +135,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class CreatePortRangeListRequestTag : TeaModel {
             /// <summary>
             /// <para>The key of tag N to add to the port list.</para>
-            /// <para>The tag key cannot be empty or an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The tag key cannot be empty or an empty string. The tag key can be up to 128 characters in length and cannot contain http\:// or https\://. The tag key cannot start with acs: or aliyun.</para>
             /// 
             /// <b>Example:</b>
             /// <para>key for PortRangeList</para>
@@ -144,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The value of tag N to add to the port list.</para>
-            /// <para>The tag value cannot be empty but can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The tag value cannot be empty but can be an empty string. The tag value can be up to 128 characters in length and cannot contain http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value for PortRangeList</para>

@@ -12,12 +12,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to attach the disk as the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: attaches the disk as the system disk.</description></item>
-        /// <item><description>false: does not attach the disk as the system disk.</description></item>
+        /// <item><description><para>true: attaches the disk as the system disk.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not attach the disk as the system disk.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> You can set <c>Bootable</c> to true only if the instance does not have a system disk.</para>
+        /// <para>You can set <c>Bootable</c> to true only if the instance does not have a system disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -30,15 +32,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to release the disk when the instance is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: releases the disk when the instance is released.</description></item>
-        /// <item><description>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</description></item>
+        /// <item><description><para>true: releases the disk when the instance is released.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <para>When you specify this parameter, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>If <c>OperationLocks</c> in the DescribeInstances response contains <c>&quot;LockReason&quot; : &quot;security&quot;</c> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <c>DeleteWithInstance</c> to <c>false</c>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</description></item>
-        /// <item><description>If you want to attach an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</description></item>
-        /// <item><description>You cannot specify DeleteWithInstance for disks for which the multi-attach feature is enabled.</description></item>
+        /// <item><description><para>If <c>OperationLocks</c> in the DescribeInstances response contains <c>&quot;LockReason&quot; : &quot;security&quot;</c> for the instance to which the disk is attached, the instance is locked for security reasons. Regardless of whether you set <c>DeleteWithInstance</c> to <c>false</c>, the DeleteWithInstance setting is ignored, and the disk is released when the instance is released.</para>
+        /// </description></item>
+        /// <item><description><para>If you want to attach an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot specify DeleteWithInstance for disks for which the multi-attach feature is enabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -51,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The device name of the disk.</para>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the disk. The disk specified by <c>DiskId</c> and the instance specified by <c>InstanceId</c> must reside in the same zone.</para>
         /// <remarks>
-        /// <para> For information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</para>
+        /// <para>For information about the limits on attaching a data disk and a system disk, see the &quot;Usage notes&quot; section of this topic.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,12 +85,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to force attach the disk to the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: force attaches the disk to the instance.</description></item>
-        /// <item><description>false: does not force attach the disk to the instance.</description></item>
+        /// <item><description><para>true: force attaches the disk to the instance.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not force attach the disk to the instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> You can set this parameter to true only for Regional Enterprise SSDs (ESSDs) (cloud_regional_disk_auto).</para>
+        /// <para>You can set this parameter to true only for Regional Enterprise SSDs (ESSDs) (cloud_regional_disk_auto).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,8 +116,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the SSH key pair that you bind to the Linux instance when you attach the system disk.</para>
         /// <list type="bullet">
-        /// <item><description>Windows instances do not support logons based on SSH key pairs. The <c>Password</c> parameter takes effect even if the KeyPairName parameter is specified.</description></item>
-        /// <item><description>For Linux instances, the username and password-based logon method is disabled by default.</description></item>
+        /// <item><description><para>Windows instances do not support logons based on SSH key pairs. The <c>Password</c> parameter takes effect even if the KeyPairName parameter is specified.</para>
+        /// </description></item>
+        /// <item><description><para>For Linux instances, the username and password-based logon method is disabled by default.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

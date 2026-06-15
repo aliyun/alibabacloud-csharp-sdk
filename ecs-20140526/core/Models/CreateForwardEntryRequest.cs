@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateForwardEntryRequest : TeaModel {
         /// <summary>
+        /// <para>The public IP address for the DNAT entry. This must be a public IP address of the NAT gateway associated with the DNAT table.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExternalIp")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ExternalIp { get; set; }
 
         /// <summary>
+        /// <para>The external port used for DNAT. Valid values: 1 to 65535.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ExternalPort")]
@@ -24,6 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ExternalPort { get; set; }
 
         /// <summary>
+        /// <para>The ID of the DNAT table.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ForwardTableId")]
@@ -31,6 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ForwardTableId { get; set; }
 
         /// <summary>
+        /// <para>The private IP address to which traffic is forwarded.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InternalIp")]
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InternalIp { get; set; }
 
         /// <summary>
+        /// <para>The internal port to which traffic is forwarded. Valid values: 1 to 65535.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("InternalPort")]
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InternalPort { get; set; }
 
         /// <summary>
+        /// <para>The protocol. Valid values: TCP, UDP, and Any. If you set this parameter to Any, the DNAT entry applies to all protocols.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("IpProtocol")]
@@ -60,6 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the DNAT table is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to retrieve a list of available regions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]

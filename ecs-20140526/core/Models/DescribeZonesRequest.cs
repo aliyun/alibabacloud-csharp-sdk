@@ -12,13 +12,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The natural language that is used to filter responses. For more information, see <a href="https://tools.ietf.org/html/rfc7231">RFC 7231</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN: Simplified Chinese</description></item>
-        /// <item><description>zh_TW: Traditional Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
-        /// <item><description>ja: Japanese</description></item>
-        /// <item><description>fr: French</description></item>
-        /// <item><description>de: German</description></item>
-        /// <item><description>ko: Korean</description></item>
+        /// <item><description><para>zh-CN: Simplified Chinese</para>
+        /// </description></item>
+        /// <item><description><para>zh_TW: Traditional Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English</para>
+        /// </description></item>
+        /// <item><description><para>ja: Japanese</para>
+        /// </description></item>
+        /// <item><description><para>fr: French</para>
+        /// </description></item>
+        /// <item><description><para>de: German</para>
+        /// </description></item>
+        /// <item><description><para>ko: Korean</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: zh-CN.</para>
         /// 
@@ -32,8 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method of resources. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Prepaid: subscription</description></item>
-        /// <item><description>PostPaid: pay-as-you-go</description></item>
+        /// <item><description><para>Prepaid: subscription</para>
+        /// </description></item>
+        /// <item><description><para>PostPaid: pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: PostPaid.</para>
         /// 
@@ -74,9 +83,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The bidding policy for the pay-as-you-go instance. You can specify this parameter when you set <c>InstanceChargeType</c> to PostPaid. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Spot instances</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instances are regular pay-as-you-go instances.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</description></item>
+        /// <item><description><para>NoSpot: The instances are regular pay-as-you-go instances.</para>
+        /// </description></item>
+        /// <item><description><para>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</para>
+        /// </description></item>
+        /// <item><description><para>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: NoSpot.</para>
         /// 
@@ -90,8 +102,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to display detailed information.</para>
         /// <list type="bullet">
-        /// <item><description>true: displays detailed information.</description></item>
-        /// <item><description>false: does not display detailed information.</description></item>
+        /// <item><description><para>true: displays detailed information.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not display detailed information.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 

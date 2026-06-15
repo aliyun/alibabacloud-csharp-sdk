@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ImportKeyPairRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the key pair. The name must be unique. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http\:// or https\://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

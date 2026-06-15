@@ -12,15 +12,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to release the system disk or data disk when the instance from which you want to detach the disk is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: releases the disk when the instance is released.</description></item>
-        /// <item><description>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</description></item>
+        /// <item><description><para>true: releases the disk when the instance is released.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not release the disk when the instance is released. The disk is retained as a pay-as-you-go data disk.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <para>Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You cannot specify this parameter for disks for which the multi-attach feature is enabled.</description></item>
-        /// <item><description>If a data disk is to be detached, the default value is <c>false</c>.</description></item>
-        /// <item><description>If you want to detach an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</description></item>
+        /// <item><description><para>You cannot specify this parameter for disks for which the multi-attach feature is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>If a data disk is to be detached, the default value is <c>false</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you want to detach an <c>elastic ephemeral disk</c>, you must set <c>DeleteWithInstance</c> to <c>true</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -33,9 +38,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the disk that you want to detach.</para>
         /// <list type="bullet">
-        /// <item><description>The disk that you want to detach must be attached to an ECS instance and in the In Use (<c>In_use</c>) state.</description></item>
-        /// <item><description>The instance from which you want to detach a data disk must be in the <c>Running</c> or <c>Stopped</c> state.</description></item>
-        /// <item><description>The instance from which you want to detach the system disk must be in the <c>Stopped</c> state.</description></item>
+        /// <item><description><para>The disk that you want to detach must be attached to an ECS instance and in the In Use (<c>In_use</c>) state.</para>
+        /// </description></item>
+        /// <item><description><para>The instance from which you want to detach a data disk must be in the <c>Running</c> or <c>Stopped</c> state.</para>
+        /// </description></item>
+        /// <item><description><para>The instance from which you want to detach the system disk must be in the <c>Stopped</c> state.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

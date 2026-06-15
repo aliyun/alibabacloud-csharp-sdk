@@ -22,11 +22,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The internal access control policy of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Accept: the internal interconnectivity policy</description></item>
-        /// <item><description>Drop: the internal isolation policy</description></item>
+        /// <item><description><para>Accept: the internal interconnectivity policy</para>
+        /// </description></item>
+        /// <item><description><para>Drop: the internal isolation policy</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The value of this parameter is case-insensitive.</para>
+        /// <para>The value of this parameter is case-insensitive.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

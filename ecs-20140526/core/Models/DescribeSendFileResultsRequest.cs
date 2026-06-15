@@ -22,11 +22,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</description></item>
-        /// <item><description>Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</description></item>
-        /// <item><description>Success: The file is sent. If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</description></item>
-        /// <item><description>Failed: The file fails to be sent. If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed.</description></item>
-        /// <item><description>PartialFailed: The file sending task succeeds on some instances and fails on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</description></item>
+        /// <item><description><para>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</para>
+        /// </description></item>
+        /// <item><description><para>Running: The file is being sent to the instances. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</para>
+        /// </description></item>
+        /// <item><description><para>Success: The file is sent. If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The file fails to be sent. If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed.</para>
+        /// </description></item>
+        /// <item><description><para>PartialFailed: The file sending task succeeds on some instances and fails on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

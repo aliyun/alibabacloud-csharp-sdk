@@ -16,10 +16,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to forcefully delete the custom image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: forcefully deletes the custom image, regardless of whether the image is being used by instances.</description></item>
-        /// <item><description>false: verifies that the custom image is not being used by instances and then deletes the image.</description></item>
+        /// <item><description><para>true: Forcefully deletes the custom image, regardless of whether it is used by any instances.</para>
+        /// </description></item>
+        /// <item><description><para>false: Performs a standard deletion. Before the deletion, the system checks whether the image is used by any instances.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: false</para>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Force { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image. If the specified custom image does not exist, the request is ignored.</para>
+        /// <para>The ID of the custom image to delete. If the image does not exist, the request is ignored.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to get the latest list of regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

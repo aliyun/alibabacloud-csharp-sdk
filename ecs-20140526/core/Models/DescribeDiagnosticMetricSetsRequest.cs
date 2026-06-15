@@ -13,8 +13,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is left empty, the default value is 10.</description></item>
-        /// <item><description>If you set this parameter to a value that is greater than 100, the default value is 100.</description></item>
+        /// <item><description><para>If this parameter is left empty, the default value is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to a value that is greater than 100, the default value is 100.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,8 +67,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the diagnostic metric set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>User: custom diagnostic metric set</description></item>
-        /// <item><description>Common: public diagnostic metric set</description></item>
+        /// <item><description><para>User: custom diagnostic metric set</para>
+        /// </description></item>
+        /// <item><description><para>Common: public diagnostic metric set</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: User.</para>
         /// 

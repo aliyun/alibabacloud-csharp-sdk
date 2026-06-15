@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The access control policy of the security group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Accept: All instances in the security group can communicate with each other.</description></item>
-        /// <item><description>Drop: All instances in the security group are isolated from each other.</description></item>
+        /// <item><description><para>Accept: All instances in the security group can communicate with each other.</para>
+        /// </description></item>
+        /// <item><description><para>Drop: All instances in the security group are isolated from each other.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

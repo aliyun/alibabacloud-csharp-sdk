@@ -12,13 +12,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the system event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error.</description></item>
-        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
-        /// <item><description>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</description></item>
-        /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system error.</description></item>
-        /// <item><description>SystemFailure.Stop: The instance is stopped due to a system error.</description></item>
+        /// <item><description><para>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Reboot: The instance is restarted due to a system error.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceFailure.Reboot: The instance is restarted due to an instance error.</para>
+        /// </description></item>
+        /// <item><description><para>SystemMaintenance.Stop: The instance is stopped due to system maintenance.</para>
+        /// </description></item>
+        /// <item><description><para>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Redeploy: The instance is redeployed due to a system error.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Stop: The instance is stopped due to a system error.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

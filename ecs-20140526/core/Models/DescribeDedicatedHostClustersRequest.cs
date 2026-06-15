@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is unavailable for use.</para>
+        /// <para>This parameter is unavailable for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The resource group ID of the host group. You can use a resource group ID to filter no more than 1,000 host groups.</para>
         /// <remarks>
-        /// <para> A default resource group is not supported.</para>
+        /// <para>A default resource group is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is unavailable for use.</para>
+        /// <para>This parameter is unavailable for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

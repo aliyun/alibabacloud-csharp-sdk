@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationRegionId { get; set; }
 
         /// <summary>
-        /// <para>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the new snapshot. The description must be 2 to 256 characters in length and cannot start with http\:// or https\://.</para>
         /// <para>This parameter is empty by default.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DestinationSnapshotDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the new snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the new snapshot. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <para>This parameter is left empty by default.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,8 +116,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to encrypt the new snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -201,7 +203,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<CopySnapshotRequestTag> Tag { get; set; }
         public class CopySnapshotRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</para>
+            /// <para>The key of tag N to add to the new snapshot. The tag key cannot be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -211,7 +213,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.</para>
+            /// <para>The value of tag N to add to the new snapshot. The tag value can be an empty string. It can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

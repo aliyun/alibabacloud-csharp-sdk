@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum number of entries per page.</para>
         /// <list type="bullet">
-        /// <item><description>Maximum value: 100</description></item>
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description><para>Maximum value: 100</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> PortRangeListId { get; set; }
 
         /// <summary>
-        /// <para>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http\://, https\://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>PortRangeListNameSample</para>
@@ -72,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the resource group. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned in the response. You can call the <a href="https://help.aliyun.com/document_detail/2716558.html">ListResourceGroups</a> operation to query the most recent resource group list.</para>
         /// <remarks>
-        /// <para> A default resource group is not supported.</para>
+        /// <para>A default resource group is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

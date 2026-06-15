@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task that is used to export the custom image.</para>
+        /// <para>The ID of the image export task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tsk-bp67acfmxazb4p****</para>

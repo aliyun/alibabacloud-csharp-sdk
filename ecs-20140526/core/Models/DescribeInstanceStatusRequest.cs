@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the cluster to which the ECS instances belong.</para>
         /// <remarks>
-        /// <para> This parameter is deprecated. We recommend that you do not use this parameter.</para>
+        /// <para>This parameter is deprecated. We recommend that you do not use this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

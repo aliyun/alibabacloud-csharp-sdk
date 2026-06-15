@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The instance types that the new reserved instance can match.</para>
             /// <remarks>
-            /// <para> The supported instance types are continuously updated. For information about the instance types supported by reserved instances, see <a href="~~100370#3c1b682051vt4~~">Overview of reserved instances</a>.</para>
+            /// <para>The supported instance types are continuously updated. For information about the instance types supported by reserved instances, see <a href="~~100370#3c1b682051vt4~~">Overview of reserved instances</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The name of the new reserved instance.</para>
-            /// <para>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+            /// <para>The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>testReservedInstanceName</para>
@@ -53,8 +53,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The scope level of the new reserved instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Region</description></item>
-            /// <item><description>Zone</description></item>
+            /// <item><description><para>Region</para>
+            /// </description></item>
+            /// <item><description><para>Zone</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: Region.</para>
             /// 

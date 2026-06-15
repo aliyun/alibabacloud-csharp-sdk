@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoProvisioningGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</a></para>
+        /// <para>The name of the auto-provisioning group. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http\:// or https\://.<a href="http://https://%E3%80%82%E3%80%81%EF%BC%88:%EF%BC%89%E3%80%81%EF%BC%88_%EF%BC%89%EF%BC%88-%EF%BC%89%E3%80%82"> It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</a></para>
         /// 
         /// <b>Example:</b>
         /// <para>apg-test</para>
@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayAsYouGo: pay-as-you-go instances</description></item>
-        /// <item><description>Spot: spot instances</description></item>
+        /// <item><description><para>PayAsYouGo: pay-as-you-go instances</para>
+        /// </description></item>
+        /// <item><description><para>Spot: spot instances</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to release the removed instances when the real-time capacity of the auto-provisioning group exceeds the target capacity and a scale-in event is triggered. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>termination: releases the removed instances.</description></item>
-        /// <item><description>no-termination: removes the instances from the auto-provisioning group but does not release them.</description></item>
+        /// <item><description><para>termination: releases the removed instances.</para>
+        /// </description></item>
+        /// <item><description><para>no-termination: removes the instances from the auto-provisioning group but does not release them.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,8 +112,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The weight of the instance type specified in the extended configuration. A greater weight indicates that a single instance has more computing power and fewer instances are required. The value must be greater than 0.</para>
             /// <para>The weight is calculated based on the computing power of the instance type and the minimum computing power of a single instance in the cluster that can created by the auto-provisioning group. For example, assume that the minimum computing power of a single instance is 8 vCPUs and 60 GiB of memory.</para>
             /// <list type="bullet">
-            /// <item><description>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</description></item>
-            /// <item><description>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</description></item>
+            /// <item><description><para>For an instance type with 8 vCPUs and 60 GiB of memory, you can set the weight to 1.</para>
+            /// </description></item>
+            /// <item><description><para>For an instance type with 16 vCPUs and 120 GiB of memory, you can set the weight to 2.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,8 +190,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to release instances that are located in the auto-provisioning group after the group expires. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: releases instances that are located in the auto-provisioning group.</description></item>
-        /// <item><description>false: removes instances from the auto-provisioning group but does not release them.</description></item>
+        /// <item><description><para>true: releases instances that are located in the auto-provisioning group.</para>
+        /// </description></item>
+        /// <item><description><para>false: removes instances from the auto-provisioning group but does not release them.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNewProjectEipMonitorDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The container for EIP monitoring data.</para>
+        /// </summary>
         [NameInMap("EipMonitorDatas")]
         [Validation(Required=false)]
         public DescribeNewProjectEipMonitorDataResponseBodyEipMonitorDatas EipMonitorDatas { get; set; }
@@ -45,6 +48,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

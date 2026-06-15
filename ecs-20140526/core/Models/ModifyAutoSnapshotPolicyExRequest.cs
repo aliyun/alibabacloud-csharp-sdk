@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of the snapshot copy in the destination region. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: The snapshot copy is retained until it is deleted.</description></item>
-        /// <item><description>1 to 65535: The snapshot copy is retained for a specified number of days.</description></item>
+        /// <item><description><para>-1: The snapshot copy is retained until it is deleted.</para>
+        /// </description></item>
+        /// <item><description><para>1 to 65535: The snapshot copy is retained for a specified number of days.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -73,8 +75,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true</para>
+            /// </description></item>
+            /// <item><description><para>false</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -100,8 +104,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable cross-region replication for the automatic snapshot.</para>
         /// <list type="bullet">
-        /// <item><description>true: enables cross-region replication for the automatic snapshot.</description></item>
-        /// <item><description>false: disables cross-region replication for the automatic snapshot.</description></item>
+        /// <item><description><para>true: enables cross-region replication for the automatic snapshot.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables cross-region replication for the automatic snapshot.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,8 +175,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The days of the week on which to create automatic snapshots. Valid values are 1 to 7, which correspond to the days of the week. For example, a value of 1 indicates Monday.</para>
         /// <para>To schedule multiple automatic snapshots to be created in a week, you can specify multiple days.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify up to seven days over a one-week period.</description></item>
-        /// <item><description>You must set this parameter to a JSON array such as <c>[&quot;1&quot;, &quot;2&quot; ... &quot;7&quot;]</c>. Separate the values in the array with commas (,).</description></item>
+        /// <item><description><para>You can specify up to seven days over a one-week period.</para>
+        /// </description></item>
+        /// <item><description><para>You must set this parameter to a JSON array such as <c>[&quot;1&quot;, &quot;2&quot; ... &quot;7&quot;]</c>. Separate the values in the array with commas (,).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,8 +191,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of the automatic snapshot. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>\-1: The automatic snapshot is permanently retained.</description></item>
-        /// <item><description>1 to 65536: The auto snapshot is retained for the specified number of days.</description></item>
+        /// <item><description><para>-1: The automatic snapshot is permanently retained.</para>
+        /// </description></item>
+        /// <item><description><para>1 to 65536: The auto snapshot is retained for the specified number of days.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -199,8 +209,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The points in time of the day at which to create automatic snapshots. The time must be in UTC+8. Unit: hours. Valid values are 0 to 23, which correspond to the 24 points in time on the hour from 00:00:00 to 23:00:00. For example, a value of 1 indicates 01:00:00.</para>
         /// <para>To schedule multiple automatic snapshots to be created in a day, you can specify multiple hours.</para>
         /// <list type="bullet">
-        /// <item><description>You can specify up to 24 points in time.</description></item>
-        /// <item><description>You must set this parameter to a JSON array such as <c>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</c>. Separate the points in time with commas (,).</description></item>
+        /// <item><description><para>You can specify up to 24 points in time.</para>
+        /// </description></item>
+        /// <item><description><para>You must set this parameter to a JSON array such as <c>[&quot;0&quot;, &quot;1&quot;, ... &quot;23&quot;]</c>. Separate the points in time with commas (,).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

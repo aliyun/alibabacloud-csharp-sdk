@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class JoinSecurityGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The ID of the instance.</para>
         /// <remarks>
-        /// <para>If you configure this parameter, you cannot configure <c>NetworkInterfaceId</c>.</para>
+        /// <para>If you specify this parameter, you must leave <c>NetworkInterfaceId</c> empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ENI ID.</para>
+        /// <para>The ID of the elastic network interface.</para>
         /// <remarks>
-        /// <para>If you configure this parameter, you cannot configure <c>InstanceId</c>.</para>
+        /// <para>If you specify this parameter, you must leave <c>InstanceId</c> empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region. Call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
         /// <list type="bullet">
-        /// <item><description>If you want to add an instance to a security group, you do not need to specify a region ID.</description></item>
-        /// <item><description>If you want to add an ENI to a security group, you must specify the region ID of the ENI.</description></item>
+        /// <item><description><para>This parameter is optional when you add an instance to a security group.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is required when you add an elastic network interface to a security group. The value must be the ID of the region where the elastic network interface is located.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> operation to query the most recent security group list.</para>
+        /// <para>The ID of the security group. Call <a href="https://help.aliyun.com/document_detail/25556.html">DescribeSecurityGroups</a> to view your available security groups.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

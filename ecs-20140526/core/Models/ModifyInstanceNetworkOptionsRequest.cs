@@ -14,11 +14,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The supported values vary with instance types. You can query the bandwidth weights supported by the current instance type by using the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a>.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Vpc-L1: Vpc-L1.</description></item>
-        /// <item><description>Vpc-L2: Vpc-L2.</description></item>
-        /// <item><description>Ebs-L1: Ebs-L1.</description></item>
-        /// <item><description>Ebs-L2: Ebs-L2.</description></item>
-        /// <item><description>Default: the Default.</description></item>
+        /// <item><description><para>Vpc-L1: Vpc-L1.</para>
+        /// </description></item>
+        /// <item><description><para>Vpc-L2: Vpc-L2.</para>
+        /// </description></item>
+        /// <item><description><para>Ebs-L1: Ebs-L1.</para>
+        /// </description></item>
+        /// <item><description><para>Ebs-L2: Ebs-L2.</para>
+        /// </description></item>
+        /// <item><description><para>Default: the Default.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

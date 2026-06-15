@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maintenance action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Stop: stops the instance.</description></item>
-        /// <item><description>AutoRecover: automatically recovers the instance.</description></item>
-        /// <item><description>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</description></item>
+        /// <item><description><para>Stop: stops the instance.</para>
+        /// </description></item>
+        /// <item><description><para>AutoRecover: automatically recovers the instance.</para>
+        /// </description></item>
+        /// <item><description><para>AutoRedeploy: redeploys the instance, which may damage the data disks attached to the instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,8 +69,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to send an event notification before maintenance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 

@@ -32,10 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the key pair. You can use the asterisk (\*) symbol as a wildcard in regular expressions to perform a fuzzy search for key pairs. Sample patterns:</para>
         /// <list type="bullet">
-        /// <item><description><c>*SshKey</c>: queries key pairs whose names end with SshKey, including the key pair named SshKey.</description></item>
-        /// <item><description><c>SshKey*</c>: queries key pairs whose names start with SshKey, including the key pair named SshKey.</description></item>
-        /// <item><description><c>*SshKey*</c>: queries key pairs whose names include SshKey, including the key pair named SshKey.</description></item>
-        /// <item><description><c>SshKey</c>: queries the key pair named SshKey.</description></item>
+        /// <item><description><para><c>*SshKey</c>: queries key pairs whose names end with SshKey, including the key pair named SshKey.</para>
+        /// </description></item>
+        /// <item><description><para><c>SshKey*</c>: queries key pairs whose names start with SshKey, including the key pair named SshKey.</para>
+        /// </description></item>
+        /// <item><description><para><c>*SshKey*</c>: queries key pairs whose names include SshKey, including the key pair named SshKey.</para>
+        /// </description></item>
+        /// <item><description><para><c>SshKey</c>: queries the key pair named SshKey.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
         /// <remarks>
-        /// <para> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
+        /// <para>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

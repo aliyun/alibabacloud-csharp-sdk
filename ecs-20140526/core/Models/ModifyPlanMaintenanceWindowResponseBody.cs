@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPlanMaintenanceWindowResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F3CD6886-D8D0-4FEE-B93E-1B732396****</para>
         /// </summary>

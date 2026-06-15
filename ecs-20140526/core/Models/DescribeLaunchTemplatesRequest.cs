@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IDs of launch templates.</para>
         /// <list type="bullet">
-        /// <item><description>You can query up to 100 launch templates.</description></item>
-        /// <item><description>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</description></item>
+        /// <item><description><para>You can query up to 100 launch templates.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The names of launch templates.</para>
         /// <list type="bullet">
-        /// <item><description>You can query up to 100 launch templates.</description></item>
-        /// <item><description>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</description></item>
+        /// <item><description><para>You can query up to 100 launch templates.</para>
+        /// </description></item>
+        /// <item><description><para>You must specify LaunchTemplateId or LaunchTemplateName to specify a launch template.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</para>
         /// <remarks>
-        /// <para> The default resource group is not supported.</para>
+        /// <para>The default resource group is not supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -102,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The tags of the launch template.</para>
         /// <remarks>
-        /// <para> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</para>
+        /// <para>You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TemplateTag")]

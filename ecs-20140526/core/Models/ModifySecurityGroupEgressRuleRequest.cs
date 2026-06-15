@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifySecurityGroupEgressRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.\<em>\</em>\<em>\</em> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -43,9 +43,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the destination security group. You must specify at least one of <c>DestGroupId</c> and <c>DestCidrIp</c>.</para>
         /// <list type="bullet">
-        /// <item><description>At least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId must be specified.</description></item>
-        /// <item><description>If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.</description></item>
-        /// <item><description>If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence.</description></item>
+        /// <item><description><para>At least one of DestGroupId, DestCidrIp, Ipv6DestCidrIp, and DestPrefixListId must be specified.</para>
+        /// </description></item>
+        /// <item><description><para>If DestGroupId is specified but DestCidrIp is not specified, the NicType parameter can be set only to intranet.</para>
+        /// </description></item>
+        /// <item><description><para>If both DestGroupId and DestCidrIp are specified, DestCidrIp takes precedence.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,23 +95,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>The case-insensitive protocol name. Valid values:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>ICMP</description></item>
-        /// <item><description>GRE</description></item>
-        /// <item><description>TCP</description></item>
-        /// <item><description>UDP</description></item>
-        /// <item><description>ALL: supports all protocols.</description></item>
+        /// <item><description><para>ICMP</para>
+        /// </description></item>
+        /// <item><description><para>GRE</para>
+        /// </description></item>
+        /// <item><description><para>TCP</para>
+        /// </description></item>
+        /// <item><description><para>UDP</para>
+        /// </description></item>
+        /// <item><description><para>ALL: supports all protocols.</para>
+        /// </description></item>
         /// </list>
         /// <ol start="2">
         /// <item><description>The value of the IANA-compliant protocol number, which is an integer from 0 to 255. List of regions currently available:</description></item>
         /// </ol>
         /// <list type="bullet">
-        /// <item><description>Philippines (Manila)</description></item>
-        /// <item><description>UK (London)</description></item>
-        /// <item><description>Malaysia (Kuala Lumpur)</description></item>
-        /// <item><description>China (Hohhot)</description></item>
-        /// <item><description>China (Qingdao)</description></item>
-        /// <item><description>US (Silicon Valley)</description></item>
-        /// <item><description>Singapore</description></item>
+        /// <item><description><para>Philippines (Manila)</para>
+        /// </description></item>
+        /// <item><description><para>UK (London)</para>
+        /// </description></item>
+        /// <item><description><para>Malaysia (Kuala Lumpur)</para>
+        /// </description></item>
+        /// <item><description><para>China (Hohhot)</para>
+        /// </description></item>
+        /// <item><description><para>China (Qingdao)</para>
+        /// </description></item>
+        /// <item><description><para>US (Silicon Valley)</para>
+        /// </description></item>
+        /// <item><description><para>Singapore</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -121,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The destination IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
         /// <remarks>
-        /// <para> Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and <c>DestCidrIp</c>.</para>
+        /// <para>Only the IP addresses of instances in virtual private clouds (VPCs) are supported. You cannot specify both Ipv6DestCidrIp and <c>DestCidrIp</c>.</para>
         /// </remarks>
         /// <para>By default, this parameter is left empty.</para>
         /// 
@@ -135,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The source IPv6 CIDR block. IPv6 CIDR blocks and IPv6 addresses are supported.</para>
         /// <remarks>
-        /// <para> Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and <c>SourceCidrIp</c>.</para>
+        /// <para>Only the IP addresses of instances in VPCs are supported. You cannot specify both Ipv6SourceCidrIp and <c>SourceCidrIp</c>.</para>
         /// </remarks>
         /// <para>By default, this parameter is left empty.</para>
         /// 
@@ -149,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network interface controller (NIC) type.</para>
         /// <remarks>
-        /// <para> You cannot modify this parameter when you modify a security group rule by specifying the ID of the rule. If you want to change the NIC type of a security group rule, you can create a security group rule of a desired NIC type and delete the existing rule.</para>
+        /// <para>You cannot modify this parameter when you modify a security group rule by specifying the ID of the rule. If you want to change the NIC type of a security group rule, you can create a security group rule of a desired NIC type and delete the existing rule.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -170,8 +185,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The action of the security group rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>accept: allows access.</description></item>
-        /// <item><description>drop: denies access and returns no responses.</description></item>
+        /// <item><description><para>accept: allows access.</para>
+        /// </description></item>
+        /// <item><description><para>drop: denies access and returns no responses.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: accept.</para>
         /// 
@@ -185,10 +202,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The range of destination ports that correspond to the transport layer protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</description></item>
-        /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-        /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
-        /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
+        /// <item><description><para>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</para>
+        /// </description></item>
+        /// <item><description><para>If you set IpProtocol to ICMP, the port number range is -1/-1.</para>
+        /// </description></item>
+        /// <item><description><para>If you set IpProtocol to GRE, the port number range is -1/-1.</para>
+        /// </description></item>
+        /// <item><description><para>If you set IpProtocol to ALL, the port number range is -1/-1.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -201,8 +222,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the port list. You can call the <c>DescribePortRangeLists</c> operation to query the IDs of available prefix lists.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify PortRange, the value of this parameter is ignored.</description></item>
-        /// <item><description>If the security group is of the classic network type, you cannot reference port lists in the security group rules. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas&quot; topic.</description></item>
+        /// <item><description><para>If you specify PortRange, the value of this parameter is ignored.</para>
+        /// </description></item>
+        /// <item><description><para>If the security group is of the classic network type, you cannot reference port lists in the security group rules. For information about the limits on security groups and port lists, see the <a href="~~25412#SecurityGroupQuota1~~">Security groups</a> section of the &quot;Limits and quotas&quot; topic.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -277,10 +300,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The range of source ports that correspond to the transport layer protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</description></item>
-        /// <item><description>If you set IpProtocol to ICMP, the port number range is -1/-1.</description></item>
-        /// <item><description>If you set IpProtocol to GRE, the port number range is -1/-1.</description></item>
-        /// <item><description>If you set IpProtocol to ALL, the port number range is -1/-1.</description></item>
+        /// <item><description><para>If you set IpProtocol to TCP or UDP, the port number range is 1 to 65535. Separate the start port number and the end port number with a forward slash (/). Example: 1/200.</para>
+        /// </description></item>
+        /// <item><description><para>If you set IpProtocol to ICMP, the port number range is -1/-1.</para>
+        /// </description></item>
+        /// <item><description><para>If you set IpProtocol to GRE, the port number range is -1/-1.</para>
+        /// </description></item>
+        /// <item><description><para>If you set IpProtocol to ALL, the port number range is -1/-1.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

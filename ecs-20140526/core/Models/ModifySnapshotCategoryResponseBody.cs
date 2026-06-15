@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the archive task. You can call the DescribeTasks operation to query the status and progress of the archive task.</para>
+        /// <para>The archive task ID. You can call the DescribeTasks operation to query the status and progress of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-dxh34xds**d</para>

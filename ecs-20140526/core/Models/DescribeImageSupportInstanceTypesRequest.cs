@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The scenario in which the image is used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateEcs (default): instance creation</description></item>
-        /// <item><description>ChangeOS: replacement of the system disk or operating system</description></item>
+        /// <item><description><para>CreateEcs (default): instance creation</para>
+        /// </description></item>
+        /// <item><description><para>ChangeOS: replacement of the system disk or operating system</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

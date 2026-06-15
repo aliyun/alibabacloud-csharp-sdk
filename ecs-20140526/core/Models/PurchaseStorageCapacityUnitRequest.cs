@@ -82,8 +82,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The validity period of the SCU. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.</description></item>
-        /// <item><description>Valid values when PeriodUnit is set to Year: 1, 3, and 5.</description></item>
+        /// <item><description><para>Valid values when PeriodUnit is set to Month: 1, 2, 3, and 6.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values when PeriodUnit is set to Year: 1, 3, and 5.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -97,8 +99,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The unit of the validity period of the SCU. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Month.</para>
         /// 
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>This parameter is left empty by default, which indicates that the SCU takes effect immediately after it is created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2020-09-09T02:00:00Z</para>
+        /// <para>2020-09-09T02Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

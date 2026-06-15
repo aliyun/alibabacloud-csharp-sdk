@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeCloudAssistantSettingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configurations for upgrading Cloud Assistant Agent.</para>
+        /// <para>The upgrade settings for the Cloud Assistant agent.</para>
         /// </summary>
         [NameInMap("AgentUpgradeConfig")]
         [Validation(Required=false)]
@@ -26,16 +26,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             }
 
+            /// <summary>
+            /// <para>Indicates whether the Cloud Assistant agent checks for and applies updates upon startup.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("BootstrapUpgrade")]
             [Validation(Required=false)]
             public bool? BootstrapUpgrade { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether to prevent the Cloud Assistant agent from automatically updating.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("DisableUpgrade")]
             [Validation(Required=false)]
             public bool? DisableUpgrade { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether custom upgrade is enabled for Cloud Assistant Agent. If the value is false or empty, an upgrade attempt is performed for Cloud Assistant Agent every 30 minutes.</para>
+            /// <para>Indicates whether custom agent upgrade settings are enabled. If this parameter is not specified or is set to <c>false</c>, the system attempts to upgrade the agent every 30 minutes by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -45,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The time zone of the time windows.</para>
+            /// <para>The time zone of the allowed upgrade windows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -106,30 +118,69 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The resource usage settings for the Cloud Assistant agent.</para>
+        /// </summary>
         [NameInMap("ResourceUsageConfig")]
         [Validation(Required=false)]
         public DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig ResourceUsageConfig { get; set; }
         public class DescribeCloudAssistantSettingsResponseBodyResourceUsageConfig : TeaModel {
+            /// <summary>
+            /// <para>The maximum CPU usage limit for the main process of the Cloud Assistant agent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20</para>
+            /// </summary>
             [NameInMap("CpuLimit")]
             [Validation(Required=false)]
             public int? CpuLimit { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether to retain the script file in the Cloud Assistant directory after a command invocation is complete.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("KeepScriptFile")]
             [Validation(Required=false)]
             public bool? KeepScriptFile { get; set; }
 
+            /// <summary>
+            /// <para>The maximum number of Cloud Assistant log files to retain.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("LogFileCountLimit")]
             [Validation(Required=false)]
             public int? LogFileCountLimit { get; set; }
 
+            /// <summary>
+            /// <para>The maximum size for a single Cloud Assistant log file.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>100MB</para>
+            /// </summary>
             [NameInMap("LogSizeLimit")]
             [Validation(Required=false)]
             public string LogSizeLimit { get; set; }
 
+            /// <summary>
+            /// <para>The maximum memory usage limit for the main process of the Cloud Assistant agent.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>35MB</para>
+            /// </summary>
             [NameInMap("MemoryLimit")]
             [Validation(Required=false)]
             public string MemoryLimit { get; set; }
 
+            /// <summary>
+            /// <para>The number of consecutive times CPU or memory usage can exceed the configured limits before the Cloud Assistant agent process is terminated.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>3</para>
+            /// </summary>
             [NameInMap("OverloadLimit")]
             [Validation(Required=false)]
             public int? OverloadLimit { get; set; }
@@ -137,21 +188,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Cloud Assistant Session Manager configuration.</para>
+        /// <para>Configurations for the Session Manager feature.</para>
         /// </summary>
         [NameInMap("SessionManagerConfig")]
         [Validation(Required=false)]
         public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig SessionManagerConfig { get; set; }
         public class DescribeCloudAssistantSettingsResponseBodySessionManagerConfig : TeaModel {
             /// <summary>
-            /// <para>Specify whether to enable Cloud Assistant Session Manager. Valid values:</para>
+            /// <para>Indicates whether the Session Manager feature is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Enables the feature.</description></item>
-            /// <item><description>false: Disables the feature.</description></item>
+            /// <item><description><para><c>true</c>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: disabled</para>
+            /// </description></item>
             /// </list>
-            /// <para>Note:</para>
+            /// <para><b>Note</b>:</para>
             /// <list type="bullet">
-            /// <item><description>The feature applies to all regions.</description></item>
+            /// <item><description>This setting takes effect in all regions.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IP address family. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IPv4</description></item>
-        /// <item><description>IPv6</description></item>
+        /// <item><description><para>IPv4</para>
+        /// </description></item>
+        /// <item><description><para>IPv6</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that all prefix lists are queried.</para>
         /// 

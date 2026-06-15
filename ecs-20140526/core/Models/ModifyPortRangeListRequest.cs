@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<ModifyPortRangeListRequestAddEntry> AddEntry { get; set; }
         public class ModifyPortRangeListRequestAddEntry : TeaModel {
             /// <summary>
-            /// <para>The description of the port range in entry N. The description must be 2 to 32 characters in length and cannot start with http:// or https://. Valid values of N: 0 to 200.</para>
+            /// <para>The description of the port range in entry N. The description must be 2 to 32 characters in length and cannot start with http\:// or https\://. Valid values of N: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is description.</para>
@@ -29,9 +29,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The port range in entry N. Valid values of N: 0 to 200. Take note of the following limits:</para>
             /// <list type="bullet">
-            /// <item><description>The total number of entries in the port list cannot exceed the <c>MaxEntries</c> value.</description></item>
-            /// <item><description><c>PortRange</c> in different entries cannot be duplicated.</description></item>
-            /// <item><description>The value of this parameter cannot be the same as the value of <c>RemoveEntry.N.PortRange</c>.</description></item>
+            /// <item><description><para>The total number of entries in the port list cannot exceed the <c>MaxEntries</c> value.</para>
+            /// </description></item>
+            /// <item><description><para><c>PortRange</c> in different entries cannot be duplicated.</para>
+            /// </description></item>
+            /// <item><description><para>The value of this parameter cannot be the same as the value of <c>RemoveEntry.N.PortRange</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the port list. The description must be 2 to 256 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the port list. The description must be 2 to 256 characters in length and cannot start with http\:// or https\://.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is description.</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PortRangeListId { get; set; }
 
         /// <summary>
-        /// <para>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http://, https://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the port list. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with http\://, https\://, com.aliyun, or com.alibabacloud. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>PortRangeListNameSample</para>
@@ -113,8 +116,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The port range in entry N. Valid values of N: 0 to 200. Take note of the following limits:</para>
             /// <list type="bullet">
-            /// <item><description><c>PortRange</c> in different entries cannot be duplicated.</description></item>
-            /// <item><description>The value of this parameter cannot be the same as the value of <c>AddEntry.N.PortRange</c>.</description></item>
+            /// <item><description><para><c>PortRange</c> in different entries cannot be duplicated.</para>
+            /// </description></item>
+            /// <item><description><para>The value of this parameter cannot be the same as the value of <c>AddEntry.N.PortRange</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

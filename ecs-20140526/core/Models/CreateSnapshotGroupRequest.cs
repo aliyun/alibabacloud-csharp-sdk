@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The IDs of the cloud disks for which you want to create a snapshot-consistent group. You can specify the IDs of cloud disks that are attached to multiple instances within the same zone. Valid values of N: 1 to 16. A snapshot-consistent group can contain snapshots of up to 16 cloud disks whose total disk size does not exceed 32 TiB.</para>
         /// <para>Take note of the following:</para>
         /// <list type="bullet">
-        /// <item><description>You cannot specify both the DiskId.N and <c>ExcludeDiskId.N</c> parameters in the same request.</description></item>
-        /// <item><description>If you specify <c>InstanceId</c>, you can specify the IDs of cloud disks that are attached only to the specified instance. You cannot specify the IDs of cloud disks that are attached to multiple instances.</description></item>
+        /// <item><description><para>You cannot specify both the DiskId.N and <c>ExcludeDiskId.N</c> parameters in the same request.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify <c>InstanceId</c>, you can specify the IDs of cloud disks that are attached only to the specified instance. You cannot specify the IDs of cloud disks that are attached to multiple instances.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("DiskId")]
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The IDs of the cloud disks for which you do not want to create snapshots. After you specify the IDs of cloud disks, the snapshot-consistent group that you create does not contain the snapshots of the specified cloud disks. Valid values of N: 1 to 16.</para>
         /// <para>This parameter is empty by default, which indicates that snapshots are created for all disks of the instance.</para>
         /// <remarks>
-        /// <para> This parameter cannot be set at the same time as the <c>DiskId.N</c>.</para>
+        /// <para>This parameter cannot be set at the same time as the <c>DiskId.N</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,12 +70,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable the instant access feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para>This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>This parameter takes effect only when <c>InstantAccess</c> is set to true. The instant access feature is automatically disabled when the specified duration ends.</para>
         /// <para>This parameter is left empty by default, which indicates that the instant access feature is automatically disabled when the instant access snapshots are released.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para>This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -32,10 +32,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The GPU type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NVIDIA P4</description></item>
-        /// <item><description>NVIDIA T4</description></item>
-        /// <item><description>NVIDIA P100</description></item>
-        /// <item><description>NVIDIA V100</description></item>
+        /// <item><description><para>NVIDIA P4</para>
+        /// </description></item>
+        /// <item><description><para>NVIDIA T4</para>
+        /// </description></item>
+        /// <item><description><para>NVIDIA P100</para>
+        /// </description></item>
+        /// <item><description><para>NVIDIA V100</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is left empty by default, which indicates that all GPU types are queried. For more information, see <a href="https://help.aliyun.com/document_detail/108496.html">GPU-accelerated compute-optimized and vGPU-accelerated instance families</a>.</para>
         /// 
@@ -49,9 +53,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The level of the instance family. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>EntryLevel.</description></item>
-        /// <item><description>EnterpriseLevel.</description></item>
-        /// <item><description>CreditEntryLevel. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</description></item>
+        /// <item><description><para>EntryLevel.</para>
+        /// </description></item>
+        /// <item><description><para>EnterpriseLevel.</para>
+        /// </description></item>
+        /// <item><description><para>CreditEntryLevel. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is left empty by default, which indicates that instance families at all levels are queried.</para>
         /// 

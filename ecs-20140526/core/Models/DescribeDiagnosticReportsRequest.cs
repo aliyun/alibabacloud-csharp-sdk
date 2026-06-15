@@ -13,8 +13,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If this parameter is left empty, the default value is 10.</description></item>
-        /// <item><description>If you set this parameter to a value that is greater than 100, the default value is 100.</description></item>
+        /// <item><description><para>If this parameter is left empty, the default value is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to a value that is greater than 100, the default value is 100.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,11 +64,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The severity level of the diagnostic report. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</description></item>
-        /// <item><description>Normal: No exceptions were detected.</description></item>
-        /// <item><description>Info: Diagnostic information was recorded and may be related to exceptions.</description></item>
-        /// <item><description>Warn: Diagnostic information was recorded and may indicate exceptions.</description></item>
-        /// <item><description>Critical: Critical exceptions were detected.</description></item>
+        /// <item><description><para>Unknown: The diagnostic did not start, failed to run, or unexpectedly exited without a diagnosis.</para>
+        /// </description></item>
+        /// <item><description><para>Normal: No exceptions were detected.</para>
+        /// </description></item>
+        /// <item><description><para>Info: Diagnostic information was recorded and may be related to exceptions.</para>
+        /// </description></item>
+        /// <item><description><para>Warn: Diagnostic information was recorded and may indicate exceptions.</para>
+        /// </description></item>
+        /// <item><description><para>Critical: Critical exceptions were detected.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,9 +86,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The status of the diagnostic report. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>InProgress</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Finished</description></item>
+        /// <item><description><para>InProgress</para>
+        /// </description></item>
+        /// <item><description><para>Failed</para>
+        /// </description></item>
+        /// <item><description><para>Finished</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

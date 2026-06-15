@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeAutoProvisioningGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the auto provisioning group. You can specify up to 20 IDs.</para>
+        /// <para>The IDs of the auto provisioning groups. You can specify up to 20 IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apg-sn54avj8htgvtyh8****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoProvisioningGroupName { get; set; }
 
         /// <summary>
-        /// <para>The status of the auto provisioning group.</para>
+        /// <para>The statuses of the auto provisioning groups.</para>
         /// 
         /// <b>Example:</b>
         /// <para>active</para>
@@ -52,8 +52,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number to return.</para>
+        /// <para>Start value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -64,8 +64,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>The number of entries to return per page.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the auto provisioning group.</para>
+        /// <para>The ID of the region where the auto provisioning group is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,15 +105,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags that are added to the auto provisioning group.</para>
+        /// <para>The tags used to filter auto provisioning groups. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeAutoProvisioningGroupsRequestTag> Tag { get; set; }
         public class DescribeAutoProvisioningGroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N that is added to the auto provisioning group.</para>
-            /// <para>Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The key of the tag. The key can be up to 128 characters in length and cannot be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c> or contain http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -123,8 +122,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N that is added to the auto provisioning group.</para>
-            /// <para>Valid values of N: 1 to 20. The tag value can be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The value of the tag. The value can be up to 128 characters in length and can be an empty string. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

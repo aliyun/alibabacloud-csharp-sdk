@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Details about the HPC clusters. The value is an array that consists of the information of each HPC cluster.</para>
+        /// <para>The page number of the HPC cluster list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The number of entries per page that was set when the request was made.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of HPC clusters.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the HPC cluster.</para>
+        /// <para>The total number of HPC clusters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

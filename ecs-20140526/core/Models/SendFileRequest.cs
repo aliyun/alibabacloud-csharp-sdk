@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class SendFileRequest : TeaModel {
+        /// <summary>
+        /// <para>Ensures request idempotence. Generate a parameter value from your client and ensure that this parameter value is unique across different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -16,8 +22,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The content of the file. The file must not exceed 32 KB in size after it is encoded in Base64.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>ContentType</c> is set to <c>PlainText</c>, the value of Content is in plaintext.</description></item>
-        /// <item><description>If <c>ContentType</c> is set to <c>Base64</c>, the value of Content is Base64-encoded.</description></item>
+        /// <item><description><para>If <c>ContentType</c> is set to <c>PlainText</c>, the value of Content is in plaintext.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>ContentType</c> is set to <c>Base64</c>, the value of Content is Base64-encoded.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -31,8 +39,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The content type of the file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: The file content is not encoded.</description></item>
-        /// <item><description>Base64: The file content is encoded in Base64.</description></item>
+        /// <item><description><para>PlainText: The file content is not encoded.</para>
+        /// </description></item>
+        /// <item><description><para>Base64: The file content is encoded in Base64.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: PlainText.</para>
         /// 
@@ -56,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The group of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</para>
         /// <remarks>
-        /// <para> If you want to use a non-root user group, make sure that the user group exists in the instances.</para>
+        /// <para>If you want to use a non-root user group, make sure that the user group exists in the instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The owner of the file. This parameter takes effect only on Linux instances. Default value: root. The value can be up to 64 characters in length.</para>
         /// <remarks>
-        /// <para> If you want to use a non-root user, make sure that the user exists in the instances.</para>
+        /// <para>If you want to use a non-root user, make sure that the user exists in the instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -115,8 +125,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to overwrite a file in the destination directory if the file has the same name as the sent file.</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -149,8 +161,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the resource group. When you specify this parameter, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The instance specified by the InstanceId parameter must belong to the specified resource group.</description></item>
-        /// <item><description>If you specify this parameter, you can call the <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> operation to query file sending results in the specified resource group.</description></item>
+        /// <item><description><para>The instance specified by the InstanceId parameter must belong to the specified resource group.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify this parameter, you can call the <a href="https://help.aliyun.com/document_detail/184117.html">DescribeSendFileResults</a> operation to query file sending results in the specified resource group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -214,8 +228,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The timeout period for the file sending task. Unit: seconds.</para>
         /// <list type="bullet">
-        /// <item><description>A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.</description></item>
-        /// <item><description>If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent to the instances.</description></item>
+        /// <item><description><para>A timeout error occurs when a file cannot be sent because the process slows down or because a specific module or Cloud Assistant Agent does not exist.</para>
+        /// </description></item>
+        /// <item><description><para>If the specified timeout period is less than 10 seconds, the system sets the timeout period to 10 seconds to ensure that the file can be sent to the instances.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 60.</para>
         /// 

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifyDiskSpecRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is in invitational preview and is not publicly available.</para>
+        /// <para>This parameter is in invitational preview and is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The new disk category of the cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud_essd: ESSD</description></item>
-        /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
-        /// <item><description>cloud_ssd: standard SSD</description></item>
-        /// <item><description>cloud_efficiency: utra disk</description></item>
+        /// <item><description><para>cloud_essd: ESSD</para>
+        /// </description></item>
+        /// <item><description><para>cloud_auto: ESSD AutoPL disk</para>
+        /// </description></item>
+        /// <item><description><para>cloud_ssd: standard SSD</para>
+        /// </description></item>
+        /// <item><description><para>cloud_efficiency: utra disk</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that the disk category is not changed.</para>
         /// <remarks>
@@ -57,8 +61,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</description></item>
-        /// <item><description>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</description></item>
+        /// <item><description><para>true: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient ECS resources. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// </description></item>
+        /// <item><description><para>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -125,10 +131,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The new performance level of the ESSD. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-        /// <item><description>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
-        /// <item><description>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</description></item>
-        /// <item><description>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</description></item>
+        /// <item><description><para>PL0: An ESSD can deliver up to 10,000 random read/write IOPS.</para>
+        /// </description></item>
+        /// <item><description><para>PL1: An ESSD can deliver up to 50,000 random read/write IOPS.</para>
+        /// </description></item>
+        /// <item><description><para>PL2: An ESSD can deliver up to 100,000 random read/write IOPS.</para>
+        /// </description></item>
+        /// <item><description><para>PL3: An ESSD delivers up to 1,000,000 random read/write IOPS.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: PL1.</para>
         /// 
@@ -144,7 +154,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
         /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
         /// <remarks>
-        /// <para> This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</para>
+        /// <para>This parameter is available only if you set <c>DiskCategory</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a> and <a href="https://help.aliyun.com/document_detail/413275.html">Modify the performance configurations of an ESSD AutoPL disk</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

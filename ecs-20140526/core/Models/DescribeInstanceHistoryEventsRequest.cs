@@ -64,13 +64,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The lifecycle state of the system event. This parameter takes effect only when InstanceEventCycleStatus.N is not specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled</description></item>
-        /// <item><description>Avoided</description></item>
-        /// <item><description>Executing</description></item>
-        /// <item><description>Executed</description></item>
-        /// <item><description>Canceled</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Inquiring</description></item>
+        /// <item><description><para>Scheduled</para>
+        /// </description></item>
+        /// <item><description><para>Avoided</para>
+        /// </description></item>
+        /// <item><description><para>Executing</para>
+        /// </description></item>
+        /// <item><description><para>Executed</para>
+        /// </description></item>
+        /// <item><description><para>Canceled</para>
+        /// </description></item>
+        /// <item><description><para>Failed</para>
+        /// </description></item>
+        /// <item><description><para>Inquiring</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,19 +100,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the system event. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
-        /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error.</description></item>
-        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system error.</description></item>
-        /// <item><description>SystemFailure.Delete: The instance is released due to an instance creation failure.</description></item>
-        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
-        /// <item><description>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</description></item>
-        /// <item><description>InstanceExpiration.Delete: The subscription instance is released due to expiration.</description></item>
-        /// <item><description>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
-        /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
+        /// <item><description><para>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</para>
+        /// </description></item>
+        /// <item><description><para>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Reboot: The instance is restarted due to a system error.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Redeploy: The instance is redeployed due to a system error.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Delete: The instance is released due to an instance creation failure.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceFailure.Reboot: The instance is restarted due to an instance error.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceExpiration.Delete: The subscription instance is released due to expiration.</para>
+        /// </description></item>
+        /// <item><description><para>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -117,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -130,13 +147,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The lifecycle state of system event N. Valid values of N: 1 to 7. You can repeat this parameter to pass multiple values. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Scheduled</description></item>
-        /// <item><description>Avoided</description></item>
-        /// <item><description>Executing</description></item>
-        /// <item><description>Executed</description></item>
-        /// <item><description>Canceled</description></item>
-        /// <item><description>Failed</description></item>
-        /// <item><description>Inquiring</description></item>
+        /// <item><description><para>Scheduled</para>
+        /// </description></item>
+        /// <item><description><para>Avoided</para>
+        /// </description></item>
+        /// <item><description><para>Executing</para>
+        /// </description></item>
+        /// <item><description><para>Executed</para>
+        /// </description></item>
+        /// <item><description><para>Canceled</para>
+        /// </description></item>
+        /// <item><description><para>Failed</para>
+        /// </description></item>
+        /// <item><description><para>Inquiring</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,19 +173,29 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of system event N. Valid values of N: 1 to 30. You can repeat this parameter to pass multiple values. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
-        /// <item><description>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system error.</description></item>
-        /// <item><description>SystemFailure.Redeploy: The instance is redeployed due to a system error.</description></item>
-        /// <item><description>SystemFailure.Delete: The instance is released due to an instance creation failure.</description></item>
-        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance error.</description></item>
-        /// <item><description>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</description></item>
-        /// <item><description>InstanceExpiration.Delete: The subscription instance is released due to expiration.</description></item>
-        /// <item><description>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
-        /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
+        /// <item><description><para>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</para>
+        /// </description></item>
+        /// <item><description><para>SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Reboot: The instance is restarted due to a system error.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Redeploy: The instance is redeployed due to a system error.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Delete: The instance is released due to an instance creation failure.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceFailure.Reboot: The instance is restarted due to an instance error.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceExpiration.Delete: The subscription instance is released due to expiration.</para>
+        /// </description></item>
+        /// <item><description><para>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/66574.html">Overview</a>. The values of this parameter are applicable only to instance system events, but not to disk system events.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,8 +219,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The number of entries to return on each page. Valid values: 10 to 100.</para>
         /// <para>Default values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set a value greater than 0 and less than 10, the default value is 10.</description></item>
-        /// <item><description>If you set this parameter to a value that is greater than 100, the default value is 100.</description></item>
+        /// <item><description><para>If you set a value greater than 0 and less than 10, the default value is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to a value that is greater than 100, the default value is 100.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -216,7 +252,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</para>
+        /// <para>This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -228,7 +264,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</para>
+        /// <para>This parameter is deprecated. We recommend that you specify MaxResults or NextToken for a paged query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -262,13 +298,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of resource N. Valid values of N: 1 to 100. You can repeat this parameter to pass multiple values. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When <c>ResourceType</c> is set to instance, ResourceId.N specifies the ID of instance N.</description></item>
-        /// <item><description>When <c>ResourceType</c> is set to ddh, ResourceId.N specifies the ID of dedicated host N.</description></item>
-        /// <item><description>When <c>ResourceType</c> is set to managedhost, ResourceId.N specifies the ID of physical machine N from a smart hosting pool.</description></item>
+        /// <item><description><para>When <c>ResourceType</c> is set to instance, ResourceId.N specifies the ID of instance N.</para>
+        /// </description></item>
+        /// <item><description><para>When <c>ResourceType</c> is set to ddh, ResourceId.N specifies the ID of dedicated host N.</para>
+        /// </description></item>
+        /// <item><description><para>When <c>ResourceType</c> is set to managedhost, ResourceId.N specifies the ID of physical machine N from a smart hosting pool.</para>
+        /// </description></item>
         /// </list>
         /// <para>If this parameter is not specified, the system events of all resources of the type specified by <c>ResourceType</c> in the region specified by <c>RegionId</c> are queried.</para>
         /// <remarks>
-        /// <para> We recommend that you use <c>ResourceId.N</c> to specify one or more resource IDs. If you specify both <c>ResourceId.N</c> and <c>InstanceId</c>, <c>ResourceId.N</c> takes precedence by default.</para>
+        /// <para>We recommend that you use <c>ResourceId.N</c> to specify one or more resource IDs. If you specify both <c>ResourceId.N</c> and <c>InstanceId</c>, <c>ResourceId.N</c> takes precedence by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -289,9 +328,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: ECS instance</description></item>
-        /// <item><description>ddh: dedicated host</description></item>
-        /// <item><description>managehost: physical machine in a smart hosting pool</description></item>
+        /// <item><description><para>instance: ECS instance</para>
+        /// </description></item>
+        /// <item><description><para>ddh: dedicated host</para>
+        /// </description></item>
+        /// <item><description><para>managehost: physical machine in a smart hosting pool</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: instance.</para>
         /// 

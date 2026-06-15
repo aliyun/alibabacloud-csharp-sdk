@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyImageSharePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of Alibaba Cloud accounts to which you want to share the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</para>
+        /// <para>The IDs of the Alibaba Cloud accounts with which to share the image. You can specify up to 10 account IDs. If you specify more than 10 account IDs in a request, only the first 10 are processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -19,15 +19,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public List<string> AddAccount { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to perform a dry run. A dry run checks for request parameter validity and permissions. If the request is valid, the <c>DryRunOperation</c> error code is returned. Otherwise, an error is returned. If the request is valid, no fee is incurred and no resource is created. Set the value to <c>true</c> to perform a dry run. Default value: <c>false</c>.</para>
+        /// </summary>
         [NameInMap("DryRun")]
         [Validation(Required=false)]
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the shared custom image.</para>
+        /// <para>The ID of the custom image.</para>
         /// <remarks>
-        /// <para> You can share images encrypted by using CMKs but cannot share images encrypted by using service keys. When you share an image encrypted by using a service key, an error is reported.</para>
+        /// <para>Notice: </para>
         /// </remarks>
+        /// <para>You can no longer share images that are encrypted by using a service key. You can share only images that are encrypted by using a customer managed key (CMK). If you attempt to share an image that is encrypted by using a service key, the request fails.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,10 +42,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to publish or unpublish a community image. Valid values:</para>
+        /// <para>Specifies whether to publish or unpublish the community image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: publishes the custom image as a community image.</description></item>
-        /// <item><description>false: unpublishes a community image. The unpublish operation takes effect only on community images.</description></item>
+        /// <item><description><para>true: publishes the image as a community image.</para>
+        /// </description></item>
+        /// <item><description><para>false: unpublishes the community image. The image becomes a custom image. If the image is a custom image, this setting has no effect.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -73,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the custom image. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the custom image. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of Alibaba Cloud accounts from which you want to unshare the custom image. Valid values of N: 1 to 10. If you specify more than 10 Alibaba Cloud account IDs, the system processes only the first 10 account IDs. The excess account IDs are ignored.</para>
+        /// <para>The IDs of the Alibaba Cloud accounts from which to unshare the image. You can specify up to 10 account IDs. If you specify more than 10 account IDs in a request, only the first 10 are processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

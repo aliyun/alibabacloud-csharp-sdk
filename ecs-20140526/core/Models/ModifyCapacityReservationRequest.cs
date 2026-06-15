@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The release mode of the capacity reservation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure <c>EndTime</c>.</description></item>
-        /// <item><description>Unlimited: The capacity reservation must be manually released. You can release it anytime.</description></item>
+        /// <item><description><para>Limited: The capacity reservation is automatically released at the specified point in time. If you configure this parameter, you must also configure <c>EndTime</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Unlimited: The capacity reservation must be manually released. You can release it anytime.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,8 +96,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The operating system of the image used by the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Windows</description></item>
-        /// <item><description>Linux</description></item>
+        /// <item><description><para>Windows</para>
+        /// </description></item>
+        /// <item><description><para>Linux</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is unavailable.</para>

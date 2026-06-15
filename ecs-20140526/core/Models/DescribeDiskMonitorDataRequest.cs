@@ -42,13 +42,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The interval at which to retrieve the monitoring data. Unit: seconds. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>60</description></item>
-        /// <item><description>600</description></item>
-        /// <item><description>3600</description></item>
+        /// <item><description><para>60</para>
+        /// </description></item>
+        /// <item><description><para>600</para>
+        /// </description></item>
+        /// <item><description><para>3600</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 60.</para>
         /// <remarks>
-        /// <para> Up to 400 monitoring data entries can be returned at a time. Make sure that the TotalCount value does not exceed 400. The value is calculated by using the following formula: TotalCount = (EndTime - StartTime)/Period.</para>
+        /// <para>Up to 400 monitoring data entries can be returned at a time. Make sure that the TotalCount value does not exceed 400. The value is calculated by using the following formula: TotalCount = (EndTime - StartTime)/Period.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The beginning of the time range to query. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. If the value of seconds (ss) is not 00, the time is rounded up to the next minute.</para>
         /// <remarks>
-        /// <para> You can query the monitoring data in the last 30 days. If the value of <c>StartTime</c> is more than 30 days earlier than the current time, an error is returned.</para>
+        /// <para>You can query the monitoring data in the last 30 days. If the value of <c>StartTime</c> is more than 30 days earlier than the current time, an error is returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

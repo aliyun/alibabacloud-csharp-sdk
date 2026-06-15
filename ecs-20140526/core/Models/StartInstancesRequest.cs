@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The batch operation mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</description></item>
-        /// <item><description>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</description></item>
+        /// <item><description><para>AllTogether: starts all ECS instances at the same time. If all ECS instances are started, a success message is returned. If an ECS instance fails to be started, all the specified instances fail to be started and an error message is returned.</para>
+        /// </description></item>
+        /// <item><description><para>SuccessFirst: separately starts each ECS instance. The response contains the operation results of each ECS instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: AllTogether.</para>
         /// 

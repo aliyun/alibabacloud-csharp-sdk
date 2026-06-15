@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The allocation type of the reserved instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Normal: queries all reserved instances that belong to the current account.</description></item>
-        /// <item><description>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</description></item>
+        /// <item><description><para>Normal: queries all reserved instances that belong to the current account.</para>
+        /// </description></item>
+        /// <item><description><para>Shared: queries the reserved instances that are shared between the current main account and linked accounts.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Normal.</para>
         /// 
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance type of the reserved instance. For information about the valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
         /// <remarks>
-        /// <para> Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</para>
+        /// <para>Specify the instance type that you selected when you purchased the reserved instance. If the reserved instance is a regional reserved instance, it can be used to offset the bills of instance types that belong to the same instance family as the specified instance type, regardless of instance specifications.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,8 +52,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The reason why the reserved instance is locked. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>financial: The reserved instance is locked because the account has overdue payments or the service expires.</description></item>
-        /// <item><description>security: The reserved instance is locked due to security reasons.</description></item>
+        /// <item><description><para>financial: The reserved instance is locked because the account has overdue payments or the service expires.</para>
+        /// </description></item>
+        /// <item><description><para>security: The reserved instance is locked due to security reasons.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,9 +68,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The payment option of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>No Upfront</description></item>
-        /// <item><description>Partial Upfront</description></item>
-        /// <item><description>All Upfront</description></item>
+        /// <item><description><para>No Upfront</para>
+        /// </description></item>
+        /// <item><description><para>Partial Upfront</para>
+        /// </description></item>
+        /// <item><description><para>All Upfront</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the reserved instance.</para>
         /// <remarks>
-        /// <para> Only exact search is supported.</para>
+        /// <para>Only exact search is supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,8 +158,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The scope level of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Region: regional</description></item>
-        /// <item><description>Zone: zonal</description></item>
+        /// <item><description><para>Region: regional</para>
+        /// </description></item>
+        /// <item><description><para>Zone: zonal</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -180,9 +189,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribeReservedInstancesRequestTag> Tag { get; set; }
         public class DescribeReservedInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</para>
+            /// <para>The key of tag N of the reserved instance. The tag key cannot be empty and can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http\:// or https\://.</para>
             /// <remarks>
-            /// <para> If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
+            /// <para>If you specify a single tag to query resources, up to 1,000 resources to which the tag is added are returned. If you specify multiple tags to query resources, up to 1,000 resources to which all specified tags are added are returned. To query more than 1,000 resources that have specified tags added, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

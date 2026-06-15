@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum number of entries per page. Maximum value: 100. Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter or if you set a value smaller than 10, the default value is 10.</description></item>
-        /// <item><description>If you set a value greater than 100, the default value is 100.</description></item>
+        /// <item><description><para>If you do not specify this parameter or if you set a value smaller than 10, the default value is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If you set a value greater than 100, the default value is 100.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

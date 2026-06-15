@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number to return. The minimum value is 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the resource is located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to view the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,20 +55,30 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description>disk: disk</description></item>
-        /// <item><description>snapshot: snapshot</description></item>
-        /// <item><description>image: image</description></item>
-        /// <item><description>securitygroup: security group</description></item>
-        /// <item><description>volume: storage volume</description></item>
-        /// <item><description>eni: elastic network interface (ENI)</description></item>
-        /// <item><description>ddh: dedicated host</description></item>
-        /// <item><description>keypair: SSH key pair</description></item>
-        /// <item><description>launchtemplate: launch template</description></item>
+        /// <item><description><para><c>instance</c>: ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>disk</c>: disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>snapshot</c>: snapshot.</para>
+        /// </description></item>
+        /// <item><description><para><c>image</c>: image.</para>
+        /// </description></item>
+        /// <item><description><para><c>securitygroup</c>: security group.</para>
+        /// </description></item>
+        /// <item><description><para><c>volume</c>: volume.</para>
+        /// </description></item>
+        /// <item><description><para><c>eni</c>: elastic network interface.</para>
+        /// </description></item>
+        /// <item><description><para><c>ddh</c>: dedicated host.</para>
+        /// </description></item>
+        /// <item><description><para><c>keypair</c>: key pair.</para>
+        /// </description></item>
+        /// <item><description><para><c>launchtemplate</c>: launch template.</para>
+        /// </description></item>
         /// </list>
-        /// <para>All the preceding values must be lowercase.</para>
+        /// <para>All values must be in lowercase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>
@@ -78,14 +88,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag list.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeResourceByTagsRequestTag> Tag { get; set; }
         public class DescribeResourceByTagsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length.</para>
+            /// <para>The tag key.</para>
+            /// <remarks>
+            /// <para>For best compatibility, we recommend that you use the <c>Tag.N.Key</c> parameter.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -95,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length.</para>
+            /// <para>The tag value. An empty string is allowed. The value can be up to 128 characters in length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The Cloud Assistant configurations.</para>
+        /// <para>The service settings to query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SettingType")]

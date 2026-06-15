@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically renew the subscription. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false</para>
         /// 
@@ -31,9 +33,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>For example, assume that a dedicated host expires on January 15 of the current year. Subscription ECS instances hosted on the dedicated host are configured to be automatically renewed to November 15 of the same year. The expiration time of the dedicated host is earlier than the expiration time of the ECS instances by 10 months. In this case, the system selects a renewal duration of 12 months (a minimum duration calculated based on a <c>Duration</c> value of 12 and a <c>PeriodUnit</c> value of Month) for the dedicated host. This ensures that the dedicated host expires later than the ECS instances.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AutoRenewWithEcs: automatically renews the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</description></item>
-        /// <item><description>StopRenewWithEcs: does not automatically renew the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</description></item>
-        /// <item><description>NoOperation: does not change the current settings for the dedicated hosts.</description></item>
+        /// <item><description><para>AutoRenewWithEcs: automatically renews the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</para>
+        /// </description></item>
+        /// <item><description><para>StopRenewWithEcs: does not automatically renew the subscription dedicated hosts along with the subscription ECS instances hosted on the dedicated hosts.</para>
+        /// </description></item>
+        /// <item><description><para>NoOperation: does not change the current settings for the dedicated hosts.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>If you set this parameter to AutoRenewWithEcs, make sure that <c>AutoRenew</c> is set to true to enable auto-renewal for the dedicated hosts. Otherwise, the subscription dedicated hosts are not automatically renewed along with the subscription ECS instances hosted on the dedicated hosts.</para>
@@ -61,8 +66,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The renewal duration.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when PeriodUnit is set to Month: 1 and 12</description></item>
-        /// <item><description>Valid values when PeriodUnit is set to Year: 1 and 12</description></item>
+        /// <item><description><para>Valid values when PeriodUnit is set to Month: 1 and 12</para>
+        /// </description></item>
+        /// <item><description><para>Valid values when PeriodUnit is set to Year: 1 and 12</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,8 +90,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The unit of the renewal period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Year</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Month</para>
         /// 
@@ -109,9 +118,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically renew the subscription dedicated host. The <c>RenewalStatus</c> parameter takes precedence over the <c>AutoRenew</c> parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AutoRenewal: The dedicated hosts are automatically renewed.</description></item>
-        /// <item><description>Normal: The dedicated hosts are not automatically renewed, and renewal notifications are sent.</description></item>
-        /// <item><description>NotRenewal: The dedicated hosts are not automatically renewed, and no expiration notification is sent. A notification of no renewal is automatically sent three days before the end of the current subscription cycle. You can change the value of this parameter from NotRenewal to Normal and manually renew the dedicated hosts by calling the <a href="https://help.aliyun.com/document_detail/134250.html">RenewDedicatedHosts</a> operation. Alternatively, you can renew the dedicated hosts by setting this parameter to AutoRenewal.</description></item>
+        /// <item><description><para>AutoRenewal: The dedicated hosts are automatically renewed.</para>
+        /// </description></item>
+        /// <item><description><para>Normal: The dedicated hosts are not automatically renewed, and renewal notifications are sent.</para>
+        /// </description></item>
+        /// <item><description><para>NotRenewal: The dedicated hosts are not automatically renewed, and no expiration notification is sent. A notification of no renewal is automatically sent three days before the end of the current subscription cycle. You can change the value of this parameter from NotRenewal to Normal and manually renew the dedicated hosts by calling the <a href="https://help.aliyun.com/document_detail/134250.html">RenewDedicatedHosts</a> operation. Alternatively, you can renew the dedicated hosts by setting this parameter to AutoRenewal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

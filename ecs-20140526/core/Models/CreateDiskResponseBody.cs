@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDiskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The disk ID.</para>
+        /// <para>The ID of the disk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bp131n0q38u3a4zi****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The ID of the order.</para>
         /// <remarks>
-        /// <para>The order ID is returned only when you create a subscription disk.</para>
+        /// <para>This parameter is returned only when you create a subscription disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The category of the snapshot. Valid values:</para>
+        /// <para>The type of the snapshot. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: standard snapshot</description></item>
-        /// <item><description>Flash: local snapshot</description></item>
+        /// <item><description><para>Standard: a standard snapshot.</para>
+        /// </description></item>
+        /// <item><description><para>Flash: a Flash Snapshot.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para>This parameter is deprecated. standard snapshots for ESSD cloud disks now include the <a href="https://help.aliyun.com/document_detail/193667.html">Instant Access</a> feature by default at no additional cost.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among requests. The <b>ClientToken</b> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>A client-generated token to ensure request idempotence. The token must be unique for each request. The <b>ClientToken</b> value must be an ASCII string of up to 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -37,8 +39,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <c>http:// </c>or <c>https://</c>.</para>
-        /// <para>By default, this parameter is left empty.</para>
+        /// <para>The snapshot description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>This parameter is empty by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -59,14 +61,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the instant access feature. Valid values:</para>
+        /// <para>Specifies whether to enable the Instant Access feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the instant access feature. This feature can be enabled only for ESSDs.</description></item>
-        /// <item><description>false: does not enable the instant access feature. If InstantAccess is set to false, a standard snapshot is created.</description></item>
+        /// <item><description><para>true: Enables the Instant Access feature. This feature can be enabled only for snapshots of ESSD cloud disks.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables the Instant Access feature. A standard snapshot is created.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para>This parameter is deprecated. standard snapshots for ESSD cloud disks now include the <a href="https://help.aliyun.com/document_detail/193667.html">Instant Access</a> feature by default at no additional cost.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,10 +81,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? InstantAccess { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the instant access feature. When the validity period ends, the feature is disabled and the instant access snapshot is automatically released. This parameter takes effect only when <c>InstantAccess</c> is set to true. Unit: days. Valid values: 1 to 65535.</para>
-        /// <para>By default, the value of this parameter is the same as that of <c>RetentionDays</c>.</para>
+        /// <para>The retention period for the Instant Access feature, in days. The snapshot is automatically deleted when this retention period expires. This parameter takes effect only when <c>InstantAccess</c> is set to <c>true</c>. Valid values: 1 to 65,535.</para>
+        /// <para>Defaults to the value of <c>RetentionDays</c>.</para>
         /// <remarks>
-        /// <para> This parameter is no longer used. By default, new standard snapshots of ESSDs are upgraded to instant access snapshots free of charge without the need for additional configurations. For more information, see <a href="https://help.aliyun.com/document_detail/193667.html">Use the instant access feature</a>.</para>
+        /// <para>This parameter is deprecated. standard snapshots for ESSD cloud disks now include the <a href="https://help.aliyun.com/document_detail/193667.html">Instant Access</a> feature by default at no additional cost.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -99,14 +103,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The snapshot type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Standard: standard snapshot</description></item>
-        /// <item><description>Flash: local snapshot</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>This parameter will be removed in the future. We recommend that you use the <c>InstantAccess</c> parameter to ensure future compatibility. This parameter and the <c>InstantAccess</c> parameter cannot be specified at the same time. For more information, see the &quot;Description&quot; section of this topic.</para>
-        /// </remarks>
+        /// <para>The ID of the Resource Group to which the snapshot belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -124,8 +121,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the snapshot. Unit: days. Valid values: 1 to 65536. After the retention period ends, the snapshot is automatically released.</para>
-        /// <para>This parameter is left empty by default, which indicates that the snapshot is not automatically released.</para>
+        /// <para>The retention period of the snapshot, in days. Valid values: 1 to 65,536. The snapshot is automatically deleted when the retention period expires.</para>
+        /// <para>If this parameter is not specified, the snapshot is retained indefinitely.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -135,9 +132,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RetentionDays { get; set; }
 
         /// <summary>
-        /// <para>The name of the snapshot. The name must be 2 to 128 characters in length and start with a letter. The name can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The snapshot name must be 2 to 128 characters long. It must start with a letter or a Chinese character and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <remarks>
-        /// <para> The name cannot start with http:// or https://. The name cannot start with <c>auto</c> because the names of automatic snapshots start with auto.</para>
+        /// <para>The name cannot start with <c>http://</c> or <c>https://</c>. To avoid conflicts with auto snapshot names, the name cannot start with <c>auto</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -149,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is unavailable for public use.</para>
+        /// <para>This parameter is not available for public use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -160,14 +157,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StorageLocationArn { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the snapshot.</para>
+        /// <para>The tags to add to the snapshot. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateSnapshotRequestTag> Tag { get; set; }
         public class CreateSnapshotRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</para>
+            /// <para>The key of the tag.</para>
+            /// <remarks>
+            /// <para>This parameter is not recommended. For better compatibility, use the Key parameter instead.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the snapshot. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain http:// or https://.</para>
+            /// <para>The tag value. It can be an empty string, must be 128 characters or shorter, and cannot contain http\:// or https\://.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

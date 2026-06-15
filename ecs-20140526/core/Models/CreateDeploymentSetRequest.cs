@@ -9,12 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateDeploymentSetRequest : TeaModel {
+        /// <summary>
+        /// <para>The affinity level of the deployment set. This level determines how instances are distributed within the set. The value must be an integer from 1 to 10. Default value: 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3</para>
+        /// </summary>
         [NameInMap("Affinity")]
         [Validation(Required=false)]
         public long? Affinity { get; set; }
 
         /// <summary>
-        /// <para>The description of the deployment set. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>A client-generated token that you can use to ensure request idempotence. The token must be unique across requests.</para>
+        /// <para>The <b>ClientToken</b> value must be an ASCII string of up to 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -24,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the deployment set. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The name of the deployment set. The name must be 2 to 128 characters long and start with a letter. It can contain digits, colons (:), underscores (_), and hyphens (-). The name cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDeploymentSetName</para>
@@ -34,12 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DeploymentSetName { get; set; }
 
         /// <summary>
-        /// <para>The emergency solution to use in the situation where instances in the deployment set cannot be evenly distributed to different zones due to resource insufficiency after the instances failover. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>CancelMembershipAndStart: removes the instances from the deployment set and starts the instances immediately after they are failed over.</description></item>
-        /// <item><description>KeepStopped: leaves the instances in the Stopped state and starts them after resources are replenished.</description></item>
-        /// </list>
-        /// <para>Default value: CancelMembershipAndStart.</para>
+        /// <para>The description of the deployment set. The description must be 2 to 256 characters long and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -50,11 +52,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>Default</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("Domain")]
         [Validation(Required=false)]
@@ -62,23 +64,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>host</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("Granularity")]
         [Validation(Required=false)]
         public string Granularity { get; set; }
 
         /// <summary>
-        /// <para>The deployment strategy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Availability: high availability strategy.</description></item>
-        /// <item><description>AvailabilityGroup: high availability group strategy.</description></item>
-        /// </list>
-        /// <para>Default value: Availability.</para>
+        /// <para>The number of partitions in the deployment set group. Valid values: 1 to 7.</para>
+        /// <para>Default value: 3.</para>
+        /// <remarks>
+        /// <para>This parameter is valid only when <c>Strategy</c> is set to <c>AvailabilityGroup</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -88,7 +89,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? GroupCount { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>The policy for an instance that fails to be redeployed after a failover due to insufficient resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>CancelMembershipAndStart: Removes the instance from the deployment set and starts the instance immediately after failover.</para>
+        /// </description></item>
+        /// <item><description><para>KeepStopped: Keeps the instance in the deployment set and in the Stopped state.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: CancelMembershipAndStart.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CancelMembershipAndStart</para>
@@ -106,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Creates a deployment set in a specific region.</para>
+        /// <para>The ID of the region for the deployment set. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to view the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,9 +135,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The deployment strategy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Availability: high availability strategy</description></item>
-        /// <item><description>AvailabilityGroup: high availability group strategy</description></item>
-        /// <item><description>LowLatency: low latency strategy</description></item>
+        /// <item><description><para>Availability: High availability strategy.</para>
+        /// </description></item>
+        /// <item><description><para>AvailabilityGroup: High availability strategy for deployment set groups.</para>
+        /// </description></item>
+        /// <item><description><para>LowLatency: Low-latency strategy.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Availability.</para>
         /// 
@@ -140,6 +151,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string Strategy { get; set; }
 
+        /// <summary>
+        /// <para>The deployment granularity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>host: Spreads instances across different hosts.</para>
+        /// </description></item>
+        /// <item><description><para>sw: Spreads instances across different switches.</para>
+        /// </description></item>
+        /// <item><description><para>rack: Spreads instances across different racks.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: host.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>host</para>
+        /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]
         public string Type { get; set; }

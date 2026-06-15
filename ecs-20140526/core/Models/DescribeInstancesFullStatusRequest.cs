@@ -74,13 +74,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the system event. This parameter is valid only when InstanceEventType.N is not specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</description></item>
-        /// <item><description>SystemFailure.Reboot: The instance is restarted due to a system failure.</description></item>
-        /// <item><description>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</description></item>
-        /// <item><description>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</description></item>
-        /// <item><description>InstanceExpiration.Delete: The subscription instance is released due to expiration.</description></item>
-        /// <item><description>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</description></item>
-        /// <item><description>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</description></item>
+        /// <item><description><para>SystemMaintenance.Reboot: The instance is restarted due to system maintenance.</para>
+        /// </description></item>
+        /// <item><description><para>SystemFailure.Reboot: The instance is restarted due to a system failure.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceFailure.Reboot: The instance is restarted due to an instance failure.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceExpiration.Stop: The subscription instance is stopped due to expiration.</para>
+        /// </description></item>
+        /// <item><description><para>InstanceExpiration.Delete: The subscription instance is released due to expiration.</para>
+        /// </description></item>
+        /// <item><description><para>AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,17 +100,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The health status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Impaired</description></item>
-        /// <item><description>Warning: The instance performance may be degraded due to maintenance or technical issues.</description></item>
-        /// <item><description>Maintaining</description></item>
-        /// <item><description>Initializing</description></item>
-        /// <item><description>InsufficientData</description></item>
-        /// <item><description>NotApplicable</description></item>
+        /// <item><description><para>Impaired</para>
+        /// </description></item>
+        /// <item><description><para>Warning: The instance performance may be degraded due to maintenance or technical issues.</para>
+        /// </description></item>
+        /// <item><description><para>Maintaining</para>
+        /// </description></item>
+        /// <item><description><para>Initializing</para>
+        /// </description></item>
+        /// <item><description><para>InsufficientData</para>
+        /// </description></item>
+        /// <item><description><para>NotApplicable</para>
+        /// </description></item>
         /// </list>
         /// <para>All the values are case-sensitive.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Maintaining</para>
+        /// <para>Initializing</para>
         /// </summary>
         [NameInMap("HealthStatus")]
         [Validation(Required=false)]
@@ -181,9 +194,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The lifecycle status of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Starting</description></item>
-        /// <item><description>Running</description></item>
-        /// <item><description>Stopped</description></item>
+        /// <item><description><para>Starting</para>
+        /// </description></item>
+        /// <item><description><para>Running</para>
+        /// </description></item>
+        /// <item><description><para>Stopped</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

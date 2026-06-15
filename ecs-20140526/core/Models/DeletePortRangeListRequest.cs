@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the port list.</para>
         /// <remarks>
-        /// <para> If the port list is associated with other resources, you cannot delete the port list. You must disassociate the port list from the resources and then delete the port list.</para>
+        /// <para>If the port list is associated with other resources, you cannot delete the port list. You must disassociate the port list from the resources and then delete the port list.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

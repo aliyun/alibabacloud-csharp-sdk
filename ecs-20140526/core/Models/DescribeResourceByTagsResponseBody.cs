@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The total number of resources returned.</para>
+        /// <para>The total number of resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>

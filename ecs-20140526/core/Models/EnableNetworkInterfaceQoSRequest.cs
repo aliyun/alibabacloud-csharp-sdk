@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class EnableNetworkInterfaceQoSRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Elastic Network Interface (ENI).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,6 +93,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
+        /// <para>The Region ID. You can invoke DescribeRegions to view the latest Alibaba Cloud Region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

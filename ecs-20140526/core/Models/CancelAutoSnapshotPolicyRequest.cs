@@ -21,12 +21,28 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the auto snapshot policy to cancel.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If you omit this parameter, the following rules apply:</para>
+        /// <list type="bullet">
+        /// <item><description><para>If only one auto snapshot policy is applied to a disk, that policy is canceled.</para>
+        /// </description></item>
+        /// <item><description><para>If a disk has more than one auto snapshot policy, the request fails and returns the <c>OperationDenied.TooManyAutoSnapshotPolicies</c> error code. In this case, you must specify <c>autoSnapshotPolicyId</c> to identify the policy to cancel.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sp-bp14yziiuvu3s6jn****</para>
+        /// </summary>
         [NameInMap("autoSnapshotPolicyId")]
         [Validation(Required=false)]
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the disks for which you want to disable the automatic snapshot policy. To disable the automatic snapshot policy for multiple disks, you can set this parameter to a JSON array that consists of multiple disk IDs, such as [&quot;dxxxxxxxxx&quot;, &quot;dyyyyyyyyy&quot;, … &quot;dzzzzzzzzz&quot;]. Separate the disk IDs with commas (,).</para>
+        /// <para>The IDs of the target disks. The value is a JSON array of disk IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the automatic snapshot policy and the disks. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the auto snapshot policy and disks. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -14,17 +14,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public Dictionary<string, string> AdditionalOptions { get; set; }
 
         /// <summary>
-        /// <para>The end time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</para>
+        /// <para>The end time. This parameter applies only to diagnostic metrics that do not require running Cloud Assistant commands in the guest OS.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2022-07-11T14:00:00Z</para>
+        /// <para>2022-07-11T14:00Z</para>
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the diagnostic metric set. If this parameter is left empty, the dms-instancedefault set is used, which is the default diagnostic metric set provided for Elastic Compute Service (ECS) instances.</para>
+        /// <para>The diagnostic metric set ID. If this parameter is omitted, the default diagnostic metric set for ECS instances, <c>dms-instancedefault</c>, is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dms-uf6i0tv2refv8wz*****</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the security group. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to get the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of resource N.</para>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,10 +56,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The start time. This parameter takes effect only for diagnostic metrics that do not need to be assessed by running Cloud Assistant commands in guest operating systems.</para>
+        /// <para>The start time. This parameter applies only to diagnostic metrics that do not require running Cloud Assistant commands in the guest OS.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2022-07-11T12:00:00Z</para>
+        /// <para>2022-07-11T12:00Z</para>
         /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]

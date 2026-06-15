@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TemplateTag")]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class StartImagePipelineExecutionRequestTemplateTag : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is deprecated.</para>
+            /// <para>This parameter is deprecated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is deprecated.</para>
+            /// <para>This parameter is deprecated.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

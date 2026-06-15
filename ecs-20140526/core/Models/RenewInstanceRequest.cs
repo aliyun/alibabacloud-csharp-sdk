@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies the <a href="https://help.aliyun.com/document_detail/63396.html">unified expiration date</a>. Valid values: 1 to 28.</para>
         /// <para>To use this parameter, you must <a href="~~63396#694cb636c0rp6~~">specify a unified expiration date for the ECS instance</a>. The value of this parameter must be the same as the specified unified expiration date. Otherwise, the call fails.</para>
         /// <remarks>
-        /// <para> You must specify the renewal period-related parameter pair (<c>Period</c> and <c>PeriodUnit</c>) or <c>ExpectedRenewDay</c>, but not both.</para>
+        /// <para>You must specify the renewal period-related parameter pair (<c>Period</c> and <c>PeriodUnit</c>) or <c>ExpectedRenewDay</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

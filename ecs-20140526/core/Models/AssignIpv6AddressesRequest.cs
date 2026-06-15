@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class AssignIpv6AddressesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.**** For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.\<em>\</em>\<em>\</em> For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The IPv6 addresses to assign to the ENI. Valid values of N: 1 to 10.</para>
         /// <para>Example: Ipv6Address.1=2001:db8:1234:1a00::\<em>\</em>\<em>\</em></para>
         /// <remarks>
-        /// <para> You must specify <c>Ipv6Addresses.N</c> or <c>Ipv6AddressCount</c>, but not both.</para>
+        /// <para>You must specify <c>Ipv6Addresses.N</c> or <c>Ipv6AddressCount</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of IPv6 addresses to randomly generate for the ENI. Valid values: 1 to 10.</para>
         /// <remarks>
-        /// <para> You must specify <c>Ipv6Addresses.N</c> or <c>Ipv6AddressCount</c>, but not both.</para>
+        /// <para>You must specify <c>Ipv6Addresses.N</c> or <c>Ipv6AddressCount</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IPv6 prefixes to assign to the ENI. Valid values of N: 1 to 10.</para>
         /// <remarks>
-        /// <para> To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</para>
+        /// <para>To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Ipv6Prefix")]
@@ -59,11 +59,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The number of IPv6 prefixes to assign to the ENI. Valid values: 1 to 10.</para>
         /// <remarks>
-        /// <para> To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</para>
+        /// <para>To assign IPv6 prefixes to the ENI, you must specify Ipv6Prefix.N or Ipv6PrefixCount, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>hide</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("Ipv6PrefixCount")]
         [Validation(Required=false)]

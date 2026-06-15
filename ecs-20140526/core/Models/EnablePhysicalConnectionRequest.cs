@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class EnablePhysicalConnectionRequest : TeaModel {
         /// <summary>
+        /// <para>A client token that ensures the request is idempotent.</para>
+        /// <para>Your client generates this token, which must be unique for each request. The token can contain only ASCII characters and must not exceed 64 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ClientToken")]
@@ -25,6 +27,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the physical connection.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PhysicalConnectionId")]
@@ -32,6 +35,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the physical connection is located.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the latest list of regions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]
@@ -46,6 +51,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The IPv4 CIDR block of the gateway device in your data center.</para>
+        /// </summary>
         [NameInMap("UserCidr")]
         [Validation(Required=false)]
         public string UserCidr { get; set; }

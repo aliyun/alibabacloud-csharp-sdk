@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateCommandRequest : TeaModel {
+        /// <summary>
+        /// <para>Ensures the idempotence of the request. Generate a unique value for this parameter from your client to guarantee uniqueness across different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -20,10 +26,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>You can use custom parameters in the command content. To enable the custom parameter feature, you must set <c>EnableParameter</c> to true.</para>
         /// <list type="bullet">
-        /// <item><description>Custom parameters are defined in the <c>{{}}</c> format. Within <c>{{}}</c>, the spaces and line feeds before and after the parameter names are ignored.</description></item>
-        /// <item><description>You can specify up to 20 custom parameters.</description></item>
-        /// <item><description>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</description></item>
-        /// <item><description>Each custom parameter name can be up to 64 bytes in length.</description></item>
+        /// <item><description><para>Custom parameters are defined in the <c>{{}}</c> format. Within <c>{{}}</c>, the spaces and line feeds before and after the parameter names are ignored.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify up to 20 custom parameters.</para>
+        /// </description></item>
+        /// <item><description><para>A custom parameter name can contain only letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</para>
+        /// </description></item>
+        /// <item><description><para>Each custom parameter name can be up to 64 bytes in length.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>You can specify built-in environment parameters as custom parameters in a command. When you run the command, Cloud Assistant automatically uses the environment parameter values for the custom parameters. You can specify the following built-in environment variables:</para>
@@ -34,26 +44,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para><c>{{ACS::InstanceId}}</c>: the instance ID. If you want to run the command on multiple instances and specify <c>{{ACS::InstanceId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
-        /// <item><description>Linux: 2.2.3.309</description></item>
-        /// <item><description>Windows: 2.1.3.309</description></item>
+        /// <item><description><para>Linux: 2.2.3.309</para>
+        /// </description></item>
+        /// <item><description><para>Windows: 2.1.3.309</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><c>{{ACS::InstanceName}}</c>: the instance name. If you want to run the command on multiple instances and specify <c>{{ACS::InstanceName}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
-        /// <item><description>Linux: 2.2.3.344</description></item>
-        /// <item><description>Windows: 2.1.3.344</description></item>
+        /// <item><description><para>Linux: 2.2.3.344</para>
+        /// </description></item>
+        /// <item><description><para>Windows: 2.1.3.344</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><c>{{ACS::InvokeId}}</c>: the ID of the task. If you want to specify <c>{{ACS::InvokeId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
-        /// <item><description>Linux: 2.2.3.309</description></item>
-        /// <item><description>Windows: 2.1.3.309</description></item>
+        /// <item><description><para>Linux: 2.2.3.309</para>
+        /// </description></item>
+        /// <item><description><para>Windows: 2.1.3.309</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><c>{{ACS::CommandId}}</c>: the command ID. If you want to call the <a href="https://help.aliyun.com/document_detail/141751.html">RunCommand</a> operation to run the command and specify <c>{{ACS::CommandId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following versions:</para>
         /// <list type="bullet">
-        /// <item><description>Linux: 2.2.3.309</description></item>
-        /// <item><description>Windows: 2.1.3.309</description></item>
+        /// <item><description><para>Linux: 2.2.3.309</para>
+        /// </description></item>
+        /// <item><description><para>Windows: 2.1.3.309</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -71,8 +89,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The encoding mode of the command content (CommandContent). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: The command content is not encoded.</description></item>
-        /// <item><description>Base64: The command content is Base64-encoded.</description></item>
+        /// <item><description><para>PlainText: The command content is not encoded.</para>
+        /// </description></item>
+        /// <item><description><para>Base64: The command content is Base64-encoded.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Base64.</para>
         /// <remarks>
@@ -198,7 +218,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>he maximum timeout period for the command execution on the instance. Unit: seconds. When a command that you created cannot be run, the command times out. When a command execution times out, Cloud Assistant Agent forcefully terminates the command process by canceling the PID. </para>
+        /// <para>he maximum timeout period for the command execution on the instance. Unit: seconds. When a command that you created cannot be run, the command times out. When a command execution times out, Cloud Assistant Agent forcefully terminates the command process by canceling the PID.</para>
         /// <para>Default value: 60.</para>
         /// 
         /// <b>Example:</b>
@@ -211,9 +231,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The command type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RunBatScript: batch commands. These commands are applicable to Windows instances.</description></item>
-        /// <item><description>RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</description></item>
-        /// <item><description>RunShellScript: shell commands. These commands are applicable to Linux instances.</description></item>
+        /// <item><description><para>RunBatScript: batch commands. These commands are applicable to Windows instances.</para>
+        /// </description></item>
+        /// <item><description><para>RunPowerShellScript: PowerShell commands. These commands are applicable to Windows instances.</para>
+        /// </description></item>
+        /// <item><description><para>RunShellScript: shell commands. These commands are applicable to Linux instances.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -228,15 +251,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The execution path of the command on ECS instances. The value can be up to 200 characters in length.</para>
         /// <para>Default values:</para>
         /// <list type="bullet">
-        /// <item><description>For Linux instance, the default value is the home directory of the root user, which is the <c>/root</c> directory.</description></item>
-        /// <item><description>For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as <c>C:\\Windows\\System32\\</c>.</description></item>
+        /// <item><description><para>For Linux instance, the default value is the home directory of the root user, which is the <c>/root</c> directory.</para>
+        /// </description></item>
+        /// <item><description><para>For Windows instances, the default value is the directory where the Cloud Assistant Agent process resides, such as <c>C:\\Windows\\System32\\</c>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set WorkingDir to a directory other than default ones, make sure that the directory exists on the instances.</para>
+        /// <para>If you set WorkingDir to a directory other than default ones, make sure that the directory exists on the instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>/root/</para>
+        /// <para>/home/user</para>
         /// </summary>
         [NameInMap("WorkingDir")]
         [Validation(Required=false)]

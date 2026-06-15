@@ -214,43 +214,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The overall execution status of the command task. The value of this parameter depends on the execution states of the command task on all involved instances. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Running:</para>
-        /// <list type="bullet">
-        /// <item><description>Scheduled task: Before you stop the scheduled execution of the command, the overall execution state is always Running.</description></item>
-        /// <item><description>One-time task: If the command is being run on instances, the overall execution state is Running.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Finished:</para>
-        /// <list type="bullet">
-        /// <item><description>Scheduled task: The overall execution state can never be Finished.</description></item>
-        /// <item><description>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Success: If the execution state on at least one instance is Success and the execution state on the other instances is Stopped or Success, the overall execution state is Success.</para>
-        /// <list type="bullet">
-        /// <item><description>One-time task: The execution is complete, and the exit code is 0.</description></item>
-        /// <item><description>Scheduled task: The last execution is complete, the exit code is 0, and the specified period ends.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Failed:</para>
-        /// <list type="bullet">
-        /// <item><description>Scheduled task: The overall execution state can never be Failed.</description></item>
-        /// <item><description>One-time task: The execution failed on all instances.</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>Stopped: The task is stopped.</para>
-        /// </description></item>
-        /// <item><description><para>Stopping: The task is being stopped.</para>
-        /// </description></item>
-        /// <item><description><para>PartialFailed: The task fails on some instances. If you specify both this parameter and <c>InstanceId</c>, this parameter does not take effect.</para>
-        /// </description></item>
-        /// <item><description><para>Pending: The command is being verified or sent. If the execution state on at least one instance is Pending, the overall execution state is Pending.</para>
-        /// </description></item>
-        /// <item><description><para>Scheduled: The command that is set to run on a schedule is sent and waiting to be run. If the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Query credential value returned by this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2</para>
@@ -260,12 +224,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The command type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>RunBatScript: batch command, applicable to Windows instances.</description></item>
-        /// <item><description>RunPowerShellScript: PowerShell command, applicable to Windows instances.</description></item>
-        /// <item><description>RunShellScript: shell command, applicable to Linux instances.</description></item>
-        /// </list>
+        /// <para>Page number of the query result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -275,7 +234,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The command ID. You can call the <a href="https://help.aliyun.com/document_detail/64843.html">DescribeCommands</a> operation to query all available command IDs.</para>
+        /// <para>Number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -285,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The command name. If you specify both this parameter and <c>InstanceId</c>, this parameter does not take effect.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
@@ -295,18 +254,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the command is to be automatically run. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true: The command is run by calling the <c>RunCommand</c> or <c>InvokeCommand</c> operation with <c>RepeatMode</c> set to <c>Period</c>, <c>NextRebootOnly</c>, or <c>EveryReboot</c>.</para>
-        /// </description></item>
-        /// <item><description><para>false: The command meets one of the following requirements:</para>
-        /// <list type="bullet">
-        /// <item><description>The command is run by calling the <c>RunCommand</c> or <c>InvokeCommand</c> operation with <c>RepeatMode</c> set to <c>Once</c>.</description></item>
-        /// <item><description>The command task is canceled, stopped, or completed.</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Total number of commands.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

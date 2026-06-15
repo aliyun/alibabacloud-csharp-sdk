@@ -16,11 +16,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The new category of the system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_efficiency: utra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
+            /// <item><description><para>cloud_efficiency: utra disk</para>
+            /// </description></item>
+            /// <item><description><para>cloud_ssd: standard SSD</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> This parameter takes effect on an instance only when you change from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an instance type in an <a href="https://help.aliyun.com/document_detail/25378.html">instance family available for purchase</a> and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</para>
+            /// <para>This parameter takes effect on an instance only when you change from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an instance type in an <a href="https://help.aliyun.com/document_detail/25378.html">instance family available for purchase</a> and upgrade the instance from a non-I/O optimized instance type to an I/O optimized instance type.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -35,8 +37,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic payment when you upgrade the instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The payment is automatically completed.</description></item>
-        /// <item><description>false: An order is generated but no payment is made.</description></item>
+        /// <item><description><para>true: The payment is automatically completed.</para>
+        /// </description></item>
+        /// <item><description><para>false: An order is generated but no payment is made.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Disk")]
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class ModifyPrepayInstanceSpecRequestDisk : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -90,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -102,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para>This parameter is not publicly available.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -149,15 +153,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to allow cross-cluster instance type upgrade. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <para>When you set <c>MigrateAcrossZone</c> to <c>true</c> and you upgrade the instance type of an instance based on the returned information, take note of the following items:</para>
         /// <para>Instance that resides in the classic network:</para>
         /// <list type="bullet">
-        /// <item><description>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</description></item>
-        /// <item><description>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</description></item>
+        /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</para>
+        /// </description></item>
+        /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</para>
+        /// </description></item>
         /// </list>
         /// <para>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</para>
         /// 
@@ -170,7 +178,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -183,14 +191,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the change to the instance. Valid values:</para>
         /// <remarks>
-        /// <para> This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.</para>
+        /// <para>This parameter is optional. The system can automatically determine whether the instance change is an upgrade or a downgrade. If you want to specify this parameter, refer to the following valid values of the parameter.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</description></item>
-        /// <item><description>downgrade: downgrades the instance type. When the new instance type specified by the <c>InstanceType</c> parameter has lower specifications than the current instance type, set <c>OperatorType</c> to downgrade.</description></item>
+        /// <item><description><para>upgrade: upgrades the instance type. Make sure that the balance in your account is sufficient.</para>
+        /// </description></item>
+        /// <item><description><para>downgrade: downgrades the instance type. When the new instance type specified by the <c>InstanceType</c> parameter has lower specifications than the current instance type, set <c>OperatorType</c> to downgrade.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</para>
+        /// <para>You can refer to the preceding usage notes on how to upgrade or downgrade the instance type.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -221,12 +231,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to restart the instance immediately after the instance type is changed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> If the instance is in the <b>Stopped</b> state, the instance remains in the Stopped state and no operations are performed, regardless of whether <c>RebootWhenFinished</c> is set to true.</para>
+        /// <para>If the instance is in the <b>Stopped</b> state, the instance remains in the Stopped state and no operations are performed, regardless of whether <c>RebootWhenFinished</c> is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

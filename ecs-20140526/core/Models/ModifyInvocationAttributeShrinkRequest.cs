@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyInvocationAttributeShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>Ensures the idempotence of the request. Generate a unique parameter value from your client to guarantee uniqueness across different requests. <b>ClientToken</b> supports only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426655440000</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
@@ -22,10 +28,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>If you set <c>EnableParameter</c> to true, the custom parameter feature is enabled and you can configure custom parameters based on the following rules:</para>
         /// <list type="bullet">
-        /// <item><description>You can define custom parameters in the <c>{{}}</c> format. Within <c>{{}}</c>, the spaces and line feeds before and after the parameter names are ignored.</description></item>
-        /// <item><description>The number of custom parameters cannot exceed 20.</description></item>
-        /// <item><description>A custom parameter name can contain letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</description></item>
-        /// <item><description>Each custom parameter name cannot exceed 64 bytes in length.</description></item>
+        /// <item><description><para>You can define custom parameters in the <c>{{}}</c> format. Within <c>{{}}</c>, the spaces and line feeds before and after the parameter names are ignored.</para>
+        /// </description></item>
+        /// <item><description><para>The number of custom parameters cannot exceed 20.</para>
+        /// </description></item>
+        /// <item><description><para>A custom parameter name can contain letters, digits, underscores (_), and hyphens (-). The name is case-insensitive. The ACS:: prefix cannot be used to specify non-built-in environment parameters.</para>
+        /// </description></item>
+        /// <item><description><para>Each custom parameter name cannot exceed 64 bytes in length.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>You can specify built-in environment parameters as custom parameters. Then, when you run the command, these parameters are automatically specified by Cloud Assistant. You can specify the following built-in environment parameters:</para>
@@ -36,26 +46,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para><c>{{ACS::InstanceId}}</c>: the instance ID. If you want to specify <c>{{ACS::InstanceId}}</c> as a built-in environment variable, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</para>
         /// <list type="bullet">
-        /// <item><description>Linux: 2.2.3.309</description></item>
-        /// <item><description>Windows: 2.1.3.309</description></item>
+        /// <item><description><para>Linux: 2.2.3.309</para>
+        /// </description></item>
+        /// <item><description><para>Windows: 2.1.3.309</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><c>{{ACS::InstanceName}}</c>: the instance name. When the command is run on multiple instances, if you want to specify <c>{{ACS::InstanceName}}</c> as a built-in environment variable, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</para>
         /// <list type="bullet">
-        /// <item><description>Linux: 2.2.3.344</description></item>
-        /// <item><description>Windows: 2.1.3.344</description></item>
+        /// <item><description><para>Linux: 2.2.3.344</para>
+        /// </description></item>
+        /// <item><description><para>Windows: 2.1.3.344</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><c>{{ACS::InvokeId}}</c>: the ID of the task. If you want to specify <c>{{ACS::InvokeId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</para>
         /// <list type="bullet">
-        /// <item><description>Linux: 2.2.3.309</description></item>
-        /// <item><description>Windows: 2.1.3.309</description></item>
+        /// <item><description><para>Linux: 2.2.3.309</para>
+        /// </description></item>
+        /// <item><description><para>Windows: 2.1.3.309</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para><c>{{ACS::CommandId}}</c>: the command ID. If you want to specify <c>{{ACS::CommandId}}</c> as a built-in environment parameter, make sure that the Cloud Assistant Agent version is not earlier than the following ones:</para>
         /// <list type="bullet">
-        /// <item><description>Linux: 2.2.3.309</description></item>
-        /// <item><description>Windows: 2.1.3.309</description></item>
+        /// <item><description><para>Linux: 2.2.3.309</para>
+        /// </description></item>
+        /// <item><description><para>Windows: 2.1.3.309</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -72,8 +90,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The encoding mode of the command content that is specified by <c>CommandContent</c>. Valid values (case-insensitive):</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: The command content is not encoded.</description></item>
-        /// <item><description>Base64: The command content is encoded in Base64.</description></item>
+        /// <item><description><para>PlainText: The command content is not encoded.</para>
+        /// </description></item>
+        /// <item><description><para>Base64: The command content is encoded in Base64.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: PlainText. If the value is invalid, the PlainText mode is used.</para>
         /// 
@@ -87,8 +107,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to include custom parameters in the command.</para>
         /// <list type="bullet">
-        /// <item><description>If you want to enable the custom parameter feature, or configure <c>Parameters</c> to modify the custom parameters in the command, set EnableParameter to <c>true</c>.</description></item>
-        /// <item><description>If you do not want to configure <c>Parameters</c> to modify the custom parameters in the command, leave EnableParameter empty or set it to <c>false</c>.</description></item>
+        /// <item><description><para>If you want to enable the custom parameter feature, or configure <c>Parameters</c> to modify the custom parameters in the command, set EnableParameter to <c>true</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not want to configure <c>Parameters</c> to modify the custom parameters in the command, leave EnableParameter empty or set it to <c>false</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,26 +125,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>To run the command at a fixed interval, use a rate expression to specify the interval. You can specify the interval in seconds, minutes, hours, or days. This option is suitable for scenarios in which tasks need to be executed at a fixed interval. Specify the interval in the following format: <c>rate(&lt;Execution interval value&gt; &lt;Execution interval unit&gt;)</c>. For example, specify <c>rate(5m)</c> to run the command every 5 minutes. Take note of the following limits when you specify an interval:</para>
         /// <list type="bullet">
-        /// <item><description>The specified interval must be in the range of 60 seconds to 7 days and must be longer than the timeout period specified when you created the scheduled task.</description></item>
-        /// <item><description>The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, you set the interval to 5 minutes and the command requires 2 minutes to run once. Each time the command running is complete, the system waits 3 minutes instead of 5 minutes before the system runs the command again.</description></item>
-        /// <item><description>The point in time at which the command is run the next time is calculated based on the creation time of the task (the <a href="https://help.aliyun.com/document_detail/64840.html">CreationTime</a> value returned by the <c>DescribeInvocations</c> operation) and the modified execution interval.</description></item>
+        /// <item><description><para>The specified interval must be in the range of 60 seconds to 7 days and must be longer than the timeout period specified when you created the scheduled task.</para>
+        /// </description></item>
+        /// <item><description><para>The interval is the amount of time that elapses between two consecutive executions. The interval is irrelevant to the amount of time that is required to run the command once. For example, you set the interval to 5 minutes and the command requires 2 minutes to run once. Each time the command running is complete, the system waits 3 minutes instead of 5 minutes before the system runs the command again.</para>
+        /// </description></item>
+        /// <item><description><para>The point in time at which the command is run the next time is calculated based on the creation time of the task (the <a href="https://help.aliyun.com/document_detail/64840.html">CreationTime</a> value returned by the <c>DescribeInvocations</c> operation) and the modified execution interval.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>To run a command only once at a specific time, specify a point in time and a time zone. Specify the point in time in the <c>at(yyyy-MM-dd HH:mm:ss &lt;Time zone&gt;)</c> format, which indicates <c>at(Year-Month-Day Hours:Minutes:Seconds &lt;Time zone&gt;)</c>. If you do not specify a time zone, the Coordinated Universal Time (UTC) time zone is used by default. You can specify a time zone in the following forms:</para>
         /// <list type="bullet">
-        /// <item><description>The time zone name. Examples: <c>Asia/Shanghai</c> and <c>America/Los_Angeles</c>.</description></item>
-        /// <item><description>The time offset from GMT. Examples: <c>GMT+8:00</c> (UTC+8) and <c>GMT-7:00</c> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</description></item>
-        /// <item><description>The time zone abbreviation. Only UTC is supported.</description></item>
+        /// <item><description><para>The time zone name. Examples: <c>Asia/Shanghai</c> and <c>America/Los_Angeles</c>.</para>
+        /// </description></item>
+        /// <item><description><para>The time offset from GMT. Examples: <c>GMT+8:00</c> (UTC+8) and <c>GMT-7:00</c> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</para>
+        /// </description></item>
+        /// <item><description><para>The time zone abbreviation. Only UTC is supported.</para>
+        /// </description></item>
         /// </list>
         /// <para>For example, to configure a command to run only once at 13:15:30 on June 6, 2022 (Shanghai time), set the time to <c>at(2022-06-06 13:15:30 Asia/Shanghai)</c>. To configure a command to run only once at 13:15:30 on June 6, 2022 (UTC-7), set the time to <c>at(2022-06-06 13:15:30 GMT-7:00)</c>.</para>
         /// </description></item>
         /// <item><description><para>To run a command at designated points in time, use a cron expression to define the schedule. Specify a schedule in the <c>&lt;Cron expression&gt; &lt;Time zone&gt;</c> format. The cron expression is in the <c>&lt;Seconds&gt; &lt;Minutes&gt; &lt;Hours&gt; &lt;Day of the month&gt; &lt;Month&gt; &lt;Day of the week&gt; &lt;Year (optional)&gt;</c> format. The system calculates the execution times of the command based on the specified cron expression and time zone and runs the command as scheduled. If you do not specify a time zone, the system time zones of the instances on which you want to run the command are used by default. For information about cron expressions, see <a href="https://help.aliyun.com/document_detail/64769.html">Cron expressions</a>. You can specify the time zone in the following forms:</para>
         /// <list type="bullet">
-        /// <item><description>The time zone name. Examples: <c>Asia/Shanghai</c> and <c>America/Los_Angeles</c>.</description></item>
-        /// <item><description>The time offset from GMT. Examples: <c>GMT+8:00</c> (UTC+8) and <c>GMT-7:00</c> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</description></item>
-        /// <item><description>The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to <c>0 15 10 ? * * 2022 Asia/Shanghai</c>. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to <c>0 0/30 10-11 * * ? 2022 GMT+8:00</c>. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to <c>0 0/5 14 * 10 ? 2022/2 UTC</c>.</description></item>
+        /// <item><description><para>The time zone name. Examples: <c>Asia/Shanghai</c> and <c>America/Los_Angeles</c>.</para>
+        /// </description></item>
+        /// <item><description><para>The time offset from GMT. Examples: <c>GMT+8:00</c> (UTC+8) and <c>GMT-7:00</c> (UTC-7). If you use the GMT format, you cannot add leading zeros to the hour value.</para>
+        /// </description></item>
+        /// <item><description><para>The time zone abbreviation. Only UTC is supported. For example, to configure a command to run at 10:15:00 every day in 2022 (Shanghai time), set the schedule to <c>0 15 10 ? * * 2022 Asia/Shanghai</c>. To configure a command to run every half an hour from 10:00:00 to 11:30:00 every day in 2022 (UTC+8), set the schedule to <c>0 0/30 10-11 * * ? 2022 GMT+8:00</c>. To configure a command to run every 5 minutes from 14:00:00 to 14:55:00 every October every two years from 2022 in UTC, set the schedule to <c>0 0/5 14 * 10 ? 2022/2 UTC</c>.</para>
+        /// </description></item>
         /// </list>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b> The minimum interval must be 10 seconds or longer and cannot be shorter than the timeout period of scheduled executions.</para>
         /// </description></item>
         /// </list>
@@ -161,10 +192,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The key-value pairs of the custom parameters that are passed in if custom parameters are included in the command.</para>
         /// <para>You can specify 0 to 10 custom parameters. Take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>The key of a custom parameter can be up to 64 characters in length and cannot be an empty string.</description></item>
-        /// <item><description>The value of a custom parameter can be an empty string.</description></item>
-        /// <item><description>If you specified to retain the command when you create the command task, the total size of the custom parameters and original command content that are encoded in Base64 cannot exceed 18 KB. If you specified not to retain the command when you create the command task, the total size of the custom parameters and original command content that are encoded in Base64 cannot exceed 24 KB.</description></item>
-        /// <item><description>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</description></item>
+        /// <item><description><para>The key of a custom parameter can be up to 64 characters in length and cannot be an empty string.</para>
+        /// </description></item>
+        /// <item><description><para>The value of a custom parameter can be an empty string.</para>
+        /// </description></item>
+        /// <item><description><para>If you specified to retain the command when you create the command task, the total size of the custom parameters and original command content that are encoded in Base64 cannot exceed 18 KB. If you specified not to retain the command when you create the command task, the total size of the custom parameters and original command content that are encoded in Base64 cannot exceed 24 KB.</para>
+        /// </description></item>
+        /// <item><description><para>The custom parameter names that are specified by Parameters must be included in the custom parameter names that you specified when you created the command. You can use empty strings to represent the parameters that are not passed in.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates not to modify the key-value pairs of the custom parameters.</para>
         /// 

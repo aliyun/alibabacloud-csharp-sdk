@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DeleteBandwidthPackageRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the bandwidth package to delete.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("BandwidthPackageId")]
@@ -25,6 +26,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the bandwidth package is located.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("RegionId")]

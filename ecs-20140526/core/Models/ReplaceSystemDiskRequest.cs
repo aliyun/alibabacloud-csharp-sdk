@@ -20,10 +20,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </description></item>
             /// <item><description><para>Enterprise SSD (ESSD):</para>
             /// <list type="bullet">
-            /// <item><description>PL0 ESSD: Max{1, Size of the image specified by ImageId} to 2048.</description></item>
-            /// <item><description>PL1 ESSD: Max{20, Size of the image specified by ImageId} to 2048.</description></item>
-            /// <item><description>PL2 ESSD: Max{461, Size of the image specified by ImageId} to 2048.</description></item>
-            /// <item><description>PL3 ESSD: Max{1261, Size of the image specified by ImageId} to 2048.</description></item>
+            /// <item><description><para>PL0 ESSD: Max{1, Size of the image specified by ImageId} to 2048.</para>
+            /// </description></item>
+            /// <item><description><para>PL1 ESSD: Max{20, Size of the image specified by ImageId} to 2048.</para>
+            /// </description></item>
+            /// <item><description><para>PL2 ESSD: Max{461, Size of the image specified by ImageId} to 2048.</para>
+            /// </description></item>
+            /// <item><description><para>PL3 ESSD: Max{1261, Size of the image specified by ImageId} to 2048.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>ESSD AutoPL disk: Max{1, Size of the image specified by ImageId} to 2048.</para>
@@ -33,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// </list>
             /// <para>Default value: Max{40, Size of the image specified by ImageId}.</para>
             /// <remarks>
-            /// <para> If the capacity of the new system disk exceeds <c>Max{20, Capacity of the original system disk}</c>, you are charged for the excess capacity.</para>
+            /// <para>If the capacity of the new system disk exceeds <c>Max{20, Capacity of the original system disk}</c>, you are charged for the excess capacity.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated. To improve compatibility, we recommend that you use <c>ImageId</c>.</para>
+        /// <para>This parameter is deprecated. To improve compatibility, we recommend that you use <c>ImageId</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -139,12 +143,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to encrypt the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para> When you use a shared encrypted image to create the disk based on an encrypted snapshot, you must set Encrypted to true to ensure that the disk uses an encryption key of your own.</para>
+        /// <para>When you use a shared encrypted image to create the disk based on an encrypted snapshot, you must set Encrypted to true to ensure that the disk uses an encryption key of your own.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -167,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the instance whose operating system you want to replace.</para>
         /// <remarks>
-        /// <para> Make sure that the instance is in the <c>Stopped</c> (<c>Stopped</c>) state.</para>
+        /// <para>Make sure that the instance is in the <c>Stopped</c> (<c>Stopped</c>) state.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -242,7 +248,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is deprecated.</para>
+        /// <para>This parameter is deprecated.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -263,8 +269,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to use Security Center Basic after the system disk is replaced. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.</description></item>
-        /// <item><description>Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.</description></item>
+        /// <item><description><para>Active: uses Security Center Basic after the system disk is re-initialized. This value is applicable only to public images.</para>
+        /// </description></item>
+        /// <item><description><para>Deactive: does not use Security Center Basic after the system disk is re-initialized. This value is applicable to all images.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Deactive.</para>
         /// 

@@ -90,11 +90,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the operation that generates the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ImportImage</description></item>
-        /// <item><description>ExportImage</description></item>
-        /// <item><description>RedeployInstance</description></item>
-        /// <item><description>ModifyDiskSpec</description></item>
-        /// <item><description>ArchiveSnapshot</description></item>
+        /// <item><description><para>ImportImage</para>
+        /// </description></item>
+        /// <item><description><para>ExportImage</para>
+        /// </description></item>
+        /// <item><description><para>RedeployInstance</para>
+        /// </description></item>
+        /// <item><description><para>ModifyDiskSpec</para>
+        /// </description></item>
+        /// <item><description><para>ArchiveSnapshot</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,6 +110,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string TaskAction { get; set; }
 
         /// <summary>
+        /// <para>Task group ID.</para>
+        /// <remarks>
+        /// <para>This parameter is in invitational preview. When this parameter is used, other query conditions become invalid.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>g-2ze2op2grqpclwu7****</para>
+        /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
         /// </summary>
@@ -125,13 +138,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Finished</description></item>
-        /// <item><description>Processing</description></item>
-        /// <item><description>Failed</description></item>
+        /// <item><description><para>Finished</para>
+        /// </description></item>
+        /// <item><description><para>Processing</para>
+        /// </description></item>
+        /// <item><description><para>Failed</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is left empty by default.</para>
         /// <remarks>
-        /// <para> The system only queries tasks in the Finished, Processing, and Failed states and ignores other values.</para>
+        /// <para>The system only queries tasks in the Finished, Processing, and Failed states and ignores other values.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

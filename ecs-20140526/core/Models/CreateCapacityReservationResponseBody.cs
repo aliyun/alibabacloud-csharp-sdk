@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateCapacityReservationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The capacity reservation ID.</para>
+        /// <para>The ID of the capacity reservation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>crp-bp67acfmxazb4****</para>

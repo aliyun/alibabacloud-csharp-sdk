@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>If you set the DestinationResource parameter to SystemDisk, you must specify the InstanceType parameter. In this case, this operation queries the system disk categories supported by the specified instance type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ecs.g5.large</para>
+        /// <para>ecs.g7.large</para>
         /// </summary>
         [NameInMap("InstanceType")]
         [Validation(Required=false)]
@@ -70,16 +70,20 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether cross-cluster instance type upgrades are supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// <para>When MigrateAcrossZone is set to true and you upgrade the instance type of an instance based on the returned information, take note of the following items:</para>
         /// <list type="bullet">
         /// <item><description><para>Instance that resides in the classic network:</para>
         /// <list type="bullet">
-        /// <item><description>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</description></item>
-        /// <item><description>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</description></item>
+        /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</para>
+        /// </description></item>
+        /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families available for purchase</a>, when the instance type of an instance is changed, the private IP address of the instance changes.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Instance that resides in a virtual private cloud (VPC): For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is upgraded to an I/O optimized instance, the disk device names and software authorization codes of the instance change. For a Linux instance, basic disks (cloud) are identified as xvd\* such as xvda and xvdb, and ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vd\* such as vda and vdb.</para>
@@ -98,10 +102,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>Valid values for subscription resources:</para>
         /// <list type="bullet">
-        /// <item><description>Upgrade: upgrades resources.</description></item>
-        /// <item><description>Downgrade: downgrades resources.</description></item>
-        /// <item><description>RenewDowngrade: renews and downgrades resources.</description></item>
-        /// <item><description>RenewModify: renews an expired instance and changes its configurations.</description></item>
+        /// <item><description><para>Upgrade: upgrades resources.</para>
+        /// </description></item>
+        /// <item><description><para>Downgrade: downgrades resources.</para>
+        /// </description></item>
+        /// <item><description><para>RenewDowngrade: renews and downgrades resources.</para>
+        /// </description></item>
+        /// <item><description><para>RenewModify: renews an expired instance and changes its configurations.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>Set the value to Upgrade for pay-as-you-go resources.</para>

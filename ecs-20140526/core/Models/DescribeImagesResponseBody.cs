@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>Current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the image.</para>
+        /// <para>The region ID to which the image belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -308,7 +308,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66189103-EDB2-43E2-BB60-BFF2B62F4EB8</para>
@@ -318,7 +318,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of images.</para>
+        /// <para>Total number of images.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

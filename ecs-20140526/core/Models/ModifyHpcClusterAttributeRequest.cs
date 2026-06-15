@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The description of the HPC cluster. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</para>
+        /// <para>The description of the HPC cluster. The description must be 2 to 256 characters in length, and cannot start with http\:// or https\://.</para>
         /// <para>This parameter is empty by default.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string HpcClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http:// or https://. The name can contain letters, digits, underscores (_), and hyphens (-).</para>
+        /// <para>The name of the HPC cluster. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with http\:// or https\://. The name can contain letters, digits, underscores (_), and hyphens (-).</para>
         /// <para>This parameter is empty by default.</para>
         /// 
         /// <b>Example:</b>

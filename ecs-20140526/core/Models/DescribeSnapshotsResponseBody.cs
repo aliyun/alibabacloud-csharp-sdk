@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>A pagination token used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is deprecated. Use the <c>NextToken</c> and <c>MaxResults</c> parameters for pagination instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter will be removed in the future. We recommend that you use NextToken and MaxResults for a paged query.</para>
+        /// <para>This parameter is deprecated. Use the <c>NextToken</c> and <c>MaxResults</c> parameters for pagination instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,6 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Details about the snapshots.</para>
+        /// </summary>
         [NameInMap("Snapshots")]
         [Validation(Required=false)]
         public DescribeSnapshotsResponseBodySnapshots Snapshots { get; set; }
@@ -216,7 +219,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The total number of snapshots.</para>
         /// <remarks>
-        /// <para>When using the <c>MaxResults</c> and <c>NextToken</c> parameters for a paginated query, the returned <c>TotalCount</c> parameter value is invalid.</para>
+        /// <para>The <c>TotalCount</c> value is invalid if you use the <c>MaxResults</c> and <c>NextToken</c> parameters for pagination.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -16,14 +16,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The category of data disk N. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud: basic disk.</description></item>
-            /// <item><description>cloud_efficiency: ultra disk.</description></item>
-            /// <item><description>cloud_ssd: standard SSD.</description></item>
-            /// <item><description>ephemeral_ssd: local SSD.</description></item>
-            /// <item><description>cloud_essd: ESSD.</description></item>
-            /// <item><description>cloud_auto: ESSD AutoPL disk.</description></item>
+            /// <item><description><para><c>cloud</c>: basic cloud disk</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_efficiency</c>: efficiency cloud disk</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_ssd</c>: SSD cloud disk</para>
+            /// </description></item>
+            /// <item><description><para><c>ephemeral_ssd</c>: local SSD</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_essd</c>: ESSD</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_auto</c>: ESSD AutoPL</para>
+            /// </description></item>
             /// </list>
-            /// <para>Valid values of N: 1 to 16.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description><c>cloud_essd_entry</c>: ESSD Entry</description></item>
+            /// </list>
+            /// <para>The value of N can be 1–16.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_ssd</para>
@@ -33,14 +43,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The performance level of data disk N when the disk is an ESSD. This parameter takes effect only when <c>DataDisk.N.Category</c> is set to cloud_essd. Valid values:</para>
+            /// <para>The performance level of data disk N when it is an ESSD. This parameter is valid only when <c>DataDisk.N.Category</c> is set to <c>cloud_essd</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0</description></item>
-            /// <item><description>PL1 (default)</description></item>
-            /// <item><description>PL2</description></item>
-            /// <item><description>PL3</description></item>
+            /// <item><description><para><c>PL0</c></para>
+            /// </description></item>
+            /// <item><description><para><c>PL1</c> (Default)</para>
+            /// </description></item>
+            /// <item><description><para><c>PL2</c></para>
+            /// </description></item>
+            /// <item><description><para><c>PL3</c></para>
+            /// </description></item>
             /// </list>
-            /// <para>Valid values of N: 1 to 16.</para>
+            /// <para>The value of N can be 1–16.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -52,26 +66,35 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The size of data disk N. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud: 5 to 2000.</para>
+            /// <item><description><para><c>cloud</c>: 5–2000</para>
             /// </description></item>
-            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_efficiency: 20 to 32768.</para>
+            /// <item><description><para><c>cloud_efficiency</c>: 20–32768</para>
             /// </description></item>
-            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_ssd: 20 to 32768.</para>
+            /// <item><description><para><c>cloud_ssd</c>: 20–32768</para>
             /// </description></item>
-            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_auto: 1 to 32768.</para>
+            /// <item><description><para><c>cloud_auto</c>: 1–32768</para>
             /// </description></item>
-            /// <item><description><para>Valid values if DataDisk.N.Category is set to cloud_essd: vary based on the <c>DataDisk.N.PerformanceLevel</c> value.</para>
+            /// </list>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description>Valid values if DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</description></item>
-            /// <item><description>Valid values if DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</description></item>
-            /// <item><description>Valid values if DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</description></item>
-            /// <item><description>Valid values if DataDisk.N.PerformanceLevel is set to PL3: 1261 to 32768.</description></item>
+            /// <item><description><para><c>cloud_essd_entry</c>: 10–32768</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_essd</c>: The value range depends on the <c>DataDisk.N.PerformanceLevel</c>.</para>
+            /// <list type="bullet">
+            /// <item><description><para>PL0: 1–32768</para>
+            /// </description></item>
+            /// <item><description><para>PL1: 20–32768</para>
+            /// </description></item>
+            /// <item><description><para>PL2: 461–32768</para>
+            /// </description></item>
+            /// <item><description><para>PL3: 1261–32768</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>Valid values if DataDisk.N.Category is set to ephemeral_ssd: 5 to 800.</para>
+            /// <item><description><para><c>ephemeral_ssd</c>: 5–800</para>
             /// </description></item>
             /// </list>
-            /// <para>Valid values of N: 1 to 16.</para>
+            /// <para>The value of N can be 1–16.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -81,10 +104,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
-            /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+            /// <para>The provisioned read/write IOPS for the ESSD AutoPL cloud disk. Valid values: 0–<c>min{50000, 1000 * Capacity - Baseline IOPS}</c>.</para>
+            /// <para><c>Baseline IOPS = min{1800 + 50 * Capacity, 50000}</c>.</para>
             /// <remarks>
-            /// <para> This parameter is available only if you set <c>DataDisk.N.Category</c> to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
+            /// <para>This parameter is valid only when <c>DataDisk.N.Category</c> is set to <c>cloud_auto</c>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -101,8 +124,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribePriceRequestSchedulerOptions SchedulerOptions { get; set; }
         public class DescribePriceRequestSchedulerOptions : TeaModel {
             /// <summary>
-            /// <para>This parameter takes effect only when ResourceType is set to instance.</para>
-            /// <para>The ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the dedicated host list.</para>
+            /// <para>This parameter is valid only when <c>ResourceType</c> is set to <c>instance</c>.</para>
+            /// <para>The ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query dedicated host IDs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dh-bp67acfmxazb4p****</para>
@@ -111,6 +134,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             [Validation(Required=false)]
             public string DedicatedHostId { get; set; }
 
+            /// <summary>
+            /// <para>The deployment set strategy. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>Availability</c>: high availability</para>
+            /// </description></item>
+            /// <item><description><para><c>AvailabilityGroup</c>: high availability for deployment set groups</para>
+            /// </description></item>
+            /// <item><description><para><c>LowLatency</c>: low latency</para>
+            /// </description></item>
+            /// <item><description><para><c>ProximityLooseDispersion</c>: proximity loose dispersion</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>Only the <c>ProximityLooseDispersion</c> strategy incurs a fee. The API response includes price details for the deployment set (where <c>Resource</c> is <c>deploymentSet</c>) only when this strategy is used. Other deployment set strategies are free of charge.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ProximityLooseDispersion</para>
+            /// </summary>
             [NameInMap("DeploymentSetStrategy")]
             [Validation(Required=false)]
             public string DeploymentSetStrategy { get; set; }
@@ -122,23 +164,31 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public DescribePriceRequestSystemDisk SystemDisk { get; set; }
         public class DescribePriceRequestSystemDisk : TeaModel {
             /// <summary>
-            /// <para>The category of the system disk. Valid values:</para>
+            /// <para>The category of the system disk. You must specify <c>ImageId</c> when you query the price of a system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud: basic disk</description></item>
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
-            /// <item><description>ephemeral_ssd: local SSD</description></item>
-            /// <item><description>cloud_essd: Enterprise SSD (ESSD)</description></item>
-            /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
+            /// <item><description><para><c>cloud</c>: basic cloud disk</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_efficiency</c>: efficiency cloud disk</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_ssd</c>: SSD cloud disk</para>
+            /// </description></item>
+            /// <item><description><para><c>ephemeral_ssd</c>: local SSD</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_essd</c>: ESSD</para>
+            /// </description></item>
+            /// <item><description><para><c>cloud_auto</c>: ESSD AutoPL</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
-            /// <item><description>When InstanceType is set to a retired instance type and <c>IoOptimized</c> is set to <c>none</c>, the default value is <c>cloud</c>.</description></item>
-            /// <item><description>In other cases, the default value is <c>cloud_efficiency</c>.</description></item>
+            /// <item><description><c>cloud_essd_entry</c>: ESSD Entry</description></item>
             /// </list>
-            /// <remarks>
-            /// <para> If you want to query the price of a system disk, you must also specify <c>ImageId</c>.</para>
-            /// </remarks>
+            /// <list type="bullet">
+            /// <item><description><para>For retired instance types where <c>IoOptimized</c> is <c>none</c>, the default value is <c>cloud</c>.</para>
+            /// </description></item>
+            /// <item><description><para>In other cases, the default value is <c>cloud_efficiency</c>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, for instance types that support only ESSDs, the default value will be changed from <c>cloud_efficiency</c> to <c>cloud_essd</c> at PL0. For more information, see the <a href="https://www.aliyun.com/notice/117844">change announcement</a>.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_ssd</para>
@@ -148,8 +198,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the system disk when the disk is an ESSD. This parameter is valid only when <c>SystemDiskCategory</c> is set to cloud_essd. Valid values:</para>
-            /// <para>PL0, PL1 (default), PL2, PL3.</para>
+            /// <para>The performance level of the ESSD when used as a system disk. This parameter is valid only when <c>SystemDisk.Category</c> is set to <c>cloud_essd</c>. Valid values:</para>
+            /// <para><c>PL0</c><br><c>PL1</c> (Default)<br><c>PL2</c><br><c>PL3</c><br><br><br></para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -161,22 +211,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The size of the system disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Basic disk (cloud): 20 to 500.</para>
+            /// <item><description><para>Basic cloud disk: 20–500.</para>
             /// </description></item>
-            /// <item><description><para>ESSD (cloud_essd): Valid values vary based on the SystemDisk.PerformanceLevel value.</para>
+            /// <item><description><para>ESSD cloud disk:</para>
             /// <list type="bullet">
-            /// <item><description>Valid values when SystemDisk.PerformanceLevel is set to PL0: 1 to 2048.</description></item>
-            /// <item><description>Valid values when SystemDisk.PerformanceLevel is set to PL1: 20 to 2048.</description></item>
-            /// <item><description>Valid values when SystemDisk.PerformanceLevel is set to PL2: 461 to 2048.</description></item>
-            /// <item><description>Valid values when SystemDisk.PerformanceLevel is set to PL3: 1261 to 2048.</description></item>
-            /// </list>
+            /// <item><description><para>PL0: 1–2048.</para>
             /// </description></item>
-            /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 2048.</para>
+            /// <item><description><para>PL1: 20–2048.</para>
             /// </description></item>
-            /// <item><description><para>Other disk categories: 20 to 2048.</para>
+            /// <item><description><para>PL2: 461–2048.</para>
+            /// </description></item>
+            /// <item><description><para>PL3: 1261–2048.</para>
             /// </description></item>
             /// </list>
-            /// <para>Default value: 20 or the size of the image specified by ImageId, whichever is greater.</para>
+            /// </description></item>
+            /// <item><description><para>ESSD AutoPL cloud disk: 1–2048.</para>
+            /// </description></item>
+            /// <item><description><para>Other cloud disk categories: 20–2048.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: <c>max{20, ImageSize}</c>, which is the greater of 20 and the size of the specified image (<c>ImageId</c>).</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -188,7 +242,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The number of ECS instances. You can specify this parameter when you want to query the prices of multiple instances that have specific specifications. Valid values: 1 to 1000.</para>
+        /// <para>The number of resources for which to query prices. Valid values: 1–1000.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -199,8 +253,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>The total number of times that the elasticity assurance can be applied. Set the value to Unlimited. This value indicates that the elasticity assurance can be applied an unlimited number of times within its effective period.</para>
-        /// <para>Default value: Unlimited.</para>
+        /// <para>The number of times the elasticity assurance can be used. Set this to <c>Unlimited</c>, which allows the assurance to be used any number of times during its effective period.</para>
+        /// <para>Default value: <c>Unlimited</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unlimited</para>
@@ -210,7 +264,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AssuranceTimes { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity. Unit: GiB.</para>
+        /// <para>The memory capacity for the elasticity assurance. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>
@@ -220,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The type of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</para>
+        /// <para>The dedicated host type. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query dedicated host types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddh.c5</para>
@@ -230,8 +284,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DedicatedHostType { get; set; }
 
         /// <summary>
-        /// <para>This parameter takes effect only when ResourceType is set to instance.</para>
-        /// <para>The image ID. Images contain the runtime environments to load when instances start. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images. If you do not specify this parameter, the system queries the prices of Linux images.</para>
+        /// <para>This parameter is valid only when <c>ResourceType</c> is set to <c>instance</c>.</para>
+        /// <para>The ID of the image. The image provides the runtime environment for the instance. You can call the <a href="https://help.aliyun.com/document_detail/25534.html">DescribeImages</a> operation to query available images. If you do not specify this parameter, the system queries prices for Linux instances by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>centos_7_05_64_20G_alibase_20181212.vhd</para>
@@ -241,8 +295,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The total number of reserved instances for an instance type.</para>
-        /// <para>Valid values: 1 to 1000.</para>
+        /// <para>The number of instances to include in the reserved instance offering.</para>
+        /// <para>Valid values: 1–1000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -252,9 +306,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InstanceAmount { get; set; }
 
         /// <summary>
-        /// <para>The total number of vCPUs supported by the elasticity assurance. When you call this API operation, the system calculates the number of instances that an elasticity assurance must support based on the specified value of InstanceType. The calculated value is rounded up to the nearest integer.</para>
+        /// <para>The total number of vCPUs for instances that are covered by the elasticity assurance. When you call this operation, the system calculates the number of supported instances based on the specified <c>InstanceType</c> and rounds the value up to the nearest integer.</para>
         /// <remarks>
-        /// <para>When you call this API operation to query the price of an elasticity assurance, you can only specify either InstanceCoreCpuCount or InstanceAmount.</para>
+        /// <para>When you query the price of an elasticity assurance, you can specify only one of the <c>InstanceCpuCoreCount</c> and <c>InstanceAmount</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -267,10 +321,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>classic: classic network</description></item>
-        /// <item><description>vpc: Virtual Private Cloud (VPC)</description></item>
+        /// <item><description><para><c>classic</c>: classic network</para>
+        /// </description></item>
+        /// <item><description><para><c>vpc</c>: VPC</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: vpc.</para>
+        /// <para>Default value: <c>vpc</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc</para>
@@ -280,7 +336,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>The instance type. When <c>ResourceType</c> is set to <c>instance</c>, you must specify this parameter. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent list of instance types.</para>
+        /// <para>The instance type. This parameter is required when <c>ResourceType</c> is set to <c>instance</c>. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance type families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the instance types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
@@ -290,7 +346,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The instance types. You can select only a single instance type when you configure an elasticity assurance in unlimited mode.</para>
+        /// <para>The instance type. You can specify only one instance type for an elasticity assurance of the <c>Unlimited</c> type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.xlarge</para>
@@ -302,10 +358,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method for network usage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayByBandwidth: pay-by-bandwidth</description></item>
-        /// <item><description>PayByTraffic: pay-by-traffic</description></item>
+        /// <item><description><para><c>PayByBandwidth</c>: pay-by-bandwidth</para>
+        /// </description></item>
+        /// <item><description><para><c>PayByTraffic</c>: pay-by-traffic</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: PayByTraffic</para>
+        /// <para>Default value: <c>PayByTraffic</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByTraffic</para>
@@ -315,7 +373,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</para>
+        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0–100.</para>
         /// <para>Default value: 0.</para>
         /// 
         /// <b>Example:</b>
@@ -328,11 +386,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether the instance is I/O optimized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>none: The instance is not I/O optimized.</description></item>
-        /// <item><description>optimized: The instance is I/O optimized.</description></item>
+        /// <item><description><para><c>none</c>: non-I/O-optimized.</para>
+        /// </description></item>
+        /// <item><description><para><c>optimized</c>: I/O-optimized.</para>
+        /// </description></item>
         /// </list>
-        /// <para>When the instance type specified by the InstanceType parameter belongs to <a href="https://help.aliyun.com/document_detail/55263.html">Generation I instance families</a>, the default value of this parameter is none.</para>
-        /// <para>When the instance type specified by the InstanceType parameter does not belong to <a href="https://help.aliyun.com/document_detail/55263.html">Generation I instance families</a>, the default value of this parameter is optimized.</para>
+        /// <para>For <a href="https://help.aliyun.com/document_detail/55263.html">generation I</a> instances, the default value is <c>none</c>.</para>
+        /// <para>For other instance types, the default value is <c>optimized</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>optimized</para>
@@ -344,10 +404,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The Internet service provider (ISP). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cmcc: China Mobile</description></item>
-        /// <item><description>telecom: China Telecom</description></item>
-        /// <item><description>unicom: China Unicom</description></item>
-        /// <item><description>multiCarrier: multi-line ISP</description></item>
+        /// <item><description><para><c>cmcc</c>: China Mobile</para>
+        /// </description></item>
+        /// <item><description><para><c>telecom</c>: China Telecom</para>
+        /// </description></item>
+        /// <item><description><para><c>unicom</c>: China Unicom</para>
+        /// </description></item>
+        /// <item><description><para><c>multiCarrier</c>: BGP (Multi-ISP)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -358,11 +422,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The payment option of the reserved instance. Valid values:</para>
+        /// <para>The payment option for the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>No Upfront</description></item>
-        /// <item><description>Partial Upfront</description></item>
-        /// <item><description>All Upfront</description></item>
+        /// <item><description><para><c>No Upfront</c></para>
+        /// </description></item>
+        /// <item><description><para><c>Partial Upfront</c></para>
+        /// </description></item>
+        /// <item><description><para><c>All Upfront</c></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -381,11 +448,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing cycle of the ECS instance. Valid values:</para>
+        /// <para>The billing duration of the resource. This parameter is used with <c>PriceUnit</c>. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when PriceUnit is set to Month: 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
-        /// <item><description>Valid values when PriceUnit is set to Year: 1, 2, 3, 4, and 5.</description></item>
-        /// <item><description>Set the value to 1 when PriceUnit is set to Hour.</description></item>
+        /// <item><description><para>If <c>PriceUnit</c> is set to <c>Month</c>: 1–9.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PriceUnit</c> is set to <c>Year</c>: 1–5.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PriceUnit</c> is set to <c>Hour</c>: 1.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PriceUnit</c> is set to <c>Week</c>: 1–4.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para>If <c>PriceUnit</c> is set to <c>Month</c>: 1–9.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PriceUnit</c> is set to <c>Year</c>: 1–5.</para>
+        /// </description></item>
+        /// <item><description><para>If <c>PriceUnit</c> is set to <c>Hour</c>: 1.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -397,10 +479,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The operating system of the image that is used by the instance. Valid values:</para>
+        /// <para>The operating system of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Windows: Windows Server operating system</description></item>
-        /// <item><description>Linux: Linux and UNIX-like operating system</description></item>
+        /// <item><description><para><c>Windows</c>: Windows Server</para>
+        /// </description></item>
+        /// <item><description><para><c>Linux</c>: Linux</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -411,11 +495,26 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The pricing unit of the ECS resource. Valid values:</para>
+        /// <para>The billing cycle of the resource. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>Month</description></item>
-        /// <item><description>Year</description></item>
-        /// <item><description>Hour (default)</description></item>
+        /// <item><description><para><c>Month</c>: For monthly pricing.</para>
+        /// </description></item>
+        /// <item><description><para><c>Year</c>: For yearly pricing.</para>
+        /// </description></item>
+        /// <item><description><para><c>Hour</c> (Default): For hourly pricing.</para>
+        /// </description></item>
+        /// <item><description><para><c>Week</c>: For weekly pricing.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>Month</c>: For monthly pricing.</para>
+        /// </description></item>
+        /// <item><description><para><c>Year</c>: For yearly pricing.</para>
+        /// </description></item>
+        /// <item><description><para><c>Hour</c> (Default): For hourly pricing.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -426,9 +525,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PriceUnit { get; set; }
 
         /// <summary>
-        /// <para>The assurance schedules of the time-segmented elasticity assurance.</para>
+        /// <para>The list of recurrence rules for the time-based elasticity assurance.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// <para>The time-based elasticity assurance feature is available only in specific regions and to specific users. To use this feature, <a href="https://selfservice.console.aliyun.com/ticket/createIndex">submit a ticket</a>.</para>
+        /// </remarks>
+        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+        /// <remarks>
+        /// <para>The time-based elasticity assurance feature is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RecurrenceRules")]
@@ -436,7 +540,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<DescribePriceRequestRecurrenceRules> RecurrenceRules { get; set; }
         public class DescribePriceRequestRecurrenceRules : TeaModel {
             /// <summary>
-            /// <para>The end time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</para>
+            /// <para>The end time of the time-based assurance. The value must be on the hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -446,14 +550,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? EndHour { get; set; }
 
             /// <summary>
-            /// <para>The type of the assurance schedule. Valid values:</para>
+            /// <para>The recurrence type of the rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Daily</description></item>
-            /// <item><description>Weekly</description></item>
-            /// <item><description>Monthly</description></item>
+            /// <item><description><para><c>Daily</c>: repeats on a daily basis.</para>
+            /// </description></item>
+            /// <item><description><para><c>Weekly</c>: repeats on a weekly basis.</para>
+            /// </description></item>
+            /// <item><description><para><c>Monthly</c>: repeats on a monthly basis.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If you specify this parameter, you must specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// <para>You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -464,14 +571,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RecurrenceType { get; set; }
 
             /// <summary>
-            /// <para>The days of the week or month on which the capacity reservation of the time-segmented elasticity assurance takes effect or the interval, in number of days, at which the capacity reservation takes effect.</para>
+            /// <para>The recurrence value.</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can specify only one value. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</description></item>
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can specify multiple values. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <c>1,2</c>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</description></item>
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <c>1-5</c>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</description></item>
+            /// <item><description><para>If <c>RecurrenceType</c> is set to <c>Daily</c>, this parameter takes a single value that specifies the recurrence interval in days. Valid values: 1–31.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>RecurrenceType</c> is set to <c>Weekly</c>, this parameter can have multiple values separated by commas (,). The values 0, 1, 2, 3, 4, 5, and 6 correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday. For example, <c>1,2</c> specifies Monday and Tuesday.</para>
+            /// </description></item>
+            /// <item><description><para>If <c>RecurrenceType</c> is set to <c>Monthly</c>, the value must be in the <c>A–B</c> format. The values of A and B must be between 1 and 31, and B must be greater than or equal to A. For example, <c>1–5</c> specifies the first to the fifth day of each month.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If you specify this parameter, you must specify <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// <para>You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -482,9 +592,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string RecurrenceValue { get; set; }
 
             /// <summary>
-            /// <para>The start time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</para>
+            /// <para>The start time of the time-based assurance. The value must be on the hour.</para>
             /// <remarks>
-            /// <para> You must specify both StartHour and EndHour. The EndHour value must be at least 4 hours later than the StartHour value.</para>
+            /// <para>Both <c>StartHour</c> and <c>EndHour</c> are required. The interval between them must be at least 4 hours.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -497,7 +607,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent list of regions.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -516,17 +626,24 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The type of the resource for which you want to query the price. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: queries the most recent prices of ECS instances. If you set this parameter to <c>instance</c>, specify <c>InstanceType</c>.</description></item>
-        /// <item><description>disk: queries the most recent prices of cloud disks. If you set this parameter to <c>disk</c>, specify <c>DataDisk.1.Category</c> and <c>DataDisk.1.Size</c>.</description></item>
-        /// <item><description>diskperformance: Queries the most recent prices of the provioned performance of the Enterprise SSD (ESSD) AutoPL disk. You must also specify <c>DataDisk.1.Category</c> and <c>DataDisk.1.ProvisionedIops</c>.</description></item>
-        /// <item><description>bandwidth: queries the most recent prices for network usage.</description></item>
-        /// <item><description>ddh: queries the most recent prices of dedicated hosts.</description></item>
-        /// <item><description>ElasticityAssurance: queries the most recent prices of elasticity assurances. If you set this parameter to <c>ElasticityAssurance</c>, specify <c>InstanceType</c>.</description></item>
-        /// <item><description>CapacityReservation: queries the most recent prices of capacity reservations. If you set this parameter to <c>CapacityReservation</c>, specify <c>InstanceType</c>.</description></item>
+        /// <item><description><para><c>instance</c>: Query the prices of ECS instances. If you set this parameter to <c>instance</c>, you must also specify the <c>InstanceType</c> parameter.</para>
+        /// </description></item>
+        /// <item><description><para><c>disk</c>: Query the prices of cloud disks. If you set this parameter to <c>disk</c>, you must also specify the <c>DataDisk.1.Category</c> and <c>DataDisk.1.Size</c> parameters.</para>
+        /// </description></item>
+        /// <item><description><para><c>diskperformance</c>: Query the prices of the provisioned performance of an ESSD AutoPL cloud disk. You must also specify the <c>DataDisk.1.Category</c> and <c>DataDisk.1.ProvisionedIops</c> parameters.</para>
+        /// </description></item>
+        /// <item><description><para><c>bandwidth</c>: Query the prices of network bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para><c>ddh</c>: Query the prices of dedicated hosts.</para>
+        /// </description></item>
+        /// <item><description><para><c>ElasticityAssurance</c>: Query the prices of Elasticity Assurance. If you set this parameter to <c>ElasticityAssurance</c>, you must also specify the <c>InstanceType</c> parameter.</para>
+        /// </description></item>
+        /// <item><description><para><c>CapacityReservation</c>: Query the prices of Capacity Reservation. If you set this parameter to <c>CapacityReservation</c>, you must also specify the <c>InstanceType</c> parameter.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: instance.</para>
+        /// <para>Default value: <c>instance</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>
@@ -538,10 +655,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The scope of the reserved instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Region: regional</description></item>
-        /// <item><description>Zone: zonal</description></item>
+        /// <item><description><para><c>Region</c>: region-scoped</para>
+        /// </description></item>
+        /// <item><description><para><c>Zone</c>: zone-scoped</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: Region.</para>
+        /// <para>Default value: <c>Region</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Zone</para>
@@ -553,12 +672,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
-        /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+        /// <item><description><para><c>1</c>: Alibaba Cloud does not automatically release the instance within 1 hour. After the 1-hour protection period ends, the system checks the market price and resource inventory to determine whether to retain or release the instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>0</c>: The instance has no protection period. The system checks the market price and resource inventory to determine whether to retain or release the instance.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</para>
+        /// <para>Alibaba Cloud sends you an ECS system event five minutes before the instance is released. Spot instances are billed by the second. Select a protection period based on the time required to complete your task.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</para>
+        /// <para>This parameter is valid only when <c>SpotStrategy</c> is set to <c>SpotWithPriceLimit</c> or <c>SpotAsPriceGo</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -569,15 +690,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? SpotDuration { get; set; }
 
         /// <summary>
-        /// <para>The bidding policy for the pay-as-you-go instance. Valid values:</para>
+        /// <para>The preemption policy for the pay-as-you-go instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instance is a regular pay-as-you-go instance.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instance is created as a spot instance that has a user-defined maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instance is created as a spot instance whose bid price is based on the market price at the time of purchase. The market price can be up to the pay-as-you-go price.</description></item>
+        /// <item><description><para><c>NoSpot</c>: A regular pay-as-you-go instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>SpotWithPriceLimit</c>: A spot instance for which you specify a maximum hourly price.</para>
+        /// </description></item>
+        /// <item><description><para><c>SpotAsPriceGo</c>: A spot instance where the system automatically bids up to the pay-as-you-go price.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: NoSpot.</para>
+        /// <para>Default value: <c>NoSpot</c>.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when <c>PriceUnit</c> is set to Hour and <c>Period</c> is set to 1. The default value of <c>PriceUnit</c> is <c>Hour</c> and the default value of <c>Period</c> is <c>1</c>. Therefore, you do not need to set <c>PriceUnit</c> or <c>Period</c> when you set SpotStrategy.</para>
+        /// <para>This parameter applies only when you query hourly prices, where <c>PriceUnit</c> is <c>Hour</c> and <c>Period</c> is <c>1</c>. Because these are the default values, you do not need to set them when you use <c>SpotStrategy</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -588,7 +712,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// <para>The time when the time-segmented assurance of the elasticity assurance takes effect. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// <para>The time when the time-based elasticity assurance takes effect. The time must be specified in UTC and formatted as <c>yyyy-MM-ddTHH:mm:ssZ</c> in accordance with the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-10-30T06:32:00Z</para>
@@ -598,9 +722,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The zone ID.</para>
+        /// <para>The ID of the availability zone.</para>
         /// <remarks>
-        /// <para>Prices of spot instances vary based on zones. When you query the price of a spot instance, specify ZoneId.</para>
+        /// <para>The prices of spot instances may vary by availability zone. When you query the price of a spot instance, specify <c>ZoneId</c> to query the price for a specific availability zone.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class DescribeTagsRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter will be deprecated in the future. We recommend that you use other parameters to ensure future compatibility.</para>
+        /// <para>This parameter is deprecated. We recommend that you use other parameters to ensure compatibility.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,8 +26,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Page starts from page 1.</para>
+        /// <para>The page number of the tag list.</para>
+        /// <para>Starts from 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -38,8 +38,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Valid values: 1 to 100.</para>
+        /// <para>The number of entries to return per page.</para>
+        /// <para>Maximum value: 100.</para>
         /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to obtain the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource to which the tags are added. If the resource is an instance, the value of this parameter is the ID of the instance.</para>
+        /// <para>The ID of the resource. For example, if the <c>ResourceType</c> is <c>instance</c>, this parameter specifies the instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-946ntx4wr****</para>
@@ -79,22 +79,34 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource to which the tags are added. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>instance: Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description>disk: disk.</description></item>
-        /// <item><description>snapshot: snapshot.</description></item>
-        /// <item><description>image: image.</description></item>
-        /// <item><description>securitygroup: security group.</description></item>
-        /// <item><description>volume: storage volume.</description></item>
-        /// <item><description>eni: elastic network interface (ENI).</description></item>
-        /// <item><description>ddh: dedicated host.</description></item>
-        /// <item><description>keypair: SSH key pair.</description></item>
-        /// <item><description>launchtemplate: launch template.</description></item>
-        /// <item><description>reservedinstance: reserved instance.</description></item>
-        /// <item><description>snapshotpolicy: automatic snapshot policy.</description></item>
+        /// <item><description><para><c>instance</c>: an ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>disk</c>: a disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>snapshot</c>: a snapshot.</para>
+        /// </description></item>
+        /// <item><description><para><c>image</c>: an image.</para>
+        /// </description></item>
+        /// <item><description><para><c>securitygroup</c>: a security group.</para>
+        /// </description></item>
+        /// <item><description><para><c>volume</c>: a volume.</para>
+        /// </description></item>
+        /// <item><description><para><c>eni</c>: an elastic network interface.</para>
+        /// </description></item>
+        /// <item><description><para><c>ddh</c>: a dedicated host.</para>
+        /// </description></item>
+        /// <item><description><para><c>keypair</c>: an SSH key pair.</para>
+        /// </description></item>
+        /// <item><description><para><c>launchtemplate</c>: a launch template.</para>
+        /// </description></item>
+        /// <item><description><para><c>reservedinstance</c>: a reserved instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>snapshotpolicy</c>: a snapshot policy.</para>
+        /// </description></item>
         /// </list>
-        /// <para>All values must be in lowercase letters.</para>
+        /// <para>All values must be in lowercase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>snapshot</para>
@@ -104,14 +116,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeTagsRequestTag> Tag { get; set; }
         public class DescribeTagsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N of the resource. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain <a href="http://https://%E3%80%82">http:// or https://.</a></para>
+            /// <para>The tag key of the resource.</para>
+            /// <remarks>
+            /// <para>We recommend that you use the <c>Tag.N.Key</c> parameter to ensure compatibility.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -121,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N of the resource. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <a href="http://https://%E3%80%82">http:// or https://.</a></para>
+            /// <para>The tag value. The value can be up to 128 characters in length and can be an empty string. It cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

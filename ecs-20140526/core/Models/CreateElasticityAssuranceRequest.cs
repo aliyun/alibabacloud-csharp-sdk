@@ -16,8 +16,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The type of the private pool with which you want to associate the elasticity assurance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Open: open private pool. If you use the elasticity assurance to create ECS instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</description></item>
-            /// <item><description>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</description></item>
+            /// <item><description><para>Open: open private pool. If you use the elasticity assurance to create ECS instances, the open private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the open private pool, resources in the public pool are automatically used to create the ECS instances.</para>
+            /// </description></item>
+            /// <item><description><para>Target: targeted private pool. If you use the elasticity assurance to create ECS instances, the specified private pool that is associated with the elasticity assurance is automatically matched. If no capacity is available in the private pool, the ECS instances fail to be created.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: Open.</para>
             /// 
@@ -54,8 +56,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable auto-renewal for the elasticity assurance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -69,11 +73,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The auto-renewal period. Unit: month. Valid values: 1, 2, 3, 6, 12, 24, and 36.</para>
         /// <list type="bullet">
-        /// <item><description>Default value when <c>PeriodUnit</c> is set to Month: 1.</description></item>
-        /// <item><description>Default value when <c>PeriodUnit</c> is set to Year: 12.</description></item>
+        /// <item><description><para>Default value when <c>PeriodUnit</c> is set to Month: 1.</para>
+        /// </description></item>
+        /// <item><description><para>Default value when <c>PeriodUnit</c> is set to Year: 12.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set <c>AutoRenew</c> to <c>true</c>, you must specify this parameter.</para>
+        /// <para>If you set <c>AutoRenew</c> to <c>true</c>, you must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The total number of instances of an instance type for which you want to reserve capacity.</para>
         /// <para>Valid values: 1 to 1000.</para>
         /// <remarks>
-        /// <para> You must specify this parameter.</para>
+        /// <para>You must specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -152,9 +158,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The validity period of the elasticity assurance. The unit of the validity period is determined by the value of <c>PeriodUnit</c>. Specifies whether to check the image used by the instance supports hot migration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When the value of <c>PeriodUnit</c> is <c>Month</c>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</description></item>
-        /// <item><description>When the value of <c>PeriodUnit</c> is <c>Year</c>, the valid values are 1, 2, 3, 4, and 5.</description></item>
-        /// <item><description>When the value of <c>PeriodUnit</c> is <c>Day</c>, the valid values are 1 to 365.</description></item>
+        /// <item><description><para>When the value of <c>PeriodUnit</c> is <c>Month</c>, the valid values are 1, 2, 3, 4, 5, 6, 7, 8, and 9.</para>
+        /// </description></item>
+        /// <item><description><para>When the value of <c>PeriodUnit</c> is <c>Year</c>, the valid values are 1, 2, 3, 4, and 5.</para>
+        /// </description></item>
+        /// <item><description><para>When the value of <c>PeriodUnit</c> is <c>Day</c>, the valid values are 1 to 365.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 1</para>
         /// 
@@ -173,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description><para>Year</para>
         /// </description></item>
         /// <item><description><para>Day</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b> If you set <c>PeriodUnit</c> to <c>Day</c>, you must specify RecurrenceRules to create a time-segmented elasticity assurance.</para>
         /// </description></item>
         /// </list>
@@ -189,7 +198,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The assurance schedules based on which the capacity reservation takes effect.</para>
         /// <remarks>
-        /// <para> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
+        /// <para>Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RecurrenceRules")]
@@ -209,12 +218,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The type of the assurance schedule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Daily</description></item>
-            /// <item><description>Weekly</description></item>
-            /// <item><description>Monthly</description></item>
+            /// <item><description><para>Daily</para>
+            /// </description></item>
+            /// <item><description><para>Weekly</para>
+            /// </description></item>
+            /// <item><description><para>Monthly</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
+            /// <para>You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -227,9 +239,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The days of the week or month on which the capacity reservation takes effect or the interval, in number of days, at which the capacity reservation takes effect.</para>
             /// <list type="bullet">
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</description></item>
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <c>1,2</c>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</description></item>
-            /// <item><description>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <c>1-5</c> indicates that the execution is repeated from the 1st to 5th of each month.</description></item>
+            /// <item><description><para>If you set <c>RecurrenceType</c> to <c>Daily</c>, you can specify only one value for this parameter. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</para>
+            /// </description></item>
+            /// <item><description><para>If you set <c>RecurrenceType</c> to <c>Weekly</c>, you can specify multiple values for this parameter. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <c>1,2</c>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</para>
+            /// </description></item>
+            /// <item><description><para>If you set <c>RecurrenceType</c> to <c>Monthly</c>, you can specify two values in the <c>A-B</c> format for this parameter. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <c>1-5</c> indicates that the execution is repeated from the 1st to 5th of each month.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>You must specify both <c>RecurrenceType</c> and <c>RecurrenceValue</c>.</para>
@@ -245,7 +260,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The start time of the assurance period for the capacity reservation. Specify an on-the-hour point in time.</para>
             /// <remarks>
-            /// <para> You must specify both <c>StartHour</c> and <c>EndHour</c>. EndHour must be at least four hours later than StartHour.</para>
+            /// <para>You must specify both <c>StartHour</c> and <c>EndHour</c>. EndHour must be at least four hours later than StartHour.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

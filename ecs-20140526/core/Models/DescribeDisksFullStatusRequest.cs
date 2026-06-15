@@ -60,10 +60,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The event type of the EBS device. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Degraded: The performance of the EBS device is degraded.</description></item>
-        /// <item><description>SeverelyDegraded: The performance of the EBS device is severely degraded.</description></item>
-        /// <item><description>Stalled: The performance of the EBS device is severely affected.</description></item>
-        /// <item><description>ErrorDetected: The local disk is damaged.</description></item>
+        /// <item><description><para>Degraded: The performance of the EBS device is degraded.</para>
+        /// </description></item>
+        /// <item><description><para>SeverelyDegraded: The performance of the EBS device is severely degraded.</para>
+        /// </description></item>
+        /// <item><description><para>Stalled: The performance of the EBS device is severely affected.</para>
+        /// </description></item>
+        /// <item><description><para>ErrorDetected: The local disk is damaged.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,11 +80,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The health status of the EBS device. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Impaired: The EBS device is damaged.</description></item>
-        /// <item><description>Warning: The performance of the EBS device is degraded.</description></item>
-        /// <item><description>Initializing: The EBS device is being initialized.</description></item>
-        /// <item><description>InsufficientData: The status cannot be determined due to insufficient data.</description></item>
-        /// <item><description>NotApplicable: The EBS device cannot be used.</description></item>
+        /// <item><description><para>Impaired: The EBS device is damaged.</para>
+        /// </description></item>
+        /// <item><description><para>Warning: The performance of the EBS device is degraded.</para>
+        /// </description></item>
+        /// <item><description><para>Initializing: The EBS device is being initialized.</para>
+        /// </description></item>
+        /// <item><description><para>InsufficientData: The status cannot be determined due to insufficient data.</para>
+        /// </description></item>
+        /// <item><description><para>NotApplicable: The EBS device cannot be used.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,12 +161,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The lifecycle status of the EBS device. For more information, see <a href="https://help.aliyun.com/document_detail/25689.html">Disk status</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>In_use: The EBS device is in use.</description></item>
-        /// <item><description>Available: The EBS device can be attached.</description></item>
-        /// <item><description>Attaching: The EBS device is being attached.</description></item>
-        /// <item><description>Detaching: The EBS device is being detached.</description></item>
-        /// <item><description>Creating: The EBS device is being created.</description></item>
-        /// <item><description>ReIniting: The EBS device is being initialized.</description></item>
+        /// <item><description><para>In_use: The EBS device is in use.</para>
+        /// </description></item>
+        /// <item><description><para>Available: The EBS device can be attached.</para>
+        /// </description></item>
+        /// <item><description><para>Attaching: The EBS device is being attached.</para>
+        /// </description></item>
+        /// <item><description><para>Detaching: The EBS device is being detached.</para>
+        /// </description></item>
+        /// <item><description><para>Creating: The EBS device is being created.</para>
+        /// </description></item>
+        /// <item><description><para>ReIniting: The EBS device is being initialized.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

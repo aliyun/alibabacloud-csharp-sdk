@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[“i-bp14ss25xca5ex1u****”, “i-bp154z5o1qjalfse****”, “i-bp10ws62o04ubhvi****”…]</para>
+        /// <para>[&quot;i-bp14ss25xca5ex1u****&quot;,&quot;i-bp154z5o1qjalfse****&quot;, &quot;i-bp10ws62o04ubhvi****&quot;]</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]

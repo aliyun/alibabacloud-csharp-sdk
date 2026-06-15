@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class CreateNetworkInterfacePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud partner (a certified ISV) or individual user.</para>
+        /// <para>The ID of the Alibaba Cloud account to which the permission is granted. The account can be an Alibaba Cloud partner (certified ISV) or an individual user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? AccountId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the ENI.</para>
+        /// <para>The ID of the elastic network interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The permission on the ENI. Valid values:</para>
-        /// <para>InstanceAttach: the permission to attach the ENI to an ECS instance. The ENI and the ECS instance must be in the same zone.</para>
+        /// <para>The permission to grant. The only supported value is InstanceAttach.</para>
+        /// <para>InstanceAttach: Allows an authorized account to attach your elastic network interface to one of its ECS instances. The ECS instance and the elastic network interface must be in the same availability zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the ENI. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region where the elastic network interface is located. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to obtain the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

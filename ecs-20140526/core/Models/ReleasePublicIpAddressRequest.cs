@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ReleasePublicIpAddressRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is unavailable.</para>
+        /// <para>This parameter is not yet available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp67acfmxazb4p****</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string PublicIpAddress { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The ID of the region where the instance is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

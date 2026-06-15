@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribePortRangeListEntriesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Port list entries.</para>
+        /// <para>The port range list entries.</para>
         /// </summary>
         [NameInMap("Entries")]
         [Validation(Required=false)]

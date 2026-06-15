@@ -12,12 +12,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The series of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ecs-1: Series I, which consists of the earliest and cost-effective instance types</description></item>
-        /// <item><description>ecs-2: Series II, which provides upgraded software and hardware and higher performance than Series I</description></item>
-        /// <item><description>ecs-3: Series III, which consists of high-performance instance families and is suitable for different business scenarios</description></item>
-        /// <item><description>ecs-4: Series IV, which consists of enterprise-level instance families (such as g5, c5, and r5), ECS Bare Metal Instance families (such as ebmc5s, ebmg5s, and ebmr5s), and burstable instance families (such as t5) and can meet a wide variety of business requirements with lower latency</description></item>
-        /// <item><description>ecs-5: Series V, which consists of enterprise-level instance families (such as g6, c6, and r6), ECS Bare Metal Instance families (such as ebmg6, ebmg6e, and ebmc6), and storage-enhanced instance families (such as g6e) and delivers quick response times and higher performance</description></item>
-        /// <item><description>ecs-6: Series VI, which consists of enterprise-level instance families (such as hfc7, hfg7, and hfr7) and ECS Bare Metal Instance families (such as ebmhfg7)</description></item>
+        /// <item><description><para>ecs-1: Series I, which consists of the earliest and cost-effective instance types</para>
+        /// </description></item>
+        /// <item><description><para>ecs-2: Series II, which provides upgraded software and hardware and higher performance than Series I</para>
+        /// </description></item>
+        /// <item><description><para>ecs-3: Series III, which consists of high-performance instance families and is suitable for different business scenarios</para>
+        /// </description></item>
+        /// <item><description><para>ecs-4: Series IV, which consists of enterprise-level instance families (such as g5, c5, and r5), ECS Bare Metal Instance families (such as ebmc5s, ebmg5s, and ebmr5s), and burstable instance families (such as t5) and can meet a wide variety of business requirements with lower latency</para>
+        /// </description></item>
+        /// <item><description><para>ecs-5: Series V, which consists of enterprise-level instance families (such as g6, c6, and r6), ECS Bare Metal Instance families (such as ebmg6, ebmg6e, and ebmc6), and storage-enhanced instance families (such as g6e) and delivers quick response times and higher performance</para>
+        /// </description></item>
+        /// <item><description><para>ecs-6: Series VI, which consists of enterprise-level instance families (such as hfc7, hfg7, and hfr7) and ECS Bare Metal Instance families (such as ebmhfg7)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfacePermissionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The elastic network interface permissions.</para>
+        /// </summary>
         [NameInMap("NetworkInterfacePermissions")]
         [Validation(Required=false)]
         public DescribeNetworkInterfacePermissionsResponseBodyNetworkInterfacePermissions NetworkInterfacePermissions { get; set; }
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of matching entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

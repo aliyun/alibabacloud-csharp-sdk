@@ -13,9 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The extended attributes of the diagnostic report.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{
-        ///     &quot;OfflineDiagReportStatus&quot;:&quot;CONFIRMED&quot;
-        /// }</para>
+        /// <para>{&quot;OfflineDiagReportStatus&quot;:&quot;CONFIRMED&quot;}</para>
         /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
@@ -32,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CreationTime { get; set; }
 
         /// <summary>
-        /// <para>The end of the reporting period of the diagnostic report. The value is the EndTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</para>
+        /// <para>The end of the diagnostic time range. This value corresponds to the <c>EndTime</c> parameter you provided when calling the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T14:00:00Z</para>
@@ -42,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the diagnostic report was complete.</para>
+        /// <para>The time when the diagnosis was complete.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T14:00:00Z</para>
@@ -51,6 +49,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public string FinishedTime { get; set; }
 
+        /// <summary>
+        /// <para>The diagnostic results for the metrics.</para>
+        /// </summary>
         [NameInMap("MetricResults")]
         [Validation(Required=false)]
         public DescribeDiagnosticReportAttributesResponseBodyMetricResults MetricResults { get; set; }
@@ -116,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the diagnostic metric set.</para>
+        /// <para>The metric set ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dms-bp17p0qwtr72zmu*****</para>
@@ -126,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string MetricSetId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the diagnostic report, which is the unique identifier of the report.</para>
+        /// <para>The unique ID of the diagnostic report.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dr-uf6i0tv2refv8wz*****</para>
@@ -156,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. ResourceType can only be set to instance, which indicates that only instances are supported.</para>
+        /// <para>The resource type. Only <c>instance</c> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance</para>
@@ -166,13 +167,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The severity level of the diagnostic report. The value of this parameter is determined by the highest severity level of all diagnostic metrics. Valid values:</para>
+        /// <para>The overall severity level of the diagnostic report. This is the highest severity level among all metrics in the report. Valid values are listed below, from lowest to highest severity:</para>
         /// <list type="bullet">
-        /// <item><description>Unknown: The diagnostic has not started, failed to run, or exited unexpectedly without a diagnosis.</description></item>
-        /// <item><description>Normal: No exceptions were detected.</description></item>
-        /// <item><description>Info: Diagnostic information was recorded and may be related to exceptions.</description></item>
-        /// <item><description>Warn: Diagnostic information was recorded and may indicate potential exceptions.</description></item>
-        /// <item><description>Critical: Critical exceptions were detected.</description></item>
+        /// <item><description><para>Unknown: The initial state. The diagnosis has not started or exited unexpectedly, so the result is inconclusive.</para>
+        /// </description></item>
+        /// <item><description><para>Normal: The resource is healthy, and no issues were found.</para>
+        /// </description></item>
+        /// <item><description><para>Info: Informational messages were found that may be relevant to an issue.</para>
+        /// </description></item>
+        /// <item><description><para>Warn: Warnings were found that may lead to an issue.</para>
+        /// </description></item>
+        /// <item><description><para>Critical: Critical issues were found.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Severity { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the reporting period of the diagnostic report. The value is the StartTime value that was passed in when you called the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation to create the diagnostic report.</para>
+        /// <para>The start of the diagnostic time range. This value corresponds to the <c>StartTime</c> parameter you provided when calling the <a href="https://help.aliyun.com/document_detail/442490.html">CreateDiagnosticReport</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-07-11T12:00:00Z</para>
@@ -193,11 +199,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The state of the diagnostic report. Valid values:</para>
+        /// <para>The status of the diagnostic report. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description>InProgress: The diagnostic is in progress.</description></item>
-        /// <item><description>Finished: The diagnostic is complete.</description></item>
-        /// <item><description>Failed: The diagnostic failed.</description></item>
+        /// <item><description><para>InProgress: The diagnosis is in progress.</para>
+        /// </description></item>
+        /// <item><description><para>Finished: The diagnosis is complete.</para>
+        /// </description></item>
+        /// <item><description><para>Failed: The diagnosis failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

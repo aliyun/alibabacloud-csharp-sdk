@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -30,6 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The key of the attribute to modify.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("statusKey")]
@@ -37,6 +41,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string StatusKey { get; set; }
 
         /// <summary>
+        /// <para>The new value of the attribute.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("statusValue")]

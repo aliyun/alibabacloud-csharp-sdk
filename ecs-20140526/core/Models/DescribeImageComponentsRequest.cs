@@ -13,12 +13,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The type of the image component.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Build</description></item>
-        /// <item><description>Test</description></item>
+        /// <item><description><para>Build</para>
+        /// </description></item>
+        /// <item><description><para>Test</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>Build</para>
         /// </summary>
         [NameInMap("ComponentType")]
         [Validation(Required=false)]
@@ -27,11 +29,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The version number of the image component in the \<major>.\<minor>.\<patch> format. You can set \<major>, \<minor>, and \<patch> to non-negative integers, or set one of \<major>, \<minor>, and \<patch> to the wildcard (\*) and the other two to non-negative integers.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you specify Name.</para>
+        /// <para>This parameter takes effect only if you specify Name.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>1.0.*</para>
         /// </summary>
         [NameInMap("ComponentVersion")]
         [Validation(Required=false)]
@@ -81,8 +83,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the image component. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SELF: the custom component that you created.</description></item>
-        /// <item><description>ALIYUN: the system component provided by Alibaba Cloud.</description></item>
+        /// <item><description><para>SELF: the custom component that you created.</para>
+        /// </description></item>
+        /// <item><description><para>ALIYUN: the system component provided by Alibaba Cloud.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the resource group. If this parameter is specified to query resources, up to 1,000 resources that belong to the specified resource group can be displayed in the response.</para>
         /// <remarks>
-        /// <para> Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
+        /// <para>Resources in the default resource group are displayed in the response regardless of how this parameter is set.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -136,12 +140,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The type of the operating system supported by the image component.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Linux</description></item>
-        /// <item><description>Windows</description></item>
+        /// <item><description><para>Linux</para>
+        /// </description></item>
+        /// <item><description><para>Windows</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>Linux</para>
         /// </summary>
         [NameInMap("SystemType")]
         [Validation(Required=false)]

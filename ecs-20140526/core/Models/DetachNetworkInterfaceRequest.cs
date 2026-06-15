@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the trunk ENI.</para>
         /// <remarks>
-        /// <para> This parameter is unavailable for use.</para>
+        /// <para>This parameter is unavailable for use.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

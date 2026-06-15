@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable performance burst for the disk if the disk supports performance burst. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> An error is reported if you specify this parameter for a disk that does not support performance burst.</para>
+        /// <para>An error is reported if you specify this parameter for a disk that does not support performance burst.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,8 +31,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to delete the automatic snapshots of the disk when the disk is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that the current value remains unchanged.</para>
         /// 
@@ -45,10 +49,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to release the disk together with the associated instance. This parameter is empty by default, which indicates that the current value remains unchanged.</para>
         /// <para>An error is returned if you set <c>DeleteWithInstance</c> to <c>false</c> in one of the following cases:</para>
         /// <list type="bullet">
-        /// <item><description>The disk is a local disk.</description></item>
-        /// <item><description>The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</description></item>
+        /// <item><description><para>The disk is a local disk.</para>
+        /// </description></item>
+        /// <item><description><para>The disk is a basic disk and is not removable. If the Portable attribute of a disk is set to false, the disk is not removable.</para>
+        /// </description></item>
         /// </list>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Warning</b> If you set DeleteWithInstance to false and the instance to which the disk is attached is locked for security reasons, the DeleteWithInstance attribute of the disk is ignored and the disk is released together with the instance. If &quot;LockReason&quot; : &quot;security&quot; is displayed in the response when you query information about an instance, the instance is locked for security reasons.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the disk whose attributes you want to modify.</para>
         /// <remarks>
-        /// <para> You can specify <c>DiskId</c> or <c>DiskIds.N</c>, but not both.</para>
+        /// <para>You can specify <c>DiskId</c> or <c>DiskIds.N</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IDs of the disks whose attributes you want to modify. Valid values of N: 0 to 100.</para>
         /// <remarks>
-        /// <para> You can specify <c>DiskId</c> or <c>DiskIds.N</c>, but not both.</para>
+        /// <para>You can specify <c>DiskId</c> or <c>DiskIds.N</c>, but not both.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,12 +113,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to enable the automatic snapshot policy feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: enables the automatic snapshot policy feature for the cloud disk.</description></item>
-        /// <item><description>false: disables the automatic snapshot policy feature for the cloud disk.</description></item>
+        /// <item><description><para>true: enables the automatic snapshot policy feature for the cloud disk.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables the automatic snapshot policy feature for the cloud disk.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is empty by default, which indicates that the current value remains unchanged.</para>
         /// <remarks>
-        /// <para> This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</para>
+        /// <para>This parameter is deprecated. By default, the automatic snapshot policy feature is enabled for cloud disks. You only need to apply an automatic snapshot policy to a cloud disk before you can use the automatic snapshot policy.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

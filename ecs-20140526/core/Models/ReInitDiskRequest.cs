@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically start the instance after the disk is re-initialized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -83,8 +85,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to use Security Center free of charge after the system disk is re-initialized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active: uses Security Center free of charge after the system disk is re-initialized. This value is applicable to only public images.</description></item>
-        /// <item><description>Deactive: does not use Security Center free of charge after the system disk is re-initialized. This value is applicable to all images.</description></item>
+        /// <item><description><para>Active: uses Security Center free of charge after the system disk is re-initialized. This value is applicable to only public images.</para>
+        /// </description></item>
+        /// <item><description><para>Deactive: does not use Security Center free of charge after the system disk is re-initialized. This value is applicable to all images.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: Deactive.</para>
         /// 

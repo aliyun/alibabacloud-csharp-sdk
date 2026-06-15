@@ -17,6 +17,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the region. Call the <c>DescribeRegions</c> operation to query the latest list of regions.</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
@@ -30,6 +33,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The key of the business attribute to query.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("statusKey")]

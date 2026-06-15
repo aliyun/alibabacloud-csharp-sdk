@@ -35,8 +35,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether the instance is I/O optimized. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>optimized: The instance is I/O optimized.</description></item>
-        /// <item><description>none: The instance is not I/O optimized.</description></item>
+        /// <item><description><para>optimized: The instance is I/O optimized.</para>
+        /// </description></item>
+        /// <item><description><para>none: The instance is not I/O optimized.</para>
+        /// </description></item>
         /// </list>
         /// <para>For instances of generation I instance families, the default value is none.</para>
         /// <para>For instances of other instance families, the default value is optimized.</para>
@@ -51,8 +53,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The network type of the spot instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>classic: classic network</description></item>
-        /// <item><description>vpc: Virtual Private Cloud (VPC)</description></item>
+        /// <item><description><para>classic: classic network</para>
+        /// </description></item>
+        /// <item><description><para>vpc: Virtual Private Cloud (VPC)</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -66,8 +70,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the operating system platform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>linux</description></item>
-        /// <item><description>windows</description></item>
+        /// <item><description><para>linux</para>
+        /// </description></item>
+        /// <item><description><para>windows</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,12 +124,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
-        /// <item><description>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</description></item>
+        /// <item><description><para>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</para>
+        /// </description></item>
+        /// <item><description><para>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</para>
+        /// <para>This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

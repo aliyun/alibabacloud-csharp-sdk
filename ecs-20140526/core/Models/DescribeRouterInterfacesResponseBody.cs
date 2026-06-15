@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeRouterInterfacesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The page number.</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Details of the router interfaces.</para>
+        /// </summary>
         [NameInMap("RouterInterfaceSet")]
         [Validation(Required=false)]
         public DescribeRouterInterfacesResponseBodyRouterInterfaceSet RouterInterfaceSet { get; set; }
@@ -133,6 +145,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         }
 
+        /// <summary>
+        /// <para>The total number of entries.</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

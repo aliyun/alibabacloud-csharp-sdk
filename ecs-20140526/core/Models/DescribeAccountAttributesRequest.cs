@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description><para>max-axt-invocation-daily: the maximum number of Cloud Assistant command executions per day.</para>
         /// </description></item>
         /// <item><description><para>real-name-authentication: whether the account has completed the real-name verification.</para>
-        /// <para>**</para>
+        /// <para>\<em>\</em></para>
         /// <para><b>Note</b> To create an ECS instance in a region in the Chinese mainland, you must complete the real-name verification.</para>
         /// </description></item>
         /// <item><description><para>max-cloud-assistant-activation-count: the maximum number of activation codes that can be created to use to register managed instances.</para>
