@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpPoolListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Whether there is a next page</para>
+        /// <para>Indicates whether more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>List of IP pools</para>
+        /// <para>A list of IP pools.</para>
         /// </summary>
         [NameInMap("IpPools")]
         [Validation(Required=false)]
         public List<DedicatedIpPoolListResponseBodyIpPools> IpPools { get; set; }
         public class DedicatedIpPoolListResponseBodyIpPools : TeaModel {
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The time when the IP pool was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-23T07:41:43Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>IP pool ID</para>
+            /// <para>The ID of the IP pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Number of source IP addresses</para>
+            /// <para>The number of source IP addresses in the IP pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public int? IpCount { get; set; }
 
             /// <summary>
-            /// <para>List of IPs</para>
+            /// <para>A list of IP addresses.</para>
             /// </summary>
             [NameInMap("Ips")]
             [Validation(Required=false)]
             public List<DedicatedIpPoolListResponseBodyIpPoolsIps> Ips { get; set; }
             public class DedicatedIpPoolListResponseBodyIpPoolsIps : TeaModel {
                 /// <summary>
-                /// <para>Instance purchase ID</para>
+                /// <para>The ID of the IP address instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>IP address</para>
+                /// <para>The IP address.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -93,6 +93,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 [Validation(Required=false)]
                 public string Ip { get; set; }
 
+                /// <summary>
+                /// <para>The ID of the Availability Zone.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>xxx</para>
+                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             }
 
             /// <summary>
-            /// <para>IP pool name</para>
+            /// <para>The name of the IP pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -112,7 +118,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -122,7 +128,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of data under the current request conditions</para>
+        /// <para>The total number of entries that match the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

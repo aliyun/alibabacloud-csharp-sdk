@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DescTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>This parameter is deprecated. It is retained for historical compatibility.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Abandoned, historical reasons for compatibility</para>
+        /// </summary>
         [NameInMap("FromType")]
         [Validation(Required=false)]
         public int? FromType { get; set; }
@@ -26,6 +32,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

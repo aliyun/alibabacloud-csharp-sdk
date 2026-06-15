@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetTrackListByMailFromAndTagNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>Used for pagination. Not set for the first query; for subsequent queries, set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</para>
+        /// <para>Used for paging. Do not set this parameter for the first query. For subsequent queries, set this parameter to the OffsetCreateTime value from the previous response. (This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>（本字段已废弃）</para>
+        /// <para>(This field is deprecated.)</para>
         /// </summary>
         [NameInMap("OffsetCreateTime")]
         [Validation(Required=false)]
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>(This field is deprecated)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>（本字段已废弃）</para>
+        /// <para>(This field is deprecated.)</para>
         /// </summary>
         [NameInMap("OffsetCreateTimeDesc")]
         [Validation(Required=false)]
         public string OffsetCreateTimeDesc { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
@@ -69,6 +69,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? Total { get; set; }
 
+        /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2</para>
+        /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]
         public string TotalPages { get; set; }

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>Email address or domain name</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:test@example.net">test@example.net</a></para>
+        /// <para><a href="mailto:Test@example.net">Test@example.net</a> orexample.net</para>
         /// </summary>
         [NameInMap("Address")]
         [Validation(Required=false)]

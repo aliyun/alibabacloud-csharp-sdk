@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SendValidateFileAdvanceRequest : TeaModel {
         /// <summary>
+        /// <para>The column that contains the email addresses in the file. The index starts from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? AddressColumn { get; set; }
 
         /// <summary>
+        /// <para>The name of the file that contains the list of email addresses.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The URL of the file that contains the list of email addresses.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public Stream FileUrlObject { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the first row is a table header.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? HasHeaderRow { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to remove duplicate email addresses in the output file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

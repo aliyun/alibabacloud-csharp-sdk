@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsByTagNameAndBatchIDResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10A1AD70-E48E-476D-98D9-39BD92193837</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total count</para>
+        /// <para>The total count of data records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>Contains the statistical data.</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public SenderStatisticsByTagNameAndBatchIDResponseBodyData Data { get; set; }

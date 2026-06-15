@@ -10,21 +10,23 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class UnblockSendingRequest : TeaModel {
         /// <summary>
-        /// <para>Blacklisted recipient\&quot;s email address</para>
+        /// <para>The blacklisted recipient address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:recipient@example.com">recipient@example.com</a></para>
+        /// <para><a href="mailto:recipient@yyy.com">recipient@yyy.com</a></para>
         /// </summary>
         [NameInMap("BlockEmail")]
         [Validation(Required=false)]
         public string BlockEmail { get; set; }
 
         /// <summary>
-        /// <para>Blacklist type</para>
+        /// <para>The blacklist type.</para>
         /// <list type="bullet">
-        /// <item><description>UNSUB: Unsubscribe</description></item>
-        /// <item><description>REPORT: Report</description></item>
+        /// <item><description><para>UNSUB: Unsubscribe</para>
+        /// </description></item>
+        /// <item><description><para>REPORT: Complaint</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,11 +38,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string BlockType { get; set; }
 
         /// <summary>
-        /// <para>Sender\&quot;s email address</para>
+        /// <para>The sender address.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:sender@example.com">sender@example.com</a></para>
+        /// <para><a href="mailto:sender@xxx.com">sender@xxx.com</a></para>
         /// </summary>
         [NameInMap("SenderEmail")]
         [Validation(Required=false)]

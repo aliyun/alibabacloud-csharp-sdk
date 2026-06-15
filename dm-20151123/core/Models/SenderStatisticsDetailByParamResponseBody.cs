@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class SenderStatisticsDetailByParamResponseBody : TeaModel {
         /// <summary>
-        /// <para>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</para>
+        /// <para>Used for paging. If more results are available, set the \<c>NextStart\\</c> parameter in your next request to this return value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90f0243616#203#a***@example.net-1658817689#a***@example.net.247141122178</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string NextStart { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B5AB8EBB-EE64-4BB2-B085-B92CC5DEDC41</para>

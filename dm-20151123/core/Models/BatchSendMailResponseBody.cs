@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class BatchSendMailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Event ID</para>
+        /// <para>The event ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string EnvId { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12D086F6-8F31-4658-84C1-006DED011A85</para>

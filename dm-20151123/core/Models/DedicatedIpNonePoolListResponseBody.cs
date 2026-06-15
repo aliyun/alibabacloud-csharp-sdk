@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpNonePoolListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information on IPs not added to the IP pool</para>
+        /// <para>The IP addresses that are not added to an IP pool.</para>
         /// </summary>
         [NameInMap("Ips")]
         [Validation(Required=false)]
         public List<DedicatedIpNonePoolListResponseBodyIps> Ips { get; set; }
         public class DedicatedIpNonePoolListResponseBodyIps : TeaModel {
             /// <summary>
-            /// <para>Purchased instance ID</para>
+            /// <para>The ID of the purchased instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>IP address</para>
+            /// <para>The IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
             [NameInMap("ZoneId")]
             [Validation(Required=false)]
             public string ZoneId { get; set; }
@@ -43,7 +49,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>

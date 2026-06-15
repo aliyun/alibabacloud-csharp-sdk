@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class QueryReceiverByParamRequest : TeaModel {
         /// <summary>
-        /// <para>Keyword, defaults to all information if not specified</para>
+        /// <para>The keyword to search for recipient lists. If omitted, all recipient lists are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mesh-notification</para>
@@ -24,7 +24,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>This deprecated field is kept for backward compatibility. You can omit this parameter.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +35,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page, default: 10</para>
+        /// <para>The page size. Default value: 100.</para>
+        /// <para>Omitting this parameter returns all results. However, because the PageNo parameter is deprecated, the effect of PageSize on pagination is limited.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -52,12 +54,13 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Delivery result. If not filled, it represents all statuses. Values:</para>
+        /// <para>This deprecated field is kept for backward compatibility. You can omit this parameter.</para>
+        /// <para>The list status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: Success</description></item>
-        /// <item><description>2: Invalid address</description></item>
-        /// <item><description>3: Spam</description></item>
-        /// <item><description>4: Failure</description></item>
+        /// <item><description><para>0: uploading</para>
+        /// </description></item>
+        /// <item><description><para>1: upload complete</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

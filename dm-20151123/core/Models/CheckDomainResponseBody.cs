@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <summary>
         /// <para>Domain status. Indicates whether the verification was successful, with values as follows:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Available, verified successfully</description></item>
-        /// <item><description><b>1</b>: Unavailable, verification failed</description></item>
+        /// <item><description><para><b>0</b>: Available, verified successfully</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Unavailable, verification failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

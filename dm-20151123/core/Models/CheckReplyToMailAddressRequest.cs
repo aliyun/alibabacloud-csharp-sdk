@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>en is English, and any other value or an empty value defaults to Chinese.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]

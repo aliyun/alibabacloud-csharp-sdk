@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpPoolDeleteRequest : TeaModel {
         /// <summary>
+        /// <para>The IP pool ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>

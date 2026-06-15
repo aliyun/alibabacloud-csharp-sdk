@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class BatchSendMailRequest : TeaModel {
+    public class BatchSendMailShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The sender address configured in the management console.</para>
         /// <para>This parameter is required.</para>
@@ -125,23 +125,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// </summary>
         [NameInMap("Receivers")]
         [Validation(Required=false)]
-        public List<BatchSendMailRequestReceivers> Receivers { get; set; }
-        public class BatchSendMailRequestReceivers : TeaModel {
-            /// <summary>
-            /// <para>The email template parameters. This is a JSON map data type.</para>
-            /// </summary>
-            [NameInMap("TemplateData")]
-            [Validation(Required=false)]
-            public Dictionary<string, string> TemplateData { get; set; }
-
-            /// <summary>
-            /// <para>The recipient list. This is an array type.</para>
-            /// </summary>
-            [NameInMap("To")]
-            [Validation(Required=false)]
-            public List<string> To { get; set; }
-
-        }
+        public string ReceiversShrink { get; set; }
 
         /// <summary>
         /// <para>The name of a pre-created recipient list that has recipients uploaded.</para>
@@ -205,57 +189,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// </summary>
         [NameInMap("TemplateContent")]
         [Validation(Required=false)]
-        public BatchSendMailRequestTemplateContent TemplateContent { get; set; }
-        public class BatchSendMailRequestTemplateContent : TeaModel {
-            /// <summary>
-            /// <para>The display name of the sender.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Jackie</para>
-            /// </summary>
-            [NameInMap("Alias")]
-            [Validation(Required=false)]
-            public string Alias { get; set; }
-
-            /// <summary>
-            /// <para>The HTML body of the email.</para>
-            /// <remarks>
-            /// <para><b>Note:</b> HtmlBody and TextBody are for different types of email content. You must specify at least one of them.</para>
-            /// </remarks>
-            /// <para>The new SDK uses Body for parameter passing with a limit of approximately 8 MB (Java 1.4.0 and later, Python3 1.4.0 and later, PHP 1.4.0 and later).</para>
-            /// 
-            /// <b>Example:</b>
-            /// <h1>全场九折，仅限今日</h1>
-            /// </summary>
-            [NameInMap("HtmlBody")]
-            [Validation(Required=false)]
-            public string HtmlBody { get; set; }
-
-            /// <summary>
-            /// <para>The email subject.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>黑色星期五，专属折扣来袭</para>
-            /// </summary>
-            [NameInMap("Subject")]
-            [Validation(Required=false)]
-            public string Subject { get; set; }
-
-            /// <summary>
-            /// <para>The plain text body of the email.</para>
-            /// <remarks>
-            /// <para><b>Note:</b> HtmlBody and TextBody are for different types of email content. You must specify at least one of them.</para>
-            /// </remarks>
-            /// <para>The new SDK uses Body for parameter passing with a limit of approximately 8 MB (Java 1.4.0 and later, Python3 1.4.0 and later, PHP 1.4.0 and later).</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>全场九折，仅限今日</para>
-            /// </summary>
-            [NameInMap("TextBody")]
-            [Validation(Required=false)]
-            public string TextBody { get; set; }
-
-        }
+        public string TemplateContentShrink { get; set; }
 
         /// <summary>
         /// <para>The name of a pre-created and approved template.</para>

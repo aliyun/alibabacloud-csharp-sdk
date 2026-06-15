@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class DedicatedIpAutoRenewalRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable auto-renewal</para>
+        /// <para>Specifies whether to enable auto-renewal.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string AutoRenewal { get; set; }
 
         /// <summary>
-        /// <para>Purchase instance ID, separated by English commas if multiple.</para>
+        /// <para>The IDs of the purchased instances. Separate multiple IDs with commas.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

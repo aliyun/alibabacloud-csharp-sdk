@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class GetValidateFileStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of catch-all addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string CatchAllNum { get; set; }
 
         /// <summary>
+        /// <para>The task completion time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2000-01-01T00:00:00Z</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string CompleteTime { get; set; }
 
         /// <summary>
+        /// <para>The number of do-not-mail addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -33,11 +39,19 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         [Validation(Required=false)]
         public string DoNotMailNum { get; set; }
 
+        /// <summary>
+        /// <para>The file ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xxxx-xxxx-xxxx-xxxx</para>
+        /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
         public string FileId { get; set; }
 
         /// <summary>
+        /// <para>The file name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>file.txt</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string FileName { get; set; }
 
         /// <summary>
+        /// <para>The number of invalid addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string InvalidNum { get; set; }
 
         /// <summary>
+        /// <para>The task completion percentage.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100%</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Percentage { get; set; }
 
         /// <summary>
+        /// <para>The number of processed addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string ProcessedNum { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>yyyy-yyyy-yyyy-yyyy</para>
         /// </summary>
@@ -78,6 +100,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>completed</para>
         /// </summary>
@@ -86,6 +110,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The total number of addresses in the file.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -94,6 +120,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string TotalNum { get; set; }
 
         /// <summary>
+        /// <para>The number of unknown addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -102,6 +130,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string UnknownNum { get; set; }
 
         /// <summary>
+        /// <para>The upload time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2000-01-01T00:00:00Z</para>
         /// </summary>
@@ -110,6 +140,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string UploadTime { get; set; }
 
         /// <summary>
+        /// <para>The number of valid addresses.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>

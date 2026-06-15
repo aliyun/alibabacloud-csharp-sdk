@@ -14,9 +14,9 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxx.xxx.xxx.xxx
-        /// xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
-        /// xxx.xxx.xxx.xxx/xxx</para>
+        /// <para>Single IP: xxx.xxx.xxx.xxx
+        /// IP range: xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
+        /// CIDR: xxx.xxx.xxx.xxx/xxx</para>
         /// </summary>
         [NameInMap("IpAddress")]
         [Validation(Required=false)]

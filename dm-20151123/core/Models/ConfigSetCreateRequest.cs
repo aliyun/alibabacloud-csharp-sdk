@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetCreateRequest : TeaModel {
         /// <summary>
+        /// <para>A description of the configuration set (up to 50 characters).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>XXX</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ID of an IP pool to associate with the configuration set. This parameter is optional.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>XXX</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? IsPublicChannelBackoff { get; set; }
 
         /// <summary>
+        /// <para>The name of the configuration set. The name must be unique and can contain up to 50 characters. This parameter is required.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>XXX</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class CreateTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>idoftherequest</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D1C7F6E1-6A4D-50B5-B864-640E9FCA8D0A</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>415366</para>
         /// </summary>

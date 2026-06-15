@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the suppressed address. To specify multiple IDs, separate them with commas (,). Call the ListUserSuppression operation to obtain the suppression ID.</para>
+        /// <para>You can enter multiple values, separated by a comma &quot;,&quot;.</para>
+        /// <para>You can call ListUserSuppression to obtain the SuppressionId.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>59511</para>
         /// </summary>

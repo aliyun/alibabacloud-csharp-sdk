@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of ConfigSets.</para>
+        /// </summary>
         [NameInMap("ConfigSets")]
         [Validation(Required=false)]
         public List<ConfigSetListResponseBodyConfigSets> ConfigSets { get; set; }
         public class ConfigSetListResponseBodyConfigSets : TeaModel {
             /// <summary>
+            /// <para>The description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public string Description { get; set; }
 
+            /// <summary>
+            /// <para>The list of from addresses associated with the ConfigSet.</para>
+            /// </summary>
             [NameInMap("FromAddresses")]
             [Validation(Required=false)]
             public List<string> FromAddresses { get; set; }
 
             /// <summary>
+            /// <para>The ConfigSet ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -33,11 +43,16 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [Validation(Required=false)]
             public string Id { get; set; }
 
+            /// <summary>
+            /// <para>The IP pool associated with the ConfigSet.</para>
+            /// </summary>
             [NameInMap("IpPool")]
             [Validation(Required=false)]
             public ConfigSetListResponseBodyConfigSetsIpPool IpPool { get; set; }
             public class ConfigSetListResponseBodyConfigSetsIpPool : TeaModel {
                 /// <summary>
+                /// <para>The associated IP pool ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
                 /// </summary>
@@ -46,6 +61,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string IpPoolId { get; set; }
 
                 /// <summary>
+                /// <para>The associated IP pool name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
                 /// </summary>
@@ -60,6 +77,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public bool? IsPublicChannelBackoff { get; set; }
 
             /// <summary>
+            /// <para>The ConfigSet name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -70,6 +89,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -78,6 +99,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether more results are available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -86,6 +109,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -94,6 +119,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -102,6 +129,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of matching entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
