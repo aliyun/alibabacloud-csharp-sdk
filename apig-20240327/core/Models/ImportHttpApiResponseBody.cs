@@ -20,42 +20,42 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Details of the imported API.</para>
+        /// <para>The API information.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ImportHttpApiResponseBodyData Data { get; set; }
         public class ImportHttpApiResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The results of the dry run.</para>
+            /// <para>The dry run result.</para>
             /// </summary>
             [NameInMap("dryRunInfo")]
             [Validation(Required=false)]
             public ImportHttpApiResponseBodyDataDryRunInfo DryRunInfo { get; set; }
             public class ImportHttpApiResponseBodyDataDryRunInfo : TeaModel {
                 /// <summary>
-                /// <para>Global error messages. If this list is not empty, the API import fails.</para>
+                /// <para>The error messages. If error messages are not empty, the API cannot be imported.</para>
                 /// </summary>
                 [NameInMap("errorMessages")]
                 [Validation(Required=false)]
                 public List<string> ErrorMessages { get; set; }
 
                 /// <summary>
-                /// <para>Details of the existing API. If this field is populated, the import operation updates this API.</para>
+                /// <para>The information about the existing API. If this field is not empty, the import updates this API.</para>
                 /// </summary>
                 [NameInMap("existHttpApiInfo")]
                 [Validation(Required=false)]
                 public HttpApiApiInfo ExistHttpApiInfo { get; set; }
 
                 /// <summary>
-                /// <para>Data structures that failed the dry run.</para>
+                /// <para>The list of data structures that failed the dry run.</para>
                 /// </summary>
                 [NameInMap("failureComponents")]
                 [Validation(Required=false)]
                 public List<ImportHttpApiResponseBodyDataDryRunInfoFailureComponents> FailureComponents { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoFailureComponents : TeaModel {
                     /// <summary>
-                    /// <para>The reason for the dry run failure.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>数据结构定义有误。</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>Operations that failed the dry run.</para>
+                /// <para>The list of operations that failed the dry run.</para>
                 /// </summary>
                 [NameInMap("failureOperations")]
                 [Validation(Required=false)]
                 public List<ImportHttpApiResponseBodyDataDryRunInfoFailureOperations> FailureOperations { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoFailureOperations : TeaModel {
                     /// <summary>
-                    /// <para>The reason for the dry run failure.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>缺少响应定义。</para>
@@ -134,19 +134,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string McpToolsDefinition { get; set; }
 
                 /// <summary>
-                /// <para>Data structures that passed the dry run.</para>
+                /// <para>The list of data structures that passed the dry run.</para>
                 /// </summary>
                 [NameInMap("successComponents")]
                 [Validation(Required=false)]
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents> SuccessComponents { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessComponents : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the data structure will be created or updated.</para>
+                    /// <para>The action to be performed after the dry run. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><c>Create</c>: Creates a new data structure.</para>
-                    /// </description></item>
-                    /// <item><description><para><c>Update</c>: Updates an existing data structure.</para>
-                    /// </description></item>
+                    /// <item><description>Create: create.</description></item>
+                    /// <item><description>Update: update.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -169,19 +167,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>Operations that passed the dry run.</para>
+                /// <para>The list of operations that passed the dry run.</para>
                 /// </summary>
                 [NameInMap("successOperations")]
                 [Validation(Required=false)]
                 public List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> SuccessOperations { get; set; }
                 public class ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the operation creates or updates a resource.</para>
+                    /// <para>The action to be performed after the dry run. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><c>Create</c>: Creates a new resource.</para>
-                    /// </description></item>
-                    /// <item><description><para><c>Update</c>: Updates an existing resource.</para>
-                    /// </description></item>
+                    /// <item><description>Create: create.</description></item>
+                    /// <item><description>Update: update.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -238,7 +234,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>Global warning messages. If this list is not empty, some operations or data structures might not be imported.</para>
+                /// <para>The warning messages. If warning messages are not empty, some operations or data structures may not be imported.</para>
                 /// </summary>
                 [NameInMap("warningMessages")]
                 [Validation(Required=false)]

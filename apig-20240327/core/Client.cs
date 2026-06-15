@@ -9109,7 +9109,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9207,7 +9207,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9305,7 +9305,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9324,7 +9324,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import an OpenAPI 2.0 or 3.0.x definition file to create a REST API.</para>
+        /// <para>Imports an HTTP API. You can import an OpenAPI 2.0 or OpenAPI 3.0.x definition file as a REST API.</para>
         /// </summary>
         /// 
         /// <param name="request">
