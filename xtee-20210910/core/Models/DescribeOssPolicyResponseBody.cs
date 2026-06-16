@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeOssPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>accessId, a parameter used in OSS SDK uploads, corresponding to OSSAccessKeyId</para>
+        /// <para>The access ID. This parameter corresponds to OSSAccessKeyId when you use the OSS SDK for upload.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAxxxxxxxxxxxx</para>
+        /// <para>LTAIpeYTKEbC0v10</para>
         /// </summary>
         [NameInMap("AccessId")]
         [Validation(Required=false)]
         public string AccessId { get; set; }
 
         /// <summary>
-        /// <para>OSS host ID.</para>
+        /// <para>The host ID of OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testvm.biubiubiuu.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>Key required for file upload.</para>
+        /// <para>The key required for file upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>saf/a/uid/ccc</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>OSS security policy</para>
+        /// <para>The OSS security policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJleHBpxxxxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>Signature data.</para>
+        /// <para>The signature data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tzl1wL4q8rR/xxxxxx</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Signature { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>

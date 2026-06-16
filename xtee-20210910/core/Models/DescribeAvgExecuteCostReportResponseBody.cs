@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAvgExecuteCostReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The input parameter data is not valid. order_storage_company_num component not found</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeAvgExecuteCostReportResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeAvgExecuteCostReportResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Comparison with yesterday\&quot;s average execution time</para>
+            /// <para>The day-over-day ratio compared to yesterday\&quot;s average execution duration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.2</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Ratio { get; set; }
 
             /// <summary>
-            /// <para>Today\&quot;s average execution time</para>
+            /// <para>The average execution duration for today.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1 毫秒</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Whether the call was successful</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

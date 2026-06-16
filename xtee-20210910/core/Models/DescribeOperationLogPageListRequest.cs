@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeOperationLogPageListRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for request and response messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>End time.</para>
+        /// <para>The end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1733364850919</para>
@@ -44,17 +44,17 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EndDate { get; set; }
 
         /// <summary>
-        /// <para>Operation Summary.</para>
+        /// <para>The change content to query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Update</para>
+        /// <para>修改变量</para>
         /// </summary>
         [NameInMap("operationSummary")]
         [Validation(Required=false)]
         public string OperationSummary { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region code.</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Start time.</para>
+        /// <para>The start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1733364850919</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? StartDate { get; set; }
 
         /// <summary>
-        /// <para>User Name Search.</para>
+        /// <para>The operator name to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAuditPageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page, default value: 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public bool? ResultObject { get; set; }
 
         /// <summary>
-        /// <para>Total items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total pages</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

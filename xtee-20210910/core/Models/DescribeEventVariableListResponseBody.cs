@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeEventVariableListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeEventVariableListResponseBodyResultObject ResultObject { get; set; }
         public class DescribeEventVariableListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Action variable.</para>
+            /// <para>The action variables.</para>
             /// </summary>
             [NameInMap("actions")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectActions> Actions { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectActions : TeaModel {
                 /// <summary>
-                /// <para>Variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deAddResult</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Variable definition ID. This type of variable does not return this field.</para>
+                /// <para>The variable definition ID. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Description information.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>决策结果</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Display type and group label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACTION</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DisplayType { get; set; }
 
                 /// <summary>
-                /// <para>Expression display. This type of variable does not return this field.</para>
+                /// <para>The expression display. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ExpressionTitle { get; set; }
 
                 /// <summary>
-                /// <para>Favorite identifier.</para>
+                /// <para>The favorite flag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Details of the field pool. This type of variable does not return this field.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>Field sorting.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>Source of the field. This type of variable does not return this field.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Field type. This field is not returned for this type of variable.</para>
+                /// <para>The field type. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID.</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3144</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Input type of the parameter.</para>
+                /// <para>The input type of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputFieldType { get; set; }
 
                 /// <summary>
-                /// <para>Required parameter. This type of variable does not return this field.</para>
+                /// <para>The required parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input parameters. This field is not returned for this type of variable.</para>
+                /// <para>The input parameters. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b>addDeResult</b></para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Anomaly value. This field is not returned for this type of variable.</para>
+                /// <para>The outlier value. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -204,14 +204,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outlier { get; set; }
 
                 /// <summary>
-                /// <para>Output value threshold.</para>
+                /// <para>The output value threshold.</para>
                 /// </summary>
                 [NameInMap("outputThreshold")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectActionsOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectActionsOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>Maximum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public double? MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Minimum value.</para>
+                    /// <para>The minimum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent node. This field is not returned for this type of variable.</para>
+                /// <para>The parent node. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ParentName { get; set; }
 
                 /// <summary>
-                /// <para>Source type.</para>
+                /// <para>The source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>决策结果</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACTION</para>
@@ -273,14 +273,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Variable metric information. This field is not returned for this type of variable.</para>
+                /// <para>The variable metric information. This field is not returned for this type of variable.</para>
                 /// </summary>
                 [NameInMap("variableVelocity")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectActionsVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectActionsVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>iv value. This type of variable does not return this field.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>x label. This type of variable does not return this field.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>y label. This type of variable does not return this field.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -314,14 +314,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Device variable.</para>
+            /// <para>The device variables.</para>
             /// </summary>
             [NameInMap("deviceVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectDeviceVariables> DeviceVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectDeviceVariables : TeaModel {
                 /// <summary>
-                /// <para>Variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>queryPhoneSimulatorInfo(deviceToken)?.deviceName</para>
@@ -331,7 +331,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -341,7 +341,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Variable definition ID. This type of variable does not return this field.</para>
+                /// <para>The variable definition ID. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -351,7 +351,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Description information.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>设备信息-设备名称</para>
@@ -361,7 +361,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display type and grouping label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEVICE</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>The detailed information of the field in the field pool. This field is not returned for this type of variable.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>The field rank.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -411,7 +411,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>The source of the field. This field is not returned for this type of variable.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Field type.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -431,7 +431,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID.</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>41</para>
@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input for the variable. This field is not returned for this type of variable.</para>
+                /// <para>The input of the variable. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -471,7 +471,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b>device_name</b></para>
@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public DescribeEventVariableListResponseBodyResultObjectDeviceVariablesOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectDeviceVariablesOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>The minimum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent node. This field is not returned for this type of variable.</para>
+                /// <para>The parent node. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -540,7 +540,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>设备信息-设备名称-deviceName</para>
@@ -550,7 +550,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEVICE</para>
@@ -567,7 +567,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public DescribeEventVariableListResponseBodyResultObjectDeviceVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectDeviceVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>The IV value. This field is not returned for this type of variable.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -579,7 +579,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>The X label. This field is not returned for this type of variable.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -589,7 +589,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>The Y label. This field is not returned for this type of variable.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -601,14 +601,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Custom variable.</para>
+            /// <para>The custom variables.</para>
             /// </summary>
             [NameInMap("expressionVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectExpressionVariables> ExpressionVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectExpressionVariables : TeaModel {
                 /// <summary>
-                /// <para>The code of the variable.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deInvokeSelfVariable(390397)</para>
@@ -618,7 +618,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display, in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -628,7 +628,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>The definition ID of the variable. This field is not returned for this type of variable.</para>
+                /// <para>The variable definition ID. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -638,7 +638,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the variable.</para>
+                /// <para>The variable description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>获取手机号前7位</para>
@@ -648,7 +648,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display type and grouping label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EXPRESSION</para>
@@ -678,7 +678,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>The detailed information of the field in the field pool. This field is not returned for this type of variable.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -688,7 +688,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>The field rank.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -698,7 +698,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>The source of the field. This field is not returned for this type of variable.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -708,7 +708,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>The input type of the variable.</para>
+                /// <para>The variable input type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -718,7 +718,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID.</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3148</para>
@@ -748,7 +748,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Multiple input parameters separated by commas. This field is not returned for this type of variable.</para>
+                /// <para>The input parameters, separated by commas if multiple. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -758,7 +758,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>The name of the variable.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ex_w2yIClHCc150</para>
@@ -827,7 +827,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>获取手机号前7位</para>
@@ -837,7 +837,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>The type of the variable.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EXPRESSION</para>
@@ -854,7 +854,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public DescribeEventVariableListResponseBodyResultObjectExpressionVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectExpressionVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>The IV value. This field is not returned for this type of variable.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -866,7 +866,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>The X label. This field is not returned for this type of variable.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -876,7 +876,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>The Y label. This field is not returned for this type of variable.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -888,14 +888,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Favorite variables.</para>
+            /// <para>The favorite variables.</para>
             /// </summary>
             [NameInMap("favoriteVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectFavoriteVariables> FavoriteVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectFavoriteVariables : TeaModel {
                 /// <summary>
-                /// <para>Variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deFunctionProcess(ip,\&quot;isIp\&quot;)</para>
@@ -905,7 +905,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -915,7 +915,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Variable definition ID.</para>
+                /// <para>The variable definition ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -925,7 +925,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Description of the variable.</para>
+                /// <para>The variable description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>判断是否符合IPv4标准</para>
@@ -935,7 +935,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Display type and group label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SYSTEM_BIND</para>
@@ -945,7 +945,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DisplayType { get; set; }
 
                 /// <summary>
-                /// <para>Expression display value. This type of variable does not return this field.</para>
+                /// <para>The expression display value. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -955,7 +955,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ExpressionTitle { get; set; }
 
                 /// <summary>
-                /// <para>Favorite identifier.</para>
+                /// <para>The favorite flag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -965,7 +965,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Details of the field pool. This type of variable does not return this field.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -975,7 +975,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>Field sorting.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -985,7 +985,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>Source of the field. This type of variable does not return this field.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -995,7 +995,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Field type.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BOOLEAN</para>
@@ -1005,7 +1005,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID.</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>34</para>
@@ -1015,7 +1015,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Input type of the parameter. This field is not returned for this type of variable.</para>
+                /// <para>The input type of the parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1025,7 +1025,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputFieldType { get; set; }
 
                 /// <summary>
-                /// <para>Required parameter. This field is not returned for this type of variable.</para>
+                /// <para>The required parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1035,7 +1035,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input parameters should be separated by commas. Some variables may not have this field.</para>
+                /// <para>The input parameters, separated by commas if multiple. Some variables do not have this field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip</para>
@@ -1045,7 +1045,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b>isIpAddressV4</b></para>
@@ -1055,7 +1055,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Anomaly value. This field is not returned for this type of variable.</para>
+                /// <para>The outlier value. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1065,14 +1065,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outlier { get; set; }
 
                 /// <summary>
-                /// <para>Output value threshold.</para>
+                /// <para>The output value threshold.</para>
                 /// </summary>
                 [NameInMap("outputThreshold")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>Maximum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -1082,7 +1082,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public double? MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Minimum value.</para>
+                    /// <para>The minimum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -1094,7 +1094,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent node. This field is not returned for this type of variable.</para>
+                /// <para>The parent node. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1104,7 +1104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ParentName { get; set; }
 
                 /// <summary>
-                /// <para>Source type.</para>
+                /// <para>The source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -1114,7 +1114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IP是否符合IPV4格式</para>
@@ -1124,7 +1124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SYSTEM_BIND</para>
@@ -1134,14 +1134,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Variable metric information. This field is not returned for this type of variable.</para>
+                /// <para>The variable metric information. This field is not returned for this type of variable.</para>
                 /// </summary>
                 [NameInMap("variableVelocity")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectFavoriteVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>iv value. This type of variable does not return this field.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -1153,7 +1153,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>x label. This type of variable does not return this field.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1163,7 +1163,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>y label. This type of variable does not return this field.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1175,14 +1175,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Intermediate variable return object.</para>
+            /// <para>The intermediate variable response object.</para>
             /// </summary>
             [NameInMap("middleVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectMiddleVariables> MiddleVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectMiddleVariables : TeaModel {
                 /// <summary>
-                /// <para>Variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mid</para>
@@ -1192,7 +1192,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1202,7 +1202,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Variable definition ID.</para>
+                /// <para>The variable definition ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>register</para>
@@ -1212,7 +1212,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Variable description.</para>
+                /// <para>The variable description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>description</para>
@@ -1222,7 +1222,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Display type and group label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MIDDLE</para>
@@ -1232,7 +1232,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DisplayType { get; set; }
 
                 /// <summary>
-                /// <para>Calculate the display value of the expression. This type of variable does not return this field.</para>
+                /// <para>The display value of the calculation expression. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1242,7 +1242,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ExpressionTitle { get; set; }
 
                 /// <summary>
-                /// <para>Favorite identifier.</para>
+                /// <para>The favorite flag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -1252,7 +1252,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Details of the field pool. This type of variable does not return this field.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1262,7 +1262,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>Field sorting.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -1272,7 +1272,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>Variable source.</para>
+                /// <para>The variable source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEFAULT</para>
@@ -1282,7 +1282,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Field type.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -1292,7 +1292,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID.</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49</para>
@@ -1302,7 +1302,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Input field type, indicating the type of input parameters, mainly used for function classification. This type of variable does not return this field.</para>
+                /// <para>The input field type, which indicates the input parameter type and is mainly used for function classification. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1312,7 +1312,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputFieldType { get; set; }
 
                 /// <summary>
-                /// <para>Required parameter. This field is not returned for this type of variable.</para>
+                /// <para>The required parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1322,7 +1322,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input of the variable.</para>
+                /// <para>The input of the variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1332,7 +1332,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mid</para>
@@ -1342,7 +1342,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Outlier value. This field is not returned for this type of variable.</para>
+                /// <para>The outlier value. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1352,14 +1352,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outlier { get; set; }
 
                 /// <summary>
-                /// <para>Output value threshold.</para>
+                /// <para>The output value threshold.</para>
                 /// </summary>
                 [NameInMap("outputThreshold")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectMiddleVariablesOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectMiddleVariablesOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>Maximum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -1369,7 +1369,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public double? MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Minimum value.</para>
+                    /// <para>The minimum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1381,7 +1381,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent node. This field is not returned for this type of variable.</para>
+                /// <para>The parent node. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1391,7 +1391,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ParentName { get; set; }
 
                 /// <summary>
-                /// <para>Source type.</para>
+                /// <para>The source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -1401,7 +1401,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>midVaribale</para>
@@ -1411,7 +1411,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MIDDLE</para>
@@ -1421,14 +1421,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Variable metric information. This type of variable does not return this field.</para>
+                /// <para>The variable metric information. This field is not returned for this type of variable.</para>
                 /// </summary>
                 [NameInMap("variableVelocity")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectMiddleVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectMiddleVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>id value. This type of variable does not return this field.</para>
+                    /// <para>The ID value. This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -1440,7 +1440,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>x label. This type of variable does not return this field.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1450,7 +1450,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>y label. This type of variable does not return this field.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1462,14 +1462,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>An array of model variables.</para>
+            /// <para>The model variables.</para>
             /// </summary>
             [NameInMap("modelVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectModelVariables> ModelVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectModelVariables : TeaModel {
                 /// <summary>
-                /// <para>The code of the model variable.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>getAIData(model)</para>
@@ -1479,7 +1479,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display, in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1489,7 +1489,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>The definition ID of the model variable. This field is not returned for this type of variable.</para>
+                /// <para>The variable definition ID. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1499,7 +1499,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the model variable.</para>
+                /// <para>The variable description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BL_t_show</para>
@@ -1509,7 +1509,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display type and grouping label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MODEL</para>
@@ -1539,7 +1539,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>The detailed information of the field in the field pool. This field is not returned for this type of variable.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1549,7 +1549,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>The field rank.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -1559,7 +1559,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>The source of the field. This field is not returned for this type of variable.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1569,7 +1569,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DOUBLE</para>
@@ -1609,7 +1609,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Multiple input parameters separated by commas. This field is not returned for this type of variable.</para>
+                /// <para>The input parameters, separated by commas if multiple. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1619,7 +1619,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>The name of the model variable.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mo_qbbyf33o66f2</para>
@@ -1688,7 +1688,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The title of the model variable.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BL_t_show</para>
@@ -1698,7 +1698,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>The type of the model variable.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MODEL</para>
@@ -1715,7 +1715,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public DescribeEventVariableListResponseBodyResultObjectModelVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectModelVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>The IV value. This field is not returned for this type of variable.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -1727,7 +1727,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>The X label. This field is not returned for this type of variable.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1737,7 +1737,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>The Y label. This field is not returned for this type of variable.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1749,14 +1749,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>List of name variables.</para>
+            /// <para>The list variables.</para>
             /// </summary>
             [NameInMap("nameList")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectNameList> NameList { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectNameList : TeaModel {
                 /// <summary>
-                /// <para>Variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nl_UN8otElLb490</para>
@@ -1766,7 +1766,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display in JSON format. This field is not currently returned.</para>
+                /// <para>The data distribution display in JSON format. This field is not currently returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1776,7 +1776,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Variable definition ID. This type of variable does not return this field.</para>
+                /// <para>The variable definition ID. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1786,7 +1786,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Description information.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>描述</para>
@@ -1796,7 +1796,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Display type and group label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NAME_LIST</para>
@@ -1806,7 +1806,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DisplayType { get; set; }
 
                 /// <summary>
-                /// <para>Calculate the expression display value. This type of variable does not return this field.</para>
+                /// <para>The display value of the calculation expression. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1816,7 +1816,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ExpressionTitle { get; set; }
 
                 /// <summary>
-                /// <para>Favorite identifier.</para>
+                /// <para>The favorite flag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -1826,7 +1826,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Details of the field pool. This type of variable does not return this field.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1836,7 +1836,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>Field sorting.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -1846,7 +1846,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>Source of the field. This type of variable does not return this field.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1856,7 +1856,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Field type. This field is not returned for this type of variable.</para>
+                /// <para>The field type. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1866,7 +1866,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID.</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>34</para>
@@ -1876,7 +1876,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Input type of the parameter. This field is not returned for this type of variable.</para>
+                /// <para>The input type of the parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1886,7 +1886,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputFieldType { get; set; }
 
                 /// <summary>
-                /// <para>Required parameter. This field is not returned for this type of variable.</para>
+                /// <para>The required parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1896,7 +1896,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input parameters. This field is not returned for this type of variable.</para>
+                /// <para>The input parameters. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1906,7 +1906,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nl_UN8otElLb490</para>
@@ -1916,7 +1916,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Outlier value. This field is not returned for this type of variable.</para>
+                /// <para>The outlier value. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1926,14 +1926,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outlier { get; set; }
 
                 /// <summary>
-                /// <para>Output value threshold.</para>
+                /// <para>The output value threshold.</para>
                 /// </summary>
                 [NameInMap("outputThreshold")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectNameListOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectNameListOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>Maximum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -1943,7 +1943,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public double? MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Minimum value.</para>
+                    /// <para>The minimum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -1955,7 +1955,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent node. This field is not returned currently.</para>
+                /// <para>The parent node. This field is not currently returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -1965,7 +1965,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ParentName { get; set; }
 
                 /// <summary>
-                /// <para>Source type.</para>
+                /// <para>The source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -1975,7 +1975,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>白名单</para>
@@ -1985,7 +1985,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NAME_LIST</para>
@@ -1995,14 +1995,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Variable metric information. This field is not returned for this type of variable.</para>
+                /// <para>The variable metric information. This field is not returned for this type of variable.</para>
                 /// </summary>
                 [NameInMap("variableVelocity")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectNameListVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectNameListVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>iv value. This type of variable does not return this field.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -2014,7 +2014,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>x label. This type of variable does not return this field.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2024,7 +2024,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>y label. This type of variable does not return this field.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2036,14 +2036,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>List of available functions for the original variable.</para>
+            /// <para>The list of available functions for native variables.</para>
             /// </summary>
             [NameInMap("nativeVariableFunctions")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctions> NativeVariableFunctions { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctions : TeaModel {
                 /// <summary>
-                /// <para>Variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>getHourOfTimestamp({data})</para>
@@ -2053,7 +2053,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2063,7 +2063,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Variable definition ID. This type of variable does not return this field.</para>
+                /// <para>The variable definition ID. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2073,7 +2073,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Description information.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>时间戳，可以是秒或者毫秒</para>
@@ -2083,7 +2083,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Display type and group label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FUNC</para>
@@ -2093,7 +2093,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DisplayType { get; set; }
 
                 /// <summary>
-                /// <para>Calculate the expression display value. This field is not returned for this type of variable.</para>
+                /// <para>The display value of the calculation expression. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2103,7 +2103,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ExpressionTitle { get; set; }
 
                 /// <summary>
-                /// <para>Favorite identifier.</para>
+                /// <para>The favorite flag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -2113,7 +2113,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Details of the field pool. This type of variable does not return this field.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2123,7 +2123,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>Field sorting.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -2133,7 +2133,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>Source of the field. This type of variable does not return this field.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2143,7 +2143,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Variable return type.</para>
+                /// <para>The variable return value type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>LONG</para>
@@ -2153,7 +2153,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID.</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>93</para>
@@ -2173,7 +2173,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputFieldType { get; set; }
 
                 /// <summary>
-                /// <para>Required parameter. This field is not returned for this type of variable.</para>
+                /// <para>The required parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2183,7 +2183,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input field. This type of variable does not return this field.</para>
+                /// <para>The input fields. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2193,7 +2193,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b>getHourOfTimestamp</b></para>
@@ -2203,7 +2203,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Exception value. This type of variable does not return this field.</para>
+                /// <para>The outlier value. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2213,14 +2213,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outlier { get; set; }
 
                 /// <summary>
-                /// <para>Output value threshold.</para>
+                /// <para>The output value threshold.</para>
                 /// </summary>
                 [NameInMap("outputThreshold")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>Maximum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -2230,7 +2230,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public double? MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Minimum value.</para>
+                    /// <para>The minimum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -2242,7 +2242,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent node. This field is not returned for this type of variable.</para>
+                /// <para>The parent node. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2252,7 +2252,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ParentName { get; set; }
 
                 /// <summary>
-                /// <para>Source type.</para>
+                /// <para>The source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -2262,7 +2262,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Variable title.</para>
+                /// <para>The variable title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>根据时间戳获取小时</para>
@@ -2272,7 +2272,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FUNC</para>
@@ -2282,14 +2282,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Variable metric information. This type of variable does not return this field.</para>
+                /// <para>The variable metric information. This field is not returned for this type of variable.</para>
                 /// </summary>
                 [NameInMap("variableVelocity")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectNativeVariableFunctionsVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>iv value. This type of variable does not return this field.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -2301,7 +2301,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>x label. This type of variable does not return this field.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2311,7 +2311,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>y label. This type of variable does not return this field.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2323,14 +2323,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>List of event fields.</para>
+            /// <para>The list of event fields.</para>
             /// </summary>
             [NameInMap("nativeVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectNativeVariables> NativeVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectNativeVariables : TeaModel {
                 /// <summary>
-                /// <para>variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>age</para>
@@ -2340,7 +2340,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display, in JSON format.</para>
+                /// <para>The data distribution display in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -2350,7 +2350,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Associated variable definition ID.</para>
+                /// <para>The associated variable definition ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>register</para>
@@ -2360,7 +2360,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Variable description.</para>
+                /// <para>The variable description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>描述</para>
@@ -2370,7 +2370,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Display type and group label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NATIVE</para>
@@ -2380,7 +2380,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DisplayType { get; set; }
 
                 /// <summary>
-                /// <para>Calculate expression display value.</para>
+                /// <para>The display value of the calculation expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>无</para>
@@ -2390,7 +2390,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ExpressionTitle { get; set; }
 
                 /// <summary>
-                /// <para>Favorite Identifier.</para>
+                /// <para>The favorite flag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -2400,7 +2400,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Field pool field details.</para>
+                /// <para>The field pool field details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>无</para>
@@ -2410,7 +2410,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>Field Sorting.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -2420,7 +2420,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>Variable source.</para>
+                /// <para>The variable source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEFINE</para>
@@ -2430,7 +2430,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Field type.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -2440,7 +2440,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Variable ID.</para>
+                /// <para>The variable ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>223</para>
@@ -2450,7 +2450,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Input field type, indicating the type of input parameters, mainly used for function categorization.</para>
+                /// <para>The input field type, which indicates the input parameter type and is mainly used for function classification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -2460,7 +2460,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputFieldType { get; set; }
 
                 /// <summary>
-                /// <para>Required parameters.</para>
+                /// <para>The required parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>无</para>
@@ -2470,7 +2470,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input of the variable. Event field is not present.</para>
+                /// <para>The input of the variable. This field is not returned for event fields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>无</para>
@@ -2480,7 +2480,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>age</para>
@@ -2490,7 +2490,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>outlier.</para>
+                /// <para>The outlier value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>无</para>
@@ -2500,14 +2500,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outlier { get; set; }
 
                 /// <summary>
-                /// <para>Output score threshold.</para>
+                /// <para>The output score threshold.</para>
                 /// </summary>
                 [NameInMap("outputThreshold")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectNativeVariablesOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectNativeVariablesOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>Maximum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -2517,7 +2517,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public double? MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Minimum value.</para>
+                    /// <para>The minimum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -2529,7 +2529,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent name.</para>
+                /// <para>The parent name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>parentName</para>
@@ -2539,7 +2539,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ParentName { get; set; }
 
                 /// <summary>
-                /// <para>Variable source type.</para>
+                /// <para>The variable source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -2549,7 +2549,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>年龄</para>
@@ -2559,7 +2559,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NATIVE</para>
@@ -2569,14 +2569,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Variable indicator information.</para>
+                /// <para>The variable metric information.</para>
                 /// </summary>
                 [NameInMap("variableVelocity")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectNativeVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectNativeVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>iv value.</para>
+                    /// <para>The information value (IV).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>无</para>
@@ -2588,7 +2588,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>x label.</para>
+                /// <para>The X-axis label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>x</para>
@@ -2598,7 +2598,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>y label.</para>
+                /// <para>The Y-axis label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>y</para>
@@ -2610,14 +2610,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>An array of custom query variables.</para>
+            /// <para>The custom query variables.</para>
             /// </summary>
             [NameInMap("queryVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectQueryVariables> QueryVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectQueryVariables : TeaModel {
                 /// <summary>
-                /// <para>The code of the query variable.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deInvokeQueryVariable(376773)</para>
@@ -2627,7 +2627,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display, in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2637,7 +2637,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>The definition ID of the query variable. This field is not returned for this type of variable.</para>
+                /// <para>The variable definition ID. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2647,7 +2647,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the query variable.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>年龄计算</para>
@@ -2657,7 +2657,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display type and grouping label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>QUERY_EXPRESSION</para>
@@ -2687,7 +2687,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>The detailed information of the field in the field pool. This field is not returned for this type of variable.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2697,7 +2697,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>The field rank.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -2707,7 +2707,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>The source of the field. This field is not returned for this type of variable.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2717,7 +2717,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -2757,7 +2757,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Multiple input parameters separated by commas. This field is not returned for this type of variable.</para>
+                /// <para>The input parameters, separated by commas if multiple. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2767,7 +2767,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>The name of the query variable.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ex_qWtKgCox350f</para>
@@ -2836,7 +2836,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The title of the query variable. The title of the query variable.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>年龄计算</para>
@@ -2846,7 +2846,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>The type of the query variable.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>QUERY_EXPRESSION</para>
@@ -2863,7 +2863,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public DescribeEventVariableListResponseBodyResultObjectQueryVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectQueryVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>The IV value. This field is not returned for this type of variable.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -2875,7 +2875,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>The X label. This field is not returned for this type of variable.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2885,7 +2885,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>The Y label. This field is not returned for this type of variable.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2897,14 +2897,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Custom variables (custom variables, cumulative variables, custom system variables).</para>
+            /// <para>The custom variables (custom variables, cumulative variables, and custom system variables).</para>
             /// </summary>
             [NameInMap("selfVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectSelfVariables> SelfVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectSelfVariables : TeaModel {
                 /// <summary>
-                /// <para>Variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deReadVelocity(hitRules,\&quot;dUd5ioJ8014\&quot;,1,\&quot;MO\&quot;,0,true,\&quot;SUM\&quot;)</para>
@@ -2914,7 +2914,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display, in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2924,7 +2924,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Variable definition ID. Only returned for custom system variables.</para>
+                /// <para>The variable definition ID. This field is returned only for custom system variables.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>49</para>
@@ -2934,7 +2934,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Description of the variable.</para>
+                /// <para>The variable description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>变量的描述信息</para>
@@ -2944,7 +2944,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Display type and group label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELF_BIND</para>
@@ -2954,7 +2954,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DisplayType { get; set; }
 
                 /// <summary>
-                /// <para>Expression name.</para>
+                /// <para>The expression name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>@IP地址</para>
@@ -2964,7 +2964,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ExpressionTitle { get; set; }
 
                 /// <summary>
-                /// <para>Favorite identifier.</para>
+                /// <para>The favorite flag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -2974,7 +2974,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Details of the field pool. This type of variable does not return this field.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -2984,7 +2984,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>Field sorting.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -2994,7 +2994,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>Source of the field. This type of variable does not return this field.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3004,7 +3004,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Field type.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -3014,7 +3014,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Variable ID.</para>
+                /// <para>The variable ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3174</para>
@@ -3034,7 +3034,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputFieldType { get; set; }
 
                 /// <summary>
-                /// <para>Required parameter. This field is not returned for this type of variable.</para>
+                /// <para>The required parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3044,7 +3044,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input parameters. Only returned when custom system variables are defined.</para>
+                /// <para>The input parameters. This field is returned only for custom system variables.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip</para>
@@ -3054,7 +3054,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ex_isvspbF2c7ac</para>
@@ -3064,7 +3064,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Anomaly value. Returned when the variable is a custom variable (type= EXPRESSION).</para>
+                /// <para>The outlier value. This field is returned when the variable is a custom variable (type=EXPRESSION).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-1</para>
@@ -3074,14 +3074,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outlier { get; set; }
 
                 /// <summary>
-                /// <para>Output value threshold.</para>
+                /// <para>The output value threshold.</para>
                 /// </summary>
                 [NameInMap("outputThreshold")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectSelfVariablesOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectSelfVariablesOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>Maximum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -3091,7 +3091,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public double? MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Minimum value.</para>
+                    /// <para>The minimum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -3103,7 +3103,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent node. This field is not returned currently.</para>
+                /// <para>The parent node. This field is not currently returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3113,7 +3113,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ParentName { get; set; }
 
                 /// <summary>
-                /// <para>Source type.</para>
+                /// <para>The source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -3123,7 +3123,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>获取手机号前七位</para>
@@ -3133,7 +3133,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EXPRESSION</para>
@@ -3143,14 +3143,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Variable metric information. This field is not returned for this type of variable.</para>
+                /// <para>The variable metric information. This field is not returned for this type of variable.</para>
                 /// </summary>
                 [NameInMap("variableVelocity")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectSelfVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectSelfVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>iv value. This type of variable does not return this field.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -3162,7 +3162,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>x label. This type of variable does not return this field.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3172,7 +3172,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>y label. This type of variable does not return this field.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3184,14 +3184,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>System variables.</para>
+            /// <para>The system variables.</para>
             /// </summary>
             [NameInMap("sysVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectSysVariables> SysVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectSysVariables : TeaModel {
                 /// <summary>
-                /// <para>Variable code.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>parseIpV2(ip)?.cityId</para>
@@ -3201,7 +3201,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display, in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3211,7 +3211,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>ID of the bound variable definition.</para>
+                /// <para>The bound variable definition ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2488</para>
@@ -3221,7 +3221,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>Description of the variable.</para>
+                /// <para>The variable description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>通过IP地址库解析IP所在的城市Code，例如，输入“42.120.74.211”，经过该变量运算，输出“330100”。</para>
@@ -3231,7 +3231,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Display type and group label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SYSTEM_BIND</para>
@@ -3241,7 +3241,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DisplayType { get; set; }
 
                 /// <summary>
-                /// <para>Calculate the expression display value. This type of variable does not return this field.</para>
+                /// <para>The display value of the calculation expression. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3251,7 +3251,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ExpressionTitle { get; set; }
 
                 /// <summary>
-                /// <para>Favorite identifier.</para>
+                /// <para>The favorite flag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -3261,7 +3261,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>Details of the field pool. This type of variable does not return this field.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3271,7 +3271,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>Field sorting.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -3281,7 +3281,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>Source of the field. This type of variable does not return this field.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3291,7 +3291,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>Field type.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -3301,7 +3301,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Variable ID.</para>
+                /// <para>The variable ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3151</para>
@@ -3311,7 +3311,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Input type of the parameter. This field is not returned for this type of variable.</para>
+                /// <para>The input type of the parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3321,7 +3321,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputFieldType { get; set; }
 
                 /// <summary>
-                /// <para>Required parameter. This field is not returned for this type of variable.</para>
+                /// <para>The required parameter. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3331,7 +3331,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Variable value input.</para>
+                /// <para>The variable value input.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip</para>
@@ -3341,7 +3341,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Variable name.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b>ipLocationCityCode</b></para>
@@ -3351,7 +3351,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Outlier value. This field is not returned for this type of variable.</para>
+                /// <para>The outlier value. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3361,14 +3361,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outlier { get; set; }
 
                 /// <summary>
-                /// <para>Output value threshold.</para>
+                /// <para>The output value threshold.</para>
                 /// </summary>
                 [NameInMap("outputThreshold")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectSysVariablesOutputThreshold OutputThreshold { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectSysVariablesOutputThreshold : TeaModel {
                     /// <summary>
-                    /// <para>Maximum value.</para>
+                    /// <para>The maximum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -3378,7 +3378,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public double? MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Minimum value.</para>
+                    /// <para>The minimum value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -3390,7 +3390,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Parent name.</para>
+                /// <para>The parent name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>无</para>
@@ -3400,7 +3400,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ParentName { get; set; }
 
                 /// <summary>
-                /// <para>Source type.</para>
+                /// <para>The source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -3410,7 +3410,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IP所在地_城市Code</para>
@@ -3420,7 +3420,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SYSTEM_BIND</para>
@@ -3430,14 +3430,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Variable metric information. This field is not returned for this type of variable.</para>
+                /// <para>The variable metric information. This field is not returned for this type of variable.</para>
                 /// </summary>
                 [NameInMap("variableVelocity")]
                 [Validation(Required=false)]
                 public DescribeEventVariableListResponseBodyResultObjectSysVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectSysVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>iv value. This type of variable does not return this field.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -3449,7 +3449,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>x label. This type of variable does not return this field.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3459,7 +3459,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>y label. This type of variable does not return this field.</para>
+                /// <para>The Y-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3471,7 +3471,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Other related variables.</para>
+            /// <para>The other variables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -3481,14 +3481,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public Dictionary<string, object> ThirdVariables { get; set; }
 
             /// <summary>
-            /// <para>An array of accumulated variables.</para>
+            /// <para>The custom cumulative variables.</para>
             /// </summary>
             [NameInMap("velocityVariables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableListResponseBodyResultObjectVelocityVariables> VelocityVariables { get; set; }
             public class DescribeEventVariableListResponseBodyResultObjectVelocityVariables : TeaModel {
                 /// <summary>
-                /// <para>The code of the variable.</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deReadVelocity(userId,\&quot;hFsEFUEe88a\&quot;,1,\&quot;H\&quot;,0,true,\&quot;COUNT\&quot;)</para>
@@ -3498,7 +3498,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display, in JSON format. This field is not returned for this type of variable.</para>
+                /// <para>The data distribution display in JSON format. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3508,7 +3508,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>The definition ID of the variable. This field is not returned for this type of variable.</para>
+                /// <para>The variable definition ID. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3518,7 +3518,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DefineId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the variable.</para>
+                /// <para>The variable description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>累计用户省份次数。</para>
@@ -3528,7 +3528,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The display type and grouping label.</para>
+                /// <para>The display type and group label.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELF_VELOCITY</para>
@@ -3558,7 +3558,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? FavoriteFlag { get; set; }
 
                 /// <summary>
-                /// <para>The detailed information of the field in the field pool. This field is not returned for this type of variable.</para>
+                /// <para>The field pool field details. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3568,7 +3568,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldDetail { get; set; }
 
                 /// <summary>
-                /// <para>The field rank.</para>
+                /// <para>The field sort order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -3578,7 +3578,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? FieldRank { get; set; }
 
                 /// <summary>
-                /// <para>The source of the field. This field is not returned for this type of variable.</para>
+                /// <para>The field source. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3588,7 +3588,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldSource { get; set; }
 
                 /// <summary>
-                /// <para>The type of the field.</para>
+                /// <para>The field type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DOUBLE</para>
@@ -3628,7 +3628,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Multiple input parameters separated by commas. This field is not returned for this type of variable.</para>
+                /// <para>The input parameters, separated by commas if multiple. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3638,7 +3638,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>The name of the variable.</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>hFsEFUEe88a</para>
@@ -3707,7 +3707,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The title of the variable.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>累计用户省份次数</para>
@@ -3717,7 +3717,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>The type of the variable.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SELF_VELOCITY</para>
@@ -3734,7 +3734,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public DescribeEventVariableListResponseBodyResultObjectVelocityVariablesVariableVelocity VariableVelocity { get; set; }
                 public class DescribeEventVariableListResponseBodyResultObjectVelocityVariablesVariableVelocity : TeaModel {
                     /// <summary>
-                    /// <para>The IV value. This field is not returned for this type of variable.</para>
+                    /// <para>The information value (IV). This field is not returned for this type of variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>This type does not have this field</para>
@@ -3746,7 +3746,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>The X label. This field is not returned for this type of variable.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>
@@ -3756,7 +3756,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>The Y label. This field is not returned for this type of variable.</para>
+                /// <para>The X-axis label. This field is not returned for this type of variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>This type does not have this field</para>

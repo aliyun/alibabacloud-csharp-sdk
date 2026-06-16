@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeVariableListRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for requests and responses, default value is <b>zh</b>. Values: </para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Creation type.</para>
+        /// <para>The creation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CreateType { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Associated event ID.</para>
+        /// <para>The ID of the associated event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_avypfd8253</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RefObjId { get; set; }
 
         /// <summary>
-        /// <para>Region code.</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Source type.</para>
+        /// <para>The source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAF</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>Type.</para>
+        /// <para>The type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IDENTIFY_SERVICE</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>JSON array string of types.</para>
+        /// <para>The type JSON array string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;coupon_abuse_detection\&quot;]</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string TypesStr { get; set; }
 
         /// <summary>
-        /// <para>Value for fuzzy search.</para>
+        /// <para>The value for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>注册</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeFieldListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeFieldListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeFieldListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Field classification</para>
+            /// <para>The field classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REQUEST_PARAM</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Classify { get; set; }
 
             /// <summary>
-            /// <para>Description information.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>描述</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Enum data</para>
+            /// <para>The enumeration data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STATUS</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EnumData { get; set; }
 
             /// <summary>
-            /// <para>Field ID.</para>
+            /// <para>The field ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>497</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Field name</para>
+            /// <para>The field name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Field source</para>
+            /// <para>The field source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFINE</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>Status.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLE</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Title.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>年龄</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>Field type</para>
+            /// <para>The field type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRING</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>

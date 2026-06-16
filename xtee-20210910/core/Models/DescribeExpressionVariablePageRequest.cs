@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeExpressionVariablePageRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Event code.</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_aamexg3015,de_aamexg3342</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>Variable return type.</para>
+        /// <para>The variable return type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STRING</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Outputs { get; set; }
 
         /// <summary>
-        /// <para>Page size, with a default value of 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region code.</para>
+        /// <para>The region code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Status.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Variable name/description.</para>
+        /// <para>The variable name or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>自定义变量</para>

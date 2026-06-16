@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAllDataSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeAllDataSourceResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeAllDataSourceResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Event name.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册风险</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>Policy primary key ID</para>
+            /// <para>The primary key ID of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>497</para>

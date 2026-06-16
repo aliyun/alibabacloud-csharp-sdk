@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class UpdateQueryVariableResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

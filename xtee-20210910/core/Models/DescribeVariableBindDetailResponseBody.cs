@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeVariableBindDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeVariableBindDetailResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVariableBindDetailResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Whether modification is allowed, default is false</para>
+            /// <para>Indicates whether modification is allowed. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? AllowModify { get; set; }
 
             /// <summary>
-            /// <para>Variable definition ID</para>
+            /// <para>The variable definition ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? DefineId { get; set; }
 
             /// <summary>
-            /// <para>Variable definition title</para>
+            /// <para>The variable definition title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IP所在地_城市Code</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DefineTitle { get; set; }
 
             /// <summary>
-            /// <para>Variable description information</para>
+            /// <para>The variable description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>描述</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Variable ID.</para>
+            /// <para>The variable ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>497</para>
@@ -87,14 +87,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Bound parameters.</para>
+            /// <para>The bound parameters.</para>
             /// </summary>
             [NameInMap("params")]
             [Validation(Required=false)]
             public List<DescribeVariableBindDetailResponseBodyResultObjectParams> Params { get; set; }
             public class DescribeVariableBindDetailResponseBodyResultObjectParams : TeaModel {
                 /// <summary>
-                /// <para>Event field name</para>
+                /// <para>The name of the event field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string EventFieldName { get; set; }
 
                 /// <summary>
-                /// <para>Whether it is required, default is false</para>
+                /// <para>Indicates whether this parameter is required. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? Required { get; set; }
 
                 /// <summary>
-                /// <para>Bound variable name</para>
+                /// <para>The name of the bound variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip</para>
@@ -126,14 +126,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>List of associated policies</para>
+            /// <para>The list of associated policies.</para>
             /// </summary>
             [NameInMap("relationRules")]
             [Validation(Required=false)]
             public List<DescribeVariableBindDetailResponseBodyResultObjectRelationRules> RelationRules { get; set; }
             public class DescribeVariableBindDetailResponseBodyResultObjectRelationRules : TeaModel {
                 /// <summary>
-                /// <para>Policy rule ID</para>
+                /// <para>The policy ruleId.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>104566</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Policy name</para>
+                /// <para>The policy name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>营销风险识别</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Title.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>变量title</para>

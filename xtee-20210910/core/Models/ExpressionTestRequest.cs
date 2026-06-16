@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class ExpressionTestRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values: </para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Test expression.</para>
+        /// <para>The test expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Expression { get; set; }
 
         /// <summary>
-        /// <para>Calculation expression variable</para>
+        /// <para>The calculation expression variable.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ExpressionVariable { get; set; }
 
         /// <summary>
-        /// <para>Associated variable ID</para>
+        /// <para>The associated variable ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[44659]</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ExpressionVariableIds { get; set; }
 
         /// <summary>
-        /// <para>Variable ID</para>
+        /// <para>The variable ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3144</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Scene</para>
+        /// <para>The scenario.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

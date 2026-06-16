@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeCustVariablePageRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Creation type.</para>
+        /// <para>The creation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CreateType { get; set; }
 
         /// <summary>
-        /// <para>Pagination parameter, current page number.</para>
+        /// <para>The current page number for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>累计变量描述</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Event code.</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_aheldm3876</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>Number of records per page, default value: 10.</para>
+        /// <para>The number of records per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region code.</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>status.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>

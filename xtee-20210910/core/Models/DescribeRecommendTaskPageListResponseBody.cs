@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeRecommendTaskPageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, with a default value of 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeRecommendTaskPageListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeRecommendTaskPageListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Impact indicators</para>
+            /// <para>The affected metrics.</para>
             /// </summary>
             [NameInMap("expectVelocities")]
             [Validation(Required=false)]
             public List<string> ExpectVelocities { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Number of samples</para>
+            /// <para>The number of samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? NormalCount { get; set; }
 
             /// <summary>
-            /// <para>Number of normal samples</para>
+            /// <para>The number of normal samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? NormalSize { get; set; }
 
             /// <summary>
-            /// <para>Number of records displayed on the current page.</para>
+            /// <para>The number of records displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? RiskCount { get; set; }
 
             /// <summary>
-            /// <para>Number of risk samples</para>
+            /// <para>The number of risky samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? RiskSize { get; set; }
 
             /// <summary>
-            /// <para>Sample name</para>
+            /// <para>The sample name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>白样本</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleName { get; set; }
 
             /// <summary>
-            /// <para>Sample scenario</para>
+            /// <para>The sample scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>account_abuse_detection</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleScene { get; set; }
 
             /// <summary>
-            /// <para>Task ID.</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>240c93ddffa74e38be3a00375eb3041d</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>Task name.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>策略推荐任务</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>Task status.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

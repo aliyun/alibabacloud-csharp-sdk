@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeRulePageListRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for requests and responses, default value is <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Creation type.</para>
+        /// <para>The creation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CreateType { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Event code.</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_asssce8122</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region code.</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Policy type.</para>
+        /// <para>The policy type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NOMAL</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleAuthType { get; set; }
 
         /// <summary>
-        /// <para>Policy name.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>营销风险识别评分</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Policy status.</para>
+        /// <para>The policy status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleStatus { get; set; }
 
         /// <summary>
-        /// <para>Sorting method, default value is desc.</para>
+        /// <para>The sort order. Default value: desc.</para>
         /// <list type="bullet">
         /// <item><description>desc: descending order</description></item>
-        /// <item><description>asc: ascending order</description></item>
+        /// <item><description>asc: ascending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

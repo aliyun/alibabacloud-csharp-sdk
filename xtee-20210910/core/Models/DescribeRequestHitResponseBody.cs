@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeRequestHitResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeRequestHitResponseBodyResultObject ResultObject { get; set; }
         public class DescribeRequestHitResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Event name.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册风险</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>Input parameters.</para>
+            /// <para>The input parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;eventCode\&quot;:\&quot;de_afghcf6411\&quot;,\&quot;ip\&quot;:\&quot;196.168.0.1\&quot;,\&quot;DEtest222\&quot;:9007199254740999,\&quot;age\&quot;:20}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Inputs { get; set; }
 
             /// <summary>
-            /// <para>Output parameters</para>
+            /// <para>The output parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;tags\&quot;:\&quot;rm0102,test_tag,age\&quot;,\&quot;score\&quot;:\&quot;30.0\&quot;,\&quot;extend\&quot;:\&quot;{\\\&quot;OUT_V01\\\&quot;:\\\&quot;Maritime\\\&quot;,\\\&quot;OUT_V02\\\&quot;:\\\&quot;Lome\\\&quot;,\\\&quot;OUT_V03\\\&quot;:\\\&quot;196.168.0.1_A\\\&quot;}\&quot;,\&quot;finalDecision\&quot;:\&quot;REJECT\&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Outputs { get; set; }
 
             /// <summary>
-            /// <para>Timestamp of the request.</para>
+            /// <para>The timestamp of the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1752571330000</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? RequestTime { get; set; }
 
             /// <summary>
-            /// <para>Details of the executed rules.</para>
+            /// <para>The details of the rules executed by the request.</para>
             /// </summary>
             [NameInMap("ruleHitRecords")]
             [Validation(Required=false)]
             public List<DescribeRequestHitResponseBodyResultObjectRuleHitRecords> RuleHitRecords { get; set; }
             public class DescribeRequestHitResponseBodyResultObjectRuleHitRecords : TeaModel {
                 /// <summary>
-                /// <para>Duration</para>
+                /// <para>The time consumed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? Cost { get; set; }
 
                 /// <summary>
-                /// <para>Whether the rule was hit.</para>
+                /// <para>Indicates whether the rule is hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? HitSuccessful { get; set; }
 
                 /// <summary>
-                /// <para>Whether to show details</para>
+                /// <para>Indicates whether to display details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? IsShowDetail { get; set; }
 
                 /// <summary>
-                /// <para>Order.</para>
+                /// <para>The order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? Order { get; set; }
 
                 /// <summary>
-                /// <para>Policy ID</para>
+                /// <para>The policy ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>101544</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string RuleId { get; set; }
 
                 /// <summary>
-                /// <para>Policy name</para>
+                /// <para>The policy name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>注册手机号是11位数字</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>Rule snapshot ID</para>
+                /// <para>The rule snapshot ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>27</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string RuleSnapshotId { get; set; }
 
                 /// <summary>
-                /// <para>Policy status</para>
+                /// <para>The policy status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RUNNING</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string RuleStatus { get; set; }
 
                 /// <summary>
-                /// <para>Rule Type</para>
+                /// <para>The policy type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEFAULT</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Request ID</para>
+            /// <para>The request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60C97040-D5D5-4906-9522-B9B413730CAA</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SRequestId { get; set; }
 
             /// <summary>
-            /// <para>Total amount of the request</para>
+            /// <para>The total cost of the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>

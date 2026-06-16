@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeOperatorListByTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeOperatorListByTypeResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeOperatorListByTypeResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Return value type</para>
+            /// <para>The return value type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRING</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string FieldType { get; set; }
 
             /// <summary>
-            /// <para>Operator list</para>
+            /// <para>The list of operators.</para>
             /// </summary>
             [NameInMap("operators")]
             [Validation(Required=false)]
             public List<DescribeOperatorListByTypeResponseBodyResultObjectOperators> Operators { get; set; }
             public class DescribeOperatorListByTypeResponseBodyResultObjectOperators : TeaModel {
                 /// <summary>
-                /// <para>Operator code</para>
+                /// <para>The operator code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>equals</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Whether it contains a right variable</para>
+                /// <para>Indicates whether the operator has a right variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? HasRightVariable { get; set; }
 
                 /// <summary>
-                /// <para>Operator name</para>
+                /// <para>The operator name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>等于</para>

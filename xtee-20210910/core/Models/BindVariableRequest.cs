@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class BindVariableRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values: </para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>API region ID</para>
+        /// <para>The API region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ApiRegionId { get; set; }
 
         /// <summary>
-        /// <para>API type</para>
+        /// <para>The API type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SELF</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ApiType { get; set; }
 
         /// <summary>
-        /// <para>Creation type</para>
+        /// <para>The creation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CreateType { get; set; }
 
         /// <summary>
-        /// <para>Associated variable definition primary key ID</para>
+        /// <para>The primary key ID of the associated variable definition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2438</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string DefineId { get; set; }
 
         /// <summary>
-        /// <para>Variable definition IDs, can be multiple. If binding multiple IDs, separate them with commas</para>
+        /// <para>The variable definition IDs. You can specify multiple IDs separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1546, 1547</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string DefineIds { get; set; }
 
         /// <summary>
-        /// <para>Description information.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>变量描述</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Event code</para>
+        /// <para>The event code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>Exception value</para>
+        /// <para>The exception value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYS_ERROR</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ExceptionValue { get; set; }
 
         /// <summary>
-        /// <para>Variable primary key ID</para>
+        /// <para>The primary key ID of the variable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>106875</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Output field path</para>
+        /// <para>The output field path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BOOLEAN</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string OutputField { get; set; }
 
         /// <summary>
-        /// <para>Output type</para>
+        /// <para>The output type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STRING</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string OutputType { get; set; }
 
         /// <summary>
-        /// <para>Binding input parameter information</para>
+        /// <para>The input parameter information for the binding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;accountId&quot;:&quot;accountId&quot;,&quot;mobile&quot;:&quot;&quot;}</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>Event parameter mapping 2.0, either params or paramsList must not be empty. List, JSON structure</para>
+        /// <para>The event parameter mapping 2.0. Either params or paramsList must be non-empty. This is a List JSON structure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;eventFieldName&quot;:&quot;accountId&quot;,&quot;required&quot;:false}]</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ParamsList { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Variable source</para>
+        /// <para>The variable source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAF</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>Title</para>
+        /// <para>The title.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

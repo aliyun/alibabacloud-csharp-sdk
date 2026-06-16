@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeRiskLineChartRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values: </para>
+        /// <para>Sets the language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Query start time, accurate to milliseconds (ms).</para>
+        /// <para>The beginning of the time range to query, in milliseconds (ms).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? BeginTime { get; set; }
 
         /// <summary>
-        /// <para>End time, accurate to milliseconds (ms).</para>
+        /// <para>The end of the time range to query, in milliseconds (ms).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>Event codes, separated by commas (,).</para>
+        /// <para>Event codes. Separate multiple event codes with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_afghcf6411,de_awkhwh0314</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCodes { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>Region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

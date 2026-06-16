@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class UpdateAnalysisConditionFavoriteRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Condition value.</para>
+        /// <para>The condition value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;relationship\&quot;:\&quot;and\&quot;,\&quot;list\&quot;:[{\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;hasRightVariable\&quot;:true,\&quot;fieldType\&quot;:\&quot;INT\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;leftVariableType\&quot;:\&quot;NATIVE\&quot;,\&quot;name\&quot;:\&quot;DEtest222\&quot;,\&quot;operatorCode\&quot;:\&quot;equals\&quot;},\&quot;right\&quot;:{\&quot;rightVariableType\&quot;:\&quot;constant\&quot;,\&quot;name\&quot;:\&quot;9007199254\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;},\&quot;operatorCode\&quot;:\&quot;equals\&quot;}]}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>Start time, accurate to milliseconds (ms).</para>
+        /// <para>The start time, in milliseconds (ms).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1752076800000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EventBeginTime { get; set; }
 
         /// <summary>
-        /// <para>Event code</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_ajnoqe2016</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>End time, accurate to milliseconds (ms).</para>
+        /// <para>The end time, in milliseconds (ms).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1753891199000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EventEndTime { get; set; }
 
         /// <summary>
-        /// <para>Field name</para>
+        /// <para>The field name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FieldName { get; set; }
 
         /// <summary>
-        /// <para>Field value</para>
+        /// <para>The field value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// <para>Primary key ID</para>
+        /// <para>The primary key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Condition name</para>
+        /// <para>The condition name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>查询条件1</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,12 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</para>
+        /// <para>The type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BASIC: basic query.</description></item>
+        /// <item><description>ADVANCE: advanced query.</description></item>
+        /// <item><description>BATCH: batch query.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>BASIC</para>

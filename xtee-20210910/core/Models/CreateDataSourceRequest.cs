@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateDataSourceRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Data source description.</para>
+        /// <para>The description of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>数据源描述</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Data source name.</para>
+        /// <para>The data source name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>OSS file key.</para>
+        /// <para>The OSS file key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Data source type</para>
+        /// <para>The data source type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

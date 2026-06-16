@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeVariableDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,21 +20,27 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeVariableDetailResponseBodyResultObject ResultObject { get; set; }
         public class DescribeVariableDetailResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Basic attributes.</para>
+            /// <para>The basic properties.</para>
             /// </summary>
             [NameInMap("baseInfo")]
             [Validation(Required=false)]
             public DescribeVariableDetailResponseBodyResultObjectBaseInfo BaseInfo { get; set; }
             public class DescribeVariableDetailResponseBodyResultObjectBaseInfo : TeaModel {
                 /// <summary>
-                /// <para>Whether variable binding is allowed</para>
+                /// <para>Specifies whether variable binding is allowed. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>DISABLE</b>: unavailable</description></item>
+                /// <item><description><b>ALL</b>: all</description></item>
+                /// <item><description><b>ENABLE</b>: available</description></item>
+                /// <item><description><b>PART_ENABLE</b>: partially available.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENABLE</para>
@@ -44,7 +50,11 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string AllowBind { get; set; }
 
                 /// <summary>
-                /// <para>Charging mode</para>
+                /// <para>The billing mode. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>PAY_PER_VIEW</b>: paid</description></item>
+                /// <item><description><b>FREE</b>: free.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FREE</para>
@@ -54,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ChargingMode { get; set; }
 
                 /// <summary>
-                /// <para>Charging mode description</para>
+                /// <para>The billing mode description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>免费</para>
@@ -64,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ChargingModeDesc { get; set; }
 
                 /// <summary>
-                /// <para>Creator.</para>
+                /// <para>The creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>176020</para>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display, in JSON format</para>
+                /// <para>The data distribution display in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -84,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataDisplay { get; set; }
 
                 /// <summary>
-                /// <para>Data valid range, left-closed and right-closed</para>
+                /// <para>The valid data range, inclusive on both ends.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>(0,10)</para>
@@ -94,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string DataThreshold { get; set; }
 
                 /// <summary>
-                /// <para>Deduction factor</para>
+                /// <para>The deduction coefficient.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -104,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? DeductionFactor { get; set; }
 
                 /// <summary>
-                /// <para>Description.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>描述</para>
@@ -114,7 +124,11 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Front-end binding allowed</para>
+                /// <para>Specifies whether front-end binding is allowed. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>DISABLE</b>: not allowed</description></item>
+                /// <item><description><b>ENABLE</b>: allowed.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENABLE</para>
@@ -124,7 +138,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FrontAllowBind { get; set; }
 
                 /// <summary>
-                /// <para>Creation time.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1698143758000</para>
@@ -134,7 +148,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Modification time.</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1698143758000</para>
@@ -144,7 +158,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3144</para>
@@ -154,11 +168,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Required parameters</para>
-                /// <pre><c> When inputRequired=__all__, it means all parameters are required
-                ///  When inputRequired=__one__, it means only one input is needed
-                ///  Required fields are separated by commas, e.g., mobile,ip,email
-                /// </c></pre>
+                /// <para>The required parameters.</para>
+                /// <para>When inputRequired is set to <b>all</b>, all parameters are required.
+                /// When inputRequired is set to <b>one</b>, only one input parameter is required.
+                /// Required fields are separated by commas, such as mobile,ip,email.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b>one</b></para>
@@ -168,7 +181,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputRequired { get; set; }
 
                 /// <summary>
-                /// <para>Input parameters.</para>
+                /// <para>The input parameters.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip,age,mobile</para>
@@ -178,7 +191,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Inputs { get; set; }
 
                 /// <summary>
-                /// <para>Input parameter description.</para>
+                /// <para>The input parameter description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip,年龄,手机号</para>
@@ -188,7 +201,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InputsDesc { get; set; }
 
                 /// <summary>
-                /// <para>Invoke key</para>
+                /// <para>The invocation key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>onlineScamDetectionTags_v</para>
@@ -198,7 +211,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InvokeKey { get; set; }
 
                 /// <summary>
-                /// <para>Invoke RT, unit: milliseconds</para>
+                /// <para>The invocation response time, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -208,7 +221,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? InvokeRt { get; set; }
 
                 /// <summary>
-                /// <para>Invocation success rate</para>
+                /// <para>The invocation success rate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -218,7 +231,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string InvokeSuccessRate { get; set; }
 
                 /// <summary>
-                /// <para>Number of invocations</para>
+                /// <para>The number of invocations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100000</para>
@@ -228,7 +241,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? InvokeTimes { get; set; }
 
                 /// <summary>
-                /// <para>Last modifier.</para>
+                /// <para>The last modifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>root</para>
@@ -238,7 +251,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string LastModifiedOperator { get; set; }
 
                 /// <summary>
-                /// <para>Variable name</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><b>onlineScamDetectionTags</b></para>
@@ -248,7 +261,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Output</para>
+                /// <para>The outputs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -258,7 +271,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Outputs { get; set; }
 
                 /// <summary>
-                /// <para>Output description</para>
+                /// <para>The output description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>字符串</para>
@@ -268,21 +281,21 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string OutputsDesc { get; set; }
 
                 /// <summary>
-                /// <para>Code of applicable scenarios</para>
+                /// <para>The applicable scenario code.</para>
                 /// </summary>
                 [NameInMap("scene")]
                 [Validation(Required=false)]
                 public List<string> Scene { get; set; }
 
                 /// <summary>
-                /// <para>Applicable scenario description</para>
+                /// <para>The applicable scenario description.</para>
                 /// </summary>
                 [NameInMap("sceneDesc")]
                 [Validation(Required=false)]
                 public List<string> SceneDesc { get; set; }
 
                 /// <summary>
-                /// <para>Display order</para>
+                /// <para>The display order.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -292,7 +305,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ShowOrder { get; set; }
 
                 /// <summary>
-                /// <para>Source</para>
+                /// <para>The source.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SAF</para>
@@ -302,7 +315,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>Source description</para>
+                /// <para>The source description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>风险识别</para>
@@ -312,7 +325,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SourceDesc { get; set; }
 
                 /// <summary>
-                /// <para>Status.</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ENABLE</para>
@@ -322,14 +335,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>List of supported regions.</para>
+                /// <para>The list of supported regions.</para>
                 /// </summary>
                 [NameInMap("supportRegions")]
                 [Validation(Required=false)]
                 public List<string> SupportRegions { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>诈骗引流识别_标签</para>
@@ -339,7 +352,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Type</para>
+                /// <para>The type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NATIVE</para>
@@ -349,7 +362,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Category description</para>
+                /// <para>The category description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>事件字段</para>
@@ -359,7 +372,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string TypeDesc { get; set; }
 
                 /// <summary>
-                /// <para>X-axis label for data distribution display</para>
+                /// <para>The X-axis label for the data distribution chart.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -369,7 +382,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string XLabel { get; set; }
 
                 /// <summary>
-                /// <para>Data distribution display y-axis label</para>
+                /// <para>The Y-axis label for the data distribution chart.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>

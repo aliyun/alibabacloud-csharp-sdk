@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateSampleResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public CreateSampleResponseBodyResultObject ResultObject { get; set; }
         public class CreateSampleResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Number of colored groups</para>
+            /// <para>The number of tainted groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? CommunityCount { get; set; }
 
             /// <summary>
-            /// <para>Number of failed samples</para>
+            /// <para>The number of failed data samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>Recall probability</para>
+            /// <para>The recall probability.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.5%</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RecallProbability { get; set; }
 
             /// <summary>
-            /// <para>Risk density</para>
+            /// <para>The risk density.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.5%</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RiskDensity { get; set; }
 
             /// <summary>
-            /// <para>Number of samples</para>
+            /// <para>The number of data samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? SampleCount { get; set; }
 
             /// <summary>
-            /// <para>Number of successful samples</para>
+            /// <para>The number of successful data samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>

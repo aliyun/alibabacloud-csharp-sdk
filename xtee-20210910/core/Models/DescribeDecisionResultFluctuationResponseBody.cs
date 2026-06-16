@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeDecisionResultFluctuationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error details</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The input parameter data is not valid. order_storage_company_num component not found</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeDecisionResultFluctuationResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeDecisionResultFluctuationResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Execution status.</para>
+            /// <para>The execution status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PASS</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Today\&quot;s count</para>
+            /// <para>The count for today.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? TodayNum { get; set; }
 
             /// <summary>
-            /// <para>Count within the last seven days</para>
+            /// <para>The count for the last seven days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>600</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string WithinSevenDayNum { get; set; }
 
             /// <summary>
-            /// <para>Count within the last thirty days</para>
+            /// <para>The count for the last thirty days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string WithinThirtyDayNum { get; set; }
 
             /// <summary>
-            /// <para>Count within the last three days</para>
+            /// <para>The count for the last three days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string WithinThreeDayNum { get; set; }
 
             /// <summary>
-            /// <para>Yesterday\&quot;s count</para>
+            /// <para>The count for yesterday.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateAnalysisConditionFavoriteRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Condition value.</para>
+        /// <para>The condition value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>Start time, accurate to milliseconds (ms).</para>
+        /// <para>The start time, in milliseconds (ms).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EventBeginTime { get; set; }
 
         /// <summary>
-        /// <para>Event codes, separated by commas</para>
+        /// <para>The event codes. Separate multiple event codes with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCodes { get; set; }
 
         /// <summary>
-        /// <para>End time, accurate to milliseconds (ms).</para>
+        /// <para>The end time, in milliseconds (ms).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EventEndTime { get; set; }
 
         /// <summary>
-        /// <para>Field name</para>
+        /// <para>The field name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FieldName { get; set; }
 
         /// <summary>
-        /// <para>Field value</para>
+        /// <para>The field value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// <para>Condition favorite name</para>
+        /// <para>The name of the saved query condition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Query type</para>
+        /// <para>The query type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

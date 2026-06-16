@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeDecisionResultTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error details</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The input parameter data is not valid. order_storage_company_num component not found</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -50,28 +50,28 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeDecisionResultTrendResponseBodyResultObject ResultObject { get; set; }
         public class DescribeDecisionResultTrendResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Chart data</para>
+            /// <para>The chart data.</para>
             /// </summary>
             [NameInMap("series")]
             [Validation(Required=false)]
             public List<DescribeDecisionResultTrendResponseBodyResultObjectSeries> Series { get; set; }
             public class DescribeDecisionResultTrendResponseBodyResultObjectSeries : TeaModel {
                 /// <summary>
-                /// <para>Returned data object</para>
+                /// <para>The returned data object.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<DescribeDecisionResultTrendResponseBodyResultObjectSeriesData> Data { get; set; }
                 public class DescribeDecisionResultTrendResponseBodyResultObjectSeriesData : TeaModel {
                     /// <summary>
-                    /// <para>Number</para>
+                    /// <para>The quantity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public long? Num { get; set; }
 
                     /// <summary>
-                    /// <para>ratio</para>
+                    /// <para>The ratio.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>5.56%</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Name.</para>
+                /// <para>The name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>IpTag_FFF</para>
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>X-axis data</para>
+            /// <para>The x-axis data.</para>
             /// </summary>
             [NameInMap("xaxis")]
             [Validation(Required=false)]
             public DescribeDecisionResultTrendResponseBodyResultObjectXaxis Xaxis { get; set; }
             public class DescribeDecisionResultTrendResponseBodyResultObjectXaxis : TeaModel {
                 /// <summary>
-                /// <para>X-axis data structure.</para>
+                /// <para>The xaxis data structure.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Whether the request was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

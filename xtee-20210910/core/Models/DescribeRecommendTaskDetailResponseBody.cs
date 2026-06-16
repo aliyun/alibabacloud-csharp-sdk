@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeRecommendTaskDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeRecommendTaskDetailResponseBodyResultObject ResultObject { get; set; }
         public class DescribeRecommendTaskDetailResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Event name.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册风险</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>Comparison indicators</para>
+            /// <para>The comparison metrics.</para>
             /// </summary>
             [NameInMap("expectVelocities")]
             [Validation(Required=false)]
             public List<string> ExpectVelocities { get; set; }
 
             /// <summary>
-            /// <para>Creation time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Number of normal samples</para>
+            /// <para>The number of normal samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? NormalSize { get; set; }
 
             /// <summary>
-            /// <para>Recommended strategy list</para>
+            /// <para>The list of recommended policies.</para>
             /// </summary>
             [NameInMap("recommendRuleDTOs")]
             [Validation(Required=false)]
             public List<DescribeRecommendTaskDetailResponseBodyResultObjectRecommendRuleDTOs> RecommendRuleDTOs { get; set; }
             public class DescribeRecommendTaskDetailResponseBodyResultObjectRecommendRuleDTOs : TeaModel {
                 /// <summary>
-                /// <para>Calculation path</para>
+                /// <para>The computation path.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1&amp;2</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ComputeExpression { get; set; }
 
                 /// <summary>
-                /// <para>Number of hit samples</para>
+                /// <para>The number of samples that are hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>99</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? HitSample { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID of the rule</para>
+                /// <para>The primary key ID of the policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>30</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Number of unhit samples</para>
+                /// <para>The number of samples that are not hit.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -121,14 +121,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? NotHitSample { get; set; }
 
                 /// <summary>
-                /// <para>List of candidate rules</para>
+                /// <para>The list of candidate policies.</para>
                 /// </summary>
                 [NameInMap("recommendRules")]
                 [Validation(Required=false)]
                 public List<DescribeRecommendTaskDetailResponseBodyResultObjectRecommendRuleDTOsRecommendRules> RecommendRules { get; set; }
                 public class DescribeRecommendTaskDetailResponseBodyResultObjectRecommendRuleDTOsRecommendRules : TeaModel {
                     /// <summary>
-                    /// <para>Left variable</para>
+                    /// <para>The left variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>age</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public string Left { get; set; }
 
                     /// <summary>
-                    /// <para>Operator</para>
+                    /// <para>The operator.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>equals</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>Right variable</para>
+                    /// <para>The right variable.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Strategy ID</para>
+                /// <para>The policy ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>102224</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string RuleId { get; set; }
 
                 /// <summary>
-                /// <para>Rule name</para>
+                /// <para>The policy name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>营销风险识别评分_高风险_拒绝_副本</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>Status</para>
+                /// <para>The status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NO_RULE</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>List of indicators in JSON string format</para>
+                /// <para>The list of metrics in JSON string format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;key&quot;:&quot;dxkkLw8fe18&quot;,&quot;value&quot;:&quot;2&quot;}]</para>
@@ -202,14 +202,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Selected variable list</para>
+            /// <para>The list of selected variables.</para>
             /// </summary>
             [NameInMap("recommendVariableDTOs")]
             [Validation(Required=false)]
             public List<DescribeRecommendTaskDetailResponseBodyResultObjectRecommendVariableDTOs> RecommendVariableDTOs { get; set; }
             public class DescribeRecommendTaskDetailResponseBodyResultObjectRecommendVariableDTOs : TeaModel {
                 /// <summary>
-                /// <para>Primary key ID</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>234</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Title</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>手机号</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Number of risk samples</para>
+            /// <para>The number of risk samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -241,7 +241,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? RiskSize { get; set; }
 
             /// <summary>
-            /// <para>Sample name</para>
+            /// <para>The sample name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>白样本</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleName { get; set; }
 
             /// <summary>
-            /// <para>Sample scenario</para>
+            /// <para>The sample scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>account_abuse_detection</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleScene { get; set; }
 
             /// <summary>
-            /// <para>Sample scenario name</para>
+            /// <para>The sample scenario name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>防虚假账号</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleSceneName { get; set; }
 
             /// <summary>
-            /// <para>Task ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>887</para>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? TaskId { get; set; }
 
             /// <summary>
-            /// <para>Task name</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>策略推荐任务</para>
@@ -291,7 +291,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>Task status.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE</para>

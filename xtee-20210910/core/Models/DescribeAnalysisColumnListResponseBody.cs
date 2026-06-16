@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAnalysisColumnListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeAnalysisColumnListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeAnalysisColumnListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Event name.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册风险</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>Whether it is a default column.</para>
+            /// <para>Indicates whether the column is a default column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>Variable name.</para>
+            /// <para>The variable name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string VariableName { get; set; }
 
             /// <summary>
-            /// <para>Variable title.</para>
+            /// <para>The variable name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>年龄</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string VariableTitle { get; set; }
 
             /// <summary>
-            /// <para>Variable type.</para>
+            /// <para>The variable type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NATIVE</para>

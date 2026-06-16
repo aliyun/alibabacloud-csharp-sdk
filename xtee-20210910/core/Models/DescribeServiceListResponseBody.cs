@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeServiceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeServiceListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeServiceListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Service code</para>
+            /// <para>The service code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>coupon_abuse_detection</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ServiceCode { get; set; }
 
             /// <summary>
-            /// <para>Service name.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>coupon_abuse_detection</para>

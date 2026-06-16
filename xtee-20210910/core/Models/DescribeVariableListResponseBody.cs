@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeVariableListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeVariableListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeVariableListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Capacity.</para>
+            /// <para>The capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Capacity { get; set; }
 
             /// <summary>
-            /// <para>Variable definition ID.</para>
+            /// <para>The variable definition ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DefineId { get; set; }
 
             /// <summary>
-            /// <para>Description information.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>变量描述</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Extended information.</para>
+            /// <para>The extended information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>暂无</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public Dictionary<string, object> ExtendInfo { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1565701886000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Variable ID.</para>
+            /// <para>The variable ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>497</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Remaining capacity.</para>
+            /// <para>The remaining capacity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? LeftCapacity { get; set; }
 
             /// <summary>
-            /// <para>Variable name</para>
+            /// <para>The variable name.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b>ipLocationCityCode</b></para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Variable output type</para>
+            /// <para>The output type of the variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRING</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string OutputsType { get; set; }
 
             /// <summary>
-            /// <para>Associated event ID.</para>
+            /// <para>The associated event of the variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_agdxgz0246</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RefObjId { get; set; }
 
             /// <summary>
-            /// <para>Associated event name.</para>
+            /// <para>The name of the associated event of the variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册事件</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RefObjName { get; set; }
 
             /// <summary>
-            /// <para>Associated object type of the variable</para>
+            /// <para>The association type of the variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EVENT</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RefObjType { get; set; }
 
             /// <summary>
-            /// <para>Source type.</para>
+            /// <para>The source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAF</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>Title.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>设备风险识别_标签</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>Variable type.</para>
+            /// <para>The variable type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NATIVE</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>User ID to which the data belongs.</para>
+            /// <para>The UID of the user who owns the data.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>27</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

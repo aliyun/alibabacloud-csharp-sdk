@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class ModifyCustVariableResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<ModifyCustVariableResponseBodyResultObject> ResultObject { get; set; }
         public class ModifyCustVariableResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Failure type</para>
+            /// <para>The failure type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string FailType { get; set; }
 
             /// <summary>
-            /// <para>Detailed information.</para>
+            /// <para>The detailed information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>Whether the operation was successful</para>
+            /// <para>Indicates whether the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

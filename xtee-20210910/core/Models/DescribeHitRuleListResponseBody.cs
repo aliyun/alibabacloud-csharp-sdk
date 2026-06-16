@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeHitRuleListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Response object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeHitRuleListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeHitRuleListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Number of hits.</para>
+            /// <para>The number of hits.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? HitCount { get; set; }
 
             /// <summary>
-            /// <para>Strategy name</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>营销风险识别</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSafStartStepsRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Whether the server is an Alibaba Cloud server</para>
-        /// <para>true or false</para>
+        /// <para>Specifies whether the server is an Alibaba Cloud server. Valid values: true and false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -35,8 +34,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public bool? AliyunServer { get; set; }
 
         /// <summary>
-        /// <para>Used to receive a collection of strings from the frontend that POP cannot accept</para>
-        /// <para>Device type</para>
+        /// <para>The string of device type collection passed from the frontend that cannot be received by POP.</para>
+        /// <para>The device type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ios</para>
@@ -46,7 +45,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string DeviceTypesStr { get; set; }
 
         /// <summary>
-        /// <para>Event code</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_ahqido8038</para>
@@ -56,10 +55,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>Language, parameters can be passed</para>
+        /// <para>The language. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>zh-CN: Chinese (default)</description></item>
-        /// <item><description>en-US: English</description></item>
+        /// <item><description>en-US: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +69,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -80,7 +79,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Server region</para>
+        /// <para>The region where the server resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

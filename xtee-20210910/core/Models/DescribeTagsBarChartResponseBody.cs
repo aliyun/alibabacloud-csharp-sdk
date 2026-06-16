@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeTagsBarChartResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The input parameter data is not valid. order_storage_company_num component not found</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -50,28 +50,28 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeTagsBarChartResponseBodyResultObject ResultObject { get; set; }
         public class DescribeTagsBarChartResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Data list</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("series")]
             [Validation(Required=false)]
             public List<DescribeTagsBarChartResponseBodyResultObjectSeries> Series { get; set; }
             public class DescribeTagsBarChartResponseBodyResultObjectSeries : TeaModel {
                 /// <summary>
-                /// <para>Chart data list</para>
+                /// <para>The chart data list.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<DescribeTagsBarChartResponseBodyResultObjectSeriesData> Data { get; set; }
                 public class DescribeTagsBarChartResponseBodyResultObjectSeriesData : TeaModel {
                     /// <summary>
-                    /// <para>Number.</para>
+                    /// <para>The quantity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public long? Num { get; set; }
 
                     /// <summary>
-                    /// <para>Scale</para>
+                    /// <para>The ratio.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10%</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Series name.</para>
+                /// <para>The series name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Chart field, same as name</para>
+                /// <para>The chart field, which is the same as the name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tag</para>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>xaxis interface configuration.</para>
+            /// <para>The x-axis configuration.</para>
             /// </summary>
             [NameInMap("xaxis")]
             [Validation(Required=false)]
             public DescribeTagsBarChartResponseBodyResultObjectXaxis Xaxis { get; set; }
             public class DescribeTagsBarChartResponseBodyResultObjectXaxis : TeaModel {
                 /// <summary>
-                /// <para>xaxis data items</para>
+                /// <para>The x-axis data items.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Whether the request was successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

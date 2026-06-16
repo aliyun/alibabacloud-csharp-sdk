@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSafTagListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeSafTagListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeSafTagListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Tag description.</para>
+            /// <para>The label description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>依赖IP画像模型识别输出风险高、中高、中的判定\n数据来源主要基于IP的网络属性数据和对黑产行为轨迹的情报监控数据，涵盖可识别检测IP网络属性特征、恶意属性等特征\n而模型评分的高中低主要是根据当前IP号段命中风险行为的恶意程度和种类来判定的\n备注：以下rn0311、rn0312、rn0313、rn0314、rn0315属于IP画像模型针对当前请求IP识别出的风险类别</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TagDesc { get; set; }
 
             /// <summary>
-            /// <para>Tag meaning.</para>
+            /// <para>The label meaning.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IP风险评分高</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TagMean { get; set; }
 
             /// <summary>
-            /// <para>Tag name.</para>
+            /// <para>The label name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rn0301</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TagName { get; set; }
 
             /// <summary>
-            /// <para>Tag identifier.</para>
+            /// <para>The label identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rn0301</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TagState { get; set; }
 
             /// <summary>
-            /// <para>Tag type.</para>
+            /// <para>The label type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IP风险类</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TagType { get; set; }
 
             /// <summary>
-            /// <para>Unique identifier of the tag key.</para>
+            /// <para>The unique identifier of the label key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rn0301</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TagUid { get; set; }
 
             /// <summary>
-            /// <para>Update time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684744034000</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

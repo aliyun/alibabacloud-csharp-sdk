@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeInputFeildCountByEventCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeInputFeildCountByEventCodeResponseBodyResultObject ResultObject { get; set; }
         public class DescribeInputFeildCountByEventCodeResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Whether it exceeds the maximum quantity</para>
+            /// <para>Indicates whether the maximum number is exceeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? Limit { get; set; }
 
             /// <summary>
-            /// <para>Maximum number of created items</para>
+            /// <para>The maximum number of entries that can be created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? MaxTotalItem { get; set; }
 
             /// <summary>
-            /// <para>Total number of items</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>

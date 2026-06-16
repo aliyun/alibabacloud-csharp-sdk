@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreatePocSampleResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return Result.</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public CreatePocSampleResponseBodyResultObject ResultObject { get; set; }
         public class CreatePocSampleResponseBodyResultObject : TeaModel {
             /// <summary>
+            /// <para>Indicates whether validation warnings exist.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? HasWarnings { get; set; }
 
             /// <summary>
+            /// <para>Sample ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? SampleId { get; set; }
 
             /// <summary>
+            /// <para>Sample Name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SampleNameTest</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleName { get; set; }
 
             /// <summary>
+            /// <para>Scenario.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FINANCE</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Tab { get; set; }
 
             /// <summary>
+            /// <para>Warning summary.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>

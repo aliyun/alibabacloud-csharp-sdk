@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateFieldRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Field classification.</para>
+        /// <para>The field classification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REQUEST_PARAM</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Classify { get; set; }
 
         /// <summary>
-        /// <para>Description information.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>字段描述信息</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Enum data.</para>
+        /// <para>The enumeration data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enum</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EnumData { get; set; }
 
         /// <summary>
-        /// <para>Field name.</para>
+        /// <para>The field name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Region code.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Business source.</para>
+        /// <para>The business source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEFINE</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Title.</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>年龄</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>Field type.</para>
+        /// <para>The field type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STRING</para>

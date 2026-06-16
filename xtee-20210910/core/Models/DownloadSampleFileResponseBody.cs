@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DownloadSampleFileResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return Result.</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public DownloadSampleFileResponseBodyResultObject ResultObject { get; set; }
         public class DownloadSampleFileResponseBodyResultObject : TeaModel {
             /// <summary>
+            /// <para>Model status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Success</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>OSS download URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://pic.zfp.cn/image/2026/02/06/45b5fee18baf4b99b13025987486319c.jpg">https://pic.zfp.cn/image/2026/02/06/45b5fee18baf4b99b13025987486319c.jpg</a></para>
             /// </summary>

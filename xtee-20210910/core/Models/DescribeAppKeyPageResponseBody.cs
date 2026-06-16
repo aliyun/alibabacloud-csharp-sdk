@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAppKeyPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E01E1B4A-6747-5329-9046-B6D6B2D91349</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page, default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeAppKeyPageResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeAppKeyPageResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Android SDK download URL.</para>
+            /// <para>The download URL of the Android SDK.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string AndroidSdkUrl { get; set; }
 
             /// <summary>
-            /// <para>Android SDK version number.</para>
+            /// <para>The version number of the Android SDK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string AndroidSdkVersion { get; set; }
 
             /// <summary>
-            /// <para>Application appkey.</para>
+            /// <para>The appKey of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sh9a71f07fhs556bd767586307e82795</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string AppKey { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>iOS SDK download URL.</para>
+            /// <para>The download URL of the iOS SDK.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string IosSdkUrl { get; set; }
 
             /// <summary>
-            /// <para>iOS SDK version number.</para>
+            /// <para>The version number of the iOS SDK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string IosSdkVersion { get; set; }
 
             /// <summary>
-            /// <para>Memo.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>备注</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SdkItems { get; set; }
 
             /// <summary>
-            /// <para>Whether this appKey is integrated.</para>
+            /// <para>Indicates whether the appKey is integrated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

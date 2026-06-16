@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class SearchSampleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The returned message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
         /// </summary>
@@ -41,11 +49,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Return Result.</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public List<SearchSampleResponseBodyResultObject> ResultObject { get; set; }
         public class SearchSampleResponseBodyResultObject : TeaModel {
             /// <summary>
+            /// <para>File Name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>icekredit_model_A_2025c_1755826424_870000.csv</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string FileName { get; set; }
 
             /// <summary>
+            /// <para>File Size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>572</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? FileSize { get; set; }
 
             /// <summary>
+            /// <para>Remarks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ios_velo</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Remark { get; set; }
 
             /// <summary>
+            /// <para>Number of Records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>325</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? RowCount { get; set; }
 
             /// <summary>
+            /// <para>Sample ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>9b020e69bbae49d88c07a377c3ab7a71</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? SampleId { get; set; }
 
             /// <summary>
+            /// <para>Sample Name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Test</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleName { get; set; }
 
             /// <summary>
+            /// <para>Scenario.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FINANCE</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Tab { get; set; }
 
             /// <summary>
+            /// <para>File Upload Time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2023-12-01 12:23:34</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string UploadTime { get; set; }
 
             /// <summary>
+            /// <para>Uploader.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ds</para>
             /// </summary>

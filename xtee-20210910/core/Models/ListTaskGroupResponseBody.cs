@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class ListTaskGroupResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Return message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
         /// </summary>
@@ -57,11 +69,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Request result.</para>
+        /// </summary>
         [NameInMap("ResultObject")]
         [Validation(Required=false)]
         public List<ListTaskGroupResponseBodyResultObject> ResultObject { get; set; }
         public class ListTaskGroupResponseBodyResultObject : TeaModel {
             /// <summary>
+            /// <para>Creation Time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1588820785212</para>
             /// </summary>
@@ -69,11 +86,19 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>Creator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>324253</para>
+            /// </summary>
             [NameInMap("CreatorUserId")]
             [Validation(Required=false)]
             public long? CreatorUserId { get; set; }
 
             /// <summary>
+            /// <para>Audience group status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -81,11 +106,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             [Validation(Required=false)]
             public string GroupStatus { get; set; }
 
+            /// <summary>
+            /// <para>Task group name.</para>
+            /// </summary>
             [NameInMap("SampleNames")]
             [Validation(Required=false)]
             public List<string> SampleNames { get; set; }
 
             /// <summary>
+            /// <para>Number of subtasks parsed and split from the task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -93,11 +123,16 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             [Validation(Required=false)]
             public int? SubTaskCount { get; set; }
 
+            /// <summary>
+            /// <para>Subtask.</para>
+            /// </summary>
             [NameInMap("SubTaskList")]
             [Validation(Required=false)]
             public List<ListTaskGroupResponseBodyResultObjectSubTaskList> SubTaskList { get; set; }
             public class ListTaskGroupResponseBodyResultObjectSubTaskList : TeaModel {
                 /// <summary>
+                /// <para>Job end time.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-01-12 15:47:23</para>
                 /// </summary>
@@ -106,6 +141,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? FinishTime { get; set; }
 
                 /// <summary>
+                /// <para>Group name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pts-demo</para>
                 /// </summary>
@@ -114,6 +151,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string GroupName { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether to hide.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -122,6 +161,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? HideViewResultButton { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the subtask is charged.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -130,6 +171,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? IsCharge { get; set; }
 
                 /// <summary>
+                /// <para>Model scenario.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rfs</para>
                 /// </summary>
@@ -138,6 +181,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ModelScene { get; set; }
 
                 /// <summary>
+                /// <para>Sample ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -146,6 +191,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? SampleId { get; set; }
 
                 /// <summary>
+                /// <para>Sample name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>fs</para>
                 /// </summary>
@@ -154,6 +201,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string SampleName { get; set; }
 
                 /// <summary>
+                /// <para>Service code.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>anti_fraud_riskscreening</para>
                 /// </summary>
@@ -161,11 +210,19 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 [Validation(Required=false)]
                 public string ServiceCode { get; set; }
 
+                /// <summary>
+                /// <para>Service name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>申请反欺诈V5（分值版）</para>
+                /// </summary>
                 [NameInMap("ServiceName")]
                 [Validation(Required=false)]
                 public string ServiceName { get; set; }
 
                 /// <summary>
+                /// <para>Subtask ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
                 /// </summary>
@@ -174,6 +231,12 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? SubTaskId { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the job can be canceled. Valid values:  </para>
+                /// <list type="bullet">
+                /// <item><description>true: The job can be canceled.  </description></item>
+                /// <item><description>false: The job cannot be canceled.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -182,6 +245,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? SupportCancel { get; set; }
 
                 /// <summary>
+                /// <para>Supports download.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -190,6 +255,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? SupportDownload { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether merge download is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -198,6 +265,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? SupportMergeSelect { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether viewing is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -206,6 +275,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? SupportView { get; set; }
 
                 /// <summary>
+                /// <para>Scenario.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>FINANCE</para>
                 /// </summary>
@@ -214,6 +285,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Tab { get; set; }
 
                 /// <summary>
+                /// <para>Task group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
                 /// </summary>
@@ -222,6 +295,12 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public int? TaskGroupId { get; set; }
 
                 /// <summary>
+                /// <para>The execution status of the import job:  </para>
+                /// <list type="bullet">
+                /// <item><description>DOING: running  </description></item>
+                /// <item><description>FINISH: execution completed.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Finished</para>
                 /// </summary>
@@ -232,6 +311,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
+            /// <para>Scenario.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FINANCE</para>
             /// </summary>
@@ -240,6 +321,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Tab { get; set; }
 
             /// <summary>
+            /// <para>Task group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>g-uf62fwvw2f8dx88xo2lt</para>
             /// </summary>
@@ -248,6 +331,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? TaskGroupId { get; set; }
 
             /// <summary>
+            /// <para>Task group name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>GroupTest</para>
             /// </summary>
@@ -258,6 +343,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
+        /// <para>Total number of returned items.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -266,6 +353,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
+        /// <para>Total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

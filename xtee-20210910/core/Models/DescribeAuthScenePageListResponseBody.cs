@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAuthScenePageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeAuthScenePageListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeAuthScenePageListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Number of common rules</para>
+            /// <para>The number of General Policy policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? CommonRuleCount { get; set; }
 
             /// <summary>
-            /// <para>Number of custom rules</para>
+            /// <para>The number of custom policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? CustomRuleCount { get; set; }
 
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_avypfd8253</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Scene name.</para>
+            /// <para>The scenario name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册风险识别服务</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SceneName { get; set; }
 
             /// <summary>
-            /// <para>Service name.</para>
+            /// <para>The service name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>account_abuse</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>

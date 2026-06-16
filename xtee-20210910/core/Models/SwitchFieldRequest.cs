@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class SwitchFieldRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Primary Key ID</para>
+        /// <para>The primary key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>250002</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Parameter Name.</para>
+        /// <para>The parameter name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Region Code</para>
+        /// <para>The region code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,11 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Field Source</para>
+        /// <para>The field source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DEFINE</b>: custom</description></item>
+        /// <item><description><b>DEFAULT</b>: system default.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DEFINE</para>
@@ -65,7 +69,11 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Status.</para>
+        /// <para>The status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>DISABLE</b>: disabled</description></item>
+        /// <item><description><b>ENABLE</b>: enabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>

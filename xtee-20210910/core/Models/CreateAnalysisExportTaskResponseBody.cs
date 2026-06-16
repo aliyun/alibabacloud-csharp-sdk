@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateAnalysisExportTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public CreateAnalysisExportTaskResponseBodyResultObject ResultObject { get; set; }
         public class CreateAnalysisExportTaskResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Export list.</para>
+            /// <para>The export list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Columns { get; set; }
 
             /// <summary>
-            /// <para>Export task conditions.</para>
+            /// <para>The conditions of the export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Conditions { get; set; }
 
             /// <summary>
-            /// <para>Event start time.</para>
+            /// <para>The event start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1752076800000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? EventBeginTime { get; set; }
 
             /// <summary>
-            /// <para>Event code.</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_ahespg8137</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCodes { get; set; }
 
             /// <summary>
-            /// <para>End time.</para>
+            /// <para>The end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753891199000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? EventEndTime { get; set; }
 
             /// <summary>
-            /// <para>File format.</para>
+            /// <para>The file format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CSV</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string FileFormat { get; set; }
 
             /// <summary>
-            /// <para>OSS-generated key.</para>
+            /// <para>The randomly generated OSS key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxx</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string OssKey { get; set; }
 
             /// <summary>
-            /// <para>Export task scope.</para>
+            /// <para>The scope of the export task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>Task status.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Export task type.</para>
+            /// <para>The export task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BASIC</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>User UID</para>
+            /// <para>The user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1519714049632764</para>

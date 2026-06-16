@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class ImportNameListRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for request and response messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Creation type</para>
+        /// <para>The creation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CreateType { get; set; }
 
         /// <summary>
-        /// <para>Import name list.</para>
+        /// <para>The list of names to import.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aa\nbb\ncc</para>
@@ -44,20 +44,20 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>Description information.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>描述</para>
+        /// <para>description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Document import type:</para>
-        /// <para>INPUT: Text input
-        /// CSV: CSV upload
-        /// NONE: Do not upload for now</para>
+        /// <para>The document import type. Valid values:</para>
+        /// <para>INPUT: data entry.
+        /// CSV: CSV upload.
+        /// NONE: no upload.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,17 +68,17 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ImportType { get; set; }
 
         /// <summary>
-        /// <para>name content memo</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>名单内容描述</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("memo")]
         [Validation(Required=false)]
         public string Memo { get; set; }
 
         /// <summary>
-        /// <para>nameListType</para>
+        /// <para>The nameListType.</para>
         /// 
         /// <b>Example:</b>
         /// <para>accountId</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string NameListType { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Title.</para>
+        /// <para>The title.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>Variable ID</para>
+        /// <para>The variable ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>393314</para>

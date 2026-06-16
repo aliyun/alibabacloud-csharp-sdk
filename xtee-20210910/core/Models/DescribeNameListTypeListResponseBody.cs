@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeNameListTypeListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeNameListTypeListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeNameListTypeListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Match Key.</para>
+            /// <para>The matching key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>accountId</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Variable value</para>
+            /// <para>The variable value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>账号ID</para>

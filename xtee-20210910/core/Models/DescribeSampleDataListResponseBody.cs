@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSampleDataListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeSampleDataListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeSampleDataListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Classification type, binary or multi-class.</para>
+            /// <para>The classification type, such as binary classification or multi-class classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>二分类</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ClassificationType { get; set; }
 
             /// <summary>
-            /// <para>Criterion value for sample data calculation</para>
+            /// <para>The benchmark value used for sample data calculation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;正样本&quot;:&quot;1&quot;，&quot;负样本&quot;:&quot;1&quot;}</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DataDistributed { get; set; }
 
             /// <summary>
-            /// <para>First row of sample data. Used to define the values of each column.</para>
+            /// <para>The first row of the sample data. This row defines the value of each column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17700000000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DataTitle { get; set; }
 
             /// <summary>
-            /// <para>Deletion tag.</para>
+            /// <para>The deletion tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DELETE</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DeleteTag { get; set; }
 
             /// <summary>
-            /// <para>Description information.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>描述</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1565701886000</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Primary key ID</para>
+            /// <para>The primary key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>497</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Name</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册样本</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Number of normal samples</para>
+            /// <para>The number of normal samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>999</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? NormalSize { get; set; }
 
             /// <summary>
-            /// <para>Recall configuration</para>
+            /// <para>The backtracking configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;variables&quot;:&quot;a,b,c&quot;}</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RecallConfig { get; set; }
 
             /// <summary>
-            /// <para>Number of risk samples</para>
+            /// <para>The number of risky samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? RiskSize { get; set; }
 
             /// <summary>
-            /// <para>Specified risk value</para>
+            /// <para>The specified risk value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>black</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RiskValue { get; set; }
 
             /// <summary>
-            /// <para>Sample label details</para>
+            /// <para>The sample label details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;type&quot;:&quot;positive&quot;,&quot;size&quot;:&quot;2000&quot;,&quot;value&quot;:1},{&quot;type&quot;:&quot;negative&quot;,&quot;size&quot;:1900,&quot;value&quot;:0}]</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleLabelDetail { get; set; }
 
             /// <summary>
-            /// <para>Sample size</para>
+            /// <para>The number of samples.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? SampleSize { get; set; }
 
             /// <summary>
-            /// <para>Scene code</para>
+            /// <para>The scenario code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>account_abuse_detection</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Scene { get; set; }
 
             /// <summary>
-            /// <para>Status.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE</para>
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Storage path</para>
+            /// <para>The storage path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>saf/de/sample/3dc2spspHKq4G3YI9d08</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string StorePath { get; set; }
 
             /// <summary>
-            /// <para>Storage type</para>
+            /// <para>The storage type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
@@ -237,7 +237,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string StoreType { get; set; }
 
             /// <summary>
-            /// <para>Whether recall is supported</para>
+            /// <para>Indicates whether backtracking is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -247,7 +247,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SupportRecall { get; set; }
 
             /// <summary>
-            /// <para>User UID</para>
+            /// <para>The user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1519714049632764</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? UserId { get; set; }
 
             /// <summary>
-            /// <para>Version</para>
+            /// <para>The version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -269,7 +269,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -279,7 +279,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

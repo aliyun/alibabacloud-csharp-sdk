@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeRuleCountByUserIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeRuleCountByUserIdResponseBodyResultObject ResultObject { get; set; }
         public class DescribeRuleCountByUserIdResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Whether the limit condition is reached. Values: -<b>true</b>: Yes-<b>false</b>: No</para>
+            /// <para>Indicates whether the limit condition is reached. Valid values: - <b>true</b>: The limit condition is reached. - <b>false</b>: The limit condition is not reached.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? Limit { get; set; }
 
             /// <summary>
-            /// <para>Maximum number of items</para>
+            /// <para>The maximum number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? MaxTotalItem { get; set; }
 
             /// <summary>
-            /// <para>Total number of items</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>27</para>

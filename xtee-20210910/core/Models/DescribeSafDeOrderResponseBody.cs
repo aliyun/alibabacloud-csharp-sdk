@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSafDeOrderResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeSafDeOrderResponseBodyResultObject ResultObject { get; set; }
         public class DescribeSafDeOrderResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Expiration time</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1728008155799</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? ExpirationDate { get; set; }
 
             /// <summary>
-            /// <para>Based on the product type subscribed by the customer, the console permissions are divided into three categories:</para>
-            /// <pre><c> 1. New Customer: Has not purchased/subscribed to any service.
-            ///  2. Old Customer (Subscription): Customers who have purchased the SAF product.
-            ///  3. Pay-As-You-Go: Customers who have purchased the SAF_BAG product or activated SAF_POS.
+            /// <para>The console permissions are classified into three categories based on the commodity type activated by the customer:</para>
+            /// <pre><c> 1. New customer: has not purchased or activated any service.
+            ///  2. Existing customer (subscription): has purchased the saf commodity.
+            ///  3. Pay-as-you-go: has purchased the saf_bag commodity or activated saf_pos.
             /// </c></pre>
             /// 
             /// <b>Example:</b>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? OpenUserType { get; set; }
 
             /// <summary>
-            /// <para>Activated region permission addresses.</para>
+            /// <para>The activated region permission addresses.</para>
             /// </summary>
             [NameInMap("regions")]
             [Validation(Required=false)]
             public List<DescribeSafDeOrderResponseBodyResultObjectRegions> Regions { get; set; }
             public class DescribeSafDeOrderResponseBodyResultObjectRegions : TeaModel {
                 /// <summary>
-                /// <para>Expiration date (timestamp).</para>
+                /// <para>The expiration date (timestamp).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2117750400000</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? ExpirationDate { get; set; }
 
                 /// <summary>
-                /// <para>Region ID.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shanghai</para>
@@ -78,11 +78,11 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>Specification model:</para>
-                /// <para>1: Basic Edition 
-                /// 2: Advanced Edition 
-                /// 3: Premium Edition 
-                /// 4: Flagship Edition</para>
+                /// <para>The specification type:</para>
+                /// <para> 1: Basic Edition
+                ///  2: Advanced Edition
+                ///  3: Premium Edition
+                ///  4: Ultimate Edition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>

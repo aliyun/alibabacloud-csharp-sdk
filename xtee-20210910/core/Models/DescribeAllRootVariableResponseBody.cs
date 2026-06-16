@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAllRootVariableResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeAllRootVariableResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeAllRootVariableResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Variable code</para>
+            /// <para>The variable code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Variable description.</para>
+            /// <para>The variable description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>年龄</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Display type and group label</para>
+            /// <para>The display type and group label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NATIVE</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DisplayType { get; set; }
 
             /// <summary>
-            /// <para>Favorite flag</para>
+            /// <para>The favorite flag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? FavoriteFlag { get; set; }
 
             /// <summary>
-            /// <para>Field ranking</para>
+            /// <para>The field sorting order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? FieldRank { get; set; }
 
             /// <summary>
-            /// <para>Field type.</para>
+            /// <para>The field type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRING</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string FieldType { get; set; }
 
             /// <summary>
-            /// <para>Variable ID.</para>
+            /// <para>The variable ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>497</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Input field type.</para>
+            /// <para>The input type of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRING</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string InputFieldType { get; set; }
 
             /// <summary>
-            /// <para>Variable input.</para>
+            /// <para>The inputs of the variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Inputs { get; set; }
 
             /// <summary>
-            /// <para>Variable name.</para>
+            /// <para>The variable name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -127,14 +127,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Maximum cross-sectional area of the checkbox.</para>
+            /// <para>The maximum cross-sectional area of the check box.</para>
             /// </summary>
             [NameInMap("outputThreshold")]
             [Validation(Required=false)]
             public DescribeAllRootVariableResponseBodyResultObjectOutputThreshold OutputThreshold { get; set; }
             public class DescribeAllRootVariableResponseBodyResultObjectOutputThreshold : TeaModel {
                 /// <summary>
-                /// <para>Maximum value</para>
+                /// <para>The maximum value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public double? MaxValue { get; set; }
 
                 /// <summary>
-                /// <para>Minimum value.</para>
+                /// <para>The minimum value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Data source</para>
+            /// <para>The data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAF</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>Title.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>年龄</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>Variable type.</para>
+            /// <para>The variable type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NATIVE</para>

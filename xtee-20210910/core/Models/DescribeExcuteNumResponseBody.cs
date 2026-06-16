@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public List<string> Categories { get; set; }
 
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>Response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]

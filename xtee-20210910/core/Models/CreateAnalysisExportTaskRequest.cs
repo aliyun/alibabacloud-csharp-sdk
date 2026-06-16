@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateAnalysisExportTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for the request and response messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Custom columns</para>
+        /// <para>The custom columns.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Columns { get; set; }
 
         /// <summary>
-        /// <para>Query expression</para>
+        /// <para>The query expression.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Conditions { get; set; }
 
         /// <summary>
-        /// <para>Start time, accurate to milliseconds (ms).</para>
+        /// <para>The start time, in milliseconds (ms).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EventBeginTime { get; set; }
 
         /// <summary>
-        /// <para>Event code.</para>
+        /// <para>The event code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCodes { get; set; }
 
         /// <summary>
-        /// <para>End time, accurate to milliseconds (ms).</para>
+        /// <para>The end time, in milliseconds (ms).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? EventEndTime { get; set; }
 
         /// <summary>
-        /// <para>Field name</para>
+        /// <para>The field name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FieldName { get; set; }
 
         /// <summary>
-        /// <para>Field value</para>
+        /// <para>The field value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FieldValue { get; set; }
 
         /// <summary>
-        /// <para>File format, Excel, CSV</para>
+        /// <para>The file format. Valid values: Excel and CSV.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FileFormat { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +159,11 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Export scope: ALL: All, SELECT: Selected rows</para>
+        /// <para>The export scope. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ALL: all data</description></item>
+        /// <item><description>SELECT: selected rows.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -170,7 +174,12 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</para>
+        /// <para>The query type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>BASIC: basic query</description></item>
+        /// <item><description>ADVANCE: advanced query</description></item>
+        /// <item><description>BATCH: batch query.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

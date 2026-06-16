@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeExpressionVariablePageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, with a default value of 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeExpressionVariablePageResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeExpressionVariablePageResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Description information.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>变量描述</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Event name.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册风险</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1565701886000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Primary key of custom variable.</para>
+            /// <para>The primary key of the custom variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2793</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Query variable name.</para>
+            /// <para>The variable name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ex_OERlw0Zqfb23</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Variable return type.</para>
+            /// <para>The variable return type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DOUBLE</para>
@@ -107,14 +107,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Outputs { get; set; }
 
             /// <summary>
-            /// <para>Associated Strategies.</para>
+            /// <para>The rule ID of the associated policy.</para>
             /// </summary>
             [NameInMap("ruleList")]
             [Validation(Required=false)]
             public List<string> RuleList { get; set; }
 
             /// <summary>
-            /// <para>Status.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ENABLE</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Title.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>获取手机号前7位自定义变量</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>Version information.</para>
+            /// <para>The version information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>

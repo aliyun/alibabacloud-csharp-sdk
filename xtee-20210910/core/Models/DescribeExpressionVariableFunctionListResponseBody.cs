@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeExpressionVariableFunctionListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6E8817D5-5354-5953-84B1-D98379F036DC</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeExpressionVariableFunctionListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeExpressionVariableFunctionListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Description information.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>描述</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Function name</para>
+            /// <para>The function name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>concat</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Maximum number of parameters</para>
+            /// <para>The maximum number of input parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? MaxParamSize { get; set; }
 
             /// <summary>
-            /// <para>Minimum number of parameters</para>
+            /// <para>The minimum number of input parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? MinParamSize { get; set; }
 
             /// <summary>
-            /// <para>Parameter types</para>
+            /// <para>The input parameter types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>*STRING</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ParamTypes { get; set; }
 
             /// <summary>
-            /// <para>Whether it is directly invoked</para>
+            /// <para>Indicates whether the function is directly invoked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? Redirect { get; set; }
 
             /// <summary>
-            /// <para>Method return types</para>
+            /// <para>The return type of the method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRING</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ReturnTypes { get; set; }
 
             /// <summary>
-            /// <para>Function value</para>
+            /// <para>The function value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>concat</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class UpdateAuditRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Approval comments</para>
+        /// <para>The approval comment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>同意</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string AuditMsg { get; set; }
 
         /// <summary>
-        /// <para>Associated type</para>
+        /// <para>The association type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RULE</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string AuditRelationType { get; set; }
 
         /// <summary>
-        /// <para>Status</para>
+        /// <para>The approval status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AGREE</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string AuditStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the approval to be updated.</para>
+        /// <para>The ID of the approval to update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>376773</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

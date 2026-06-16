@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAdvanceSearchLeftVariableListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeAdvanceSearchLeftVariableListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeAdvanceSearchLeftVariableListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Variable code</para>
+            /// <para>The variable code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>年龄描述</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Display type and grouping label</para>
+            /// <para>The display type and group label.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NATIVE</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DisplayType { get; set; }
 
             /// <summary>
-            /// <para>Variable return value type</para>
+            /// <para>The return value type of the variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRING</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? FieldRank { get; set; }
 
             /// <summary>
-            /// <para>Field table sorting</para>
+            /// <para>The field table sorting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string FieldType { get; set; }
 
             /// <summary>
-            /// <para>Primary key ID</para>
+            /// <para>The primary key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2453</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Variable name</para>
+            /// <para>The variable name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Parent node</para>
+            /// <para>The parent node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>name</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ParentName { get; set; }
 
             /// <summary>
-            /// <para>Data source</para>
+            /// <para>The data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SAF</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>Title.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>年龄</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>Variable type</para>
+            /// <para>The variable type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NATIVE</para>

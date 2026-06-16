@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>Response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DownloadFileUrl { get; set; }
 
             /// <summary>
-            /// <para>Download execution time</para>
+            /// <para>Download execution time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753891199000</para>

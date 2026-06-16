@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateSampleDataRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Description.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>描述</para>
@@ -34,7 +34,12 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Encryption type</para>
+        /// <para>The encryption type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALL</b>: all encryption</description></item>
+        /// <item><description><b>LABEL</b>: label encryption</description></item>
+        /// <item><description><b>NONE</b>: no encryption.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>LABEL</para>
@@ -44,7 +49,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EncryptType { get; set; }
 
         /// <summary>
-        /// <para>Name</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>注册样本</para>
@@ -54,7 +59,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -64,7 +69,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Specified risk value</para>
+        /// <para>The specified risk value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>black</para>
@@ -74,7 +79,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RiskValue { get; set; }
 
         /// <summary>
-        /// <para>Scene</para>
+        /// <para>The scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PHONE</para>
@@ -84,7 +89,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Scene { get; set; }
 
         /// <summary>
-        /// <para>Storage path</para>
+        /// <para>The storage path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>saf/de/sample/3dc2spspHKq4G3YI9d08</para>
@@ -94,7 +99,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string StorePath { get; set; }
 
         /// <summary>
-        /// <para>Storage type</para>
+        /// <para>The storage type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS</para>

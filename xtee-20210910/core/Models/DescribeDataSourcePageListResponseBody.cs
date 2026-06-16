@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeDataSourcePageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeDataSourcePageListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeDataSourcePageListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Creator of the data source.</para>
+            /// <para>The creator of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Data source description.</para>
+            /// <para>The description of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>描述</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Time when the data source was created.</para>
+            /// <para>The time when the data source was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Time when the data source was last modified.</para>
+            /// <para>The time when the data source was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1565701886000</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Data source ID.</para>
+            /// <para>The data source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>497</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Last modifier.</para>
+            /// <para>The user who last modified the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxx</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// <para>Data source name.</para>
+            /// <para>The data source name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>data_source</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Total pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Total { get; set; }
 
             /// <summary>
-            /// <para>Data source type.</para>
+            /// <para>The data source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FILE</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total pages</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>

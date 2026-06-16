@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values: </para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Rule ID.</para>
+        /// <para>The rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5178</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? ConsoleRuleId { get; set; }
 
         /// <summary>
-        /// <para>Creation type</para>
+        /// <para>The creation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CreateType { get; set; }
 
         /// <summary>
-        /// <para>Event code</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_acytyt7036</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>Event name.</para>
+        /// <para>The event name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>登录事件</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>Policy expression execution logic</para>
+        /// <para>The execution logic of the policy expression.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1&amp;2</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string LogicExpression { get; set; }
 
         /// <summary>
-        /// <para>Memo</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>描述信息</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Memo { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Policy execution output action</para>
+        /// <para>The output actions of the policy execution.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;inputs&quot;:[&quot;123&quot;],&quot;name&quot;:&quot;<b>addDeTags</b>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;},{&quot;inputs&quot;:[&quot;123&quot;],&quot;name&quot;:&quot;<b>addDeScore</b>&quot;,&quot;actionType&quot;:&quot;SCORE&quot;,&quot;outputType&quot;:&quot;const&quot;,&quot;inputTitle&quot;:&quot;123&quot;},{&quot;actionType&quot;:&quot;MIDDLE_VARIABLE&quot;,&quot;fieldValue&quot;:&quot;123&quot;,&quot;inputs&quot;:[&quot;mid1&quot;]},{&quot;actionType&quot;:&quot;VARIABLE&quot;,&quot;inputs&quot;:[&quot;gg&quot;],&quot;name&quot;:&quot;mid1&quot;}]</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleActions { get; set; }
 
         /// <summary>
-        /// <para>DSL policy execution logic</para>
+        /// <para>The DSL policy execution logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;elseIfStatement&quot;:[],&quot;elseStatement&quot;:{},&quot;ifStatement&quot;:{&quot;condition&quot;:{&quot;currentId&quot;:0,&quot;deepCount&quot;:1,&quot;list&quot;:[{&quot;currentId&quot;:0,&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;code&quot;:&quot;deFunctionProcess(ip,\&quot;isIp\&quot;)&quot;,&quot;description&quot;:&quot;判断是否符合IPv4标准&quot;,&quot;displayType&quot;:&quot;SYSTEM_BIND&quot;,&quot;fieldType&quot;:&quot;BOOLEAN&quot;,&quot;functionCode&quot;:&quot;&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;hasRightVariable&quot;:false,&quot;name&quot;:&quot;<b>isIpAddressV4</b>&quot;,&quot;outputThreshold&quot;:{},&quot;sourceType&quot;:&quot;SAF&quot;,&quot;title&quot;:&quot;IP是否符合IPV4格式&quot;,&quot;type&quot;:&quot;SYSTEM_BIND&quot;},&quot;operatorCode&quot;:&quot;boolIsFalse&quot;,&quot;operatorName&quot;:&quot;为false&quot;,&quot;parentId&quot;:0,&quot;sequence&quot;:1}],&quot;parentId&quot;:0,&quot;relationship&quot;:&quot;and&quot;},&quot;then&quot;:[{&quot;inputs&quot;:[&quot;123&quot;],&quot;name&quot;:&quot;<b>addDeTags</b>&quot;,&quot;actionType&quot;:&quot;TAG&quot;,&quot;outputType&quot;:&quot;const&quot;}]}}</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleBody { get; set; }
 
         /// <summary>
-        /// <para>Policy expression</para>
+        /// <para>The policy expressions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;expressionName&quot;:&quot;cc&quot;,&quot;itemId&quot;:1,&quot;left&quot;:{&quot;name&quot;:&quot;<b>ipLocationCityCode</b>&quot;},&quot;operatorCode&quot;:&quot;equals&quot;,&quot;operatorName&quot;:&quot;等于&quot;,&quot;right&quot;:{&quot;fieldValue&quot;:&quot;a&quot;}}]</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleExpressions { get; set; }
 
         /// <summary>
-        /// <para>Policy name</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>注册手机号是11位数字</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Policy status</para>
+        /// <para>The policy status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DRAFT</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleStatus { get; set; }
 
         /// <summary>
-        /// <para>Policy type</para>
+        /// <para>The policy type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DRAFT</para>

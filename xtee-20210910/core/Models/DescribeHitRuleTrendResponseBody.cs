@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeHitRuleTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error details</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The input parameter data is not valid. order_storage_company_num component not found</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -50,28 +50,28 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Response object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeHitRuleTrendResponseBodyResultObject ResultObject { get; set; }
         public class DescribeHitRuleTrendResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Chart data</para>
+            /// <para>The chart data.</para>
             /// </summary>
             [NameInMap("series")]
             [Validation(Required=false)]
             public List<DescribeHitRuleTrendResponseBodyResultObjectSeries> Series { get; set; }
             public class DescribeHitRuleTrendResponseBodyResultObjectSeries : TeaModel {
                 /// <summary>
-                /// <para>Returned data object</para>
+                /// <para>The returned data object.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<DescribeHitRuleTrendResponseBodyResultObjectSeriesData> Data { get; set; }
                 public class DescribeHitRuleTrendResponseBodyResultObjectSeriesData : TeaModel {
                     /// <summary>
-                    /// <para>Number</para>
+                    /// <para>The quantity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public long? Num { get; set; }
 
                     /// <summary>
-                    /// <para>Scale</para>
+                    /// <para>The ratio.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10.00%</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Display title</para>
+                /// <para>The display title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>策略name</para>
@@ -105,14 +105,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>X-axis data</para>
+            /// <para>The x-axis data.</para>
             /// </summary>
             [NameInMap("xaxis")]
             [Validation(Required=false)]
             public DescribeHitRuleTrendResponseBodyResultObjectXaxis Xaxis { get; set; }
             public class DescribeHitRuleTrendResponseBodyResultObjectXaxis : TeaModel {
                 /// <summary>
-                /// <para>Returned data object</para>
+                /// <para>The returned data object.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful, where true means success.</para>
+        /// <para>Indicates whether the operation was successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

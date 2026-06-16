@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeOperationLogPageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeOperationLogPageListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeOperationLogPageListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Client IP.</para>
+            /// <para>The client IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100.68.***.166</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Content after operation</para>
+            /// <para>The content after the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@selfvariable_02</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string NewContent { get; set; }
 
             /// <summary>
-            /// <para>Content before operation</para>
+            /// <para>The content before the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>@selfvariable_02 + 1001</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string OldContent { get; set; }
 
             /// <summary>
-            /// <para>Operation summary</para>
+            /// <para>The brief description of the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>更新事件:决策引擎可观测性持续建设_事件A(de_afghcf6411)</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string OperationSummary { get; set; }
 
             /// <summary>
-            /// <para>Operation type.</para>
+            /// <para>The operation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE_EVENT</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string OperationType { get; set; }
 
             /// <summary>
-            /// <para>Operator</para>
+            /// <para>The operator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSafStartStepsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeSafStartStepsResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeSafStartStepsResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Step content</para>
+            /// <para>The step content.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://help.aliyun.com/document_detail/177689.html">https://help.aliyun.com/document_detail/177689.html</a></para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Step title</para>
+            /// <para>The step title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ios</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Type</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>URL</para>

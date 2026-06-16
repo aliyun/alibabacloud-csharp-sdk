@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSceneAllEventNameCodeListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error details</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The input parameter data is not valid. order_storage_company_num component not found</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, which is unique for each request, facilitating subsequent troubleshooting</para>
+        /// <para>The request ID. Each request has a unique ID for troubleshooting purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeSceneAllEventNameCodeListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeSceneAllEventNameCodeListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Child objects</para>
+            /// <para>The child class objects.</para>
             /// </summary>
             [NameInMap("children")]
             [Validation(Required=false)]
             public List<DescribeSceneAllEventNameCodeListResponseBodyResultObjectChildren> Children { get; set; }
             public class DescribeSceneAllEventNameCodeListResponseBodyResultObjectChildren : TeaModel {
                 /// <summary>
-                /// <para>Creation type</para>
+                /// <para>The creation type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string CreateType { get; set; }
 
                 /// <summary>
-                /// <para>Event code</para>
+                /// <para>The event code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>de_aamexg3015</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string EventCode { get; set; }
 
                 /// <summary>
-                /// <para>Event name.</para>
+                /// <para>The event name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>测试</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string EventName { get; set; }
 
                 /// <summary>
-                /// <para>Event type</para>
+                /// <para>The event type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BYPASS</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Creation type</para>
+            /// <para>The creation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MORMAL</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string CreateType { get; set; }
 
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Event name.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>营销风险识别_增强版</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>Event type</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAIN</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful, where true means success.</para>
+        /// <para>Indicates whether the operation was successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

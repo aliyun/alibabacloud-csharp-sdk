@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class RecallRuleAuditRequest : TeaModel {
         /// <summary>
-        /// <para>Primary key ID</para>
+        /// <para>The primary key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region encoding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

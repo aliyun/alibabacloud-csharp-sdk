@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeScoreSectionNumLineChartResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeScoreSectionNumLineChartResponseBodyResultObject ResultObject { get; set; }
         public class DescribeScoreSectionNumLineChartResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Data list</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("series")]
             [Validation(Required=false)]
             public List<DescribeScoreSectionNumLineChartResponseBodyResultObjectSeries> Series { get; set; }
             public class DescribeScoreSectionNumLineChartResponseBodyResultObjectSeries : TeaModel {
                 /// <summary>
-                /// <para>List of current category results.</para>
+                /// <para>The result list for the current category.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<string> Data { get; set; }
 
                 /// <summary>
-                /// <para>Category name.</para>
+                /// <para>The category name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>旁路事件</para>
@@ -53,14 +53,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Details of xaxis node.</para>
+            /// <para>The xaxis node details.</para>
             /// </summary>
             [NameInMap("xaxis")]
             [Validation(Required=false)]
             public DescribeScoreSectionNumLineChartResponseBodyResultObjectXaxis Xaxis { get; set; }
             public class DescribeScoreSectionNumLineChartResponseBodyResultObjectXaxis : TeaModel {
                 /// <summary>
-                /// <para>Data structure.</para>
+                /// <para>The data structure.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]

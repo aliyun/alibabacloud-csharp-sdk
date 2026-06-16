@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeScoreSectionPieChartResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeScoreSectionPieChartResponseBodyResultObject ResultObject { get; set; }
         public class DescribeScoreSectionPieChartResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Chart field, default true</para>
+            /// <para>The chart field. Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? Animation { get; set; }
 
             /// <summary>
-            /// <para>Belongs to grid.</para>
+            /// <para>The grid.</para>
             /// </summary>
             [NameInMap("grid")]
             [Validation(Required=false)]
             public DescribeScoreSectionPieChartResponseBodyResultObjectGrid Grid { get; set; }
             public class DescribeScoreSectionPieChartResponseBodyResultObjectGrid : TeaModel {
                 /// <summary>
-                /// <para>Chart field, default false</para>
+                /// <para>The chart field. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -56,21 +56,21 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Data list</para>
+            /// <para>The data list.</para>
             /// </summary>
             [NameInMap("series")]
             [Validation(Required=false)]
             public List<DescribeScoreSectionPieChartResponseBodyResultObjectSeries> Series { get; set; }
             public class DescribeScoreSectionPieChartResponseBodyResultObjectSeries : TeaModel {
                 /// <summary>
-                /// <para>Chart data list</para>
+                /// <para>The chart data list.</para>
                 /// </summary>
                 [NameInMap("data")]
                 [Validation(Required=false)]
                 public List<DescribeScoreSectionPieChartResponseBodyResultObjectSeriesData> Data { get; set; }
                 public class DescribeScoreSectionPieChartResponseBodyResultObjectSeriesData : TeaModel {
                     /// <summary>
-                    /// <para>Category item name.</para>
+                    /// <para>The category item name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>名称</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Result value.</para>
+                    /// <para>The result value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 }
 
                 /// <summary>
-                /// <para>Category name.</para>
+                /// <para>The category name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>分值区间占比</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Chart field, default false</para>
+                /// <para>The chart field. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>

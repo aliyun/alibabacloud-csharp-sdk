@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeTaskLogListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page, default value is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeTaskLogListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeTaskLogListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Completion time, in milliseconds.</para>
+            /// <para>The completion time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753804800000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? CompletionTime { get; set; }
 
             /// <summary>
-            /// <para>Task creation time.</para>
+            /// <para>The time when the task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753804800000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Log ID.</para>
+            /// <para>The log ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2793</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Remark.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>备注</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>Scene name</para>
+            /// <para>The scenario name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>coupon_abuse_detection</para>
@@ -97,9 +97,9 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SceneName { get; set; }
 
             /// <summary>
-            /// <para>Status.</para>
-            /// <para>0: Deleted
-            /// 1: Normal</para>
+            /// <para>The status. Valid values:</para>
+            /// <para>0: deleted
+            /// 1: Normal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,10 +109,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Task type</para>
-            /// <para>1: Data upload
-            /// 2: Supplemental upload
-            /// 3: Labeling</para>
+            /// <para>The task type. Valid values:</para>
+            /// <para>1: data upload
+            /// 2: supplementary upload
+            /// 3: labeling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

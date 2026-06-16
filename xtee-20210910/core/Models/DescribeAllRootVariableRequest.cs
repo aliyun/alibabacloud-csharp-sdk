@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeAllRootVariableRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for requests and received messages, default value is <b>zh</b>. Values: </para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Request source IP. No need to fill in, the system will automatically obtain it.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61.169.104.202</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>Device variable list</para>
+        /// <para>The list of device variables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[180]</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string DeviceVariableIds { get; set; }
 
         /// <summary>
-        /// <para>Event code</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_arqbuy7206</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>Custom variable list</para>
+        /// <para>The list of custom variables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[6780]</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ExpressionVariableIds { get; set; }
 
         /// <summary>
-        /// <para>Variable ID.</para>
+        /// <para>The variable ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2557</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Event field list</para>
+        /// <para>The list of event fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[106780]</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string NativeVariableIds { get; set; }
 
         /// <summary>
-        /// <para>Custom query variable</para>
+        /// <para>The custom query variables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[2678]</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string QueryVariableIds { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Custom cumulative variable</para>
+        /// <para>The custom cumulative variables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[780]</para>

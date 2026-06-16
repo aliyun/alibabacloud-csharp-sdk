@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeEventVariableTemplateBindRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages. Default value is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Input parameters, separated by commas if multiple.</para>
+        /// <para>The input parameters. Separate multiple values with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Inputs { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Template code.</para>
+        /// <para>The template code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>register</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string TemplateCode { get; set; }
 
         /// <summary>
-        /// <para>Type</para>
+        /// <para>The type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

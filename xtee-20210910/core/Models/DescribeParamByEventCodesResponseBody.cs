@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeParamByEventCodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeParamByEventCodesResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeParamByEventCodesResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Return code.</para>
+            /// <para>The return code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Name</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>年龄</para>

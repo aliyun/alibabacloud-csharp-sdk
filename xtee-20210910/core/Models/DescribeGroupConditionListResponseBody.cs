@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeGroupConditionListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeGroupConditionListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeGroupConditionListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Field key</para>
+            /// <para>fieldKey</para>
             /// 
             /// <b>Example:</b>
             /// <para>key</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string FieldKey { get; set; }
 
             /// <summary>
-            /// <para>Field value.</para>
+            /// <para>The field value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>value</para>

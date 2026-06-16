@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateSampleRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values: </para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>OSS client uploaded file name</para>
+        /// <para>The name of the file uploaded by the OSS client.</para>
         /// 
         /// <b>Example:</b>
         /// <para>样本文件.csv</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ClientFileName { get; set; }
 
         /// <summary>
-        /// <para>OSS client address</para>
+        /// <para>The OSS client address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sample/path</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ClientPath { get; set; }
 
         /// <summary>
-        /// <para>File type</para>
+        /// <para>The file type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CSV</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Sample tag</para>
+        /// <para>The label of the data sample.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm0102</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SampleTag { get; set; }
 
         /// <summary>
-        /// <para>Sample type</para>
+        /// <para>The type of the data sample.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PHONE</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SampleType { get; set; }
 
         /// <summary>
-        /// <para>Sample values</para>
+        /// <para>The values of the data sample.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1777000000,1777000001</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SampleValues { get; set; }
 
         /// <summary>
-        /// <para>Upload type</para>
+        /// <para>The upload type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ANNEX</para>

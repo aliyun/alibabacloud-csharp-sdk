@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeFieldPageRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for request and response messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Field classification</para>
+        /// <para>The field classification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>REQUEST_PARAM</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Classify { get; set; }
 
         /// <summary>
-        /// <para>Query input parameter name or title</para>
+        /// <para>The query parameter: name or title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age/年龄</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Field name</para>
+        /// <para>The field name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page, default value is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Field source</para>
+        /// <para>The field source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEFINE</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Status.</para>
+        /// <para>The status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENABLE</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Title.</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>年龄</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>Field type</para>
+        /// <para>The field type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STRING</para>

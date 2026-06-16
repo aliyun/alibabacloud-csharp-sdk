@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSampleUploadPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>OSS access key ID.</para>
+        /// <para>ossaccesskeyid。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAxxxxxxxxxxxx</para>
+        /// <para>LTAI5t9k9MsS9TipR9yW5urk</para>
         /// </summary>
         [NameInMap("AccessId")]
         [Validation(Required=false)]
         public string AccessId { get; set; }
 
         /// <summary>
-        /// <para>OSS domain name.</para>
+        /// <para>The OSS domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emseu.cxy8uoq4aafx.eu-central-1.rds.amazonaws.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>The key of OSS upload policy.</para>
+        /// <para>The key of the OSS upload policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>saf/de/namelist/e924/ufzgsedX9bd3a7</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>OSS upload policy.</para>
+        /// <para>The OSS upload policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJleHBpcmF0aW9uIjoiMjAyNS0wNy0zMFQwNjowNTo0OS45NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJlcSIsIiRrZXkiLCJzYWZcL2RlXC9uYW1lbGlzdFwvZTkyNFwvdWZ6Z3NlZFg5Ymxxxxxxxxxxx</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Signature information.</para>
+        /// <para>The signature information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3Es5j/9Xm/zwPcM9cwEr5pa0Wsc=</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Signature { get; set; }
 
         /// <summary>
-        /// <para>Temporary identity credential.</para>
+        /// <para>The temporary identity credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tT44bMQxxxxxxxxxxxxxxx</para>

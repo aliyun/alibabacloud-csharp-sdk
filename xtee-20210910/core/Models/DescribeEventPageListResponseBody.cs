@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeEventPageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, with a default value of 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeEventPageListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeEventPageListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Object</para>
+            /// <para>The object.</para>
             /// </summary>
             [NameInMap("children")]
             [Validation(Required=false)]
             public List<DescribeEventPageListResponseBodyResultObjectChildren> Children { get; set; }
             public class DescribeEventPageListResponseBodyResultObjectChildren : TeaModel {
                 /// <summary>
-                /// <para>Event code.</para>
+                /// <para>The event code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>de_aamexg3015</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string EventCode { get; set; }
 
                 /// <summary>
-                /// <para>Event name.</para>
+                /// <para>The event name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>测试</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string EventName { get; set; }
 
                 /// <summary>
-                /// <para>Event status.</para>
+                /// <para>The event status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ONLINE</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string EventStatus { get; set; }
 
                 /// <summary>
-                /// <para>Event type.</para>
+                /// <para>The event type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>BYPASS</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string EventType { get; set; }
 
                 /// <summary>
-                /// <para>Creation time.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1621578648000</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Modification time</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1621578648000</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>334</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Total number of rules.</para>
+                /// <para>The total number of rules.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Event name.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册风险</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>Event status.</para>
+            /// <para>The event status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ONLINE</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventStatus { get; set; }
 
             /// <summary>
-            /// <para>Event type.</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAIN</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1565701886000</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Database ID.</para>
+            /// <para>The database ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>497</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Total number of rules.</para>
+            /// <para>The total number of rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? RuleCount { get; set; }
 
             /// <summary>
-            /// <para>Template code</para>
+            /// <para>The template code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>register</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TemplateCode { get; set; }
 
             /// <summary>
-            /// <para>Template name.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册模版</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>Template type</para>
+            /// <para>The template type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UNIVERSAL</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TemplateType { get; set; }
 
             /// <summary>
-            /// <para>Number of customer authorizations</para>
+            /// <para>The number of authorized users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>

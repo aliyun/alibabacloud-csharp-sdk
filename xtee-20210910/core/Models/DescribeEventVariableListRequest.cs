@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeEventVariableListRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. The values are: - <b>zh</b>: Chinese - <b>en</b>: English</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Create Type.</para>
+        /// <para>The creation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CreateType { get; set; }
 
         /// <summary>
-        /// <para>Filter object.</para>
+        /// <para>The filter object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string FilterDTO { get; set; }
 
         /// <summary>
-        /// <para>Associated event eventCode.</para>
+        /// <para>The associated event code (eventCode).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RefObjId { get; set; }
 
         /// <summary>
-        /// <para>Association Type.</para>
+        /// <para>The association type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RefObjType { get; set; }
 
         /// <summary>
-        /// <para>Region Code.</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>type.</para>
+        /// <para>The type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NATIVE</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class ModifyRuleStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Set the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>UID of the applicant.</para>
+        /// <para>The UID of the user who initiated the approval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1519714049632764</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ApplyUserId { get; set; }
 
         /// <summary>
-        /// <para>Name of the applicant.</para>
+        /// <para>The name of the user who initiated the approval.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ApplyUserName { get; set; }
 
         /// <summary>
-        /// <para>Approval remarks.</para>
+        /// <para>The remarks for the approval request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>申请发布上线</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string AuditRemark { get; set; }
 
         /// <summary>
-        /// <para>UID of the auditor.</para>
+        /// <para>The UID of the approver.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1519714049632764</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string AuditUserId { get; set; }
 
         /// <summary>
-        /// <para>Name of the auditor.</para>
+        /// <para>The name of the approver.</para>
         /// 
         /// <b>Example:</b>
         /// <para>root</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string AuditUserName { get; set; }
 
         /// <summary>
-        /// <para>Primary key ID of the policy.</para>
+        /// <para>The primary key ID of the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6843</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? ConsoleRuleId { get; set; }
 
         /// <summary>
-        /// <para>Event type.</para>
+        /// <para>The event type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MAIN</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>Region code.</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Audit status.</para>
+        /// <para>The approval status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DRAFT_TO_RUNNING</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleAuditType { get; set; }
 
         /// <summary>
-        /// <para>Policy ID.</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101544</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>Primary key ID of the policy version.</para>
+        /// <para>The primary key ID of the policy version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11519</para>

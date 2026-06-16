@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeQueryVariableDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeQueryVariableDetailResponseBodyResultObject ResultObject { get; set; }
         public class DescribeQueryVariableDetailResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Data source code.</para>
+            /// <para>The data source code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds_vcaoii1697</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? DataSourceCode { get; set; }
 
             /// <summary>
-            /// <para>Data source name</para>
+            /// <para>The data source name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>名称数据源</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DataSourceName { get; set; }
 
             /// <summary>
-            /// <para>Description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>变量描述</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Expression.</para>
+            /// <para>The expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT  AVG( $source )\nFROM ds_vcaoii1697 \nWHERE  $age &gt; 0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Expression { get; set; }
 
             /// <summary>
-            /// <para>Expression title.</para>
+            /// <para>The expression name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SELECT  AVG( $source )\nFROM testCase\nWHERE  $age &gt; 0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ExpressionTitle { get; set; }
 
             /// <summary>
-            /// <para>Expression variable.</para>
+            /// <para>The expression variable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[96426]</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ExpressionVariable { get; set; }
 
             /// <summary>
-            /// <para>Variable ID</para>
+            /// <para>The variable ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>355</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Outlier</para>
+            /// <para>The outlier value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Outlier { get; set; }
 
             /// <summary>
-            /// <para>Output results.</para>
+            /// <para>The output result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DOUBLE</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Outputs { get; set; }
 
             /// <summary>
-            /// <para>Title.</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>自定义查询变量标题</para>

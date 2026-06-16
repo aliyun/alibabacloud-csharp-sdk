@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSampleInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeSampleInfoResponseBodyResultObject ResultObject { get; set; }
         public class DescribeSampleInfoResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Primary key ID</para>
+            /// <para>The primary key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3144</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Sample tags.</para>
+            /// <para>The sample tags.</para>
             /// 
             /// <b>Example:</b>
             /// <para>em0102</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleTags { get; set; }
 
             /// <summary>
-            /// <para>Sample type</para>
+            /// <para>The data sample type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PHONE</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleType { get; set; }
 
             /// <summary>
-            /// <para>Sample value.</para>
+            /// <para>The sample value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17700000000</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SampleValue { get; set; }
 
             /// <summary>
-            /// <para>Update time.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1753804800000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>Version number.</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DownloadSubTaskResultRequest : TeaModel {
         /// <summary>
+        /// <para>Language of error messages returned by the API. Valid values: zh: Chinese. en: English. Default value: en.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>area encoding.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
+        /// <para>Subtask ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

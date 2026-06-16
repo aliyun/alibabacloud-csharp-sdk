@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeOperatorListBySceneResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeOperatorListBySceneResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeOperatorListBySceneResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Return value type</para>
+            /// <para>The return value type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STRING</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string FieldType { get; set; }
 
             /// <summary>
-            /// <para>Operator list</para>
+            /// <para>The operator list.</para>
             /// </summary>
             [NameInMap("operators")]
             [Validation(Required=false)]
             public List<DescribeOperatorListBySceneResponseBodyResultObjectOperators> Operators { get; set; }
             public class DescribeOperatorListBySceneResponseBodyResultObjectOperators : TeaModel {
                 /// <summary>
-                /// <para>Operator code</para>
+                /// <para>The operator code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>equals</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Whether it contains a right variable</para>
+                /// <para>Indicates whether the operator has a right variable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public bool? HasRightVariable { get; set; }
 
                 /// <summary>
-                /// <para>Description</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>等于</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Memo { get; set; }
 
                 /// <summary>
-                /// <para>Operator name</para>
+                /// <para>The operator name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>等于</para>
@@ -84,14 +84,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Right variable object</para>
+                /// <para>The right variable object.</para>
                 /// </summary>
                 [NameInMap("rightVariables")]
                 [Validation(Required=false)]
                 public List<DescribeOperatorListBySceneResponseBodyResultObjectOperatorsRightVariables> RightVariables { get; set; }
                 public class DescribeOperatorListBySceneResponseBodyResultObjectOperatorsRightVariables : TeaModel {
                     /// <summary>
-                    /// <para>Field name.</para>
+                    /// <para>The field name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>年龄</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public string FieldName { get; set; }
 
                     /// <summary>
-                    /// <para>Field type.</para>
+                    /// <para>The field type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>INT</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                     public string FieldType { get; set; }
 
                     /// <summary>
-                    /// <para>Field value.</para>
+                    /// <para>The field value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>

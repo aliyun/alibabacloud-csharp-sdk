@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class ListSampleRequest : TeaModel {
         /// <summary>
+        /// <para>Current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>Language of error messages returned by the API. Valid values: zh: Chinese. en: English. Default value: en.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Area code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
+        /// <para>Sample name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SampleTest</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SampleName { get; set; }
 
         /// <summary>
+        /// <para>Scenario.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FINANCE</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Tab { get; set; }
 
         /// <summary>
+        /// <para>Access type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SAF_CONSOLE</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>Upload end time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-03-09 14:45:26</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string UploadTimeEnd { get; set; }
 
         /// <summary>
+        /// <para>Upload start time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2023-03-09 14:45:23</para>
         /// </summary>

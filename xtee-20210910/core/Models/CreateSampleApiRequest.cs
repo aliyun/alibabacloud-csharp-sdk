@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateSampleApiRequest : TeaModel {
         /// <summary>
-        /// <para>Same as input parameter</para>
+        /// <para>Same as the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip/accountID</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>Specific data value</para>
+        /// <para>The specific data value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>同参数</para>
@@ -30,10 +30,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string DataValue { get; set; }
 
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>regionId</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Sample batch type</para>
+        /// <para>The sample batch type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>白名单/黑名单/混合</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SampleBatchType { get; set; }
 
         /// <summary>
-        /// <para>Service list.</para>
+        /// <para>The list of services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>同参数</para>

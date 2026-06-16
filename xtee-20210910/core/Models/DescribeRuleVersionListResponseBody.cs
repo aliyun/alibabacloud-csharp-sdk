@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeRuleVersionListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, default value is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -40,21 +40,21 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeRuleVersionListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeRuleVersionListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Audit object</para>
+            /// <para>The approval object.</para>
             /// </summary>
             [NameInMap("consoleAudit")]
             [Validation(Required=false)]
             public DescribeRuleVersionListResponseBodyResultObjectConsoleAudit ConsoleAudit { get; set; }
             public class DescribeRuleVersionListResponseBodyResultObjectConsoleAudit : TeaModel {
                 /// <summary>
-                /// <para>Initiator UID</para>
+                /// <para>The UID of the applicant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1519714049632764</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ApplyUserId { get; set; }
 
                 /// <summary>
-                /// <para>Initiator name</para>
+                /// <para>The name of the applicant.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>root</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string ApplyUserName { get; set; }
 
                 /// <summary>
-                /// <para>Approval comment</para>
+                /// <para>The approval comment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>同意</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string AuditMsg { get; set; }
 
                 /// <summary>
-                /// <para>Final approver UID</para>
+                /// <para>The UID of the final approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1519714049632764</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string AuditRealUserId { get; set; }
 
                 /// <summary>
-                /// <para>Final approver name</para>
+                /// <para>The name of the final approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>root</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string AuditRealUserName { get; set; }
 
                 /// <summary>
-                /// <para>Approver\&quot;s remarks.</para>
+                /// <para>The remark of the approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>备注</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string AuditRemark { get; set; }
 
                 /// <summary>
-                /// <para>Approval status</para>
+                /// <para>The approval status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AGREE</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string AuditStatus { get; set; }
 
                 /// <summary>
-                /// <para>Approval time.</para>
+                /// <para>The approval time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1545726028000</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? AuditTime { get; set; }
 
                 /// <summary>
-                /// <para>Designated approver UID</para>
+                /// <para>The UID of the designated approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1519714049632764</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string AuditUserId { get; set; }
 
                 /// <summary>
-                /// <para>Designated auditor\&quot;s name</para>
+                /// <para>The name of the designated approver.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>root</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string AuditUserName { get; set; }
 
                 /// <summary>
-                /// <para>Creation time.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1545726028000</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1728</para>
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Information of related others (in JSON format)</para>
+                /// <para>The information about other related persons in JSON format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string RelationExt { get; set; }
 
                 /// <summary>
-                /// <para>ID of the associated transaction</para>
+                /// <para>The transaction ID associated with the approval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? RelationId { get; set; }
 
                 /// <summary>
-                /// <para>Name of the associated item</para>
+                /// <para>The name associated with the approval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>营销风险识别</para>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string RelationName { get; set; }
 
                 /// <summary>
-                /// <para>Type of approval (e.g., <c>rule</c> for policy approval)</para>
+                /// <para>The type of the approval. For example, rule indicates a policy approval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RULE</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             }
 
             /// <summary>
-            /// <para>Console rule ID.</para>
+            /// <para>The console rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6715</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? ConsoleRuleId { get; set; }
 
             /// <summary>
-            /// <para>Associated policy remarks</para>
+            /// <para>The remark of the associated policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>备注</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ConsoleRuleMemo { get; set; }
 
             /// <summary>
-            /// <para>Associated policy name</para>
+            /// <para>The Policy Name of the associated policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>营销风险识别</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ConsoleRuleName { get; set; }
 
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Event type</para>
+            /// <para>The event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAIN</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1621578648000</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1565701886000</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Primary key ID of the policy</para>
+            /// <para>The primary key ID of the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>376773</para>
@@ -296,7 +296,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The user who last operated.</para>
+            /// <para>The user who last performed an operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1519714049632764</para>
@@ -306,7 +306,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string LastOperator { get; set; }
 
             /// <summary>
-            /// <para>Policy priority, the higher the number, the higher the priority.</para>
+            /// <para>The policy priority. A larger value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -316,7 +316,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? Priority { get; set; }
 
             /// <summary>
-            /// <para>Policy ID</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102224</para>
@@ -326,7 +326,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>Policy status</para>
+            /// <para>The policy status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
@@ -336,7 +336,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RuleStatus { get; set; }
 
             /// <summary>
-            /// <para>Rule Type</para>
+            /// <para>The policy type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT</para>
@@ -346,7 +346,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string RuleType { get; set; }
 
             /// <summary>
-            /// <para>Version number</para>
+            /// <para>The version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -358,7 +358,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -368,7 +368,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

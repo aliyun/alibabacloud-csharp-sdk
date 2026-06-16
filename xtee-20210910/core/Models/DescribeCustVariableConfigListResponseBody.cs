@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeCustVariableConfigListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeCustVariableConfigListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeCustVariableConfigListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Configuration key</para>
+            /// <para>The key of the configuration item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COUNT</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ConfigKey { get; set; }
 
             /// <summary>
-            /// <para>Configuration value</para>
+            /// <para>The value of the configuration item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>累计</para>

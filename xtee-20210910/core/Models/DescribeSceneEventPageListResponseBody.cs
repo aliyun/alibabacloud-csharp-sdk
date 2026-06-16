@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSceneEventPageListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page. Default value: 20, minimum value: 1, maximum value: 50.</para>
+        /// <para>The number of entries per page in the response. Default value: 20. Minimum value: 1. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID, each request has a unique value, which facilitates subsequent troubleshooting</para>
+        /// <para>The request ID. Each request has a unique ID for troubleshooting purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return array</para>
+        /// <para>The returned array.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeSceneEventPageListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeSceneEventPageListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Number of common rules</para>
+            /// <para>The number of General Policy rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string CommonRuleCount { get; set; }
 
             /// <summary>
-            /// <para>Number of custom rules</para>
+            /// <para>The number of custom policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string CustomRuleCount { get; set; }
 
             /// <summary>
-            /// <para>Event code</para>
+            /// <para>The event code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>de_aszbjb7236</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventCode { get; set; }
 
             /// <summary>
-            /// <para>Event name.</para>
+            /// <para>The event name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册风险</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>Modification time</para>
+            /// <para>The time when the event was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1565701886000</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Modifier</para>
+            /// <para>The user who last modified the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>公有云用户uid</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Modifier { get; set; }
 
             /// <summary>
-            /// <para>Number of custom rules</para>
+            /// <para>The number of user-defined policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string NormalRuleCount { get; set; }
 
             /// <summary>
-            /// <para>Service code</para>
+            /// <para>The service code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>device_risk</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Service { get; set; }
 
             /// <summary>
-            /// <para>Usage status</para>
+            /// <para>The usage status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>使用/未使用</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string UseStatus { get; set; }
 
             /// <summary>
-            /// <para>Number of white-box rules</para>
+            /// <para>The number of whitebox implementation policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Total number of items</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TotalItem { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9</para>

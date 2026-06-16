@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeEventTotalCountReportResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>Status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>Response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeEventTotalCountReportResponseBodyResultObject ResultObject { get; set; }
         public class DescribeEventTotalCountReportResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Comparison with yesterday\&quot;s event invocation count</para>
+            /// <para>Day-over-day comparison of call event count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Ratio { get; set; }
 
             /// <summary>
-            /// <para>Today\&quot;s event invocation count</para>
+            /// <para>Total number of call events today.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether this operation was successful, <c>true</c> means success.</para>
+        /// <para>Indicates whether the operation was successful. A value of true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

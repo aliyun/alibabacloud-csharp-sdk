@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>This field is currently unused and has no query significance.</para>
+        /// <para>This field is currently not in use and has no query significance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>暂时不需要传入</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Degree { get; set; }
 
         /// <summary>
-        /// <para>End date, format yyyy-MM-dd, e.g., 2025-03-13.</para>
+        /// <para>End date in the format yyyy-MM-dd, for example, 2025-03-15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-15</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EndDate { get; set; }
 
         /// <summary>
-        /// <para>Set the language type for requests and received messages, default value is <b>zh</b>. Values:</para>
+        /// <para>Specifies the language type for request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Request source IP address.</para>
+        /// <para>Source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>220.250.21.83</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>Start date, format yyyy-MM-dd, e.g., 2025-03-10.</para>
+        /// <para>Start date in the format yyyy-MM-dd, for example, 2025-03-10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-03-10</para>

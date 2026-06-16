@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeTemplateCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeTemplateCountResponseBodyResultObject ResultObject { get; set; }
         public class DescribeTemplateCountResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Template quantity limit.</para>
+            /// <para>The template quantity limit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public bool? Limit { get; set; }
 
             /// <summary>
-            /// <para>Maximum count</para>
+            /// <para>The maximum number of items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public int? MaxTotalItem { get; set; }
 
             /// <summary>
-            /// <para>Total count.</para>
+            /// <para>The total number of items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>13</para>

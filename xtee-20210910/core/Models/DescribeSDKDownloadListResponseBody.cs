@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeSDKDownloadListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeSDKDownloadListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeSDKDownloadListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Description information.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>描述</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Developer</para>
+            /// <para>The developer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>阿里云安全-风险识别</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Developer { get; set; }
 
             /// <summary>
-            /// <para>Device type.</para>
+            /// <para>The device type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ANDROID</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DeviceType { get; set; }
 
             /// <summary>
-            /// <para>Download URL.</para>
+            /// <para>The download URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://aliyun-xxxx.oss-cn-xxx.xxx.com/sdk/xxx/10056.1/Android-AliyunDeviceEnhance-10056.1-20250611.tgz">https://aliyun-xxxx.oss-cn-xxx.xxx.com/sdk/xxx/10056.1/Android-AliyunDeviceEnhance-10056.1-20250611.tgz</a></para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>File MD5.</para>
+            /// <para>The MD5 hash of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>E582EEB6B4BC9B5CB168AA5A7DD0EE93</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>Package name</para>
+            /// <para>The package name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>net.security.device</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string PackageName { get; set; }
 
             /// <summary>
-            /// <para>Risk recognition SDK privacy policy link</para>
+            /// <para>The privacy policy link for the risk identification SDK.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202111120818_92724.html">https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202111120818_92724.html</a></para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string PrivacyLink { get; set; }
 
             /// <summary>
-            /// <para>Release time</para>
+            /// <para>The release time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1751212800000</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string PushTime { get; set; }
 
             /// <summary>
-            /// <para>SDK version.</para>
+            /// <para>The SDK version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SdkVersion { get; set; }
 
             /// <summary>
-            /// <para>Size</para>
+            /// <para>The size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4.12 MB</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class CreateCustVariableRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values: </para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Condition value.</para>
+        /// <para>The condition value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;relationship&quot;:&quot;and&quot;,&quot;list&quot;:[{&quot;deepCount&quot;:1,&quot;left&quot;:{&quot;hasRightVariable&quot;:true,&quot;fieldType&quot;:&quot;INT&quot;,&quot;functionName&quot;:&quot;&quot;,&quot;leftVariableType&quot;:&quot;NATIVE&quot;,&quot;name&quot;:&quot;DEtest222&quot;,&quot;operatorCode&quot;:&quot;equals&quot;},&quot;right&quot;:{&quot;rightVariableType&quot;:&quot;constant&quot;,&quot;name&quot;:&quot;11&quot;,&quot;functionName&quot;:&quot;&quot;},&quot;operatorCode&quot;:&quot;equals&quot;}]}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// <para>Creation type</para>
+        /// <para>The creation type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string CreateType { get; set; }
 
         /// <summary>
-        /// <para>Description information.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip调用次数累计描述</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Event code</para>
+        /// <para>The event code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCodes { get; set; }
 
         /// <summary>
-        /// <para>Value type</para>
+        /// <para>The value type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EARLIEST</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HistoryValueType { get; set; }
 
         /// <summary>
-        /// <para>Accumulative object</para>
+        /// <para>The cumulative object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>age</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Object { get; set; }
 
         /// <summary>
-        /// <para>Variable return type</para>
+        /// <para>The return type of the variable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STRING</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Outputs { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Primary object</para>
+        /// <para>The subject object.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Subject { get; set; }
 
         /// <summary>
-        /// <para>Time slice type</para>
+        /// <para>The time slice type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string TimeType { get; set; }
 
         /// <summary>
-        /// <para>Title.</para>
+        /// <para>The title.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>Number of time units</para>
+        /// <para>The number of time units.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? TwCount { get; set; }
 
         /// <summary>
-        /// <para>Variable type</para>
+        /// <para>The variable type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string VelocityFC { get; set; }
 
         /// <summary>
-        /// <para>Time slice unit</para>
+        /// <para>The time slice unit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

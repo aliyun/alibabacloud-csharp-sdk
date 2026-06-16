@@ -670,7 +670,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable binding operation</para>
+        /// <para>Performs a variable binding operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -776,7 +776,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable binding operation</para>
+        /// <para>Performs a variable binding operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -882,7 +882,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable binding operation</para>
+        /// <para>Performs a variable binding operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -900,7 +900,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable binding operation</para>
+        /// <para>Performs a variable binding operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -918,7 +918,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组</para>
+        /// <para>Create a task group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -972,7 +972,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组</para>
+        /// <para>Create a task group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1026,7 +1026,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组</para>
+        /// <para>Create a task group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1044,7 +1044,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务组</para>
+        /// <para>Create a task group</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1222,7 +1222,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the cumulative number of variables exceeds the limit</para>
+        /// <para>Checks whether the number of cumulative variables exceeds the limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1272,7 +1272,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the cumulative number of variables exceeds the limit</para>
+        /// <para>Checks whether the number of cumulative variables exceeds the limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1322,7 +1322,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the cumulative number of variables exceeds the limit</para>
+        /// <para>Checks whether the number of cumulative variables exceeds the limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1340,7 +1340,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the cumulative number of variables exceeds the limit</para>
+        /// <para>Checks whether the number of cumulative variables exceeds the limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1358,7 +1358,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if Creating Variables Exceeds the Limit</para>
+        /// <para>Checks whether creating a variable exceeds the upper limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1404,7 +1404,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if Creating Variables Exceeds the Limit</para>
+        /// <para>Checks whether creating a variable exceeds the upper limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1450,7 +1450,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if Creating Variables Exceeds the Limit</para>
+        /// <para>Checks whether creating a variable exceeds the upper limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1468,7 +1468,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if Creating Variables Exceeds the Limit</para>
+        /// <para>Checks whether creating a variable exceeds the upper limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1486,7 +1486,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the number of fields exceeds the limit</para>
+        /// <para>Checks whether the number of fields exceeds the specified limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1536,7 +1536,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the number of fields exceeds the limit</para>
+        /// <para>Checks whether the number of fields exceeds the specified limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1586,7 +1586,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the number of fields exceeds the limit</para>
+        /// <para>Checks whether the number of fields exceeds the specified limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1604,7 +1604,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the number of fields exceeds the limit</para>
+        /// <para>Checks whether the number of fields exceeds the specified limit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1622,7 +1622,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本名称唯一性校验</para>
+        /// <para>Validate sample name uniqueness</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1672,7 +1672,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本名称唯一性校验</para>
+        /// <para>Validate sample name uniqueness</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1722,7 +1722,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本名称唯一性校验</para>
+        /// <para>Validate sample name uniqueness</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1740,7 +1740,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本名称唯一性校验</para>
+        /// <para>Validate sample name uniqueness</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1758,7 +1758,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组名称唯一性校验</para>
+        /// <para>Validate the uniqueness of the task group name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1808,7 +1808,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组名称唯一性校验</para>
+        /// <para>Validate the uniqueness of the task group name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1858,7 +1858,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组名称唯一性校验</para>
+        /// <para>Validate the uniqueness of the task group name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1876,7 +1876,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组名称唯一性校验</para>
+        /// <para>Validate the uniqueness of the task group name</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1894,7 +1894,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate Variable Reference</para>
+        /// <para>Checks variable references.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1944,7 +1944,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate Variable Reference</para>
+        /// <para>Checks variable references.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1994,7 +1994,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate Variable Reference</para>
+        /// <para>Checks variable references.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2012,7 +2012,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate Variable Reference</para>
+        /// <para>Checks variable references.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2334,7 +2334,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Query Conditions</para>
+        /// <para>Creates a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2412,7 +2412,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Query Conditions</para>
+        /// <para>Creates a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2490,7 +2490,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Query Conditions</para>
+        /// <para>Creates a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2508,7 +2508,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Query Conditions</para>
+        /// <para>Creates a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2526,7 +2526,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Export Task</para>
+        /// <para>Creates an export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2612,7 +2612,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Export Task</para>
+        /// <para>Creates an export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2698,7 +2698,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Export Task</para>
+        /// <para>Creates an export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2716,7 +2716,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Export Task</para>
+        /// <para>Creates an export task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2734,7 +2734,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create AppKey</para>
+        /// <para>Create an AppKey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2780,7 +2780,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create AppKey</para>
+        /// <para>Create an AppKey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2826,7 +2826,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create AppKey</para>
+        /// <para>Create an AppKey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2844,7 +2844,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create AppKey</para>
+        /// <para>Create an AppKey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2862,7 +2862,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Accumulative Variable</para>
+        /// <para>Creates a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2960,7 +2960,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Accumulative Variable</para>
+        /// <para>Creates a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3058,7 +3058,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Accumulative Variable</para>
+        /// <para>Creates a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3076,7 +3076,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Accumulative Variable</para>
+        /// <para>Creates a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3094,7 +3094,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Data Source</para>
+        /// <para>Creates a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3156,7 +3156,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Data Source</para>
+        /// <para>Creates a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3218,7 +3218,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Data Source</para>
+        /// <para>Creates a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3236,7 +3236,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Data Source</para>
+        /// <para>Creates a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3254,7 +3254,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Event</para>
+        /// <para>Creates an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3328,7 +3328,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Event</para>
+        /// <para>Creates an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3402,7 +3402,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Event</para>
+        /// <para>Creates an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3420,7 +3420,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Event</para>
+        /// <para>Creates an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3438,7 +3438,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Custom Variable</para>
+        /// <para>Creates a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3516,7 +3516,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Custom Variable</para>
+        /// <para>Creates a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3594,7 +3594,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Custom Variable</para>
+        /// <para>Creates a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3612,7 +3612,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Custom Variable</para>
+        /// <para>Creates a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3630,7 +3630,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add New Field</para>
+        /// <para>Creates a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3704,7 +3704,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add New Field</para>
+        /// <para>Creates a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3778,7 +3778,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add New Field</para>
+        /// <para>Creates a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3796,7 +3796,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add New Field</para>
+        /// <para>Creates a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3814,7 +3814,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录对客</para>
+        /// <para>Create a sample record for the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3876,7 +3876,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录对客</para>
+        /// <para>Create a sample record for the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3938,7 +3938,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录对客</para>
+        /// <para>Create a sample record for the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3956,7 +3956,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录对客</para>
+        /// <para>Create a sample record for the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4350,7 +4350,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create POC</para>
+        /// <para>Creates a POC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4432,7 +4432,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create POC</para>
+        /// <para>Creates a POC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4514,7 +4514,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create POC</para>
+        /// <para>Creates a POC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4532,7 +4532,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create POC</para>
+        /// <para>Creates a POC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4550,7 +4550,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录</para>
+        /// <para>Create a sample record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4620,7 +4620,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录</para>
+        /// <para>Create a sample record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4690,7 +4690,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录</para>
+        /// <para>Create a sample record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4708,7 +4708,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录</para>
+        /// <para>Create a sample record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4726,7 +4726,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add New Custom Query Variable</para>
+        /// <para>Creates a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4808,7 +4808,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add New Custom Query Variable</para>
+        /// <para>Creates a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4890,7 +4890,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add New Custom Query Variable</para>
+        /// <para>Creates a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4908,7 +4908,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add New Custom Query Variable</para>
+        /// <para>Creates a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4926,7 +4926,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Recommended Event Strategy</para>
+        /// <para>Creates a recommended event policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4988,7 +4988,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Recommended Event Strategy</para>
+        /// <para>Creates a recommended event policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5050,7 +5050,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Recommended Event Strategy</para>
+        /// <para>Creates a recommended event policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5068,7 +5068,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Recommended Event Strategy</para>
+        /// <para>Creates a recommended event policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5086,7 +5086,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Recommendation Task</para>
+        /// <para>Creates a recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5148,7 +5148,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Recommendation Task</para>
+        /// <para>Creates a recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5210,7 +5210,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Recommendation Task</para>
+        /// <para>Creates a recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5228,7 +5228,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Recommendation Task</para>
+        /// <para>Creates a recommendation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5246,7 +5246,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Policy &amp; Version</para>
+        /// <para>Creates a policy and version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5340,7 +5340,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Policy &amp; Version</para>
+        /// <para>Creates a policy and version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5434,7 +5434,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Policy &amp; Version</para>
+        /// <para>Creates a policy and version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5452,7 +5452,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Policy &amp; Version</para>
+        /// <para>Creates a policy and version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5470,7 +5470,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Sample</para>
+        /// <para>Adds a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5544,7 +5544,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Sample</para>
+        /// <para>Adds a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5618,7 +5618,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Sample</para>
+        /// <para>Adds a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5636,7 +5636,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Add Sample</para>
+        /// <para>Adds a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5654,7 +5654,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User-level Single API to Create Sample Batches</para>
+        /// <para>Creates a sample batch for a single API at the user level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5716,7 +5716,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User-level Single API to Create Sample Batches</para>
+        /// <para>Creates a sample batch for a single API at the user level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5778,7 +5778,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User-level Single API to Create Sample Batches</para>
+        /// <para>Creates a sample batch for a single API at the user level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5796,7 +5796,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>User-level Single API to Create Sample Batches</para>
+        /// <para>Creates a sample batch for a single API at the user level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5998,7 +5998,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Sample Data</para>
+        /// <para>Creates sample data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6072,7 +6072,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Sample Data</para>
+        /// <para>Creates sample data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6146,7 +6146,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Sample Data</para>
+        /// <para>Creates sample data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6164,7 +6164,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Sample Data</para>
+        /// <para>Creates sample data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6182,7 +6182,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Task</para>
+        /// <para>Creates a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6264,7 +6264,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Task</para>
+        /// <para>Creates a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6346,7 +6346,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Task</para>
+        /// <para>Creates a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6364,7 +6364,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Task</para>
+        /// <para>Creates a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6382,7 +6382,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消子任务</para>
+        /// <para>Cancels a subtask.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6418,6 +6418,10 @@ namespace AlibabaCloud.SDK.Xtee20210910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCodes))
             {
                 query["ServiceCodes"] = request.ServiceCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceList))
+            {
+                query["ServiceList"] = request.ServiceList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceNames))
             {
@@ -6456,7 +6460,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消子任务</para>
+        /// <para>Cancels a subtask.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6492,6 +6496,10 @@ namespace AlibabaCloud.SDK.Xtee20210910
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceCodes))
             {
                 query["ServiceCodes"] = request.ServiceCodes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceList))
+            {
+                query["ServiceList"] = request.ServiceList;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceNames))
             {
@@ -6530,7 +6538,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消子任务</para>
+        /// <para>Cancels a subtask.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6548,7 +6556,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消子任务</para>
+        /// <para>Cancels a subtask.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6766,7 +6774,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Query Condition</para>
+        /// <para>Deletes a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6816,7 +6824,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Query Condition</para>
+        /// <para>Deletes a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6866,7 +6874,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Query Condition</para>
+        /// <para>Deletes a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6884,7 +6892,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Query Condition</para>
+        /// <para>Deletes a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6902,7 +6910,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Bypass Event</para>
+        /// <para>Deletes a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6952,7 +6960,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Bypass Event</para>
+        /// <para>Deletes a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7002,7 +7010,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Bypass Event</para>
+        /// <para>Deletes a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7020,7 +7028,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Bypass Event</para>
+        /// <para>Deletes a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7038,7 +7046,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Accumulated Variable</para>
+        /// <para>Deletes a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7096,7 +7104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Accumulated Variable</para>
+        /// <para>Deletes a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7154,7 +7162,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Accumulated Variable</para>
+        /// <para>Deletes a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7172,7 +7180,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Accumulated Variable</para>
+        /// <para>Deletes a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7190,7 +7198,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Data Source</para>
+        /// <para>Deletes a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7240,7 +7248,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Data Source</para>
+        /// <para>Deletes a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7290,7 +7298,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Data Source</para>
+        /// <para>Deletes a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7308,7 +7316,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Data Source</para>
+        /// <para>Deletes a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7470,7 +7478,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Custom Variable</para>
+        /// <para>Deletes a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7524,7 +7532,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Custom Variable</para>
+        /// <para>Deletes a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7578,7 +7586,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Custom Variable</para>
+        /// <para>Deletes a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7596,7 +7604,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Custom Variable</para>
+        /// <para>Deletes a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7614,7 +7622,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Field</para>
+        /// <para>Deletes a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7668,7 +7676,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Field</para>
+        /// <para>Deletes a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7722,7 +7730,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Field</para>
+        /// <para>Deletes a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7740,7 +7748,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Field</para>
+        /// <para>Deletes a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7758,7 +7766,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Name List</para>
+        /// <para>Deletes a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7808,7 +7816,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Name List</para>
+        /// <para>Deletes a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7858,7 +7866,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Name List</para>
+        /// <para>Deletes a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7876,7 +7884,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Name List</para>
+        /// <para>Deletes a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7894,7 +7902,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete (pseudo) name list variable data</para>
+        /// <para>Deletes list variable data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7944,7 +7952,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete (pseudo) name list variable data</para>
+        /// <para>Deletes list variable data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7994,7 +8002,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete (pseudo) name list variable data</para>
+        /// <para>Deletes list variable data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8012,7 +8020,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete (pseudo) name list variable data</para>
+        /// <para>Deletes list variable data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8030,7 +8038,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Query Variable</para>
+        /// <para>Deletes a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8080,7 +8088,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Query Variable</para>
+        /// <para>Deletes a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8130,7 +8138,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Query Variable</para>
+        /// <para>Deletes a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8148,7 +8156,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Query Variable</para>
+        /// <para>Deletes a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8166,7 +8174,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Policy Version</para>
+        /// <para>Deletes a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8224,7 +8232,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Policy Version</para>
+        /// <para>Deletes a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8282,7 +8290,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Policy Version</para>
+        /// <para>Deletes a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8300,7 +8308,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Policy Version</para>
+        /// <para>Deletes a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8318,7 +8326,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除样本</para>
+        /// <para>Delete sample</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8368,7 +8376,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除样本</para>
+        /// <para>Delete sample</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8418,7 +8426,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除样本</para>
+        /// <para>Delete sample</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8436,7 +8444,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除样本</para>
+        /// <para>Delete sample</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8454,7 +8462,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Delete Samples</para>
+        /// <para>Deletes samples in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8508,7 +8516,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Delete Samples</para>
+        /// <para>Deletes samples in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8562,7 +8570,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Delete Samples</para>
+        /// <para>Deletes samples in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8580,7 +8588,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Delete Samples</para>
+        /// <para>Deletes samples in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8734,7 +8742,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Sample Data</para>
+        /// <para>Deletes sample data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8784,7 +8792,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Sample Data</para>
+        /// <para>Deletes sample data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8834,7 +8842,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Sample Data</para>
+        /// <para>Deletes sample data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8852,7 +8860,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Sample Data</para>
+        /// <para>Deletes sample data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9006,7 +9014,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Query to Get Left Variables Interface</para>
+        /// <para>Retrieves left-hand variables for advanced queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9060,7 +9068,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Query to Get Left Variables Interface</para>
+        /// <para>Retrieves left-hand variables for advanced queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9114,7 +9122,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Query to Get Left Variables Interface</para>
+        /// <para>Retrieves left-hand variables for advanced queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9132,7 +9140,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Query to Get Left Variables Interface</para>
+        /// <para>Retrieves left-hand variables for advanced queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9150,7 +9158,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Query</para>
+        /// <para>Performs an advanced query for event analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9228,7 +9236,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Query</para>
+        /// <para>Performs an advanced query for event analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9306,7 +9314,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Query</para>
+        /// <para>Performs an advanced query for event analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9324,7 +9332,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Advanced Query</para>
+        /// <para>Performs an advanced query for event analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9342,7 +9350,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Source List</para>
+        /// <para>Lists data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9388,7 +9396,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Source List</para>
+        /// <para>Lists data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9434,7 +9442,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Source List</para>
+        /// <para>Lists data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9452,7 +9460,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Source List</para>
+        /// <para>Lists data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9470,7 +9478,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event List Query</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9520,7 +9528,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event List Query</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9570,7 +9578,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event List Query</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9588,7 +9596,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event List Query</para>
+        /// <para>Queries the event list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9606,7 +9614,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display all root variables when testing custom expressions</para>
+        /// <para>Displays all root variables during custom expression testing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9684,7 +9692,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display all root variables when testing custom expressions</para>
+        /// <para>Displays all root variables during custom expression testing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9762,7 +9770,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display all root variables when testing custom expressions</para>
+        /// <para>Displays all root variables during custom expression testing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9780,7 +9788,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display all root variables when testing custom expressions</para>
+        /// <para>Displays all root variables during custom expression testing.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9798,7 +9806,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display All Fields</para>
+        /// <para>Displays all fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9844,7 +9852,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display All Fields</para>
+        /// <para>Displays all fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9890,7 +9898,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display All Fields</para>
+        /// <para>Displays all fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9908,7 +9916,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display All Fields</para>
+        /// <para>Displays all fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9926,7 +9934,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Custom Columns</para>
+        /// <para>Queries custom columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9972,7 +9980,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Custom Columns</para>
+        /// <para>Queries custom columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10018,7 +10026,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Custom Columns</para>
+        /// <para>Queries custom columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10036,7 +10044,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Custom Columns</para>
+        /// <para>Queries custom columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10054,7 +10062,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Condition List</para>
+        /// <para>Queries the condition favorite list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10100,7 +10108,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Condition List</para>
+        /// <para>Queries the condition favorite list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10146,7 +10154,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Condition List</para>
+        /// <para>Queries the condition favorite list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10164,7 +10172,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Condition List</para>
+        /// <para>Queries the condition favorite list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10182,7 +10190,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download Query Results</para>
+        /// <para>Download query results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10228,7 +10236,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download Query Results</para>
+        /// <para>Download query results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10274,7 +10282,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download Query Results</para>
+        /// <para>Download query results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10292,7 +10300,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download Query Results</para>
+        /// <para>Download query results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10310,7 +10318,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API Details</para>
+        /// <para>Retrieves the details of an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10368,7 +10376,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API Details</para>
+        /// <para>Retrieves the details of an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10426,7 +10434,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API Details</para>
+        /// <para>Retrieves the details of an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10444,7 +10452,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API Details</para>
+        /// <para>Retrieves the details of an API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10462,7 +10470,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API groups including those purchased by the user and custom ones</para>
+        /// <para>Retrieves API groups, including purchased and custom groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10512,7 +10520,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API groups including those purchased by the user and custom ones</para>
+        /// <para>Retrieves API groups, including purchased and custom groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10562,7 +10570,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API groups including those purchased by the user and custom ones</para>
+        /// <para>Retrieves API groups, including purchased and custom groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10580,7 +10588,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API groups including those purchased by the user and custom ones</para>
+        /// <para>Retrieves API groups, including purchased and custom groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10598,7 +10606,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the limit information for creating API tasks</para>
+        /// <para>Queries the limit information for creating API tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10644,7 +10652,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the limit information for creating API tasks</para>
+        /// <para>Queries the limit information for creating API tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10690,7 +10698,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the limit information for creating API tasks</para>
+        /// <para>Queries the limit information for creating API tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10708,7 +10716,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the limit information for creating API tasks</para>
+        /// <para>Queries the limit information for creating API tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10726,7 +10734,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API Service Name</para>
+        /// <para>Retrieves API service names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10772,7 +10780,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API Service Name</para>
+        /// <para>Retrieves API service names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10818,7 +10826,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API Service Name</para>
+        /// <para>Retrieves API service names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10836,7 +10844,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API Service Name</para>
+        /// <para>Retrieves API service names.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10854,7 +10862,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Details</para>
+        /// <para>Query variable details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10904,7 +10912,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Details</para>
+        /// <para>Query variable details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10954,7 +10962,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Details</para>
+        /// <para>Query variable details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10972,7 +10980,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Details</para>
+        /// <para>Query variable details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10990,7 +10998,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API list including purchased and customized APIs</para>
+        /// <para>Retrieves the API list, including purchased and custom APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11048,7 +11056,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API list including purchased and customized APIs</para>
+        /// <para>Retrieves the API list, including purchased and custom APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11106,7 +11114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API list including purchased and customized APIs</para>
+        /// <para>Retrieves the API list, including purchased and custom APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11124,7 +11132,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get API list including purchased and customized APIs</para>
+        /// <para>Retrieves the API list, including purchased and custom APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11142,7 +11150,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query appKey List</para>
+        /// <para>Queries the list of appKeys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11196,7 +11204,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query appKey List</para>
+        /// <para>Queries the list of appKeys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11250,7 +11258,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query appKey List</para>
+        /// <para>Queries the list of appKeys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11268,7 +11276,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query appKey List</para>
+        /// <para>Queries the list of appKeys.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11286,7 +11294,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval Switch</para>
+        /// <para>Configures the approval switch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11336,7 +11344,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval Switch</para>
+        /// <para>Configures the approval switch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11386,7 +11394,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval Switch</para>
+        /// <para>Configures the approval switch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11404,7 +11412,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval Switch</para>
+        /// <para>Configures the approval switch.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11422,7 +11430,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval Details</para>
+        /// <para>Retrieves approval details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11472,7 +11480,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval Details</para>
+        /// <para>Retrieves approval details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11522,7 +11530,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval Details</para>
+        /// <para>Retrieves approval details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11540,7 +11548,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval Details</para>
+        /// <para>Retrieves approval details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11558,7 +11566,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display and Query of Audit List</para>
+        /// <para>Displays and queries the audit list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11624,7 +11632,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display and Query of Audit List</para>
+        /// <para>Displays and queries the audit list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11690,7 +11698,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display and Query of Audit List</para>
+        /// <para>Displays and queries the audit list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11708,7 +11716,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Display and Query of Audit List</para>
+        /// <para>Displays and queries the audit list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11726,7 +11734,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of event names for the current user</para>
+        /// <para>Queries the list of event names for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11772,7 +11780,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of event names for the current user</para>
+        /// <para>Queries the list of event names for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11818,7 +11826,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of event names for the current user</para>
+        /// <para>Queries the list of event names for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11836,7 +11844,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of event names for the current user</para>
+        /// <para>Queries the list of event names for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11854,7 +11862,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy List</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11912,7 +11920,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy List</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11970,7 +11978,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy List</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11988,7 +11996,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy List</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12006,7 +12014,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Scenarios</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12052,7 +12060,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Scenarios</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12098,7 +12106,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Scenarios</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12116,7 +12124,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Scenarios</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12134,7 +12142,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scene List</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12184,7 +12192,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scene List</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12234,7 +12242,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scene List</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12252,7 +12260,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scene List</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12270,7 +12278,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Authorization</para>
+        /// <para>Checks whether authorization is granted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12316,7 +12324,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Authorization</para>
+        /// <para>Checks whether authorization is granted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12362,7 +12370,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Authorization</para>
+        /// <para>Checks whether authorization is granted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12380,7 +12388,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Authorization</para>
+        /// <para>Checks whether authorization is granted.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12398,7 +12406,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Average Execution Time</para>
+        /// <para>Average execution duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12444,7 +12452,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Average Execution Time</para>
+        /// <para>Average execution duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12490,7 +12498,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Average Execution Time</para>
+        /// <para>Average execution duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12508,7 +12516,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Average Execution Time</para>
+        /// <para>Average execution duration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12526,7 +12534,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Basic Query</para>
+        /// <para>Performs a basic query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12600,7 +12608,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Basic Query</para>
+        /// <para>Performs a basic query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12674,7 +12682,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Basic Query</para>
+        /// <para>Performs a basic query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12692,7 +12700,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Basic Query</para>
+        /// <para>Performs a basic query.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12710,7 +12718,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Basic Statistics</para>
+        /// <para>Queries basic statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12768,7 +12776,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Basic Statistics</para>
+        /// <para>Queries basic statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12826,7 +12834,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Basic Statistics</para>
+        /// <para>Queries basic statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12844,7 +12852,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Basic Statistics</para>
+        /// <para>Queries basic statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12862,7 +12870,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Bypass Event</para>
+        /// <para>Queries a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12912,7 +12920,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Bypass Event</para>
+        /// <para>Queries a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12962,7 +12970,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Bypass Event</para>
+        /// <para>Queries a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12980,7 +12988,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View Bypass Event</para>
+        /// <para>Queries a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12998,7 +13006,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the type configuration of custom accumulated variables</para>
+        /// <para>Queries the type configurations of custom cumulative variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13052,7 +13060,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the type configuration of custom accumulated variables</para>
+        /// <para>Queries the type configurations of custom cumulative variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13106,7 +13114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the type configuration of custom accumulated variables</para>
+        /// <para>Queries the type configurations of custom cumulative variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13124,7 +13132,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the type configuration of custom accumulated variables</para>
+        /// <para>Queries the type configurations of custom cumulative variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13142,7 +13150,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cumulative Variable Details</para>
+        /// <para>Queries the details of a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13192,7 +13200,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cumulative Variable Details</para>
+        /// <para>Queries the details of a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13242,7 +13250,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cumulative Variable Details</para>
+        /// <para>Queries the details of a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13260,7 +13268,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cumulative Variable Details</para>
+        /// <para>Queries the details of a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13278,12 +13286,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Custom Accumulated Variable List</para>
+        /// <para>Queries the list of custom cumulative variables.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>List Query of Accumulated Variables</para>
+        /// <para>Queries the list of cumulative variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13353,12 +13361,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Custom Accumulated Variable List</para>
+        /// <para>Queries the list of custom cumulative variables.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>List Query of Accumulated Variables</para>
+        /// <para>Queries the list of cumulative variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13428,12 +13436,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Custom Accumulated Variable List</para>
+        /// <para>Queries the list of custom cumulative variables.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>List Query of Accumulated Variables</para>
+        /// <para>Queries the list of cumulative variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13451,12 +13459,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Custom Accumulated Variable List</para>
+        /// <para>Queries the list of custom cumulative variables.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>List Query of Accumulated Variables</para>
+        /// <para>Queries the list of cumulative variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13474,7 +13482,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Data Source Data Download Link</para>
+        /// <para>Retrieves the download URL for data source data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13524,7 +13532,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Data Source Data Download Link</para>
+        /// <para>Retrieves the download URL for data source data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13574,7 +13582,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Data Source Data Download Link</para>
+        /// <para>Retrieves the download URL for data source data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13592,7 +13600,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Data Source Data Download Link</para>
+        /// <para>Retrieves the download URL for data source data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13610,7 +13618,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all fields of a data source</para>
+        /// <para>Retrieves all fields of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13660,7 +13668,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all fields of a data source</para>
+        /// <para>Retrieves all fields of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13710,7 +13718,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all fields of a data source</para>
+        /// <para>Retrieves all fields of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13728,7 +13736,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all fields of a data source</para>
+        /// <para>Retrieves all fields of a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13746,7 +13754,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Source List Interface</para>
+        /// <para>Queries a list of data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13812,7 +13820,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Source List Interface</para>
+        /// <para>Queries a list of data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13878,7 +13886,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Source List Interface</para>
+        /// <para>Queries a list of data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13896,7 +13904,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Data Source List Interface</para>
+        /// <para>Queries a list of data sources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13914,7 +13922,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decision Result Fluctuation Detection</para>
+        /// <para>Detects fluctuations in decision results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13964,7 +13972,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decision Result Fluctuation Detection</para>
+        /// <para>Detects fluctuations in decision results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14014,7 +14022,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decision Result Fluctuation Detection</para>
+        /// <para>Detects fluctuations in decision results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14032,7 +14040,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decision Result Fluctuation Detection</para>
+        /// <para>Detects fluctuations in decision results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14050,7 +14058,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decision Result Fluctuation Trend</para>
+        /// <para>Queries the fluctuation trend of decision results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14108,7 +14116,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decision Result Fluctuation Trend</para>
+        /// <para>Queries the fluctuation trend of decision results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14166,7 +14174,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decision Result Fluctuation Trend</para>
+        /// <para>Queries the fluctuation trend of decision results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14184,7 +14192,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Decision Result Fluctuation Trend</para>
+        /// <para>Queries the fluctuation trend of decision results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14202,7 +14210,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detailed Statistics</para>
+        /// <para>Retrieves detailed statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14260,7 +14268,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detailed Statistics</para>
+        /// <para>Retrieves detailed statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14318,7 +14326,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detailed Statistics</para>
+        /// <para>Retrieves detailed statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14336,7 +14344,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detailed Statistics</para>
+        /// <para>Retrieves detailed statistics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14354,7 +14362,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download</para>
+        /// <para>Downloads a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14412,7 +14420,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download</para>
+        /// <para>Downloads a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14470,7 +14478,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download</para>
+        /// <para>Downloads a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14488,7 +14496,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download</para>
+        /// <para>Downloads a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14506,7 +14514,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Details</para>
+        /// <para>Queries event details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14560,7 +14568,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Details</para>
+        /// <para>Queries event details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14614,7 +14622,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Details</para>
+        /// <para>Queries event details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14632,7 +14640,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Details</para>
+        /// <para>Queries event details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14650,7 +14658,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Event Count</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14700,7 +14708,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Event Count</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14750,7 +14758,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Event Count</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14768,7 +14776,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Event Count</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14786,7 +14794,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event details based on the request ID</para>
+        /// <para>Queries event details by request ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14844,7 +14852,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event details based on the request ID</para>
+        /// <para>Queries event details by request ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14902,7 +14910,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event details based on the request ID</para>
+        /// <para>Queries event details by request ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14920,7 +14928,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event details based on the request ID</para>
+        /// <para>Queries event details by request ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14938,7 +14946,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event History Details</para>
+        /// <para>Queries the details of an event history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14988,7 +14996,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event History Details</para>
+        /// <para>Queries the details of an event history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15038,7 +15046,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event History Details</para>
+        /// <para>Queries the details of an event history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15056,7 +15064,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event History Details</para>
+        /// <para>Queries the details of an event history.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15074,7 +15082,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event History List</para>
+        /// <para>Queries the event history list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15232,7 +15240,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event History List</para>
+        /// <para>Queries the event history list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15390,7 +15398,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event History List</para>
+        /// <para>Queries the event history list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15408,7 +15416,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event History List</para>
+        /// <para>Queries the event history list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15426,7 +15434,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Events</para>
+        /// <para>Queries events by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15496,7 +15504,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Events</para>
+        /// <para>Queries events by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15566,7 +15574,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Events</para>
+        /// <para>Queries events by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15584,7 +15592,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Events</para>
+        /// <para>Queries events by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15754,7 +15762,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event Overview List</para>
+        /// <para>Queries the event overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15816,7 +15824,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event Overview List</para>
+        /// <para>Queries the event overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15878,7 +15886,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event Overview List</para>
+        /// <para>Queries the event overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15896,7 +15904,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event Overview List</para>
+        /// <para>Queries the event overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15914,7 +15922,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Download List</para>
+        /// <para>Queries the policy download list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15960,7 +15968,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Download List</para>
+        /// <para>Queries the policy download list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16006,7 +16014,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Download List</para>
+        /// <para>Queries the policy download list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16024,7 +16032,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Download List</para>
+        /// <para>Queries the policy download list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16042,7 +16050,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event Invocation Count</para>
+        /// <para>Call event count</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16088,7 +16096,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event Invocation Count</para>
+        /// <para>Call event count</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16134,7 +16142,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event Invocation Count</para>
+        /// <para>Call event count</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16152,7 +16160,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Event Invocation Count</para>
+        /// <para>Call event count</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16170,7 +16178,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Import Policy</para>
+        /// <para>Imports policies in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16216,7 +16224,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Import Policy</para>
+        /// <para>Imports policies in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16262,7 +16270,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Import Policy</para>
+        /// <para>Imports policies in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16280,7 +16288,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Import Policy</para>
+        /// <para>Imports policies in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16298,12 +16306,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event variables</para>
+        /// <para>Queries event variables.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cumulative Variable List Query</para>
+        /// <para>Queries the list of cumulative variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16369,12 +16377,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event variables</para>
+        /// <para>Queries event variables.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cumulative Variable List Query</para>
+        /// <para>Queries the list of cumulative variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16440,12 +16448,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event variables</para>
+        /// <para>Queries event variables.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cumulative Variable List Query</para>
+        /// <para>Queries the list of cumulative variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16463,12 +16471,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event variables</para>
+        /// <para>Queries event variables.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cumulative Variable List Query</para>
+        /// <para>Queries the list of cumulative variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16486,7 +16494,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Template</para>
+        /// <para>Queries an event pattern template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16544,7 +16552,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Template</para>
+        /// <para>Queries an event pattern template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16602,7 +16610,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Template</para>
+        /// <para>Queries an event pattern template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16620,7 +16628,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Template</para>
+        /// <para>Queries an event pattern template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16638,7 +16646,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Template</para>
+        /// <para>Queries an event pattern template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16696,7 +16704,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Template</para>
+        /// <para>Queries an event pattern template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16754,7 +16762,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Template</para>
+        /// <para>Queries an event pattern template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16772,7 +16780,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Template</para>
+        /// <para>Queries an event pattern template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16790,7 +16798,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Variables</para>
+        /// <para>Queries event variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16852,7 +16860,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Variables</para>
+        /// <para>Queries event variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16914,7 +16922,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Variables</para>
+        /// <para>Queries event variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16932,7 +16940,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Variables</para>
+        /// <para>Queries event variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16950,7 +16958,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Self-service call list.</para>
+        /// <para>Self-service invocation list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17012,7 +17020,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Self-service call list.</para>
+        /// <para>Self-service invocation list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17074,7 +17082,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Self-service call list.</para>
+        /// <para>Self-service invocation list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17092,7 +17100,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Self-service call list.</para>
+        /// <para>Self-service invocation list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17110,7 +17118,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate if the field name is duplicated (based on user\&quot;s organization)</para>
+        /// <para>Checks whether a field name is duplicate based on the user unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17160,7 +17168,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate if the field name is duplicated (based on user\&quot;s organization)</para>
+        /// <para>Checks whether a field name is duplicate based on the user unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17210,7 +17218,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate if the field name is duplicated (based on user\&quot;s organization)</para>
+        /// <para>Checks whether a field name is duplicate based on the user unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17228,7 +17236,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate if the field name is duplicated (based on user\&quot;s organization)</para>
+        /// <para>Checks whether a field name is duplicate based on the user unit.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17246,7 +17254,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if Scene Exists</para>
+        /// <para>Checks whether a scenario exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17296,7 +17304,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if Scene Exists</para>
+        /// <para>Checks whether a scenario exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17346,7 +17354,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if Scene Exists</para>
+        /// <para>Checks whether a scenario exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17364,7 +17372,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if Scene Exists</para>
+        /// <para>Checks whether a scenario exists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17382,7 +17390,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Details</para>
+        /// <para>Queries the details of a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17432,7 +17440,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Details</para>
+        /// <para>Queries the details of a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17482,7 +17490,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Details</para>
+        /// <para>Queries the details of a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17500,7 +17508,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Details</para>
+        /// <para>Queries the details of a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17518,7 +17526,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Function List</para>
+        /// <para>Queries the function list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17564,7 +17572,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Function List</para>
+        /// <para>Queries the function list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17610,7 +17618,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Function List</para>
+        /// <para>Queries the function list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17628,7 +17636,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Function List</para>
+        /// <para>Queries the function list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17646,7 +17654,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Custom Variables.</para>
+        /// <para>Performs a paging query of custom variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17716,7 +17724,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Custom Variables.</para>
+        /// <para>Performs a paging query of custom variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17786,7 +17794,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Custom Variables.</para>
+        /// <para>Performs a paging query of custom variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17804,7 +17812,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query for Custom Variables.</para>
+        /// <para>Performs a paging query of custom variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17982,7 +17990,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Field Details</para>
+        /// <para>Retrieves field details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18032,7 +18040,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Field Details</para>
+        /// <para>Retrieves field details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18082,7 +18090,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Field Details</para>
+        /// <para>Retrieves field details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18100,7 +18108,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Field Details</para>
+        /// <para>Retrieves field details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18118,7 +18126,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Field List</para>
+        /// <para>Queries the list of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18172,7 +18180,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Field List</para>
+        /// <para>Queries the list of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18226,7 +18234,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Field List</para>
+        /// <para>Queries the list of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18244,7 +18252,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Field List</para>
+        /// <para>Queries the list of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18262,7 +18270,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query paged list of fields</para>
+        /// <para>Queries a paginated list of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18344,7 +18352,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query paged list of fields</para>
+        /// <para>Queries a paginated list of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18426,7 +18434,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query paged list of fields</para>
+        /// <para>Queries a paginated list of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18444,7 +18452,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query paged list of fields</para>
+        /// <para>Queries a paginated list of fields.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18462,7 +18470,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community Account List</para>
+        /// <para>Queries the list of community accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18544,7 +18552,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community Account List</para>
+        /// <para>Queries the list of community accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18626,7 +18634,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community Account List</para>
+        /// <para>Queries the list of community accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18644,7 +18652,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community Account List</para>
+        /// <para>Queries the list of community accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18662,7 +18670,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community List Query Conditions</para>
+        /// <para>Queries the filter conditions for the community list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18708,7 +18716,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community List Query Conditions</para>
+        /// <para>Queries the filter conditions for the community list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18754,7 +18762,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community List Query Conditions</para>
+        /// <para>Queries the filter conditions for the community list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18772,7 +18780,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community List Query Conditions</para>
+        /// <para>Queries the filter conditions for the community list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18790,7 +18798,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community List</para>
+        /// <para>Queries the list of communities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18860,7 +18868,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community List</para>
+        /// <para>Queries the list of communities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18930,7 +18938,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community List</para>
+        /// <para>Queries the list of communities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18948,7 +18956,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Community List</para>
+        /// <para>Queries the list of communities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18966,7 +18974,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk Communities Discovered Today</para>
+        /// <para>Queries the risk communities discovered on the current day.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19012,7 +19020,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk Communities Discovered Today</para>
+        /// <para>Queries the risk communities discovered on the current day.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19058,7 +19066,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk Communities Discovered Today</para>
+        /// <para>Queries the risk communities discovered on the current day.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19076,7 +19084,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk Communities Discovered Today</para>
+        /// <para>Queries the risk communities discovered on the current day.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19094,7 +19102,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recent Trends in Risk Communities</para>
+        /// <para>Queries recent trends of risky communities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19144,7 +19152,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recent Trends in Risk Communities</para>
+        /// <para>Queries recent trends of risky communities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19194,7 +19202,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recent Trends in Risk Communities</para>
+        /// <para>Queries recent trends of risky communities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19212,7 +19220,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recent Trends in Risk Communities</para>
+        /// <para>Queries recent trends of risky communities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19230,7 +19238,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the policy name under the event name exists</para>
+        /// <para>Queries whether a policy name exists under a specified event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19288,7 +19296,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the policy name under the event name exists</para>
+        /// <para>Queries whether a policy name exists under a specified event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19346,7 +19354,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the policy name under the event name exists</para>
+        /// <para>Queries whether a policy name exists under a specified event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19364,7 +19372,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check if the policy name under the event name exists</para>
+        /// <para>Queries whether a policy name exists under a specified event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19382,7 +19390,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk Map Overview Chart (Pie Chart)</para>
+        /// <para>Retrieves the risk map overview chart (pie chart).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19440,7 +19448,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk Map Overview Chart (Pie Chart)</para>
+        /// <para>Retrieves the risk map overview chart (pie chart).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19498,7 +19506,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk Map Overview Chart (Pie Chart)</para>
+        /// <para>Retrieves the risk map overview chart (pie chart).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19516,7 +19524,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk Map Overview Chart (Pie Chart)</para>
+        /// <para>Retrieves the risk map overview chart (pie chart).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19534,7 +19542,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Hit Fluctuation Detection</para>
+        /// <para>Detects fluctuations in policy hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19588,7 +19596,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Hit Fluctuation Detection</para>
+        /// <para>Detects fluctuations in policy hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19642,7 +19650,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Hit Fluctuation Detection</para>
+        /// <para>Detects fluctuations in policy hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19660,7 +19668,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Hit Fluctuation Detection</para>
+        /// <para>Detects fluctuations in policy hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19678,7 +19686,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Top 20 Hits for Main Events/Bypass/Diversion Strategies</para>
+        /// <para>Queries the top 20 policies by hits for main events, bypass, and automatic request distribution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19740,7 +19748,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Top 20 Hits for Main Events/Bypass/Diversion Strategies</para>
+        /// <para>Queries the top 20 policies by hits for main events, bypass, and automatic request distribution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19802,7 +19810,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Top 20 Hits for Main Events/Bypass/Diversion Strategies</para>
+        /// <para>Queries the top 20 policies by hits for main events, bypass, and automatic request distribution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19820,7 +19828,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Top 20 Hits for Main Events/Bypass/Diversion Strategies</para>
+        /// <para>Queries the top 20 policies by hits for main events, bypass, and automatic request distribution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19838,7 +19846,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hit Rule Trend</para>
+        /// <para>Queries the policy hit trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19900,7 +19908,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hit Rule Trend</para>
+        /// <para>Queries the policy hit trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19962,7 +19970,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hit Rule Trend</para>
+        /// <para>Queries the policy hit trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19980,7 +19988,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hit Rule Trend</para>
+        /// <para>Queries the policy hit trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20154,7 +20162,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Number of Events</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20208,7 +20216,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Number of Events</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20262,7 +20270,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Number of Events</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20280,7 +20288,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Number of Events</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20434,7 +20442,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the list of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20500,7 +20508,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the list of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20566,7 +20574,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the list of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20584,7 +20592,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the list of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20602,7 +20610,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Monitoring Object List</para>
+        /// <para>Queries the list of monitoring objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20668,7 +20676,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Monitoring Object List</para>
+        /// <para>Queries the list of monitoring objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20734,7 +20742,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Monitoring Object List</para>
+        /// <para>Queries the list of monitoring objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20752,7 +20760,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Monitoring Object List</para>
+        /// <para>Queries the list of monitoring objects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20770,7 +20778,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Loan Monitoring Task List</para>
+        /// <para>Retrieves the list of in-loan monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20832,7 +20840,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Loan Monitoring Task List</para>
+        /// <para>Retrieves the list of in-loan monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20894,7 +20902,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Loan Monitoring Task List</para>
+        /// <para>Retrieves the list of in-loan monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20912,7 +20920,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Loan Monitoring Task List</para>
+        /// <para>Retrieves the list of in-loan monitoring tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20930,7 +20938,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mark List</para>
+        /// <para>Queries the tagging list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21000,7 +21008,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mark List</para>
+        /// <para>Queries the tagging list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21070,7 +21078,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mark List</para>
+        /// <para>Queries the tagging list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21088,7 +21096,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Mark List</para>
+        /// <para>Queries the tagging list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21106,7 +21114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Permission</para>
+        /// <para>Queries whether the current user has the specified permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21156,7 +21164,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Permission</para>
+        /// <para>Queries whether the current user has the specified permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21206,7 +21214,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Permission</para>
+        /// <para>Queries whether the current user has the specified permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21224,7 +21232,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Permission</para>
+        /// <para>Queries whether the current user has the specified permission.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21498,7 +21506,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task Limit</para>
+        /// <para>Queries the limits of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21544,7 +21552,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task Limit</para>
+        /// <para>Queries the limits of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21590,7 +21598,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task Limit</para>
+        /// <para>Queries the limits of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21608,7 +21616,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task Limit</para>
+        /// <para>Queries the limits of tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21626,7 +21634,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Name List Pagination</para>
+        /// <para>Queries a name list by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21692,7 +21700,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Name List Pagination</para>
+        /// <para>Queries a name list by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21758,7 +21766,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Name List Pagination</para>
+        /// <para>Queries a name list by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21776,7 +21784,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Name List Pagination</para>
+        /// <para>Queries a name list by page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21794,7 +21802,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download Name List</para>
+        /// <para>Downloads the content of a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21844,7 +21852,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download Name List</para>
+        /// <para>Downloads the content of a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21894,7 +21902,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download Name List</para>
+        /// <para>Downloads the content of a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21912,7 +21920,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Download Name List</para>
+        /// <para>Downloads the content of a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21930,7 +21938,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Name List Limit</para>
+        /// <para>Queries the quota limit for lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21980,7 +21988,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Name List Limit</para>
+        /// <para>Queries the quota limit for lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22030,7 +22038,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Name List Limit</para>
+        /// <para>Queries the quota limit for lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22048,7 +22056,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Name List Limit</para>
+        /// <para>Queries the quota limit for lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22066,7 +22074,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the content of the list</para>
+        /// <para>Queries the content of a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22136,7 +22144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the content of the list</para>
+        /// <para>Queries the content of a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22206,7 +22214,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the content of the list</para>
+        /// <para>Queries the content of a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22224,7 +22232,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the content of the list</para>
+        /// <para>Queries the content of a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22242,7 +22250,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Name Types</para>
+        /// <para>Queries the list of name list types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22288,7 +22296,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Name Types</para>
+        /// <para>Queries the list of name list types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22334,7 +22342,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Name Types</para>
+        /// <para>Queries the list of name list types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22352,7 +22360,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Name Types</para>
+        /// <para>Queries the list of name list types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22370,7 +22378,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Name List</para>
+        /// <para>Queries a list of named lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22436,7 +22444,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Name List</para>
+        /// <para>Queries a list of named lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22502,7 +22510,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Name List</para>
+        /// <para>Queries a list of named lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22520,7 +22528,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Name List</para>
+        /// <para>Queries a list of named lists.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22690,7 +22698,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event list by event name</para>
+        /// <para>Queries the list of events by event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22760,7 +22768,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event list by event name</para>
+        /// <para>Queries the list of events by event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22830,7 +22838,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event list by event name</para>
+        /// <para>Queries the list of events by event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22848,7 +22856,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query event list by event name</para>
+        /// <para>Queries the list of events by event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22866,7 +22874,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the operator mapping list based on customer ID</para>
+        /// <para>Queries the operator mapping list by customer ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22912,7 +22920,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the operator mapping list based on customer ID</para>
+        /// <para>Queries the operator mapping list by customer ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22958,7 +22966,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the operator mapping list based on customer ID</para>
+        /// <para>Queries the operator mapping list by customer ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22976,7 +22984,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the operator mapping list based on customer ID</para>
+        /// <para>Queries the operator mapping list by customer ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22994,7 +23002,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Operator Mapping List</para>
+        /// <para>Queries the operator mapping list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23044,7 +23052,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Operator Mapping List</para>
+        /// <para>Queries the operator mapping list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23094,7 +23102,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Operator Mapping List</para>
+        /// <para>Queries the operator mapping list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23112,7 +23120,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Operator Mapping List</para>
+        /// <para>Queries the operator mapping list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23130,7 +23138,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Operator Mapping List</para>
+        /// <para>Queries the list of operator mappings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23176,7 +23184,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Operator Mapping List</para>
+        /// <para>Queries the list of operator mappings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23222,7 +23230,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Operator Mapping List</para>
+        /// <para>Queries the list of operator mappings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23240,7 +23248,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Operator Mapping List</para>
+        /// <para>Queries the list of operator mappings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23258,7 +23266,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Oss Authorization</para>
+        /// <para>Checks whether OSS is authorized.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23304,7 +23312,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Oss Authorization</para>
+        /// <para>Checks whether OSS is authorized.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23350,7 +23358,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Oss Authorization</para>
+        /// <para>Checks whether OSS is authorized.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23368,7 +23376,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check Oss Authorization</para>
+        /// <para>Checks whether OSS is authorized.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23386,7 +23394,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get OSS Policy</para>
+        /// <para>Retrieves the OSS policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23436,7 +23444,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get OSS Policy</para>
+        /// <para>Retrieves the OSS policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23486,7 +23494,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get OSS Policy</para>
+        /// <para>Retrieves the OSS policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23504,7 +23512,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get OSS Policy</para>
+        /// <para>Retrieves the OSS policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23522,7 +23530,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get File Upload Credentials</para>
+        /// <para>Retrieves the upload credential for a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23576,7 +23584,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get File Upload Credentials</para>
+        /// <para>Retrieves the upload credential for a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23630,7 +23638,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get File Upload Credentials</para>
+        /// <para>Retrieves the upload credential for a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23648,7 +23656,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get File Upload Credentials</para>
+        /// <para>Retrieves the upload credential for a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23666,7 +23674,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Property List</para>
+        /// <para>Queries the list of event properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23720,7 +23728,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Property List</para>
+        /// <para>Queries the list of event properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23774,7 +23782,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Property List</para>
+        /// <para>Queries the list of event properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23792,7 +23800,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event Property List</para>
+        /// <para>Queries the list of event properties.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23810,7 +23818,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get File Upload Credentials</para>
+        /// <para>Retrieves the file upload credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23856,7 +23864,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get File Upload Credentials</para>
+        /// <para>Retrieves the file upload credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23902,7 +23910,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get File Upload Credentials</para>
+        /// <para>Retrieves the file upload credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23920,7 +23928,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get File Upload Credentials</para>
+        /// <para>Retrieves the file upload credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23938,7 +23946,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get POC Task List</para>
+        /// <para>Retrieves the list of POC tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23996,7 +24004,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get POC Task List</para>
+        /// <para>Retrieves the list of POC tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24054,7 +24062,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get POC Task List</para>
+        /// <para>Retrieves the list of POC tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24072,7 +24080,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get POC Task List</para>
+        /// <para>Retrieves the list of POC tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24090,7 +24098,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determine if Stack Private Domain Mode is Enabled</para>
+        /// <para>Checks whether the Stack private domain mode is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24132,7 +24140,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determine if Stack Private Domain Mode is Enabled</para>
+        /// <para>Checks whether the Stack private domain mode is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24174,7 +24182,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determine if Stack Private Domain Mode is Enabled</para>
+        /// <para>Checks whether the Stack private domain mode is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24192,7 +24200,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determine if Stack Private Domain Mode is Enabled</para>
+        /// <para>Checks whether the Stack private domain mode is enabled.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24210,7 +24218,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Detail Query</para>
+        /// <para>Queries the details of a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24260,7 +24268,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Detail Query</para>
+        /// <para>Queries the details of a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24310,7 +24318,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Detail Query</para>
+        /// <para>Queries the details of a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24328,7 +24336,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Detail Query</para>
+        /// <para>Queries the details of a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24346,7 +24354,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable List Query</para>
+        /// <para>Queries a list of custom query variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24412,7 +24420,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable List Query</para>
+        /// <para>Queries a list of custom query variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24478,7 +24486,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable List Query</para>
+        /// <para>Queries a list of custom query variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24496,7 +24504,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable List Query</para>
+        /// <para>Queries a list of custom query variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24514,7 +24522,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable List under Sample &amp; Scenario</para>
+        /// <para>Queries the list of variables under a data sample and scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24564,7 +24572,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable List under Sample &amp; Scenario</para>
+        /// <para>Queries the list of variables under a data sample and scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24614,7 +24622,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable List under Sample &amp; Scenario</para>
+        /// <para>Queries the list of variables under a data sample and scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24632,7 +24640,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable List under Sample &amp; Scenario</para>
+        /// <para>Queries the list of variables under a data sample and scenario.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24650,7 +24658,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable Recommendation Details Query Interface</para>
+        /// <para>Queries the details of variable recommendations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24700,7 +24708,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable Recommendation Details Query Interface</para>
+        /// <para>Queries the details of variable recommendations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24750,7 +24758,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable Recommendation Details Query Interface</para>
+        /// <para>Queries the details of variable recommendations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24768,7 +24776,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable Recommendation Details Query Interface</para>
+        /// <para>Queries the details of variable recommendations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24786,7 +24794,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable Recommendation List Query Interface</para>
+        /// <para>Queries the variable recommendation list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24844,7 +24852,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable Recommendation List Query Interface</para>
+        /// <para>Queries the variable recommendation list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24902,7 +24910,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable Recommendation List Query Interface</para>
+        /// <para>Queries the variable recommendation list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24920,7 +24928,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Variable Recommendation List Query Interface</para>
+        /// <para>Queries the variable recommendation list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24938,7 +24946,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Indicators Information under Variables</para>
+        /// <para>Queries the metric information of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24992,7 +25000,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Indicators Information under Variables</para>
+        /// <para>Queries the metric information of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25046,7 +25054,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Indicators Information under Variables</para>
+        /// <para>Queries the metric information of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25064,7 +25072,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Indicators Information under Variables</para>
+        /// <para>Queries the metric information of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25082,7 +25090,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Supported Metrics List</para>
+        /// <para>Queries the list of supported metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25136,7 +25144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Supported Metrics List</para>
+        /// <para>Queries the list of supported metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25190,7 +25198,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Supported Metrics List</para>
+        /// <para>Queries the list of supported metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25208,7 +25216,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Supported Metrics List</para>
+        /// <para>Queries the list of supported metrics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25226,7 +25234,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of regions supported by ApiGateway</para>
+        /// <para>Queries the list of regions supported by API Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25272,7 +25280,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of regions supported by ApiGateway</para>
+        /// <para>Queries the list of regions supported by API Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25318,7 +25326,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of regions supported by ApiGateway</para>
+        /// <para>Queries the list of regions supported by API Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25336,7 +25344,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of regions supported by ApiGateway</para>
+        /// <para>Queries the list of regions supported by API Gateway.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25354,7 +25362,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Request Hit Details</para>
+        /// <para>Queries the hit details of a request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25404,7 +25412,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Request Hit Details</para>
+        /// <para>Queries the hit details of a request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25454,7 +25462,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Request Hit Details</para>
+        /// <para>Queries the hit details of a request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25472,7 +25480,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Request Hit Details</para>
+        /// <para>Queries the hit details of a request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25490,7 +25498,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Request Peak</para>
+        /// <para>Request Rate (QPS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25536,7 +25544,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Request Peak</para>
+        /// <para>Request Rate (QPS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25582,7 +25590,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Request Peak</para>
+        /// <para>Request Rate (QPS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25600,7 +25608,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Request Peak</para>
+        /// <para>Request Rate (QPS).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25618,7 +25626,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Drill-down Analysis</para>
+        /// <para>Performs drill-down analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25672,7 +25680,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Drill-down Analysis</para>
+        /// <para>Performs drill-down analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25726,7 +25734,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Drill-down Analysis</para>
+        /// <para>Performs drill-down analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25744,7 +25752,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Drill-down Analysis</para>
+        /// <para>Performs drill-down analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25762,7 +25770,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk map overview chart (line chart)</para>
+        /// <para>Risk Map Overview Chart (Line Chart)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25820,7 +25828,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk map overview chart (line chart)</para>
+        /// <para>Risk Map Overview Chart (Line Chart)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25878,7 +25886,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk map overview chart (line chart)</para>
+        /// <para>Risk Map Overview Chart (Line Chart)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25896,7 +25904,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Risk map overview chart (line chart)</para>
+        /// <para>Risk Map Overview Chart (Line Chart)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26066,7 +26074,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Overview List</para>
+        /// <para>Queries the policy overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26124,7 +26132,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Overview List</para>
+        /// <para>Queries the policy overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26182,7 +26190,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Overview List</para>
+        /// <para>Queries the policy overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26200,7 +26208,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Policy Overview List</para>
+        /// <para>Queries the policy overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26218,7 +26226,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Count by User ID</para>
+        /// <para>Queries the number of policies by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26268,7 +26276,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Count by User ID</para>
+        /// <para>Queries the number of policies by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26318,7 +26326,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Count by User ID</para>
+        /// <para>Queries the number of policies by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26336,7 +26344,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Count by User ID</para>
+        /// <para>Queries the number of policies by user ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26354,7 +26362,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query policy/version details</para>
+        /// <para>Query policy/version details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26412,7 +26420,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query policy/version details</para>
+        /// <para>Query policy/version details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26470,7 +26478,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query policy/version details</para>
+        /// <para>Query policy/version details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26488,7 +26496,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query policy/version details</para>
+        /// <para>Query policy/version details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26506,7 +26514,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query rule hit details</para>
+        /// <para>Queries the details of policy rule hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26568,7 +26576,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query rule hit details</para>
+        /// <para>Queries the details of policy rule hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26630,7 +26638,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query rule hit details</para>
+        /// <para>Queries the details of policy rule hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26648,7 +26656,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query rule hit details</para>
+        /// <para>Queries the details of policy rule hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26666,7 +26674,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query policy list</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26716,7 +26724,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query policy list</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26766,7 +26774,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query policy list</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26784,7 +26792,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query policy list</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26802,7 +26810,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of policies</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26880,7 +26888,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of policies</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26958,7 +26966,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of policies</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26976,7 +26984,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of policies</para>
+        /// <para>Queries a list of policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26994,7 +27002,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query historical snapshots based on ruleId and version</para>
+        /// <para>Query historical snapshots based on ruleId and version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27048,7 +27056,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query historical snapshots based on ruleId and version</para>
+        /// <para>Query historical snapshots based on ruleId and version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27102,7 +27110,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query historical snapshots based on ruleId and version</para>
+        /// <para>Query historical snapshots based on ruleId and version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27120,7 +27128,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query historical snapshots based on ruleId and version</para>
+        /// <para>Query historical snapshots based on ruleId and version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27138,7 +27146,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Version List</para>
+        /// <para>Queries the list of policy versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27200,7 +27208,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Version List</para>
+        /// <para>Queries the list of policy versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27262,7 +27270,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Version List</para>
+        /// <para>Queries the list of policy versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27280,7 +27288,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Policy Version List</para>
+        /// <para>Queries the list of policy versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27298,7 +27306,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SDK Download List</para>
+        /// <para>Queries the list of SDK downloads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27352,7 +27360,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SDK Download List</para>
+        /// <para>Queries the list of SDK downloads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27406,7 +27414,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SDK Download List</para>
+        /// <para>Queries the list of SDK downloads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27424,7 +27432,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SDK Download List</para>
+        /// <para>Queries the list of SDK downloads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27442,7 +27450,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SAF permissions.</para>
+        /// <para>Queries SAF permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27492,7 +27500,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SAF permissions.</para>
+        /// <para>Queries SAF permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27542,7 +27550,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SAF permissions.</para>
+        /// <para>Queries SAF permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27560,7 +27568,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query SAF permissions.</para>
+        /// <para>Queries SAF permissions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27578,7 +27586,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query saf_de Order</para>
+        /// <para>Queries saf_de orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27640,7 +27648,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query saf_de Order</para>
+        /// <para>Queries saf_de orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27702,7 +27710,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query saf_de Order</para>
+        /// <para>Queries saf_de orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27720,7 +27728,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query saf_de Order</para>
+        /// <para>Queries saf_de orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27738,7 +27746,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Order Information</para>
+        /// <para>Queries order information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27804,7 +27812,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Order Information</para>
+        /// <para>Queries order information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27870,7 +27878,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Order Information</para>
+        /// <para>Queries order information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27888,7 +27896,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Order Information</para>
+        /// <para>Queries order information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27906,7 +27914,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Configuration</para>
+        /// <para>Queries the access configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27952,7 +27960,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Configuration</para>
+        /// <para>Queries the access configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27998,7 +28006,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Configuration</para>
+        /// <para>Queries the access configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28016,7 +28024,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Configuration</para>
+        /// <para>Queries the access configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28034,7 +28042,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Configuration</para>
+        /// <para>Queries access configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28100,7 +28108,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Configuration</para>
+        /// <para>Queries access configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28166,7 +28174,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Configuration</para>
+        /// <para>Queries access configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28184,7 +28192,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Access Configuration</para>
+        /// <para>Queries access configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28202,7 +28210,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Risk Tag List</para>
+        /// <para>Retrieves the list of risk labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28264,7 +28272,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Risk Tag List</para>
+        /// <para>Retrieves the list of risk labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28326,7 +28334,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Risk Tag List</para>
+        /// <para>Retrieves the list of risk labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28344,7 +28352,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Risk Tag List</para>
+        /// <para>Retrieves the list of risk labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28674,7 +28682,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query of Sample List</para>
+        /// <para>Performs a paging query on the sample list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28748,7 +28756,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query of Sample List</para>
+        /// <para>Performs a paging query on the sample list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28822,7 +28830,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query of Sample List</para>
+        /// <para>Performs a paging query on the sample list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28840,7 +28848,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged Query of Sample List</para>
+        /// <para>Performs a paging query on the sample list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29026,7 +29034,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Example Authorization</para>
+        /// <para>Queries the authorization of a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29076,7 +29084,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Example Authorization</para>
+        /// <para>Queries the authorization of a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29126,7 +29134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Example Authorization</para>
+        /// <para>Queries the authorization of a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29144,7 +29152,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Example Authorization</para>
+        /// <para>Queries the authorization of a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29162,7 +29170,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Download Authorization Information</para>
+        /// <para>Queries the authorization information for downloading a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29212,7 +29220,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Download Authorization Information</para>
+        /// <para>Queries the authorization information for downloading a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29262,7 +29270,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Download Authorization Information</para>
+        /// <para>Queries the authorization information for downloading a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29280,7 +29288,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Download Authorization Information</para>
+        /// <para>Queries the authorization information for downloading a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29298,7 +29306,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Details</para>
+        /// <para>Queries the details of a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29352,7 +29360,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Details</para>
+        /// <para>Queries the details of a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29406,7 +29414,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Details</para>
+        /// <para>Queries the details of a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29424,7 +29432,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Details</para>
+        /// <para>Queries the details of a data sample.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29442,7 +29450,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample List</para>
+        /// <para>Queries the sample list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29504,7 +29512,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample List</para>
+        /// <para>Queries the sample list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29566,7 +29574,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample List</para>
+        /// <para>Queries the sample list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29584,7 +29592,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample List</para>
+        /// <para>Queries the sample list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29602,7 +29610,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Scene List</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29648,7 +29656,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Scene List</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29694,7 +29702,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Scene List</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29712,7 +29720,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Scene List</para>
+        /// <para>Queries the list of scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29730,7 +29738,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Tag List</para>
+        /// <para>Retrieves the list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29776,7 +29784,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Tag List</para>
+        /// <para>Retrieves the list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29822,7 +29830,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Tag List</para>
+        /// <para>Retrieves the list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29840,7 +29848,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Tag List</para>
+        /// <para>Retrieves the list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29858,7 +29866,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Upload Authorization Information</para>
+        /// <para>Queries the authorization information for sample uploads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29904,7 +29912,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Upload Authorization Information</para>
+        /// <para>Queries the authorization information for sample uploads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29950,7 +29958,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Upload Authorization Information</para>
+        /// <para>Queries the authorization information for sample uploads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29968,7 +29976,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Sample Upload Authorization Information</para>
+        /// <para>Queries the authorization information for sample uploads.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30138,12 +30146,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dropdown list for scenario-based service events</para>
+        /// <para>Queries the dropdown list of scenario-based risk control events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Dropdown list for scenario-based risk control events</para>
+        /// <para>Queries the dropdown list of scenario-based risk control events.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30193,12 +30201,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dropdown list for scenario-based service events</para>
+        /// <para>Queries the dropdown list of scenario-based risk control events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Dropdown list for scenario-based risk control events</para>
+        /// <para>Queries the dropdown list of scenario-based risk control events.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30248,12 +30256,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dropdown list for scenario-based service events</para>
+        /// <para>Queries the dropdown list of scenario-based risk control events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Dropdown list for scenario-based risk control events</para>
+        /// <para>Queries the dropdown list of scenario-based risk control events.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30271,12 +30279,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Dropdown list for scenario-based service events</para>
+        /// <para>Queries the dropdown list of scenario-based risk control events.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Dropdown list for scenario-based risk control events</para>
+        /// <para>Queries the dropdown list of scenario-based risk control events.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30294,7 +30302,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Scenario-based Risk Control Events</para>
+        /// <para>Queries the list of scenario-based risk control events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30352,7 +30360,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Scenario-based Risk Control Events</para>
+        /// <para>Queries the list of scenario-based risk control events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30410,7 +30418,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Scenario-based Risk Control Events</para>
+        /// <para>Queries the list of scenario-based risk control events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30428,7 +30436,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List of Scenario-based Risk Control Events</para>
+        /// <para>Queries the list of scenario-based risk control events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30446,12 +30454,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>White-boxed strategy list for risk control services</para>
+        /// <para>Queries the list of scenario-based risk control event policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of scenarized risk control event strategies</para>
+        /// <para>Queries the list of scenario-based risk control event policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30525,12 +30533,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>White-boxed strategy list for risk control services</para>
+        /// <para>Queries the list of scenario-based risk control event policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of scenarized risk control event strategies</para>
+        /// <para>Queries the list of scenario-based risk control event policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30604,12 +30612,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>White-boxed strategy list for risk control services</para>
+        /// <para>Queries the list of scenario-based risk control event policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of scenarized risk control event strategies</para>
+        /// <para>Queries the list of scenario-based risk control event policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30627,12 +30635,12 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>White-boxed strategy list for risk control services</para>
+        /// <para>Queries the list of scenario-based risk control event policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the list of scenarized risk control event strategies</para>
+        /// <para>Queries the list of scenario-based risk control event policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30778,7 +30786,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score Range Quantity Analysis</para>
+        /// <para>Analyzes the quantity distribution across score ranges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30844,7 +30852,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score Range Quantity Analysis</para>
+        /// <para>Analyzes the quantity distribution across score ranges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30910,7 +30918,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score Range Quantity Analysis</para>
+        /// <para>Analyzes the quantity distribution across score ranges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30928,7 +30936,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score Range Quantity Analysis</para>
+        /// <para>Analyzes the quantity distribution across score ranges.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30946,7 +30954,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Proportion of Score Ranges for Main Events/Bypass Events/Diversion Events</para>
+        /// <para>Queries the score range distribution of main events, bypass events, and diversion events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31008,7 +31016,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Proportion of Score Ranges for Main Events/Bypass Events/Diversion Events</para>
+        /// <para>Queries the score range distribution of main events, bypass events, and diversion events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31070,7 +31078,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Proportion of Score Ranges for Main Events/Bypass Events/Diversion Events</para>
+        /// <para>Queries the score range distribution of main events, bypass events, and diversion events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31088,7 +31096,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Proportion of Score Ranges for Main Events/Bypass Events/Diversion Events</para>
+        /// <para>Queries the score range distribution of main events, bypass events, and diversion events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31106,7 +31114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score Section Ratio Analysis</para>
+        /// <para>Score Range Proportion Analysis</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31172,7 +31180,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score Section Ratio Analysis</para>
+        /// <para>Score Range Proportion Analysis</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31238,7 +31246,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score Section Ratio Analysis</para>
+        /// <para>Score Range Proportion Analysis</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31256,7 +31264,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Score Section Ratio Analysis</para>
+        /// <para>Score Range Proportion Analysis</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31274,7 +31282,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task ID List</para>
+        /// <para>Queries the list of task IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31320,7 +31328,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task ID List</para>
+        /// <para>Queries the list of task IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31366,7 +31374,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task ID List</para>
+        /// <para>Queries the list of task IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31384,7 +31392,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task ID List</para>
+        /// <para>Queries the list of task IDs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31402,7 +31410,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ServiceAppkey dropdown</para>
+        /// <para>Retrieves the dropdown values for ServiceAppkey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31444,7 +31452,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ServiceAppkey dropdown</para>
+        /// <para>Retrieves the dropdown values for ServiceAppkey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31486,7 +31494,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ServiceAppkey dropdown</para>
+        /// <para>Retrieves the dropdown values for ServiceAppkey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31504,7 +31512,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ServiceAppkey dropdown</para>
+        /// <para>Retrieves the dropdown values for ServiceAppkey.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31650,7 +31658,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Service List</para>
+        /// <para>Retrieves the list of services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31696,7 +31704,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Service List</para>
+        /// <para>Retrieves the list of services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31742,7 +31750,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Service List</para>
+        /// <para>Retrieves the list of services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31760,7 +31768,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Service List</para>
+        /// <para>Retrieves the list of services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31778,7 +31786,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Estimate Call Information</para>
+        /// <para>Estimates call information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31832,7 +31840,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Estimate Call Information</para>
+        /// <para>Estimates call information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31886,7 +31894,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Estimate Call Information</para>
+        /// <para>Estimates call information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31904,7 +31912,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Estimate Call Information</para>
+        /// <para>Estimates call information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31922,7 +31930,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task Record Count</para>
+        /// <para>Queries the number of task records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31992,7 +32000,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task Record Count</para>
+        /// <para>Queries the number of task records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32062,7 +32070,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task Record Count</para>
+        /// <para>Queries the number of task records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32080,7 +32088,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Task Record Count</para>
+        /// <para>Queries the number of task records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32098,7 +32106,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32164,7 +32172,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32230,7 +32238,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32248,7 +32256,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32266,7 +32274,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Project Configuration</para>
+        /// <para>Retrieves the project configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32312,7 +32320,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Project Configuration</para>
+        /// <para>Retrieves the project configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32358,7 +32366,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Project Configuration</para>
+        /// <para>Retrieves the project configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32376,7 +32384,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Project Configuration</para>
+        /// <para>Retrieves the project configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32394,7 +32402,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query List of Policies Supporting Simulation</para>
+        /// <para>Queries the list of policies that support simulation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32444,7 +32452,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query List of Policies Supporting Simulation</para>
+        /// <para>Queries the list of policies that support simulation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32494,7 +32502,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query List of Policies Supporting Simulation</para>
+        /// <para>Queries the list of policies that support simulation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32512,7 +32520,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query List of Policies Supporting Simulation</para>
+        /// <para>Queries the list of policies that support simulation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32530,7 +32538,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag List</para>
+        /// <para>Queries the label list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32580,7 +32588,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag List</para>
+        /// <para>Queries the label list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32630,7 +32638,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag List</para>
+        /// <para>Queries the label list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32648,7 +32656,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag List</para>
+        /// <para>Queries the label list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32666,7 +32674,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Overview List</para>
+        /// <para>Queries the tag overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32728,7 +32736,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Overview List</para>
+        /// <para>Queries the tag overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32790,7 +32798,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Overview List</para>
+        /// <para>Queries the tag overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32808,7 +32816,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Overview List</para>
+        /// <para>Queries the tag overview list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32826,7 +32834,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Fluctuation Detection</para>
+        /// <para>Detects label fluctuations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32876,7 +32884,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Fluctuation Detection</para>
+        /// <para>Detects label fluctuations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32926,7 +32934,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Fluctuation Detection</para>
+        /// <para>Detects label fluctuations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32944,7 +32952,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Fluctuation Detection</para>
+        /// <para>Detects label fluctuations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32962,7 +32970,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Tag List</para>
+        /// <para>Retrieves the list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33008,7 +33016,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Tag List</para>
+        /// <para>Retrieves the list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33054,7 +33062,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Tag List</para>
+        /// <para>Retrieves the list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33072,7 +33080,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Tag List</para>
+        /// <para>Retrieves the list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33090,7 +33098,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Count Analysis</para>
+        /// <para>Analyzes the number of label hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33156,7 +33164,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Count Analysis</para>
+        /// <para>Analyzes the number of label hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33222,7 +33230,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Count Analysis</para>
+        /// <para>Analyzes the number of label hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33240,7 +33248,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Count Analysis</para>
+        /// <para>Analyzes the number of label hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33258,7 +33266,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Ratio Analysis</para>
+        /// <para>Analyzes the tag hit ratio distribution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33324,7 +33332,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Ratio Analysis</para>
+        /// <para>Analyzes the tag hit ratio distribution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33390,7 +33398,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Ratio Analysis</para>
+        /// <para>Analyzes the tag hit ratio distribution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33408,7 +33416,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Ratio Analysis</para>
+        /// <para>Analyzes the tag hit ratio distribution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33426,7 +33434,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Trend</para>
+        /// <para>Queries the trend of tag hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33488,7 +33496,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Trend</para>
+        /// <para>Queries the trend of tag hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33550,7 +33558,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Trend</para>
+        /// <para>Queries the trend of tag hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33568,7 +33576,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tag Hit Trend</para>
+        /// <para>Queries the trend of tag hits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33586,7 +33594,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33644,7 +33652,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33702,7 +33710,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33720,7 +33728,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task List</para>
+        /// <para>Queries the task list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33738,7 +33746,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task Log List</para>
+        /// <para>Queries the task logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33804,7 +33812,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task Log List</para>
+        /// <para>Queries the task logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33870,7 +33878,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task Log List</para>
+        /// <para>Queries the task logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33888,7 +33896,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Task Log List</para>
+        /// <para>Queries the task logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33906,7 +33914,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Event Count</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33952,7 +33960,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Event Count</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33998,7 +34006,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Event Count</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34016,7 +34024,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Total Event Count</para>
+        /// <para>Queries the total number of events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34034,7 +34042,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Template Download</para>
+        /// <para>Downloads a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34080,7 +34088,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Template Download</para>
+        /// <para>Downloads a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34126,7 +34134,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Template Download</para>
+        /// <para>Downloads a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34144,7 +34152,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Template Download</para>
+        /// <para>Downloads a template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34162,7 +34170,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event List by Event Name</para>
+        /// <para>Queries a list of events by event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34236,7 +34244,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event List by Event Name</para>
+        /// <para>Queries a list of events by event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34310,7 +34318,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event List by Event Name</para>
+        /// <para>Queries a list of events by event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34328,7 +34336,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Event List by Event Name</para>
+        /// <para>Queries a list of events by event name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34346,7 +34354,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get List of Services Used by User</para>
+        /// <para>Queries the list of services used by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34392,7 +34400,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get List of Services Used by User</para>
+        /// <para>Queries the list of services used by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34438,7 +34446,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get List of Services Used by User</para>
+        /// <para>Queries the list of services used by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34456,7 +34464,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get List of Services Used by User</para>
+        /// <para>Queries the list of services used by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34474,7 +34482,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Current Logged-in User Information</para>
+        /// <para>Retrieves the information about the current logged-on user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34520,7 +34528,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Current Logged-in User Information</para>
+        /// <para>Retrieves the information about the current logged-on user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34566,7 +34574,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Current Logged-in User Information</para>
+        /// <para>Retrieves the information about the current logged-on user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34584,7 +34592,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Current Logged-in User Information</para>
+        /// <para>Retrieves the information about the current logged-on user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34602,7 +34610,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Binding Information</para>
+        /// <para>Queries variable binding information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34656,7 +34664,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Binding Information</para>
+        /// <para>Queries variable binding information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34710,7 +34718,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Binding Information</para>
+        /// <para>Queries variable binding information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34728,7 +34736,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Binding Information</para>
+        /// <para>Queries variable binding information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34746,7 +34754,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query variable details</para>
+        /// <para>Queries the details of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34796,7 +34804,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query variable details</para>
+        /// <para>Queries the details of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34846,7 +34854,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query variable details</para>
+        /// <para>Queries the details of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34864,7 +34872,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query variable details</para>
+        /// <para>Queries the details of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34882,7 +34890,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Fee Information</para>
+        /// <para>Queries the billing information of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34932,7 +34940,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Fee Information</para>
+        /// <para>Queries the billing information of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34982,7 +34990,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Fee Information</para>
+        /// <para>Queries the billing information of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35000,7 +35008,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Fee Information</para>
+        /// <para>Queries the billing information of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35018,7 +35026,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Details</para>
+        /// <para>Queries the details of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35096,7 +35104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Details</para>
+        /// <para>Queries the details of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35174,7 +35182,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Details</para>
+        /// <para>Queries the details of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35192,7 +35200,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Details</para>
+        /// <para>Queries the details of variables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35210,7 +35218,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Definitions</para>
+        /// <para>Queries variable definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35288,7 +35296,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Definitions</para>
+        /// <para>Queries variable definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35366,7 +35374,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Definitions</para>
+        /// <para>Queries variable definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35384,7 +35392,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Definitions</para>
+        /// <para>Queries variable definitions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35402,7 +35410,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Configuration Information</para>
+        /// <para>Queries configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35468,7 +35476,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Configuration Information</para>
+        /// <para>Queries configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35534,7 +35542,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Configuration Information</para>
+        /// <para>Queries configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35552,7 +35560,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Configuration Information</para>
+        /// <para>Queries configuration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35922,7 +35930,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载样本文件</para>
+        /// <para>Download sample file</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35976,7 +35984,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载样本文件</para>
+        /// <para>Download sample file</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36030,7 +36038,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载样本文件</para>
+        /// <para>Download sample file</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36048,7 +36056,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载样本文件</para>
+        /// <para>Download sample file</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36202,7 +36210,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载子任务结果</para>
+        /// <para>Download subtask result</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36252,7 +36260,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载子任务结果</para>
+        /// <para>Download subtask result</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36302,7 +36310,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载子任务结果</para>
+        /// <para>Download subtask result</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36320,7 +36328,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下载子任务结果</para>
+        /// <para>Download subtask result</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36338,7 +36346,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Test</para>
+        /// <para>Tests a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36404,7 +36412,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Test</para>
+        /// <para>Tests a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36470,7 +36478,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Test</para>
+        /// <para>Tests a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36488,7 +36496,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Test</para>
+        /// <para>Tests a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36506,7 +36514,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>File Upload</para>
+        /// <para>Uploads a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36560,7 +36568,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>File Upload</para>
+        /// <para>Uploads a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36614,7 +36622,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>File Upload</para>
+        /// <para>Uploads a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36632,7 +36640,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>File Upload</para>
+        /// <para>Uploads a file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36650,7 +36658,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录</para>
+        /// <para>Create a sample record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36700,7 +36708,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录</para>
+        /// <para>Create a sample record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36750,7 +36758,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录</para>
+        /// <para>Create a sample record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36768,7 +36776,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建样本记录</para>
+        /// <para>Create a sample record</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36786,7 +36794,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看子任务结果</para>
+        /// <para>View subtask results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36836,7 +36844,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看子任务结果</para>
+        /// <para>View subtask results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36886,7 +36894,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看子任务结果</para>
+        /// <para>View subtask results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36904,7 +36912,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看子任务结果</para>
+        /// <para>View subtask results</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37058,7 +37066,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create or Import Name List</para>
+        /// <para>Creates or imports a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37136,7 +37144,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create or Import Name List</para>
+        /// <para>Creates or imports a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37214,7 +37222,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create or Import Name List</para>
+        /// <para>Creates or imports a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37232,7 +37240,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create or Import Name List</para>
+        /// <para>Creates or imports a list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37250,7 +37258,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import Template Event</para>
+        /// <para>Imports template events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37300,7 +37308,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import Template Event</para>
+        /// <para>Imports template events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37350,7 +37358,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import Template Event</para>
+        /// <para>Imports template events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37368,7 +37376,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Import Template Event</para>
+        /// <para>Imports template events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37386,7 +37394,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本列表查询</para>
+        /// <para>Sample List Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37460,7 +37468,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本列表查询</para>
+        /// <para>Sample List Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37534,7 +37542,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本列表查询</para>
+        /// <para>Sample List Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37552,7 +37560,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本列表查询</para>
+        /// <para>Sample List Query</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37570,7 +37578,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组列表查询</para>
+        /// <para>Query task group list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37636,7 +37644,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组列表查询</para>
+        /// <para>Query task group list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37702,7 +37710,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组列表查询</para>
+        /// <para>Query task group list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37720,7 +37728,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务组列表查询</para>
+        /// <para>Query task group list</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37962,7 +37970,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合并下载</para>
+        /// <para>Merge Download</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38012,7 +38020,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合并下载</para>
+        /// <para>Merge Download</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38062,7 +38070,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合并下载</para>
+        /// <para>Merge Download</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38080,7 +38088,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>合并下载</para>
+        /// <para>Merge Download</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38754,7 +38762,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Memo</para>
+        /// <para>Update memo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38808,7 +38816,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Memo</para>
+        /// <para>Update memo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38862,7 +38870,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Memo</para>
+        /// <para>Update memo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38880,7 +38888,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Memo</para>
+        /// <para>Update memo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38898,7 +38906,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Accumulated Variable</para>
+        /// <para>Edits a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38972,7 +38980,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Accumulated Variable</para>
+        /// <para>Edits a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39046,7 +39054,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Accumulated Variable</para>
+        /// <para>Edits a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39064,7 +39072,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Accumulated Variable</para>
+        /// <para>Edits a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39082,7 +39090,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Event</para>
+        /// <para>Edits an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39156,7 +39164,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Event</para>
+        /// <para>Edits an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39230,7 +39238,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Event</para>
+        /// <para>Edits an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39248,7 +39256,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Event</para>
+        /// <para>Edits an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39266,7 +39274,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Event Status</para>
+        /// <para>Modifies the status of an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39328,7 +39336,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Event Status</para>
+        /// <para>Modifies the status of an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39390,7 +39398,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Event Status</para>
+        /// <para>Modifies the status of an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39408,7 +39416,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Event Status</para>
+        /// <para>Modifies the status of an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39426,7 +39434,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Custom Variable</para>
+        /// <para>Edits a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39516,7 +39524,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Custom Variable</para>
+        /// <para>Edits a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39606,7 +39614,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Custom Variable</para>
+        /// <para>Edits a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39624,7 +39632,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Custom Variable</para>
+        /// <para>Edits a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39642,7 +39650,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Field</para>
+        /// <para>Modifies a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39712,7 +39720,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Field</para>
+        /// <para>Modifies a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39782,7 +39790,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Field</para>
+        /// <para>Modifies a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39800,7 +39808,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Field</para>
+        /// <para>Modifies a field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39818,7 +39826,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Policy Priority</para>
+        /// <para>Modifies the priority of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39876,7 +39884,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Policy Priority</para>
+        /// <para>Modifies the priority of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39934,7 +39942,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Policy Priority</para>
+        /// <para>Modifies the priority of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39952,7 +39960,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Policy Priority</para>
+        /// <para>Modifies the priority of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39970,7 +39978,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change the status of a policy version application</para>
+        /// <para>Changes the approval status of a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40056,7 +40064,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change the status of a policy version application</para>
+        /// <para>Changes the approval status of a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40142,7 +40150,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change the status of a policy version application</para>
+        /// <para>Changes the approval status of a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40160,7 +40168,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change the status of a policy version application</para>
+        /// <para>Changes the approval status of a policy version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40178,7 +40186,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate Service</para>
+        /// <para>Activates a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40228,7 +40236,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate Service</para>
+        /// <para>Activates a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40278,7 +40286,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate Service</para>
+        /// <para>Activates a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40296,7 +40304,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate Service</para>
+        /// <para>Activates a service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40314,7 +40322,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operate Favorites</para>
+        /// <para>Manages favorites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40368,7 +40376,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operate Favorites</para>
+        /// <para>Manages favorites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40422,7 +40430,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operate Favorites</para>
+        /// <para>Manages favorites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40440,7 +40448,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operate Favorites</para>
+        /// <para>Manages favorites.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40458,7 +40466,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enterprise Verification</para>
+        /// <para>Performs a precondition check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40504,7 +40512,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enterprise Verification</para>
+        /// <para>Performs a precondition check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40550,7 +40558,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enterprise Verification</para>
+        /// <para>Performs a precondition check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40568,7 +40576,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enterprise Verification</para>
+        /// <para>Performs a precondition check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41154,7 +41162,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query White-box Strategy Details</para>
+        /// <para>Queries the details of a whitebox implementation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41212,7 +41220,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query White-box Strategy Details</para>
+        /// <para>Queries the details of a whitebox implementation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41270,7 +41278,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query White-box Strategy Details</para>
+        /// <para>Queries the details of a whitebox implementation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41288,7 +41296,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query White-box Strategy Details</para>
+        /// <para>Queries the details of a whitebox implementation policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41306,7 +41314,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recall.</para>
+        /// <para>Withdraws a review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41352,7 +41360,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recall.</para>
+        /// <para>Withdraws a review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41398,7 +41406,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recall.</para>
+        /// <para>Withdraws a review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41416,7 +41424,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Recall.</para>
+        /// <para>Withdraws a review.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41434,7 +41442,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Event</para>
+        /// <para>Deletes an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41496,7 +41504,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Event</para>
+        /// <para>Deletes an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41558,7 +41566,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Event</para>
+        /// <para>Deletes an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41576,7 +41584,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Event</para>
+        /// <para>Deletes an event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41594,7 +41602,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Template Download</para>
+        /// <para>Download template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41644,7 +41652,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Template Download</para>
+        /// <para>Download template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41694,7 +41702,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Template Download</para>
+        /// <para>Download template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41712,7 +41720,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Template Download</para>
+        /// <para>Download template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41730,7 +41738,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save Custom Columns</para>
+        /// <para>Saves custom columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41780,7 +41788,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save Custom Columns</para>
+        /// <para>Saves custom columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41830,7 +41838,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save Custom Columns</para>
+        /// <para>Saves custom columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41848,7 +41856,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Save Custom Columns</para>
+        /// <para>Saves custom columns.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41866,7 +41874,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bypass/Shunt Configuration</para>
+        /// <para>The bypass/diversion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41924,7 +41932,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bypass/Shunt Configuration</para>
+        /// <para>The bypass/diversion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41982,7 +41990,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bypass/Shunt Configuration</para>
+        /// <para>The bypass/diversion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42000,7 +42008,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bypass/Shunt Configuration</para>
+        /// <para>The bypass/diversion configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42018,7 +42026,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本列表查询</para>
+        /// <para>Sample Search</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42084,7 +42092,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本列表查询</para>
+        /// <para>Sample Search</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42150,7 +42158,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本列表查询</para>
+        /// <para>Sample Search</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42168,7 +42176,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>样本列表查询</para>
+        /// <para>Sample Search</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42186,7 +42194,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start/Stop Bypass Event</para>
+        /// <para>Starts or stops a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42240,7 +42248,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start/Stop Bypass Event</para>
+        /// <para>Starts or stops a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42294,7 +42302,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start/Stop Bypass Event</para>
+        /// <para>Starts or stops a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42312,7 +42320,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start/Stop Bypass Event</para>
+        /// <para>Starts or stops a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42330,7 +42338,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start Task Execution</para>
+        /// <para>Starts executing a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42380,7 +42388,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start Task Execution</para>
+        /// <para>Starts executing a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42430,7 +42438,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start Task Execution</para>
+        /// <para>Starts executing a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42448,7 +42456,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start Task Execution</para>
+        /// <para>Starts executing a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42466,7 +42474,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop Task</para>
+        /// <para>Stops a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42516,7 +42524,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop Task</para>
+        /// <para>Stops a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42566,7 +42574,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop Task</para>
+        /// <para>Stops a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42584,7 +42592,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop Task</para>
+        /// <para>Stops a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42602,7 +42610,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Switch</para>
+        /// <para>Enables or disables a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42660,7 +42668,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Switch</para>
+        /// <para>Enables or disables a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42718,7 +42726,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Switch</para>
+        /// <para>Enables or disables a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42736,7 +42744,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Custom Variable Switch</para>
+        /// <para>Enables or disables a custom variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42754,7 +42762,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Field Switch</para>
+        /// <para>Toggles a field on or off.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42816,7 +42824,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Field Switch</para>
+        /// <para>Toggles a field on or off.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42878,7 +42886,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Field Switch</para>
+        /// <para>Toggles a field on or off.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42896,7 +42904,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Field Switch</para>
+        /// <para>Toggles a field on or off.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42914,7 +42922,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Enable/Disable</para>
+        /// <para>Queries the enabling or disabling status of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42968,7 +42976,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Enable/Disable</para>
+        /// <para>Queries the enabling or disabling status of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43022,7 +43030,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Enable/Disable</para>
+        /// <para>Queries the enabling or disabling status of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43040,7 +43048,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Variable Enable/Disable</para>
+        /// <para>Queries the enabling or disabling status of a variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43058,7 +43066,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>One-click switch online</para>
+        /// <para>Switches an event to online with one click.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43108,7 +43116,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>One-click switch online</para>
+        /// <para>Switches an event to online with one click.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43158,7 +43166,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>One-click switch online</para>
+        /// <para>Switches an event to online with one click.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43176,7 +43184,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>One-click switch online</para>
+        /// <para>Switches an event to online with one click.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43194,7 +43202,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cumulative Variable Switch</para>
+        /// <para>Enables or disables a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43256,7 +43264,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cumulative Variable Switch</para>
+        /// <para>Enables or disables a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43318,7 +43326,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cumulative Variable Switch</para>
+        /// <para>Enables or disables a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43336,7 +43344,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cumulative Variable Switch</para>
+        /// <para>Enables or disables a cumulative variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43354,7 +43362,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determine if the task name is duplicated</para>
+        /// <para>Checks whether a task name is duplicate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43404,7 +43412,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determine if the task name is duplicated</para>
+        /// <para>Checks whether a task name is duplicate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43454,7 +43462,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determine if the task name is duplicated</para>
+        /// <para>Checks whether a task name is duplicate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43472,7 +43480,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Determine if the task name is duplicated</para>
+        /// <para>Checks whether a task name is duplicate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43490,7 +43498,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Query Conditions</para>
+        /// <para>Modifies a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43572,7 +43580,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Query Conditions</para>
+        /// <para>Modifies a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43654,7 +43662,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Query Conditions</para>
+        /// <para>Modifies a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43672,7 +43680,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Query Conditions</para>
+        /// <para>Modifies a query condition.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43690,7 +43698,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval</para>
+        /// <para>Processes an approval request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43752,7 +43760,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval</para>
+        /// <para>Processes an approval request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43814,7 +43822,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval</para>
+        /// <para>Processes an approval request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43832,7 +43840,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Approval</para>
+        /// <para>Processes an approval request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43850,7 +43858,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Authorization Policy</para>
+        /// <para>Modifies an authorization policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43920,7 +43928,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Authorization Policy</para>
+        /// <para>Modifies an authorization policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43990,7 +43998,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Authorization Policy</para>
+        /// <para>Modifies an authorization policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44008,7 +44016,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Authorization Policy</para>
+        /// <para>Modifies an authorization policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44026,7 +44034,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Bypass Event</para>
+        /// <para>Edits a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44080,7 +44088,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Bypass Event</para>
+        /// <para>Edits a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44134,7 +44142,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Bypass Event</para>
+        /// <para>Edits a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44152,7 +44160,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit Bypass Event</para>
+        /// <para>Edits a bypass event.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44170,7 +44178,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Data Source</para>
+        /// <para>Modifies a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44236,7 +44244,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Data Source</para>
+        /// <para>Modifies a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44302,7 +44310,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Data Source</para>
+        /// <para>Modifies a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44320,7 +44328,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Data Source</para>
+        /// <para>Modifies a data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44338,7 +44346,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Custom Query Variable</para>
+        /// <para>Modifies a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44424,7 +44432,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Custom Query Variable</para>
+        /// <para>Modifies a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44510,7 +44518,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Custom Query Variable</para>
+        /// <para>Modifies a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44528,7 +44536,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Custom Query Variable</para>
+        /// <para>Modifies a custom query variable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44546,7 +44554,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Policy</para>
+        /// <para>Updates a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44640,7 +44648,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Policy</para>
+        /// <para>Updates a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44734,7 +44742,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Policy</para>
+        /// <para>Updates a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44752,7 +44760,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Policy</para>
+        /// <para>Updates a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44770,7 +44778,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Basic Policy Information</para>
+        /// <para>Updates the basic information of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44836,7 +44844,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Basic Policy Information</para>
+        /// <para>Updates the basic information of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44902,7 +44910,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Basic Policy Information</para>
+        /// <para>Updates the basic information of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44920,7 +44928,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Basic Policy Information</para>
+        /// <para>Updates the basic information of a policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44938,7 +44946,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Update Samples</para>
+        /// <para>Modifies samples in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44996,7 +45004,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Update Samples</para>
+        /// <para>Modifies samples in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45054,7 +45062,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Update Samples</para>
+        /// <para>Modifies samples in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45072,7 +45080,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch Update Samples</para>
+        /// <para>Modifies samples in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45258,7 +45266,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传并校验样本文件</para>
+        /// <para>Upload and validate the sample file for the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45312,7 +45320,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传并校验样本文件</para>
+        /// <para>Upload and validate the sample file for the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45366,7 +45374,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传并校验样本文件</para>
+        /// <para>Upload and validate the sample file for the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45384,7 +45392,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传并校验样本文件</para>
+        /// <para>Upload and validate the sample file for the customer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45594,7 +45602,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传并校验样本文件</para>
+        /// <para>Upload and validate the sample file</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45656,7 +45664,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传并校验样本文件</para>
+        /// <para>Upload and validate the sample file</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45718,7 +45726,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传并校验样本文件</para>
+        /// <para>Upload and validate the sample file</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45736,7 +45744,7 @@ namespace AlibabaCloud.SDK.Xtee20210910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>上传并校验样本文件</para>
+        /// <para>Upload and validate the sample file</para>
         /// </summary>
         /// 
         /// <param name="request">

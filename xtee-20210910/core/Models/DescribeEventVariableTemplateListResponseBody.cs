@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeEventVariableTemplateListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A32FE941-35F2-5378-B37C-4B8FDB16F094</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return object</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public List<DescribeEventVariableTemplateListResponseBodyResultObject> ResultObject { get; set; }
         public class DescribeEventVariableTemplateListResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Template code.</para>
+            /// <para>The template code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>register</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TemplateCode { get; set; }
 
             /// <summary>
-            /// <para>Template name.</para>
+            /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>注册模版</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>Variable list.</para>
+            /// <para>The list of variables.</para>
             /// </summary>
             [NameInMap("variables")]
             [Validation(Required=false)]
             public List<DescribeEventVariableTemplateListResponseBodyResultObjectVariables> Variables { get; set; }
             public class DescribeEventVariableTemplateListResponseBodyResultObjectVariables : TeaModel {
                 /// <summary>
-                /// <para>Variable code</para>
+                /// <para>The variable code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>age</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Description information.</para>
+                /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>描述</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>Variable input type</para>
+                /// <para>The variable input type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>STRING</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string FieldType { get; set; }
 
                 /// <summary>
-                /// <para>Primary key ID</para>
+                /// <para>The primary key ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>454</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>Variable name</para>
+                /// <para>The variable name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>age</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Title.</para>
+                /// <para>The title.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>年龄</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
                 public string Title { get; set; }
 
                 /// <summary>
-                /// <para>Variable type.</para>
+                /// <para>The variable type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NATIVE</para>

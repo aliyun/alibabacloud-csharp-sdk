@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeUserInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The input parameter data is not valid. order_storage_company_num component not found</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Returned object</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("resultObject")]
         [Validation(Required=false)]
         public DescribeUserInfoResponseBodyResultObject ResultObject { get; set; }
         public class DescribeUserInfoResponseBodyResultObject : TeaModel {
             /// <summary>
-            /// <para>Client IP.</para>
+            /// <para>The client IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.0.1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string ClientIp { get; set; }
 
             /// <summary>
-            /// <para>Sub-account ID</para>
+            /// <para>The RAM user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>555666</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public string SubId { get; set; }
 
             /// <summary>
-            /// <para>User UID</para>
+            /// <para>The user UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>15633333331111</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
             public long? UserId { get; set; }
 
             /// <summary>
-            /// <para>User name</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>root</para>

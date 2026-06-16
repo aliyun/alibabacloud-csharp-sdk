@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeListPocRequest : TeaModel {
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -54,31 +54,31 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Task name.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Task_001</para>
+        /// <para>task1</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The status of the import task. Valid values:</para>
+        /// <para>The execution status of the import task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DOING</description></item>
-        /// <item><description>FINISH</description></item>
+        /// <item><description>DOING: running</description></item>
+        /// <item><description>FINISH: completed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>FINISH</para>
+        /// <para>DOING</para>
         /// </summary>
         [NameInMap("TaskStatus")]
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>Type</para>
+        /// <para>The type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAF_CONSOLE</para>

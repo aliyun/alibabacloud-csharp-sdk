@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class UpdateRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, default value is <b>zh</b>. Values: </para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Primary key ID of the policy</para>
+        /// <para>The primary key ID of the policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6843</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public long? ConsoleRuleId { get; set; }
 
         /// <summary>
-        /// <para>Event code</para>
+        /// <para>The event code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_agdxgz0246</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EventCode { get; set; }
 
         /// <summary>
-        /// <para>Execution logic</para>
+        /// <para>The execution logic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1&amp;2</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string LogicExpression { get; set; }
 
         /// <summary>
-        /// <para>Description</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>备注</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Memo { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Output action</para>
+        /// <para>The output actions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;inputs\&quot;:[\&quot;rn0301\&quot;],\&quot;name\&quot;:\&quot;<b>addDeTags</b>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleActions { get; set; }
 
         /// <summary>
-        /// <para>DSL policy expression</para>
+        /// <para>The DSL policy expression.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleBody { get; set; }
 
         /// <summary>
-        /// <para>Policy expression</para>
+        /// <para>The policy expressions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;expressionName\&quot;:\&quot;手机号MD5命中人脸测试名单\&quot;,\&quot;itemId\&quot;:1,\&quot;left\&quot;:{\&quot;name\&quot;:\&quot;mobileMd5\&quot;},\&quot;operatorCode\&quot;:\&quot;deInNameList\&quot;,\&quot;operatorName\&quot;:\&quot;在名单中\&quot;,\&quot;right\&quot;:{\&quot;fieldValue\&quot;:\&quot;nl_5tolf69W138c\&quot;}}]</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleExpressions { get; set; }
 
         /// <summary>
-        /// <para>Policy ID</para>
+        /// <para>The policy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>102224</para>
@@ -255,7 +255,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>Policy name</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>分析中心事件测试_策略01</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Policy status</para>
+        /// <para>The policy status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleStatus { get; set; }
 
         /// <summary>
-        /// <para>Policy type</para>
+        /// <para>The policy type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DEFAULT</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RuleType { get; set; }
 
         /// <summary>
-        /// <para>Primary key ID of the policy version</para>
+        /// <para>The primary key ID of the policy version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11519</para>

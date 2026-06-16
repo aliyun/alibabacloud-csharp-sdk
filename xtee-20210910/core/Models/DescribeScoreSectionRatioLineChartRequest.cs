@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeScoreSectionRatioLineChartRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for request and response messages, with a default value of <b>zh</b>. Values: </para>
+        /// <para>Sets the language type for sending and receiving messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Start time, accurate to milliseconds (ms).</para>
+        /// <para>The start time, accurate to milliseconds (ms).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string BeginTime { get; set; }
 
         /// <summary>
-        /// <para>Bypass event code</para>
+        /// <para>Bypass event codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_amnhke2482</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ByPassEventCodes { get; set; }
 
         /// <summary>
-        /// <para>End time, accurate to milliseconds (ms).</para>
+        /// <para>The end time, accurate to milliseconds (ms).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Main event code</para>
+        /// <para>Main event codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_avcqzc3714</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string MainEventCodes { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>Region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Shunt event code</para>
+        /// <para>Shunt event codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>de_amnhke2488</para>

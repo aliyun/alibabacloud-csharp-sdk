@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
 {
     public class DescribeVariableMarketListRequest : TeaModel {
         /// <summary>
-        /// <para>Sets the language type for requests and received messages, with a default value of <b>zh</b>. Values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Charging mode</para>
+        /// <para>The billing mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FREE</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ChargingMode { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Page size, with a default value of 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Paging indicator, default is true.</para>
+        /// <para>Specifies whether to enable paging. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -64,8 +64,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Paging { get; set; }
 
         /// <summary>
-        /// <para>Query content, supports fuzzy search.</para>
-        /// <para> Title/Description</para>
+        /// <para>The query content. Fuzzy match is supported for the title or description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>手机号</para>
@@ -75,7 +74,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string QueryContent { get; set; }
 
         /// <summary>
-        /// <para>Region code</para>
+        /// <para>The region code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -85,7 +84,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string RegId { get; set; }
 
         /// <summary>
-        /// <para>Scenario</para>
+        /// <para>The scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[\&quot;coupon_abuse_detection\&quot;]</para>
@@ -95,7 +94,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string ScenesStr { get; set; }
 
         /// <summary>
-        /// <para>Source</para>
+        /// <para>The source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SAF</para>
@@ -105,7 +104,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>Title.</para>
+        /// <para>The title.</para>
         /// 
         /// <b>Example:</b>
         /// <para>设备风险识别_标签</para>
