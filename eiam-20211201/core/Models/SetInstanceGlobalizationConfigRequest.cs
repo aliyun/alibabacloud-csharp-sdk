@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetInstanceGlobalizationConfigRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>语言类型</para>
+        /// <para>The language.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>时区</para>
+        /// <para>The time zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

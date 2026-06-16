@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceModuleInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The instance information.</para>
+        /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public GetInstanceModuleInfoResponseBodyModule Module { get; set; }
         public class GetInstanceModuleInfoResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>二级模块信息</para>
+            /// <para>The information about the secondary modules.</para>
             /// </summary>
             [NameInMap("Features")]
             [Validation(Required=false)]
             public List<GetInstanceModuleInfoResponseBodyModuleFeatures> Features { get; set; }
             public class GetInstanceModuleInfoResponseBodyModuleFeatures : TeaModel {
                 /// <summary>
-                /// <para>二级模块标识</para>
+                /// <para>The identifier of the secondary module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:alibaba:idaas:license:module:application:standard:oidc</para>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string FeatureKey { get; set; }
 
                 /// <summary>
-                /// <para>二级模块状态</para>
+                /// <para>The status of the secondary module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>enabled</para>
@@ -43,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>模块状态</para>
+            /// <para>The identifier of the primary module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:license:module:application</para>
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ModuleKey { get; set; }
 
             /// <summary>
-            /// <para>一级模块状态</para>
+            /// <para>The status of the primary module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -65,6 +68,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

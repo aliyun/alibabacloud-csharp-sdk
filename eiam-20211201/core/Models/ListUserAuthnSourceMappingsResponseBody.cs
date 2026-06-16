@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUserAuthnSourceMappingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>分页查询时每页行数。</para>
+        /// <para>The maximum number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</para>
+        /// <para>The token to retrieve the previous page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -55,12 +59,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public int? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>A list of bindings for third-party account logons.</para>
+        /// </summary>
         [NameInMap("UserAuthnSourceMappings")]
         [Validation(Required=false)]
         public List<ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings> UserAuthnSourceMappings { get; set; }
         public class ListUserAuthnSourceMappingsResponseBodyUserAuthnSourceMappings : TeaModel {
             /// <summary>
-            /// <para>来源Idp类型</para>
+            /// <para>The authentication source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:authntype:oidc</para>
@@ -70,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnSourceType { get; set; }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the binding was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1762309642177</para>
@@ -79,12 +86,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? CreateTime { get; set; }
 
+            /// <summary>
+            /// <para>Information about the associated third-party account.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;userId\&quot;:\&quot;xxxx\&quot;,\&quot;name\&quot;:\&quot;xxx\&quot;,\&quot;bindTime\&quot;:\&quot;1766050298872\&quot;,\&quot;description\&quot;:\&quot;bind request id: reqpre_xxx\&quot;}</para>
+            /// </summary>
             [NameInMap("ExternalData")]
             [Validation(Required=false)]
             public string ExternalData { get; set; }
 
             /// <summary>
-            /// <para>来源Idp Id</para>
+            /// <para>The source IdP ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idp_my664lwkhpicbyzirog3xxxxx</para>
@@ -94,7 +107,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderId { get; set; }
 
             /// <summary>
-            /// <para>实例Id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -104,7 +117,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>最近一次更新时间</para>
+            /// <para>The time when the binding was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1762309642177</para>
@@ -114,7 +127,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>外部ID</para>
+            /// <para>The external ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxx</para>
@@ -124,7 +137,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UserExternalId { get; set; }
 
             /// <summary>
-            /// <para>用户ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_ue2jvisn35exxxxx</para>

@@ -10,18 +10,24 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListDomainsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the domain names.</para>
+        /// <para>The list of domain names.</para>
         /// </summary>
         [NameInMap("Domains")]
         [Validation(Required=false)]
         public List<ListDomainsResponseBodyDomains> Domains { get; set; }
         public class ListDomainsResponseBodyDomains : TeaModel {
+            /// <summary>
+            /// <para>The brand ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>brand_xxxx</para>
+            /// </summary>
             [NameInMap("BrandId")]
             [Validation(Required=false)]
             public string BrandId { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the domain name was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -31,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the domain name is the default domain.</para>
+            /// <para>Indicates whether the domain name is the default one.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? DefaultDomain { get; set; }
 
             /// <summary>
-            /// <para>The domain.</para>
+            /// <para>The domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>The domain ID.</para>
+            /// <para>The domain name ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dm_examplexxxxx</para>
@@ -63,8 +69,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The type of the domain name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system_init: an initial domain name.</description></item>
-            /// <item><description>user_custom: a custom domain name.</description></item>
+            /// <item><description><para>system_init: The default domain name that is generated during initialization.</para>
+            /// </description></item>
+            /// <item><description><para>user_custom: A custom domain name.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,17 +83,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DomainType { get; set; }
 
             /// <summary>
-            /// <para>The information about the Internet content provider (ICP) filing of the domain name.</para>
+            /// <para>The ICP filing information about the domain name.</para>
             /// </summary>
             [NameInMap("Filing")]
             [Validation(Required=false)]
             public ListDomainsResponseBodyDomainsFiling Filing { get; set; }
             public class ListDomainsResponseBodyDomainsFiling : TeaModel {
                 /// <summary>
-                /// <para>The ICP number associated with the domain name. Both the entity ICP number and website ICP number are supported.</para>
+                /// <para>The ICP filing number associated with the domain name. Both entity and website ICP filing numbers are supported.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Zhexx-xxxxxx</para>
+                /// <para>xICPxxxxxx-xx</para>
                 /// </summary>
                 [NameInMap("IcpNumber")]
                 [Validation(Required=false)]
@@ -104,10 +112,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the domain name is locked. Valid values:</para>
+            /// <para>The lock status of the domain name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>unlock</description></item>
-            /// <item><description>lockByLicense</description></item>
+            /// <item><description><para>unlock: Normal.</para>
+            /// </description></item>
+            /// <item><description><para>lockByLicense: The domain name is unavailable due to license limitations.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,7 +128,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LockMode { get; set; }
 
             /// <summary>
-            /// <para>The time when the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the domain name was last updated. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateNetworkZoneRequest : TeaModel {
         /// <summary>
+        /// <para>The idempotence token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>client-token-examplexxxx</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,21 +31,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>包含的CIDR</para>
+        /// <para>The IPv4 CIDR blocks of the network zone.</para>
         /// </summary>
         [NameInMap("Ipv4Cidrs")]
         [Validation(Required=false)]
         public List<string> Ipv4Cidrs { get; set; }
 
         /// <summary>
-        /// <para>网络区域ipv6Cidr</para>
+        /// <para>The IPv6 CIDR blocks of the network zone.</para>
         /// </summary>
         [NameInMap("Ipv6Cidrs")]
         [Validation(Required=false)]
         public List<string> Ipv6Cidrs { get; set; }
 
         /// <summary>
-        /// <para>IDaaS的网络区域主键id</para>
+        /// <para>The network zone ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkZoneId { get; set; }
 
         /// <summary>
-        /// <para>网络区域名称</para>
+        /// <para>The name of the network zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkZoneName { get; set; }
 
         /// <summary>
-        /// <para>专有网络VpcId</para>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc_xxxxx</para>

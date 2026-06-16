@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetNetworkZoneResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The network zone object.</para>
+        /// </summary>
         [NameInMap("NetworkZone")]
         [Validation(Required=false)]
         public GetNetworkZoneResponseBodyNetworkZone NetworkZone { get; set; }
         public class GetNetworkZoneResponseBodyNetworkZone : TeaModel {
             /// <summary>
-            /// <para>IDaaS EIAM 网络区域描述</para>
+            /// <para>The description of the network zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_description</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -33,16 +36,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The IPv4 CIDR blocks.</para>
+            /// </summary>
             [NameInMap("Ipv4Cidrs")]
             [Validation(Required=false)]
             public List<string> Ipv4Cidrs { get; set; }
 
+            /// <summary>
+            /// <para>The IPv6 CIDR blocks.</para>
+            /// </summary>
             [NameInMap("Ipv6Cidrs")]
             [Validation(Required=false)]
             public List<string> Ipv6Cidrs { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 网络区域Id</para>
+            /// <para>The network zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>network_m6fbr2bcbcadu3bcdpgzcxxxxx</para>
@@ -52,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkZoneId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 网络区域名称</para>
+            /// <para>The name of the network zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test4_name</para>
@@ -62,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkZoneName { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 网络区域类型</para>
+            /// <para>The type of the network zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arn:alibaba:idaas:network:zone:classic</para>
@@ -72,7 +81,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkZoneType { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 专有网络VpcId</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-25w8wxxxx</para>
@@ -84,6 +93,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

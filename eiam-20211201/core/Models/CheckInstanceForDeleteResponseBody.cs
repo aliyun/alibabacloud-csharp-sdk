@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CheckInstanceForDeleteResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("CheckInstanceResult")]
         [Validation(Required=false)]
         public CheckInstanceForDeleteResponseBodyCheckInstanceResult CheckInstanceResult { get; set; }
         public class CheckInstanceForDeleteResponseBodyCheckInstanceResult : TeaModel {
             /// <summary>
-            /// <para>true表示实例可以被删除；false表示实例不可被删除，具体查看RestrictScenarios属性。</para>
+            /// <para>Indicates whether the instance can be deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>True</para>
@@ -24,14 +27,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Deletable { get; set; }
 
             /// <summary>
-            /// <para>true表示实例可以被删除；false表示实例不可被删除，具体查看RestrictScenarios属性。</para>
+            /// <para>The restriction information that prevents deletion.</para>
             /// </summary>
             [NameInMap("RestrictScenarios")]
             [Validation(Required=false)]
             public List<CheckInstanceForDeleteResponseBodyCheckInstanceResultRestrictScenarios> RestrictScenarios { get; set; }
             public class CheckInstanceForDeleteResponseBodyCheckInstanceResultRestrictScenarios : TeaModel {
                 /// <summary>
-                /// <para>有帮助的控制台地址，可以管理对应的资源，从而解除实例删除限制。可能返回为空，不一定所有的资源ID都有管理地址返回。</para>
+                /// <para>The URL of a helpful console page.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://console-rpa.aliyun.com/">https://console-rpa.aliyun.com/</a></para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string HelpfulConsoleUrl { get; set; }
 
                 /// <summary>
-                /// <para>导致实例删除受限的资源ID。</para>
+                /// <para>The resource ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eas-r-nguosqgr75ndg784k8</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>针对实例删除受限的原因文字描述。</para>
+                /// <para>The reason for the restriction.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cloud_product_dependency</para>
@@ -65,6 +68,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

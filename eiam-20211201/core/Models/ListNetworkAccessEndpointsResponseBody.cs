@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkAccessEndpointsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A collection of network endpoints.</para>
+        /// </summary>
         [NameInMap("NetworkAccessEndpoints")]
         [Validation(Required=false)]
         public List<ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints> NetworkAccessEndpoints { get; set; }
         public class ListNetworkAccessEndpointsResponseBodyNetworkAccessEndpoints : TeaModel {
             /// <summary>
-            /// <para>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the network endpoint was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点ID。</para>
+            /// <para>The network endpoint ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nae_examplexxx</para>
@@ -44,17 +47,23 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointId { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点名称。</para>
+            /// <para>The name of the network endpoint.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx业务VPC访问端点</para>
+            /// <para>VPC access endpoint for xx service</para>
             /// </summary>
             [NameInMap("NetworkAccessEndpointName")]
             [Validation(Required=false)]
             public string NetworkAccessEndpointName { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点连接的类型。</para>
+            /// <para>The type of the network endpoint. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>shared: a shared network endpoint.</para>
+            /// </description></item>
+            /// <item><description><para>private: a private network endpoint.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>private</para>
@@ -64,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkAccessEndpointType { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点使用的安全组ID。</para>
+            /// <para>The ID of the security group used by the private network endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-examplexxx</para>
@@ -74,7 +83,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点状态。</para>
+            /// <para>The status of the network endpoint. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>pending: The endpoint is pending initialization.</para>
+            /// </description></item>
+            /// <item><description><para>creating: The endpoint is being created.</para>
+            /// </description></item>
+            /// <item><description><para>running: The endpoint is running.</para>
+            /// </description></item>
+            /// <item><description><para>deleting: The endpoint is being deleted.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -84,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</para>
+            /// <para>The time when the network endpoint was last updated. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -94,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点连接的指定vSwitch列表。</para>
+            /// <para>A list of vSwitches to which the private network endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-examplexxx</para>
@@ -104,7 +123,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> VSwitchIds { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点连接的VpcID。</para>
+            /// <para>The ID of the VPC to which the private network endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-examplexxx</para>
@@ -114,7 +133,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>专属网络端点连接的Vpc所属地域。</para>
+            /// <para>The region ID of the VPC to which the private network endpoint is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -126,7 +145,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token returned for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -136,6 +155,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -144,6 +165,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

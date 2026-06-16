@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of organizational units.</para>
+        /// <para>The list of organizational unit IDs. The number of IDs in the list cannot exceed 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[ou_wovwffm62xifdziem7an7xxxxx]</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> OrganizationalUnitIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the organizational unit.</para>
+        /// <para>The name of the organizational unit. An exact match is used for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name_001</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string OrganizationalUnitName { get; set; }
 
         /// <summary>
-        /// <para>Organization name, matching left</para>
+        /// <para>The prefix of the name of the organizational unit. A left-side match is used for the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string OrganizationalUnitNameStartsWith { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

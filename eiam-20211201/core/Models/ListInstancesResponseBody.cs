@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information of instances.</para>
+        /// <para>The list of instance information.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<ListInstancesResponseBodyInstances> Instances { get; set; }
         public class ListInstancesResponseBodyInstances : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The creation time of the instance, in Unix timestamp format, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1550115455000</para>
@@ -27,6 +27,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>enabled</para>
+            /// </summary>
+            [NameInMap("CrossRegionReplication")]
+            [Validation(Required=false)]
+            public string CrossRegionReplication { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>primary</para>
+            /// </summary>
+            [NameInMap("CrossRegionReplicationRole")]
+            [Validation(Required=false)]
+            public string CrossRegionReplicationRole { get; set; }
+
+            /// <summary>
             /// <para>The default endpoint of the instance.</para>
             /// </summary>
             [NameInMap("DefaultEndpoint")]
@@ -34,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public ListInstancesResponseBodyInstancesDefaultEndpoint DefaultEndpoint { get; set; }
             public class ListInstancesResponseBodyInstancesDefaultEndpoint : TeaModel {
                 /// <summary>
-                /// <para>The endpoint of the instance.</para>
+                /// <para>The endpoint address of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-xxx.aliyunidaas.com</para>
@@ -44,10 +60,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The status of the endpoint. Valid values:</para>
+                /// <para>The status of the instance endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>resolved</description></item>
-                /// <item><description>unresolved</description></item>
+                /// <item><description>resolved: Resolved.</description></item>
+                /// <item><description>unresolved: Unresolved.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -61,13 +77,24 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The description of the instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>instance_for_test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <b>Example:</b>
+            /// <para>inactive</para>
+            /// </summary>
+            [NameInMap("InstanceFailoverStatus")]
+            [Validation(Required=false)]
+            public string InstanceFailoverStatus { get; set; }
+
+            /// <summary>
+            /// <para>Instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_eypq6ljgyeuwmlw672sulxxxxx</para>
@@ -77,6 +104,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The service code of the cloud service that manages the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sase</para>
             /// </summary>
@@ -84,15 +113,67 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ManagedServiceCode { get; set; }
 
+            [NameInMap("ReplicationConfiguration")]
+            [Validation(Required=false)]
+            public ListInstancesResponseBodyInstancesReplicationConfiguration ReplicationConfiguration { get; set; }
+            public class ListInstancesResponseBodyInstancesReplicationConfiguration : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>idaas_xxxxxx</para>
+                /// </summary>
+                [NameInMap("BackupInstanceId")]
+                [Validation(Required=false)]
+                public string BackupInstanceId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
+                /// </summary>
+                [NameInMap("BackupInstanceRegionId")]
+                [Validation(Required=false)]
+                public string BackupInstanceRegionId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>idaas_xxxxxx</para>
+                /// </summary>
+                [NameInMap("PrimaryInstanceId")]
+                [Validation(Required=false)]
+                public string PrimaryInstanceId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
+                [NameInMap("PrimaryInstanceRegionId")]
+                [Validation(Required=false)]
+                public string PrimaryInstanceRegionId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1778499337000</para>
+                /// </summary>
+                [NameInMap("ReplicationCreateTime")]
+                [Validation(Required=false)]
+                public long? ReplicationCreateTime { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>Indicates whether the instance is managed by a cloud service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("ServiceManaged")]
             [Validation(Required=false)]
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance. Valid values:</para>
+            /// <para>Instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>creating</description></item>
-            /// <item><description>running</description></item>
+            /// <item><description>creating: Being created.</description></item>
+            /// <item><description>running: Running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +186,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -115,7 +196,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>Total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

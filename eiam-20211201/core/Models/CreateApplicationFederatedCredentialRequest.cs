@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationFederatedCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>应用联邦凭证名称</para>
+        /// <para>The name of the application federated credential.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationFederatedCredentialName { get; set; }
 
         /// <summary>
-        /// <para>应用联邦凭证类型</para>
+        /// <para>The type of the application federated credential.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationFederatedCredentialType { get; set; }
 
         /// <summary>
-        /// <para>IDaaS的应用资源ID。</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,14 +43,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>属性映射</para>
+        /// <para>The attribute mappings.</para>
         /// </summary>
         [NameInMap("AttributeMappings")]
         [Validation(Required=false)]
         public List<CreateApplicationFederatedCredentialRequestAttributeMappings> AttributeMappings { get; set; }
         public class CreateApplicationFederatedCredentialRequestAttributeMappings : TeaModel {
             /// <summary>
-            /// <para>源值表达式</para>
+            /// <para>The source value expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Append(client.applicationFederatedCredentialId, &quot;:&quot;, cert.subject.CN, &quot;:&quot;, cert.serialNumber)</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SourceValueExpression { get; set; }
 
             /// <summary>
-            /// <para>目标字段</para>
+            /// <para>The target field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>client.activeSubjectUrn</para>
@@ -72,17 +72,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>描述</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>描述</para>
+        /// <para>description_text</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>联邦凭证提供方ID</para>
+        /// <para>The ID of the federated credential provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FederatedCredentialProviderId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>校验条件</para>
+        /// <para>The verification condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>

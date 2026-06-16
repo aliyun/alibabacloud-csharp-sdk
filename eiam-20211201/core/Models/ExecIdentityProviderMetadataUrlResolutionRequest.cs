@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ExecIdentityProviderMetadataUrlResolutionRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the identity provider in IDaaS.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>idp_mwpcwnhrimlr2horxXXXX</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +31,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The network access endpoint ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>inae_public</para>
         /// </summary>
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>OIDC Issuer地址。</para>
+        /// <para>The OIDC issuer URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://login.example.com/.well-known/openid-configuration">https://login.example.com/.well-known/openid-configuration</a></para>

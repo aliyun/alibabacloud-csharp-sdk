@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkZonesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of network zones.</para>
+        /// </summary>
         [NameInMap("NetworkZones")]
         [Validation(Required=false)]
         public List<ListNetworkZonesResponseBodyNetworkZones> NetworkZones { get; set; }
         public class ListNetworkZonesResponseBodyNetworkZones : TeaModel {
             /// <summary>
-            /// <para>IDaaS EIAM 网络区域描述</para>
+            /// <para>The description of the network zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -33,16 +36,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The IPv4 CIDR blocks.</para>
+            /// </summary>
             [NameInMap("Ipv4Cidrs")]
             [Validation(Required=false)]
             public List<string> Ipv4Cidrs { get; set; }
 
+            /// <summary>
+            /// <para>The IPv6 CIDR blocks.</para>
+            /// </summary>
             [NameInMap("Ipv6Cidrs")]
             [Validation(Required=false)]
             public List<string> Ipv6Cidrs { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 网络区域Id</para>
+            /// <para>The network zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>network_m223wbvc3sn3uakfnxvhbxxxxx</para>
@@ -52,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkZoneId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 网络区域名称</para>
+            /// <para>The network zone name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_name</para>
@@ -62,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkZoneName { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 网络区域类型</para>
+            /// <para>The type of the network zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arn:alibaba:idaas:network:zone:classic</para>
@@ -72,7 +81,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string NetworkZoneType { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 专有网络VpcId</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1usdmfqcgoy5ebxxxxx</para>
@@ -84,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -94,6 +103,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The token that is used to retrieve the previous page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>
         /// </summary>
@@ -102,6 +113,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -110,6 +123,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

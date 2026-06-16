@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The organization IDs. You can add an account to a maximum of 100 organizations.</para>
+        /// <para>The list of organization IDs. The list can contain up to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("OrganizationalUnitIds")]

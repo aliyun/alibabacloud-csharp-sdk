@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitsForApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the organizations that are allowed to access the application.</para>
+        /// <para>The list of organizations.</para>
         /// </summary>
         [NameInMap("OrganizationalUnits")]
         [Validation(Required=false)]
         public List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits> OrganizationalUnits { get; set; }
         public class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnits : TeaModel {
             /// <summary>
-            /// <para>应用角色列表。</para>
+            /// <para>The list of application roles.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles> ApplicationRoles { get; set; }
             public class ListOrganizationalUnitsForApplicationResponseBodyOrganizationalUnitsApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>应用角色标识。</para>
+                /// <para>The ID of the application role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The ID of the organization that is allowed to access the application.</para>
+            /// <para>The organization ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_wovwffm62xifdziem7an7xxxxx</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of the returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

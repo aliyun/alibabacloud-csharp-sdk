@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListNetworkAccessEndpointAvailableZonesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -17,22 +19,25 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of zones that support network endpoints in the current region.</para>
+        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<ListNetworkAccessEndpointAvailableZonesResponseBodyZones> Zones { get; set; }
         public class ListNetworkAccessEndpointAvailableZonesResponseBodyZones : TeaModel {
             /// <summary>
-            /// <para>可用区名称。</para>
+            /// <para>The name of the zone.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>华东1（杭州）可用区J</para>
+            /// <para>China (Hangzhou) Zone J</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>可用区ID。</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-j</para>

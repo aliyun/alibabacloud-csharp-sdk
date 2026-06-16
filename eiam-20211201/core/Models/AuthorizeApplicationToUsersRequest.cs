@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class AuthorizeApplicationToUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application on which you want to grant permissions.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationRoleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the accounts to which you want to grant permissions. You can grant permissions to a maximum of 100 accounts at a time.</para>
+        /// <para>The IDs of the users. A single request can contain up to 100 user IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

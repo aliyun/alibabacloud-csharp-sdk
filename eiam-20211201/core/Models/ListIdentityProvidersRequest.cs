@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListIdentityProvidersRequest : TeaModel {
         /// <summary>
+        /// <para>The data synchronization direction of the identity provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pull</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

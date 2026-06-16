@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The instance description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>instance test</para>
+            /// <para>Production environment</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -70,8 +70,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The instance version.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>EIAM 2.0</description></item>
-            /// <item><description>EIAM 1.0</description></item>
+            /// <item><description><para>EIAM 2.0</para>
+            /// </description></item>
+            /// <item><description><para>EIAM 1.0</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OpenAPIPublicDomain { get; set; }
 
             /// <summary>
-            /// <para>The single sign-on (SSO) domain  of the instance.</para>
+            /// <para>The single sign-on (SSO) domain of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx.aliyunidaas.com</para>

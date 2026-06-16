@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationRolesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of application roles.</para>
+        /// </summary>
         [NameInMap("ApplicationRoles")]
         [Validation(Required=false)]
         public List<ListApplicationRolesResponseBodyApplicationRoles> ApplicationRoles { get; set; }
         public class ListApplicationRolesResponseBodyApplicationRoles : TeaModel {
             /// <summary>
+            /// <para>The application ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
             /// </summary>
@@ -22,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>应用角色的唯一标识</para>
+            /// <para>The application role ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>approle_01kh2vuo8v9splv8maak1d22rxxxx</para>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationRoleId { get; set; }
 
             /// <summary>
-            /// <para>应用角色名称</para>
+            /// <para>The name of the application role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Admin Role</para>
@@ -42,6 +47,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationRoleName { get; set; }
 
             /// <summary>
+            /// <para>The value of the application role.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>admin_role</para>
             /// </summary>
@@ -50,6 +57,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationRoleValue { get; set; }
 
             /// <summary>
+            /// <para>The description of the application role.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Admin Role Description</para>
             /// </summary>
@@ -58,6 +67,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
             /// </summary>
@@ -68,6 +79,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The number of entries returned on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -76,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxexample</para>
@@ -86,6 +99,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -94,6 +109,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

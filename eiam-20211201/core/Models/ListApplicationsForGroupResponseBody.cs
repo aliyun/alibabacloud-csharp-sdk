@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForGroupResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of applications that are granted access.</para>
+        /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<ListApplicationsForGroupResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsForGroupResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>应用的唯一标识。</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -24,14 +27,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>应用角色列表。</para>
+            /// <para>The list of application roles.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListApplicationsForGroupResponseBodyApplicationsApplicationRoles> ApplicationRoles { get; set; }
             public class ListApplicationsForGroupResponseBodyApplicationsApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>应用角色标识。</para>
+                /// <para>The application role ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -43,7 +46,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>直接分配给当前用户的权限，视为直接授权。</para>
+            /// <para>Indicates whether a direct authorization exists. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: A direct authorization record exists between the application and the group.</para>
+            /// </description></item>
+            /// <item><description><para>false: No direct authorization record exists between the application and the group.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -53,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? HasDirectAuthorization { get; set; }
 
             /// <summary>
-            /// <para>通过用户隶属的组织、组获取的权限，视为继承权限。</para>
+            /// <para>Indicates whether an inherited authorization exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -65,6 +74,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -73,6 +84,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

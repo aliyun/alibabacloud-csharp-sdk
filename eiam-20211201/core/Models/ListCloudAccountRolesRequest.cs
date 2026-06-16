@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCloudAccountRolesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Alibaba Cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,11 +20,26 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string CloudAccountId { get; set; }
 
+        /// <summary>
+        /// <para>The filter conditions.</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListCloudAccountRolesRequestFilter> Filter { get; set; }
         public class ListCloudAccountRolesRequestFilter : TeaModel {
             /// <summary>
+            /// <para>The name of the filter field. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>CloudAccountRoleId: The ID of the cloud role.</para>
+            /// </description></item>
+            /// <item><description><para>CloudAccountRoleName: The name of the cloud role.</para>
+            /// </description></item>
+            /// <item><description><para>CloudAccountRoleExternalId: The external ID of the cloud role.</para>
+            /// </description></item>
+            /// <item><description><para>CloudAccountRoleUsageType: The usage type of the cloud role.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>CloudAccountRoleId</para>
             /// </summary>
@@ -31,6 +47,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The list of values for the filter field.</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -38,6 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +68,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>分页查询时每页行数。默认值为20，最大值为100。</para>
+        /// <para>The maximum number of records to return on each page.</para>
+        /// <list type="bullet">
+        /// <item><description><para>The default value is 20.</para>
+        /// </description></item>
+        /// <item><description><para>The maximum value is 100.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -58,7 +84,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The token that specifies the start of the next page of results.</para>
+        /// <list type="bullet">
+        /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

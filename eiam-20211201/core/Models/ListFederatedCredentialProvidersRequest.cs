@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListFederatedCredentialProvidersRequest : TeaModel {
         /// <summary>
-        /// <para>联邦凭证提供方名称</para>
+        /// <para>The name of the federated credential provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FederatedCredentialProviderName { get; set; }
 
         /// <summary>
-        /// <para>联邦凭证提供方类型</para>
+        /// <para>The type of the federated credential provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pkcs7</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FederatedCredentialProviderType { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>分页查询时每页行数。默认值为20，最大值为100。</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The token to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>查询上一页凭证（Token），取值为上一次API调用返回的previousToken参数值。</para>
+        /// <para>The token to retrieve the previous page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>

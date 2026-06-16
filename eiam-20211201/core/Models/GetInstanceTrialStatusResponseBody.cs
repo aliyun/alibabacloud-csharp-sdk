@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceTrialStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The trial status of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

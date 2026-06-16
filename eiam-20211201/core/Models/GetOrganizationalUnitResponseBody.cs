@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The description of the organizational unit.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test organizational unit</para>
+            /// <para>Test organization</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -101,10 +101,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The source type of the organizational unit. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>build_in: The organizational unit was created in IDaaS.</description></item>
-            /// <item><description>ding_talk: The organizational unit was imported from DingTalk.</description></item>
-            /// <item><description>ad: The organizational unit was imported from Microsoft Active Directory (AD).</description></item>
-            /// <item><description>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</description></item>
+            /// <item><description><para>build_in: The organizational unit was created in IDaaS.</para>
+            /// </description></item>
+            /// <item><description><para>ding_talk: The organizational unit was imported from DingTalk.</para>
+            /// </description></item>
+            /// <item><description><para>ad: The organizational unit was imported from Microsoft Active Directory (AD).</para>
+            /// </description></item>
+            /// <item><description><para>ldap: The organizational unit was imported from a Lightweight Directory Access Protocol (LDAP) service.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

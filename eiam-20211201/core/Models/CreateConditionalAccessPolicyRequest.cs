@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>My Conditional Access Policy</para>
+        /// <para>My conditional access policy</para>
         /// </summary>
         [NameInMap("ConditionalAccessPolicyName")]
         [Validation(Required=false)]
@@ -168,8 +168,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Decision action for the conditional access policy, with the following options:</para>
             /// <list type="bullet">
-            /// <item><description>allow: Allow.</description></item>
-            /// <item><description>deny: Deny.</description></item>
+            /// <item><description><para>allow: Allow.</para>
+            /// </description></item>
+            /// <item><description><para>deny: Deny.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -182,8 +184,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Re-authentication interval (in seconds) for the conditional access policy</para>
             /// <list type="bullet">
-            /// <item><description>Maximum MFA re-authentication interval: 86400</description></item>
-            /// <item><description>Minimum MFA re-authentication interval: 300</description></item>
+            /// <item><description><para>Maximum MFA re-authentication interval: 86400</para>
+            /// </description></item>
+            /// <item><description><para>Minimum MFA re-authentication interval: 300</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -196,10 +200,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>Allowed MFA types for the conditional access policy, with the following options:</para>
             /// <list type="bullet">
-            /// <item><description>ia_otp_sms: SMS verification code</description></item>
-            /// <item><description>ia_otp_email: Email verification code</description></item>
-            /// <item><description>ia_totp: OTP dynamic password</description></item>
-            /// <item><description>ia_webauthn: WebAuthn</description></item>
+            /// <item><description><para>ia_otp_sms: SMS verification code</para>
+            /// </description></item>
+            /// <item><description><para>ia_otp_email: Email verification code</para>
+            /// </description></item>
+            /// <item><description><para>ia_totp: OTP dynamic password</para>
+            /// </description></item>
+            /// <item><description><para>ia_webauthn: WebAuthn</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("MfaAuthenticationMethods")]
@@ -209,8 +217,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>MFA type for the conditional access policy, with the following options:</para>
             /// <list type="bullet">
-            /// <item><description>directly_access: Direct access</description></item>
-            /// <item><description>mfa_required: MFA required</description></item>
+            /// <item><description><para>directly_access: Direct access</para>
+            /// </description></item>
+            /// <item><description><para>mfa_required: MFA required</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -238,7 +248,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>Description of the conditional access policy</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test Description</para>
+        /// <para>Test description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -270,9 +280,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Priority of the conditional access policy, lower values indicate higher priority
-        /// Minimum value: 1
-        /// Maximum value: 100</para>
+        /// <para>Priority of the conditional access policy, lower values indicate higher priority Minimum value: 1 Maximum value: 100</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

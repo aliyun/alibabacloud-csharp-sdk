@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForNetworkAccessEndpointResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The collection of applications for the network access endpoint.</para>
+        /// </summary>
         [NameInMap("ApplicationsForNetworkAccessEndpoint")]
         [Validation(Required=false)]
         public List<ListApplicationsForNetworkAccessEndpointResponseBodyApplicationsForNetworkAccessEndpoint> ApplicationsForNetworkAccessEndpoint { get; set; }
         public class ListApplicationsForNetworkAccessEndpointResponseBodyApplicationsForNetworkAccessEndpoint : TeaModel {
             /// <summary>
-            /// <para>应用ID。</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_m5nzr3kk4njkco2nnc4wjxxxxx</para>
@@ -24,14 +27,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>应用名称。</para>
+            /// <para>The application name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cloudSSO</para>
             /// </summary>
             [NameInMap("ApplicationName")]
             [Validation(Required=false)]
             public string ApplicationName { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_6ed5syotlwdrgmbzn7qn5xxxxx</para>
@@ -43,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -53,6 +59,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -61,6 +69,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

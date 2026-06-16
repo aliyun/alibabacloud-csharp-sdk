@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>授权资源范围，枚举值：global（Project下的所有资源）、custom（自定义资源范围）。</para>
+        /// <para>The scope of the authorized resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>global: global resources within the project.</para>
+        /// </description></item>
+        /// <item><description><para>custom: specified resources within the project.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -20,7 +26,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationResourceScope { get; set; }
 
         /// <summary>
-        /// <para>授权规则标识。</para>
+        /// <para>The authorization rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>授权规则名称，长度限制最大64个字符。</para>
+        /// <para>The name of the authorization rule. The name can be up to 64 characters long.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_rule</para>
@@ -41,6 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleName { get; set; }
 
         /// <summary>
+        /// <para>A client token that ensures the idempotence of the request. Generate a unique value for this parameter from your client. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

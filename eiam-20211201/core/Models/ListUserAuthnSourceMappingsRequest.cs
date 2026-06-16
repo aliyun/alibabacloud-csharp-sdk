@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUserAuthnSourceMappingsRequest : TeaModel {
         /// <summary>
-        /// <para>来源Idp Id</para>
+        /// <para>The ID of the source identity provider (IdP).</para>
         /// 
         /// <b>Example:</b>
         /// <para>idp_11111</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>分页查询时每页行数。默认值为20，最大值为100。</para>
+        /// <para>The maximum number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The query token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>查询上一页凭证（Token），取值为上一次API调用返回的previousToken参数值。</para>
+        /// <para>The token for the previous page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
-        /// <para>外部关联ID</para>
+        /// <para>The external ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxxxx</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserExternalId { get; set; }
 
         /// <summary>
-        /// <para>用户ID</para>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

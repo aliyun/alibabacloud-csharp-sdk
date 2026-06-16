@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateIdentityProviderStatusCheckJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the job.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>async_000xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderStatusCheckJobId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

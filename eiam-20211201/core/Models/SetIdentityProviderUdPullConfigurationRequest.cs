@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetIdentityProviderUdPullConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>Group synchronization status.</para>
+        /// <para>The group synchronization status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>disabled: The feature is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>enabled: The feature is enabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>disabled</para>
@@ -20,7 +26,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupSyncStatus { get; set; }
 
         /// <summary>
-        /// <para>Identity provider ID</para>
+        /// <para>The identity provider ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +37,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderId { get; set; }
 
         /// <summary>
-        /// <para>Incremental callback status, whether to process incremental callback data from IdP.</para>
+        /// <para>The status of incremental callback. This parameter specifies whether to process incremental callback data from the IdP. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>disabled: The feature is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>enabled: The feature is enabled.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,34 +65,34 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Ldap ud pull config</para>
+        /// <para>The configurations of LDAP synchronization.</para>
         /// </summary>
         [NameInMap("LdapUdPullConfig")]
         [Validation(Required=false)]
         public SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig LdapUdPullConfig { get; set; }
         public class SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig : TeaModel {
             /// <summary>
-            /// <para>Group member attribute name</para>
+            /// <para>The group member identifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>memberxxx</para>
+            /// <para>member</para>
             /// </summary>
             [NameInMap("GroupMemberAttributeName")]
             [Validation(Required=false)]
             public string GroupMemberAttributeName { get; set; }
 
             /// <summary>
-            /// <para>GroupObjectClass</para>
+            /// <para>The group objectClass.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>groupxxx</para>
+            /// <para>group</para>
             /// </summary>
             [NameInMap("GroupObjectClass")]
             [Validation(Required=false)]
             public string GroupObjectClass { get; set; }
 
             /// <summary>
-            /// <para>GroupObjectClass custom filter</para>
+            /// <para>The custom group filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</para>
@@ -90,27 +102,27 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupObjectClassCustomFilter { get; set; }
 
             /// <summary>
-            /// <para>OrganizationUnitObjectClass</para>
+            /// <para>The organizational unit objectClass.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>organizationUnitxxx,top</para>
+            /// <para>organizationUnit,top</para>
             /// </summary>
             [NameInMap("OrganizationUnitObjectClass")]
             [Validation(Required=false)]
             public string OrganizationUnitObjectClass { get; set; }
 
             /// <summary>
-            /// <para>UserObjectClass</para>
+            /// <para>The user objectClass.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>userPrincipalNamexxx, mail</para>
+            /// <para>userPrincipalName, mail</para>
             /// </summary>
             [NameInMap("UserObjectClass")]
             [Validation(Required=false)]
             public string UserObjectClass { get; set; }
 
             /// <summary>
-            /// <para>UserObjectClass custom filter</para>
+            /// <para>The custom user filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</para>
@@ -122,14 +134,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Periodic synchronize config</para>
+        /// <para>The scheduled synchronization configuration.</para>
         /// </summary>
         [NameInMap("PeriodicSyncConfig")]
         [Validation(Required=false)]
         public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig PeriodicSyncConfig { get; set; }
         public class SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig : TeaModel {
             /// <summary>
-            /// <para>Periodic synchronize cron</para>
+            /// <para>The cron expression. This parameter is required when periodicSyncType is set to cron.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 45 1 * * ?</para>
@@ -139,14 +151,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PeriodicSyncCron { get; set; }
 
             /// <summary>
-            /// <para>Periodic synchronize times</para>
+            /// <para>The time points for synchronization. This parameter is required when periodicSyncType is set to time. For example, if you set this parameter to [3, 5], the synchronization is performed from 03:00 to 04:00 and from 05:00 to 06:00.</para>
             /// </summary>
             [NameInMap("PeriodicSyncTimes")]
             [Validation(Required=false)]
             public List<int?> PeriodicSyncTimes { get; set; }
 
             /// <summary>
-            /// <para>Periodic synchronize type</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cron</para>
@@ -158,7 +170,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Periodic synchronize status</para>
+        /// <para>The status of scheduled check. This parameter specifies whether to periodically check for data inconsistencies between IDaaS and the IdP. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>disabled: The feature is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>enabled: The feature is enabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>disabled</para>
@@ -168,14 +186,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PeriodicSyncStatus { get; set; }
 
         /// <summary>
-        /// <para>Synchronize protected rule</para>
+        /// <para>The inbound synchronization protection rule.</para>
         /// </summary>
         [NameInMap("PullProtectedRule")]
         [Validation(Required=false)]
         public SetIdentityProviderUdPullConfigurationRequestPullProtectedRule PullProtectedRule { get; set; }
         public class SetIdentityProviderUdPullConfigurationRequestPullProtectedRule : TeaModel {
             /// <summary>
-            /// <para>Group deleted threshold</para>
+            /// <para>The threshold for the number of groups to be deleted. If the number of groups to be deleted exceeds this value, the synchronization task is stopped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -185,7 +203,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? GroupDeletedThreshold { get; set; }
 
             /// <summary>
-            /// <para>OrganizationalUnit deleted threshold</para>
+            /// <para>The threshold for the number of organizational units to be deleted. If the number of organizational units to be deleted exceeds this value, the synchronization task is stopped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -195,7 +213,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? OrganizationalUnitDeletedThreshold { get; set; }
 
             /// <summary>
-            /// <para>User deleted threshold</para>
+            /// <para>The threshold for the number of users to be deleted. If the number of users to be deleted exceeds this value, the synchronization task is stopped.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -207,21 +225,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Synchronize configuration information.</para>
+        /// <para>The inbound synchronization configuration.</para>
         /// </summary>
         [NameInMap("UdSyncScopeConfig")]
         [Validation(Required=false)]
         public SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig UdSyncScopeConfig { get; set; }
         public class SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig : TeaModel {
             /// <summary>
-            /// <para>Synchronize source scopes</para>
+            /// <para>The list of source nodes for synchronization.</para>
             /// </summary>
             [NameInMap("SourceScopes")]
             [Validation(Required=false)]
             public List<string> SourceScopes { get; set; }
 
             /// <summary>
-            /// <para>Synchronize target scope</para>
+            /// <para>The target node for synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_asdaq1addsxzdq1XXX</para>

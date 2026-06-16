@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class AuthorizeResourceServerScopesToOrganizationalUnitRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS的应用资源ID。</para>
+        /// <para>The ID of the resource server application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value from your client. This token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>组织ID。</para>
+        /// <para>The organization ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string OrganizationalUnitId { get; set; }
 
         /// <summary>
-        /// <para>ResourceServer权限ID。</para>
+        /// <para>A list of scope permission IDs for the resource server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

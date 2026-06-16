@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateOauthTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The audience identifier of the resource server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Audience { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The scope of permissions.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ScopeValues")]

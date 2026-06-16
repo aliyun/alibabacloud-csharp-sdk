@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetBrandResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The brand.</para>
+        /// </summary>
         [NameInMap("Brand")]
         [Validation(Required=false)]
         public GetBrandResponseBodyBrand Brand { get; set; }
         public class GetBrandResponseBodyBrand : TeaModel {
             /// <summary>
-            /// <para>品牌ID</para>
+            /// <para>The brand ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>brand_xxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandId { get; set; }
 
             /// <summary>
-            /// <para>品牌名称</para>
+            /// <para>The brand name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom Brand</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandName { get; set; }
 
             /// <summary>
-            /// <para>品牌类型</para>
+            /// <para>The brand type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_custom</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandType { get; set; }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>品牌状态</para>
+            /// <para>The brand status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -66,6 +69,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

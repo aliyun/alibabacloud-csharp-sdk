@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceGlobalizationConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The language and time zone configuration for the instance.</para>
+        /// </summary>
         [NameInMap("GlobalizationConfig")]
         [Validation(Required=false)]
         public GetInstanceGlobalizationConfigResponseBodyGlobalizationConfig GlobalizationConfig { get; set; }
         public class GetInstanceGlobalizationConfigResponseBodyGlobalizationConfig : TeaModel {
             /// <summary>
-            /// <para>语言</para>
+            /// <para>The language.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-Hans-CN</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>时区</para>
+            /// <para>The time zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

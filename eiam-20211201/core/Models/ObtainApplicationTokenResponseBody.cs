@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ObtainApplicationTokenResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The application token.</para>
+        /// </summary>
         [NameInMap("ApplicationToken")]
         [Validation(Required=false)]
         public ObtainApplicationTokenResponseBodyApplicationToken ApplicationToken { get; set; }
         public class ObtainApplicationTokenResponseBodyApplicationToken : TeaModel {
             /// <summary>
-            /// <para>IDaaS EIAM 应用Id</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_na2r73a65s7o4zbs7nj5gxxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>客户端密钥</para>
+            /// <para>The application token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBxxxxx</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationToken { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 客户端ID</para>
+            /// <para>The application token ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>token_m7aso6v4efvu2otfq3jdzxxxx</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTokenId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 客户端密钥Id</para>
+            /// <para>The type of the application token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bearer_token</para>
@@ -54,6 +57,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTokenType { get; set; }
 
             /// <summary>
+            /// <para>The time when the application token was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1735610930000</para>
             /// </summary>
@@ -62,6 +67,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1735610950000</para>
             /// </summary>
@@ -70,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The ID of the IDaaS EIAM instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ki6hd7ihir4ybawogqk6kqxxxx</para>
@@ -80,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 客户端密钥最近使用时间</para>
+            /// <para>The time when the token was last used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1735610930000</para>
@@ -90,7 +97,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 客户端密钥状态</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -102,6 +109,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

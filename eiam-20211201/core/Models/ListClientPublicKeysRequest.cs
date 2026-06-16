@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListClientPublicKeysRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS的应用资源ID。</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page of a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The token for the next page of results. Set this to the NextToken value from the previous API call. For the first query, leave this parameter empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

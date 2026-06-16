@@ -13,6 +13,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public List<string> CredentialExternalIds { get; set; }
 
+        /// <summary>
+        /// <para>The credential IDs.</para>
+        /// </summary>
         [NameInMap("CredentialIds")]
         [Validation(Required=false)]
         public List<string> CredentialIds { get; set; }
@@ -25,11 +28,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public List<string> CredentialTypes { get; set; }
 
+        /// <summary>
+        /// <para>The filter conditions.</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListCredentialsRequestFilter> Filter { get; set; }
         public class ListCredentialsRequestFilter : TeaModel {
             /// <summary>
+            /// <para>The field to filter on. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description><c>CredentialIdentifier</c>: the credential identifier.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>CredentialIdentifier</para>
             /// </summary>
@@ -37,6 +48,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The values for the specified filter field.</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -44,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +69,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>分页查询时每页行数。默认值为20，最大值为100。</para>
+        /// <para>The number of entries per page.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Default value: 20.</para>
+        /// </description></item>
+        /// <item><description><para>Maximum value: 100.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -65,7 +85,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -74,6 +94,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The credential statuses.</para>
+        /// </summary>
         [NameInMap("Statuses")]
         [Validation(Required=false)]
         public List<string> Statuses { get; set; }

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCloudAccountRolesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of cloud roles.</para>
+        /// </summary>
         [NameInMap("CloudAccountRoles")]
         [Validation(Required=false)]
         public List<ListCloudAccountRolesResponseBodyCloudAccountRoles> CloudAccountRoles { get; set; }
         public class ListCloudAccountRolesResponseBodyCloudAccountRoles : TeaModel {
             /// <summary>
-            /// <para>云账号ID</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>云账号角色外部唯一ID</para>
+            /// <para>The external ID for the cloud role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::xxx:role/role-test</para>
@@ -34,7 +37,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountRoleExternalId { get; set; }
 
             /// <summary>
-            /// <para>云账号角色可用性</para>
+            /// <para>The health status of the cloud role. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>healthy: The role is healthy.</para>
+            /// </description></item>
+            /// <item><description><para>unhealthy: The role is unhealthy.</para>
+            /// </description></item>
+            /// <item><description><para>unknown: The health status is unknown.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>healthy</para>
@@ -43,15 +54,23 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountRoleHealth { get; set; }
 
+            /// <summary>
+            /// <para>The result of the health check for the cloud role.</para>
+            /// </summary>
             [NameInMap("CloudAccountRoleHealthCheckResult")]
             [Validation(Required=false)]
             public ListCloudAccountRolesResponseBodyCloudAccountRolesCloudAccountRoleHealthCheckResult CloudAccountRoleHealthCheckResult { get; set; }
             public class ListCloudAccountRolesResponseBodyCloudAccountRolesCloudAccountRoleHealthCheckResult : TeaModel {
+                /// <summary>
+                /// <para>The reason for the error. This parameter is returned when the health check status is unhealthy.</para>
+                /// </summary>
                 [NameInMap("ErrorReason")]
                 [Validation(Required=false)]
                 public ListCloudAccountRolesResponseBodyCloudAccountRolesCloudAccountRoleHealthCheckResultErrorReason ErrorReason { get; set; }
                 public class ListCloudAccountRolesResponseBodyCloudAccountRolesCloudAccountRoleHealthCheckResultErrorReason : TeaModel {
                     /// <summary>
+                    /// <para>The error code.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AuthenticationFail.NoPermission</para>
                     /// </summary>
@@ -60,6 +79,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
+                    /// <para>The error message.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>There is no permission.</para>
                     /// </summary>
@@ -70,6 +91,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
+                /// <para>The time of the last health check. This is a UNIX timestamp. Unit: milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
                 /// </summary>
@@ -78,6 +101,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? LastCheckTime { get; set; }
 
                 /// <summary>
+                /// <para>The result of the health check. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>success: The health check was successful.</para>
+                /// </description></item>
+                /// <item><description><para>failed: The health check failed.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
                 /// </summary>
@@ -88,7 +119,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>云账号角色ID</para>
+            /// <para>The ID of the cloud role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -98,7 +129,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountRoleId { get; set; }
 
             /// <summary>
-            /// <para>云账号名称</para>
+            /// <para>The name of the cloud role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>role-test</para>
@@ -108,7 +139,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountRoleName { get; set; }
 
             /// <summary>
-            /// <para>云账号角色用途</para>
+            /// <para>The type of the cloud role. The format of the role type varies based on the type of the cloud account. The following value is supported:</para>
+            /// <list type="bullet">
+            /// <item><description>role: This value applies to Alibaba Cloud accounts.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>role</para>
@@ -118,7 +152,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountRoleType { get; set; }
 
             /// <summary>
-            /// <para>云账号角色类别</para>
+            /// <para>The usage type of the cloud role. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>system: The role is used by the system.</para>
+            /// </description></item>
+            /// <item><description><para>user: The role is used by a user.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>system</para>
@@ -128,6 +168,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountRoleUsageType { get; set; }
 
             /// <summary>
+            /// <para>The time when the role was created. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1719320115000</para>
             /// </summary>
@@ -136,7 +178,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>云账号描述</para>
+            /// <para>The description of the cloud role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_account_role_description</para>
@@ -146,7 +188,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -156,7 +198,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>云账号角色状态</para>
+            /// <para>The status of the cloud role. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>enabled: The role is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>disabled: The role is disabled.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -166,6 +214,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The time when the role was last updated. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1719320117000</para>
             /// </summary>
@@ -176,7 +226,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>分页查询时每页行数。</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -186,7 +236,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The query token returned in this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -196,6 +246,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -204,6 +256,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

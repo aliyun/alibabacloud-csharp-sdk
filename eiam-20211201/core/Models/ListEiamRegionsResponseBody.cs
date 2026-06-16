@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListEiamRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The region list.</para>
+        /// <para>The list of regions.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<ListEiamRegionsResponseBodyRegions> Regions { get; set; }
         public class ListEiamRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>The region name.</para>
+            /// <para>The name of the region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>China (Hangzhou)</para>
+            /// <para>华东1（杭州）</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the instance resides.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CheckInstanceModuleStatusRequest : TeaModel {
         /// <summary>
-        /// <para>二级模块标识</para>
+        /// <para>The identifier for the secondary module.</para>
         /// 
         /// <b>Example:</b>
         /// <para>urn:alibaba:idaas:license:module:ud:customField</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FeatureKey { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>一级模块标识，必填</para>
+        /// <para>The identifier for the primary module.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +42,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ModuleKey { get; set; }
 
         /// <summary>
+        /// <para>The identifier for the tertiary module.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>urn:alibaba:idaas:license:module:idp:alibaba:dingtalk:pull:advanced_configuration</para>
         /// </summary>

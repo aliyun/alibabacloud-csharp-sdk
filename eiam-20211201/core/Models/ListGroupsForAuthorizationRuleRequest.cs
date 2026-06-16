@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListGroupsForAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>授权规则标识。</para>
+        /// <para>The authorization rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
-        /// <para>过滤条件</para>
+        /// <para>The filter conditions.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListGroupsForAuthorizationRuleRequestFilter> Filter { get; set; }
         public class ListGroupsForAuthorizationRuleRequestFilter : TeaModel {
             /// <summary>
-            /// <para>过滤条件名称。</para>
+            /// <para>The name of the filter field. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>GroupId: The group ID.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>GroupId</para>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>过滤条件值。</para>
+            /// <para>The values of the filter field.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +61,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>分页查询时每页行数。默认值为20，最大值为100。</para>
+        /// <para>The maximum number of entries to return on each page.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Default value: 20.</para>
+        /// </description></item>
+        /// <item><description><para>The value cannot exceed 100.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -68,7 +77,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The token that is used to start the next paged query.</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not specify this parameter, the query starts from the first page.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

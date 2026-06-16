@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateApplicationFederatedCredentialDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>应用联邦凭证Id</para>
+        /// <para>The ID of the application\&quot;s federated credential.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationFederatedCredentialId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS的应用资源ID。</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>联邦凭证描述</para>
+        /// <para>The description of the federated credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

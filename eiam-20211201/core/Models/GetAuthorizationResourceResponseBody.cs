@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetAuthorizationResourceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The authorized resource.</para>
+        /// </summary>
         [NameInMap("AuthorizationResource")]
         [Validation(Required=false)]
         public GetAuthorizationResourceResponseBodyAuthorizationResource AuthorizationResource { get; set; }
         public class GetAuthorizationResourceResponseBodyAuthorizationResource : TeaModel {
             /// <summary>
-            /// <para>资源实体标识</para>
+            /// <para>The ID of the resource entity that is associated with the authorized resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -24,7 +27,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>资源实体类型，枚举类型：asset（资产）、credential（凭据）、cloud_identity_role（云账号角色）</para>
+            /// <para>The type of the resource entity that is associated with the authorized resource. Valid value:</para>
+            /// <list type="bullet">
+            /// <item><description>cloud_account_role: a cloud role</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_account_role</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityType { get; set; }
 
             /// <summary>
-            /// <para>授权资源标识</para>
+            /// <para>The authorization resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arres_01kgh3jvt7pk093rv6giu0c0qxxxx</para>
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceId { get; set; }
 
             /// <summary>
-            /// <para>授权规则标识</para>
+            /// <para>The authorization rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>arrule_01kf143ug06fg7m9f43u7vahxxxx</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationRuleId { get; set; }
 
             /// <summary>
-            /// <para>云账号ID。</para>
+            /// <para>The ID of the Alibaba Cloud account to which the resource entity that is associated with the authorized resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>实例ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -76,6 +82,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

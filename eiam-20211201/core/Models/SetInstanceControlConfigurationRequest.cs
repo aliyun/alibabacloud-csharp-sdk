@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetInstanceControlConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>实例控制项。</para>
+        /// <para>The control items for the instance.</para>
         /// </summary>
         [NameInMap("ControlElements")]
         [Validation(Required=false)]
         public List<SetInstanceControlConfigurationRequestControlElements> ControlElements { get; set; }
         public class SetInstanceControlConfigurationRequestControlElements : TeaModel {
             /// <summary>
-            /// <para>实例控制项名称，如human_verification。</para>
+            /// <para>The name of the control item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>human_verification</para>
@@ -26,11 +26,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ElementName { get; set; }
 
+            /// <summary>
+            /// <para>The CAPTCHA configuration.</para>
+            /// </summary>
             [NameInMap("HumanVerificationConfig")]
             [Validation(Required=false)]
             public SetInstanceControlConfigurationRequestControlElementsHumanVerificationConfig HumanVerificationConfig { get; set; }
             public class SetInstanceControlConfigurationRequestControlElementsHumanVerificationConfig : TeaModel {
                 /// <summary>
+                /// <para>The CAPTCHA type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>urn:alibaba:idaas:humanverification:alibaba-cloud-slider-verification</para>
                 /// </summary>
@@ -41,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>实例控制项状态。</para>
+            /// <para>The status of the control item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -53,7 +58,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

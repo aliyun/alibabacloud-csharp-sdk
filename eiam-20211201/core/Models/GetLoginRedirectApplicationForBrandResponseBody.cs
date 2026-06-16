@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetLoginRedirectApplicationForBrandResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the post-logon redirect application for the brand.</para>
+        /// </summary>
         [NameInMap("BrandLoginRedirectApplication")]
         [Validation(Required=false)]
         public GetLoginRedirectApplicationForBrandResponseBodyBrandLoginRedirectApplication BrandLoginRedirectApplication { get; set; }
         public class GetLoginRedirectApplicationForBrandResponseBodyBrandLoginRedirectApplication : TeaModel {
             /// <summary>
-            /// <para>应用ID</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_xxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>品牌ID</para>
+            /// <para>The brand ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>brand_xxxx</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandId { get; set; }
 
             /// <summary>
-            /// <para>实例ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -46,6 +49,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

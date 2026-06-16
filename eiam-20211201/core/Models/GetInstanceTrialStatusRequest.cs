@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceTrialStatusRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS EIAM的实例id</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

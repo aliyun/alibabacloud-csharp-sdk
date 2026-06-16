@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationRoleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the application role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>approle_01kghbvoptu5262q35aalvq7cxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationRoleId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateDomainResponseBody : TeaModel {
         /// <summary>
-        /// <para>Domain ID.</para>
+        /// <para>The domain ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dm_mtohn6mltdz3ibtly2rxvnvxxx</para>

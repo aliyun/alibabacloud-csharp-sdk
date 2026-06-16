@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The new description of the instance.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试实例</para>
+        /// <para>For production use.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

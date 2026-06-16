@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class RunSynchronizationJobRequest : TeaModel {
         /// <summary>
-        /// <para>Synchronization task description</para>
+        /// <para>The description of the synchronization task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>描述</para>
+        /// <para>description_text</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Whether initialize password</para>
+        /// <para>Specifies whether to initialize the password.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,28 +41,28 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? PasswordInitialization { get; set; }
 
         /// <summary>
-        /// <para>Synchronization scope</para>
+        /// <para>The configuration of the synchronization scope.</para>
         /// </summary>
         [NameInMap("SynchronizationScopeConfig")]
         [Validation(Required=false)]
         public RunSynchronizationJobRequestSynchronizationScopeConfig SynchronizationScopeConfig { get; set; }
         public class RunSynchronizationJobRequestSynchronizationScopeConfig : TeaModel {
             /// <summary>
-            /// <para>The group IDs.</para>
+            /// <para>The list of group IDs.</para>
             /// </summary>
             [NameInMap("GroupIds")]
             [Validation(Required=false)]
             public List<string> GroupIds { get; set; }
 
             /// <summary>
-            /// <para>The IDs of organizational units.</para>
+            /// <para>The list of organizational unit IDs.</para>
             /// </summary>
             [NameInMap("OrganizationalUnitIds")]
             [Validation(Required=false)]
             public List<string> OrganizationalUnitIds { get; set; }
 
             /// <summary>
-            /// <para>UserIds</para>
+            /// <para>The list of user IDs.</para>
             /// </summary>
             [NameInMap("UserIds")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the synchronization destination.</para>
+        /// <para>The ID of the synchronization target.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,10 +82,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string TargetId { get; set; }
 
         /// <summary>
-        /// <para>The type of the synchronization destination. Valid values:</para>
+        /// <para>The type of the synchronization target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>identity_provider</description></item>
-        /// <item><description>application</description></item>
+        /// <item><description><para>identity_provider: The identity provider.</para>
+        /// </description></item>
+        /// <item><description><para>application: The application.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string TargetType { get; set; }
 
         /// <summary>
-        /// <para>User identity types</para>
+        /// <para>The list of unique user identifiers.</para>
         /// </summary>
         [NameInMap("UserIdentityTypes")]
         [Validation(Required=false)]

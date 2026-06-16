@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationRequest : TeaModel {
         /// <summary>
+        /// <para>The identity type of the application. The default value is application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>application: A standard application.</para>
+        /// </description></item>
+        /// <item><description><para>agent: An automated agent.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>application</para>
         /// </summary>
@@ -18,7 +26,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationIdentityType { get; set; }
 
         /// <summary>
-        /// <para>The name of the application.</para>
+        /// <para>The application name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,10 +51,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The type of the application source. Valid values:</para>
+        /// <para>Specifies how the application is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>urn:alibaba:idaas:app:source:template: application template</description></item>
-        /// <item><description>urn:alibaba:idaas:app:source:standard: standard protocol</description></item>
+        /// <item><description><para>urn:alibaba:idaas:app:source:template: Creates the application from an application template.</para>
+        /// </description></item>
+        /// <item><description><para>urn:alibaba:idaas:app:source:standard: Creates the application from a standard protocol.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,10 +68,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationSourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application template. This parameter is required if you set the ApplicationSourceType parameter to urn:alibaba:idaas:app:source:template.</para>
+        /// <para>The ID of the application template. This parameter is required if ApplicationSourceType is urn:alibaba:idaas:app:source:template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>template_cloud_ram</para>
+        /// <para>apt_ramuser_mjqrsi</para>
         /// </summary>
         [NameInMap("ApplicationTemplateId")]
         [Validation(Required=false)]
@@ -82,17 +92,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The description of the application.</para>
+        /// <para>The application description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RAM user SSO application</para>
+        /// <para>RAM account SSO application</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,10 +123,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string LogoUrl { get; set; }
 
         /// <summary>
-        /// <para>The SSO protocol. Valid values:</para>
+        /// <para>The single sign-on (SSO) protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>saml2: the SAML 2.0 protocol.</description></item>
-        /// <item><description>oidc: the OpenID Connect protocol.</description></item>
+        /// <item><description><para>saml2: SAML 2.0</para>
+        /// </description></item>
+        /// <item><description><para>oidc: OpenID Connect</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

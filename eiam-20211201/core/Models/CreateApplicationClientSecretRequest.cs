@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationClientSecretRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application for which you want to create a client key.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The expiration time. This parameter is a UNIX timestamp. Unit: milliseconds. If you leave this parameter empty, the client secret does not expire. The minimum validity period is 1 day and the maximum validity period is 3 years.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1735530123762</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? ExpirationTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

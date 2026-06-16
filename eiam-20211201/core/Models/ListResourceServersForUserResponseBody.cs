@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListResourceServersForUserResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token for the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -35,12 +39,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of ResourceServer applications.</para>
+        /// </summary>
         [NameInMap("ResourceServers")]
         [Validation(Required=false)]
         public List<ListResourceServersForUserResponseBodyResourceServers> ResourceServers { get; set; }
         public class ListResourceServersForUserResponseBodyResourceServers : TeaModel {
             /// <summary>
-            /// <para>资源服务应用的唯一标识</para>
+            /// <para>The ID of the ResourceServer application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_nbsomva32b6utec3hgi7scxxxx</para>
@@ -50,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>实例唯一标识</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</para>
@@ -60,6 +67,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The unique identifier of the ResourceServer.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>urn:idaas:test</para>
             /// </summary>
@@ -68,14 +77,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerIdentifier { get; set; }
 
             /// <summary>
-            /// <para>资源服务Scope权限集合</para>
+            /// <para>The list of granted Scope permissions.</para>
             /// </summary>
             [NameInMap("ResourceServerScopes")]
             [Validation(Required=false)]
             public List<ListResourceServersForUserResponseBodyResourceServersResourceServerScopes> ResourceServerScopes { get; set; }
             public class ListResourceServersForUserResponseBodyResourceServersResourceServerScopes : TeaModel {
                 /// <summary>
-                /// <para>直接分配给当前用户的权限，视为直接授权。</para>
+                /// <para>Indicates whether a direct authorization exists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -85,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? HasDirectAuthorization { get; set; }
 
                 /// <summary>
-                /// <para>通过用户隶属的组织、组获取的权限，视为继承权限。</para>
+                /// <para>Indicates whether an inherited permission exists.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -95,7 +104,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? HasInheritAuthorization { get; set; }
 
                 /// <summary>
-                /// <para>ResourceServerScope唯一标识</para>
+                /// <para>The ID of the Scope permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>
@@ -105,7 +114,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceServerScopeId { get; set; }
 
                 /// <summary>
-                /// <para>ResourceServerScope名称</para>
+                /// <para>The name of the Scope permission.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Read All User</para>
@@ -119,6 +128,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries in the list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

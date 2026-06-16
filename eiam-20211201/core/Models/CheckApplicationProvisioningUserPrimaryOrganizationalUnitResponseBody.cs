@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The authorization information.</para>
+        /// </summary>
         [NameInMap("CheckApplicationProvisioningUserPrimaryOuResult")]
         [Validation(Required=false)]
         public CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBodyCheckApplicationProvisioningUserPrimaryOuResult CheckApplicationProvisioningUserPrimaryOuResult { get; set; }
         public class CheckApplicationProvisioningUserPrimaryOrganizationalUnitResponseBodyCheckApplicationProvisioningUserPrimaryOuResult : TeaModel {
             /// <summary>
-            /// <para>是否授权</para>
+            /// <para>Indicates if the authorization is granted.</para>
             /// </summary>
             [NameInMap("AllowAuthorization")]
             [Validation(Required=false)]
             public bool? AllowAuthorization { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -43,6 +46,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

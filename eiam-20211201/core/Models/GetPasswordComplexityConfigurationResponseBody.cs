@@ -10,38 +10,58 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetPasswordComplexityConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The password complexity configurations.</para>
+        /// <para>The password complexity policy configuration.</para>
         /// </summary>
         [NameInMap("PasswordComplexityConfiguration")]
         [Validation(Required=false)]
         public GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration PasswordComplexityConfiguration { get; set; }
         public class GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfiguration : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether logon with a weak password is disabled.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("DisabledWeakPasswordLogin")]
             [Validation(Required=false)]
             public bool? DisabledWeakPasswordLogin { get; set; }
 
+            /// <summary>
+            /// <para>The time when the weak password logon restriction takes effect.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1773383634936</para>
+            /// </summary>
             [NameInMap("DisabledWeakPasswordLoginStartedAt")]
             [Validation(Required=false)]
             public long? DisabledWeakPasswordLoginStartedAt { get; set; }
 
             /// <summary>
-            /// <para>The password complexity rules.</para>
+            /// <para>The list of password complexity rules.</para>
             /// </summary>
             [NameInMap("PasswordComplexityRules")]
             [Validation(Required=false)]
             public List<GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfigurationPasswordComplexityRules> PasswordComplexityRules { get; set; }
             public class GetPasswordComplexityConfigurationResponseBodyPasswordComplexityConfigurationPasswordComplexityRules : TeaModel {
                 /// <summary>
-                /// <para>The type of the password check. Valid values:</para>
+                /// <para>The password check type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>inclusion_upper_case: The password must contain uppercase letters.</description></item>
-                /// <item><description>inclusion_lower_case: The password must contain lowercase letters.</description></item>
-                /// <item><description>inclusion_special_case: The password must contain one or more of the following special characters: @ % + \ / \&quot; ! # $ ^ ? : , ( ) { } [ ] ~ - _ .</description></item>
-                /// <item><description>inclusion_number: The password must contain digits.</description></item>
-                /// <item><description>exclusion_username: The password cannot contain a username.</description></item>
-                /// <item><description>exclusion_email: The password cannot contain an email prefix.</description></item>
-                /// <item><description>exclusion_phone_number: The password cannot contain a mobile number.</description></item>
-                /// <item><description>exclusion_display_name: The password cannot contain a display name.</description></item>
+                /// <item><description><para>inclusion_upper_case: The password must contain uppercase letters.</para>
+                /// </description></item>
+                /// <item><description><para>inclusion_lower_case: The password must contain lowercase letters.</para>
+                /// </description></item>
+                /// <item><description><para>inclusion_special_case: The password must contain at least one of the following special characters: \<c> @ % + \\ / \\&quot; ! # $ ^ ? : , ( ) { } [ ] \\~ - _ . \\</c>.</para>
+                /// </description></item>
+                /// <item><description><para>inclusion_number: The password must contain digits.</para>
+                /// </description></item>
+                /// <item><description><para>exclusion_username: The password cannot contain the username.</para>
+                /// </description></item>
+                /// <item><description><para>exclusion_email: The password cannot contain the email address.</para>
+                /// </description></item>
+                /// <item><description><para>exclusion_phone_number: The password cannot contain the mobile number.</para>
+                /// </description></item>
+                /// <item><description><para>exclusion_display_name: The password cannot contain the display name.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -54,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The minimum number of characters in a password.</para>
+            /// <para>The minimum password length.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>

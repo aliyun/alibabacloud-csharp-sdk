@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateResourceServerScopeRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS的应用资源ID。</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The authorization type. This parameter is required for user permissions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>authorize_required</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationType { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,18 +42,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>权限名称</para>
+        /// <para>The name of the scope permission.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>读取全部用户</para>
+        /// <para>Read User Info</para>
         /// </summary>
         [NameInMap("ResourceServerScopeName")]
         [Validation(Required=false)]
         public string ResourceServerScopeName { get; set; }
 
         /// <summary>
-        /// <para>权限类型</para>
+        /// <para>The type of the scope permission.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerScopeType { get; set; }
 
         /// <summary>
-        /// <para>权限值，大小写不敏感，格式(${ResourceType}:${ResourceOption}:${ResourceRestrict})</para>
+        /// <para>The value of the scope permission.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

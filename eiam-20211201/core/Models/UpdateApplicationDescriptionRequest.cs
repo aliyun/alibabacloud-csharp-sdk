@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <para>The description of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A demo application that is used for test.</para>
+        /// <para>Demo application for testing</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

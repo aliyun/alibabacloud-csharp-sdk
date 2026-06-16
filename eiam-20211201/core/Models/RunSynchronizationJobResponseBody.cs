@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the synchronization job.</para>
+        /// <para>The ID of the synchronization task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sync_0000347vjovtcf41li0fgsd98gn24q9nj9xxxxx</para>

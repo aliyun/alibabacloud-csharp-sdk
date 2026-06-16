@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetCloudAccountResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the Alibaba Cloud account.</para>
+        /// </summary>
         [NameInMap("CloudAccount")]
         [Validation(Required=false)]
         public GetCloudAccountResponseBodyCloudAccount CloudAccount { get; set; }
         public class GetCloudAccountResponseBodyCloudAccount : TeaModel {
             /// <summary>
-            /// <para>云账号外部唯一ID</para>
+            /// <para>The unique external ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567</para>
@@ -24,7 +27,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountExternalId { get; set; }
 
             /// <summary>
-            /// <para>云账号状态</para>
+            /// <para>The health status of the Alibaba Cloud account. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>healthy: Healthy.</para>
+            /// </description></item>
+            /// <item><description><para>unhealthy: Unhealthy.</para>
+            /// </description></item>
+            /// <item><description><para>unknown: Unknown.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>healthy</para>
@@ -33,15 +44,23 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string CloudAccountHealth { get; set; }
 
+            /// <summary>
+            /// <para>The health check result for the cloud account.</para>
+            /// </summary>
             [NameInMap("CloudAccountHealthCheckResult")]
             [Validation(Required=false)]
             public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult CloudAccountHealthCheckResult { get; set; }
             public class GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResult : TeaModel {
+                /// <summary>
+                /// <para>The reason for the fault. This field returns a value when the health check status is unhealthy.</para>
+                /// </summary>
                 [NameInMap("ErrorReason")]
                 [Validation(Required=false)]
                 public GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResultErrorReason ErrorReason { get; set; }
                 public class GetCloudAccountResponseBodyCloudAccountCloudAccountHealthCheckResultErrorReason : TeaModel {
                     /// <summary>
+                    /// <para>The error code.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>AuthenticationFail.NoPermission</para>
                     /// </summary>
@@ -50,6 +69,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string ErrorCode { get; set; }
 
                     /// <summary>
+                    /// <para>The description of the error.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>There is no permission.</para>
                     /// </summary>
@@ -60,6 +81,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 }
 
                 /// <summary>
+                /// <para>The time of the last check. The value is a UNIX timestamp in milliseconds.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1649830226000</para>
                 /// </summary>
@@ -68,6 +91,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? LastCheckTime { get; set; }
 
                 /// <summary>
+                /// <para>The result of the health check for the cloud account. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>success: The health check was successful.</para>
+                /// </description></item>
+                /// <item><description><para>failed: The health check failed.</para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
                 /// </summary>
@@ -78,7 +109,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>云账号ID</para>
+            /// <para>The ID of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ca_01kmegjc11qa1txxxxx</para>
@@ -88,7 +119,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountId { get; set; }
 
             /// <summary>
-            /// <para>云账号名称</para>
+            /// <para>The name of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_accout_xxxx</para>
@@ -98,14 +129,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountName { get; set; }
 
             /// <summary>
-            /// <para>云账号提供商配置</para>
+            /// <para>The configuration of the identity provider.</para>
             /// </summary>
             [NameInMap("CloudAccountProviderConfig")]
             [Validation(Required=false)]
             public GetCloudAccountResponseBodyCloudAccountCloudAccountProviderConfig CloudAccountProviderConfig { get; set; }
             public class GetCloudAccountResponseBodyCloudAccountCloudAccountProviderConfig : TeaModel {
                 /// <summary>
-                /// <para>受众标识</para>
+                /// <para>The audience identity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>urn:cloud:idaas:sts:xxx:xxx</para>
@@ -115,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Audience { get; set; }
 
                 /// <summary>
-                /// <para>授权服务ID</para>
+                /// <para>The ID of the authorization server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>iauths_system</para>
@@ -125,7 +156,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthorizationServerId { get; set; }
 
                 /// <summary>
-                /// <para>Issuer。</para>
+                /// <para>The issuer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2</a></para>
@@ -135,7 +166,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Issuer { get; set; }
 
                 /// <summary>
-                /// <para>验签公钥端点</para>
+                /// <para>The public key endpoint for signature verification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks">https://xxxxx.aliyunidaas.com/api/v2/iauths_system/oauth2/jwks</a></para>
@@ -147,7 +178,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>云账号提供商名称</para>
+            /// <para>The name of the identity provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas-eiam-oidc-provider</para>
@@ -157,7 +188,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountProviderName { get; set; }
 
             /// <summary>
-            /// <para>云账号类别</para>
+            /// <para>The type of the Alibaba Cloud account. The valid value is:</para>
+            /// <list type="bullet">
+            /// <item><description>alibaba_cloud: Alibaba Cloud</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud</para>
@@ -167,6 +201,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CloudAccountVendorType { get; set; }
 
             /// <summary>
+            /// <para>The creation time. The value is a UNIX timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1649830225000</para>
             /// </summary>
@@ -175,7 +211,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>云账号描述</para>
+            /// <para>The description of the Alibaba Cloud account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_accout_description</para>
@@ -185,7 +221,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -195,6 +231,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The time of the last update. The value is a UNIX timestamp in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1649830227000</para>
             /// </summary>
@@ -205,6 +243,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

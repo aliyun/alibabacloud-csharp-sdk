@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The applications that the EIAM account can access.</para>
+        /// <para>The list of applications that the account is authorized to access.</para>
         /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<ListApplicationsForUserResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsForUserResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>The ID of the application that the EIAM account can access.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>应用角色列表。</para>
+            /// <para>The list of application roles.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListApplicationsForUserResponseBodyApplicationsApplicationRoles> ApplicationRoles { get; set; }
             public class ListApplicationsForUserResponseBodyApplicationsApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>应用角色标识。</para>
+                /// <para>The ID of the application role.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ApplicationRoleId { get; set; }
 
                 /// <summary>
-                /// <para>直接分配给当前用户的权限，视为直接授权。</para>
+                /// <para>Indicates whether the role is directly assigned to the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public bool? HasDirectAuthorization { get; set; }
 
                 /// <summary>
-                /// <para>通过用户隶属的组织、组获取的权限，视为继承权限。</para>
+                /// <para>Indicates whether the role is inherited from an organization or a group to which the user belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -66,10 +66,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the EIAM account has direct permissions on the application. Valid values:</para>
+            /// <para>Indicates whether a direct authorization exists. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: The EIAM account has direct permissions on the application.</description></item>
-            /// <item><description>false: The EIAM account does not have direct permissions on the application.</description></item>
+            /// <item><description><para>true: A direct authorization record exists between the application and the account.</para>
+            /// </description></item>
+            /// <item><description><para>false: No direct authorization record exists between the application and the account.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,10 +82,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? HasDirectAuthorization { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the EIAM account has inherited permissions on the application. Valid values:</para>
+            /// <para>Indicates whether an inherited authorization exists. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: A parent organization or an organization to which the EIAM account belongs has direct permissions on the application.</description></item>
-            /// <item><description>false: A parent organization or an organization to which the EIAM account belongs does not have direct permissions on the application.</description></item>
+            /// <item><description><para>true: A direct authorization record exists between the application and a parent organization or a group to which the account belongs.</para>
+            /// </description></item>
+            /// <item><description><para>false: No direct authorization record exists between the application and any of the parent organizations or groups to which the account belongs.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +100,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of the returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

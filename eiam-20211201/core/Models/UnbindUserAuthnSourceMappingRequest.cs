@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UnbindUserAuthnSourceMappingRequest : TeaModel {
         /// <summary>
-        /// <para>来源ID</para>
+        /// <para>The ID of the source identity provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>外部关联ID</para>
+        /// <para>The external ID associated with the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserExternalId { get; set; }
 
         /// <summary>
-        /// <para>用户ID</para>
+        /// <para>The user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

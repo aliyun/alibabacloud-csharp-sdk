@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersForResourceServerRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS的应用资源ID。</para>
+        /// <para>The ID of the Resource Server application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,11 +20,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <para>A list of filter conditions.</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListUsersForResourceServerRequestFilter> Filter { get; set; }
         public class ListUsersForResourceServerRequestFilter : TeaModel {
             /// <summary>
+            /// <para>The name of the filter condition.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>UserIds</para>
             /// </summary>
@@ -32,6 +37,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>A list of values for the filter condition.</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public List<string> Value { get; set; }
@@ -39,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +58,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page for paged queries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -58,7 +68,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The token for the next page. Set this parameter to the value of NextToken returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>

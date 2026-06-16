@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>Conditional access policy name</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My Policy</para>
+            /// <para>My policy</para>
             /// </summary>
             [NameInMap("ConditionalAccessPolicyName")]
             [Validation(Required=false)]

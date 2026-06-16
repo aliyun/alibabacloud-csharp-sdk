@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCredentialProviderResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the credential provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>atp_01kr2cmj5gxxx4fvmls2e93dxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CredentialProviderId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

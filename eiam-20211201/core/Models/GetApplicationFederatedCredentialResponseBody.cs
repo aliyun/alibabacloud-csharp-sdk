@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetApplicationFederatedCredentialResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The application federated credential object.</para>
+        /// </summary>
         [NameInMap("ApplicationFederatedCredential")]
         [Validation(Required=false)]
         public GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential ApplicationFederatedCredential { get; set; }
         public class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredential : TeaModel {
             /// <summary>
-            /// <para>应用联邦凭证ID</para>
+            /// <para>The ID of the application\&quot;s federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>afc_aaaaa1111</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationFederatedCredentialId { get; set; }
 
             /// <summary>
-            /// <para>应用联邦凭证名称</para>
+            /// <para>The name of the application\&quot;s federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationFederatedCredentialName { get; set; }
 
             /// <summary>
-            /// <para>应用联邦凭证类型</para>
+            /// <para>The type of the application\&quot;s federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>oidc</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationFederatedCredentialType { get; set; }
 
             /// <summary>
-            /// <para>应用ID</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -54,14 +57,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>属性映射</para>
+            /// <para>The attribute mappings.</para>
             /// </summary>
             [NameInMap("AttributeMappings")]
             [Validation(Required=false)]
             public List<GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialAttributeMappings> AttributeMappings { get; set; }
             public class GetApplicationFederatedCredentialResponseBodyApplicationFederatedCredentialAttributeMappings : TeaModel {
                 /// <summary>
-                /// <para>源值表达式</para>
+                /// <para>The source value expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Append(client.applicationFederatedCredentialId, &quot;:&quot;, cert.subject.CN, &quot;:&quot;, cert.serialNumber)</para>
@@ -71,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SourceValueExpression { get; set; }
 
                 /// <summary>
-                /// <para>目标字段</para>
+                /// <para>The target field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>client.activeSubjectUrn</para>
@@ -83,7 +86,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the credential was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -93,7 +96,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>应用联邦凭证描述</para>
+            /// <para>The description of the application\&quot;s federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -103,7 +106,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>应用联邦凭证提供者ID</para>
+            /// <para>The ID of the federated credential provider.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fcp_asda1dasdxxxx</para>
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FederatedCredentialProviderId { get; set; }
 
             /// <summary>
-            /// <para>EAIM 实例ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -123,7 +126,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>最近使用时间</para>
+            /// <para>The time when the credential was last used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>应用联邦凭证状态</para>
+            /// <para>The status of the application\&quot;s federated credential.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -143,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>更新时间</para>
+            /// <para>The time when the credential was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758785994982</para>
@@ -153,7 +156,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>验证条件</para>
+            /// <para>The verification condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Equals(cert.subject.CN, &quot;test&quot;)</para>
@@ -165,6 +168,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

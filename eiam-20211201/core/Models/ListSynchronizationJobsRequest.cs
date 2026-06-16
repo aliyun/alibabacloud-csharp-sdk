@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListSynchronizationJobsRequest : TeaModel {
         /// <summary>
-        /// <para>同步方向[ingress,egress]</para>
+        /// <para>The direction of the sync task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ingress: Inbound.</para>
+        /// </description></item>
+        /// <item><description><para>egress: Outbound.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ingress</para>
@@ -20,7 +26,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>同步结束时间</para>
+        /// <para>The synchronization end time. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649830226000</para>
@@ -29,14 +35,26 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The filter parameters.</para>
+        /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<ListSynchronizationJobsRequestFilters> Filters { get; set; }
         public class ListSynchronizationJobsRequestFilters : TeaModel {
+            /// <summary>
+            /// <para>The name of the dynamic parameter.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>qps</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The values of the dynamic parameter.</para>
+            /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<string> Values { get; set; }
@@ -44,7 +62,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>分页查询时每页行数。默认值为20，最大值为100。</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -65,7 +83,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>The token to retrieve the next page of results. If no more pages exist, this parameter is not returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -75,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>当前查询的列表页码，默认为1。</para>
+        /// <para>The page number. The value starts from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +103,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>当前查询的列表页码，默认为20。</para>
+        /// <para>The number of entries per page. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -95,7 +113,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>同步开始时间</para>
+        /// <para>The synchronization start time. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1649830226000</para>
@@ -105,7 +123,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>同步状态[pending,running,suspending,failed,partial_success,success]</para>
+        /// <para>The status of the sync task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>pending: The task is pending.</para>
+        /// </description></item>
+        /// <item><description><para>running: The task is running.</para>
+        /// </description></item>
+        /// <item><description><para>failed: The task failed.</para>
+        /// </description></item>
+        /// <item><description><para>partial_success: The task is partially successful.</para>
+        /// </description></item>
+        /// <item><description><para>success: The task is successful.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>
@@ -115,7 +145,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>同步目标ID</para>
+        /// <para>A list of synchronization target IDs. For example, \<c>[idp_111XXXX,idp_222XXXX]\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>target_001</para>
@@ -125,7 +155,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> TargetIds { get; set; }
 
         /// <summary>
-        /// <para>同步目标类型[identity_provider,organizational_unit,application,user]</para>
+        /// <para>The type of the synchronization target. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>identity_provider: Identity provider.</para>
+        /// </description></item>
+        /// <item><description><para>application: Application.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>identity_provider</para>

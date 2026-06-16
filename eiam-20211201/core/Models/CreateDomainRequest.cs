@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name of the website.</para>
+        /// <para>The domain name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Domain { get; set; }
 
         /// <summary>
-        /// <para>Registration information parameters.</para>
+        /// <para>The parameters for ICP filing information.</para>
         /// </summary>
         [NameInMap("Filing")]
         [Validation(Required=false)]
         public CreateDomainRequestFiling Filing { get; set; }
         public class CreateDomainRequestFiling : TeaModel {
             /// <summary>
-            /// <para>Record number associated with the domain name.</para>
+            /// <para>The ICP filing number associated with the domain name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>浙xx-xxxxxx</para>
+            /// <para>xICPxxxxxx-xx</para>
             /// </summary>
             [NameInMap("IcpNumber")]
             [Validation(Required=false)]

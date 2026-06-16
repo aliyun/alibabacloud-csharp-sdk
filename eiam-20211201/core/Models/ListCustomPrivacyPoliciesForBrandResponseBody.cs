@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCustomPrivacyPoliciesForBrandResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of custom privacy policies associated with the brand.</para>
+        /// </summary>
         [NameInMap("BrandCustomPrivacyPolicies")]
         [Validation(Required=false)]
         public List<ListCustomPrivacyPoliciesForBrandResponseBodyBrandCustomPrivacyPolicies> BrandCustomPrivacyPolicies { get; set; }
         public class ListCustomPrivacyPoliciesForBrandResponseBodyBrandCustomPrivacyPolicies : TeaModel {
             /// <summary>
-            /// <para>条款ID</para>
+            /// <para>The privacy policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pp_xxxx</para>
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>分页查询时每页行数。</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -36,7 +39,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -46,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</para>
+        /// <para>The token to retrieve the previous page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -56,6 +59,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -64,6 +69,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

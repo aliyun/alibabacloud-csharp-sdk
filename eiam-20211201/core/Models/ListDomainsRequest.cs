@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListDomainsRequest : TeaModel {
+        /// <summary>
+        /// <para>The brand ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>brand_xxxx</para>
+        /// </summary>
         [NameInMap("BrandId")]
         [Validation(Required=false)]
         public string BrandId { get; set; }

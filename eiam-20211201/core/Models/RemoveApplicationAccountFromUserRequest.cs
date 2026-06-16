@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class RemoveApplicationAccountFromUserRequest : TeaModel {
         /// <summary>
-        /// <para>应用账号Id</para>
+        /// <para>The ID of the application account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationAccountId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS的应用主键id</para>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM的实例id</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>用户Id</para>
+        /// <para>The ID of the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

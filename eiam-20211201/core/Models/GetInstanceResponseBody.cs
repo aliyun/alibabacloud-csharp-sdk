@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the instance.</para>
+        /// <para>The instance information.</para>
         /// </summary>
         [NameInMap("Instance")]
         [Validation(Required=false)]
         public GetInstanceResponseBodyInstance Instance { get; set; }
         public class GetInstanceResponseBodyInstance : TeaModel {
             /// <summary>
-            /// <para>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the instance was created, in Unix timestamp format, measured in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1550115455000</para>
@@ -27,14 +27,30 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The default endpoint of the instance.</para>
+            /// <b>Example:</b>
+            /// <para>enabled</para>
+            /// </summary>
+            [NameInMap("CrossRegionReplication")]
+            [Validation(Required=false)]
+            public string CrossRegionReplication { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>primary</para>
+            /// </summary>
+            [NameInMap("CrossRegionReplicationRole")]
+            [Validation(Required=false)]
+            public string CrossRegionReplicationRole { get; set; }
+
+            /// <summary>
+            /// <para>The default endpoint of the instance. This field is no longer maintained. Use the DomainConfig related fields or refer to the domain list query API instead.</para>
             /// </summary>
             [NameInMap("DefaultEndpoint")]
             [Validation(Required=false)]
             public GetInstanceResponseBodyInstanceDefaultEndpoint DefaultEndpoint { get; set; }
             public class GetInstanceResponseBodyInstanceDefaultEndpoint : TeaModel {
                 /// <summary>
-                /// <para>The endpoint of the instance.</para>
+                /// <para>The endpoint address of the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example-xxx.aliyunidaas.com</para>
@@ -44,10 +60,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Endpoint { get; set; }
 
                 /// <summary>
-                /// <para>The status of the endpoint. Valid values:</para>
+                /// <para>The status of the instance endpoint. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>resolved</description></item>
-                /// <item><description>unresolved</description></item>
+                /// <item><description>resolved: Resolved.</description></item>
+                /// <item><description>unresolved: Not resolved.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -63,14 +79,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The description of the instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test_description</para>
+            /// <para>instance_for_test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The default domain of the instance.</para>
+            /// <para>The domain-related configuration of the instance.</para>
             /// </summary>
             [NameInMap("DomainConfig")]
             [Validation(Required=false)]
@@ -80,31 +96,33 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The default domain of the instance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>example-xxx.example.com</para>
+                /// <para>login.example.com</para>
                 /// </summary>
                 [NameInMap("DefaultDomain")]
                 [Validation(Required=false)]
                 public string DefaultDomain { get; set; }
 
                 /// <summary>
-                /// <para>The init domain of the instance.</para>
+                /// <para>The initialization domain of the instance.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>example-xxx.aliyunidaas.com</para>
+                /// <para>rx72nxxx.example.com</para>
                 /// </summary>
                 [NameInMap("InitDomain")]
                 [Validation(Required=false)]
                 public string InitDomain { get; set; }
 
                 /// <summary>
-                /// <para>Valid values:</para>
+                /// <para>The auto-redirect status of the initialization domain. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>enabled: Enabled.</para>
+                /// </description></item>
+                /// <item><description><para>disabled: Disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <para>disabled</para>
                 /// </summary>
                 [NameInMap("InitDomainAutoRedirectStatus")]
                 [Validation(Required=false)]
@@ -113,11 +131,19 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The outbound public CIDR blocks of the instance. For example, when you synchronize Active Directory (AD) accounts, the IDaaS EIAM instance accesses your AD service by using the outbound public CIDR blocks.</para>
+            /// <para>The egress public IP address ranges of the instance. For example, during AD account synchronization, the EIAM instance accesses your AD service through these public IP address ranges.</para>
             /// </summary>
             [NameInMap("EgressAddresses")]
             [Validation(Required=false)]
             public List<string> EgressAddresses { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>inactive</para>
+            /// </summary>
+            [NameInMap("InstanceFailoverStatus")]
+            [Validation(Required=false)]
+            public string InstanceFailoverStatus { get; set; }
 
             /// <summary>
             /// <para>The instance ID.</para>
@@ -130,6 +156,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The service code of the cloud service that manages the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sase</para>
             /// 
@@ -140,7 +168,58 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ManagedServiceCode { get; set; }
 
+            [NameInMap("ReplicationConfiguration")]
+            [Validation(Required=false)]
+            public GetInstanceResponseBodyInstanceReplicationConfiguration ReplicationConfiguration { get; set; }
+            public class GetInstanceResponseBodyInstanceReplicationConfiguration : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>idaas_xxxx</para>
+                /// </summary>
+                [NameInMap("BackupInstanceId")]
+                [Validation(Required=false)]
+                public string BackupInstanceId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-beijing</para>
+                /// </summary>
+                [NameInMap("BackupInstanceRegionId")]
+                [Validation(Required=false)]
+                public string BackupInstanceRegionId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>idaas_xxxx</para>
+                /// </summary>
+                [NameInMap("PrimaryInstanceId")]
+                [Validation(Required=false)]
+                public string PrimaryInstanceId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
+                [NameInMap("PrimaryInstanceRegionId")]
+                [Validation(Required=false)]
+                public string PrimaryInstanceRegionId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1778499337000</para>
+                /// </summary>
+                [NameInMap("ReplicationCreateTime")]
+                [Validation(Required=false)]
+                public long? ReplicationCreateTime { get; set; }
+
+            }
+
             /// <summary>
+            /// <para>Indicates whether the instance is managed by a cloud service.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// 
             /// <b>if can be null:</b>
             /// <c>false</c>
             /// </summary>
@@ -149,10 +228,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>creating</description></item>
-            /// <item><description>running</description></item>
+            /// <item><description>creating: Being created.</description></item>
+            /// <item><description>running: Running.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

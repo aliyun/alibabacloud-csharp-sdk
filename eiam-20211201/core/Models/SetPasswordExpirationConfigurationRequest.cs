@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetPasswordExpirationConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>Effective authentication sourceIds</para>
+        /// <para>The list of IDs of authentication sources that take effect.</para>
         /// </summary>
         [NameInMap("EffectiveAuthenticationSourceIds")]
         [Validation(Required=false)]
@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The action to take upon password expiration. This parameter must be specified when PasswordExpirationStatus is set to enabled. Valid values:</para>
+        /// <para>The action to be performed when a password expires. This parameter is required when PasswordExpirationStatus is set to enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>forbid_login: Users cannot log on to IDaaS.</description></item>
-        /// <item><description>force_update_password: Users must change the password.</description></item>
-        /// <item><description>remind_update_password: IDaaS reminds users to change the password upon each logon.</description></item>
+        /// <item><description>forbid_login: Prohibit logon.</description></item>
+        /// <item><description>force_update_password: Force the user to change the password.</description></item>
+        /// <item><description>remind_update_password: Remind the user to change the password.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PasswordExpirationAction { get; set; }
 
         /// <summary>
-        /// <para>The methods for receiving password expiration notifications. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</para>
+        /// <para>The list of notification channels for password expiration. This parameter is required when PasswordExpirationNotificationStatus is set to enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>login</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> PasswordExpirationNotificationChannels { get; set; }
 
         /// <summary>
-        /// <para>The number of days before the expiration date during which password expiration notifications are sent. Unit: day. This parameter must be specified when PasswordExpirationNotificationStatus is set to enabled.</para>
+        /// <para>The time when a password expiration notification is sent. Unit: days. This parameter is required when PasswordExpirationNotificationStatus is set to enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -63,10 +63,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? PasswordExpirationNotificationDuration { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the password expiration notification feature. Valid values:</para>
+        /// <para>The status of the password expiration notification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description>enabled: The password expiration notification is enabled.</description></item>
+        /// <item><description>disabled: The password expiration notification is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PasswordExpirationNotificationStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the password expiration feature. Valid values:</para>
+        /// <para>The status of the password expiration configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description>enabled: The password expiration configuration is enabled.</description></item>
+        /// <item><description>disabled: The password expiration configuration is disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PasswordExpirationStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of days before which users must change the password to prevent password expiration. Unit: day. You must set this parameter to a value greater than the value of PasswordExpirationNotificationDuration.</para>
+        /// <para>The time when a user is forced to change the password. Unit: days. The value of this parameter must be greater than the value of PasswordExpirationNotificationDuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? PasswordForcedUpdateDuration { get; set; }
 
         /// <summary>
-        /// <para>The validity period of a password. Unit: day. This parameter must be specified when PasswordExpirationStatus is set to enabled.</para>
+        /// <para>The validity period of a password in days. This parameter is required when PasswordExpirationStatus is set to enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>180</para>

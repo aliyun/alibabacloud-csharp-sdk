@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>Conditional access policy name</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My Policy</para>
+            /// <para>My policy</para>
             /// </summary>
             [NameInMap("ConditionalAccessPolicyName")]
             [Validation(Required=false)]
@@ -180,9 +180,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ActiveSessionReuseStatus { get; set; }
 
                 /// <summary>
-                /// <para>Decision action of the conditional access policy:
-                /// deny  Deny
-                /// allow Allow</para>
+                /// <para>Decision action of the conditional access policy: deny Deny allow Allow</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>deny</para>
@@ -234,7 +232,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>Description of the conditional access policy</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My Policy Description</para>
+            /// <para>My policy description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

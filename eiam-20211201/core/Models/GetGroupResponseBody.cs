@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 
             /// <summary>
             /// <para>The source type of the group. Only build_in may be returned, which indicates that the group was created in IDaaS.</para>
-            /// <para>*build_in:Create By Self.</para>
+            /// <para>\*build_in:Create By Self.</para>
             /// 
             /// <b>Example:</b>
             /// <para>build_in</para>

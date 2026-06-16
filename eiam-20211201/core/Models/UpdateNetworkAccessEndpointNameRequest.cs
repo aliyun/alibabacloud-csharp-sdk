@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateNetworkAccessEndpointNameRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>专属网络端点ID。</para>
+        /// <para>The ID of the private network access endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>专属网络端点名称。</para>
+        /// <para>The name of the private network access endpoint. The endpoint type must be private.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx业务VPC访问端点</para>
+        /// <para>VPC access endpoint for xx service</para>
         /// </summary>
         [NameInMap("NetworkAccessEndpointName")]
         [Validation(Required=false)]

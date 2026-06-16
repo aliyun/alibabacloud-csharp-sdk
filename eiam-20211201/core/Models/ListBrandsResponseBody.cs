@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListBrandsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of brands.</para>
+        /// </summary>
         [NameInMap("Brands")]
         [Validation(Required=false)]
         public List<ListBrandsResponseBodyBrands> Brands { get; set; }
         public class ListBrandsResponseBodyBrands : TeaModel {
             /// <summary>
-            /// <para>品牌ID</para>
+            /// <para>The brand ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>brand_xxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandId { get; set; }
 
             /// <summary>
-            /// <para>品牌名称</para>
+            /// <para>The brand name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom Brand</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandName { get; set; }
 
             /// <summary>
-            /// <para>品牌类型</para>
+            /// <para>The brand type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_custom</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string BrandType { get; set; }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>品牌状态</para>
+            /// <para>The brand status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>分页查询时每页行数。</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -86,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</para>
+        /// <para>The token that is used to retrieve the previous page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -96,6 +99,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -104,6 +109,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

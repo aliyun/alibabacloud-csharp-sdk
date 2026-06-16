@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateIdentityProviderRequest : TeaModel {
         /// <summary>
-        /// <para>Authentication configuration information.</para>
+        /// <para>The authentication configurations.</para>
         /// </summary>
         [NameInMap("AuthnConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestAuthnConfig AuthnConfig { get; set; }
         public class CreateIdentityProviderRequestAuthnConfig : TeaModel {
             /// <summary>
-            /// <para>Whether the corresponding IdP supports authentication. Value range:</para>
+            /// <para>Specifies whether the IdP supports authentication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthnStatus { get; set; }
 
             /// <summary>
-            /// <para>Whether automatic password update is supported. Value range:</para>
+            /// <para>Specifies whether to automatically update passwords. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -51,18 +51,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Auto-create account rule configuration.</para>
+        /// <para>The rule configurations for automatic account creation.</para>
         /// </summary>
         [NameInMap("AutoCreateUserConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestAutoCreateUserConfig AutoCreateUserConfig { get; set; }
         public class CreateIdentityProviderRequestAutoCreateUserConfig : TeaModel {
             /// <summary>
-            /// <para>Whether auto-creation of accounts is enabled. Possible values:</para>
+            /// <para>Specifies whether to automatically create accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AutoCreateUserStatus { get; set; }
 
             /// <summary>
-            /// <para>Target organizational unit IDs collection.</para>
+            /// <para>The collection of target organizational unit IDs.</para>
             /// </summary>
             [NameInMap("TargetOrganizationalUnitIds")]
             [Validation(Required=false)]
@@ -83,18 +83,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Auto-update account rule configuration.</para>
+        /// <para>The rule configurations for automatic account updates.</para>
         /// </summary>
         [NameInMap("AutoUpdateUserConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestAutoUpdateUserConfig AutoUpdateUserConfig { get; set; }
         public class CreateIdentityProviderRequestAutoUpdateUserConfig : TeaModel {
             /// <summary>
-            /// <para>Whether auto-updating of accounts is enabled. Possible values:</para>
+            /// <para>Specifies whether to automatically update accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -108,37 +108,37 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>OIDC identity provider account binding rule configuration.</para>
+        /// <para>The account binding rule configurations for the OIDC identity provider.</para>
         /// </summary>
         [NameInMap("BindingConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestBindingConfig BindingConfig { get; set; }
         public class CreateIdentityProviderRequestBindingConfig : TeaModel {
             /// <summary>
-            /// <para>List of rules for automatically matching accounts.</para>
+            /// <para>The list of rules for automatically matching accounts.</para>
             /// </summary>
             [NameInMap("AutoMatchUserProfileExpressions")]
             [Validation(Required=false)]
             public List<CreateIdentityProviderRequestBindingConfigAutoMatchUserProfileExpressions> AutoMatchUserProfileExpressions { get; set; }
             public class CreateIdentityProviderRequestBindingConfigAutoMatchUserProfileExpressions : TeaModel {
                 /// <summary>
-                /// <para>Type of the expression. Value range:</para>
+                /// <para>The type of the expression. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Field: filed</para>
+                /// <item><description><para>field</para>
                 /// </description></item>
-                /// <item><description><para>Expression: expression</para>
+                /// <item><description><para>expression</para>
                 /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>filed</para>
+                /// <para>field</para>
                 /// </summary>
                 [NameInMap("ExpressionMappingType")]
                 [Validation(Required=false)]
                 public string ExpressionMappingType { get; set; }
 
                 /// <summary>
-                /// <para>Expression for the mapped attribute value.</para>
+                /// <para>The expression for the value of the mapped attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>idpUser.phoneNumber</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string SourceValueExpression { get; set; }
 
                 /// <summary>
-                /// <para>Name of the target attribute.</para>
+                /// <para>The name of the target mapped attribute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>user.username</para>
@@ -158,10 +158,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string TargetField { get; set; }
 
                 /// <summary>
-                /// <para>Description of the target attribute.</para>
+                /// <para>The name of the mapping\&quot;s target property.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>user.username</para>
+                /// <para>username</para>
                 /// </summary>
                 [NameInMap("TargetFieldDescription")]
                 [Validation(Required=false)]
@@ -170,11 +170,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Whether automatic account matching is enabled. Value range:</para>
+            /// <para>Specifies whether to automatically match accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -186,11 +186,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AutoMatchUserStatus { get; set; }
 
             /// <summary>
-            /// <para>Whether the user manual account binding function is enabled. Value range:</para>
+            /// <para>Specifies whether to allow users to manually bind accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -204,24 +204,24 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Idp client token.</para>
+        /// <para>A client token used to ensure the idempotence of the request. Generate a unique value from your client for each request. The ClientToken can only contain ASCII characters. Note: If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>client-token-example</para>
+        /// <para>clientToken_20250704_Axxxxx</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>DingTalk configuration information.</para>
+        /// <para>The DingTalk configurations.</para>
         /// </summary>
         [NameInMap("DingtalkAppConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestDingtalkAppConfig DingtalkAppConfig { get; set; }
         public class CreateIdentityProviderRequestDingtalkAppConfig : TeaModel {
             /// <summary>
-            /// <para>AppKey of the DingTalk application.</para>
+            /// <para>The AppKey of the DingTalk application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Xczngvfemo4e</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AppKey { get; set; }
 
             /// <summary>
-            /// <para>AppSecret of the DingTalk application.</para>
+            /// <para>The AppSecret of the DingTalk application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5d405a12a6f84ad4ab05ee09axxxx</para>
@@ -241,19 +241,23 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AppSecret { get; set; }
 
             /// <summary>
-            /// <para>CorpId of the DingTalk application.</para>
+            /// <para>The CorpId of the DingTalk application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3075680424786133505</para>
+            /// <para>307568042478613xxxx</para>
             /// </summary>
             [NameInMap("CorpId")]
             [Validation(Required=false)]
             public string CorpId { get; set; }
 
             /// <summary>
-            /// <para>DingTalk edition. Valid values:</para>
-            /// <para>public_dingtalk – Standard DingTalk.</para>
-            /// <para>private_dingtalk – Dedicated DingTalk.</para>
+            /// <para>The DingTalk version. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>public_dingtalk: Standard DingTalk</para>
+            /// </description></item>
+            /// <item><description><para>private_dingtalk: Enterprise DingTalk</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>public_dingtalk</para>
@@ -263,20 +267,20 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DingtalkVersion { get; set; }
 
             /// <summary>
-            /// <para>DingTalk encrypt key.</para>
+            /// <para>The EncryptKey of the DingTalk application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>29003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</para>
+            /// <para>VkdWw91mdkrjVFr3ObNwefap21dfxxxx</para>
             /// </summary>
             [NameInMap("EncryptKey")]
             [Validation(Required=false)]
             public string EncryptKey { get; set; }
 
             /// <summary>
-            /// <para>DingTalk verification token.</para>
+            /// <para>The VerificationToken of the DingTalk application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5ba9c127a7abe029003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</para>
+            /// <para>myDingApp_VerifyTokenxxxxx</para>
             /// </summary>
             [NameInMap("VerificationToken")]
             [Validation(Required=false)]
@@ -285,7 +289,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Identity provider name.</para>
+        /// <para>The name of the identity provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -296,23 +300,23 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderName { get; set; }
 
         /// <summary>
-        /// <para>Identity provider synchronization type.</para>
+        /// <para>The synchronization type of the identity provider.</para>
         /// <list type="bullet">
-        /// <item><description><para>Inbound to DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</para>
+        /// <item><description><para>Inbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</para>
         /// </description></item>
-        /// <item><description><para>Outbound to DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</para>
+        /// <item><description><para>Outbound DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</para>
         /// </description></item>
-        /// <item><description><para>Inbound to WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</para>
+        /// <item><description><para>Inbound WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</para>
         /// </description></item>
-        /// <item><description><para>Inbound to Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</para>
+        /// <item><description><para>Inbound Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</para>
         /// </description></item>
-        /// <item><description><para>Inbound to AD: urn:alibaba:idaas:idp:microsoft:ad:pull</para>
+        /// <item><description><para>Inbound AD: urn:alibaba:idaas:idp:microsoft:ad:pull</para>
         /// </description></item>
-        /// <item><description><para>Inbound to LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</para>
+        /// <item><description><para>Inbound LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</para>
         /// </description></item>
         /// <item><description><para>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</para>
         /// </description></item>
-        /// <item><description><para>SASE Custom OIDC: urn:alibaba:idaas:idp:alibaba:sase</para>
+        /// <item><description><para>SASE-specific OIDC: urn:alibaba:idaas:idp:alibaba:sase</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -325,7 +329,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string IdentityProviderType { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -336,14 +340,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Lark (Feishu) configuration information.</para>
+        /// <para>The Lark configurations.</para>
         /// </summary>
         [NameInMap("LarkConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestLarkConfig LarkConfig { get; set; }
         public class CreateIdentityProviderRequestLarkConfig : TeaModel {
             /// <summary>
-            /// <para>Lark (Feishu) app appId.</para>
+            /// <para>The AppId of the Lark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cli_xxxx</para>
@@ -353,7 +357,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AppId { get; set; }
 
             /// <summary>
-            /// <para>Lark (Feishu) app secret.</para>
+            /// <para>The App Secret of the Lark application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KiiLzh5Dueh4wbLxxxx</para>
@@ -363,17 +367,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AppSecret { get; set; }
 
             /// <summary>
-            /// <para>Lark (Feishu) encrypt key.</para>
+            /// <para>The EncryptKey of the custom Lark application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>29003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</para>
+            /// <para>VkdWw91mdkrjVFr3ObNwefap21dfxxxx</para>
             /// </summary>
             [NameInMap("EncryptKey")]
             [Validation(Required=false)]
             public string EncryptKey { get; set; }
 
             /// <summary>
-            /// <para>Lark (Feishu) enterprise number.</para>
+            /// <para>The enterprise code of Lark.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FSX123111xxx</para>
@@ -383,10 +387,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string EnterpriseNumber { get; set; }
 
             /// <summary>
-            /// <para>Lark (Feishu)  verification token.</para>
+            /// <para>The VerificationToken of the custom Lark application.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>5ba9c127a7abe029003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</para>
+            /// <para>feishuVerifyTokenxxxxx</para>
             /// </summary>
             [NameInMap("VerificationToken")]
             [Validation(Required=false)]
@@ -395,14 +399,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>AD/LDAP configuration information.</para>
+        /// <para>The AD/LDAP configurations.</para>
         /// </summary>
         [NameInMap("LdapConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestLdapConfig LdapConfig { get; set; }
         public class CreateIdentityProviderRequestLdapConfig : TeaModel {
             /// <summary>
-            /// <para>Administrator password.</para>
+            /// <para>The administrator password.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
@@ -412,7 +416,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AdministratorPassword { get; set; }
 
             /// <summary>
-            /// <para>Administrator username.</para>
+            /// <para>The administrator account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DC=example,DC=com</para>
@@ -422,11 +426,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AdministratorUsername { get; set; }
 
             /// <summary>
-            /// <para>Whether to verify the certificate fingerprint. Value range:</para>
+            /// <para>Specifies whether to verify the certificate fingerprint. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -438,14 +442,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CertificateFingerprintStatus { get; set; }
 
             /// <summary>
-            /// <para>List of certificate fingerprints.</para>
+            /// <para>The list of certificate fingerprints.</para>
             /// </summary>
             [NameInMap("CertificateFingerprints")]
             [Validation(Required=false)]
             public List<string> CertificateFingerprints { get; set; }
 
             /// <summary>
-            /// <para>Group member attribute name.</para>
+            /// <para>The group member identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>member</para>
@@ -455,7 +459,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupMemberAttributeName { get; set; }
 
             /// <summary>
-            /// <para>Group ObjectClass.</para>
+            /// <para>The objectClass for groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group</para>
@@ -465,7 +469,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupObjectClass { get; set; }
 
             /// <summary>
-            /// <para>Custom filter for Group ObjectClass.</para>
+            /// <para>The custom filter for groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</para>
@@ -475,7 +479,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupObjectClassCustomFilter { get; set; }
 
             /// <summary>
-            /// <para>Communication protocol.</para>
+            /// <para>The communication protocol.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ldap</para>
@@ -485,7 +489,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LdapProtocol { get; set; }
 
             /// <summary>
-            /// <para>AD/LDAP server address.</para>
+            /// <para>The address of the AD/LDAP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123.xx.xx.89</para>
@@ -495,7 +499,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LdapServerHost { get; set; }
 
             /// <summary>
-            /// <para>AD/LDAP port number.</para>
+            /// <para>The port number of the AD/LDAP server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>636</para>
@@ -505,7 +509,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public int? LdapServerPort { get; set; }
 
             /// <summary>
-            /// <para>Organization Unit ObjectClass.</para>
+            /// <para>The objectClass for organizational units.</para>
             /// 
             /// <b>Example:</b>
             /// <para>organizationUnit,top</para>
@@ -515,6 +519,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationUnitObjectClass { get; set; }
 
             /// <summary>
+            /// <para>The RDN for organizational units.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ou</para>
             /// </summary>
@@ -523,6 +529,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitRdn { get; set; }
 
             /// <summary>
+            /// <para>The switch for password synchronization.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
             /// </summary>
@@ -531,11 +539,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PasswordSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>Whether startTLS is enabled. Value range:</para>
+            /// <para>Specifies whether to enable StartTLS. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -547,7 +555,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string StartTlsStatus { get; set; }
 
             /// <summary>
-            /// <para>User login identifier.</para>
+            /// <para>The user logon identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>userPrincipalName, mail</para>
@@ -557,7 +565,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UserLoginIdentifier { get; set; }
 
             /// <summary>
-            /// <para>User ObjectClass.</para>
+            /// <para>The objectClass for users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>person,user</para>
@@ -567,7 +575,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UserObjectClass { get; set; }
 
             /// <summary>
-            /// <para>Custom filter for User ObjectClass.</para>
+            /// <para>The custom filter for users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</para>
@@ -577,6 +585,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string UserObjectClassCustomFilter { get; set; }
 
             /// <summary>
+            /// <para>The RDN for users.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn</para>
             /// </summary>
@@ -587,17 +597,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>IdP logo url.</para>
+        /// <para>The URL of the application logo.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxx-image://idaas_23aqr2ye554csg33dqpch5eu3q/tmp/d17d9adc-a943-45e7-ba0c-2838dddexxxxx</para>
+        /// <para>xxxx-image://xxxx_23aqr2ye554csg33dqpch5eu3q/tmp/d17d9adc-a943-45e7-ba0c-2838dddea678</para>
         /// </summary>
         [NameInMap("LogoUrl")]
         [Validation(Required=false)]
         public string LogoUrl { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the network access endpoint.</para>
+        /// <para>The network endpoint ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nae_examplexxxx</para>
@@ -607,21 +617,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>OIDC IdP configuration.</para>
+        /// <para>The OIDC IdP configurations.</para>
         /// </summary>
         [NameInMap("OidcConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestOidcConfig OidcConfig { get; set; }
         public class CreateIdentityProviderRequestOidcConfig : TeaModel {
             /// <summary>
-            /// <para>OIDC client authentication configuration.</para>
+            /// <para>The OIDC client authentication configurations.</para>
             /// </summary>
             [NameInMap("AuthnParam")]
             [Validation(Required=false)]
             public CreateIdentityProviderRequestOidcConfigAuthnParam AuthnParam { get; set; }
             public class CreateIdentityProviderRequestOidcConfigAuthnParam : TeaModel {
                 /// <summary>
-                /// <para>OIDC authentication method. Value range:</para>
+                /// <para>The OIDC authentication method. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>client_secret_basic</para>
                 /// </description></item>
@@ -637,7 +647,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthnMethod { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the client.</para>
+                /// <para>The OIDC client ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -647,7 +657,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>The  secret of the client.</para>
+                /// <para>The OpenID Connect (OIDC) client secret.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</para>
@@ -659,14 +669,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>OIDC endpoint configuration.</para>
+            /// <para>The OIDC endpoint configurations.</para>
             /// </summary>
             [NameInMap("EndpointConfig")]
             [Validation(Required=false)]
             public CreateIdentityProviderRequestOidcConfigEndpointConfig EndpointConfig { get; set; }
             public class CreateIdentityProviderRequestOidcConfigEndpointConfig : TeaModel {
                 /// <summary>
-                /// <para>OIDC authorization endpoint.</para>
+                /// <para>The OIDC authorization endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/auth/authorize">https://example.com/auth/authorize</a></para>
@@ -676,7 +686,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AuthorizationEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>OIDC issuer information.</para>
+                /// <para>The OIDC issuer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/auth">https://example.com/auth</a></para>
@@ -686,7 +696,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string Issuer { get; set; }
 
                 /// <summary>
-                /// <para>OIDC jwks uri.</para>
+                /// <para>The OIDC JWKS URI.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/auth/jwks">https://example.com/auth/jwks</a></para>
@@ -696,7 +706,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string JwksUri { get; set; }
 
                 /// <summary>
-                /// <para>OIDC token endpoint.</para>
+                /// <para>The OIDC token endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/auth/token">https://example.com/auth/token</a></para>
@@ -706,7 +716,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string TokenEndpoint { get; set; }
 
                 /// <summary>
-                /// <para>OIDC user info endpoint.</para>
+                /// <para>The OIDC user information endpoint.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://example.com/auth/userinfo">https://example.com/auth/userinfo</a></para>
@@ -718,7 +728,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>OIDC grant scopes collection.</para>
+            /// <para>The collection of OIDC authorization scopes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>openid</para>
@@ -728,7 +738,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> GrantScopes { get; set; }
 
             /// <summary>
-            /// <para>OIDC grant type.</para>
+            /// <para>The OIDC grant type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>authorization_code</para>
@@ -738,11 +748,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GrantType { get; set; }
 
             /// <summary>
-            /// <para>PKCE algorithm. Possible values:</para>
+            /// <para>The PKCE algorithm. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>SHA256: S256</para>
+            /// <item><description><para>S256: SHA256</para>
             /// </description></item>
-            /// <item><description><para>Plain text: plain</para>
+            /// <item><description><para>plain: Plaintext</para>
             /// </description></item>
             /// </list>
             /// 
@@ -754,7 +764,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PkceChallengeMethod { get; set; }
 
             /// <summary>
-            /// <para>Whether to use PKCE in the AuthorizationCode grant mode.</para>
+            /// <para>Specifies whether to use PKCE in the Authorization Code grant type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -834,18 +844,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Inbound synchronization configuration information.</para>
+        /// <para>The inbound synchronization configurations.</para>
         /// </summary>
         [NameInMap("UdPullConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestUdPullConfig UdPullConfig { get; set; }
         public class CreateIdentityProviderRequestUdPullConfig : TeaModel {
             /// <summary>
-            /// <para>Whether group synchronization is supported. The default value is disabled. Possible values:</para>
+            /// <para>Specifies whether to synchronize groups. The default value is disabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -857,11 +867,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>Incremental callback status, indicating whether to process incremental callback data from the IdP. Possible values:</para>
+            /// <para>The status of incremental callbacks. Specifies whether to process incremental callback data from the identity provider (IdP). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -873,14 +883,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IncrementalCallbackStatus { get; set; }
 
             /// <summary>
-            /// <para>Scheduled configuration verification.</para>
+            /// <para>The configuration for periodic synchronization.</para>
             /// </summary>
             [NameInMap("PeriodicSyncConfig")]
             [Validation(Required=false)]
             public CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig PeriodicSyncConfig { get; set; }
             public class CreateIdentityProviderRequestUdPullConfigPeriodicSyncConfig : TeaModel {
                 /// <summary>
-                /// <para>cron expression.</para>
+                /// <para>The cron expression.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 45 1 * * ?</para>
@@ -890,14 +900,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string PeriodicSyncCron { get; set; }
 
                 /// <summary>
-                /// <para>Collection of time points.</para>
+                /// <para>The collection of running time points.</para>
                 /// </summary>
                 [NameInMap("PeriodicSyncTimes")]
                 [Validation(Required=false)]
                 public List<int?> PeriodicSyncTimes { get; set; }
 
                 /// <summary>
-                /// <para>type.</para>
+                /// <para>The type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cron</para>
@@ -909,11 +919,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Periodic check status, indicating whether to periodically check the data differences between EIAM and the identity provider. Possible values:</para>
+            /// <para>The status of periodic synchronization. Specifies whether to periodically check for data differences between IDaaS and the IdP. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Disabled: disabled</para>
+            /// <item><description><para>disabled</para>
             /// </description></item>
-            /// <item><description><para>Enabled: enabled</para>
+            /// <item><description><para>enabled</para>
             /// </description></item>
             /// </list>
             /// 
@@ -925,21 +935,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PeriodicSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>Synchronization scope configuration information.</para>
+            /// <para>The synchronization scope configurations.</para>
             /// </summary>
             [NameInMap("UdSyncScopeConfig")]
             [Validation(Required=false)]
             public CreateIdentityProviderRequestUdPullConfigUdSyncScopeConfig UdSyncScopeConfig { get; set; }
             public class CreateIdentityProviderRequestUdPullConfigUdSyncScopeConfig : TeaModel {
                 /// <summary>
-                /// <para>List of source nodes for synchronization.</para>
+                /// <para>The list of source nodes for synchronization.</para>
                 /// </summary>
                 [NameInMap("SourceScopes")]
                 [Validation(Required=false)]
                 public List<string> SourceScopes { get; set; }
 
                 /// <summary>
-                /// <para>Synchronize target node, and fill in the IDaaS organization ID.</para>
+                /// <para>The target node for synchronization. Enter the IDaaS organization ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ou_lyhyy6p7yf7mdrdiq5xxxx</para>
@@ -953,14 +963,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Outbound synchronization configuration information.</para>
+        /// <para>The outbound synchronization configurations.</para>
         /// </summary>
         [NameInMap("UdPushConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestUdPushConfig UdPushConfig { get; set; }
         public class CreateIdentityProviderRequestUdPushConfig : TeaModel {
             /// <summary>
-            /// <para>Incremental callback status. This field is reserved and currently not in use; please ignore it.</para>
+            /// <para>The status of incremental callbacks. This parameter is not in use. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -969,11 +979,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string IncrementalCallbackStatus { get; set; }
 
+            /// <summary>
+            /// <para>The periodic synchronization configurations.</para>
+            /// </summary>
             [NameInMap("PeriodicSyncConfig")]
             [Validation(Required=false)]
             public CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig PeriodicSyncConfig { get; set; }
             public class CreateIdentityProviderRequestUdPushConfigPeriodicSyncConfig : TeaModel {
                 /// <summary>
+                /// <para>The cron expression.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0 45 1 * * ?</para>
                 /// </summary>
@@ -981,11 +996,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 [Validation(Required=false)]
                 public string PeriodicSyncCron { get; set; }
 
+                /// <summary>
+                /// <para>The collection of running time points.</para>
+                /// </summary>
                 [NameInMap("PeriodicSyncTimes")]
                 [Validation(Required=false)]
                 public List<int?> PeriodicSyncTimes { get; set; }
 
                 /// <summary>
+                /// <para>The type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cron</para>
                 /// </summary>
@@ -996,7 +1016,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Periodic check status. This field is currently not in use, please ignore it.</para>
+            /// <para>The status of periodic synchronization. This parameter is not in use. Ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>disabled</para>
@@ -1006,21 +1026,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PeriodicSyncStatus { get; set; }
 
             /// <summary>
-            /// <para>Outbound synchronization configuration information.</para>
+            /// <para>The configurations of the outbound synchronization scope.</para>
             /// </summary>
             [NameInMap("UdSyncScopeConfigs")]
             [Validation(Required=false)]
             public List<CreateIdentityProviderRequestUdPushConfigUdSyncScopeConfigs> UdSyncScopeConfigs { get; set; }
             public class CreateIdentityProviderRequestUdPushConfigUdSyncScopeConfigs : TeaModel {
                 /// <summary>
-                /// <para>List of source nodes for synchronization.</para>
+                /// <para>The list of source nodes for synchronization.</para>
                 /// </summary>
                 [NameInMap("SourceScopes")]
                 [Validation(Required=false)]
                 public List<string> SourceScopes { get; set; }
 
                 /// <summary>
-                /// <para>Target node for synchronization.</para>
+                /// <para>The target node for synchronization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ou_lyhyy6p7yf7mdrdiq5xxxx</para>
@@ -1034,14 +1054,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>WeCom configuration information.</para>
+        /// <para>The WeCom configurations.</para>
         /// </summary>
         [NameInMap("WeComConfig")]
         [Validation(Required=false)]
         public CreateIdentityProviderRequestWeComConfig WeComConfig { get; set; }
         public class CreateIdentityProviderRequestWeComConfig : TeaModel {
             /// <summary>
-            /// <para>Agent ID of the self-built WeCom application.</para>
+            /// <para>The agent ID of the custom WeCom application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>278231941749863339</para>
@@ -1051,7 +1071,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>Authorization callback domain.</para>
+            /// <para>The authorized callback domain.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.aliyunidaas.com/xxxx">https://xxx.aliyunidaas.com/xxxx</a></para>
@@ -1061,7 +1081,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizeCallbackDomain { get; set; }
 
             /// <summary>
-            /// <para>Corp ID of the self-built WeCom application.</para>
+            /// <para>The CorpId of the custom WeCom application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3756043633237690761</para>
@@ -1071,7 +1091,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CorpId { get; set; }
 
             /// <summary>
-            /// <para>Corp Secret of the self-built WeCom application.</para>
+            /// <para>The CorpSecret of the custom WeCom application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</para>
@@ -1081,7 +1101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CorpSecret { get; set; }
 
             /// <summary>
-            /// <para>Trusted domain.</para>
+            /// <para>The trusted domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://xxx.aliyunidaas.com/">https://xxx.aliyunidaas.com/</a></para>

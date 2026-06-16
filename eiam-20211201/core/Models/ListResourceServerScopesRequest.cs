@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListResourceServerScopesRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS的应用资源ID。</para>
+        /// <para>Application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>Authorization type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>authorize_required</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationType { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>分页查询时每页行数。默认值为20，最大值为100。</para>
+        /// <para>Number of rows per page in paginated queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>查询凭证（Token），取值为上一次API调用返回的NextToken参数值。</para>
+        /// <para>Token for the next page query. Set this to the NextToken value returned by the previous API call. Leave empty for the first query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxxxexample</para>
@@ -60,6 +62,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>Token for the previous page query. Set this to the PreviousToken value returned by the previous API call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PTxxxxxexample</para>
         /// </summary>
@@ -67,12 +71,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string PreviousToken { get; set; }
 
+        /// <summary>
+        /// <para>List of Scope permission IDs.</para>
+        /// </summary>
         [NameInMap("ResourceServerScopeIds")]
         [Validation(Required=false)]
         public List<string> ResourceServerScopeIds { get; set; }
 
         /// <summary>
-        /// <para>权限名称</para>
+        /// <para>Scope permission name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>读取全部用户</para>
@@ -82,6 +89,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerScopeName { get; set; }
 
         /// <summary>
+        /// <para>Scope permission type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>urn:alibaba:idaas:resourceserver:scope:delegated</para>
         /// </summary>
@@ -90,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerScopeType { get; set; }
 
         /// <summary>
-        /// <para>权限值，大小写不敏感，格式(${ResourceType}:${ResourceOption}:${ResourceRestrict})</para>
+        /// <para>Scope permission value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User:Write:ALL</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateFederatedCredentialProviderRequest : TeaModel {
         /// <summary>
-        /// <para>联邦凭证提供方ID</para>
+        /// <para>The ID of the federated credential provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FederatedCredentialProviderId { get; set; }
 
         /// <summary>
-        /// <para>联邦凭证提供方名称</para>
+        /// <para>The name of the federated credential provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string FederatedCredentialProviderName { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>网络端点ID</para>
+        /// <para>The ID of the network access endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nae_public</para>
@@ -53,18 +53,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NetworkAccessEndpointId { get; set; }
 
         /// <summary>
-        /// <para>OIDC配置</para>
+        /// <para>The OpenID Connect (OIDC) configuration.</para>
         /// </summary>
         [NameInMap("OidcProviderConfig")]
         [Validation(Required=false)]
         public UpdateFederatedCredentialProviderRequestOidcProviderConfig OidcProviderConfig { get; set; }
         public class UpdateFederatedCredentialProviderRequestOidcProviderConfig : TeaModel {
+            /// <summary>
+            /// <para>The list of audiences.</para>
+            /// </summary>
             [NameInMap("Audiences")]
             [Validation(Required=false)]
             public List<string> Audiences { get; set; }
 
             /// <summary>
-            /// <para>Jwks来源</para>
+            /// <para>The source of the JSON Web Key Set (JWKS).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string JwksSource { get; set; }
 
             /// <summary>
-            /// <para>JWKS 端点</para>
+            /// <para>JWKS endpoint</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/jwks">https://example.com/jwks</a></para>
@@ -85,7 +88,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string JwksUri { get; set; }
 
             /// <summary>
-            /// <para>静态获取的jwks</para>
+            /// <para>The statically obtained JWKS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string StaticJwks { get; set; }
 
             /// <summary>
-            /// <para>信任条件</para>
+            /// <para>The trust condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>
@@ -117,21 +120,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>PKCS7配置</para>
+        /// <para>The PKCS7 configuration.</para>
         /// </summary>
         [NameInMap("Pkcs7ProviderConfig")]
         [Validation(Required=false)]
         public UpdateFederatedCredentialProviderRequestPkcs7ProviderConfig Pkcs7ProviderConfig { get; set; }
         public class UpdateFederatedCredentialProviderRequestPkcs7ProviderConfig : TeaModel {
             /// <summary>
-            /// <para>pkcs7证书列表</para>
+            /// <para>The list of PKCS7 certificates.</para>
             /// </summary>
             [NameInMap("Certificates")]
             [Validation(Required=false)]
             public List<UpdateFederatedCredentialProviderRequestPkcs7ProviderConfigCertificates> Certificates { get; set; }
             public class UpdateFederatedCredentialProviderRequestPkcs7ProviderConfigCertificates : TeaModel {
                 /// <summary>
-                /// <para>Root证书内容</para>
+                /// <para>The content of the root certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-----BEGIN CERTIFICATE-----
@@ -145,7 +148,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>CMS验证模式</para>
+            /// <para>The Cryptographic Message Syntax (CMS) verification mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cert</para>
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CmsVerificationMode { get; set; }
 
             /// <summary>
-            /// <para>签名有效期, 单位秒，1200</para>
+            /// <para>The validity period of the signature.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1200</para>
@@ -165,6 +168,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? SignatureEffectiveTime { get; set; }
 
             /// <summary>
+            /// <para>The expression to obtain the signing time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pkcs7.signingTime</para>
             /// </summary>
@@ -173,7 +178,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SigningTimeValueExpression { get; set; }
 
             /// <summary>
-            /// <para>证书信任锚点来源</para>
+            /// <para>The source of the certificate trust anchor.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -184,7 +189,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TrustAnchorSource { get; set; }
 
             /// <summary>
-            /// <para>信任条件</para>
+            /// <para>The trust condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>
@@ -196,21 +201,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>私有CA配置</para>
+        /// <para>The configuration of the private certificate authority (CA).</para>
         /// </summary>
         [NameInMap("PrivateCaProviderConfig")]
         [Validation(Required=false)]
         public UpdateFederatedCredentialProviderRequestPrivateCaProviderConfig PrivateCaProviderConfig { get; set; }
         public class UpdateFederatedCredentialProviderRequestPrivateCaProviderConfig : TeaModel {
             /// <summary>
-            /// <para>Root证书列表</para>
+            /// <para>The list of root certificates.</para>
             /// </summary>
             [NameInMap("Certificates")]
             [Validation(Required=false)]
             public List<UpdateFederatedCredentialProviderRequestPrivateCaProviderConfigCertificates> Certificates { get; set; }
             public class UpdateFederatedCredentialProviderRequestPrivateCaProviderConfigCertificates : TeaModel {
                 /// <summary>
-                /// <para>Root证书内容</para>
+                /// <para>The content of the root certificate.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>-----BEGIN CERTIFICATE-----
@@ -224,7 +229,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Root证书获取方式</para>
+            /// <para>The method to obtain the root certificate.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -235,7 +240,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TrustAnchorSource { get; set; }
 
             /// <summary>
-            /// <para>Root证书的信任条件</para>
+            /// <para>The trust condition for the root certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IsNullOrEmpty(&quot;jwt.issuer&quot;)</para>

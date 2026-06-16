@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>应用角色ID。</para>
+        /// <para>The application role ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationRoleId { get; set; }
 
         /// <summary>
-        /// <para>The group IDs. You can specify up to 100 group IDs at a time.</para>
+        /// <para>A list of group IDs. You can specify up to 100 group IDs in a single operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>group_miu8e4t4d7i4u7uwezgr54xxxx</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

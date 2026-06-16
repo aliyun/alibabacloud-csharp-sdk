@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20. Maximum value: 100.</para>
+        /// <para>The number of entries per page. The default value is 20. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The account IDs. A maximum of 100 accounts can be queried.</para>
+        /// <para>A list of account IDs. The list can contain a maximum of 100 IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[ou_001]</para>

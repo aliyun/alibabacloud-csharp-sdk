@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class AddCustomPrivacyPoliciesToBrandRequest : TeaModel {
         /// <summary>
-        /// <para>品牌化Id</para>
+        /// <para>The ID of the brand.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string BrandId { get; set; }
 
         /// <summary>
-        /// <para>条款ID列表</para>
+        /// <para>A list of custom privacy policy IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CustomPrivacyPolicyIds")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> CustomPrivacyPolicyIds { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

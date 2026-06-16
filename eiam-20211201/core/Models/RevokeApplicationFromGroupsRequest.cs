@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationRoleId { get; set; }
 
         /// <summary>
-        /// <para>The group IDs. You can specify up to 100 group IDs at a time.</para>
+        /// <para>A list of group IDs. A single operation supports up to 100 group IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

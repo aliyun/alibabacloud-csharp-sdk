@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateUserDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the account. The value can be up to 256 characters in length.</para>
+        /// <para>The description. The maximum length is 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test.</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the account.</para>
+        /// <para>The ID of the user.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

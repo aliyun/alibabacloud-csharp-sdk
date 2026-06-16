@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateCredentialProviderDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>认证令牌提供商ID。</para>
+        /// <para>The ID of the credential provider.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CredentialProviderId { get; set; }
 
         /// <summary>
-        /// <para>描述。</para>
+        /// <para>A description of the credential provider.</para>
+        /// <remarks>
+        /// <para>The description can be up to 128 characters long.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>This is an example description</para>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

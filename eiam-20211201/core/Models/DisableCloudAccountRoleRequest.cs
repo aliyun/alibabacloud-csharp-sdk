@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class DisableCloudAccountRoleRequest : TeaModel {
         /// <summary>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The token can contain only ASCII characters and must be no more than 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountId { get; set; }
 
         /// <summary>
-        /// <para>云账号角色ID</para>
+        /// <para>The cloud role ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CloudAccountRoleId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

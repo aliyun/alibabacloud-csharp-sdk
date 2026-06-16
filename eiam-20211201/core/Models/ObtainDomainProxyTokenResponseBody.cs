@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public ObtainDomainProxyTokenResponseBodyDomainProxyToken DomainProxyToken { get; set; }
         public class ObtainDomainProxyTokenResponseBodyDomainProxyToken : TeaModel {
             /// <summary>
-            /// <para>The time when the proxy token of the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the domain name proxy token was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the domain name.</para>
+            /// <para>The domain ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dm_examplexxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DomainId { get; set; }
 
             /// <summary>
-            /// <para>The proxy token of the domain name.</para>
+            /// <para>The domain name proxy token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PTxxxxxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DomainProxyToken { get; set; }
 
             /// <summary>
-            /// <para>The ID of the proxy token of the domain name.</para>
+            /// <para>The ID of the domain name proxy token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pt_examplexxxx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the proxy token of the domain name was last used. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the domain name proxy token was last used. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -77,10 +77,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the proxy token. Valid values:</para>
+            /// <para>The status of the token. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled</description></item>
-            /// <item><description>disabled</description></item>
+            /// <item><description><para>enabled: The token is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>disabled: The token is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the proxy token of the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the domain name proxy token was last updated. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>

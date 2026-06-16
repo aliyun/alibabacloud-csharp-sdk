@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetCustomFieldResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Custom field information.</para>
+        /// </summary>
         [NameInMap("CustomField")]
         [Validation(Required=false)]
         public GetCustomFieldResponseBodyCustomField CustomField { get; set; }
         public class GetCustomFieldResponseBodyCustomField : TeaModel {
             /// <summary>
-            /// <para>扩展字段创建时间，Unix时间戳格式，单位为毫秒</para>
+            /// <para>The creation time of the custom field, in UNIX timestamp format in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17642960730</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>字段默认值</para>
+            /// <para>The default value of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DefaultValue { get; set; }
 
             /// <summary>
-            /// <para>扩展字段描述</para>
+            /// <para>The description of the custom field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>是否加密，默认false</para>
+            /// <para>Indicates whether the field is encrypted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>字段所属实体类型</para>
+            /// <para>The entity type to which the field belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user</para>
@@ -64,21 +67,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>字段值配置项</para>
+            /// <para>Field value configuration items.</para>
             /// </summary>
             [NameInMap("FieldDataConfig")]
             [Validation(Required=false)]
             public GetCustomFieldResponseBodyCustomFieldFieldDataConfig FieldDataConfig { get; set; }
             public class GetCustomFieldResponseBodyCustomFieldFieldDataConfig : TeaModel {
                 /// <summary>
-                /// <para>字段配置项列表，displayName、value、status</para>
+                /// <para>A list of field configuration items.</para>
                 /// </summary>
                 [NameInMap("Items")]
                 [Validation(Required=false)]
                 public List<GetCustomFieldResponseBodyCustomFieldFieldDataConfigItems> Items { get; set; }
                 public class GetCustomFieldResponseBodyCustomFieldFieldDataConfigItems : TeaModel {
                     /// <summary>
-                    /// <para>配置项展示名</para>
+                    /// <para>The display name of the configuration item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hobby</para>
@@ -88,7 +91,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string DisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>配置项状态, 枚举值，enabled、disabled</para>
+                    /// <para>The status of the configuration item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>enabled</para>
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                     public string Status { get; set; }
 
                     /// <summary>
-                    /// <para>配置项值</para>
+                    /// <para>The value of the configuration item.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>game</para>
@@ -112,7 +115,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>数据类型，枚举值：string、number、boolean</para>
+            /// <para>The data type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string</para>
@@ -122,7 +125,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldDataType { get; set; }
 
             /// <summary>
-            /// <para>字段展示名</para>
+            /// <para>The display name of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>userId</para>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldDisplayName { get; set; }
 
             /// <summary>
-            /// <para>字段展示类型，枚举值，select、checkbox、input、number</para>
+            /// <para>The display type of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>input</para>
@@ -142,7 +145,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldDisplayType { get; set; }
 
             /// <summary>
-            /// <para>字段ID</para>
+            /// <para>The field ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ufd_ncvy5trszg3zajaal5iofauy2q</para>
@@ -152,7 +155,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldId { get; set; }
 
             /// <summary>
-            /// <para>字段标识</para>
+            /// <para>The field identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>userId</para>
@@ -162,7 +165,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>实例ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_z4pwq7v5ankdimdelzo2zbmzo4</para>
@@ -172,7 +175,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>是否必填，默认false</para>
+            /// <para>Indicates whether the field is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -182,7 +185,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Required { get; set; }
 
             /// <summary>
-            /// <para>扩展字段状态, 枚举类型：enabled，disabled</para>
+            /// <para>The status of the custom field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -192,7 +195,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>是否唯一，默认false</para>
+            /// <para>Indicates whether the field is unique.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -202,7 +205,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Unique { get; set; }
 
             /// <summary>
-            /// <para>扩展字段最近一次更新时间, Unix时间戳格式，单位为毫秒</para>
+            /// <para>The last update time of the custom field, in UNIX timestamp format in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17642960730</para>
@@ -212,7 +215,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>用户端(portal侧)权限，hide、read_only、read_write，默认read_only</para>
+            /// <para>User-side (portal) permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>read_only</para>
@@ -224,6 +227,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

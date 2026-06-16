@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The direction of the synchronization job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ingress</description></item>
-            /// <item><description>egress</description></item>
+            /// <item><description><para>ingress</para>
+            /// </description></item>
+            /// <item><description><para>egress</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The error code corresponding to the error message.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>ResourceNotFound. SynchronizationJob</para>
+                /// <para>ErrorCodeNotFound</para>
                 /// </summary>
                 [NameInMap("ErrorCode")]
                 [Validation(Required=false)]
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 /// <para>The error message returned in the case of an error.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>The specified SynchronizationJob resource: %s not found.</para>
+                /// <para>Internal error</para>
                 /// </summary>
                 [NameInMap("ErrorMessage")]
                 [Validation(Required=false)]
@@ -1304,11 +1306,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The status of the synchronization job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>pending</description></item>
-            /// <item><description>running</description></item>
-            /// <item><description>failed</description></item>
-            /// <item><description>partial_success</description></item>
-            /// <item><description>success</description></item>
+            /// <item><description><para>pending</para>
+            /// </description></item>
+            /// <item><description><para>running</para>
+            /// </description></item>
+            /// <item><description><para>failed</para>
+            /// </description></item>
+            /// <item><description><para>partial_success</para>
+            /// </description></item>
+            /// <item><description><para>success</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1341,8 +1348,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The type of the synchronization destination. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>identity_provider</description></item>
-            /// <item><description>application</description></item>
+            /// <item><description><para>identity_provider</para>
+            /// </description></item>
+            /// <item><description><para>application</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1355,8 +1364,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The trigger type of the synchronization. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>auto</description></item>
-            /// <item><description>manual</description></item>
+            /// <item><description><para>auto</para>
+            /// </description></item>
+            /// <item><description><para>manual</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

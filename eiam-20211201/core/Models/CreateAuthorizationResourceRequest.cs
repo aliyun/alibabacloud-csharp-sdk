@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateAuthorizationResourceRequest : TeaModel {
         /// <summary>
-        /// <para>授权资源关联的资源标识。</para>
+        /// <para>The ID of the resource entity that is associated with the authorization resource.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationResourceEntityId { get; set; }
 
         /// <summary>
-        /// <para>授权资源的资源类型。枚举取值:asset(资产)、credential(凭据)、cloudAccountRole(云账号角色)。</para>
+        /// <para>The type of the resource entity that is associated with the authorization resource. Valid value:</para>
+        /// <list type="bullet">
+        /// <item><description>cloud_account_role: indicates a cloud role.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +35,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationResourceEntityType { get; set; }
 
         /// <summary>
-        /// <para>授权规则标识。</para>
+        /// <para>The authorization rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,6 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
+        /// <para>A client token used to ensure the idempotence of the request. Generate a unique value for this parameter from your client. The client token can contain only ASCII characters and must be no more than 64 characters long. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

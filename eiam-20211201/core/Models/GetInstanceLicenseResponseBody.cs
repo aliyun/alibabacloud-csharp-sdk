@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceLicenseResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returned result.</para>
+        /// <para>The license details.</para>
         /// </summary>
         [NameInMap("License")]
         [Validation(Required=false)]
         public GetInstanceLicenseResponseBodyLicense License { get; set; }
         public class GetInstanceLicenseResponseBodyLicense : TeaModel {
             /// <summary>
-            /// <para>Edition of the License</para>
+            /// <para>The license edition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>free</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Edition { get; set; }
 
             /// <summary>
-            /// <para>End date of the validity period of the License, timestamp</para>
+            /// <para>The UNIX timestamp indicating the end of the license validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723996800000</para>
@@ -36,34 +36,79 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public long? EndTime { get; set; }
 
+            /// <summary>
+            /// <para>The details of the instance license.</para>
+            /// </summary>
             [NameInMap("InstanceLicenseDetail")]
             [Validation(Required=false)]
             public GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail InstanceLicenseDetail { get; set; }
             public class GetInstanceLicenseResponseBodyLicenseInstanceLicenseDetail : TeaModel {
+                /// <summary>
+                /// <para>The status of the license for the Conditional Access feature.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>enabled</para>
+                /// </summary>
                 [NameInMap("ConditionalAccessPolicyLicenseStatus")]
                 [Validation(Required=false)]
                 public string ConditionalAccessPolicyLicenseStatus { get; set; }
 
+                /// <summary>
+                /// <para>The status of the license for machine-to-machine (M2M) applications.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>enabled</para>
+                /// </summary>
                 [NameInMap("M2mApplicationLicenseStatus")]
                 [Validation(Required=false)]
                 public string M2mApplicationLicenseStatus { get; set; }
 
+                /// <summary>
+                /// <para>The quota for machine-to-machine (M2M) applications.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2</para>
+                /// </summary>
                 [NameInMap("M2mApplicationQuota")]
                 [Validation(Required=false)]
                 public long? M2mApplicationQuota { get; set; }
 
+                /// <summary>
+                /// <para>The machine identity status.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>enabled</para>
+                /// </summary>
                 [NameInMap("MimApplicationLicenseStatus")]
                 [Validation(Required=false)]
                 public string MimApplicationLicenseStatus { get; set; }
 
+                /// <summary>
+                /// <para>The quota for network access endpoints.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
                 [NameInMap("NetworkAccessEndpointQuota")]
                 [Validation(Required=false)]
                 public long? NetworkAccessEndpointQuota { get; set; }
 
+                /// <summary>
+                /// <para>The number of active subscription accounts.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("PrepaidActiveUserNumber")]
                 [Validation(Required=false)]
                 public long? PrepaidActiveUserNumber { get; set; }
 
+                /// <summary>
+                /// <para>The user quota included with the license.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>100</para>
+                /// </summary>
                 [NameInMap("UserQuota")]
                 [Validation(Required=false)]
                 public long? UserQuota { get; set; }
@@ -71,7 +116,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>Payment type of the License</para>
+            /// <para>The billing method for the license.</para>
             /// 
             /// <b>Example:</b>
             /// <para>prepay</para>
@@ -81,7 +126,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseChargeType { get; set; }
 
             /// <summary>
-            /// <para>Detailed configuration JSON string of the License</para>
+            /// <para>The detailed configurations of the license, formatted as a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;modules&quot;:[{&quot;features&quot;:[{&quot;name&quot;:&quot;urn:alibaba:idaas:license:module:ud:customField&quot;,&quot;status&quot;:&quot;enabled&quot;}]……{&quot;name&quot;:&quot;urn:alibaba:idaas:license:tag:enterprise&quot;,&quot;status&quot;:&quot;enabled&quot;}],&quot;version&quot;:&quot;1.0&quot;}</para>
@@ -91,7 +136,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseConfigJson { get; set; }
 
             /// <summary>
-            /// <para>Creation time of the License, timestamp</para>
+            /// <para>The UNIX timestamp indicating when the license was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720509699000</para>
@@ -101,7 +146,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LicenseCreateTime { get; set; }
 
             /// <summary>
-            /// <para>Unique identifier of the License</para>
+            /// <para>The unique identifier for the license.</para>
             /// 
             /// <b>Example:</b>
             /// <para>license_1234xxxx</para>
@@ -111,7 +156,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseId { get; set; }
 
             /// <summary>
-            /// <para>Status of the License</para>
+            /// <para>The license status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>valid</para>
@@ -121,7 +166,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string LicenseStatus { get; set; }
 
             /// <summary>
-            /// <para>Purchase channel of the License</para>
+            /// <para>The channel used to purchase the license.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alibaba_cloud</para>
@@ -131,7 +176,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PurchaseChannel { get; set; }
 
             /// <summary>
-            /// <para>Unique external product identifier corresponding to the License</para>
+            /// <para>The unique identifier of the external service associated with the license.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eiam-cn-xxxxx</para>
@@ -141,7 +186,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PurchaseInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Start date of the validity period of the License, timestamp</para>
+            /// <para>The UNIX timestamp indicating the start of the license validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1720509699000</para>
@@ -151,7 +196,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>User quota of the License</para>
+            /// <para>The user quota included with the license.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -163,7 +208,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

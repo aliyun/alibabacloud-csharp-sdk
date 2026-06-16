@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetResourceServerScopeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -17,12 +19,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The information about the scope permission of the resource server.</para>
+        /// </summary>
         [NameInMap("ResourceServerScope")]
         [Validation(Required=false)]
         public GetResourceServerScopeResponseBodyResourceServerScope ResourceServerScope { get; set; }
         public class GetResourceServerScopeResponseBodyResourceServerScope : TeaModel {
             /// <summary>
-            /// <para>IDaaS EIAM 应用Id</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_xxxxxxxxxxx</para>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
+            /// <para>The authorization type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>authorize_required</para>
             /// </summary>
@@ -40,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationType { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_xxxxxxxxxxx</para>
@@ -50,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM ResourceServer下权限Id</para>
+            /// <para>The ID of the scope permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rss_xxxxxxxxxxx</para>
@@ -60,17 +67,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerScopeId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM ResourceServer下权限名称</para>
+            /// <para>The name of the scope permission.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>读取全部用户</para>
+            /// <para>Read User Info</para>
             /// </summary>
             [NameInMap("ResourceServerScopeName")]
             [Validation(Required=false)]
             public string ResourceServerScopeName { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM ResourceServer下权限类型</para>
+            /// <para>The type of the scope permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>urn:alibaba:idaas:resourceserver:scope:delegated</para>
@@ -80,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ResourceServerScopeType { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM ResourceServer下权限值</para>
+            /// <para>The value of the scope permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>User:Read:ALL</para>

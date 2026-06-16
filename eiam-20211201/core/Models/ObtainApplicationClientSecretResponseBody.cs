@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ObtainApplicationClientSecretResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the client key.</para>
+        /// <para>The secret information.</para>
         /// </summary>
         [NameInMap("ApplicationClientSecret")]
         [Validation(Required=false)]
         public ObtainApplicationClientSecretResponseBodyApplicationClientSecret ApplicationClientSecret { get; set; }
         public class ObtainApplicationClientSecretResponseBodyApplicationClientSecret : TeaModel {
             /// <summary>
-            /// <para>The ID of the application whose client key you want to query.</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientId { get; set; }
 
             /// <summary>
-            /// <para>The client key secret of the application.</para>
+            /// <para>The client secret of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CSEHDcHcrUKHw1CuxkJEHPveWRXBGqVqRsxxxx</para>
@@ -46,12 +46,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             [Validation(Required=false)]
             public string ClientSecret { get; set; }
 
+            /// <summary>
+            /// <para>The expiration time of the client secret. This is a UNIX timestamp. Unit: milliseconds.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1749830226000</para>
+            /// </summary>
             [NameInMap("ExpirationTime")]
             [Validation(Required=false)]
             public long? ExpirationTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the instance.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the client key was last used. The value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The last time the client secret was used. This is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649830226000</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>The client key ID of the application.</para>
+            /// <para>The client secret ID of the application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sci_k52x2ru63rlkflina5utgkxxxx</para>
@@ -81,10 +87,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SecretId { get; set; }
 
             /// <summary>
-            /// <para>The status of the client key. Valid values:</para>
+            /// <para>The status of the client secret. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: The client key is enabled.</description></item>
-            /// <item><description>Disabled: The client key is disabled.</description></item>
+            /// <item><description><para>enabled: The secret is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>disabled: The secret is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +105,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>

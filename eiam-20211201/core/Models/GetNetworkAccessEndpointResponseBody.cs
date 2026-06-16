@@ -27,8 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Public egress ip address range of the dedicated network endpoint
-            /// This field is returned only when NetworkEndpointType is set to private.</para>
+            /// <para>Public egress ip address range of the dedicated network endpoint This field is returned only when NetworkEndpointType is set to private.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.168.x.x</para>
@@ -38,11 +37,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public List<string> EgressPrivateIpAddresses { get; set; }
 
             /// <summary>
-            /// <para>Public egress ip address range of the shared network endpoint
-            /// This field is returned only when networkEndpointType is set to shared.</para>
+            /// <para>Public egress ip address range of the shared network endpoint This field is returned only when networkEndpointType is set to shared.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8.xx.xx.xxx/27</para>
+            /// <para>203.0.XX.XX/27</para>
             /// </summary>
             [NameInMap("EgressPublicIpAddresses")]
             [Validation(Required=false)]
@@ -72,15 +70,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>Private network endpoint name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx business VPC access endpoint</para>
+            /// <para>Xx-business VPC access endpoint</para>
             /// </summary>
             [NameInMap("NetworkAccessEndpointName")]
             [Validation(Required=false)]
             public string NetworkAccessEndpointName { get; set; }
 
             /// <summary>
-            /// <para>Type of the Network Endpoint
-            /// Possible values:</para>
+            /// <para>Type of the Network Endpoint Possible values:</para>
             /// <para>shared: Shared network endpoint</para>
             /// <para>private: Dedicated network endpoint</para>
             /// 
@@ -102,8 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>Status of the Network Endpoint
-            /// Possible values:</para>
+            /// <para>Status of the Network Endpoint Possible values:</para>
             /// <para>pending: Pending initialization</para>
             /// <para>creating: Being created</para>
             /// <para>running: Running</para>

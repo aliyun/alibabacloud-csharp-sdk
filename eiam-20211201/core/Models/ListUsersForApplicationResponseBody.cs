@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersForApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the accounts.</para>
+        /// <para>The list of accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersForApplicationResponseBodyUsers> Users { get; set; }
         public class ListUsersForApplicationResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>应用角色列表。</para>
+            /// <para>The list of application roles.</para>
             /// </summary>
             [NameInMap("ApplicationRoles")]
             [Validation(Required=false)]
             public List<ListUsersForApplicationResponseBodyUsersApplicationRoles> ApplicationRoles { get; set; }
             public class ListUsersForApplicationResponseBodyUsersApplicationRoles : TeaModel {
                 /// <summary>
-                /// <para>应用角色标识。</para>
+                /// <para>The application role ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>app_role_mkv7rgt4ds8d8v0qtzev2mxxxx</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>The ID of the account.</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_d6sbsuumeta4h66ec3il7yxxxx</para>

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListGroupsForResourceServerResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of groups.</para>
+        /// </summary>
         [NameInMap("Groups")]
         [Validation(Required=false)]
         public List<ListGroupsForResourceServerResponseBodyGroups> Groups { get; set; }
         public class ListGroupsForResourceServerResponseBodyGroups : TeaModel {
             /// <summary>
-            /// <para>用户组的唯一标识</para>
+            /// <para>The ID of the group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>group_nbsomva32b6utec3hgi7scxxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>实例唯一标识</para>
+            /// <para>The ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</para>
@@ -34,14 +37,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>资源服务Scope权限集合</para>
+            /// <para>The list of authorized scopes.</para>
             /// </summary>
             [NameInMap("ResourceServerScopes")]
             [Validation(Required=false)]
             public List<ListGroupsForResourceServerResponseBodyGroupsResourceServerScopes> ResourceServerScopes { get; set; }
             public class ListGroupsForResourceServerResponseBodyGroupsResourceServerScopes : TeaModel {
                 /// <summary>
-                /// <para>ResourceServerScope唯一标识</para>
+                /// <para>The ID of the scope.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>
@@ -51,10 +54,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceServerScopeId { get; set; }
 
                 /// <summary>
-                /// <para>ResourceServerScope名称</para>
+                /// <para>The name of the scope.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>获取资源信息</para>
+                /// <para>Read User Info</para>
                 /// </summary>
                 [NameInMap("ResourceServerScopeName")]
                 [Validation(Required=false)]
@@ -65,6 +68,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The number of entries returned on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -73,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token to retrieve the next page of results. A null or empty value indicates that all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -83,6 +88,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -91,6 +98,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries that meet the filter criteria.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

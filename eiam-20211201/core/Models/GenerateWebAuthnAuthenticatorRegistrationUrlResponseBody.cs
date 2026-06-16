@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -17,12 +19,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Information about the WebAuthn authenticator registration URL.</para>
+        /// </summary>
         [NameInMap("WebAuthnAuthenticatorRegistrationUrl")]
         [Validation(Required=false)]
         public GenerateWebAuthnAuthenticatorRegistrationUrlResponseBodyWebAuthnAuthenticatorRegistrationUrl WebAuthnAuthenticatorRegistrationUrl { get; set; }
         public class GenerateWebAuthnAuthenticatorRegistrationUrlResponseBodyWebAuthnAuthenticatorRegistrationUrl : TeaModel {
             /// <summary>
-            /// <para>注册WebAuthn认证器URL</para>
+            /// <para>The WebAuthn authenticator registration URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://012cnaliyunidaas..com./login/webauthn/registration">https://012cnaliyunidaas..com./login/webauthn/registration</a></para>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string RegistrationUrl { get; set; }
 
             /// <summary>
-            /// <para>注册WebAuthn认证器URL参数</para>
+            /// <para>The parameters for the WebAuthn authenticator registration URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoia2V5X29ueWNzbXNib3Y1bmV2anlncHgyZnlsbjdhIn0</para>

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateApplicationTokenResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The application token.</para>
+        /// </summary>
         [NameInMap("ApplicationTokens")]
         [Validation(Required=false)]
         public CreateApplicationTokenResponseBodyApplicationTokens ApplicationTokens { get; set; }
         public class CreateApplicationTokenResponseBodyApplicationTokens : TeaModel {
             /// <summary>
-            /// <para>应用token</para>
+            /// <para>The application token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SATFwqX8zxGf83pJcJw78KFGjmrft4erWeZYBGS8oE7NN6qoE217yaJpUdMb1UuuGqhDiF43sCA4CF91CTL5iGntqwyLuaAcS9FJ9HfGadE5a7TjiwVafwrBYkt3XXX</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationToken { get; set; }
 
             /// <summary>
-            /// <para>应用token ID</para>
+            /// <para>The application token ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>token_ndfxxigahelfne2y2hodehrxxxx</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationTokenId { get; set; }
 
             /// <summary>
-            /// <para>应用token类型</para>
+            /// <para>The application token type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bearer_token</para>
@@ -46,6 +49,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

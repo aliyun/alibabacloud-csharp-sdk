@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetServiceQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>Quota 配额的唯一标识。</para>
+        /// <para>The unique identifier of the quota.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

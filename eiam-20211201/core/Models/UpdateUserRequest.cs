@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// <para>The custom extended fields.</para>
+        /// <para>A list of custom field objects.</para>
         /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public List<UpdateUserRequestCustomFields> CustomFields { get; set; }
         public class UpdateUserRequestCustomFields : TeaModel {
             /// <summary>
-            /// <para>The name of the extended field. You must create an extended field before you specify this parameter. To create an extended field, go to the Extended Fields page of the specified EIAM instance in the IDaaS console.</para>
+            /// <para>The custom field name. You must create the custom field in the console before using it. For more information, see the custom fields module in the console.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nick_name</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>The value of the extended field. The value follows the limits on the properties of the extended field.</para>
+            /// <para>The custom field value. The value must comply with the constraints of the custom field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_value</para>
@@ -37,11 +37,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string FieldValue { get; set; }
 
             /// <summary>
-            /// <para>The operation type of the extended field. Valid values:</para>
+            /// <para>The operation type for the custom field. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>add: adds a value to the extended field of the account.</description></item>
-            /// <item><description>replace: replaces the existing value of the extended field of the account. If the existing value to be replaced does not exist, this operation changes to the add operation.</description></item>
-            /// <item><description>remove: removes a value from the extended field of the account.</description></item>
+            /// <item><description><para><c>add</c>: Adds a value to the custom field.</para>
+            /// </description></item>
+            /// <item><description><para><c>replace</c>: Replaces the existing value of the custom field. If the field has no existing value, this operation adds the value instead.</para>
+            /// </description></item>
+            /// <item><description><para><c>remove</c>: Removes a value from the custom field.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The display name of the account. The display name can be up to 64 characters in length.</para>
+        /// <para>The display name. It can be a maximum of 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_name</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>The email address. The prefix of the email address can contain letters, digits, periods (.), underscores (_), and hyphens (-).</para>
+        /// <para>The email address. The local-part can contain uppercase letters, lowercase letters, digits, dots (.), underscores (_), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:example@example.com">example@example.com</a></para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the email address is verified. This parameter must be specified if you specify Email. You can set this parameter to true if you have no special business requirements.</para>
+        /// <para>Indicates whether the email address is verified. This parameter is required when specifying an email address. In most cases, set this to <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The mobile number. The mobile number must be 6 to 15 digits in length.</para>
+        /// <para>The mobile phone number. It must be between 6 and 15 digits long.</para>
         /// 
         /// <b>Example:</b>
         /// <para>156xxxxxxxxx</para>
@@ -105,7 +108,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the mobile number is verified. This parameter must be specified if you specify PhoneNumber. You can set this parameter to true if you have no special business requirements.</para>
+        /// <para>Indicates whether the mobile phone number is verified. This parameter is required when specifying a mobile phone number. In most cases, set this to <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? PhoneNumberVerified { get; set; }
 
         /// <summary>
-        /// <para>The area code of the mobile number. For example, the area code of a mobile number in the Chinese mainland is 86 without 00 or the plus sign (+). This parameter must be specified if you specify PhoneNumber.</para>
+        /// <para>The country code for the mobile phone number. Example: 86 for Chinese mainland. Do not include <c>00</c> or <c>+</c>. This parameter is required if you specify a mobile phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86</para>
@@ -136,7 +139,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The name of the account. The name can be up to 64 characters in length. It can contain letters, digits, and the following special characters: _ . @ -</para>
+        /// <para>The username. It must be no more than 256 characters and can contain letters, digits, and the special characters: _, ., @, and -.</para>
         /// 
         /// <b>Example:</b>
         /// <para>username_test</para>

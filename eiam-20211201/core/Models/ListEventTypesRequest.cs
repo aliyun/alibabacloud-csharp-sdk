@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListEventTypesRequest : TeaModel {
         /// <summary>
-        /// <para>查询分页页码（从1开始计数）</para>
+        /// <para>Page number for paging</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>分页大小（从1开始计数）</para>
+        /// <para>Number of items per page</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

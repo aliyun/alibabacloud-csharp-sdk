@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateApplicationSsoFormParamsRequest : TeaModel {
         /// <summary>
-        /// <para>IDaaS的应用主键id</para>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>应用模板创建参数，应用创建来源为模板时才可以指定</para>
+        /// <para>The parameters for creating the application template.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ApplicationTemplateParams")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<UpdateApplicationSsoFormParamsRequestApplicationTemplateParams> ApplicationTemplateParams { get; set; }
         public class UpdateApplicationSsoFormParamsRequestApplicationTemplateParams : TeaModel {
             /// <summary>
-            /// <para>应用模板创建参数具体名称</para>
+            /// <para>The name of a parameter for creating the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyunUid</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string TemplateParamName { get; set; }
 
             /// <summary>
-            /// <para>应用模板创建参数真实的取值</para>
+            /// <para>The value of the parameter for creating the application template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456789</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>IDaaS EIAM的实例id</para>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

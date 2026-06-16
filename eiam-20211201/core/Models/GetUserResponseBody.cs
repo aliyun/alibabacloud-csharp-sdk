@@ -216,9 +216,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The time when the password of the account expires. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// <list type="bullet">
-            /// <item><description>If the value -1 is returned, the password does not expire.</description></item>
-            /// <item><description>If no value is returned, the password does not expire.</description></item>
-            /// <item><description>If a UNIX timestamp is returned, the password expires at the indicated point of time.</description></item>
+            /// <item><description><para>If the value -1 is returned, the password does not expire.</para>
+            /// </description></item>
+            /// <item><description><para>If no value is returned, the password does not expire.</para>
+            /// </description></item>
+            /// <item><description><para>If a UNIX timestamp is returned, the password expires at the indicated point of time.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -301,8 +304,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The status of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>enabled: The account is enabled.</description></item>
-            /// <item><description>disabled: The account is disabled.</description></item>
+            /// <item><description><para>enabled: The account is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>disabled: The account is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -357,10 +362,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <summary>
             /// <para>The source type of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>build_in: The account was created in IDaaS.</description></item>
-            /// <item><description>ding_talk: The account was imported from DingTalk.</description></item>
-            /// <item><description>ad: The account was imported from Microsoft Active Directory (AD).</description></item>
-            /// <item><description>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</description></item>
+            /// <item><description><para>build_in: The account was created in IDaaS.</para>
+            /// </description></item>
+            /// <item><description><para>ding_talk: The account was imported from DingTalk.</para>
+            /// </description></item>
+            /// <item><description><para>ad: The account was imported from Microsoft Active Directory (AD).</para>
+            /// </description></item>
+            /// <item><description><para>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

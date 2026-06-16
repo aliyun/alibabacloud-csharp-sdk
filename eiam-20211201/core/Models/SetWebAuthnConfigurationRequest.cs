@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class SetWebAuthnConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>AAGUID及其名称列表</para>
+        /// <para>List of AAGUIDs and their names.</para>
         /// </summary>
         [NameInMap("Aaguids")]
         [Validation(Required=false)]
         public List<SetWebAuthnConfigurationRequestAaguids> Aaguids { get; set; }
         public class SetWebAuthnConfigurationRequestAaguids : TeaModel {
             /// <summary>
-            /// <para>AAGUID</para>
+            /// <para>AAGUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>adce0002-35bc-c60a-648b-0b25f1f05503</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Aaguid { get; set; }
 
             /// <summary>
-            /// <para>AAGUID名称</para>
+            /// <para>AAGUID name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Touch ID</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>是否开启AAGUID校验</para>
+        /// <para>Enable AAGUID verification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? EnableAaguidVerification { get; set; }
 
         /// <summary>
-        /// <para>是否开启WebAuthn认证器MDS校验</para>
+        /// <para>Enable WebAuthn authenticator MDS verification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? EnableMetadataServiceVerification { get; set; }
 
         /// <summary>
-        /// <para>是否允许用户自注册WebAuthn认证器</para>
+        /// <para>Allow user self-registration of WebAuthn authenticators.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public bool? EnableUserSelfRegistration { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>Instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class EnableInternalAuthenticationSourceRequest : TeaModel {
         /// <summary>
-        /// <para>内部认证源ID，比如 ia_password, ia_otp_sms 等</para>
+        /// <para>The ID of the internal authentication source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ia_password</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthenticationSourceId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM的实例id</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

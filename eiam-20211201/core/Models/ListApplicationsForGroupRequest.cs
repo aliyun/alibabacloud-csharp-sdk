@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForGroupRequest : TeaModel {
         /// <summary>
-        /// <para>非必填，如果填写则可以基于应用ID进行过滤，列表中最多包含100个元素。</para>
+        /// <para>The list of application IDs. A maximum of 100 application IDs are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>组的唯一标识。</para>
+        /// <para>The group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>当前查询的列表页码，默认为1。</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>当前查询的列表页码，默认为20。</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateCustomPrivacyPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>A client token used to ensure the idempotence of the request. The client generates this value to make sure that it is unique among different requests. The value can be up to 64 ASCII characters in length and cannot contain non-ASCII characters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>client-token-example</para>
         /// </summary>
@@ -18,31 +20,31 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>自定义条款内容详情</para>
+        /// <para>The details of the custom privacy policy content.</para>
         /// </summary>
         [NameInMap("CustomPrivacyPolicyContents")]
         [Validation(Required=false)]
         public List<CreateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents> CustomPrivacyPolicyContents { get; set; }
         public class CreateCustomPrivacyPolicyRequestCustomPrivacyPolicyContents : TeaModel {
             /// <summary>
-            /// <para>自定义条款项</para>
+            /// <para>The items of the custom privacy policy.</para>
             /// </summary>
             [NameInMap("CustomPrivacyPolicyItems")]
             [Validation(Required=false)]
             public List<CreateCustomPrivacyPolicyRequestCustomPrivacyPolicyContentsCustomPrivacyPolicyItems> CustomPrivacyPolicyItems { get; set; }
             public class CreateCustomPrivacyPolicyRequestCustomPrivacyPolicyContentsCustomPrivacyPolicyItems : TeaModel {
                 /// <summary>
-                /// <para>自定义条款名称</para>
+                /// <para>The name of the custom privacy policy item.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xxxx隐私政策条款</para>
+                /// <para>Custom Privacy Policy Name</para>
                 /// </summary>
                 [NameInMap("CustomPrivacyPolicyItemName")]
                 [Validation(Required=false)]
                 public string CustomPrivacyPolicyItemName { get; set; }
 
                 /// <summary>
-                /// <para>自定义条款访问地址</para>
+                /// <para>The endpoint of the custom privacy policy item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.xxxx.com">http://www.xxxx.com</a></para>
@@ -54,17 +56,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>自定义条款提示</para>
+            /// <para>The prompt for the custom privacy policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>登录视为同意此条款</para>
+            /// <para>Please read and agree：</para>
             /// </summary>
             [NameInMap("CustomPrivacyPolicyTip")]
             [Validation(Required=false)]
             public string CustomPrivacyPolicyTip { get; set; }
 
             /// <summary>
-            /// <para>自定义条款所属语言</para>
+            /// <para>The language of the custom privacy policy. The value is the LanguageCode returned by the ListLanguages operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-Hans-CN</para>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>自定义条款名称</para>
+        /// <para>The name of the custom privacy policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -87,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CustomPrivacyPolicyName { get; set; }
 
         /// <summary>
-        /// <para>默认条款语言，若其他语言未配置条款，则使用默认的</para>
+        /// <para>The default language of the privacy policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-Hans-CN</para>
@@ -97,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DefaultLanguageCode { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +110,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>自定义条款状态</para>
+        /// <para>The status of the custom privacy policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -118,7 +120,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>手动勾选同意，还是默认同意</para>
+        /// <para>The consent type for the privacy policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>implied_consent</para>

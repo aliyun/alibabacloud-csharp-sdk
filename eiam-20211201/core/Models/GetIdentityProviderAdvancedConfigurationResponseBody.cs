@@ -9,19 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetIdentityProviderAdvancedConfigurationResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Advanced configuration information</para>
+        /// </summary>
         [NameInMap("AdvancedConfiguration")]
         [Validation(Required=false)]
         public GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfiguration AdvancedConfiguration { get; set; }
         public class GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfiguration : TeaModel {
             /// <summary>
-            /// <para>钉钉高阶配置</para>
+            /// <para>DingTalk advanced configuration</para>
             /// </summary>
             [NameInMap("DingtalkAdvancedConfig")]
             [Validation(Required=false)]
             public GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfigurationDingtalkAdvancedConfig DingtalkAdvancedConfig { get; set; }
             public class GetIdentityProviderAdvancedConfigurationResponseBodyAdvancedConfigurationDingtalkAdvancedConfig : TeaModel {
                 /// <summary>
-                /// <para>IDaaS EIAM 钉钉一方应用的AppKey</para>
+                /// <para>AppKey of the DingTalk first-party application</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ding5xo9rg0csw3f6xxx</para>
@@ -31,7 +34,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string AppKey { get; set; }
 
                 /// <summary>
-                /// <para>IDaaS EIAM 钉钉一方应用的AppSecret</para>
+                /// <para>App secret of the DingTalk first-party application</para>
                 /// 
                 /// <b>Example:</b>
                 /// <hr>
@@ -43,7 +46,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>IDaaS EIAM 身份提供方ID</para>
+            /// <para>Identity provider ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>idp_na2rzpyc67zr7ixdfy35zgrxxx</para>
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string IdentityProviderId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>Instance ID</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_kpvmhktvun6u66dgpjh3l4wxxx</para>
@@ -65,6 +68,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

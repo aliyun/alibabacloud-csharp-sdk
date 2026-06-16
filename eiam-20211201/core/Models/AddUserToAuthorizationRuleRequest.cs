@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class AddUserToAuthorizationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>授权规则标识。</para>
+        /// <para>The authorization rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationRuleId { get; set; }
 
         /// <summary>
+        /// <para>A client token that you provide to ensure the idempotence of the request. Make sure that the client token is unique for each request. The client token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +32,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>账户ID。</para>
+        /// <para>The account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,14 +54,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>有效周期，当validityPeriodType为custom有效。</para>
+        /// <para>The time range of the validity period. This parameter is valid only when <b>ValidityType</b> is set to <b>time_bound</b>.</para>
         /// </summary>
         [NameInMap("ValidityPeriod")]
         [Validation(Required=false)]
         public AddUserToAuthorizationRuleRequestValidityPeriod ValidityPeriod { get; set; }
         public class AddUserToAuthorizationRuleRequestValidityPeriod : TeaModel {
             /// <summary>
-            /// <para>授权规则生效结束时间，采用unix纪元精确到毫秒。</para>
+            /// <para>The end time of the validity period. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1704062061000</para>
@@ -70,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>授权规则生效开始时间，采用unix纪元精确到毫秒。</para>
+            /// <para>The start time of the validity period. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1704042061000</para>
@@ -82,7 +83,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>有效期类型，枚举值：permanent（永久），time_bound（自定义时间范围）。</para>
+        /// <para>The type of the validity period for the relationship. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>permanent: The authorization is permanent.</para>
+        /// </description></item>
+        /// <item><description><para>time_bound: The authorization is valid for a custom time range.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

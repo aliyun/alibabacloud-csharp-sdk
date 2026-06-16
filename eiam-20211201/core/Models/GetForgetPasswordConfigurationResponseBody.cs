@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetForgetPasswordConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The forgot password configurations.</para>
+        /// <para>The forgot password configuration.</para>
         /// </summary>
         [NameInMap("OpenForgetPasswordConfiguration")]
         [Validation(Required=false)]
         public GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration OpenForgetPasswordConfiguration { get; set; }
         public class GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration : TeaModel {
             /// <summary>
-            /// <para>The authentication channels. Valid values:<br>email<br>sms<br>totp<br>web_authn</para>
+            /// <para>The list of authentication channels for the forgot password feature. This parameter is required when ForgetPasswordStatus is set to enabled. Valid values: email, sms, totp (one-time password), and web_authn (WebAuthn).</para>
             /// </summary>
             [NameInMap("AuthenticationChannels")]
             [Validation(Required=false)]
             public List<string> AuthenticationChannels { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the forgot password feature is enabled.</para>
+            /// <para>Indicates whether the forgot password feature is enabled. This parameter is deprecated. Use the ForgetPasswordStatus parameter instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Enable { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether email authentication is enabled for the forgot password feature.</para>
+            /// <para>Indicates whether email is enabled as an authentication method for the forgot password feature. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("EnableEmail")]
             [Validation(Required=false)]
             public bool? EnableEmail { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether Short Message Service (SMS) authentication is enabled for the forgot password feature.</para>
+            /// <para>Indicates whether SMS is enabled as an authentication method for the forgot password feature. This parameter is deprecated. Use the AuthenticationChannels parameter instead.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? EnableSms { get; set; }
 
             /// <summary>
-            /// <para>The status of the forgot password feature. Valid values: enabled and disabled.</para>
+            /// <para>The status of the forgot password configuration. Valid values: enabled and disabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>

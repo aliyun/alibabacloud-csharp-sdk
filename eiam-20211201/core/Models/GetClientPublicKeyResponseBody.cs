@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetClientPublicKeyResponseBody : TeaModel {
+        /// <summary>
+        /// <para>Information about the application\&quot;s ClientPublicKey.</para>
+        /// </summary>
         [NameInMap("ClientPublicKey")]
         [Validation(Required=false)]
         public GetClientPublicKeyResponseBodyClientPublicKey ClientPublicKey { get; set; }
         public class GetClientPublicKeyResponseBodyClientPublicKey : TeaModel {
             /// <summary>
-            /// <para>IDaaS EIAM 应用公私钥对算法类型 rsa2048、ecc256</para>
+            /// <para>The algorithm type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>RSA-2048</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AlgorithmType { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 应用Id</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 应用公私钥对Id</para>
+            /// <para>The ID of the application\&quot;s ClientPublicKey.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KEYEqDnDJhztiEAwSin7MZoxGcihzCAuxxxx</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ClientPublicKeyId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 应用公私钥对创建时间</para>
+            /// <para>The time when the public key was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1731305755000</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -64,6 +67,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The time when the key was last used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1771305755000</para>
             /// </summary>
@@ -72,7 +77,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? LastUsedTime { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 应用当前是否为首要使用的公私钥对</para>
+            /// <para>Indicates whether this is the primary key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -82,7 +87,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public bool? Primary { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 应用公钥</para>
+            /// <para>The public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-----BEGIN PUBLIC KEY-----
@@ -100,7 +105,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string PublicKey { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 应用公私钥对状态</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -112,6 +117,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

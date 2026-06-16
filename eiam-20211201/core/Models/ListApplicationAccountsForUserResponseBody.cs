@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationAccountsForUserResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the member accounts.</para>
+        /// </summary>
         [NameInMap("ApplicationAccounts")]
         [Validation(Required=false)]
         public List<ListApplicationAccountsForUserResponseBodyApplicationAccounts> ApplicationAccounts { get; set; }
         public class ListApplicationAccountsForUserResponseBodyApplicationAccounts : TeaModel {
             /// <summary>
-            /// <para>IDaaS EIAM 应用账号Id</para>
+            /// <para>The application account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aac_m6e3ukegwvbcb2fne7j32xxxxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationAccountId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 应用Id</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_na2r76irswrwfgpkz7xvcj7xxxxx</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 应用账号名称</para>
+            /// <para>The name of the application account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationUsername { get; set; }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the account was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1754359439000</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 实例Id</para>
+            /// <para>The ID of the IDaaS EIAM instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ki6hd7ihir4ybawogqk6xxxxx</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>IDaaS EIAM 用户Id</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_tkmboufpnvpbitdpzrlng6mxxxxx</para>
@@ -76,6 +79,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -84,6 +89,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

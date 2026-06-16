@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetServiceQuotaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -17,12 +19,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The service quota.</para>
+        /// </summary>
         [NameInMap("ServiceQuota")]
         [Validation(Required=false)]
         public GetServiceQuotaResponseBodyServiceQuota ServiceQuota { get; set; }
         public class GetServiceQuotaResponseBodyServiceQuota : TeaModel {
             /// <summary>
-            /// <para>Quota 配额的唯一标识。</para>
+            /// <para>The unique identifier of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>instanceTrialNumber</para>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string QuotaType { get; set; }
 
             /// <summary>
-            /// <para>Quota 配额的值。</para>
+            /// <para>The value of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -42,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public long? QuotaValue { get; set; }
 
             /// <summary>
-            /// <para>Quota 配额的当前用量。</para>
+            /// <para>The current usage of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class UpdateCredentialRequest : TeaModel {
         /// <summary>
-        /// <para>保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。ClientToken只支持ASCII字符，且不能超过64个字符。</para>
+        /// <para>Ensures idempotence. Generate a unique value on your client for each request. The ClientToken value must contain only ASCII characters and cannot exceed 64 characters. For more information, see <a href="https://www.alibabacloud.com/help/zh/ecs/developer-reference/how-to-ensure-idempotence">How to ensure idempotence</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,21 +21,21 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>凭据的内容。</para>
+        /// <para>The credential content.</para>
         /// </summary>
         [NameInMap("CredentialContent")]
         [Validation(Required=false)]
         public UpdateCredentialRequestCredentialContent CredentialContent { get; set; }
         public class UpdateCredentialRequestCredentialContent : TeaModel {
             /// <summary>
-            /// <para>Api Key的内容。</para>
+            /// <para>The credential content for an API key credential type.</para>
             /// </summary>
             [NameInMap("ApiKeyContent")]
             [Validation(Required=false)]
             public UpdateCredentialRequestCredentialContentApiKeyContent ApiKeyContent { get; set; }
             public class UpdateCredentialRequestCredentialContentApiKeyContent : TeaModel {
                 /// <summary>
-                /// <para>API Key 凭证类型的凭据内容。</para>
+                /// <para>The API key value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nsklnertyt5ddwizncxxxx</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>OAuth客户端认证凭证类型的凭据内容。</para>
+            /// <para>The credential content for an OAuth client authentication credential type.</para>
             /// </summary>
             [NameInMap("OAuthClientContent")]
             [Validation(Required=false)]
             public UpdateCredentialRequestCredentialContentOAuthClientContent OAuthClientContent { get; set; }
             public class UpdateCredentialRequestCredentialContentOAuthClientContent : TeaModel {
                 /// <summary>
-                /// <para>OAuth协议的client_id。</para>
+                /// <para>The client_id in the OAuth protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dmvncmxersdxxxxxx</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ClientId { get; set; }
 
                 /// <summary>
-                /// <para>OAuth协议的client_secret。</para>
+                /// <para>The client_secret in the OAuth protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>nsklncmwizncxxxx</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>凭据ID。</para>
+        /// <para>The credential ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// <para>凭据名称。</para>
+        /// <para>The credential name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>credential_name</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string CredentialName { get; set; }
 
         /// <summary>
-        /// <para>IDaaS EIAM实例的ID。</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

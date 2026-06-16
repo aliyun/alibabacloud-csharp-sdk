@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForUserRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the applications that the EIAM account can access. You can query a maximum of 100 application IDs at a time.</para>
+        /// <para>The list of application IDs. You can specify up to 100 application IDs in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -53,8 +53,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         /// <summary>
         /// <para>The query mode. Default value: <b>OnlyDirect</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>OnlyDirect: Only the direct permissions are queried. Direct permissions are the permissions that are directly granted to the account.</description></item>
-        /// <item><description>IncludeInherit: Both the permissions that are directly granted to the account and the inherited permissions are queried. Inherited permissions are the permissions that an account inherits from the parent organization or the group to which the account belongs.</description></item>
+        /// <item><description><para>OnlyDirect: Queries only the direct permissions of the account. Direct permissions are granted for applications that are directly assigned to the account.</para>
+        /// </description></item>
+        /// <item><description><para>IncludeInherit: Queries both the direct and inherited permissions of the account. Inherited permissions are granted from the parent organizations or groups to which the account belongs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string QueryMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the EIAM account.</para>
+        /// <para>The account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

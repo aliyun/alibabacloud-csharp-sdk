@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateAuthorizationResourceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The authorization resource ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>arres_01kgh3jvt7pk093rv6giu0c0qxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AuthorizationResourceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

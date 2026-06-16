@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListOrganizationalUnitsForResourceServerResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum number of results per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>A token to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -27,12 +29,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>A list of organizational units.</para>
+        /// </summary>
         [NameInMap("OrganizationalUnits")]
         [Validation(Required=false)]
         public List<ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnits> OrganizationalUnits { get; set; }
         public class ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnits : TeaModel {
             /// <summary>
-            /// <para>实例唯一标识</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_qsw77zl5vrllwzyrrfwbmpxxxx</para>
@@ -42,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>组织的唯一标识</para>
+            /// <para>The organizational unit ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ou_nbsomva32b6utec3hgi7scxxxx</para>
@@ -52,14 +57,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string OrganizationalUnitId { get; set; }
 
             /// <summary>
-            /// <para>资源服务Scope权限集合</para>
+            /// <para>A list of scopes.</para>
             /// </summary>
             [NameInMap("ResourceServerScopes")]
             [Validation(Required=false)]
             public List<ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnitsResourceServerScopes> ResourceServerScopes { get; set; }
             public class ListOrganizationalUnitsForResourceServerResponseBodyOrganizationalUnitsResourceServerScopes : TeaModel {
                 /// <summary>
-                /// <para>ResourceServerScope唯一标识</para>
+                /// <para>The scope ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ress_nbte4bb3qqqnaq73rlmkqixxxx</para>
@@ -69,10 +74,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public string ResourceServerScopeId { get; set; }
 
                 /// <summary>
-                /// <para>ResourceServerScope名称</para>
+                /// <para>The scope name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>获取资源信息</para>
+                /// <para>Read User Info</para>
                 /// </summary>
                 [NameInMap("ResourceServerScopeName")]
                 [Validation(Required=false)]
@@ -83,6 +88,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -91,6 +98,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

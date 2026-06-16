@@ -10,34 +10,34 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetDomainDnsChallengeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DNS challenge records.</para>
+        /// <para>The DNS Challenge record.</para>
         /// </summary>
         [NameInMap("DomainDnsChallenge")]
         [Validation(Required=false)]
         public GetDomainDnsChallengeResponseBodyDomainDnsChallenge DomainDnsChallenge { get; set; }
         public class GetDomainDnsChallengeResponseBodyDomainDnsChallenge : TeaModel {
             /// <summary>
-            /// <para>The name of the DNS challenge record.</para>
+            /// <para>The name of the DNS Challenge.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>_idaas-challenge.${domain}</para>
+            /// <para>_idaas-challenge.login.example.com</para>
             /// </summary>
             [NameInMap("DnsChallengeName")]
             [Validation(Required=false)]
             public string DnsChallengeName { get; set; }
 
             /// <summary>
-            /// <para>The value of the DNS challenge record.</para>
+            /// <para>The value of the DNS Challenge.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>exmple123xxx</para>
+            /// <para>yriov8FD/rIGjQTU3/JjqkwxRbo5dyGftHWOtP5xfCI=</para>
             /// </summary>
             [NameInMap("DnsChallengeValue")]
             [Validation(Required=false)]
             public string DnsChallengeValue { get; set; }
 
             /// <summary>
-            /// <para>The type of the DNS challenge record.</para>
+            /// <para>The type of the DNS record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>txt</para>

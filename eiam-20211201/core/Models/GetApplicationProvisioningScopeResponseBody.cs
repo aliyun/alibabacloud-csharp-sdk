@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>Instance Indicates the maximum quota number of authorized agents.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>20</para>
+            /// <para>1000</para>
             /// </summary>
             [NameInMap("MaxQuota")]
             [Validation(Required=false)]

@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListUsersRequest : TeaModel {
         /// <summary>
-        /// <para>Displayname</para>
+        /// <para>The prefix of the display name. The query is performed based on the prefix.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>name_001</para>
+        /// <para>name</para>
         /// </summary>
         [NameInMap("DisplayNameStartsWith")]
         [Validation(Required=false)]
         public string DisplayNameStartsWith { get; set; }
 
         /// <summary>
-        /// <para>The email address of the user who owns the account.</para>
+        /// <para>The email address of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:user@example.com">user@example.com</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,10 +40,22 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>NTxxxxexample</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
@@ -59,7 +71,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string OrganizationalUnitId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1.</para>
+        /// <para>The page number. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +81,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: 20.</para>
+        /// <para>The number of entries per page. The default value is 20. The maximum value is 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -79,7 +91,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The mobile number of the user who owns the account.</para>
+        /// <para>The mobile number of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>156xxxxxxx</para>
@@ -89,7 +101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PhoneNumber { get; set; }
 
         /// <summary>
-        /// <para>The country code of the mobile number. For example, the country code of China is 86 without 00 or +.</para>
+        /// <para>The country calling code. For example, the country calling code of China is <c>86</c>. Do not add <c>00</c> or <c>+</c> to the country calling code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86</para>
@@ -99,10 +111,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PhoneRegion { get; set; }
 
         /// <summary>
-        /// <para>The status of the account. Valid values:</para>
+        /// <para>The status of the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled: The account is enabled.</description></item>
-        /// <item><description>disabled: The account is disabled.</description></item>
+        /// <item><description><para><c>enabled</c>: The user is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>disabled</c>: The user is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,8 +127,10 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The external ID of the account. The external ID can be used by external data to map the data of the account in IDaaS EIAM.</para>
-        /// <para>For accounts with the same source type and source ID, each account has a unique external ID.</para>
+        /// <para>The external ID of the user. The external ID can be used to associate the user with a user in an external system.</para>
+        /// <remarks>
+        /// <para>The external ID must be unique within the same source type and source ID.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>id_wovwffm62xifdziem7an7xxxxx</para>
@@ -124,15 +140,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserExternalId { get; set; }
 
         /// <summary>
-        /// <para>User ID set</para>
+        /// <para>The list of user IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("UserIds")]
         [Validation(Required=false)]
         public List<string> UserIds { get; set; }
 
         /// <summary>
-        /// <para>The source ID of the account.</para>
-        /// <para>If the account was created in IDaaS, its source ID is the ID of the IDaaS instance. If the account was imported, its source ID is the enterprise ID in the source. For example, if the account was imported from DingTalk, its source ID is the corpId value of the enterprise in DingTalk.</para>
+        /// <para>The source ID of the user.</para>
+        /// <para>If the user is created in EIAM, the value of this parameter is the ID of the EIAM instance. If the user is imported from an external system, the value of this parameter is the enterprise ID of the user in the external system. For example, if the user is imported from DingTalk, the value of this parameter is the <c>corpId</c> of the enterprise in DingTalk.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -142,12 +161,18 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserSourceId { get; set; }
 
         /// <summary>
-        /// <para>The source type of the account. Valid values:</para>
+        /// <para>The source type of the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>build_in: The account was created in IDaaS.</description></item>
-        /// <item><description>ding_talk: The account was imported from DingTalk.</description></item>
-        /// <item><description>ad: The account was imported from Microsoft Active Directory (AD).</description></item>
-        /// <item><description>ldap: The account was imported from a Lightweight Directory Access Protocol (LDAP) service.</description></item>
+        /// <item><description><para><c>build_in</c>: The user is created in EIAM.</para>
+        /// </description></item>
+        /// <item><description><para><c>ding_talk</c>: The user is imported from DingTalk.</para>
+        /// </description></item>
+        /// <item><description><para><c>ad</c>: The user is imported from Active Directory (AD).</para>
+        /// </description></item>
+        /// <item><description><para><c>ldap</c>: The user is imported from a Lightweight Directory Access Protocol (LDAP) directory.</para>
+        /// </description></item>
+        /// <item><description><para><c>we_com</c>: The user is imported from WeCom.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -158,7 +183,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string UserSourceType { get; set; }
 
         /// <summary>
-        /// <para>Username</para>
+        /// <para>The prefix of the username. The query is performed based on the prefix.</para>
         /// 
         /// <b>Example:</b>
         /// <para>name_001</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsRequest : TeaModel {
         /// <summary>
+        /// <para>The application creation type. If unspecified, only user-created (<c>user_custom</c>) applications are returned. To query applications of all types, set this parameter to <c>all</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>system_init</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationCreationType { get; set; }
 
         /// <summary>
+        /// <para>The application identity type. If unspecified, only applications of the <c>application</c> type are returned. To query all identity types, set this parameter to <c>all</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>application</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationIdentityType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the applications.</para>
+        /// <para>A list of application IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ram Account SSO</para>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> ApplicationIds { get; set; }
 
         /// <summary>
-        /// <para>The name of the application. Only fuzzy match from the leftmost character is supported.</para>
+        /// <para>The application name. Only prefix matching is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ram Account SSO</para>
@@ -46,10 +50,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ApplicationName { get; set; }
 
         /// <summary>
-        /// <para>The authorization of the application. Valid values:</para>
+        /// <para>The authorization type for application access. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>authorize_required: Only the user with explicit authorization can access the application.</description></item>
-        /// <item><description>default_all: By default, all users can access the application.</description></item>
+        /// <item><description><para><c>authorize_required</c>: Access requires explicit authorization.</para>
+        /// </description></item>
+        /// <item><description><para><c>default_all</c>: All members have access by default.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,14 +65,32 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         [Validation(Required=false)]
         public string AuthorizationType { get; set; }
 
+        /// <summary>
+        /// <para>A list of custom fields.</para>
+        /// </summary>
         [NameInMap("CustomFields")]
         [Validation(Required=false)]
         public List<ListApplicationsRequestCustomFields> CustomFields { get; set; }
         public class ListApplicationsRequestCustomFields : TeaModel {
+            /// <summary>
+            /// <para>The custom field identifier. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><c>agent_type</c>: The agent type.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agent_type</para>
+            /// </summary>
             [NameInMap("FieldName")]
             [Validation(Required=false)]
             public string FieldName { get; set; }
 
+            /// <summary>
+            /// <para>The custom field value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>x-claw</para>
+            /// </summary>
             [NameInMap("FieldValue")]
             [Validation(Required=false)]
             public string FieldValue { get; set; }
@@ -74,7 +98,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,11 +109,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Used to determine whether M2M client identity is enabled.</para>
-        /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
-        /// </list>
+        /// <para>The status of the M2M client identity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -99,7 +119,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string M2MClientStatus { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +129,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -119,11 +139,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Used to determine whether the ResourceServer capability is enabled.</para>
-        /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
-        /// </list>
+        /// <para>The status of the resource server capability.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -133,12 +149,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerStatus { get; set; }
 
         /// <summary>
-        /// <para>SSO type.</para>
-        /// <list type="bullet">
-        /// <item><description>oidc</description></item>
-        /// <item><description>saml2</description></item>
-        /// <item><description>oauth2/m2m</description></item>
-        /// </list>
+        /// <para>A filter for the Single Sign-On (SSO) type. You can specify multiple types, separated by a comma. Example: <c>oauth2/m2m,oidc+oauth2/m2m</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oauth2/m2m</para>
@@ -148,10 +159,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string SsoType { get; set; }
 
         /// <summary>
-        /// <para>The status of the application. Valid values:</para>
+        /// <para>The application status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: The application is enabled.</description></item>
-        /// <item><description>Disabled: The application is disabled.</description></item>
+        /// <item><description><para><c>enabled</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>disabled</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

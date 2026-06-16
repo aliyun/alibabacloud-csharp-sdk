@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListApplicationsForAuthorizationRuleResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of applications.</para>
+        /// </summary>
         [NameInMap("Applications")]
         [Validation(Required=false)]
         public List<ListApplicationsForAuthorizationRuleResponseBodyApplications> Applications { get; set; }
         public class ListApplicationsForAuthorizationRuleResponseBodyApplications : TeaModel {
             /// <summary>
-            /// <para>应用标识。</para>
+            /// <para>The application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>app_mkv7rgt4d7i4u7zqtzev2mxxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string ApplicationId { get; set; }
 
             /// <summary>
-            /// <para>实例ID。</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -34,14 +37,14 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>有效周期。</para>
+            /// <para>The time range of the validity period. This parameter takes effect when <b>ValidityType</b> is set to <b>time_bound</b>.</para>
             /// </summary>
             [NameInMap("ValidityPeriod")]
             [Validation(Required=false)]
             public ListApplicationsForAuthorizationRuleResponseBodyApplicationsValidityPeriod ValidityPeriod { get; set; }
             public class ListApplicationsForAuthorizationRuleResponseBodyApplicationsValidityPeriod : TeaModel {
                 /// <summary>
-                /// <para>授权生效结束时间。</para>
+                /// <para>The end time of the validity period. This is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>授权生效开始时间。</para>
+                /// <para>The start time of the validity period. This is a UNIX timestamp in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1704042061000</para>
@@ -63,7 +66,13 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             }
 
             /// <summary>
-            /// <para>有效期类型，枚举值：permanent（永久），time_bound（自定义时间范围）。</para>
+            /// <para>The validity type of the relationship. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>permanent: The relationship is permanent.</para>
+            /// </description></item>
+            /// <item><description><para>time_bound: The relationship has a custom time range.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>permanent</para>
@@ -75,7 +84,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>分页查询时每页行数。</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -85,7 +94,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token returned from this call. Use this token for the next paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -95,6 +104,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -103,6 +114,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

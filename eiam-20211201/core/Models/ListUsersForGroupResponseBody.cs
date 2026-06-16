@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned. The maximum number of entries that can be returned per page is specified by PageSize.</para>
+        /// <para>The total number of entries that match the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -30,14 +30,15 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The information about accounts.</para>
+        /// <para>The list of account objects.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersForGroupResponseBodyUsers> Users { get; set; }
         public class ListUsersForGroupResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>Account membership source id</para>
+            /// <para>The source ID of the group member relationship.</para>
+            /// <para>If the group is created in EIAM, the value of this parameter is the instance ID. For other types of groups, the value is the enterprise ID from the source. For example, if the group is imported from DingTalk, the value is the corpId of the DingTalk enterprise.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -47,7 +48,12 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string GroupMemberRelationSourceId { get; set; }
 
             /// <summary>
-            /// <para>Account membership source type</para>
+            /// <para>The source type of the group member relationship. Valid values:</para>
+            /// <para>build_in: The group is created in EIAM.</para>
+            /// <para>ding_talk: The group is imported from DingTalk.</para>
+            /// <para>ad: The group is imported from Active Directory (AD).</para>
+            /// <para>ldap: The group is imported from LDAP.</para>
+            /// <para>we_com: The group is imported from WeCom.</para>
             /// 
             /// <b>Example:</b>
             /// <para>build_in</para>

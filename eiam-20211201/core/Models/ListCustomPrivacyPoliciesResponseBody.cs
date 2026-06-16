@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class ListCustomPrivacyPoliciesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of custom privacy policies.</para>
+        /// </summary>
         [NameInMap("CustomPrivacyPolicies")]
         [Validation(Required=false)]
         public List<ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies> CustomPrivacyPolicies { get; set; }
         public class ListCustomPrivacyPoliciesResponseBodyCustomPrivacyPolicies : TeaModel {
             /// <summary>
-            /// <para>自定义条款Id</para>
+            /// <para>The ID of the custom privacy policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pp_xxxxx</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyId { get; set; }
 
             /// <summary>
-            /// <para>自定义条款名称</para>
+            /// <para>The name of the custom privacy policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Custom Privacy Policy Name</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string CustomPrivacyPolicyName { get; set; }
 
             /// <summary>
-            /// <para>若显示语言未配置时，门户侧展示默认语言展示条款。</para>
+            /// <para>The default language of the policy. The value is the LanguageCode returned by the ListLanguages operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-Hans-CN</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string DefaultLanguageCode { get; set; }
 
             /// <summary>
-            /// <para>实例id</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idaas_ue2jvisn35ea5lmthk267xxxxx</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>自定义条款状态</para>
+            /// <para>The status of the custom privacy policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>自定义条款同意类型，是默认同意，还是用户勾选同意</para>
+            /// <para>The user consent type for the policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>implied_consent</para>
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>分页查询时每页行数。</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,7 +89,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>
@@ -96,7 +99,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>本次调用返回的查询凭证（Token）值，用于上一次翻页查询。</para>
+        /// <para>The token that is used to retrieve the previous page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PTxxxexample</para>
@@ -106,6 +109,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PreviousToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -114,6 +119,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GetInstanceQuotaResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The quota information.</para>
+        /// </summary>
         [NameInMap("Quota")]
         [Validation(Required=false)]
         public GetInstanceQuotaResponseBodyQuota Quota { get; set; }
         public class GetInstanceQuotaResponseBodyQuota : TeaModel {
             /// <summary>
-            /// <para>Quota 配额的Key，同请求参数</para>
+            /// <para>The key of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>userMaxNumber</para>
@@ -24,7 +27,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string QuotaKey { get; set; }
 
             /// <summary>
-            /// <para>Quota 配额的值。</para>
+            /// <para>The value of the quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>

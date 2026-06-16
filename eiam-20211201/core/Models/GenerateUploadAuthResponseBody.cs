@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class GenerateUploadAuthResponseBody : TeaModel {
         /// <summary>
-        /// <para>认证的AccessId</para>
+        /// <para>The AccessKey ID of the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>STS.NYgAmE3cyPoMDxtWgtwG3xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string AccessId { get; set; }
 
         /// <summary>
-        /// <para>预下载地址</para>
+        /// <para>The pre-signed URL for download.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://temp.oss.aliyuncs.com/idaas_ly77wa2oexrciw5v672vizxxxx/file_import/68866d21-0ab7-450d-b9e6-5b1eafe06xxxx">https://temp.oss.aliyuncs.com/idaas_ly77wa2oexrciw5v672vizxxxx/file_import/68866d21-0ab7-450d-b9e6-5b1eafe06xxxx</a></para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string DownLoadUrl { get; set; }
 
         /// <summary>
+        /// <para>The file encryption configuration key that is encrypted by the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwia2lkIjoia2V5X3Z1ZWhjbmh2NWppcGhmZGJwcWpqd3dsemFhIn0..YetpxsPdqdLvAy6G.0Zy5meoTzvCuNfA_0w7E9ItY2uGu1v1BxR9i98KeHXv_P-sm9w1q0XPf5Fw.55V_jFq2t2ZHdjg5c7uxxxx</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string EncryptedKey { get; set; }
 
         /// <summary>
-        /// <para>过期时间</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1766470716</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public long? Expire { get; set; }
 
         /// <summary>
-        /// <para>bucket地址host</para>
+        /// <para>The host of the bucket address.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://temp.oss.aliyuncs.com">https://temp.oss.aliyuncs.com</a></para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Host { get; set; }
 
         /// <summary>
-        /// <para>认证对应的key</para>
+        /// <para>The key corresponding to the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas-csv://idaas_ly77wa2oexrciw5v672vizxxxx
@@ -69,6 +71,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The plaintext key of the encryption configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>fBLqWEvq3SbCj1cX/rtZoSPDVduOWdloOO2VN2+5Sxxxx</para>
         /// </summary>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string PlaintextKey { get; set; }
 
         /// <summary>
-        /// <para>认证的policy</para>
+        /// <para>The policy for the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJleHBpcmF0aW9uIjoiMjAyNS0xMi0yM1QwNjoxODozNi4zNTZaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjBdLHsiYnVja2V0IjoidGVtcC1pZGFhcy1laWFtLWNuLWhhbmd6aG91In0seyJrZXkiOiJpZGFhc19seTc3d2Eyb2V4cmNpdzV2Njcydml6eG12ZS9maWxlX2ltcG9ydC82ODg2NmQyMS0wYWI3LTQ1MGQtYjllNi01YjFlYWZlMDYzZTEifSx7Ingtb3NzLWZvcmJpZC1vdmVyd3JpdGUiOiJ0cnVlIn0seyJ4LW9zcy1vYmplY3QtYWNsIjoicHJpdmF0ZSJxxxx</para>
@@ -87,6 +91,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string Policy { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0441BD79-92F3-53AA-8657-F8CE4A2B912A</para>
         /// </summary>
@@ -95,6 +101,8 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The Security Token Service (STS) access credential.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CAISzgJ1q6Ft5B2yfSjIr5rSCtfx3rxY562mRl7Fs2che8gfpbLg1zz2IHhMfXVpA+Afv/sxlG5Q7/wdlrp6SJtIXleCZtF94oxN9h2gb4fb4wgFPgjY08/LI3OaLjKm9u2wCryLYbGwU/OpbE++5U0X6LDmdDKkckW4OJmS8/BOZcgWWQ/KBlgvRq0hRG1YpdQdKGHaONu0LxfumRCwNkdzvRdmgm4NgsbWgO/ks0aO0wehm7BO+N6gfcD9NvMBZskvD42Hu8VtbbfE3SJq7BxHybx7lqQs+02c5onEXwALs0zXbLSErIU2dlBjH68hAOtFquPgnPtzt6nJkID62421pmiSr561rumAtyikcIvBXr5RHT3LoP1LA5UhHC1UotFVgGOaCXLbtuArXptaY/JiNL/0hFEpVt7knInNpUbntINy5f5fqzNMlShqKOXTK93xGoABgfahfEFC23BhLp3NnBxnaG/psewhUfRg/wYS9oE268EST0qPq0ZvzmZjsmtbtnFL8takNDOIdutBZeb9nngkEi7tYyVcwoYBnbJ3sopnFEVozB2VO5XuRHLBkOfB+2z1zD91KtoDajJxpT295Qm0ndFALS1tCGI452yRIrCHynggxxxxx</para>
         /// </summary>
@@ -103,7 +111,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>认证的签名</para>
+        /// <para>The signature for the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t3JyykEKg3kHQuUrhaXYxtboUxxxxx</para>
