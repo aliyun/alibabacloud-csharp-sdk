@@ -1,3 +1,6 @@
+2026-06-16 Version: 2.4.3
+- Generated csharp 2021-09-10 for xtee.
+
 2026-06-16 Version: 2.4.2
 - Generated csharp 2021-09-10 for xtee.
 
