@@ -1,0 +1,46 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.AgentLoop20260520.Models
+{
+    public class Evaluator : TeaModel {
+        [NameInMap("config")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Config { get; set; }
+
+        [NameInMap("evaluatorRef")]
+        [Validation(Required=false)]
+        public string EvaluatorRef { get; set; }
+
+        [NameInMap("filters")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Filters { get; set; }
+
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        [NameInMap("resultName")]
+        [Validation(Required=false)]
+        public string ResultName { get; set; }
+
+        [NameInMap("resultType")]
+        [Validation(Required=false)]
+        public string ResultType { get; set; }
+
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
+        [NameInMap("variableMapping")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> VariableMapping { get; set; }
+
+    }
+
+}
