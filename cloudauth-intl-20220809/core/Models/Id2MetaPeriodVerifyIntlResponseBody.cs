@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class Id2MetaPeriodVerifyIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para><a href="https://www.alibabacloud.com/help/en/ekyc/latest/dateverify?spm=a2c63.p38356.0.i32#22facb6ab6ui1">Return to Code</a>.</para>
+        /// <para>The response code. For more information about response codes, see the description of response codes and messages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>A detailed description of the response code.</para>
+        /// <para>The response message of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The final authentication result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Y</b>, via</para>
+            /// <item><description><para>Y: Passed.</para>
             /// </description></item>
-            /// <item><description><para><b>N</b>: The authentication is not passed.</para>
+            /// <item><description><para>N: Not passed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>A description of the authentication result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/dateverify?spm=a2c63.p38356.0.i32#d1f36d445az8i">ResultObject.SubCode error codes</a>.</para>
+            /// <para>The description of the authentication result. For more information, see the ResultObject.SubCode error code description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>

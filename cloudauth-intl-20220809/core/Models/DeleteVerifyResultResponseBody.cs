@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DeleteVerifyResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of this request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -40,14 +40,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DeleteVerifyResultResponseBodyResult Result { get; set; }
         public class DeleteVerifyResultResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Deletion result. Y indicates successful deletion, N indicates failed deletion</para>
+            /// <para>The deletion result. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Y: The deletion was successful.</description></item>
+            /// <item><description>N: The deletion failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Y/N</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string DeleteResult { get; set; }
 
             /// <summary>
-            /// <para>Unique identifier of the authentication request</para>
+            /// <para>The unique identifier of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ab0b***cbde97</para>

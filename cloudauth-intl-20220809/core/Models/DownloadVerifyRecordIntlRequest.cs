@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DownloadVerifyRecordIntlRequest : TeaModel {
         /// <summary>
-        /// <para>Business type:</para>
+        /// <para>The business type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>INVOKE_STATISTICS</description></item>
-        /// <item><description>INVOKE_RECORD</description></item>
+        /// <item><description>INVOKE_RECORD.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>Query code.</para>
+        /// <para>The query code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vrf_intl_verify_record_real_id_idv_invoke_statistics_query</para>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Download mode:</para>
+        /// <para>The download mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>async</b>: Asynchronous</description></item>
-        /// <item><description><b>sync</b>: Synchronous</description></item>
+        /// <item><description><b>async</b>: asynchronous</description></item>
+        /// <item><description><b>sync</b>: synchronous.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DownloadMode { get; set; }
 
         /// <summary>
-        /// <para>Parameters related to the export and download query task.</para>
+        /// <para>The parameters for the export and download query task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;productCode\&quot;:\&quot;FACE_LIVENESS\&quot;,\&quot;startDs\&quot;:\&quot;20251121\&quot;,\&quot;endDs\&quot;:\&quot;20251128\&quot;,\&quot;language\&quot;:\&quot;en\&quot;}</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Param { get; set; }
 
         /// <summary>
-        /// <para>Product Code.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>KYC</para>

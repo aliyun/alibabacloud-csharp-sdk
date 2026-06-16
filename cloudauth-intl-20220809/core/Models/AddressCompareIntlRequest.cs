@@ -10,32 +10,32 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddressCompareIntlRequest : TeaModel {
         /// <summary>
-        /// <para>Country name</para>
+        /// <para>The country name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>China</description></item>
+        /// <item><description>China.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fixed value：中国</para>
+        /// <para>固定值：中国</para>
         /// </summary>
         [NameInMap("DefaultCountry")]
         [Validation(Required=false)]
         public string DefaultCountry { get; set; }
 
         /// <summary>
-        /// <para>ADD_VERIFY</para>
+        /// <para>ADD_VERIFY.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>fixed value：ADD_VERIFY</para>
+        /// <para>固定值：ADD_VERIFY</para>
         /// </summary>
         [NameInMap("ProductCode")]
         [Validation(Required=false)]
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Address 1</para>
+        /// <para>Address 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Text1 { get; set; }
 
         /// <summary>
-        /// <para>Address 2</para>
+        /// <para>Address 2.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddressVerifyV2IntlResponseBody : TeaModel {
         /// <summary>
-        /// <para><a href="https://www.alibabacloud.com/help/zh/ekyc/latest/add-verify-pro-api?spm=a2c63.p38356.0.i4#ae60001a3804w">Return Code</a></para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Detailed description of the return code</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result object</para>
+        /// <para>The verification result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Passed (billed)</description></item>
-            /// <item><description><b>2</b>: Failed (The device is in a prohibited region) (billed)</description></item>
-            /// <item><description><b>3</b>: Unknown (billed)</description></item>
+            /// <item><description>1: Passed.</description></item>
+            /// <item><description>2: Failed (the device is in a prohibited region). </description></item>
+            /// <item><description>3: Unable to determine.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,33 +62,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>Verification details, including：</para>
+            /// <para>The verification details, which include:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>DistanceRange</b>：Position rang：<a href="https://www.alibabacloud.com/help/zh/ekyc/latest/add-verify-pro-api?spm=a2c63.p38356.0.i27#ee274c08976er">DistanceRange description</a>。</para>
-            /// <remarks>
-            /// <para>If the input phone number or address is empty, or if no carrier information is found, this field will not be returned.</para>
-            /// </remarks>
-            /// </description></item>
-            /// <item><description><para><b>IspName</b>: The carrier name:</para>
-            /// <list type="bullet">
-            /// <item><description><b>CMCC</b>: China Mobile</description></item>
-            /// <item><description><b>CTCC</b>: China Telecom</description></item>
-            /// <item><description><b>CUCC</b>: China Unicom<remarks>
-            /// <para>This parameter is not returned if the mobile phone number or address is empty in the request, or if carrier information is not found.</para>
-            /// </remarks>
-            /// </description></item>
+            /// <item><description>distanceRange: the location range.   </description></item>
+            /// <item><description>ispName: the ISP name.     </description></item>
+            /// <item><description>phoneStatus: the phone status. A value of 0 indicates abnormal. A value of 1 indicates Normal. Otherwise, the status is unknown.</description></item>
             /// </list>
-            /// </description></item>
-            /// <item><description><para><b>PhoneStatus</b>: The status of the mobile phone:</para>
-            /// <list type="bullet">
-            /// <item><description><b>0</b>: Abnormal</description></item>
-            /// <item><description><b>1</b>: Normal</description></item>
-            /// </list>
-            /// </description></item>
-            /// </list>
-            /// <remarks>
-            /// <para>This parameter is not returned if the mobile phone number is empty in the request.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -102,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Detail { get; set; }
 
             /// <summary>
-            /// <para>The transaction ID</para>
+            /// <para>The authentication ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hksb7ba1b28130d24e015d69********</para>

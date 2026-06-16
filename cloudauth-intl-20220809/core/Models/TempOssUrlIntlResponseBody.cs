@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class TempOssUrlIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Result.</para>
+        /// <para>The result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TempOssUrlIntlResponseBodyData Data { get; set; }
         public class TempOssUrlIntlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>File URL</para>
+            /// <para>The file URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://bzxh.cdn.weijin365.com/assets/index-55338127.png">http://bzxh.cdn.weijin365.com/assets/index-55338127.png</a></para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>EFA11401-C961-5E89-A2D3-BF9883E5CC3D</para>

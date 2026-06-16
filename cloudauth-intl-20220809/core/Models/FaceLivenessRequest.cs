@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceLivenessRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to crop the facial image. The default value is F.</para>
+        /// <para>Specifies whether to allow cropping. Default value: F. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>T</b>: allows cropping.</para>
-        /// </description></item>
-        /// <item><description><para><b>F</b>: Forbidden</para>
-        /// </description></item>
+        /// <item><description>T: enabled.</description></item>
+        /// <item><description>F: disabled. (Default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,17 +24,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Crop { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded image. If you use this parameter to pass the facial image, check the image size. Do not pass an oversized image.</para>
+        /// <para>The Base64-encoded face photo.</para>
+        /// <para>Note:</para>
+        /// <list type="bullet">
+        /// <item><description>If you use FacePictureBase64 to pass in the face photo, check the photo size and do not pass in an excessively large photo.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>dsjisaj***oekwodsm</para>
+        /// <para>Base64</para>
         /// </summary>
         [NameInMap("FacePictureBase64")]
         [Validation(Required=false)]
         public string FacePictureBase64 { get; set; }
 
         /// <summary>
-        /// <para>The URL of the portrait image. The URL must be an HTTP or HTTPS link accessible over the Internet.</para>
+        /// <para>The URL of the face photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-face-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></para>
@@ -46,12 +48,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePictureUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the facial image quality score. The default value is F.</para>
+        /// <para>Specifies whether to return the face quality score. Default value: F. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>T</b>: returns the score.</para>
-        /// </description></item>
-        /// <item><description><para><b>F</b>: does not return the score.</para>
-        /// </description></item>
+        /// <item><description>T: enabled.</description></item>
+        /// <item><description>F: disabled. (Default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,6 +62,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQuality { get; set; }
 
         /// <summary>
+        /// <para>The face quality check.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y</para>
         /// </summary>
@@ -70,10 +72,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>A custom unique business identifier. You can use this identifier to track and troubleshoot issues. The identifier can be up to 32 characters in length and can contain letters and digits. Make sure the identifier is unique.</para>
-        /// <remarks>
-        /// <para>Alibaba Cloud servers do not check the uniqueness of this value. For better tracking, ensure this value is unique.</para>
-        /// </remarks>
+        /// <para>The merchant-defined unique business ID for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -83,7 +82,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>A  custom user ID or another identifier for a specific user, such as a mobile number or email address. For security, desensitize this value in advance, for example, by hashing it.</para>
+        /// <para>The merchant user ID or another identifier that can be used to identify a specific user, such as a phone number or email address. We strongly recommend that you desensitize the value of the userId field before passing it in, for example, by hashing the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -93,12 +92,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantUserId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable occlusion detection. The default value is F.</para>
+        /// <para>Specifies whether to perform occlusion detection. Default value: F. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>T</b>: enables the feature.</para>
-        /// </description></item>
-        /// <item><description><para><b>F</b>: disables the feature.</para>
-        /// </description></item>
+        /// <item><description>T: enabled.</description></item>
+        /// <item><description>F: disabled. (Default).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,7 +106,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Occlusion { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set the value to <b>FACE_LIVENESS_MIN</b> to use the passive liveness detection API.</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FACE_LIVENESS_MIN</para>

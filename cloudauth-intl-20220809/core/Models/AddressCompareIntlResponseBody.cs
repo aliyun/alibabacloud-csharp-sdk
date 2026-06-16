@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddressCompareIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86C40EC3-5940-5F47-995C-BFE90B70E540</para>
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public AddressCompareIntlResponseBodyResult Result { get; set; }
         public class AddressCompareIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The values of sameLevel include:</para>
+            /// <para>The sameLevel parameter has the following valid values:</para>
             /// <list type="bullet">
-            /// <item><description>all: Exactly the same</description></item>
-            /// <item><description>prov: Provincial level</description></item>
-            /// <item><description>city: City level</description></item>
-            /// <item><description>district: District level</description></item>
-            /// <item><description>town: Town level</description></item>
-            /// <item><description>road: Road level</description></item>
-            /// <item><description>roadno: Road number</description></item>
-            /// <item><description>poi: Point of interest (e.g., residential area)</description></item>
-            /// <item><description>roomno: Room number</description></item>
+            /// <item><description>all: completely identical</description></item>
+            /// <item><description>prov: province level </description></item>
+            /// <item><description>city: city level</description></item>
+            /// <item><description>district: district level</description></item>
+            /// <item><description>town: street level</description></item>
+            /// <item><description>road: road level</description></item>
+            /// <item><description>roadno: road number level</description></item>
+            /// <item><description>poi: community/neighborhood level</description></item>
+            /// <item><description>roomno: room number level.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

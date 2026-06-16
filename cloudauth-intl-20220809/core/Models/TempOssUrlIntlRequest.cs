@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class TempOssUrlIntlRequest : TeaModel {
         /// <summary>
-        /// <para>Object name.</para>
+        /// <para>The object name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

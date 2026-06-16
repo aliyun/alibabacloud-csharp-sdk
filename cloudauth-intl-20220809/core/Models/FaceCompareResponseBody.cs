@@ -10,7 +10,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceCompareResponseBody : TeaModel {
         /// <summary>
-        /// <para>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/facecompare?spm=a3c0i.23458820.2359477120.28.21167d3fzUmXQC#c43fd16d07mae">response code</a>.</para>
+        /// <para>The response code.</para>
+        /// <para>200: The request was successful.
+        /// Other values: An error occurred. For more information, see error codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +22,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The detailed description of the response code.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,17 +42,22 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result object</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public FaceCompareResponseBodyResult Result { get; set; }
         public class FaceCompareResponseBodyResult : TeaModel {
+            /// <summary>
+            /// <para>The additional result information.</para>
+            /// </summary>
             [NameInMap("ExtFaceInfo")]
             [Validation(Required=false)]
             public FaceCompareResponseBodyResultExtFaceInfo ExtFaceInfo { get; set; }
             public class FaceCompareResponseBodyResultExtFaceInfo : TeaModel {
                 /// <summary>
+                /// <para>The overall quality score.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>39.04</para>
                 /// </summary>
@@ -59,6 +66,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? FaceQualityScore { get; set; }
 
                 /// <summary>
+                /// <para>The illumination score.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>0.02</para>
                 /// </summary>
@@ -67,6 +76,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? IlluminationScore { get; set; }
 
                 /// <summary>
+                /// <para>The key area occlusion score.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -75,6 +86,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? KaOcclusionScore { get; set; }
 
                 /// <summary>
+                /// <para>The occlusion score.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>50.26</para>
                 /// </summary>
@@ -83,6 +96,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 public double? OcclusionScore { get; set; }
 
                 /// <summary>
+                /// <para>The sharpness score.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>86.47</para>
                 /// </summary>
@@ -93,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             }
 
             /// <summary>
-            /// <para>The face comparison score. The value ranges from 0 to 100.</para>
+            /// <para>The comparison score between the submitted face image and the reference face image during verification. Value range: <b>0</b> to <b>100</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -103,12 +118,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? FaceComparisonScore { get; set; }
 
             /// <summary>
-            /// <para>The final authentication result. Valid values:</para>
+            /// <para>Indicates whether the verification passed.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Y</b>: The authentication is passed.</para>
-            /// </description></item>
-            /// <item><description><para><b>N</b>: The authentication failed.</para>
-            /// </description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -119,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>The transaction ID.</para>
+            /// <para>The unique ID of the verification request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>

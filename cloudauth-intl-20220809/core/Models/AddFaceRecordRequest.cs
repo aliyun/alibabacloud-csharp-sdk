@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddFaceRecordRequest : TeaModel {
         /// <summary>
+        /// <para>The face library code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceGroupCode { get; set; }
 
         /// <summary>
+        /// <para>The Base64-encoded face image to register.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>base64</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePicture { get; set; }
 
         /// <summary>
+        /// <para>The file stream of the face image to register.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InputStream</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePictureFile { get; set; }
 
         /// <summary>
+        /// <para>The URL of the face image to register.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.xxxxx.com/test.jpg">https://www.xxxxx.com/test.jpg</a></para>
         /// </summary>
@@ -44,6 +51,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePictureUrl { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to check the quality of the face image. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Y: enabled.</description></item>
+        /// <item><description>N: disabled (default).</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>N</para>
         /// </summary>
@@ -52,6 +65,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQualityCheck { get; set; }
 
         /// <summary>
+        /// <para>The custom unique user ID. The value cannot exceed 32 characters.</para>
+        /// <list type="bullet">
+        /// <item><description>If this parameter is specified, the system registers the user with the specified MerchantUserId.</description></item>
+        /// <item><description>If this parameter is not specified, the image name is used by default.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>130A2C10B9EE4D8488E35384FF03hst</para>
         /// </summary>
@@ -60,6 +79,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantUserId { get; set; }
 
         /// <summary>
+        /// <para>The product code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

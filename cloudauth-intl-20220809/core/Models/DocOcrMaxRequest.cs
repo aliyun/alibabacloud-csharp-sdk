@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrMaxRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable verification with an authoritative data source to enhance document anti-spoofing capabilities.</para>
+        /// <para>Specifies whether to enable authoritative data source verification to enhance document anti-forgery capabilities.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>T</b>: Enable</para>
+        /// <item><description><para><b>T</b>: enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>F</b>: Disable (default)</para>
+        /// <item><description><para><b>F</b>: disabled (default).</para>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><b>Applicable document types</b>: Chinese resident ID cards (CHN01001) and Chinese mainland driver\&quot;s licenses (CHN02001).</description></item>
-        /// <item><description><b>Data transfer declaration</b>: If you enable this parameter, you agree to transfer the user\&quot;s name and certificate number to an authoritative data source in the Chinese mainland for consistency verification.</description></item>
-        /// <item><description><b>Performance impact:</b> After you enable this feature, the response time of the API operation increases by 1 to 2 seconds. Adjust the timeout setting.</description></item>
+        /// <item><description><b>Applicable document types</b>: China resident identity card (CHN01001) and Chinese mainland driver\&quot;s license (CHN02001).</description></item>
+        /// <item><description><b>Data transmission statement</b>: Enabling this parameter indicates your consent to transmit the user\&quot;s name and document number to an authoritative data source in the Chinese mainland for consistency verification.</description></item>
+        /// <item><description><b>Performance impact</b>: After this feature is enabled, the API response time increases by approximately 1 to 2 seconds. Adjust the timeout settings accordingly.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -33,11 +33,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Authorize { get; set; }
 
         /// <summary>
-        /// <para>Page expected to be recognized</para>
+        /// <para>The expected page to recognize. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>01 (default): ID portrait.</para>
+        /// <item><description><para>01 (default): the portrait side of the document.</para>
         /// </description></item>
-        /// <item><description><para>02: Back of the certificate</para>
+        /// <item><description><para>02: the back side of the document.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -49,9 +49,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocPage { get; set; }
 
         /// <summary>
-        /// <para>Document type.
-        /// Format: Country (region) code + document type abbreviation + page (optional)
-        /// Note: If provided, it will automatically check if it matches the model recognition result; if empty, the document type will be returned after model recognition.</para>
+        /// <para>The document type.</para>
+        /// <list type="bullet">
+        /// <item><description>Format: country code + document type abbreviation + page (optional).</description></item>
+        /// </list>
+        /// <para>Note:</para>
+        /// <list type="bullet">
+        /// <item><description>OcrModel = 0: DocType is required. Specify the document type. The existing logic remains unchanged.</description></item>
+        /// <item><description>OcrModel = 1 or 2: DocType must be left empty.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>CNSSC01</para>
@@ -61,7 +67,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>Document image, base64 encoded binary stream</para>
+        /// <para>The Base64-encoded image of the card or certificate.</para>
+        /// <para>If you use IdOcrPictureBase64 to pass in the document image, check the image size and do not pass in an excessively large image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -71,7 +78,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdOcrPictureBase64 { get; set; }
 
         /// <summary>
-        /// <para>Document image URL</para>
+        /// <para>The URL of the card or certificate image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***********.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</para>
@@ -81,11 +88,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdOcrPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>Whether to turn on the certificate anti-counterfeiting function:</para>
+        /// <para>Specifies whether to enable the document anti-forgery feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>T: open</para>
+        /// <item><description><para>T: enabled.</para>
         /// </description></item>
-        /// <item><description><para>F (default): not turned on.</para>
+        /// <item><description><para>F (default): disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -97,12 +104,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdSpoof { get; set; }
 
         /// <summary>
-        /// <para>Custom OCR quality detection threshold mode:</para>
+        /// <para>The custom OCR quality detection threshold mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: System default</description></item>
-        /// <item><description>1: Strict mode</description></item>
-        /// <item><description>2: Lenient mode</description></item>
-        /// <item><description>3 (default): Disable quality detection</description></item>
+        /// <item><description>0: system default.</description></item>
+        /// <item><description>1: strict mode.</description></item>
+        /// <item><description>2: loose mode.</description></item>
+        /// <item><description>3 (default): quality detection disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,7 +120,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdThreshold { get; set; }
 
         /// <summary>
-        /// <para>A unique business identifier defined by the merchant, used for subsequent problem localization and troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</para>
+        /// <para>The custom unique business identifier, which is used for subsequent troubleshooting.</para>
+        /// <para>The value can contain up to 32 characters, including letters and digits. Make sure the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c******</para>
@@ -123,7 +131,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>Your custom user ID or other identifiers that can uniquely identify a specific user, such as a phone number or email address. It is strongly recommended to pre-desensitize the value of this field, for example, by hashing it.</para>
+        /// <para>The custom user ID or another identifier that can identify a specific user, such as a phone number or email address.</para>
+        /// <para>We strongly recommend that you desensitize the value of this field in advance, for example, by hashing the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -133,9 +142,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantUserId { get; set; }
 
         /// <summary>
-        /// <para>OCR recognition mode.
-        /// 0: General document mode.
-        /// 1: Custom mode.</para>
+        /// <para>The OCR recognition mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: general document recognition mode (default).</para>
+        /// </description></item>
+        /// <item><description><para>1: automatic document classification mode.</para>
+        /// </description></item>
+        /// <item><description><para>2: automatic document classification + general recognition mode.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -145,12 +160,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrModel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return additional OCR fields in a standardized format:</para>
+        /// <para>Specifies whether to enable OCR key field standardization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: No (default)</para>
-        /// </description></item>
-        /// <item><description><para><b>1</b>: Yes</para>
-        /// </description></item>
+        /// <item><description>0: no (default). </description></item>
+        /// <item><description>1: yes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -161,8 +174,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrValueStandard { get; set; }
 
         /// <summary>
-        /// <para>The product solution to be integrated.</para>
-        /// <para>Value: ID_OCR_MAX</para>
+        /// <para>The product solution to use.</para>
+        /// <para>Set this parameter to ID_OCR_MAX.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID_OCR_MAX</para>
@@ -172,17 +185,20 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Prompt (for custom mode)</para>
+        /// <remarks>
+        /// <para>Warning: This field is deprecated.</warning>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxocr识别</para>
+        /// <para>已废弃</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>Custom scene code, used to distinguish business scenarios, a 10-digit number.</para>
+        /// <para>The custom authentication scenario ID. You can use this scenario ID to query related records in the console.</para>
+        /// <para>The value can contain up to 10 characters, including letters, digits, and underscores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>
@@ -192,14 +208,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable document anti-counterfeiting function, default is not enabled.</para>
-        /// <list type="bullet">
-        /// <item><description>T: Enable document anti-counterfeiting function.</description></item>
-        /// <item><description>F: Do not enable.</description></item>
-        /// </list>
+        /// <para><warning>This field is deprecated.</warning>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>F</para>
+        /// <para>已废弃</para>
         /// </summary>
         [NameInMap("Spoof")]
         [Validation(Required=false)]

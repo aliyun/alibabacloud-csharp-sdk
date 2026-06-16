@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddressVerifyIntlRequest : TeaModel {
         /// <summary>
-        /// <para>Verification address type:</para>
+        /// <para>The type of the address to verify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>“0”: Text address</description></item>
-        /// <item><description>“1”: Latitude and longitude</description></item>
+        /// <item><description>&quot;0&quot;: text address</description></item>
+        /// <item><description>&quot;1&quot;: coordinates (longitude and latitude).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string AddressType { get; set; }
 
         /// <summary>
-        /// <para>Default city</para>
+        /// <para>The default city.</para>
         /// 
         /// <b>Example:</b>
         /// <para>杭州市</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DefaultCity { get; set; }
 
         /// <summary>
-        /// <para>Country name, currently only supports: China</para>
+        /// <para>The country name. Currently, only China is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DefaultCountry { get; set; }
 
         /// <summary>
-        /// <para>Default district</para>
+        /// <para>The default district.</para>
         /// 
         /// <b>Example:</b>
         /// <para>余杭区</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DefaultDistrict { get; set; }
 
         /// <summary>
-        /// <para>Default province</para>
+        /// <para>The default province.</para>
         /// 
         /// <b>Example:</b>
         /// <para>浙江省</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DefaultProvince { get; set; }
 
         /// <summary>
-        /// <para>Latitude.</para>
+        /// <para>The latitude.</para>
         /// 
         /// <b>Example:</b>
         /// <para>“31.2304”</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Latitude { get; set; }
 
         /// <summary>
-        /// <para>Longitude.</para>
+        /// <para>The longitude.</para>
         /// 
         /// <b>Example:</b>
         /// <para>“121.4737”</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Longitude { get; set; }
 
         /// <summary>
-        /// <para>Supports Chinese mobile phone numbers.</para>
+        /// <para>Chinese mainland phone numbers are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>Fixed value: ADD_VERIFY_PRO</para>
+        /// <para>Fixed value: ADD_VERIFY_PRO.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Detailed address text content</para>
+        /// <para>The detailed address in text format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>阿里巴巴西溪园区</para>
@@ -118,10 +118,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Text { get; set; }
 
         /// <summary>
-        /// <para>Address verification method:</para>
+        /// <para>The address verification method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HOME: Home address verification</description></item>
-        /// <item><description>WORK: Work address verification</description></item>
+        /// <item><description>HOME: home address verification</description></item>
+        /// <item><description>WORK: work address verification.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

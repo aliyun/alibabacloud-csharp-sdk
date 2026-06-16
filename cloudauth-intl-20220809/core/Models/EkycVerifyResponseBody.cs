@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class EkycVerifyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#GiGmf">response code</a>.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>A detailed description of the response code.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Result object</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public EkycVerifyResponseBodyResult Result { get; set; }
         public class EkycVerifyResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Information about the face liveness verification result. For the JSON format, see the example on the right. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#JJ40j">ExtFaceInfo</a>.</para>
+            /// <para>The face verification result information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -62,28 +62,22 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtFaceInfo { get; set; }
 
             /// <summary>
-            /// <para>Information about the certificate detection result.</para>
-            /// <para>For the JSON format, see the example on the right. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#iWOBY">ExtIdInfo</a>.</para>
+            /// <para>The document recognition result. This parameter is returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
-            ///   &quot;ocrIdInfo&quot;: {
-            ///     &quot;expiryDate&quot;: &quot;&quot;,
-            ///     &quot;originOfIssue&quot;: &quot;Exit and Entry Administration of the Ministry of Public Security&quot;,
-            ///     &quot;englishName&quot;: &quot;LI SI&quot;,
-            ///     &quot;sex&quot;: &quot;Male&quot;,
-            ///     &quot;name&quot;: &quot;Li Si&quot;,
-            ///     &quot;idNumber&quot;: &quot;H11111112&quot;,
-            ///     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
-            ///     &quot;birthDate&quot;: &quot;1990-02-21&quot;
-            ///   },
-            ///   &quot;ocrIdPassed&quot;: &quot;N&quot;,
-            ///   &quot;spoofInfo&quot;: {
-            ///     &quot;spoofResult&quot;: &quot;Y&quot;,
-            ///     &quot;spoofType&quot;: [
-            ///       &quot;SCREEN_REMARK&quot;
-            ///     ]
-            ///   }
+            ///  &quot;ocrIdInfo&quot;: {
+            ///  &quot;firstName&quot;: &quot;<b>龙&quot;,
+            ///  &quot;lastName&quot;: &quot;</b>&quot;,
+            ///  &quot;countryCode&quot;: &quot;CHN&quot;,
+            ///  &quot;docType&quot;: &quot;01560001&quot;,
+            ///  &quot;dateOfBirth&quot;: &quot;2002-08-04&quot;,
+            ///  &quot;idNumber&quot;: &quot;410************19&quot;
+            ///  },
+            ///  &quot;ocrIdPassed&quot;: &quot;N&quot;,
+            ///  &quot;spoofInfo&quot;: {
+            ///  &quot;spoofResult&quot;: &quot;Y&quot;,
+            ///  }
             /// }</para>
             /// </summary>
             [NameInMap("ExtIdInfo")]
@@ -91,12 +85,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>The final authentication result. Valid values:</para>
+            /// <para>Indicates whether the verification is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Y</b>: The authentication is passed.</para>
-            /// </description></item>
-            /// <item><description><para><b>N</b>: The authentication fails.</para>
-            /// </description></item>
+            /// <item><description>T: Passed.</description></item>
+            /// <item><description>F: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>A description of the authentication result. For more information, see <a href="https://www.alibabacloud.com/help/en/ekyc/latest/im1u641gyesiqmbg?spm=a2c63.p38356.0.i18#HCGLb">Error codes for ResultObject.SubCode</a>.</para>
+            /// <para>The sub-result code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>205</para>
@@ -117,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The transaction ID.</para>
+            /// <para>The unique identifier of the verification request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ab0b***cbde97</para>

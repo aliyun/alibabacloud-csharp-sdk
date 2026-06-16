@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceCompareRequest : TeaModel {
         /// <summary>
-        /// <para>是否开启传入人脸图片质量检测</para>
+        /// <para>Specifies whether to enable face image quality check.<danger>Deprecated.</danger>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>N</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FacePictureQualityCheck { get; set; }
 
         /// <summary>
+        /// <para>The face quality check.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Y</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>A custom unique business ID used for troubleshooting. It can be a combination of up to 32 letters and digits. Make sure that the ID is unique.</para>
+        /// <para>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
@@ -38,23 +40,24 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The Base64 encoding of the portrait photo.</para>
+        /// <para>The Base64-encoded source face image.</para>
         /// <remarks>
-        /// <para>If you use this method to pass the image, check the image size. Do not pass an oversized image.</para>
+        /// <para><b>Note</b></para>
+        /// <list type="bullet">
+        /// <item><description>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</description></item>
+        /// <item><description>Specify either SourceFacePicture or SourceFacePictureUrl.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>/9j/4AAQSkZJRgABAQAASxxxxxxx</para>
+        /// <para>base64</para>
         /// </summary>
         [NameInMap("SourceFacePicture")]
         [Validation(Required=false)]
         public string SourceFacePicture { get; set; }
 
         /// <summary>
-        /// <para>The URL of the portrait photo. The URL must be an HTTP or HTTPS link accessible over the Internet.</para>
-        /// <remarks>
-        /// <para>You must specify either SourceFacePicture or SourceFacePictureUrl.</para>
-        /// </remarks>
+        /// <para>The HTTPS or HTTP URL of the source face image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***face1.jpeg</para>
@@ -64,23 +67,24 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string SourceFacePictureUrl { get; set; }
 
         /// <summary>
-        /// <para>The Base64 encoding of the base photo.</para>
+        /// <para>The Base64-encoded reference face image.</para>
         /// <remarks>
-        /// <para>If you use this method to pass the image, check the image size. Do not pass an oversized image.</para>
+        /// <para><b>Note</b></para>
+        /// <list type="bullet">
+        /// <item><description>If you use this method to pass in the image, check the image size and do not pass in an excessively large image.</description></item>
+        /// <item><description>Specify either TargetFacePicture or TargetFacePictureUrl.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>/9j/4AAQSkZJRgABAQAASxxxxxxx</para>
+        /// <para>base64</para>
         /// </summary>
         [NameInMap("TargetFacePicture")]
         [Validation(Required=false)]
         public string TargetFacePicture { get; set; }
 
         /// <summary>
-        /// <para>The URL of the base portrait photo. The URL must be an HTTP or HTTPS link accessible over the Internet.</para>
-        /// <remarks>
-        /// <para>You must specify either TargetFacePicture or TargetFacePictureUrl.</para>
-        /// </remarks>
+        /// <para>The HTTPS or HTTP URL of the reference face image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***face2.jpeg</para>

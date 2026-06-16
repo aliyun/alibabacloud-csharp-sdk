@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class TempAccessTokenIntlRequest : TeaModel {
         /// <summary>
-        /// <para>Type.</para>
+        /// <para>The type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>none</para>

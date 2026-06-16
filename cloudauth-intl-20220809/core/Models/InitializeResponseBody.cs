@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class InitializeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public InitializeResponseBodyResult Result { get; set; }
         public class InitializeResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Client configuration</para>
+            /// <para>The client configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -57,9 +57,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ClientCfg { get; set; }
 
             /// <summary>
-            /// <para>Standard encryption protocol for authentication.</para>
+            /// <para>The authentication standard encryption protocol.</para>
             /// <remarks>
-            /// <para>Required when integrating with H5 web pages using iframe embedding.</para>
+            /// <para>This field is required when you use iframe embedding for H5 web page integration.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>Authentication ID</para>
+            /// <para>The authentication ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string TransactionId { get; set; }
 
             /// <summary>
-            /// <para>Web authentication URL</para>
+            /// <para>The web authentication URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http****</para>

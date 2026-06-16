@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceGuardRiskRequest : TeaModel {
         /// <summary>
-        /// <para>The unique ID of the current business authentication. It is used with FACE_GUARD for verification during queries.</para>
+        /// <para>The customer business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LMALL20******001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The deviceToken obtained from the client SDK.</para>
+        /// <para>The device token obtained from the Face Guard SDK.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Tk9SSUQuMS*****************ZDNmNWY5NzQxOW1o</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DeviceToken { get; set; }
 
         /// <summary>
-        /// <para>A custom unique business identifier. It is used to locate and troubleshoot issues. The identifier can be a combination of letters and digits up to 32 characters long. Ensure that it is unique.</para>
+        /// <para>The merchant-defined unique business identifier, used for subsequent troubleshooting. The value can contain letters and digits with a maximum length of 32 characters. Make sure the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c83ce0101d34eff886b1f7d1cdef67f</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The product code. Set this to the static field <b>FACE_GUARD</b>.</para>
+        /// <para>The product code. Set the value to FACE_GUARD.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FACE_GUARD</para>

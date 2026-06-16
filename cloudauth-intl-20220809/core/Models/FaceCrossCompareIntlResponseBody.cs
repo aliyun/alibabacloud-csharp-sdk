@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class FaceCrossCompareIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>130A2C10-B9EE-4D84-88E3-5384FF039795</para>
@@ -40,47 +40,47 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public FaceCrossCompareIntlResponseBodyResult Result { get; set; }
         public class FaceCrossCompareIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>A to B comparison score, range 0～100.</para>
+            /// <para>The comparison score between A and B. Value range: 0 to 1.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>99</para>
+            /// <para>0.9999999999999999</para>
             /// </summary>
             [NameInMap("FaceComparisonScoreA2B")]
             [Validation(Required=false)]
             public double? FaceComparisonScoreA2B { get; set; }
 
             /// <summary>
-            /// <para>B to C comparison score, range 0～100.</para>
+            /// <para>The comparison score between B and C. Value range: 0 to 1.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>99</para>
+            /// <para>0.9999999999999999</para>
             /// </summary>
             [NameInMap("FaceComparisonScoreB2C")]
             [Validation(Required=false)]
             public double? FaceComparisonScoreB2C { get; set; }
 
             /// <summary>
-            /// <para>C to A comparison score, range 0～100.</para>
+            /// <para>The comparison score between C and A. Value range: 0 to 1.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>99</para>
+            /// <para>0.9999999999999999</para>
             /// </summary>
             [NameInMap("FaceComparisonScoreC2A")]
             [Validation(Required=false)]
             public double? FaceComparisonScoreC2A { get; set; }
 
             /// <summary>
-            /// <para>Final verification result, values:</para>
+            /// <para>The final verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: Pass</description></item>
-            /// <item><description>N: Fail</description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FacePassed { get; set; }
 
             /// <summary>
-            /// <para>Unique identifier for the authentication request.</para>
+            /// <para>The unique identifier of the verification request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ab0b***cbde97</para>

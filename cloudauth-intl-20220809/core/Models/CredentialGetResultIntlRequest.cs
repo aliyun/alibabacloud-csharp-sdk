@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialGetResultIntlRequest : TeaModel {
         /// <summary>
-        /// <para>Unique identifier for the authentication request</para>
+        /// <para>The unique identifier of the authentication request.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

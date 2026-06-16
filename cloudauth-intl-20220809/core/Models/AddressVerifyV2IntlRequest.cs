@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class AddressVerifyV2IntlRequest : TeaModel {
         /// <summary>
-        /// <para>DeviceToken obtained via the client SDK</para>
+        /// <para>The device token, which is used for risk identification.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DeviceToken { get; set; }
 
         /// <summary>
-        /// <para>Supported: Chinese mobile phone numbers</para>
+        /// <para>The China mobile phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1872334****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>Fixed value: ADD_VERIFY_PRO</para>
+        /// <para>The product code. Set this parameter to ADD_VERIFY_PRO.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,33 +42,31 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>List of prohibited countries or regions</para>
+        /// <para>The list of prohibited countries.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Currently supported: USA</para>
+        /// <para>目前仅支持：USA</para>
         /// </summary>
         [NameInMap("RegCountry")]
         [Validation(Required=false)]
         public string RegCountry { get; set; }
 
         /// <summary>
-        /// <para>Detailed address text content</para>
+        /// <para>The detailed address text.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>浙江省杭州市西湖区灯彩街云谷园区</para>
+        /// <para>江苏省常州市*******小区</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]
         public string Text { get; set; }
 
         /// <summary>
-        /// <para>Address verification method:</para>
+        /// <para>The address verification method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>HOME</b>: Home address verification</para>
-        /// </description></item>
-        /// <item><description><para><b>WORK</b>: Work address verification</para>
-        /// </description></item>
+        /// <item><description>HOME: home address verification.</description></item>
+        /// <item><description>WORK: work address verification.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

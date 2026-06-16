@@ -1,0 +1,126 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
+{
+    public class DocOcrMaxV2Request : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>T</para>
+        /// </summary>
+        [NameInMap("Authorize")]
+        [Validation(Required=false)]
+        public string Authorize { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>01</para>
+        /// </summary>
+        [NameInMap("DocPage")]
+        [Validation(Required=false)]
+        public string DocPage { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>CHN01001</para>
+        /// </summary>
+        [NameInMap("DocType")]
+        [Validation(Required=false)]
+        public string DocType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>base64</para>
+        /// </summary>
+        [NameInMap("IdOcrPictureBase64")]
+        [Validation(Required=false)]
+        public string IdOcrPictureBase64 { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>InputStream</para>
+        /// </summary>
+        [NameInMap("IdOcrPictureFile")]
+        [Validation(Required=false)]
+        public string IdOcrPictureFile { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>https://***********.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</para>
+        /// </summary>
+        [NameInMap("IdOcrPictureUrl")]
+        [Validation(Required=false)]
+        public string IdOcrPictureUrl { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>F</para>
+        /// </summary>
+        [NameInMap("IdSpoof")]
+        [Validation(Required=false)]
+        public string IdSpoof { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("IdThreshold")]
+        [Validation(Required=false)]
+        public string IdThreshold { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>
+        /// </summary>
+        [NameInMap("MerchantBizId")]
+        [Validation(Required=false)]
+        public string MerchantBizId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>123456789</para>
+        /// </summary>
+        [NameInMap("MerchantUserId")]
+        [Validation(Required=false)]
+        public string MerchantUserId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("OcrModel")]
+        [Validation(Required=false)]
+        public string OcrModel { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>0</para>
+        /// </summary>
+        [NameInMap("OcrValueStandard")]
+        [Validation(Required=false)]
+        public string OcrValueStandard { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>ID_OCR_MAX</para>
+        /// </summary>
+        [NameInMap("ProductCode")]
+        [Validation(Required=false)]
+        public string ProductCode { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1234567890</para>
+        /// </summary>
+        [NameInMap("SceneCode")]
+        [Validation(Required=false)]
+        public string SceneCode { get; set; }
+
+    }
+
+}

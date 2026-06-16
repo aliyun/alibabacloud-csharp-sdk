@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrMaxResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public DocOcrMaxResponseBodyResult Result { get; set; }
         public class DocOcrMaxResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Card and document recognition result	Only returned when the interface response is successful</para>
+            /// <para>The card and certificate recognition result. This parameter is returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Whether the authentication passed.</para>
+            /// <para>Indicates whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: Passed.</description></item>
-            /// <item><description>N: Not passed.</description></item>
+            /// <item><description>Y: passed.</description></item>
+            /// <item><description>N: not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Sub-result code.</para>
+            /// <para>The sub-result code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>Authentication ID</para>
+            /// <para>The authentication ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hk573be80f944d95ac812e0*******a8</para>

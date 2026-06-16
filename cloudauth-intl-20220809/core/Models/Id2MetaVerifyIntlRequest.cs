@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class Id2MetaVerifyIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The ID card number.</para>
-        /// <remarks>
-        /// <para>Only ID cards of residents in the Chinese mainland are supported.</para>
-        /// </remarks>
+        /// <para>The ID card number (in plaintext).</para>
         /// 
         /// <b>Example:</b>
         /// <para>429001********8211</para>
@@ -23,11 +20,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>The parameter type.</para>
-        /// <para><b>normal</b>: The original value in plaintext.</para>
-        /// <remarks>
-        /// <para>Due to limitations of the authoritative data source, two-factor ID verification does not support MD5 encryption.</para>
-        /// </remarks>
+        /// <para>The parameter type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>normal: original value (plaintext).</description></item>
+        /// <item><description>Note: Due to authoritative data source restrictions, two-factor identity verification does not support MD5 encryption.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>normal</para>
@@ -37,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>The product plan. This is a static field. Set the value to <b>ID_2META</b>.</para>
+        /// <para>The product solution code. Set this parameter to ID_2META.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ID_2META</para>
@@ -47,10 +44,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
+        /// <para>The name (in plaintext).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Zhang*</para>
+        /// <para>张*</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

@@ -10,13 +10,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class Mobile2MetaVerifyIntlRequest : TeaModel {
         /// <summary>
-        /// <para>The mobile number.</para>
-        /// <remarks>
+        /// <para>The phone number.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>paramType</b> is set to <b>normal</b>, enter the plaintext value.</description></item>
-        /// <item><description>If <b>paramType</b> is set to <b>md5</b>, enter the 32-bit lowercase MD5 string.</description></item>
+        /// <item><description>If ParamType is set to normal, pass in the phone number in plaintext.</description></item>
+        /// <item><description>If ParamType is set to md5, pass in the phone number in ciphertext as a 32-character lowercase MD5 string.</description></item>
         /// </list>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,12 +25,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>The parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>normal</b>: plaintext</para>
-        /// </description></item>
-        /// <item><description><para><b>md5</b>: MD5-encrypted</para>
-        /// </description></item>
+        /// <item><description>normal: not encrypted</description></item>
+        /// <item><description>md5: MD5-encrypted.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>The product to use. Set this parameter to the static value <b>MOBILE_2META</b>.</para>
+        /// <para>The product code. Set this parameter to MOBILE_2META.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,17 +51,15 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The name.</para>
-        /// <remarks>
+        /// <para>The name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>paramType</b> is set to <b>normal</b>, enter the plaintext value.</description></item>
-        /// <item><description>If <b>paramType</b> is set to <b>md5</b>, enter the 32-bit lowercase MD5 string.</description></item>
+        /// <item><description>If ParamType is set to normal, pass in the name in plaintext.</description></item>
+        /// <item><description>If ParamType is set to md5, pass in the name in ciphertext as a 32-character lowercase MD5 string.</description></item>
         /// </list>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Zhang*</para>
+        /// <para>张*</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

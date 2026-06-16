@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CardOcrResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB356FE-BB6A-5DCC-B4C5-E8051787EBA1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CardOcrResponseBodyResult Result { get; set; }
         public class CardOcrResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Document recognition result</para>
+            /// <para>The ID card and certificate recognition result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtCardInfo { get; set; }
 
             /// <summary>
-            /// <para>Additional result information</para>
+            /// <para>The additional result information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Whether the authentication passed.</para>
+            /// <para>Indicates whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Y: Passed.</description></item>
             /// <item><description>N: Not passed.</description></item>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Sub-result code.</para>
+            /// <para>The sub-result code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>Unique identifier for the authentication request</para>
+            /// <para>The unique ID of the authentication request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>

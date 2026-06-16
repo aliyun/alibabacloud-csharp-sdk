@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class QueryFaceRecordRequest : TeaModel {
         /// <summary>
-        /// <para>Current Page.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Face Group Code.</para>
+        /// <para>The face library code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceGroupCode { get; set; }
 
         /// <summary>
-        /// <para>Face ID.</para>
+        /// <para>The face ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5006538</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceId { get; set; }
 
         /// <summary>
-        /// <para>Number of rows per page for paginated queries.</para>
+        /// <para>The maximum number of entries per page for a paginated query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Merchant User ID.</para>
+        /// <para>The merchant user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CuN6hiD08qr</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantUserId { get; set; }
 
         /// <summary>
-        /// <para>Used to request the next page of search results.</para>
+        /// <para>The token used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh0OP1yH8z+7FV4KKGUw4X32</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Registration Type.</para>
+        /// <para>The registration type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MANUAL</para>

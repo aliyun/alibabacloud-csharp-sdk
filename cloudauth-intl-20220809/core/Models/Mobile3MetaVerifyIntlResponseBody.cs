@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class Mobile3MetaVerifyIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D241532C-4EE9-5A2A-A5A5-C1FD98CE2EDD</para>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result</para>
+        /// <para>The verification result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public Mobile3MetaVerifyIntlResponseBodyResult Result { get; set; }
         public class Mobile3MetaVerifyIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Verification result code.</para>
+            /// <para>The verification result code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: Verification consistent</description></item>
-            /// <item><description>2: Verification inconsistent</description></item>
-            /// <item><description>3: No record found</description></item>
+            /// <item><description>1: Consistent.</description></item>
+            /// <item><description>2: Inconsistent.</description></item>
+            /// <item><description>3: No record found.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -62,11 +62,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string BizCode { get; set; }
 
             /// <summary>
-            /// <para>ISP name</para>
+            /// <para>The carrier name. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>CMCC: China Mobile</description></item>
             /// <item><description>CUCC: China Unicom</description></item>
-            /// <item><description>CTCC: China Telecom</description></item>
+            /// <item><description>CTCC: China Telecom.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string IspName { get; set; }
 
             /// <summary>
-            /// <para>Detailed verification results</para>
+            /// <para>The detailed verification result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>101: Verification passed </description></item>
-            /// <item><description>201: Mobile number and name do not match, mobile number and ID number do not match </description></item>
-            /// <item><description>202: Mobile number and name match, but mobile number and ID number do not match </description></item>
-            /// <item><description>203: Mobile number and ID number match, but mobile number and name do not match </description></item>
-            /// <item><description>204: Other inconsistencies</description></item>
-            /// <item><description>301: No record found</description></item>
+            /// <item><description>101: Verification passed. </description></item>
+            /// <item><description>201: The phone number is inconsistent with the name, and the phone number is inconsistent with the ID card number. </description></item>
+            /// <item><description>202: The phone number is consistent with the name, but the phone number is inconsistent with the ID card number. </description></item>
+            /// <item><description>203: The phone number is consistent with the ID card number, but the phone number is inconsistent with the name. </description></item>
+            /// <item><description>204: Other inconsistency.</description></item>
+            /// <item><description>301: No record found.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

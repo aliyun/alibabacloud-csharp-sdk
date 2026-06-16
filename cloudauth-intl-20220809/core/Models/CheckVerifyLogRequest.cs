@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CheckVerifyLogRequest : TeaModel {
         /// <summary>
-        /// <para>A unique business identifier defined by the merchant, used for subsequent problem localization and troubleshooting. Supports a combination of letters and numbers, with a maximum length of 32 characters. Ensure uniqueness.</para>
+        /// <para>The merchant-side custom business unique identifier, used for subsequent troubleshooting. The value supports a combination of letters and numbers with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a***353888</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier for the entire authentication process. This value needs to be obtained by calling Initialize.</para>
+        /// <para>The unique identifier of the entire authentication process. Obtain this value by calling the Initialize operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hksb7ba1b*********015d694361bee4</para>

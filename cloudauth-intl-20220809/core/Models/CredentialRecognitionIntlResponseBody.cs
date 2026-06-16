@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialRecognitionIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response message for the returned information.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returned result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CredentialRecognitionIntlResponseBodyResult Result { get; set; }
         public class CredentialRecognitionIntlResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Identified key information in JSON format.</para>
+            /// <para>The key information extracted from the credential, in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Authentication result description</para>
+            /// <para>The description of the authentication result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -70,10 +70,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>Extraction result. Values:</para>
+            /// <para>The extraction result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>S: Success.</description></item>
-            /// <item><description>F: Failure.</description></item>
+            /// <item><description>S: Succeeded.</description></item>
+            /// <item><description>F: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

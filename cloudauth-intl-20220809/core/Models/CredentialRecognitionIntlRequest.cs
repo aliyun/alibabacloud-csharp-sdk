@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialRecognitionIntlRequest : TeaModel {
         /// <summary>
-        /// <para>Base64 encoded image. If you choose to upload the photo via IdOcrPictureBase64 (photo Base64 encoding), please check the photo size and do not upload overly large photos.</para>
+        /// <para>The Base64-encoded image. If you choose to pass in the image by using IdOcrPictureBase64 (Base64-encoded photo), check the photo size and do not pass in an excessively large photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredentialOcrPictureBase64 { get; set; }
 
         /// <summary>
-        /// <para>Image URL, accessible over the public network via HTTP or HTTPS links.</para>
+        /// <para>The URL of the image. The URL must be a publicly accessible HTTP or HTTPS link.</para>
         /// 
         /// <b>Example:</b>
         /// <para>https://***</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredentialOcrPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>Voucher type.</para>
+        /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Transaction Voucher: 01 (including: water, electricity, gas, credit card, and other types of e-bill images)</description></item>
+        /// <item><description>01: transaction credential (including electronic bill images for water, electricity, gas, credit cards, and other types).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable tampering detection</para>
+        /// <para>Specifies whether to enable tampering detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enable</description></item>
-        /// <item><description>false: Disable</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,9 +59,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>Extraction type:</para>
+        /// <para>The extraction type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0101: E-bill Address &amp; Name Module (extracts address and name modules through intelligent analysis)</description></item>
+        /// <item><description>0101: electronic bill address and name module (extracts the address and name module through intelligent analysis).</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrArea { get; set; }
 
         /// <summary>
-        /// <para>The product solution to be integrated. Value: CREDENTIAL_RECOGNITION.</para>
+        /// <para>The product solution to use. Set this to CREDENTIAL_RECOGNITION.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

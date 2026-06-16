@@ -26,8 +26,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>5E63B760-0ECB-5C07-8503-A65C27876968</para>
         /// </summary>

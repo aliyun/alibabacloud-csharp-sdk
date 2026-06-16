@@ -8,10 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
-    public class CredentialSubmitIntlResponseBody : TeaModel {
+    public class InitializeV2ResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -20,8 +18,6 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -30,31 +26,48 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>5E63B760-0ECB-5C07-8503-A65C27876968</para>
+        /// <para>86C40EC3-5940-5F47-995C-BFE90B70E540</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <para>The returned result.</para>
-        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
-        public CredentialSubmitIntlResponseBodyResult Result { get; set; }
-        public class CredentialSubmitIntlResponseBodyResult : TeaModel {
+        public InitializeV2ResponseBodyResult Result { get; set; }
+        public class InitializeV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the authentication request.</para>
-            /// 
+            /// <b>Example:</b>
+            /// <hr>
+            /// </summary>
+            [NameInMap("ClientCfg")]
+            [Validation(Required=false)]
+            public string ClientCfg { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>hksb7ba1b28130d24e015d*********</para>
+            /// </summary>
+            [NameInMap("Protocol")]
+            [Validation(Required=false)]
+            public string Protocol { get; set; }
+
+            /// <summary>
             /// <b>Example:</b>
             /// <para>4ab0b***cbde97</para>
             /// </summary>
             [NameInMap("TransactionId")]
             [Validation(Required=false)]
             public string TransactionId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>http****</para>
+            /// </summary>
+            [NameInMap("TransactionUrl")]
+            [Validation(Required=false)]
+            public string TransactionUrl { get; set; }
 
         }
 

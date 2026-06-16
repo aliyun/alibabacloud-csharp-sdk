@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialVerifyIntlAdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>Credential name (numeric code):</para>
+        /// <para>The credential name (specified as a numeric code). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Starting with 03: Enterprise Qualification<list type="bullet">
-        /// <item><description>0301: Mainland China Business License</description></item>
+        /// <item><description>Codes starting with 03: enterprise qualification<list type="bullet">
+        /// <item><description>0301: business license issued in the Chinese mainland</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Starting with 04, Transaction Voucher<list type="bullet">
-        /// <item><description>0401: Bank Statement</description></item>
-        /// <item><description>0402: Pay Slip</description></item>
-        /// <item><description>0403: Utility Bill</description></item>
-        /// <item><description>0405: Credit Card Statement</description></item>
-        /// <item><description>0499: Others</description></item>
+        /// <item><description>Codes starting with 04: transaction voucher<list type="bullet">
+        /// <item><description>0401: bank statement</description></item>
+        /// <item><description>0402: payslip</description></item>
+        /// <item><description>0403: utility bill</description></item>
+        /// <item><description>0405: credit card statement</description></item>
+        /// <item><description>0499: other.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -35,10 +35,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredName { get; set; }
 
         /// <summary>
-        /// <para>Credential type:</para>
+        /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>03: Enterprise Qualification</description></item>
-        /// <item><description>04: Transaction Voucher</description></item>
+        /// <item><description>03: enterprise qualification</description></item>
+        /// <item><description>04: transaction voucher.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredType { get; set; }
 
         /// <summary>
-        /// <para>Image input stream.</para>
+        /// <para>The image input stream.</para>
         /// <remarks>
-        /// <para>Choose either ImageUrl or ImageFile.</para>
+        /// <para>Specify either ImageUrl or ImageFile.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The URL of the image.</para>
         /// <remarks>
-        /// <para>Choose either ImageUrl or ImageFile.</para>
+        /// <para>Specify either ImageUrl or ImageFile.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,9 +76,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Invocation mode:</para>
+        /// <para>The call mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ANTI_FAKE_CHECK: Image quality and tampering detection.</description></item>
+        /// <item><description>ANTI_FAKE_CHECK: image quality and tampering detection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

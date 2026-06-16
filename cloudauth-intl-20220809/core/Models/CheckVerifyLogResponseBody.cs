@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CheckVerifyLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>Backend error code.</para>
+        /// <para>The backend error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CheckVerifyLogResponseBodyResult Result { get; set; }
         public class CheckVerifyLogResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Extended information</para>
+            /// <para>The extended information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtInfo { get; set; }
 
             /// <summary>
-            /// <para>Records the last page where the authentication was interrupted.</para>
+            /// <para>The last page where the authentication was interrupted. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Page not started</description></item>
             /// <item><description>OCR guide page</description></item>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <item><description>Liveness detection guide page</description></item>
             /// <item><description>Liveness detection camera authorization page</description></item>
             /// <item><description>Liveness detection page</description></item>
-            /// <item><description>Liveness detection fallback page</description></item>
+            /// <item><description>Liveness detection downgrade page</description></item>
             /// <item><description>Liveness detection retry</description></item>
-            /// <item><description>Liveness detection loading</description></item>
+            /// <item><description>Liveness detection loading.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,8 +82,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string InterruptPage { get; set; }
 
             /// <summary>
-            /// <para>The page where the authentication process stops. Possible English values:</para>
-            /// <para>The following are the values in an unordered list:</para>
+            /// <para>The last page where the authentication was interrupted, in English. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>LOADING</para>
             /// </description></item>
@@ -97,7 +96,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// </description></item>
             /// <item><description><para>NFC_INPUT</para>
             /// </description></item>
-            /// <item><description><para>NFC_READ</para>
+            /// <item><description><para>NFC_READ.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -109,21 +108,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string InterruptPageEn { get; set; }
 
             /// <summary>
-            /// <para>SDK operation log details</para>
+            /// <para>The SDK runtime log details.</para>
             /// </summary>
             [NameInMap("LogInfo")]
             [Validation(Required=false)]
             public List<string> LogInfo { get; set; }
 
             /// <summary>
-            /// <para>SDK Operation Log Details (English Version)</para>
+            /// <para>The SDK runtime trace log details in English. The format of this field is the same as <b>LogInfo</b>.</para>
             /// </summary>
             [NameInMap("LogInfoEn")]
             [Validation(Required=false)]
             public List<string> LogInfoEn { get; set; }
 
             /// <summary>
-            /// <para>SDK operation log statistics details</para>
+            /// <para>The SDK runtime log statistics details.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -150,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string LogStatisticsInfo { get; set; }
 
             /// <summary>
-            /// <para>Whether the authentication passed.</para>
+            /// <para>Indicates whether the authentication is passed. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Y: Passed.</description></item>
             /// <item><description>N: Not passed.</description></item>
@@ -164,7 +163,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Sub-result code</para>
+            /// <para>The sub-result code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -174,24 +173,24 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>Authentication interruption error codes</para>
+            /// <para>The error code for authentication interruption. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1000: The user completed the face scanning process, and the suggested authentication result is pass</description></item>
-            /// <item><description>1001: The user completed the face scanning process, and the suggested authentication result is fail</description></item>
-            /// <item><description>1002: System error</description></item>
-            /// <item><description>1003: SDK initialization failed, please check if the client time is correct</description></item>
-            /// <item><description>1004: Camera permission error</description></item>
-            /// <item><description>1005: Network error</description></item>
-            /// <item><description>1006: User exited</description></item>
-            /// <item><description>1007: Invalid TransactionId</description></item>
-            /// <item><description>1009: Client timestamp error</description></item>
-            /// <item><description>1011: Incorrect document type submitted</description></item>
-            /// <item><description>1012: Missing or format validation failure of key information on the recognized document</description></item>
-            /// <item><description>1013: Poor image quality</description></item>
-            /// <item><description>1014: Exceeded the upper limit of errors</description></item>
-            /// <item><description>1015: Android system version too low</description></item>
-            /// <item><description>1016: Camera permission not obtained</description></item>
-            /// <item><description>9999: Suspected authentication process interruption</description></item>
+            /// <item><description>1000: The user completed the face verification process, and the authentication result is passed.</description></item>
+            /// <item><description>1001: The user completed the face verification process, and the authentication result is not passed.</description></item>
+            /// <item><description>1002: System error.</description></item>
+            /// <item><description>1003: SDK initialization failed. Check whether the client time is correct.</description></item>
+            /// <item><description>1004: Camera permission error.</description></item>
+            /// <item><description>1005: Network error.</description></item>
+            /// <item><description>1006: The user exited.</description></item>
+            /// <item><description>1007: Invalid TransactionId.</description></item>
+            /// <item><description>1009: Client timestamp error.</description></item>
+            /// <item><description>1011: Incorrect document type submitted.</description></item>
+            /// <item><description>1012: Key information of the recognized document is missing or format validation failed.</description></item>
+            /// <item><description>1013: Poor image quality.</description></item>
+            /// <item><description>1014: The number of errors exceeded the upper limit.</description></item>
+            /// <item><description>1015: The Android system version is too low.</description></item>
+            /// <item><description>1016: Camera permission not obtained.</description></item>
+            /// <item><description>9999: The authentication process is suspected to be interrupted.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,11 +201,11 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string VerifyErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Authentication status, values:</para>
+            /// <para>The authentication status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: finished (authentication completed)</description></item>
-            /// <item><description>1: unfinished (authentication interrupted)</description></item>
-            /// <item><description>2: notstart (authentication not started)</description></item>
+            /// <item><description>0: finished. The authentication is complete.</description></item>
+            /// <item><description>1: unfinished. The authentication is interrupted.</description></item>
+            /// <item><description>2: notstart. The authentication has not started.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class QueryFaceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The code of the face library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>groupCode001</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string GroupCode { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The name of the face library.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test008</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The token for the next query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WpY9RBGa5Vrzxi3+mp2Cdw==</para>
         /// </summary>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

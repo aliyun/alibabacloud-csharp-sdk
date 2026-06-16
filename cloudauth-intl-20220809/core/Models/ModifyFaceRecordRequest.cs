@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class ModifyFaceRecordRequest : TeaModel {
         /// <summary>
+        /// <para>The face library code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FaceGroupCode { get; set; }
 
         /// <summary>
+        /// <para>The OSS information of the image.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

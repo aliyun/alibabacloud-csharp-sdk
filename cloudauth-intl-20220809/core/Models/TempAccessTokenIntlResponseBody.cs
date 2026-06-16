@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class TempAccessTokenIntlResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public TempAccessTokenIntlResponseBodyData Data { get; set; }
         public class TempAccessTokenIntlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>AccessKeyId for temporary file upload credentials.</para>
+            /// <para>The AccessKeyId of the temporary credential for file upload.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>Temporary authorization secret.</para>
+            /// <para>The temporary authorization secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3hxuRpEJ3Jv2Rtzyg4HooFCYqps762XcNtzhn19wQymk</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string AccessKeySecret { get; set; }
 
             /// <summary>
-            /// <para>Bucket name.</para>
+            /// <para>The bucket name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>liyi</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string BucketName { get; set; }
 
             /// <summary>
-            /// <para>File prefix.</para>
+            /// <para>The file name prefix.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FileNamePrefix { get; set; }
 
             /// <summary>
-            /// <para>OSS endpoint.</para>
+            /// <para>OssEndPoint。</para>
             /// 
             /// <b>Example:</b>
             /// <para>ossEndPoint</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string OssEndPoint { get; set; }
 
             /// <summary>
-            /// <para>Security token for temporary file upload credentials.</para>
+            /// <para>The security token of the temporary credential for file upload.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>86C40EC3-5940-5F47-995C-BFE90B70E540</para>

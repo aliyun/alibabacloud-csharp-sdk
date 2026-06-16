@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CheckResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4EB35****87EBA1</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Return result.</para>
+        /// <para>The returned result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public CheckResultResponseBodyResult Result { get; set; }
         public class CheckResultResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Authentication result.</para>
+            /// <para>The verification result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string EkycResult { get; set; }
 
             /// <summary>
-            /// <para>Extended basic information.</para>
+            /// <para>The extended basic information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtBasicInfo { get; set; }
 
             /// <summary>
-            /// <para>Face information.</para>
+            /// <para>The face information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtFaceInfo { get; set; }
 
             /// <summary>
-            /// <para>ID information.</para>
+            /// <para>The ID information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Extended information, in JSON string format.</para>
+            /// <para>The extended information, in JSON string format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtInfo { get; set; }
 
             /// <summary>
-            /// <para>Risk information.</para>
+            /// <para>The risk information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>**</para>
@@ -107,12 +107,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtRiskInfo { get; set; }
 
             /// <summary>
-            /// <para>Detailed verification results from the data source (example using Indonesian data sources):</para>
+            /// <para>The data source verification details are described as follows (using the Indonesian data source as an example):</para>
             /// <list type="bullet">
-            /// <item><description><b>govId, fullName, dob</b>: A comparison score of 1.0 indicates complete consistency with the official data source; less than 1.0 indicates inconsistency. </description></item>
-            /// <item><description><b>selfiePhoto</b>: A comparison score greater than 0.8 indicates consistency with the official data source; less than or equal to 0.8 indicates inconsistency. </description></item>
-            /// <item><description><b>liveness</b>: A score higher than 0.95 indicates a risk of liveness detection. </description></item>
-            /// <item><description><b>imgManipulationScore</b>: A score higher than 0.95 indicates a risk of image manipulation.</description></item>
+            /// <item><description><b>govId, fullName, dob</b>: A comparison score equal to 1.0 indicates a complete match with the official data source. A score lower than 1.0 indicates a mismatch. </description></item>
+            /// <item><description><b>selfiePhoto</b>: A comparison score greater than 0.8 indicates a match with the official data source. A score equal to or lower than 0.8 indicates a mismatch. </description></item>
+            /// <item><description><b>liveness</b>: A score higher than 0.95 indicates a liveness detection risk. </description></item>
+            /// <item><description><b>imgManipulationScore</b>: A score higher than 0.95 indicates an image tampering risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -130,10 +130,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtSourceInfo { get; set; }
 
             /// <summary>
-            /// <para>Whether the authentication is passed.</para>
+            /// <para>Indicates whether the verification is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Y: Passed</description></item>
-            /// <item><description>N: Not passed</description></item>
+            /// <item><description>Y: Passed.</description></item>
+            /// <item><description>N: Not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>Sub-result code.</para>
+            /// <para>The sub-result code.</para>
             /// 
             /// <b>Example:</b>
             /// <hr>

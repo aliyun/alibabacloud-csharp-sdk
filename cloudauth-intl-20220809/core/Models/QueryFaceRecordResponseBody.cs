@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class QueryFaceRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>Return code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Current query page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public long? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>List of returned information.</para>
+        /// <para>The list of returned records.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<QueryFaceRecordResponseBodyItems> Items { get; set; }
         public class QueryFaceRecordResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>Face ID.</para>
+            /// <para>The face ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>230642938</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string FaceId { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-15T02:20:28Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Primary key ID.</para>
+            /// <para>The primary key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16112</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Face image URL.</para>
+            /// <para>The URL of the face image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.xxxx.com/1.jpg">http://www.xxxx.com/1.jpg</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ImgOssUrl { get; set; }
 
             /// <summary>
-            /// <para>Merchant User ID.</para>
+            /// <para>The merchant user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CuN6hiD08qr</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string MerchantUserId { get; set; }
 
             /// <summary>
-            /// <para>Registration type.</para>
+            /// <para>The registration type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MANUAL</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         }
 
         /// <summary>
-        /// <para>Maximum number of data entries per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Return message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Token for the next query start.</para>
+        /// <para>The token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARfZmVDe9NvRXloR5+8CK9nwqHyx44CQz3pa71+mmu0e</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F971622-38C0-5F56-B2EC-315367979B4F</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

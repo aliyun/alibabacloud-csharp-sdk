@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DeleteFaceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Primary key ID</para>
+        /// <para>The primary key ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

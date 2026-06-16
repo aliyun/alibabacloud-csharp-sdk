@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CheckResultRequest : TeaModel {
         /// <summary>
-        /// <para>Return additional information.</para>
+        /// <para>The additional information to return.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ExtraImageControlList { get; set; }
 
         /// <summary>
-        /// <para>Whether to return images.</para>
+        /// <para>Specifies whether to return images. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Y: Return</description></item>
-        /// <item><description>N: Do not return</description></item>
+        /// <item><description>Y: Return images.</description></item>
+        /// <item><description>N: Do not return images.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IsReturnImage { get; set; }
 
         /// <summary>
-        /// <para>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</para>
+        /// <para>The merchant-defined unique business ID used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>djs20d***9-dsskc</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>Whether to return anti-fraud detection results.</para>
+        /// <para>Specifies whether to return the anti-spoofing detection result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Y</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ReturnFiveCategorySpoofResult { get; set; }
 
         /// <summary>
-        /// <para>Authentication ID.</para>
+        /// <para>The verification ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4ab0b***cbde97</para>

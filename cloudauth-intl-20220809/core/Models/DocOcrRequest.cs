@@ -10,17 +10,23 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class DocOcrRequest : TeaModel {
         /// <summary>
-        /// <para>CardSide</para>
+        /// <para>Specifies the side of the certificate to distinguish between the national emblem side and the portrait side. If this parameter is not specified, the portrait side is used by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>OCR_ID_FACE (default): portrait side</para>
+        /// </description></item>
+        /// <item><description><para>OCR_ID_NATIONAL_EMBLEM: national emblem side.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>OCR_ID_FACE</para>
         /// </summary>
         [NameInMap("CardSide")]
         [Validation(Required=false)]
         public string CardSide { get; set; }
 
         /// <summary>
-        /// <para>Document type</para>
+        /// <para>The certificate type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00000006</para>
@@ -30,10 +36,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string DocType { get; set; }
 
         /// <summary>
-        /// <para>Whether to perform ID face quality detection</para>
+        /// <para>Specifies whether to perform certificate face quality detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: Indicates that detection is required</description></item>
-        /// <item><description>F: Indicates that detection is not required (default F)</description></item>
+        /// <item><description>T: Detection is required.</description></item>
+        /// <item><description>F: Detection is not required. (Default value: F).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +50,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdFaceQuality { get; set; }
 
         /// <summary>
-        /// <para>Base64 of the front side of the document image</para>
+        /// <para>The Base64-encoded card or certificate image.</para>
+        /// <para>If you use IdOcrPictureBase64 (Base64-encoded photo) to submit the certificate photo, check the photo size and do not submit an excessively large photo.</para>
         /// 
         /// <b>Example:</b>
         /// <para>base64</para>
@@ -54,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdOcrPictureBase64 { get; set; }
 
         /// <summary>
-        /// <para>URL of the front side of the document image</para>
+        /// <para>The URL of the front side of the certificate image.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></para>
@@ -64,7 +71,13 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdOcrPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>IdThreshold</para>
+        /// <para>The custom OCR quality detection threshold mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: system default</description></item>
+        /// <item><description>1: strict mode</description></item>
+        /// <item><description>2: loose mode</description></item>
+        /// <item><description>3 (default): quality detection disabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -74,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdThreshold { get; set; }
 
         /// <summary>
-        /// <para>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</para>
+        /// <para>The custom business unique identifier on the merchant side, used for subsequent issue tracking and troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dso9322***dsjsd22</para>
@@ -84,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantBizId { get; set; }
 
         /// <summary>
-        /// <para>A custom user ID in the business, please keep it unique.</para>
+        /// <para>The custom user ID in the business. Ensure that the value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -94,10 +107,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string MerchantUserId { get; set; }
 
         /// <summary>
-        /// <para>Whether to perform document OCR</para>
+        /// <para>Specifies whether to perform certificate OCR. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: Indicates that document OCR is required</description></item>
-        /// <item><description>F: Indicates that document OCR is not required</description></item>
+        /// <item><description>T: OCR is required.</description></item>
+        /// <item><description>F: OCR is not required.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Ocr { get; set; }
 
         /// <summary>
-        /// <para>Product code</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>产品方案类型ID_OCR_MIN</para>
@@ -118,10 +131,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable anti-counterfeiting detection</para>
+        /// <para>Specifies whether to enable anti-spoofing detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: Indicates that anti-counterfeiting is enabled</description></item>
-        /// <item><description>F: Indicates that anti-counterfeiting is disabled</description></item>
+        /// <item><description>T: Anti-spoofing is enabled.</description></item>
+        /// <item><description>F: Anti-spoofing is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

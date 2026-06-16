@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class Mobile3MetaVerifyIntlRequest : TeaModel {
         /// <summary>
-        /// <para>ID number</para>
+        /// <para>The ID card number.</para>
         /// <list type="bullet">
-        /// <item><description>When paramType is set to normal, enter the plaintext</description></item>
-        /// <item><description>When paramType is set to md5, enter a 32-character lowercase md5 string</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdentifyNum { get; set; }
 
         /// <summary>
-        /// <para>Mobile phone number.</para>
+        /// <para>The phone number.</para>
         /// <list type="bullet">
-        /// <item><description>When paramType is set to normal, enter the plaintext</description></item>
-        /// <item><description>When paramType is set to md5, enter a 32-character lowercase md5 string</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Mobile { get; set; }
 
         /// <summary>
-        /// <para>Parameter type:</para>
+        /// <para>The parameter type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: unencrypted</description></item>
-        /// <item><description>md5: md5 encrypted</description></item>
+        /// <item><description>normal: not encrypted</description></item>
+        /// <item><description>md5: MD5-encrypted.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ParamType { get; set; }
 
         /// <summary>
-        /// <para>The product solution to be integrated, with a fixed value: MOBILE_3META</para>
+        /// <para>The product solution code. Fixed value: MOBILE_3META.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MOBILE_3META</para>
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Name</para>
+        /// <para>The name.</para>
         /// <list type="bullet">
-        /// <item><description>When paramType is set to normal, enter the plaintext</description></item>
-        /// <item><description>When paramType is set to md5, enter a 32-character lowercase md5 string</description></item>
+        /// <item><description>If ParamType is set to normal, enter the plaintext value.</description></item>
+        /// <item><description>If ParamType is set to md5, enter a 32-character lowercase MD5 string.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
