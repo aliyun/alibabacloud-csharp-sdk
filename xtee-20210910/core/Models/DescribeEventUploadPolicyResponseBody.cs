@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         /// <para>The AccessKey ID used to access OSS.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI5tPXz8Y9tLVh5xxnnEAC</para>
+        /// <para>LTAxxxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("AccessId")]
         [Validation(Required=false)]

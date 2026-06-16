@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         /// <para>The AccessKey ID used to upload files to OSS.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LTAI5tE7sActovY6Hvpu5oTh</para>
+        /// <para>LTAxxxxxxxxx</para>
         /// </summary>
         [NameInMap("AccessId")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Xtee20210910.Models
         /// <para>The OSS security policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>eyJleHBpcmF0aW9uIjoiMjAyNS0wNy0zMFQwNjowNTo0OS45NTRaIiwiY29uZGl0aW9ucyI6W1siY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMTA0ODU3NjAwMF0sWyJlcSIsIiRrZXkiLCJzYWZcL2RlXC9uYW1lbGlzdFwvZTkyNFwvdWZ6Z3NlZFg5Ymxxxxxxxxxxx</para>
+        /// <para>eyJleHBpxxxcmF0aW9xxxIjoiMjAyNS0wNy0zMFQxxxxxwNjowNTo0OSxxxxx45NTRaIiwiY29uxxxZGl0a5Ymxxxxxxxxxxxxx</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
