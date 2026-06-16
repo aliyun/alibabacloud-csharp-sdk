@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SearchImageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. The ErrorCode field is not returned if the request succeeded. If the request failed, the ErrorCode field is returned. For more information, see the error code list in this topic.</para>
+        /// <para>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliuid:1998006665794443 assumeRole not exist,serviceName:realtimelogpush.dcdnservices.aliyuncs.com</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Image search Result</para>
+        /// <para>The image search results.</para>
         /// </summary>
         [NameInMap("ImageResponse")]
         [Validation(Required=false)]
         public SearchImageResponseBodyImageResponse ImageResponse { get; set; }
         public class SearchImageResponseBodyImageResponse : TeaModel {
             /// <summary>
-            /// <para>Image List</para>
+            /// <para>The image list.</para>
             /// </summary>
             [NameInMap("ImageList")]
             [Validation(Required=false)]
             public List<SearchImageResponseBodyImageResponseImageList> ImageList { get; set; }
             public class SearchImageResponseBodyImageResponseImageList : TeaModel {
                 /// <summary>
-                /// <para>Descriptive hues detected in the Image</para>
+                /// <para>The descriptive tones identified from the image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>冷色调 蓝色</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DescriptiveTones { get; set; }
 
                 /// <summary>
-                /// <para>Image height</para>
+                /// <para>The height of the image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public int? Height { get; set; }
 
                 /// <summary>
-                /// <para>Image categorization. Valid values:  </para>
+                /// <para>The image category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>normal: Illustrations or article images.  </description></item>
-                /// <item><description>banner: Background images or image carousels.  </description></item>
-                /// <item><description>goods: Product or service images.</description></item>
+                /// <item><description>normal: illustrations or article images.</description></item>
+                /// <item><description>banner: background images or carousel images.</description></item>
+                /// <item><description>goods: product or service images.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ImageCategory { get; set; }
 
                 /// <summary>
-                /// <para>Aspect ratio</para>
+                /// <para>The aspect ratio.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16:9</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ImageRatio { get; set; }
 
                 /// <summary>
-                /// <para>Image UUID</para>
+                /// <para>The unique identifier of the image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>70687446-821c-4ebd-9be6-b57dc0a3500a</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string OssKey { get; set; }
 
                 /// <summary>
-                /// <para>Quantized color palette (HEX, LAB) extracted by the algorithm</para>
+                /// <para>The quantitative palette extracted by the algorithm (HEX, LAB).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[{&quot;hex&quot;: &quot;#3a3f58&quot;, &quot;rgb&quot;: {&quot;r&quot;: 58, &quot;g&quot;: 63, &quot;b&quot;: 88 }, &quot;lab&quot;: {&quot;l&quot;: 27.81, &quot;a&quot;: 2.95, &quot;b&quot;: -16.52 }, &quot;percentage&quot;: 0.4521 }, {&quot;hex&quot;: &quot;#c8a16a&quot;, &quot;rgb&quot;: {&quot;r&quot;: 200, &quot;g&quot;: 161, &quot;b&quot;: 106 }, &quot;lab&quot;: {&quot;l&quot;: 69.35, &quot;a&quot;: 11.23, &quot;b&quot;: 35.18 }, &quot;percentage&quot;: 0.2355 }, {&quot;hex&quot;: &quot;#f1e8da&quot;, &quot;rgb&quot;: {&quot;r&quot;: 241, &quot;g&quot;: 232, &quot;b&quot;: 218 }, &quot;lab&quot;: {&quot;l&quot;: 93.17, &quot;a&quot;: 1.76, &quot;b&quot;: 7.91 }, &quot;percentage&quot;: 0.1873 } ]</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string QuantitativePalette { get; set; }
 
                 /// <summary>
-                /// <para>Image tags</para>
+                /// <para>The image tags.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>日出、奔跑</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TagsFromImage { get; set; }
 
                 /// <summary>
-                /// <para>Temporary access URL of the image</para>
+                /// <para>The temporary access URL of the image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://other-general-huadong1.oss-cn-hangzhou.aliyuncs.com/uploadWidget/RollTicket_01.jpeg">https://other-general-huadong1.oss-cn-hangzhou.aliyuncs.com/uploadWidget/RollTicket_01.jpeg</a></para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Url { get; set; }
 
                 /// <summary>
-                /// <para>Image width</para>
+                /// <para>The width of the image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>154</para>
@@ -151,8 +151,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Number of results per query.</para>
-            /// <para>Value range: 10–100. Default Value: 20.</para>
+            /// <para>The number of entries returned per query.</para>
+            /// <para>Valid values: 10 to 100. Default value: 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>Token indicating the start of the next query. It is empty when there is no next query.</para>
+            /// <para>The token for the next query. This value is empty if there are no more results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2c6b65b6f9d625d4e2514a628bde8eb2e0b5e8707e68181f</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

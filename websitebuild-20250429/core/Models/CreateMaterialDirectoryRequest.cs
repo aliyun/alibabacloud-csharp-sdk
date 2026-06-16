@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateMaterialDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>Application instance ID</para>
+        /// <para>The application instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Folder name</para>
+        /// <para>The folder name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Parent folder ID</para>
+        /// <para>The parent folder ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

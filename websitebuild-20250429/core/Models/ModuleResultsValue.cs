@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModuleResultsValue : TeaModel {
         /// <summary>
-        /// <para>Whether the check is passed</para>
+        /// <para>是否通过检查</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? Passed { get; set; }
 
         /// <summary>
-        /// <para>Resource identity</para>
+        /// <para>资源标识</para>
         /// 
         /// <b>Example:</b>
         /// <para>InspirationTokens</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceCode { get; set; }
 
         /// <summary>
-        /// <para>Error code when failed; null when passed</para>
+        /// <para>失败时的错误码，通过时为null</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource.Control.No.Usage</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message when failed; null when passed</para>
+        /// <para>失败时的错误信息，通过时为null</para>
         /// 
         /// <b>Example:</b>
         /// <para>用量耗尽</para>

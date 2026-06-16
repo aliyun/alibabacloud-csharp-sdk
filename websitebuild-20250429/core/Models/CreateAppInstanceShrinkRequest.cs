@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppInstanceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Application type</para>
+        /// <para>The application type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PC_WebSite</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ApplicationType { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable auto-renewal upon expiration</para>
+        /// <para>Specifies whether to enable auto-renewal upon expiration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>Ensures idempotence of the request. Generate a unique value from your client to ensure that it is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Generate a unique value from your client. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>210713a117660695309606626a</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CreateAction { get; set; }
 
         /// <summary>
-        /// <para>Deployment area</para>
+        /// <para>The deployment region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ChineseMainland</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Required. The number of subscription periods</para>
+        /// <para>Required. The number of subscription periods.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>Extended information</para>
+        /// <para>The extended information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Payment type</para>
+        /// <para>The payment type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AUTO_PAY</para>
@@ -104,7 +104,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PaymentType { get; set; }
 
         /// <summary>
-        /// <para>Required. The unit of the subscription period, Year: Year, Month: Month, Day: Day, Hour: Hour</para>
+        /// <para>Required. The unit of the subscription period. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Year: year</description></item>
+        /// <item><description>Month: month</description></item>
+        /// <item><description>Day: day</description></item>
+        /// <item><description>Hour: hour.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Year</para>
@@ -114,7 +120,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PricingCycle { get; set; }
 
         /// <summary>
-        /// <para>Required. The quantity of instances to be ordered.</para>
+        /// <para>Required. The number of instances to subscribe to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -124,7 +130,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Quantity { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2smovqqpvuly</para>
@@ -134,7 +140,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Site version</para>
+        /// <para>The website version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Basic_Edition</para>
@@ -144,7 +150,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SiteVersion { get; set; }
 
         /// <summary>
-        /// <para>List of tags</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]

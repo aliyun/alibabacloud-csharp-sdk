@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAIStaffChatMessagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Permission denied information</para>
+        /// <para>The access denied details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Is retry allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App Name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message. Not currently used. Please ignore.</para>
+        /// <para>The dynamic message. This parameter is not in use. Ignore it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,26 +60,26 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public ListAIStaffChatMessagesResponseBodyModule Module { get; set; }
         public class ListAIStaffChatMessagesResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Sender type.  </para>
-            /// <para>Enumeration values:  </para>
+            /// <para>The sender type.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ADMIN</b>: System  </description></item>
-            /// <item><description><b>CUSTOMER</b>: Visitor  </description></item>
-            /// <item><description><b>AGENT</b>: Agent</description></item>
+            /// <item><description><b>ADMIN</b>: System.</description></item>
+            /// <item><description><b>CUSTOMER</b>: Visitor.</description></item>
+            /// <item><description><b>AGENT</b>: Agent.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("Messages")]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public List<ListAIStaffChatMessagesResponseBodyModuleMessages> Messages { get; set; }
             public class ListAIStaffChatMessagesResponseBodyModuleMessages : TeaModel {
                 /// <summary>
-                /// <para>Bot ID.</para>
+                /// <para>The bot ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Zero2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BotId { get; set; }
 
                 /// <summary>
-                /// <para>Current conversation round ID</para>
+                /// <para>The ID of the current conversation turn.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>54a0bfa0-41bd-4e96-acd9-fb13c0474452</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ChatId { get; set; }
 
                 /// <summary>
-                /// <para>Current session status</para>
+                /// <para>The current conversation status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ChatStatus { get; set; }
 
                 /// <summary>
-                /// <para>ID of the invoked data class API.</para>
+                /// <para>The ID of the data API operation that is called.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>domain cnamen<a href="http://www.buyhao8.com">www.buyhao8.com</a> <a href="http://www.buyhao8.com.a1.initrr.comn">www.buyhao8.com.a1.initrr.comn</a></para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>Content type</para>
+                /// <para>The content type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>application/octet-stream</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ContentType { get; set; }
 
                 /// <summary>
-                /// <para>Session ID</para>
+                /// <para>The conversation ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>job-675163021891846144</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string ConversationId { get; set; }
 
                 /// <summary>
-                /// <para>Creation Time</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1723532098</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>Updated At</para>
+                /// <para>The modification time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1591339051000</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>Message ID</para>
+                /// <para>The message ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1dafa033-e72b-44c2-99b7-bc202c5b6198</para>
@@ -177,26 +177,26 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>Business extension metadata (in Map format, must be a JSON string)</para>
+                /// <para>The business extension metadata in Map format. The value must be a JSON string.</para>
                 /// </summary>
                 [NameInMap("MetaData")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> MetaData { get; set; }
 
                 /// <summary>
-                /// <para>Indicates the role of the participant in the conversation. Valid values include:</para>
+                /// <para>The role of the conversation participant. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>user: User</para>
+                /// <item><description><para>user: User.</para>
                 /// </description></item>
-                /// <item><description><para>assistant: Assistant</para>
+                /// <item><description><para>assistant: Assistant.</para>
                 /// </description></item>
-                /// <item><description><para>system: System</para>
+                /// <item><description><para>system: System.</para>
                 /// </description></item>
-                /// <item><description><para>function: Function</para>
+                /// <item><description><para>function: Function.</para>
                 /// </description></item>
-                /// <item><description><para>plugin: Plugin</para>
+                /// <item><description><para>plugin: Plugin.</para>
                 /// </description></item>
-                /// <item><description><para>tool: Tool</para>
+                /// <item><description><para>tool: Tool.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -208,7 +208,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Role { get; set; }
 
                 /// <summary>
-                /// <para>Section ID of the inspection item.</para>
+                /// <para>The section ID of the check item.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>324</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SectionId { get; set; }
 
                 /// <summary>
-                /// <para>Site ID.</para>
+                /// <para>The site ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>928636774795776</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SiteId { get; set; }
 
                 /// <summary>
-                /// <para>File type</para>
+                /// <para>The file type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SINGLE</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -272,7 +272,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

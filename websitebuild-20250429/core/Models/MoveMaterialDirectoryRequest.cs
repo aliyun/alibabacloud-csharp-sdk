@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class MoveMaterialDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>Application instance ID</para>
+        /// <para>The application instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Folder ID</para>
+        /// <para>The folder ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>Parent folder ID after shift</para>
+        /// <para>The parent folder ID after the move.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ParentDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>Sorting ordinal number</para>
+        /// <para>The sort number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

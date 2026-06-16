@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppWorkspaceDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>Session ID</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b7105a2-2999-430b-ba23-ba09149d5434</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>Directory depth (optional; null or 0 returns all levels)</para>
+        /// <para>The directory depth. This parameter is optional. If set to null or 0, all levels are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Deep { get; set; }
 
         /// <summary>
-        /// <para>Directory path (optional)</para>
+        /// <para>The directory path. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteAppDomainCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of permission check failure</para>
+        /// <para>The details of the permission verification failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Whether retry is allowed. Values:</para>
+        /// <para>Indicates whether retry is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Not allowed to retry.</description></item>
-        /// <item><description>true: Allowed to retry.</description></item>
+        /// <item><description>false: Retry is not allowed.</description></item>
+        /// <item><description>true: Retry is allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Application name. Allows a combination of numbers, letters, and hyphens (-). Must start with a letter, cannot end with a hyphen (-), and must not exceed 36 characters.</para>
+        /// <para>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic code, not in use, please ignore</para>
+        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message.</para>
+        /// <para>The dynamic message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -64,21 +64,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public DeleteAppDomainCertificateResponseBodyModule Module { get; set; }
         public class DeleteAppDomainCertificateResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Whether it was successful</para>
+            /// <para>Indicates whether the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C6B99AC-39EC-5350-874C-204128C905E6</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Exception message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Whether it is processed synchronously</para>
+        /// <para>Indicates whether the request is synchronously processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

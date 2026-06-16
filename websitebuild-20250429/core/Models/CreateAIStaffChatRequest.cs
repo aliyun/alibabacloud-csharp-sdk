@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAIStaffChatRequest : TeaModel {
         /// <summary>
-        /// <para>Site ID</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250801154628000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Conversation ID (provided when recovering from a break)</para>
+        /// <para>The chat ID. Pass in this parameter to resume a conversation after an interruption.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3b465fe1-6f06-4899-af9f-d43d9338df25</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ChatId { get; set; }
 
         /// <summary>
-        /// <para>session ID</para>
+        /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b7105a2-2999-430b-ba23-ba09149d5434</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>List of conversation messages</para>
+        /// <para>The list of conversation messages.</para>
         /// </summary>
         [NameInMap("Messages")]
         [Validation(Required=false)]
         public List<CreateAIStaffChatRequestMessages> Messages { get; set; }
         public class CreateAIStaffChatRequestMessages : TeaModel {
             /// <summary>
-            /// <para>Message content</para>
+            /// <para>The message content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;CodeRevision\&quot;: \&quot;1750040991876284109\&quot;}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>Content type</para>
+            /// <para>The content type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>application/octet-stream</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>Business extension metadata (in Map format, must be a JSON string)</para>
+            /// <para>The business extension metadata in Map format. The value must be a JSON string.</para>
             /// </summary>
             [NameInMap("MetaData")]
             [Validation(Required=false)]
             public Dictionary<string, string> MetaData { get; set; }
 
             /// <summary>
-            /// <para>Role in the conversation</para>
+            /// <para>The conversation role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polarx_dn</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>File type</para>
+            /// <para>The file type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>risk</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>Additional conversation information</para>
+        /// <para>The additional information for the conversation.</para>
         /// </summary>
         [NameInMap("MetaData")]
         [Validation(Required=false)]

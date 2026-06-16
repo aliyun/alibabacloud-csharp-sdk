@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SubmitMaterialTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Job parameters</para>
+        /// <para>The parameters of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string TaskParam { get; set; }
 
         /// <summary>
-        /// <para>Task Type</para>
+        /// <para>The type of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

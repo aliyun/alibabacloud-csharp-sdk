@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SyncAppInstanceForPartnerRequest : TeaModel {
         /// <summary>
-        /// <para>Application instance object data</para>
+        /// <para>The website instance object data.</para>
         /// </summary>
         [NameInMap("AppInstance")]
         [Validation(Required=false)]
         public SyncAppInstanceForPartnerRequestAppInstance AppInstance { get; set; }
         public class SyncAppInstanceForPartnerRequestAppInstance : TeaModel {
             /// <summary>
-            /// <para>Application Type: WEBSITE</para>
+            /// <para>The application type. Set this parameter to WEBSITE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WEBSITE</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string AppType { get; set; }
 
             /// <summary>
-            /// <para>Website business ID</para>
+            /// <para>The website business ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WD20250711094503000001</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>Logical deletion</para>
+            /// <para>Specifies whether the instance is logically deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fase</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Deleted { get; set; }
 
             /// <summary>
-            /// <para>Domain name</para>
+            /// <para>The domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alliveout.xntv.tv</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>Event end time (UNIX timestamp).</para>
+            /// <para>The end time of the event, in UNIX timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-08-23T02:14:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>Deletion time</para>
+            /// <para>The deletion time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01 00:00:00</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtDelete { get; set; }
 
             /// <summary>
-            /// <para>Vulnerability published UNIX timestamp, in milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was published, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-01 00:00:00</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string GmtPublish { get; set; }
 
             /// <summary>
-            /// <para>Application icon URL.</para>
+            /// <para>The URL of the application icon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>icon/WS20250626112715000001/thumbnail.jpg</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string IconUrl { get; set; }
 
             /// <summary>
-            /// <para>Website name</para>
+            /// <para>The website name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AI建站</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Website configuration information</para>
+            /// <para>The website configuration information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>网站配置信息</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public SyncAppInstanceForPartnerRequestAppInstanceProfile Profile { get; set; }
             public class SyncAppInstanceForPartnerRequestAppInstanceProfile : TeaModel {
                 /// <summary>
-                /// <para>Deployment region</para>
+                /// <para>The deployment region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ChineseMainland</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string DeployArea { get; set; }
 
                 /// <summary>
-                /// <para>Lingxiao instance ID</para>
+                /// <para>The LingXiao instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12313213</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string LxInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Order ID</para>
+                /// <para>The order ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>222217928591</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string OrderId { get; set; }
 
                 /// <summary>
-                /// <para>Version</para>
+                /// <para>The version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Basic_Edition</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SiteVersion { get; set; }
 
                 /// <summary>
-                /// <para>Template ID</para>
+                /// <para>The template identifier.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DC4D30B7BADDAFE9928A6C36416A2A4C</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string TemplateEtag { get; set; }
 
                 /// <summary>
-                /// <para>Model template ID</para>
+                /// <para>The model template ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ST20211231160247sYG4</para>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteHost { get; set; }
 
             /// <summary>
-            /// <para>Website SiteID</para>
+            /// <para>The website SiteID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>31104757</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Slug { get; set; }
 
             /// <summary>
-            /// <para>Query start time. If no start and end times are provided, all historical deployment records of the instance are queried.</para>
+            /// <para>The start time of the query. If you do not specify the start time or end time, all historical deployment records of the instance are queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-15T16:00:00Z</para>
@@ -209,16 +209,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>Instance running status.  </para>
+            /// <para>The running status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NotRun: Not running  </description></item>
-            /// <item><description>Running: Running  </description></item>
-            /// <item><description>WaitTime: Waiting for TriggerTime  </description></item>
-            /// <item><description>CheckingCondition: Checking branch conditions  </description></item>
-            /// <item><description>WaitResource: Waiting for resources  </description></item>
-            /// <item><description>Failure: Execution failed  </description></item>
-            /// <item><description>Success: Execution succeeded  </description></item>
-            /// <item><description>Checking: Sent to Data Quality check</description></item>
+            /// <item><description>NotRun: not running.</description></item>
+            /// <item><description>Running: running.</description></item>
+            /// <item><description>WaitTime: waiting for TriggerTime.</description></item>
+            /// <item><description>CheckingCondition: checking branch conditions.</description></item>
+            /// <item><description>WaitResource: waiting for resources.</description></item>
+            /// <item><description>Failure: execution failed.</description></item>
+            /// <item><description>Success: execution succeeded.</description></item>
+            /// <item><description>Checking: submitted for data quality check.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Thumbnail URL.</para>
+            /// <para>The URL of the thumbnail.</para>
             /// 
             /// <b>Example:</b>
             /// <para>thumbnails/WS20250626112715000001/thumbnail.jpg</para>
@@ -251,7 +251,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>Type of system event. CREATE, UPDATE, COMPLETE</para>
+        /// <para>The type of the system event. Valid values: CREATE, UPDATE, and COMPLETE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATE</para>
@@ -261,7 +261,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>Operator ID</para>
+        /// <para>The employee ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>Source business ID.</para>
+        /// <para>The source business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31104757</para>
@@ -281,7 +281,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceBizId { get; set; }
 
         /// <summary>
-        /// <para>Source: MARKET_CLOUD_DREAM</para>
+        /// <para>The source. Set this parameter to MARKET_CLOUD_DREAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MARKET_CLOUD_DREAM</para>

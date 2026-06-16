@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Application name. Query the application with this name.</para>
+        /// <para>The application name. The application with this name is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ish-intelligence-store-platform-admin-web</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message.</para>
+        /// <para>The dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters.</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Error code. The value is described as follows: If the request succeeded, the ErrorCode field is not returned. If the request failed, the ErrorCode field is returned. For more information, see the error code list in this topic.</para>
+        /// <para>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public CreateMaterialDirectoryResponseBodyModule Module { get; set; }
         public class CreateMaterialDirectoryResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Folder ID.</para>
+            /// <para>The folder ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>68157a0a-769a-4364-bbdc-a0e2cf3d5ad</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the processing is synchronous.</para>
+        /// <para>Indicates whether the request is synchronously processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

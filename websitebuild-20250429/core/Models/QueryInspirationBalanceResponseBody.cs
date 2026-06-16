@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Whether retry is allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Application name; query the application with this name</para>
+        /// <para>Application name. Query the application with this name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dewuApp</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message used to replace <c>%s</c> in the <b>ErrMessage</b> error message.  </para>
+        /// <para>Dynamic error message, used to replace <c>%s</c> in the <b>ErrMessage</b> error message of the response parameters.</para>
         /// <remarks>
         /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
@@ -63,21 +63,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Fault parameters.</para>
+        /// <para>Error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>Response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public QueryInspirationBalanceResponseBodyModule Module { get; set; }
         public class QueryInspirationBalanceResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Remaining (totalQuota - totalUsed)</para>
+            /// <para>Remaining (totalQuota - totalUsed).</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string RemainingStr { get; set; }
 
             /// <summary>
-            /// <para>Total quota (sum of initQuota from all valid accounts)</para>
+            /// <para>Total quota (sum of initQuota for all active accounts).</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string TotalQuotaStr { get; set; }
 
             /// <summary>
-            /// <para>Consumed amount (sum of used from all valid accounts)</para>
+            /// <para>Total used (sum of used for all active accounts).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>Error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>Exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Whether processing is synchronous</para>
+        /// <para>Indicates whether to process synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

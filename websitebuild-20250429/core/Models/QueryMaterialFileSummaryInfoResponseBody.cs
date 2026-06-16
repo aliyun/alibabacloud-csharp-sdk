@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialFileSummaryInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Is retry allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The application name. It can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name must not exceed 36 characters.</para>
+        /// <para>The application name. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name cannot exceed 36 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message.</para>
+        /// <para>The dynamic message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public QueryMaterialFileSummaryInfoResponseBodyModule Module { get; set; }
         public class QueryMaterialFileSummaryInfoResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Total file quantity</para>
+            /// <para>The total number of files.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public long? FileNum { get; set; }
 
             /// <summary>
-            /// <para>Occupied bucket space</para>
+            /// <para>The occupied storage space.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23M</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.EROR</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Is processed synchronously</para>
+        /// <para>Indicates whether the request is synchronously processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

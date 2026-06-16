@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppInstanceForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The details of the permission verification failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Whether retry is allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>The name of the application. The name must be 4 to 26 characters in length. The name can contain letters, digits, and underscores (_), and must start with a letter.</para>
+        /// <para>The application name that was queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,10 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message, used to replace <c>%s</c> in the error message of the returned parameter <b>ErrMessage</b>.</para>
-        /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b>, and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it means that the input request parameter <b>DtsJobId</b> is invalid.</para>
-        /// </remarks>
+        /// <para>The dynamic error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abc</para>
@@ -63,22 +60,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>The parameter whose value is invalid.</para>
+        /// <para>The error parameters returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Data table module.</para>
-        /// <list type="bullet">
-        /// <item><description><para>ABTest: Experiment data table</para>
-        /// </description></item>
-        /// <item><description><para>ExperimentTool: Experiment tool table</para>
-        /// </description></item>
-        /// <item><description><para>DataDiagnosis: Data diagnosis</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -98,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error Code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -108,7 +97,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -118,7 +107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

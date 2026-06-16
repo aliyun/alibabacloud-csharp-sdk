@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QuerySupabaseAuthConfigsForAdminResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of access denied</para>
+        /// <para>The details of the permission verification failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Is retry allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App Name.</para>
+        /// <para>The application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message. Not currently used. Ignore it.</para>
+        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,29 +60,36 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error parameters returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Task object</para>
+        /// <para>The task object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public QuerySupabaseAuthConfigsForAdminResponseBodyModule Module { get; set; }
         public class QuerySupabaseAuthConfigsForAdminResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Configuration values. Valid values:  </para>
+            /// <para>The configuration value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cc_rule: CC rule.  </description></item>
-            /// <item><description>ddos_dispatch: DDoS filter interaction scheduling.  </description></item>
-            /// <item><description>edge_safe: Edge application security.  </description></item>
-            /// <item><description>blocked_regions: Geo-blocking.  </description></item>
-            /// <item><description>http_acl_policy: Precise ACL rule.  </description></item>
-            /// <item><description>bot_manager: Bot traffic Management.  </description></item>
-            /// <item><description>ip_reputation: IP reputation investigation.</description></item>
+            /// <item><description><para>cc_rule: HTTP flood mitigation rule.</para>
+            /// </description></item>
+            /// <item><description><para>ddos_dispatch: DDoS interaction scheduling.</para>
+            /// </description></item>
+            /// <item><description><para>edge_safe: edge application security.</para>
+            /// </description></item>
+            /// <item><description><para>blocked_regions: Location Blacklist.</para>
+            /// </description></item>
+            /// <item><description><para>http_acl_policy: Accurate Access Control.</para>
+            /// </description></item>
+            /// <item><description><para>bot_manager: bot traffic management.</para>
+            /// </description></item>
+            /// <item><description><para>ip_reputation: IP reputation library.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("Configs")]
@@ -102,7 +109,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -112,7 +119,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Fault message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -122,7 +129,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Is processed synchronously</para>
+        /// <para>Indicates whether the request is synchronously processed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class OperateAppServiceForPartnerRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID.</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS00001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Additional extension information in JSON structure, facilitating future parameter extensions.</para>
+        /// <para>Other extended information in JSON format for future parameter expansion.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;user_device_id\&quot;:\&quot;6bef45cb0c76de284d24de074c088b73\&quot;}\n</para>
@@ -30,7 +30,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>Operation event:<br>SERVICE_FINISH: Service completed</para>
+        /// <para>The operation event. Valid values:
+        /// SERVICE_FINISH: the service is completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SERVICE_FINISH</para>
@@ -40,12 +41,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OperateEvent { get; set; }
 
         /// <summary>
-        /// <para>Service Type.  </para>
-        /// <para>Valid values:  </para>
+        /// <para>The service type.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>private: Deployed under the user\&quot;s account.  </para>
+        /// <item><description><para>private: deployment under the user account.</para>
         /// </description></item>
-        /// <item><description><para>managed: Hosted under the service provider\&quot;s account.  </para>
+        /// <item><description><para>managed: hosted under the service provider account.</para>
         /// </description></item>
         /// <item><description><para>operation: Alibaba Cloud Managed Services.</para>
         /// </description></item>

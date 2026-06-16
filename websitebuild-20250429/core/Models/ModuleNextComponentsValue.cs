@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ModuleNextComponentsValue : TeaModel {
         /// <summary>
-        /// <para>Unique widget encoding (system internal identity)</para>
+        /// <para>Component unique code (internal system identifier)</para>
         /// 
         /// <b>Example:</b>
         /// <para>placeholder</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Widget display name (User-visible name)</para>
+        /// <para>Component display name (user-visible name)</para>
         /// 
         /// <b>Example:</b>
         /// <para>placeholder</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Widget instance property configuration</para>
+        /// <para>Component instance property configuration</para>
         /// </summary>
         [NameInMap("InstanceProperty")]
         [Validation(Required=false)]
         public List<ModuleNextComponentsValueInstanceProperty> InstanceProperty { get; set; }
         public class ModuleNextComponentsValueInstanceProperty : TeaModel {
             /// <summary>
-            /// <para>Property encoding (system internal identity)</para>
+            /// <para>Property code (internal system identifier)</para>
             /// 
             /// <b>Example:</b>
             /// <para>placeholder</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>Property display name (User-visible Name)</para>
+            /// <para>Property display name (user-visible name)</para>
             /// 
             /// <b>Example:</b>
             /// <para>placeholder</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Attribute Value encoding (internal System value)</para>
+            /// <para>Property value code (internal system value)</para>
             /// 
             /// <b>Example:</b>
             /// <para>placeholder</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string Value { get; set; }
 
             /// <summary>
-            /// <para>List of module Attribute Values</para>
+            /// <para>Module property value list</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]
             public List<ModuleNextComponentsValueInstancePropertyValues> Values { get; set; }
             public class ModuleNextComponentsValueInstancePropertyValues : TeaModel {
                 /// <summary>
-                /// <para>Property encoding (system internal identity)</para>
+                /// <para>Property code (internal system identifier)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>placeholder</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Attribute Value encoding (internal System value)</para>
+                /// <para>Property value code (internal system value)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>placeholder</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Value { get; set; }
 
                 /// <summary>
-                /// <para>Property display name (User-visible Name)</para>
+                /// <para>Property display name (user-visible name)</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>placeholder</para>
@@ -108,14 +108,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>widget instance attribute configuration</para>
+        /// <para>Component instance property configuration</para>
         /// </summary>
         [NameInMap("Properties")]
         [Validation(Required=false)]
         public Dictionary<string, ModuleNextComponentsValuePropertiesValue> Properties { get; set; }
 
         /// <summary>
-        /// <para>Module attribute status</para>
+        /// <para>Module property status</para>
         /// 
         /// <b>Example:</b>
         /// <para>placeholder</para>

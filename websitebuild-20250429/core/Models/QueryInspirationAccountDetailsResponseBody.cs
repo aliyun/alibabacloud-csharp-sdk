@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationAccountDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Access denied details</para>
+        /// <para>The details of the permission verification failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:</para>
+        /// <para>Indicates whether a retry is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.</description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: A retry is not allowed.</description></item>
+        /// <item><description>true: A retry is allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Application Name. Query the application with this name.</para>
+        /// <para>The application name. The application with this name is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message.</para>
+        /// <para>The dynamic message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -64,21 +64,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public QueryInspirationAccountDetailsResponseBodyModule Module { get; set; }
         public class QueryInspirationAccountDetailsResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>Request result.</para>
+            /// <para>The query results.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryInspirationAccountDetailsResponseBodyModuleData> Data { get; set; }
             public class QueryInspirationAccountDetailsResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>Acquisition Time</para>
+                /// <para>The time when the inspiration points were acquired.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-03 12:00:00</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AcquisitionTime { get; set; }
 
                 /// <summary>
-                /// <para>Balance (initQuota - used)</para>
+                /// <para>The remaining balance (InitQuota minus used).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BalanceStr { get; set; }
 
                 /// <summary>
-                /// <para>Validity Period expiration time</para>
+                /// <para>The expiration time of the quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-04-11 10:26:27 +0800</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EndDate { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether it has expired (endDate &lt; current time). The frontend uses this to gray out the display.</para>
+                /// <para>Indicates whether the quota has expired (EndDate is earlier than the current time). The frontend grays out expired entries based on this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>False</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? Expired { get; set; }
 
                 /// <summary>
-                /// <para>Quantity obtained (initial quota)</para>
+                /// <para>The acquired quantity (initial quota).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string InitQuotaStr { get; set; }
 
                 /// <summary>
-                /// <para>Source type code (such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, PURCHASED)</para>
+                /// <para>The source type code. Valid values: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MARKET_CLOUD_DREAM</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Source Type Display Name</para>
+                /// <para>The display name of the source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FREE_TRIAL_GIFT</para>
@@ -179,14 +179,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Decision weight</para>
+            /// <para>The decision weight.</para>
             /// </summary>
             [NameInMap("Next")]
             [Validation(Required=false)]
             public QueryInspirationAccountDetailsResponseBodyModuleNext Next { get; set; }
             public class QueryInspirationAccountDetailsResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>Acquisition time</para>
+                /// <para>The time when the inspiration points were acquired.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-03 12:00:00</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string AcquisitionTime { get; set; }
 
                 /// <summary>
-                /// <para>Balance (initQuota - used)</para>
+                /// <para>The remaining balance (InitQuota minus used).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string BalanceStr { get; set; }
 
                 /// <summary>
-                /// <para>Expiration time of the validity period</para>
+                /// <para>The expiration time of the quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-02-25 10:11:25</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string EndDate { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether it has expired (endDate &lt; current time). The frontend uses this to gray out the display.</para>
+                /// <para>Indicates whether the quota has expired (EndDate is earlier than the current time). The frontend grays out expired entries based on this value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>False</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public bool? Expired { get; set; }
 
                 /// <summary>
-                /// <para>Quantity obtained (initial quota)</para>
+                /// <para>The acquired quantity (initial quota).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123123</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string InitQuotaStr { get; set; }
 
                 /// <summary>
-                /// <para>Source type code (such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, PURCHASED)</para>
+                /// <para>The source type code. Valid values: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MARKET_CLOUD_DREAM</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>Display Name of the source type</para>
+                /// <para>The display name of the source type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FREE_TRIAL_GIFT</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether there is a next page.</para>
+            /// <para>Indicates whether a next page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -276,7 +276,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a previous page exists</para>
+            /// <para>Indicates whether a previous page exists.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -296,14 +296,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>In addition to paging limits, the server-side processes at most the latest 1,000 records for the current query. If the result exceeds 1,000 records, <b>ResultLimit</b> is <b>true</b>. You can narrow the Time Range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>Apart from pagination limits, the server processes up to 1000 recent records for the current query. If the results exceed 1000 records, <b>ResultLimit</b> is <b>true</b>. In this case, narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
             public bool? ResultLimit { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -313,7 +313,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? TotalItemNum { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -335,7 +335,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -345,7 +345,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -355,7 +355,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether processing is synchronous</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

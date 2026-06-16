@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialFileDetailRequest : TeaModel {
         /// <summary>
-        /// <para>Application instance ID</para>
+        /// <para>The application instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>File ID</para>
+        /// <para>The file ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

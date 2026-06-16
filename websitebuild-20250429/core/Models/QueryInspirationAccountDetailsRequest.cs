@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationAccountDetailsRequest : TeaModel {
         /// <summary>
-        /// <para>Query End Time</para>
+        /// <para>The end time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-07-23T16:00:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Sorting field</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -30,7 +30,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>Sorting type: ASC|DESC</para>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Source type filter (such as FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, PURCHASED)</para>
+        /// <para>The source type used to filter results. Valid values: FREE_TRIAL_GIFT, INSTANCE_GIFT, UPGRADE_GRANT, and PURCHASED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MARKET_CLOUD_DREAM</para>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>Query Start Time</para>
+        /// <para>The start time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-21T16:00:00Z</para>

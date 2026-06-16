@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppInstanceDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250718165839000001</para>
@@ -24,8 +24,8 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DomainKeyword { get; set; }
 
         /// <summary>
-        /// <para>Number of results per query.</para>
-        /// <para>Range: 10~100. Default value: 20.</para>
+        /// <para>The maximum number of entries to return per query.</para>
+        /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Token for the next query. It will be empty if there is no next query.</para>
+        /// <para>The token for the next query. This parameter is empty if there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0l45bkwM022Dt+rOvPi/oQ==</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Sorting field</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>Sorting type ASC|DESC</para>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

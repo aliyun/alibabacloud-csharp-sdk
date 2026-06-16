@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class RefundAppInstanceForPartnerRequest : TeaModel {
         /// <summary>
-        /// <para>Website building business ID</para>
+        /// <para>The ID of the website building service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Idempotent token</para>
+        /// <para>The idempotence token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c6f7e8b9-a0b1-4c2d-9e0f-1a2b3c4d5e6f</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Refund reason</para>
+        /// <para>The reason for the refund.</para>
         /// 
         /// <b>Example:</b>
         /// <para>渠道商退款</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RefundReason { get; set; }
 
         /// <summary>
-        /// <para>User ID</para>
+        /// <para>The ID of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>

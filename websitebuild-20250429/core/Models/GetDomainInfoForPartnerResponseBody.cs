@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetDomainInfoForPartnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request result.</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDomainInfoForPartnerResponseBodyData Data { get; set; }
         public class GetDomainInfoForPartnerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Domain name.</para>
+            /// <para>The domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>playnew-alilive.daotantan.com</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string DomainName { get; set; }
 
             /// <summary>
-            /// <para>List of DNS server IP addresses.</para>
+            /// <para>The list of DNS server IP addresses.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NS3.ALIYUN.COM,NS4.ALIYUN.COM</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string NameServers { get; set; }
 
             /// <summary>
-            /// <para>IP ownership.</para>
+            /// <para>The IP ownership.</para>
             /// </summary>
             [NameInMap("Ownership")]
             [Validation(Required=false)]
             public GetDomainInfoForPartnerResponseBodyDataOwnership Ownership { get; set; }
             public class GetDomainInfoForPartnerResponseBodyDataOwnership : TeaModel {
                 /// <summary>
-                /// <para>Member name.</para>
+                /// <para>The member name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1189245564569485</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Account { get; set; }
 
                 /// <summary>
-                /// <para>Provider</para>
+                /// <para>The provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pai</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Domain name registrar</para>
+            /// <para>The domain name registrar.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SyncAppInstanceForPartnerShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Application instance object data</para>
+        /// <para>The website instance object data.</para>
         /// </summary>
         [NameInMap("AppInstance")]
         [Validation(Required=false)]
         public string AppInstanceShrink { get; set; }
 
         /// <summary>
-        /// <para>Type of system event. CREATE, UPDATE, COMPLETE</para>
+        /// <para>The type of the system event. Valid values: CREATE, UPDATE, and COMPLETE.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATE</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>Operator ID</para>
+        /// <para>The employee ID of the operator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Operator { get; set; }
 
         /// <summary>
-        /// <para>Source business ID.</para>
+        /// <para>The source business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>31104757</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SourceBizId { get; set; }
 
         /// <summary>
-        /// <para>Source: MARKET_CLOUD_DREAM</para>
+        /// <para>The source. Set this parameter to MARKET_CLOUD_DREAM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MARKET_CLOUD_DREAM</para>

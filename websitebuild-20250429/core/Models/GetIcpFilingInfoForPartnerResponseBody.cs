@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetIcpFilingInfoForPartnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request result.</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetIcpFilingInfoForPartnerResponseBodyData Data { get; set; }
         public class GetIcpFilingInfoForPartnerResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ICP filing number associated with the domain name. Supports entity ICP filing numbers and website ICP filing numbers.</para>
+            /// <para>The ICP filing number associated with the domain name. Both entity ICP filing numbers and website ICP filing numbers are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>京ICP备15023563号-3</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string IcpNumber { get; set; }
 
             /// <summary>
-            /// <para>Whether the domain is filed for ICP</para>
+            /// <para>Indicates whether the domain name has an ICP filing.</para>
             /// </summary>
             [NameInMap("Recorded")]
             [Validation(Required=false)]
             public bool? Recorded { get; set; }
 
             /// <summary>
-            /// <para>The website ICP filing number corresponding to the domain name</para>
+            /// <para>The website ICP filing number associated with the domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>湘ICP备14011526号-3A</para>

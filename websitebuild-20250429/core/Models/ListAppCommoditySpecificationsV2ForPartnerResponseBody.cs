@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppCommoditySpecificationsV2ForPartnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>permission denied information</para>
+        /// <para>The access denied detail.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>is retry allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>App Name.</para>
+        /// <para>The app name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>or</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>dynamic error message used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> error message.</para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> in the <b>ErrMessage</b> error message of the response parameters.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the provided request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,15 +63,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>faulty parameters.</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Number of results per query.</para>
-        /// <para>Value range: 10–100. Default Value: 20.</para>
+        /// <para>The number of results per query.</para>
+        /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -81,14 +81,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public ListAppCommoditySpecificationsV2ForPartnerResponseBodyModule Module { get; set; }
         public class ListAppCommoditySpecificationsV2ForPartnerResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -98,14 +98,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>Request result.</para>
+            /// <para>The request result.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListAppCommoditySpecificationsV2ForPartnerResponseBodyModuleData> Data { get; set; }
             public class ListAppCommoditySpecificationsV2ForPartnerResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>API status or POP error code.</para>
+                /// <para>The API status or POP error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Default Value</para>
+                /// <para>The default values.</para>
                 /// </summary>
                 [NameInMap("Components")]
                 [Validation(Required=false)]
                 public Dictionary<string, ModuleDataComponentsValue> Components { get; set; }
 
                 /// <summary>
-                /// <para>File name.</para>
+                /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>文件名</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Duration.</para>
+                /// <para>The duration.</para>
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
@@ -141,14 +141,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Next feature ID</para>
+            /// <para>The next feature ID.</para>
             /// </summary>
             [NameInMap("Next")]
             [Validation(Required=false)]
             public ListAppCommoditySpecificationsV2ForPartnerResponseBodyModuleNext Next { get; set; }
             public class ListAppCommoditySpecificationsV2ForPartnerResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>API status or POP error code</para>
+                /// <para>The API status or POP error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OK</para>
@@ -158,14 +158,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Default Value</para>
+                /// <para>The default values.</para>
                 /// </summary>
                 [NameInMap("Components")]
                 [Validation(Required=false)]
                 public Dictionary<string, ModuleNextComponentsValue> Components { get; set; }
 
                 /// <summary>
-                /// <para>Website Name</para>
+                /// <para>The website name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>docs</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Frame rate.</para>
+                /// <para>The frame rate.</para>
                 /// </summary>
                 [NameInMap("Properties")]
                 [Validation(Required=false)]
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>Paging size.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -214,14 +214,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>For the current query, aside from pagination limits, the server-side processes at most the latest 1 000 records. If the result exceeds 1 000 records, <b>ResultLimit</b> is <b>true</b>. You can narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>In addition to pagination limits, the server processes a maximum of the most recent 1000 records per query. If the results exceed 1000, <b>ResultLimit</b> is <b>true</b>, and you need to narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
             public bool? ResultLimit { get; set; }
 
             /// <summary>
-            /// <para>Total number of records.</para>
+            /// <para>The total number of items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -231,7 +231,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? TotalItemNum { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>Token for the start of the next query. It is empty if there is no next query.</para>
+        /// <para>The token for the next query. This parameter is empty when there is no next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -263,7 +263,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>is synchronous processing enabled</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

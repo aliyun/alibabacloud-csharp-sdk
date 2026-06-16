@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CheckResourceMeasureRequest : TeaModel {
         /// <summary>
-        /// <para>Belonging ID (site ID or Alibaba Cloud User ID)</para>
+        /// <para>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongId { get; set; }
 
         /// <summary>
-        /// <para>Belonging ID Type (siteId, uid)</para>
+        /// <para>The type of the owner ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>siteId</description></item>
+        /// <item><description>uid.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongIdType { get; set; }
 
         /// <summary>
-        /// <para>ESP business type</para>
+        /// <para>The ESP business type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>ESP business ID</para>
+        /// <para>The ESP business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p20202933455</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EspBizId { get; set; }
 
         /// <summary>
-        /// <para>Order module information (when empty, espBizId and bizType cannot be empty)</para>
+        /// <para>The order module information. If this parameter is empty, espBizId and bizType cannot be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;siteversion&quot;:&quot;test&quot;}</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderComponentParams { get; set; }
 
         /// <summary>
-        /// <para>Resource identity</para>
+        /// <para>The resource identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InspirationTokens</para>
@@ -70,7 +74,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceCode { get; set; }
 
         /// <summary>
-        /// <para>Resource value; default is empty. Required only for feature-type resources. 0 indicates not supported, and 1 indicates supported.</para>
+        /// <para>The resource value. This parameter is empty by default and is required only for feature-type resources. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: not supported</description></item>
+        /// <item><description>1: supported.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

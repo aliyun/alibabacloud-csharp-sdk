@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DeleteMaterialTaskShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>List of job IDs</para>
+        /// <para>The list of task IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TaskIds")]

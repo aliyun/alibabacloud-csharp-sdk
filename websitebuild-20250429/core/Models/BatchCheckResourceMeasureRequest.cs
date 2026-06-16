@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class BatchCheckResourceMeasureRequest : TeaModel {
         /// <summary>
-        /// <para>Belonging ID (website ID or Alibaba Cloud User ID)</para>
+        /// <para>The owner ID, which can be a website ID or an Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongId { get; set; }
 
         /// <summary>
-        /// <para>Belonging ID Type (siteId, uid)</para>
+        /// <para>The type of the owner ID. Valid values: siteId and uid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BelongIdType { get; set; }
 
         /// <summary>
-        /// <para>ESP business type</para>
+        /// <para>The ESP business type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>ESP business ID</para>
+        /// <para>The ESP business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>p20202933455</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EspBizId { get; set; }
 
         /// <summary>
-        /// <para>Order module information (automatically completed if empty)</para>
+        /// <para>The order module information. If this parameter is left empty, the information is automatically completed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;siteversion&quot;:&quot;test&quot;}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderComponentParams { get; set; }
 
         /// <summary>
-        /// <para>List of resource check items, in JSON array format</para>
+        /// <para>The list of resource check items in JSON array format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[

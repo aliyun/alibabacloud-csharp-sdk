@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AppMaterialFile : TeaModel {
         /// <summary>
-        /// <para>Application instance ID</para>
+        /// <para>The application instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Content Type</para>
+        /// <para>The content type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image/png</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>Creation Time.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-03 02:05:01</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>Deletion Time</para>
+        /// <para>The deletion time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-03 02:05:01</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DeletedTime { get; set; }
 
         /// <summary>
-        /// <para>Folder ID</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ddddwww</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>File ID</para>
+        /// <para>The file ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d75e1e9693cc460da218419d67735567</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>File URL</para>
+        /// <para>The file URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf">https://demo-moshicloud-test.oss-cn-hangzhou-internal.aliyuncs.com/document/testcase/aliyun/api_case/pdf_angle90_page1.pdf</a></para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// <para>Image height</para>
+        /// <para>The image height.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1280</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Height { get; set; }
 
         /// <summary>
-        /// <para>File name</para>
+        /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>文件名</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>File Status</para>
+        /// <para>The file status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NORMAL</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Bucket size.</para>
+        /// <para>The storage size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23M</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string StorageSize { get; set; }
 
         /// <summary>
-        /// <para>File suffix</para>
+        /// <para>The file name extension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>png</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Suffix { get; set; }
 
         /// <summary>
-        /// <para>File Type</para>
+        /// <para>The file type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IMAGE</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>Image width</para>
+        /// <para>The image width.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1920</para>

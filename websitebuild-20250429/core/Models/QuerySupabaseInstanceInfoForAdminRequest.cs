@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QuerySupabaseInstanceInfoForAdminRequest : TeaModel {
         /// <summary>
-        /// <para>Business instance ID</para>
+        /// <para>The business instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Environment identity</para>
+        /// <para>The environment identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,35 +32,39 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>Sorting field</para>
+        /// <para>The field by which to sort the results.</para>
         /// </summary>
         [NameInMap("OrderColumn")]
         [Validation(Required=false)]
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>Sorting type: ASC or DESC</para>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1</para>
+        /// <para>The page number. Default value: 1.</para>
         /// </summary>
         [NameInMap("PageNum")]
         [Validation(Required=false)]
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>User ID</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>

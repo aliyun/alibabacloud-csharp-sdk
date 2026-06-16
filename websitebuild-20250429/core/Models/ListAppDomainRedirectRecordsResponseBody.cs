@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAppDomainRedirectRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Whether retry is allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Frontend application name.</para>
+        /// <para>The frontend application name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message, currently unused, please ignore</para>
+        /// <para>The dynamic message. Currently not used. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,15 +60,15 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Error parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Number of results per query.</para>
-        /// <para>Range: 10~100. Default value: 20.</para>
+        /// <para>The number of entries per query.</para>
+        /// <para>Valid values: 10 to 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -78,14 +78,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The returned object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public ListAppDomainRedirectRecordsResponseBodyModule Module { get; set; }
         public class ListAppDomainRedirectRecordsResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Current page number.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? CurrentPageNum { get; set; }
 
             /// <summary>
-            /// <para>Member name.</para>
+            /// <para>The member name.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<ListAppDomainRedirectRecordsResponseBodyModuleData> Data { get; set; }
             public class ListAppDomainRedirectRecordsResponseBodyModuleData : TeaModel {
                 /// <summary>
-                /// <para>Redirect record ID</para>
+                /// <para>The redirect record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f0379419-433d-410e-98d9-bf5c72f47227</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string RecordId { get; set; }
 
                 /// <summary>
-                /// <para>Source domain</para>
+                /// <para>The source domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc.wanwang.xin</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceDomain { get; set; }
 
                 /// <summary>
-                /// <para>目标域名</para>
+                /// <para>The destination domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyuncs.com</para>
@@ -134,14 +134,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Next feature ID</para>
+            /// <para>The next feature ID.</para>
             /// </summary>
             [NameInMap("Next")]
             [Validation(Required=false)]
             public ListAppDomainRedirectRecordsResponseBodyModuleNext Next { get; set; }
             public class ListAppDomainRedirectRecordsResponseBodyModuleNext : TeaModel {
                 /// <summary>
-                /// <para>Redirect record ID</para>
+                /// <para>The redirect record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>936956504373539840</para>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string RecordId { get; set; }
 
                 /// <summary>
-                /// <para>Source domain</para>
+                /// <para>The source domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc.wanwang.xin</para>
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
                 public string SourceDomain { get; set; }
 
                 /// <summary>
-                /// <para>Target domain</para>
+                /// <para>The destination domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aliyuncs.com</para>
@@ -173,14 +173,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             }
 
             /// <summary>
-            /// <para>Whether there is a next page</para>
+            /// <para>Indicates whether a next page exists.</para>
             /// </summary>
             [NameInMap("NextPage")]
             [Validation(Required=false)]
             public bool? NextPage { get; set; }
 
             /// <summary>
-            /// <para>Page size.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -190,21 +190,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Whether there is a previous page.</para>
+            /// <para>Indicates whether a previous page exists.</para>
             /// </summary>
             [NameInMap("PrePage")]
             [Validation(Required=false)]
             public bool? PrePage { get; set; }
 
             /// <summary>
-            /// <para>Apart from pagination limits, the server processes up to the most recent 1000 records. If the result exceeds 1000, <b>ResultLimit</b> is <b>true</b>, please narrow down the time range and search again; otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+            /// <para>Apart from pagination limits, the server processes up to 1000 recent records per query. If the results exceed 1000 records, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
             /// </summary>
             [NameInMap("ResultLimit")]
             [Validation(Required=false)]
             public bool? ResultLimit { get; set; }
 
             /// <summary>
-            /// <para>Total number of items.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -214,7 +214,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public int? TotalItemNum { get; set; }
 
             /// <summary>
-            /// <para>Total number of pages.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         }
 
         /// <summary>
-        /// <para>下一个查询开始的Token。没有下一个查询时为空。</para>
+        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3BFw8paIJ7ylB6A7Qn9JjM</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6C6B99AC-39EC-5350-874C-204128C905E6</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Exception message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -266,7 +266,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Whether it is processed synchronously</para>
+        /// <para>Indicates whether the request is processed synchronously.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

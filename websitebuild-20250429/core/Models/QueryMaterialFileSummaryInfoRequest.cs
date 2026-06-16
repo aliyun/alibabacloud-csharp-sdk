@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryMaterialFileSummaryInfoRequest : TeaModel {
         /// <summary>
-        /// <para>Business instance ID</para>
+        /// <para>The business instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Folder ID</para>
+        /// <para>The ID of the directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>File name</para>
+        /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>文件名</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Sorting field</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>Sorting type: ASC or DESC</para>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>Page number. Default is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size. Default is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>File status</para>
+        /// <para>The file status.</para>
         /// </summary>
         [NameInMap("StatusList")]
         [Validation(Required=false)]
         public List<string> StatusList { get; set; }
 
         /// <summary>
-        /// <para>File type</para>
+        /// <para>The file type.</para>
         /// </summary>
         [NameInMap("TypeList")]
         [Validation(Required=false)]

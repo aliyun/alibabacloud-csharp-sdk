@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QueryInspirationConsumeRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>Query end time</para>
+        /// <para>The end time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1762999521</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Sorting field</para>
+        /// <para>The field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreationTime</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>Sorting type: ASC or DESC</para>
+        /// <para>The sort order. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Scenario Name.</para>
+        /// <para>The scenario name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>百灵鸟-人员认证</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SceneName { get; set; }
 
         /// <summary>
-        /// <para>Start Time</para>
+        /// <para>The start time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-10-19T16:00:00Z</para>

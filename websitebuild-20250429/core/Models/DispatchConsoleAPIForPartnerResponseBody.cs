@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class DispatchConsoleAPIForPartnerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code. The value is as follows: If the request succeeds, the ErrorCode field is not returned. If the request fails, the ErrorCode field is returned. For more information, see the error code list in this topic.</para>
+        /// <para>The error code. If the request is successful, this field is not returned. If the request fails, this field is returned. For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public DispatchConsoleAPIForPartnerResponseBodyModule Module { get; set; }
         public class DispatchConsoleAPIForPartnerResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Request result.</para>
+            /// <para>The request result.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;HasCustomRoleAuth\&quot;: False}</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

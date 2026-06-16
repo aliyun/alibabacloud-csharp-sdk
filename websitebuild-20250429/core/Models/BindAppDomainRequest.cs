@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class BindAppDomainRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250820143531000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Domain Name</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xiaoniu.link</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Extended Information (OverwriteExistingRecord)</para>
+        /// <para>The extended information (OverwriteExistingRecord).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;网站验收\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>Domain Binding - Operation Type</para>
+        /// <para>The operation type for domain name binding.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vul_fix</para>

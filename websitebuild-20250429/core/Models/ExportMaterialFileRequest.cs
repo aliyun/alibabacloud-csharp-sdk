@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ExportMaterialFileRequest : TeaModel {
         /// <summary>
-        /// <para>Business instance ID</para>
+        /// <para>The business instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>List of file IDs</para>
+        /// <para>The list of file IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FileIds")]

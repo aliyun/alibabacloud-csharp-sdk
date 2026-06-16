@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetUserTmpIdentityForPartnerRequest : TeaModel {
         /// <summary>
-        /// <para>Authorization purpose</para>
+        /// <para>The purpose of the authorization.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BindDomain</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AuthPurpose { get; set; }
 
         /// <summary>
-        /// <para>Customer business ID</para>
+        /// <para>The business ID of the customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Whether the port number supports fuzzy query. To enable fuzzy query, set the value of this parameter to <b>1</b>. Any other value or an empty value indicates that fuzzy query is not supported.</para>
+        /// <para>Specifies whether fuzzy match is supported for port numbers. Set this parameter to <b>1</b> to enable fuzzy match. Other values or an empty value indicate that fuzzy match is not supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;deliveryNodeName\&quot;:\&quot;视觉设计确认\&quot;,\&quot;deliveryNodeStatus\&quot;:\&quot;Reject\&quot;,\&quot;deliveryOperatorRole\&quot;:\&quot;Customer\&quot;}</para>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Extend { get; set; }
 
         /// <summary>
-        /// <para>Service-linked role.  </para>
+        /// <para>The service-linked role.</para>
         /// <remarks>
-        /// <para>For service-linked roles supported by RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked Role</a>.</para>
+        /// <para>For information about the service-linked roles supported by ApsaraDB RDS, see <a href="https://help.aliyun.com/document_detail/342840.html">Service-linked roles</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ServiceLinkedRole { get; set; }
 
         /// <summary>
-        /// <para>User ID</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1231331311</para>

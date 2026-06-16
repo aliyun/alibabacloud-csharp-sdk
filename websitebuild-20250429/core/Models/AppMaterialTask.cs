@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AppMaterialTask : TeaModel {
         /// <summary>
-        /// <para>Job completion time</para>
+        /// <para>The task completion time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-26 11:30:05</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CompleteTime { get; set; }
 
         /// <summary>
-        /// <para>Completion time display format</para>
+        /// <para>The display format of the completion time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1分钟前</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CompleteTimeFormat { get; set; }
 
         /// <summary>
-        /// <para>Reason for failure</para>
+        /// <para>The failure reason.</para>
         /// 
         /// <b>Example:</b>
         /// <para>参数不合规</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FailReason { get; set; }
 
         /// <summary>
-        /// <para>List of final files</para>
+        /// <para>The list of final files.</para>
         /// </summary>
         [NameInMap("FinalFileUrls")]
         [Validation(Required=false)]
         public List<string> FinalFileUrls { get; set; }
 
         /// <summary>
-        /// <para>Task Status</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Job substatus</para>
+        /// <para>The task substatus.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PENDING</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SubStatus { get; set; }
 
         /// <summary>
-        /// <para>Submitted At.</para>
+        /// <para>The submit time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-12-26 11:30:05</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SubmitTime { get; set; }
 
         /// <summary>
-        /// <para>Job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81d04d62c3483b32bacf1d306d2622b2</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>Job parameter</para>
+        /// <para>The task parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string TaskParam { get; set; }
 
         /// <summary>
-        /// <para>Task Type.</para>
+        /// <para>The task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IMAGE_LOGO</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20250801152639000005</para>

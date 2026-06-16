@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class ListAIStaffChatMessagesRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Session ID</para>
+        /// <para>The conversation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>81bc5a34-1d8d-4ef7-a208-7401c51b054b</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>Number of data entries per page (10–100)</para>
+        /// <para>The number of records per page. Valid values: 10 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>gmtCreate of the last entry on the previous page; omit for the first page</para>
+        /// <para>The gmtCreate value of the last record on the previous page. Leave this parameter empty for the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

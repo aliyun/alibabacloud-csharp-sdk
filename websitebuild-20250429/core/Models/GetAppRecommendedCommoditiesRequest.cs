@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppRecommendedCommoditiesRequest : TeaModel {
         /// <summary>
-        /// <para>Application instance business ID (required in scenario 1, used to filter instance versions during query)</para>
+        /// <para>The business ID of the application instance. This parameter is required in scenario 1 and is used to filter by instance version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250703155602000001</para>
@@ -28,7 +28,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ResourceConditions { get; set; }
 
         /// <summary>
-        /// <para>Scenarios: ai_chat | inspiration</para>
+        /// <para>Scenarios. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>ai_chat</description></item>
+        /// <item><description>inspiration.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DataworksManualTask</para>

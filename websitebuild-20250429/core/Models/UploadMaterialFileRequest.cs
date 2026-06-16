@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class UploadMaterialFileRequest : TeaModel {
         /// <summary>
-        /// <para>Application Instance Business ID</para>
+        /// <para>The business ID of the application instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Parent Folder ID</para>
+        /// <para>The ID of the parent folder.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>File Path</para>
+        /// <para>The path of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// <para>File Name</para>
+        /// <para>The name of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试文件</para>

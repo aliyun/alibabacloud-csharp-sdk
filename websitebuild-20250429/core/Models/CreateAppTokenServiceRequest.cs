@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAppTokenServiceRequest : TeaModel {
         /// <summary>
-        /// <para>Subscription Type: OPEN_SUBSCRIPTION</para>
+        /// <para>The subscription type: OPEN_SUBSCRIPTION.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OPEN_SUBSCRIPTION</para>

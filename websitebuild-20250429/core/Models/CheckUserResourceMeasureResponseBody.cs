@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CheckUserResourceMeasureResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The detailed reason why access is denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed. Valid values:  </para>
+        /// <para>Indicates whether a retry is allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: Retry is not allowed.  </description></item>
-        /// <item><description>true: Retry is allowed.</description></item>
+        /// <item><description>false: A retry is not allowed.</description></item>
+        /// <item><description>true: A retry is allowed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Application name. Query the application with this name.</para>
+        /// <para>The application name. The application with this name is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error message used to replace <c>%s</c> in the <b>ErrMessage</b> error message.  </para>
+        /// <para>The dynamic error message, which is used to replace the <c>%s</c> placeholder in the <b>ErrMessage</b> response element.</para>
         /// <remarks>
-        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, it indicates that the provided request parameter <b>DtsJobId</b> is invalid.</para>
+        /// <para>If <b>ErrMessage</b> returns <b>The Value of Input Parameter %s is not valid</b> and <b>DynamicMessage</b> returns <b>DtsJobId</b>, the request parameter <b>DtsJobId</b> is invalid.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,21 +67,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error parameters.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Returned object.</para>
+        /// <para>The response object.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public CheckUserResourceMeasureResponseBodyModule Module { get; set; }
         public class CheckUserResourceMeasureResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Error code when failed; null when passed</para>
+            /// <para>The error code when the check fails. This value is null when the check passes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ErrorCode { get; set; }
 
             /// <summary>
-            /// <para>Error message when failed; null when passed</para>
+            /// <para>The error message when the check fails. This value is null when the check passes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>stream push failed</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the check passed</para>
+            /// <para>Indicates whether the check is passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public bool? Passed { get; set; }
 
             /// <summary>
-            /// <para>Resource identity</para>
+            /// <para>The resource identifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TransitRouterVpcAttachment</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

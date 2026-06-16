@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class QuerySupabaseConfigsForAdminRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID</para>
+        /// <para>The business ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>Sorting field</para>
+        /// <para>The field used for sorting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gmtCreated</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderColumn { get; set; }
 
         /// <summary>
-        /// <para>Sorting type: ASC or DESC</para>
+        /// <para>The sort type. Valid values: ASC and DESC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BUY</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is 10</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>User ID</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111</para>

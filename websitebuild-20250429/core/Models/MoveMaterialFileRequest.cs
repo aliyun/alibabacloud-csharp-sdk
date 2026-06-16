@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class MoveMaterialFileRequest : TeaModel {
         /// <summary>
-        /// <para>Application instance ID</para>
+        /// <para>The application instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>Folder ID</para>
+        /// <para>The folder ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>List of file IDs</para>
+        /// <para>The list of file IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FileIds")]

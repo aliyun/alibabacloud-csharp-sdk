@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class GetAppConversationLockStatusRequest : TeaModel {
         /// <summary>
-        /// <para>session ID</para>
+        /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5b7105a2-2999-430b-ba23-ba09149d5434</para>

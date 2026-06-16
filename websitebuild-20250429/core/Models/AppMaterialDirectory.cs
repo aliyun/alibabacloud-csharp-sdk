@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class AppMaterialDirectory : TeaModel {
         /// <summary>
-        /// <para>Application instance business ID</para>
+        /// <para>The business ID of the application instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250814102215000001</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>List of subfolders</para>
+        /// <para>The list of subfolders.</para>
         /// </summary>
         [NameInMap("Children")]
         [Validation(Required=false)]
         public List<AppMaterialDirectory> Children { get; set; }
 
         /// <summary>
-        /// <para>Folder ID.</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WS20260206134746000001-system</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>Name</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>图片管理</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Sorting number</para>
+        /// <para>The sort number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string SortNum { get; set; }
 
         /// <summary>
-        /// <para>Folder type</para>
+        /// <para>The folder type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CUSTOM</para>

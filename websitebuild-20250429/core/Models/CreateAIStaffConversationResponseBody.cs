@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class CreateAIStaffConversationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed reason for access denial.</para>
+        /// <para>The detailed reason why access was denied.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Is retry allowed</para>
+        /// <para>Indicates whether retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? AllowRetry { get; set; }
 
         /// <summary>
-        /// <para>Application name. Query the application with this name.</para>
+        /// <para>The application name. The application with this name is queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spring-cloud-b</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Dynamic error code.</para>
+        /// <para>The dynamic error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ERROR-oo1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message.</para>
+        /// <para>The dynamic message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM_ERROR</para>
@@ -60,21 +60,21 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Returned error parameters</para>
+        /// <para>The error parameters returned.</para>
         /// </summary>
         [NameInMap("ErrorArgs")]
         [Validation(Required=false)]
         public List<object> ErrorArgs { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Module")]
         [Validation(Required=false)]
         public CreateAIStaffConversationResponseBodyModule Module { get; set; }
         public class CreateAIStaffConversationResponseBodyModule : TeaModel {
             /// <summary>
-            /// <para>Bot ID</para>
+            /// <para>The chatbot ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zero2</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string BotId { get; set; }
 
             /// <summary>
-            /// <para>ID of the chat.</para>
+            /// <para>The chat ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>53467af9-8c4e-4498-9032-1f26978007f8</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ChatId { get; set; }
 
             /// <summary>
-            /// <para>Session ID</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8642d886-0322-43a9-b12f-6629b067978c</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>Section ID of the check item.</para>
+            /// <para>The section ID of the check item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SectionId { get; set; }
 
             /// <summary>
-            /// <para>Site ID, which can be obtained by invoking the <a href="~~ListSites~~">ListSites</a> API.</para>
+            /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>865181640657408</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
             public string SiteId { get; set; }
 
             /// <summary>
-            /// <para>Current point, equivalent to a news title</para>
+            /// <para>The current viewpoint, equivalent to the news title.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Feel Like Makin\&quot; Love</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM.ERROR</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Abnormal message</para>
+        /// <para>The exception message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>系统异常</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RootErrorMsg { get; set; }
 
         /// <summary>
-        /// <para>Backup parameter.</para>
+        /// <para>The reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

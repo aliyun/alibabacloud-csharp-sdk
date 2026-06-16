@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SearchImageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Color</para>
+        /// <para>The color.</para>
         /// 
         /// <b>Example:</b>
         /// <para>#B0B0B0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ColorHex { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the image contains a person.</para>
+        /// <para>Specifies whether the image contains a person.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -30,11 +30,11 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? HasPerson { get; set; }
 
         /// <summary>
-        /// <para>Image category. Valid values:</para>
+        /// <para>The image category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>normal: Illustrations or article images.</description></item>
-        /// <item><description>banner: Background images or image carousels.</description></item>
-        /// <item><description>goods: Product or service images.</description></item>
+        /// <item><description>normal: illustrations or article images.</description></item>
+        /// <item><description>banner: background images or carousel images.</description></item>
+        /// <item><description>goods: product or service images.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,13 +45,13 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ImageCategory { get; set; }
 
         /// <summary>
-        /// <para>Image aspect ratio, including:
+        /// <para>The aspect ratio of the image. Valid values:
         /// &quot;16:9&quot;
         /// &quot;4:3&quot;
         /// &quot;2:1&quot;
         /// &quot;1:1&quot;
         /// &quot;3:4&quot;
-        /// &quot;9:16&quot;</para>
+        /// &quot;9:16&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16:9</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string ImageRatio { get; set; }
 
         /// <summary>
-        /// <para>Maximum image height.</para>
+        /// <para>The maximum height of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4000</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxHeight { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page in a paged query. Maximum value is 100. Default value is 20.</para>
+        /// <para>The number of entries per page for paging queries. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Maximum image width (inclusive).</para>
+        /// <para>The maximum width of the image, inclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4000</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MaxWidth { get; set; }
 
         /// <summary>
-        /// <para>Minimum image height</para>
+        /// <para>The minimum height of the image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MinHeight { get; set; }
 
         /// <summary>
-        /// <para>Minimum image width (inclusive).</para>
+        /// <para>The minimum width of the image, inclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? MinWidth { get; set; }
 
         /// <summary>
-        /// <para>Query credential (Token). Set this parameter to the NextToken value returned in the previous API call. You do not need to set this parameter for the initial API call. If NextToken is specified, the request parameters PageSize and PageNumber become invalid, and the TotalCount in the returned data is also invalid.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters do not take effect, and the TotalCount value in the response is invalid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FFh3Xqm+JgZ/U9Jyb7wdVr9LWk80Tghn5UZjbcWEVEderBcbVF+Y6PS0i8PpCL4PQZ3e0C9oEH0Asd4tJEuGtkl2WuKdiWZpEwadNydQdJPFM=</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Osskey。</para>
+        /// <para>The OSS key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>backend/detection/objects/r-0008ujvfksltf5j45n81/task-000hckiuwyau0gwn17vq.jpg</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>Number of results to return. Default value is 10.</para>
+        /// <para>The number of returned results. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>Starting position of the return result. Valid values: 0 to 499. Default value is 0.</para>
+        /// <para>The start position of the returned results. Valid values: 0 to 499. Default value: 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -151,16 +151,16 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public int? Start { get; set; }
 
         /// <summary>
-        /// <para>Tags.</para>
+        /// <para>The tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>Description text for searching images.</para>
+        /// <para>The description text used to search for images.</para>
         /// <remarks>
-        /// <para>Supports up to 512 characters.</para>
+        /// <para>Maximum length: 512 characters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

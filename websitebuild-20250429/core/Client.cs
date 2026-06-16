@@ -39,12 +39,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assign a Supabase instance to a resource</para>
+        /// <para>Allocates a Supabase instance for resource allocation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -110,12 +110,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assign a Supabase instance to a resource</para>
+        /// <para>Allocates a Supabase instance for resource allocation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -181,12 +181,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assign a Supabase instance to a resource</para>
+        /// <para>Allocates a Supabase instance for resource allocation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -204,12 +204,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Assign a Supabase instance to a resource</para>
+        /// <para>Allocates a Supabase instance for resource allocation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -227,12 +227,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch check resource usage</para>
+        /// <para>Checks resource usage in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation resource-related Supabase instance information</para>
+        /// <para>The Supabase instance information corresponding to the operated resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -294,12 +294,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch check resource usage</para>
+        /// <para>Checks resource usage in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation resource-related Supabase instance information</para>
+        /// <para>The Supabase instance information corresponding to the operated resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -361,12 +361,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch check resource usage</para>
+        /// <para>Checks resource usage in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation resource-related Supabase instance information</para>
+        /// <para>The Supabase instance information corresponding to the operated resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -384,12 +384,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch check resource usage</para>
+        /// <para>Checks resource usage in batches.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Operation resource-related Supabase instance information</para>
+        /// <para>The Supabase instance information corresponding to the operated resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -407,7 +407,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bind Application Domain</para>
+        /// <para>Binds a custom domain name to an application and automatically completes DNS resolution verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -461,7 +461,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bind Application Domain</para>
+        /// <para>Binds a custom domain name to an application and automatically completes DNS resolution verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -515,7 +515,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bind Application Domain</para>
+        /// <para>Binds a custom domain name to an application and automatically completes DNS resolution verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -533,7 +533,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Bind Application Domain</para>
+        /// <para>Binds a custom domain name to an application and automatically completes DNS resolution verification.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -551,12 +551,176 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check resource usage</para>
+        /// <para>Verifies a verification code.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckAppVerifyCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAppVerifyCodeResponse
+        /// </returns>
+        public CheckAppVerifyCodeResponse CheckAppVerifyCodeWithOptions(CheckAppVerifyCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                query["Target"] = request.Target;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckAppVerifyCode",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckAppVerifyCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies a verification code.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckAppVerifyCodeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAppVerifyCodeResponse
+        /// </returns>
+        public async Task<CheckAppVerifyCodeResponse> CheckAppVerifyCodeWithOptionsAsync(CheckAppVerifyCodeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                query["Code"] = request.Code;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Target))
+            {
+                query["Target"] = request.Target;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CheckAppVerifyCode",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CheckAppVerifyCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies a verification code.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckAppVerifyCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAppVerifyCodeResponse
+        /// </returns>
+        public CheckAppVerifyCodeResponse CheckAppVerifyCode(CheckAppVerifyCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CheckAppVerifyCodeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Verifies a verification code.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CheckAppVerifyCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CheckAppVerifyCodeResponse
+        /// </returns>
+        public async Task<CheckAppVerifyCodeResponse> CheckAppVerifyCodeAsync(CheckAppVerifyCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CheckAppVerifyCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks resource usage.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -622,12 +786,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check resource usage</para>
+        /// <para>Checks resource usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -693,12 +857,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check resource usage</para>
+        /// <para>Checks resource usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -716,12 +880,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Check resource usage</para>
+        /// <para>Checks resource usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -739,12 +903,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate user resource metering</para>
+        /// <para>Checks user resource metering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -810,12 +974,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate user resource metering</para>
+        /// <para>Checks user resource metering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -881,12 +1045,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate user resource metering</para>
+        /// <para>Checks user resource metering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -904,12 +1068,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Validate user resource metering</para>
+        /// <para>Checks user resource metering.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1303,12 +1467,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an AI employee conversation asynchronously</para>
+        /// <para>Asynchronously initiates a conversation with an AI employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 AI conversation</para>
+        /// <para>Initiates a WanXiaoZhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1372,12 +1536,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an AI employee conversation asynchronously</para>
+        /// <para>Asynchronously initiates a conversation with an AI employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 AI conversation</para>
+        /// <para>Initiates a WanXiaoZhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1441,12 +1605,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an AI employee conversation asynchronously</para>
+        /// <para>Asynchronously initiates a conversation with an AI employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 AI conversation</para>
+        /// <para>Initiates a WanXiaoZhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1464,12 +1628,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate an AI employee conversation asynchronously</para>
+        /// <para>Asynchronously initiates a conversation with an AI employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 AI conversation</para>
+        /// <para>Initiates a WanXiaoZhi 2.0 AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1487,12 +1651,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an AI agent session</para>
+        /// <para>Creates an AI employee session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 API for creating an AI session</para>
+        /// <para>Creates an AI session for WanXiaoZhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1534,12 +1698,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an AI agent session</para>
+        /// <para>Creates an AI employee session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 API for creating an AI session</para>
+        /// <para>Creates an AI session for WanXiaoZhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1581,12 +1745,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an AI agent session</para>
+        /// <para>Creates an AI employee session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 API for creating an AI session</para>
+        /// <para>Creates an AI session for WanXiaoZhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1604,12 +1768,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create an AI agent session</para>
+        /// <para>Creates an AI employee session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 API for creating an AI session</para>
+        /// <para>Creates an AI session for WanXiaoZhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1627,12 +1791,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Application Assistant Agent</para>
+        /// <para>Creates an application assistant agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1682,12 +1846,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Application Assistant Agent</para>
+        /// <para>Creates an application assistant agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1737,12 +1901,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Application Assistant Agent</para>
+        /// <para>Creates an application assistant agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1760,12 +1924,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Application Assistant Agent</para>
+        /// <para>Creates an application assistant agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1783,12 +1947,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate application assistant SSO logon</para>
+        /// <para>Generates an SSO logon-free URL for an application assistant agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1838,12 +2002,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate application assistant SSO logon</para>
+        /// <para>Generates an SSO logon-free URL for an application assistant agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1893,12 +2057,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate application assistant SSO logon</para>
+        /// <para>Generates an SSO logon-free URL for an application assistant agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1916,12 +2080,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Generate application assistant SSO logon</para>
+        /// <para>Generates an SSO logon-free URL for an application assistant agent.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2091,7 +2255,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a website instance</para>
+        /// <para>Creates a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2201,7 +2365,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a website instance</para>
+        /// <para>Creates a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2311,7 +2475,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a website instance</para>
+        /// <para>Creates a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2329,7 +2493,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a website instance</para>
+        /// <para>Creates a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2347,7 +2511,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SSO ticket</para>
+        /// <para>Creates a login-free ticket for a website builder instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2393,7 +2557,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SSO ticket</para>
+        /// <para>Creates a login-free ticket for a website builder instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2439,7 +2603,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SSO ticket</para>
+        /// <para>Creates a login-free ticket for a website builder instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2457,7 +2621,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SSO ticket</para>
+        /// <para>Creates a login-free ticket for a website builder instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2639,12 +2803,240 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate the Wanxiao Zhi Inspiration Value service</para>
+        /// <para>Creates a message notification scenario.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAppNotificationSceneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAppNotificationSceneResponse
+        /// </returns>
+        public CreateAppNotificationSceneResponse CreateAppNotificationSceneWithOptions(CreateAppNotificationSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelsJson))
+            {
+                query["ChannelsJson"] = request.ChannelsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailFieldsJson))
+            {
+                query["EmailFieldsJson"] = request.EmailFieldsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailLimitJson))
+            {
+                query["EmailLimitJson"] = request.EmailLimitJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailRecipientIdsJson))
+            {
+                query["EmailRecipientIdsJson"] = request.EmailRecipientIdsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneRecipientIdsJson))
+            {
+                query["PhoneRecipientIdsJson"] = request.PhoneRecipientIdsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsFieldsJson))
+            {
+                query["SmsFieldsJson"] = request.SmsFieldsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsLimitJson))
+            {
+                query["SmsLimitJson"] = request.SmsLimitJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerEventsJson))
+            {
+                query["TriggerEventsJson"] = request.TriggerEventsJson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAppNotificationScene",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppNotificationSceneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a message notification scenario.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAppNotificationSceneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAppNotificationSceneResponse
+        /// </returns>
+        public async Task<CreateAppNotificationSceneResponse> CreateAppNotificationSceneWithOptionsAsync(CreateAppNotificationSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelsJson))
+            {
+                query["ChannelsJson"] = request.ChannelsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailFieldsJson))
+            {
+                query["EmailFieldsJson"] = request.EmailFieldsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailLimitJson))
+            {
+                query["EmailLimitJson"] = request.EmailLimitJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmailRecipientIdsJson))
+            {
+                query["EmailRecipientIdsJson"] = request.EmailRecipientIdsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PhoneRecipientIdsJson))
+            {
+                query["PhoneRecipientIdsJson"] = request.PhoneRecipientIdsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsFieldsJson))
+            {
+                query["SmsFieldsJson"] = request.SmsFieldsJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SmsLimitJson))
+            {
+                query["SmsLimitJson"] = request.SmsLimitJson;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableName))
+            {
+                query["TableName"] = request.TableName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerEventsJson))
+            {
+                query["TriggerEventsJson"] = request.TriggerEventsJson;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAppNotificationScene",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAppNotificationSceneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a message notification scenario.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAppNotificationSceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAppNotificationSceneResponse
+        /// </returns>
+        public CreateAppNotificationSceneResponse CreateAppNotificationScene(CreateAppNotificationSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAppNotificationSceneWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a message notification scenario.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAppNotificationSceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAppNotificationSceneResponse
+        /// </returns>
+        public async Task<CreateAppNotificationSceneResponse> CreateAppNotificationSceneAsync(CreateAppNotificationSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAppNotificationSceneWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Activates the Wanxiaozhi inspiration value service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2686,12 +3078,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate the Wanxiao Zhi Inspiration Value service</para>
+        /// <para>Activates the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2733,12 +3125,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate the Wanxiao Zhi Inspiration Value service</para>
+        /// <para>Activates the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2756,12 +3148,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Activate the Wanxiao Zhi Inspiration Value service</para>
+        /// <para>Activates the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2779,7 +3171,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Commit a job to create a logo.</para>
+        /// <para>Submits a task to create a logo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2833,7 +3225,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Commit a job to create a logo.</para>
+        /// <para>Submits a task to create a logo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2887,7 +3279,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Commit a job to create a logo.</para>
+        /// <para>Submits a task to create a logo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2905,7 +3297,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Commit a job to create a logo.</para>
+        /// <para>Submits a task to create a logo.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2923,7 +3315,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a subfolder under the parent folder.</para>
+        /// <para>Creates a subfolder under a parent folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2973,7 +3365,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a subfolder under the parent folder.</para>
+        /// <para>Creates a subfolder under a parent folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3023,7 +3415,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a subfolder under the parent folder.</para>
+        /// <para>Creates a subfolder under a parent folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3041,7 +3433,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a subfolder under the parent folder.</para>
+        /// <para>Creates a subfolder under a parent folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3059,7 +3451,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the SSL certificate of a domain</para>
+        /// <para>Deletes and unbinds the SSL certificate that is bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3105,7 +3497,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the SSL certificate of a domain</para>
+        /// <para>Deletes and unbinds the SSL certificate that is bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3151,7 +3543,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the SSL certificate of a domain</para>
+        /// <para>Deletes and unbinds the SSL certificate that is bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3169,7 +3561,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the SSL certificate of a domain</para>
+        /// <para>Deletes and unbinds the SSL certificate that is bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3187,7 +3579,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the domain redirection rules</para>
+        /// <para>Deletes 301 redirect records bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3233,7 +3625,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the domain redirection rules</para>
+        /// <para>Deletes 301 redirect records bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3279,7 +3671,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the domain redirection rules</para>
+        /// <para>Deletes 301 redirect records bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3297,7 +3689,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete the domain redirection rules</para>
+        /// <para>Deletes 301 redirect records bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3611,6 +4003,154 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除消息通知场景</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询应用实例信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAppNotificationSceneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAppNotificationSceneResponse
+        /// </returns>
+        public DeleteAppNotificationSceneResponse DeleteAppNotificationSceneWithOptions(DeleteAppNotificationSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAppNotificationScene",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppNotificationSceneResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除消息通知场景</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询应用实例信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAppNotificationSceneRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAppNotificationSceneResponse
+        /// </returns>
+        public async Task<DeleteAppNotificationSceneResponse> DeleteAppNotificationSceneWithOptionsAsync(DeleteAppNotificationSceneRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAppNotificationScene",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAppNotificationSceneResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除消息通知场景</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询应用实例信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAppNotificationSceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAppNotificationSceneResponse
+        /// </returns>
+        public DeleteAppNotificationSceneResponse DeleteAppNotificationScene(DeleteAppNotificationSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAppNotificationSceneWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除消息通知场景</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询应用实例信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAppNotificationSceneRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAppNotificationSceneResponse
+        /// </returns>
+        public async Task<DeleteAppNotificationSceneResponse> DeleteAppNotificationSceneAsync(DeleteAppNotificationSceneRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAppNotificationSceneWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Delete Supabase key</para>
         /// </summary>
         /// 
@@ -3759,7 +4299,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a material folder</para>
+        /// <para>Deletes a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3805,7 +4345,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a material folder</para>
+        /// <para>Deletes a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3851,7 +4391,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a material folder</para>
+        /// <para>Deletes a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3869,7 +4409,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a material folder</para>
+        /// <para>Deletes a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3887,7 +4427,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Material Generation Job</para>
+        /// <para>Deletes a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3935,7 +4475,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Material Generation Job</para>
+        /// <para>Deletes a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3983,7 +4523,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Material Generation Job</para>
+        /// <para>Deletes a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4001,7 +4541,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete Material Generation Job</para>
+        /// <para>Deletes a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4019,7 +4559,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the DNS resolution records of a domain</para>
+        /// <para>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4069,7 +4609,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the DNS resolution records of a domain</para>
+        /// <para>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4119,7 +4659,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the DNS resolution records of a domain</para>
+        /// <para>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4137,7 +4677,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the DNS resolution records of a domain</para>
+        /// <para>Query website DNS resolution records. Supports CNAME resolution and verification resolution queries.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4155,7 +4695,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DispatchConsoleAPIForPartner</para>
+        /// <para>Calls a general-purpose API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4213,7 +4753,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DispatchConsoleAPIForPartner</para>
+        /// <para>Calls a general-purpose API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4271,7 +4811,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DispatchConsoleAPIForPartner</para>
+        /// <para>Calls a general-purpose API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4289,7 +4829,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>DispatchConsoleAPIForPartner</para>
+        /// <para>Calls a general-purpose API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4307,7 +4847,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit plugin configuration.</para>
+        /// <para>Edits a plug-in configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4365,7 +4905,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit plugin configuration.</para>
+        /// <para>Edits a plug-in configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4423,7 +4963,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit plugin configuration.</para>
+        /// <para>Edits a plug-in configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4441,7 +4981,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edit plugin configuration.</para>
+        /// <para>Edits a plug-in configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4459,7 +4999,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export material files</para>
+        /// <para>Exports a material file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4511,7 +5051,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export material files</para>
+        /// <para>Exports a material file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4563,7 +5103,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export material files</para>
+        /// <para>Exports a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4581,7 +5121,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export material files</para>
+        /// <para>Exports a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5035,12 +5575,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain session lock status</para>
+        /// <para>Retrieves the session lock status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 API for creating AI sessions</para>
+        /// <para>Creates an AI session through the WanXiaoZhi 2.0 interface.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5082,12 +5622,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain session lock status</para>
+        /// <para>Retrieves the session lock status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 API for creating AI sessions</para>
+        /// <para>Creates an AI session through the WanXiaoZhi 2.0 interface.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5129,12 +5669,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain session lock status</para>
+        /// <para>Retrieves the session lock status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 API for creating AI sessions</para>
+        /// <para>Creates an AI session through the WanXiaoZhi 2.0 interface.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5152,12 +5692,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain session lock status</para>
+        /// <para>Retrieves the session lock status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 API for creating AI sessions</para>
+        /// <para>Creates an AI session through the WanXiaoZhi 2.0 interface.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5471,7 +6011,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Application Instance Details</para>
+        /// <para>Queries the details of a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5513,7 +6053,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Application Instance Details</para>
+        /// <para>Queries the details of a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5555,7 +6095,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Application Instance Details</para>
+        /// <para>Queries the details of a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5573,7 +6113,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Application Instance Details</para>
+        /// <para>Queries the details of a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5731,12 +6271,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5782,12 +6322,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5833,12 +6373,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5856,12 +6396,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5879,12 +6419,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query instance details</para>
+        /// <para>Queries instance details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5926,12 +6466,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query instance details</para>
+        /// <para>Queries instance details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5973,12 +6513,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query instance details</para>
+        /// <para>Queries instance details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5996,12 +6536,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query instance details</para>
+        /// <para>Queries instance details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6159,12 +6699,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain plugin configuration information.</para>
+        /// <para>Retrieves the configuration information of a plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6210,12 +6750,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain plugin configuration information.</para>
+        /// <para>Retrieves the configuration information of a plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6261,12 +6801,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain plugin configuration information.</para>
+        /// <para>Retrieves the configuration information of a plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6284,12 +6824,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain plugin configuration information.</para>
+        /// <para>Retrieves the configuration information of a plugin.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin.</para>
+        /// <para>Retrieves the configuration information of a code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6463,12 +7003,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query recommended products</para>
+        /// <para>Queries recommended commodities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6522,12 +7062,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query recommended products</para>
+        /// <para>Queries recommended commodities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6581,12 +7121,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query recommended products</para>
+        /// <para>Queries recommended commodities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6604,12 +7144,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query recommended products</para>
+        /// <para>Queries recommended commodities.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6627,12 +7167,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requirement query</para>
+        /// <para>Queries requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6674,12 +7214,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requirement query</para>
+        /// <para>Queries requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6721,12 +7261,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requirement query</para>
+        /// <para>Queries requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6744,12 +7284,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Requirement query</para>
+        /// <para>Queries requirements.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain barcode generation plugin configuration information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7959,12 +8499,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Wan Xiaozhi Inspiration Value service</para>
+        /// <para>Queries the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -7994,12 +8534,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Wan Xiaozhi Inspiration Value service</para>
+        /// <para>Queries the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -8029,12 +8569,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Wan Xiaozhi Inspiration Value service</para>
+        /// <para>Queries the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <returns>
@@ -8048,12 +8588,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Wan Xiaozhi Inspiration Value service</para>
+        /// <para>Queries the Wanxiaozhi inspiration value service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <returns>
@@ -8067,12 +8607,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the workspace directory structure</para>
+        /// <para>Retrieves the directory structure of a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8122,12 +8662,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the workspace directory structure</para>
+        /// <para>Retrieves the directory structure of a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8177,12 +8717,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the workspace directory structure</para>
+        /// <para>Retrieves the directory structure of a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8200,12 +8740,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the workspace directory structure</para>
+        /// <para>Retrieves the directory structure of a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8223,7 +8763,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Logo creation job</para>
+        /// <para>Queries a logo creation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8265,7 +8805,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Logo creation job</para>
+        /// <para>Queries a logo creation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8307,7 +8847,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Logo creation job</para>
+        /// <para>Queries a logo creation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8325,7 +8865,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Logo creation job</para>
+        /// <para>Queries a logo creation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8343,7 +8883,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Domain name query API provided to service providers</para>
+        /// <para>Provides a domain name query API for service providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8393,7 +8933,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Domain name query API provided to service providers</para>
+        /// <para>Provides a domain name query API for service providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8443,7 +8983,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Domain name query API provided to service providers</para>
+        /// <para>Provides a domain name query API for service providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8461,7 +9001,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Domain name query API provided to service providers</para>
+        /// <para>Provides a domain name query API for service providers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8479,7 +9019,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query ICP filing information of a domain name</para>
+        /// <para>Queries the China Internet Content Provider (ICP) filing information of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8525,7 +9065,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query ICP filing information of a domain name</para>
+        /// <para>Queries the China Internet Content Provider (ICP) filing information of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8571,7 +9111,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query ICP filing information of a domain name</para>
+        /// <para>Queries the China Internet Content Provider (ICP) filing information of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8589,7 +9129,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query ICP filing information of a domain name</para>
+        /// <para>Queries the China Internet Content Provider (ICP) filing information of a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8607,12 +9147,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query LLM Proxy configuration</para>
+        /// <para>Queries the LLM Proxy configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8658,12 +9198,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query LLM Proxy configuration</para>
+        /// <para>Queries the LLM Proxy configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8709,12 +9249,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query LLM Proxy configuration</para>
+        /// <para>Queries the LLM Proxy configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8732,12 +9272,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query LLM Proxy configuration</para>
+        /// <para>Queries the LLM Proxy configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9475,7 +10015,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exchange temporary AccessKey for accessToken</para>
+        /// <para>Exchanges a temporary AccessKey pair for an access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9521,7 +10061,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exchange temporary AccessKey for accessToken</para>
+        /// <para>Exchanges a temporary AccessKey pair for an access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9567,7 +10107,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exchange temporary AccessKey for accessToken</para>
+        /// <para>Exchanges a temporary AccessKey pair for an access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9585,7 +10125,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exchange temporary AccessKey for accessToken</para>
+        /// <para>Exchanges a temporary AccessKey pair for an access token.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9603,7 +10143,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership obtains temporary credentials for User SLR role authorization</para>
+        /// <para>Obtains temporary credentials for a partner to assume a user\&quot;s service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9661,7 +10201,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership obtains temporary credentials for User SLR role authorization</para>
+        /// <para>Obtains temporary credentials for a partner to assume a user\&quot;s service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9719,7 +10259,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership obtains temporary credentials for User SLR role authorization</para>
+        /// <para>Obtains temporary credentials for a partner to assume a user\&quot;s service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9737,7 +10277,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership obtains temporary credentials for User SLR role authorization</para>
+        /// <para>Obtains temporary credentials for a partner to assume a user\&quot;s service-linked role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9755,7 +10295,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Introspection analysis of免登 accessToken</para>
+        /// <para>Performs introspection analysis on a China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9801,7 +10341,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Introspection analysis of免登 accessToken</para>
+        /// <para>Performs introspection analysis on a China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9847,7 +10387,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Introspection analysis of免登 accessToken</para>
+        /// <para>Performs introspection analysis on a China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9865,7 +10405,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Introspection analysis of免登 accessToken</para>
+        /// <para>Performs introspection analysis on a China Chinese China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China China.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9883,12 +10423,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain incremental SSE events of AI employee conversations</para>
+        /// <para>Retrieves incremental SSE events for an AI agent conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 – Retrieve streaming output results of AI sessions</para>
+        /// <para>Retrieves the streaming output results of an AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9944,12 +10484,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain incremental SSE events of AI employee conversations</para>
+        /// <para>Retrieves incremental SSE events for an AI agent conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 – Retrieve streaming output results of AI sessions</para>
+        /// <para>Retrieves the streaming output results of an AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10005,12 +10545,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain incremental SSE events of AI employee conversations</para>
+        /// <para>Retrieves incremental SSE events for an AI agent conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 – Retrieve streaming output results of AI sessions</para>
+        /// <para>Retrieves the streaming output results of an AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10028,12 +10568,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain incremental SSE events of AI employee conversations</para>
+        /// <para>Retrieves incremental SSE events for an AI agent conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 – Retrieve streaming output results of AI sessions</para>
+        /// <para>Retrieves the streaming output results of an AI conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10051,12 +10591,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged query of AI employee conversation message list</para>
+        /// <para>Queries the conversation message list of an AI employee by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 - API for querying AI session history information</para>
+        /// <para>Queries the AI session history for WanXiaoZhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10112,12 +10652,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged query of AI employee conversation message list</para>
+        /// <para>Queries the conversation message list of an AI employee by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 - API for querying AI session history information</para>
+        /// <para>Queries the AI session history for WanXiaoZhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10173,12 +10713,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged query of AI employee conversation message list</para>
+        /// <para>Queries the conversation message list of an AI employee by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 - API for querying AI session history information</para>
+        /// <para>Queries the AI session history for WanXiaoZhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10196,12 +10736,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Paged query of AI employee conversation message list</para>
+        /// <para>Queries the conversation message list of an AI employee by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Wan Xiaozhi 2.0 - API for querying AI session history information</para>
+        /// <para>Queries the AI session history for WanXiaoZhi 2.0.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10219,12 +10759,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of application assistant agents</para>
+        /// <para>Queries the list of application assistant agents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10270,12 +10810,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of application assistant agents</para>
+        /// <para>Queries the list of application assistant agents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10321,12 +10861,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of application assistant agents</para>
+        /// <para>Queries the list of application assistant agents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10344,12 +10884,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of application assistant agents</para>
+        /// <para>Queries the list of application assistant agents.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query application instance information</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10543,12 +11083,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Product information data</para>
+        /// <para>The product information data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -10584,12 +11124,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Product information data</para>
+        /// <para>The product information data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -10625,12 +11165,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Product information data</para>
+        /// <para>The product information data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <returns>
@@ -10650,12 +11190,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Product information data</para>
+        /// <para>The product information data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <returns>
@@ -10671,12 +11211,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query website building product details</para>
+        /// <para>Query Website Build Product Details</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Get QR code plugin configuration information</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10722,12 +11262,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query website building product details</para>
+        /// <para>Query Website Build Product Details</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Get QR code plugin configuration information</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10773,12 +11313,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query website building product details</para>
+        /// <para>Query Website Build Product Details</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Get QR code plugin configuration information</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10796,12 +11336,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query website building product details</para>
+        /// <para>Query Website Build Product Details</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Get QR code plugin configuration information</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11195,7 +11735,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of domain redirection rules</para>
+        /// <para>Queries the list of HTTP 301 status code redirects for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11245,7 +11785,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of domain redirection rules</para>
+        /// <para>Queries the list of HTTP 301 status code redirects for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11295,7 +11835,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of domain redirection rules</para>
+        /// <para>Queries the list of HTTP 301 status code redirects for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11313,7 +11853,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of domain redirection rules</para>
+        /// <para>Queries the list of HTTP 301 status code redirects for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11331,7 +11871,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List all domain names under the application instance</para>
+        /// <para>Queries the list of domain names bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11401,7 +11941,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List all domain names under the application instance</para>
+        /// <para>Queries the list of domain names bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11471,7 +12011,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List all domain names under the application instance</para>
+        /// <para>Queries the list of domain names bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11489,7 +12029,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List all domain names under the application instance</para>
+        /// <para>Queries the list of domain names bound to a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11507,7 +12047,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Website Instance List Query</para>
+        /// <para>Queries the list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11599,7 +12139,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Website Instance List Query</para>
+        /// <para>Queries the list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -11691,7 +12231,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Website Instance List Query</para>
+        /// <para>Queries the list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11709,7 +12249,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Website Instance List Query</para>
+        /// <para>Queries the list of application instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12807,7 +13347,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the configuration of a building instance</para>
+        /// <para>Modifies the specifications of a website building application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12873,7 +13413,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the configuration of a building instance</para>
+        /// <para>Modifies the specifications of a website building application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12939,7 +13479,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the configuration of a building instance</para>
+        /// <para>Modifies the specifications of a website building application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12957,7 +13497,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the configuration of a building instance</para>
+        /// <para>Modifies the specifications of a website building application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12975,7 +13515,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a material folder</para>
+        /// <para>Modifies a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13025,7 +13565,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a material folder</para>
+        /// <para>Modifies a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13075,7 +13615,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a material folder</para>
+        /// <para>Modifies a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13093,7 +13633,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a material folder</para>
+        /// <para>Modifies a material folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13111,7 +13651,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a material file</para>
+        /// <para>Modifies a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13161,7 +13701,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a material file</para>
+        /// <para>Modifies a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13211,7 +13751,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a material file</para>
+        /// <para>Modifies a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13229,7 +13769,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify a material file</para>
+        /// <para>Modifies a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13247,7 +13787,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the status of a material file</para>
+        /// <para>Modifies the status of a material file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13303,7 +13843,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the status of a material file</para>
+        /// <para>Modifies the status of a material file.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13359,7 +13899,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the status of a material file</para>
+        /// <para>Modifies the status of a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13377,7 +13917,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the status of a material file</para>
+        /// <para>Modifies the status of a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13395,7 +13935,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift material folder</para>
+        /// <para>Moves a material file folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13449,7 +13989,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift material folder</para>
+        /// <para>Moves a material file folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13503,7 +14043,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift material folder</para>
+        /// <para>Moves a material file folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13521,7 +14061,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift material folder</para>
+        /// <para>Moves a material file folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13539,7 +14079,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift material files</para>
+        /// <para>Moves media asset files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13595,7 +14135,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift material files</para>
+        /// <para>Moves media asset files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13651,7 +14191,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift material files</para>
+        /// <para>Moves media asset files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13669,7 +14209,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Shift material files</para>
+        /// <para>Moves media asset files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13687,7 +14227,163 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operate application for Partnership</para>
+        /// <para>数据变更通知触发（for admin）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询应用实例信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// NotifyAppNotificationForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// NotifyAppNotificationForAdminResponse
+        /// </returns>
+        public NotifyAppNotificationForAdminResponse NotifyAppNotificationForAdminWithOptions(NotifyAppNotificationForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "NotifyAppNotificationForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<NotifyAppNotificationForAdminResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据变更通知触发（for admin）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询应用实例信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// NotifyAppNotificationForAdminRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// NotifyAppNotificationForAdminResponse
+        /// </returns>
+        public async Task<NotifyAppNotificationForAdminResponse> NotifyAppNotificationForAdminWithOptionsAsync(NotifyAppNotificationForAdminRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
+            {
+                query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
+            {
+                query["SceneId"] = request.SceneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "NotifyAppNotificationForAdmin",
+                Version = "2025-04-29",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<NotifyAppNotificationForAdminResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据变更通知触发（for admin）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询应用实例信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// NotifyAppNotificationForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// NotifyAppNotificationForAdminResponse
+        /// </returns>
+        public NotifyAppNotificationForAdminResponse NotifyAppNotificationForAdmin(NotifyAppNotificationForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return NotifyAppNotificationForAdminWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>数据变更通知触发（for admin）</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询应用实例信息</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// NotifyAppNotificationForAdminRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// NotifyAppNotificationForAdminResponse
+        /// </returns>
+        public async Task<NotifyAppNotificationForAdminResponse> NotifyAppNotificationForAdminAsync(NotifyAppNotificationForAdminRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await NotifyAppNotificationForAdminWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Operates an application by a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13733,7 +14429,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operate application for Partnership</para>
+        /// <para>Operates an application by a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13779,7 +14475,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operate application for Partnership</para>
+        /// <para>Operates an application by a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13797,7 +14493,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Operate application for Partnership</para>
+        /// <para>Operates an application by a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13815,7 +14511,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership operates application services.</para>
+        /// <para>Operates application services on behalf of a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13869,7 +14565,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership operates application services.</para>
+        /// <para>Operates application services on behalf of a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13923,7 +14619,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership operates application services.</para>
+        /// <para>Operates application services on behalf of a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13941,7 +14637,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership operates application services.</para>
+        /// <para>Operates application services on behalf of a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14107,12 +14803,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supabase instance information corresponding to the operation resource</para>
+        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Supabase instance information corresponding to the operation resource</para>
+        /// <para>The Supabase instance information corresponding to the operated resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14198,12 +14894,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supabase instance information corresponding to the operation resource</para>
+        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Supabase instance information corresponding to the operation resource</para>
+        /// <para>The Supabase instance information corresponding to the operated resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14289,12 +14985,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supabase instance information corresponding to the operation resource</para>
+        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Supabase instance information corresponding to the operation resource</para>
+        /// <para>The Supabase instance information corresponding to the operated resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14312,12 +15008,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supabase instance information corresponding to the operation resource</para>
+        /// <para>Operates on the Supabase instance information corresponding to a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Supabase instance information corresponding to the operation resource</para>
+        /// <para>The Supabase instance information corresponding to the operated resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14515,12 +15211,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Push resource metering data</para>
+        /// <para>Pushes resource metering data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14594,12 +15290,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Push resource metering data</para>
+        /// <para>Pushes resource metering data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14673,12 +15369,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Push resource metering data</para>
+        /// <para>Pushes resource metering data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14696,12 +15392,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Push resource metering data</para>
+        /// <para>Pushes resource metering data.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information corresponding to a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14719,12 +15415,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of inspiration value acquisition (quota account list, including expiration mark)</para>
+        /// <para>Queries the details of inspiration point acquisition (quota account list, including expiration flags).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14790,12 +15486,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of inspiration value acquisition (quota account list, including expiration mark)</para>
+        /// <para>Queries the details of inspiration point acquisition (quota account list, including expiration flags).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14861,12 +15557,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of inspiration value acquisition (quota account list, including expiration mark)</para>
+        /// <para>Queries the details of inspiration point acquisition (quota account list, including expiration flags).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14884,12 +15580,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of inspiration value acquisition (quota account list, including expiration mark)</para>
+        /// <para>Queries the details of inspiration point acquisition (quota account list, including expiration flags).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14907,12 +15603,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the overview of inspiration balance</para>
+        /// <para>Query Inspiration Balance Overview</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Query the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -14942,12 +15638,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the overview of inspiration balance</para>
+        /// <para>Query Inspiration Balance Overview</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Query the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -14977,12 +15673,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the overview of inspiration balance</para>
+        /// <para>Query Inspiration Balance Overview</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Query the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <returns>
@@ -14996,12 +15692,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the overview of inspiration balance</para>
+        /// <para>Query Inspiration Balance Overview</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Query the Supabase instance information corresponding to the resource.</para>
         /// </description>
         /// 
         /// <returns>
@@ -15015,12 +15711,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query inspiration value consumption details</para>
+        /// <para>Queries the details of inspiration point consumption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15086,12 +15782,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query inspiration value consumption details</para>
+        /// <para>Queries the details of inspiration point consumption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15157,12 +15853,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query inspiration value consumption details</para>
+        /// <para>Queries the details of inspiration point consumption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15180,12 +15876,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query inspiration value consumption details</para>
+        /// <para>Queries the details of inspiration point consumption.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15203,7 +15899,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the material folder tree</para>
+        /// <para>Queries the material folder tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15253,7 +15949,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the material folder tree</para>
+        /// <para>Queries the material folder tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15303,7 +15999,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the material folder tree</para>
+        /// <para>Queries the material folder tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15321,7 +16017,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the material folder tree</para>
+        /// <para>Queries the material folder tree.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15339,7 +16035,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Material File Details</para>
+        /// <para>Queries the details of a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15385,7 +16081,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Material File Details</para>
+        /// <para>Queries the details of a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15431,7 +16127,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Material File Details</para>
+        /// <para>Queries the details of a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15449,7 +16145,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Material File Details</para>
+        /// <para>Queries the details of a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15467,7 +16163,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of material files</para>
+        /// <para>Queries the list of material files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15575,7 +16271,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of material files</para>
+        /// <para>Queries the list of material files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15683,7 +16379,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of material files</para>
+        /// <para>Queries the list of material files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15701,7 +16397,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of material files</para>
+        /// <para>Queries the list of material files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15719,7 +16415,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query file overview</para>
+        /// <para>Queries the file overview.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15803,7 +16499,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query file overview</para>
+        /// <para>Queries the file overview.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -15887,7 +16583,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query file overview</para>
+        /// <para>Queries the file overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15905,7 +16601,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query file overview</para>
+        /// <para>Queries the file overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15923,7 +16619,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of a Material generation Job</para>
+        /// <para>Queries the details of a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15965,7 +16661,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of a Material generation Job</para>
+        /// <para>Queries the details of a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16007,7 +16703,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of a Material generation Job</para>
+        /// <para>Queries the details of a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16025,7 +16721,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the details of a Material generation Job</para>
+        /// <para>Queries the details of a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16043,7 +16739,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of Material generation Jobs</para>
+        /// <para>Query Material Generation Task List</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16123,7 +16819,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of Material generation Jobs</para>
+        /// <para>Query Material Generation Task List</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -16203,7 +16899,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of Material generation Jobs</para>
+        /// <para>Query Material Generation Task List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16221,7 +16917,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of Material generation Jobs</para>
+        /// <para>Query Material Generation Task List</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16239,12 +16935,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the auth configuration information of the Supabase instance corresponding to the resource</para>
+        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the auth configuration information of the Supabase instance corresponding to the resource</para>
+        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16314,12 +17010,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the auth configuration information of the Supabase instance corresponding to the resource</para>
+        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the auth configuration information of the Supabase instance corresponding to the resource</para>
+        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16389,12 +17085,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the auth configuration information of the Supabase instance corresponding to the resource</para>
+        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the auth configuration information of the Supabase instance corresponding to the resource</para>
+        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16412,12 +17108,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the auth configuration information of the Supabase instance corresponding to the resource</para>
+        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the auth configuration information of the Supabase instance corresponding to the resource</para>
+        /// <para>Queries the auth configuration of a Supabase instance associated with a resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16435,12 +17131,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16506,12 +17202,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16577,12 +17273,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16600,12 +17296,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance configuration information corresponding to the resource.</para>
+        /// <para>Queries the Supabase instance configuration information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16623,12 +17319,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information for a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16694,12 +17390,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information for a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16765,12 +17461,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information for a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16788,12 +17484,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information for a specified resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Query the Supabase instance information corresponding to the resource</para>
+        /// <para>Queries the Supabase instance information for a specified resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16811,12 +17507,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reconnect AI conversation</para>
+        /// <para>Reconnects an AI conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain QR code plugin Configuration Information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16832,22 +17528,22 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         public ReconnectAppChatResponse ReconnectAppChatWithOptions(ReconnectAppChatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
             {
-                query["ChatId"] = request.ChatId;
+                body["ChatId"] = request.ChatId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
             {
-                query["ConversationId"] = request.ConversationId;
+                body["ConversationId"] = request.ConversationId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastEventId))
             {
-                query["LastEventId"] = request.LastEventId;
+                body["LastEventId"] = request.LastEventId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -16866,12 +17562,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reconnect AI conversation</para>
+        /// <para>Reconnects an AI conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain QR code plugin Configuration Information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16887,22 +17583,22 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
         public async Task<ReconnectAppChatResponse> ReconnectAppChatWithOptionsAsync(ReconnectAppChatRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
-            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
             {
-                query["ChatId"] = request.ChatId;
+                body["ChatId"] = request.ChatId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConversationId))
             {
-                query["ConversationId"] = request.ConversationId;
+                body["ConversationId"] = request.ConversationId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LastEventId))
             {
-                query["LastEventId"] = request.LastEventId;
+                body["LastEventId"] = request.LastEventId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
-                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -16921,12 +17617,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reconnect AI conversation</para>
+        /// <para>Reconnects an AI conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain QR code plugin Configuration Information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16944,12 +17640,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reconnect AI conversation</para>
+        /// <para>Reconnects an AI conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain QR code plugin Configuration Information</para>
+        /// <para>Retrieves the configuration information of the code generation plugin.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16967,7 +17663,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refresh ticket</para>
+        /// <para>Refreshes the password-free login ticket for a website building instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17017,7 +17713,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refresh ticket</para>
+        /// <para>Refreshes the password-free login ticket for a website building instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17067,7 +17763,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refresh ticket</para>
+        /// <para>Refreshes the password-free login ticket for a website building instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17085,7 +17781,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refresh ticket</para>
+        /// <para>Refreshes the password-free login ticket for a website building instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17103,7 +17799,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund for channel partner website building service.</para>
+        /// <para>Processes a refund for a channel partner website building service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17157,7 +17853,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund for channel partner website building service.</para>
+        /// <para>Processes a refund for a channel partner website building service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17211,7 +17907,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund for channel partner website building service.</para>
+        /// <para>Processes a refund for a channel partner website building service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17229,7 +17925,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Refund for channel partner website building service.</para>
+        /// <para>Processes a refund for a channel partner website building service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17247,7 +17943,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renewal of website building instance</para>
+        /// <para>Renews a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17309,7 +18005,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renewal of website building instance</para>
+        /// <para>Renews a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17371,7 +18067,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renewal of website building instance</para>
+        /// <para>Renews a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17389,7 +18085,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renewal of website building instance</para>
+        /// <para>Renews a website builder application instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17407,12 +18103,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renewal/Purge Sandbox Environment</para>
+        /// <para>Renews or refreshes a sandbox environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17454,12 +18150,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renewal/Purge Sandbox Environment</para>
+        /// <para>Renews or refreshes a sandbox environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17501,12 +18197,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renewal/Purge Sandbox Environment</para>
+        /// <para>Renews or refreshes a sandbox environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17524,12 +18220,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renewal/Purge Sandbox Environment</para>
+        /// <para>Renews or refreshes a sandbox environment.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Obtain the configuration information of the code generation plugin</para>
+        /// <para>Retrieves the configuration information of the code generation plug-in.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18159,7 +18855,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image retrieval</para>
+        /// <para>Searches for images.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18263,7 +18959,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image retrieval</para>
+        /// <para>Searches for images.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -18367,7 +19063,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image retrieval</para>
+        /// <para>Searches for images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18385,7 +19081,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Image retrieval</para>
+        /// <para>Searches for images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18403,7 +19099,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the SSL certificate for a domain</para>
+        /// <para>Sets the SSL certificate for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18465,7 +19161,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the SSL certificate for a domain</para>
+        /// <para>Sets the SSL certificate for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18527,7 +19223,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the SSL certificate for a domain</para>
+        /// <para>Sets the SSL certificate for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18545,7 +19241,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the SSL certificate for a domain</para>
+        /// <para>Sets the SSL certificate for a website.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18727,7 +19423,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a Material Generation Job</para>
+        /// <para>Submits a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18773,7 +19469,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a Material Generation Job</para>
+        /// <para>Submits a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18819,7 +19515,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a Material Generation Job</para>
+        /// <para>Submits a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18837,7 +19533,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submit a Material Generation Job</para>
+        /// <para>Submits a material generation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19011,7 +19707,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership synchronizes application instance</para>
+        /// <para>Synchronizes an application instance from a partner.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19075,7 +19771,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership synchronizes application instance</para>
+        /// <para>Synchronizes an application instance from a partner.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -19139,7 +19835,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership synchronizes application instance</para>
+        /// <para>Synchronizes an application instance from a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19157,7 +19853,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Partnership synchronizes application instance</para>
+        /// <para>Synchronizes an application instance from a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19175,7 +19871,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbind Application Domain</para>
+        /// <para>Unbinds a domain name from a website and deletes the related DNS records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19221,7 +19917,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbind Application Domain</para>
+        /// <para>Unbinds a domain name from a website and deletes the related DNS records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19267,7 +19963,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbind Application Domain</para>
+        /// <para>Unbinds a domain name from a website and deletes the related DNS records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19285,7 +19981,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbind Application Domain</para>
+        /// <para>Unbinds a domain name from a website and deletes the related DNS records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20831,7 +21527,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload material files</para>
+        /// <para>Uploads a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20885,7 +21581,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload material files</para>
+        /// <para>Uploads a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20939,7 +21635,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload material files</para>
+        /// <para>Uploads a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20957,7 +21653,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Upload material files</para>
+        /// <para>Uploads a material file.</para>
         /// </summary>
         /// 
         /// <param name="request">

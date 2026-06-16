@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
 {
     public class SetAppDomainCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>Business ID of the application instance</para>
+        /// <para>The business ID of the application instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WD20250821161210000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>SSL certificate name</para>
+        /// <para>The SSL certificate name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CertificateName { get; set; }
 
         /// <summary>
-        /// <para>Certificate type: Default free certificate or customer\&quot;s own certificate</para>
+        /// <para>The certificate type: default free certificate or customer-owned certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Server</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string CertificateType { get; set; }
 
         /// <summary>
-        /// <para>Domain name</para>
+        /// <para>The domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kaibaidu.com</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Private key</para>
+        /// <para>The private key.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>Public key</para>
+        /// <para>The public key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c3NoLWVkMjU1MTkgQUFBQUMzTnphQzFsWkRJMU5URTVBQUFBSUxGQnQxUUpyT3IxK2hTTGRkbERMZUx4WGRIZ3hBalBxWHJIbWNFNWxqSk8gbm93Y29kZXJAbm93Y29kZXJkZU1hY0Jvb2stUHJvLmxvY2Fs</para>
