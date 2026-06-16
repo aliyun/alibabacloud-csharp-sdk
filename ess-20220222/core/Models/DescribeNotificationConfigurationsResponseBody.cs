@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels> NotificationConfigurationModels { get; set; }
         public class DescribeNotificationConfigurationsResponseBodyNotificationConfigurationModels : TeaModel {
             /// <summary>
+            /// <para>The codec of the notification message content.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PlainText</para>
             /// </summary>

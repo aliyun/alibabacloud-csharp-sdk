@@ -206,6 +206,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? DesiredCapacity { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to disable the expected number of instances feature for the scaling group. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false: Enables the expected number of instances feature.</description></item>
+        /// <item><description>true: Disables the expected number of instances feature.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>You can set this parameter to true (to disable the expected number of instances feature) only when no scaling activity is currently running in the scaling group. When this feature is disabled, the current DesiredCapacity property of the scaling group is cleared, but the actual number of instances in the scaling group remains unchanged.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>

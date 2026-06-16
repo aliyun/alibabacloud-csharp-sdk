@@ -11,8 +11,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
     public class ScaleWithAdjustmentResponseBody : TeaModel {
         /// <summary>
         /// <para>The type of the scaling activity.</para>
-        /// <para>If <c>ActivityType</c> is set to <c>CapacityChange</c>, only the expected number of instances is changed during the scaling activity specified by ScalingActivityId and no scale-out is triggered.</para>
-        /// <para>This parameter is applicable to only scaling groups that have an expected number of instances.</para>
+        /// <para>If this parameter is set to <c>CapacityChange</c>, the scaling activity only adjusts the desired capacity of the scaling group without immediately adding or removing instances.</para>
+        /// <para>This setting only affects scaling groups with a configured desired capacity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CapacityChange</para>
@@ -22,14 +22,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ActivityType { get; set; }
 
         /// <summary>
-        /// <para>The elastic planning result returned when the ExecutionMode is set to PlanOnly.</para>
+        /// <para>The scaling plan result returned when ExecutionMode is set to PlanOnly.</para>
         /// </summary>
         [NameInMap("PlanResult")]
         [Validation(Required=false)]
         public ScaleWithAdjustmentResponseBodyPlanResult PlanResult { get; set; }
         public class ScaleWithAdjustmentResponseBodyPlanResult : TeaModel {
             /// <summary>
-            /// <para>The resource allocation information in the elastic planning result.</para>
+            /// <para>The resource allocation details in the scaling plan result.</para>
             /// </summary>
             [NameInMap("ResourceAllocations")]
             [Validation(Required=false)]
@@ -48,8 +48,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <summary>
                 /// <para>The billing method of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Prepaid</b>: subscription.</description></item>
-                /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+                /// <item><description><para><b>Prepaid</b>: subscription</para>
+                /// </description></item>
+                /// <item><description><para><b>PostPaid</b>: pay-as-you-go</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -70,11 +72,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string InstanceType { get; set; }
 
                 /// <summary>
-                /// <para>The spot policy of instances. Valid values:</para>
+                /// <para>The spot strategy of the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>NoSpot: The instances are created as pay-as-you-go instances.</description></item>
-                /// <item><description>SpotWithPriceLimit: The instances are created as spot instances for which you can specify the maximum hourly price.</description></item>
-                /// <item><description>SpotAsPriceGo: The instances are spot instances for which the market price at the time of purchase is automatically used as the bid price.</description></item>
+                /// <item><description><para>NoSpot: A pay-as-you-go instance.</para>
+                /// </description></item>
+                /// <item><description><para>SpotWithPriceLimit: A spot instance with a user-specified price limit.</para>
+                /// </description></item>
+                /// <item><description><para>SpotAsPriceGo: A spot instance where the system automatically bids based on the current market price.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -85,7 +90,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string SpotStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the zone.</para>
+                /// <para>The availability zone ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing-g</para>
@@ -99,7 +104,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

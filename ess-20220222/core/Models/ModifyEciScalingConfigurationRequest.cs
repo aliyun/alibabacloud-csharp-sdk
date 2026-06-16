@@ -1854,7 +1854,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 /// <para>The endpoint of the NFS server.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>3f9cd4a596-naw76.cn-shanghai.nas.aliyuncs.com</para>
+                /// <para>3f9cd4a596-n****.cn-shanghai.nas.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("Server")]
                 [Validation(Required=false)]

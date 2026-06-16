@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>If you want to use an ordered instance name, specify the value for this parameter in the following format: name_prefix[begin_number,bits]name_suffix.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nginx-test</para>
+        /// <para>nginx-test-(AUTO_INCREMENT)[0,3]</para>
         /// </summary>
         [NameInMap("ContainerGroupName")]
         [Validation(Required=false)]
@@ -1099,7 +1099,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <para>The password of the image repository.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>yourpaasword</para>
+            /// <para>yourpassword</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
@@ -1608,7 +1608,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>Default value: NoSpot.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SpotPriceLimit</para>
+        /// <para>SpotWithPriceLimit</para>
         /// </summary>
         [NameInMap("SpotStrategy")]
         [Validation(Required=false)]

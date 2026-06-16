@@ -10,13 +10,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeInstanceRefreshesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance refresh tasks.</para>
+        /// <para>The list of instance refresh tasks.</para>
         /// </summary>
         [NameInMap("InstanceRefreshTasks")]
         [Validation(Required=false)]
         public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks> InstanceRefreshTasks { get; set; }
         public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasks : TeaModel {
             /// <summary>
+            /// <para>The duration for which the task pauses when a checkpoint is reached. Unit: minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -24,11 +26,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public int? CheckpointPauseTime { get; set; }
 
+            /// <summary>
+            /// <para>The checkpoints for the refresh task. A checkpoint specifies that the task automatically pauses for CheckpointPauseTime minutes when the proportion of new instances reaches the specified value during the instance refresh.</para>
+            /// </summary>
             [NameInMap("Checkpoints")]
             [Validation(Required=false)]
             public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints> Checkpoints { get; set; }
             public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksCheckpoints : TeaModel {
                 /// <summary>
+                /// <para>The percentage of new instances relative to the total instances in the scaling group. The task automatically pauses when this percentage is reached.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
                 /// </summary>
@@ -39,29 +46,45 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The desired configurations of the instance refresh task.</para>
+            /// <para>The desired configuration for the instance refresh.</para>
             /// </summary>
             [NameInMap("DesiredConfiguration")]
             [Validation(Required=false)]
             public DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration DesiredConfiguration { get; set; }
             public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfiguration : TeaModel {
+                /// <summary>
+                /// <para>The list of containers included in the instance.</para>
+                /// </summary>
                 [NameInMap("Containers")]
                 [Validation(Required=false)]
                 public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers> Containers { get; set; }
                 public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainers : TeaModel {
+                    /// <summary>
+                    /// <para>The arguments for the container startup commands.</para>
+                    /// </summary>
                     [NameInMap("Args")]
                     [Validation(Required=false)]
                     public List<string> Args { get; set; }
 
+                    /// <summary>
+                    /// <para>The container startup commands.</para>
+                    /// </summary>
                     [NameInMap("Commands")]
                     [Validation(Required=false)]
                     public List<string> Commands { get; set; }
 
+                    /// <summary>
+                    /// <para>The environment variable information.</para>
+                    /// </summary>
                     [NameInMap("EnvironmentVars")]
                     [Validation(Required=false)]
                     public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars> EnvironmentVars { get; set; }
                     public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationContainersEnvironmentVars : TeaModel {
                         /// <summary>
+                        /// <remarks>
+                        /// <para>This parameter is not available for use.</para>
+                        /// </remarks>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>fieldPath</para>
                         /// </summary>
@@ -70,6 +93,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                         public string FieldRefFieldPath { get; set; }
 
                         /// <summary>
+                        /// <para>The name of the environment variable.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>PATH</para>
                         /// </summary>
@@ -78,6 +103,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                         public string Key { get; set; }
 
                         /// <summary>
+                        /// <para>The value of the environment variable.</para>
+                        /// 
                         /// <b>Example:</b>
                         /// <para>/usr/local/bin</para>
                         /// </summary>
@@ -88,6 +115,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     }
 
                     /// <summary>
+                    /// <para>The container image.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</para>
                     /// </summary>
@@ -96,6 +125,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public string Image { get; set; }
 
                     /// <summary>
+                    /// <para>The custom container name.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>name</para>
                     /// </summary>
@@ -106,7 +137,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the image file that provides the image resource for Auto Scaling to create instances.</para>
+                /// <para>The ID of the image file used for automatic creation of instances.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>m-uf6g5noisr****</para>
@@ -116,6 +147,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string ImageId { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the launch template from which the scaling group obtains launch configuration information.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>lt-2ze5x4mp*****</para>
                 /// </summary>
@@ -123,11 +156,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public string LaunchTemplateId { get; set; }
 
+                /// <summary>
+                /// <para>The instance type information that overrides the launch template.</para>
+                /// </summary>
                 [NameInMap("LaunchTemplateOverrides")]
                 [Validation(Required=false)]
                 public List<DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides> LaunchTemplateOverrides { get; set; }
                 public class DescribeInstanceRefreshesResponseBodyInstanceRefreshTasksDesiredConfigurationLaunchTemplateOverrides : TeaModel {
                     /// <summary>
+                    /// <para>The instance type that overrides the instance type specified in the launch template.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ecs.sn1ne.large</para>
                     /// </summary>
@@ -138,6 +176,13 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
+                /// <para>The version of the launch template. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>A fixed template version number.</description></item>
+                /// <item><description>Default: always uses the default version of the template.</description></item>
+                /// <item><description>Latest: always uses the latest version of the template.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Latest</para>
                 /// </summary>
@@ -158,7 +203,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The reason why the instance refresh task failed to be executed.</para>
+            /// <para>The failure reason when the instance refresh task fails.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The task exceeded its maximum run time of one week. So the task failed.</para>
@@ -178,7 +223,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The refreshed number of instances in the scaling group.</para>
+            /// <para>The capacity that has been refreshed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -198,7 +243,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceRefreshTaskId { get; set; }
 
             /// <summary>
-            /// <para>The ratio by which the number of instances in the scaling group can exceed the upper limit for the number of instances in the scaling group during instance refresh.</para>
+            /// <para>The maximum percentage by which the number of instances in the scaling group can exceed the scaling group capacity during the instance refresh.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -208,7 +253,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MaxHealthyPercentage { get; set; }
 
             /// <summary>
-            /// <para>The ratio of the number of instances that provide services to the total number of instances in the scaling group during instance refresh.</para>
+            /// <para>The minimum percentage of instances that must remain in service in the scaling group during the instance refresh.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -238,14 +283,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether instances that match the desired scaling configuration are skipped.</para>
+            /// <para>Indicates whether instances that already match the desired configuration are skipped.</para>
             /// <remarks>
-            /// <para> The system determines the match based on the ID of the desired scaling configuration rather than individual configuration items.</para>
+            /// <para>The system determines whether an instance matches based on the ID of the desired scaling configuration, not by comparing individual configuration items.</para>
             /// </remarks>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Instances that match the desired scaling configuration are skipped. When you initiate an instance refresh task, the system checks the configurations of all instances. The refresh operation is skipped for instances created based on the desired scaling configuration.</description></item>
-            /// <item><description>false: Instances that match the desired scaling configuration are not skipped. When an instance refresh task is initiated, all instances in the scaling group at the time of initiation are refreshed.</description></item>
+            /// <item><description>true: Skipped. When the instance refresh task starts, the system checks the configuration of each instance. Instances that were already created with the desired configuration are not refreshed.</description></item>
+            /// <item><description>false: Not skipped. After the instance refresh task starts, all instances in the scaling group are refreshed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -266,18 +311,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the instance refresh task. Valid values:</para>
+            /// <para>The current status of the instance refresh task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Pending: The instance refresh task is created and is waiting to be scheduled.</description></item>
-            /// <item><description>InProgress: The instance refresh task is being executed.</description></item>
-            /// <item><description>Paused: The instance refresh task is suspended.</description></item>
-            /// <item><description>Failed: The instance refresh task failed to be executed.</description></item>
-            /// <item><description>Successful: The instance refresh task is successful.</description></item>
+            /// <item><description>Pending: The instance refresh task is created and waiting to be scheduled.</description></item>
+            /// <item><description>InProgress: The instance refresh task is in progress.</description></item>
+            /// <item><description>Paused: The instance refresh task is paused.</description></item>
+            /// <item><description>CheckpointPause: The instance refresh task is paused because the task progress reached a checkpoint (<c>Checkpoint.Percentage</c>).</description></item>
+            /// <item><description>Failed: The instance refresh task failed.</description></item>
+            /// <item><description>Successful: The instance refresh task succeeded.</description></item>
             /// <item><description>Cancelling: The instance refresh task is being canceled.</description></item>
             /// <item><description>Cancelled: The instance refresh task is canceled.</description></item>
             /// <item><description>RollbackInProgress: The instance refresh task is being rolled back.</description></item>
             /// <item><description>RollbackSuccessful: The instance refresh task is rolled back.</description></item>
-            /// <item><description>RollbackFailed: The instance refresh task fails to be rolled back.</description></item>
+            /// <item><description>RollbackFailed: The rollback of the instance refresh task failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -287,8 +333,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            [NameInMap("Strategy")]
+            [Validation(Required=false)]
+            public string Strategy { get; set; }
+
             /// <summary>
-            /// <para>The total number of instances whose configurations are refreshed.</para>
+            /// <para>The total capacity that needs to be refreshed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -310,7 +360,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f****</para>
@@ -320,7 +370,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>

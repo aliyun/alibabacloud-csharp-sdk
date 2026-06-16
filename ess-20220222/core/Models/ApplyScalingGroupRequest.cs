@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         ///   name: nginx-deployment
         ///   labels:
         ///     app: nginx
-        /// spec:
-        ///   replicas: 3
-        ///   selector:
-        ///     matchLabels:
-        ///       app: nginx
-        ///   template:
-        ///     metadata:
-        ///       labels:
+        ///   spec:
+        ///     replicas: 3
+        ///     selector:
+        ///        matchLabels:
         ///         app: nginx
-        ///       annotations:
-        ///         k8s.aliyun.com/eip-bandwidth: 10
-        ///         k8s.aliyun.com/eci-with-eip: true
-        ///     spec:
-        ///       containers:
-        ///       - name: nginx
-        ///         image: nginx:1.14.2
-        ///         ports:
-        ///         - containerPort: 80</para>
+        ///     template:
+        ///       metadata:
+        ///         labels:
+        ///           app: nginx
+        ///         annotations:
+        ///           k8s.aliyun.com/eip-bandwidth: 10
+        ///           k8s.aliyun.com/eci-with-eip: true
+        ///         spec:
+        ///           containers:
+        ///           - name: nginx
+        ///             image: nginx:1.14.2
+        ///             ports:
+        ///             - containerPort: 80</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]

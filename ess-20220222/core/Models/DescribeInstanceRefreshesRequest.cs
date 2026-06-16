@@ -10,14 +10,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeInstanceRefreshesRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the instance refresh tasks that you want to query.</para>
+        /// <para>The IDs of the instance refresh tasks to query.</para>
         /// </summary>
         [NameInMap("InstanceRefreshTaskIds")]
         [Validation(Required=false)]
         public List<string> InstanceRefreshTaskIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page. Valid values: 1 to 50. Default value: 10.</para>
+        /// <para>The maximum number of entries per page in a paging query. Valid values: 1 to 50.
+        /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -27,7 +28,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
@@ -45,7 +46,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group to which the instance refresh task belongs.</para>
+        /// <para>The region ID of the scaling group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +67,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The ID of the scaling group.</para>
         /// <remarks>
-        /// <para> When you call this operation, you must specify one of the following parameters: ScalingGroupId and InstanceRefreshTaskIds. You cannot specify both of them. If you specify neither of them, an error is reported.</para>
+        /// <para>You must specify at least one of ScalingGroupId and InstanceRefreshTaskIds. If neither parameter is specified, an error is returned.
+        /// .</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeElasticStrengthRequest : TeaModel {
         /// <summary>
-        /// <para>The disk categories of the data disks. The disk categories that do not match the specified criteria are returned after you call this operation.</para>
+        /// <para>A list of data disk categories used to evaluate elastic strength. If a category is incompatible, the response identifies the specific mismatched category.</para>
         /// <remarks>
-        /// <para> If you do not specify the scaling group ID, you must specify this parameter.</para>
+        /// <para>You can specify this parameter if <c>ScalingGroupId</c> is not specified.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("DataDiskCategories")]
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> DataDiskCategories { get; set; }
 
         /// <summary>
-        /// <para>The name of the image family. You can specify the ImageFamily request parameter to obtain the most recent available images in the current image family for instance creation. If you specify ImageId, you cannot specify ImageFamily.</para>
+        /// <para>The name of the image family. You can set this parameter to use the latest available image from the specified image family to create instances. If you specify ImageId, this parameter is ignored.</para>
         /// <remarks>
-        /// <para> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</para>
+        /// <para>If <c>ScalingGroupId</c> is not specified, you must specify at least one of <c>ImageId</c>, <c>ImageName</c>, or <c>ImageFamily</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ImageFamily { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image file that provides the image resource for Auto Scaling to create instances.</para>
+        /// <para>The ID of the image used to create instances.</para>
         /// <remarks>
-        /// <para> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</para>
+        /// <para>If <c>ScalingGroupId</c> is not specified, you must specify at least one of <c>ImageId</c>, <c>ImageName</c>, or <c>ImageFamily</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,10 +46,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image. Each image name must be unique in a region. If you specify ImageId, ImageName is ignored.</para>
-        /// <para>You cannot use ImageName to specify an Alibaba Cloud Marketplace image.</para>
+        /// <para>The name of the image. The name must be unique within a region. If you specify <c>ImageId</c>, this parameter is ignored.</para>
+        /// <para>You cannot use this parameter to specify a Marketplace image.</para>
         /// <remarks>
-        /// <para> If you do not specify the scaling group ID, you must specify at least one of ImageId, ImageName, and ImageFamily.</para>
+        /// <para>If <c>ScalingGroupId</c> is not specified, you must specify at least one of <c>ImageId</c>, <c>ImageName</c>, or <c>ImageFamily</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,16 +60,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The instance types. The instance types specified by this parameter overwrite the instance types specified in the scaling configuration.</para>
+        /// <para>A list of ECS instance types. If specified, this parameter overrides the instance types in the scaling configuration.</para>
         /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The number of IPv6 addresses. If the instance type that you specified does meet the requirement for the number of IPv6 addresses, the scaling strength is weak.</para>
+        /// <para>The number of IPv6 addresses to be configured for each instance. The elastic strength is lowered for instance types that do not support the specified number of IPv6 addresses.</para>
         /// <remarks>
-        /// <para> If you do not specify the scaling group ID, you must specify this parameter.</para>
+        /// <para>You can specify this parameter if <c>ScalingGroupId</c> is not specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,15 +80,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// <para>**</para>
-        /// <para><b>Warning</b> This parameter is deprecated. We recommend that you use SpotStrategy.</para>
-        /// <para>The preemption policy that you want to apply to pay-as-you-go instances. The preemption policy specified by this parameter overwrites the preemption policy specified in the scaling configuration. Valid values:</para>
+        /// <remarks>
+        /// <para>Warning: This parameter is deprecated. Use <c>SpotStrategy</c> instead.
+        /// The spot strategy for pay-as-you-go instances. If specified, this parameter overrides the spot strategy in the scaling configuration. Valid values:</para>
+        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instances are created as regular pay-as-you-go instances.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instances are created as preemptible instances with a user-defined maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bidding price.</description></item>
+        /// <item><description><para><c>NoSpot</c>: A regular pay-as-you-go instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>SpotWithPriceLimit</c>: A spot instance with a specified maximum price.</para>
+        /// </description></item>
+        /// <item><description><para><c>SpotAsPriceGo</c>: A spot instance where the system automatically bids at the current market price.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: NoSpot.</para>
+        /// <para>Default value: <c>NoSpot</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoSpot</para>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string PriorityStrategy { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scaling group.</para>
+        /// <para>The ID of the region where the scaling group is located.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -119,20 +123,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the scaling groups that you want to query.</para>
+        /// <para>The IDs of one or more scaling groups to query in a batch operation.</para>
         /// </summary>
         [NameInMap("ScalingGroupIds")]
         [Validation(Required=false)]
         public List<string> ScalingGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The instance bidding policy. Valid values:</para>
+        /// <para>The spot strategy for instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instances are created as pay-as-you-go instances.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instances are created as preemptible instances with a user-defined maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instances are created as preemptible instances for which the market price at the time of purchase is used as the bid price.</description></item>
+        /// <item><description><para><c>NoSpot</c>: A regular pay-as-you-go instance.</para>
+        /// </description></item>
+        /// <item><description><para><c>SpotWithPriceLimit</c>: A spot instance with a specified maximum price.</para>
+        /// </description></item>
+        /// <item><description><para><c>SpotAsPriceGo</c>: A spot instance where the system automatically bids at the current market price.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: NoSpot.</para>
+        /// <para>Default value: <c>NoSpot</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoSpot</para>
@@ -142,15 +149,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// <para>The categories of the system disks. The categories of the system disks specified by this parameter overwrite the categories of the system disks specified in the scaling configuration. Valid values:</para>
+        /// <para>A list of system disk categories. If specified, this parameter overrides the system disk categories in the scaling configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud: basic disk.</description></item>
-        /// <item><description>cloud_efficiency: ultra disk.</description></item>
-        /// <item><description>cloud_ssd: standard SSD.</description></item>
-        /// <item><description>cloud_essd: Enterprise SSD (ESSD).</description></item>
+        /// <item><description><para><c>cloud</c>: Basic Cloud Disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud_efficiency</c>: Ultra Cloud Disk.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud_ssd</c>: Standard SSD.</para>
+        /// </description></item>
+        /// <item><description><para><c>cloud_essd</c>: ESSD.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify the scaling group ID, you must specify this parameter.</para>
+        /// <para>This parameter is required if <c>ScalingGroupId</c> is not specified.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SystemDiskCategories")]
@@ -158,9 +169,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> SystemDiskCategories { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch IDs.</para>
+        /// <para>A list of VSwitch IDs.</para>
         /// <remarks>
-        /// <para> If you do not specify the scaling group ID, you must specify this parameter.</para>
+        /// <para>This parameter is required if <c>ScalingGroupId</c> is not specified.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("VSwitchIds")]

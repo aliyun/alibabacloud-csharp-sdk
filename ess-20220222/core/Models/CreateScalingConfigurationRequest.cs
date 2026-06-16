@@ -14,10 +14,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public CreateScalingConfigurationRequestImageOptions ImageOptions { get; set; }
         public class CreateScalingConfigurationRequestImageOptions : TeaModel {
             /// <summary>
-            /// <para>For more information about whether an ECS instance uses the ecs-user user user to log on to an ECS instance, see <a href="https://help.aliyun.com/document_detail/388447.html">Manage the login name of an ECS instance</a>. Value range:</para>
+            /// <para>Specifies whether to use the ecs-user user to log on to the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/388447.html">Manage logon usernames of ECS instances</a>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Yes.</description></item>
-            /// <item><description>false: No.</description></item>
+            /// <item><description><para>true: Yes.</para>
+            /// </description></item>
+            /// <item><description><para>false: No.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public CreateScalingConfigurationRequestPrivatePoolOptions PrivatePoolOptions { get; set; }
         public class CreateScalingConfigurationRequestPrivatePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The ID of the private pool. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation for which the private pool is generated.</para>
+            /// <para>The ID of the private pool. This is the ID of the Elastic Assurance or Capacity Reservation service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eap-bp67acfmxazb4****</para>
@@ -45,11 +47,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The type of the private pool that you want to use to start ECS instances. A private pool is generated when an elasticity assurance or a capacity reservation takes effect. You can select a private pool to create ECS instances. Valid values:</para>
+            /// <para>The private pool capacity option for instance startup. After an Elastic Assurance or a Capacity Reservation service takes effect, a private pool is generated. You can select a private pool to start an instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Open: open private pool. Auto Scaling selects a matching open private pool to start instances. If no matching open private pools are found, Auto Scaling uses the resources in the public pool to start instances. In this case, you do not need to specify PrivatePoolOptions.Id.</description></item>
-            /// <item><description>Target: specified private pool. Auto Scaling uses the resources in the specified private pool to start ECS instances. If the specified private pool is unavailable, Auto Scaling cannot start ECS instances. If you set this parameter to Target, you must specify PrivatePoolOptions.Id.</description></item>
-            /// <item><description>None: no private pool. Auto Scaling does not use the resources in private pools to start ECS instances.</description></item>
+            /// <item><description><para>Open: open mode. The system automatically matches the instance with an open private pool. If no eligible private pool is found, the instance is started using public pool resources. You do not need to set the PrivatePoolOptions.Id parameter in this mode.</para>
+            /// </description></item>
+            /// <item><description><para>Target: specified mode. The instance is started using the capacity of a specified private pool. If the specified private pool is unavailable, the instance fails to start. You must set the PrivatePoolOptions.Id parameter in this mode.</para>
+            /// </description></item>
+            /// <item><description><para>None: no private pool is used. The instance is started without using a private pool.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +71,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public CreateScalingConfigurationRequestSystemDisk SystemDisk { get; set; }
         public class CreateScalingConfigurationRequestSystemDisk : TeaModel {
             /// <summary>
-            /// <para>The ID of the automatic snapshot policy that you want to apply to the system disk.</para>
+            /// <para>The ID of the automatic snapshot policy to apply to the system disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-bp12m37ccmxvbmi5****</para>
@@ -76,14 +81,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string AutoSnapshotPolicyId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the burst feature for the system disk. Valid values:</para>
+            /// <para>Specifies whether to enable the performance burst feature for the system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: enables the feature.</para>
+            /// </description></item>
+            /// <item><description><para>false: disables the feature.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is available only if you set <c>SystemDisk.Category</c> to <c>cloud_auto</c>.</para>
+            /// <para>You can set this parameter only when <c>SystemDisk.Category</c> is set to <c>cloud_auto</c>.</para>
             /// </remarks>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -95,17 +104,25 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The category of the system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud: basic disk</description></item>
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
-            /// <item><description>ephemeral_ssd: local SSD</description></item>
-            /// <item><description>cloud_essd: enhanced SSD (ESSD)</description></item>
-            /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
+            /// <item><description><para>cloud: basic disk.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_efficiency: ultra disk.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_ssd: standard SSD.</para>
+            /// </description></item>
+            /// <item><description><para>ephemeral_ssd: local SSD.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_essd: ESSD.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_auto: ESSD AutoPL disk.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If you specify SystemDisk.Category, you cannot specify <c>SystemDiskCategories</c>. If you do not specify SystemDisk.Category or <c>SystemDiskCategories</c>, the default value of SystemDisk.Category is used.</para>
+            /// <para>You cannot specify this parameter and <c>SystemDiskCategories</c> at the same time. If you do not specify this parameter or <c>SystemDiskCategories</c>, the default value of this parameter is used:</para>
             /// <list type="bullet">
-            /// <item><description>For I/O optimized instances, the default value is cloud_efficiency.</description></item>
-            /// <item><description>For non-I/O optimized instances, the default value is cloud.</description></item>
+            /// <item><description><para>For I/O optimized instances, the default value is cloud_efficiency.</para>
+            /// </description></item>
+            /// <item><description><para>For non-I/O optimized instances, the default value is cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -116,7 +133,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The description of the system disk. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description of the system disk. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test system disk.</para>
@@ -126,7 +143,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the system disk. The name must be 2 to 128 characters in length. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The name of the system disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_ssdSystem</para>
@@ -136,12 +153,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string DiskName { get; set; }
 
             /// <summary>
-            /// <para>The encryption algorithm that you want to use to encrypt the system disk. Valid values:</para>
+            /// <para>The encryption algorithm for the system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AES-256</description></item>
-            /// <item><description>SM4-128</description></item>
+            /// <item><description><para>AES-256.</para>
+            /// </description></item>
+            /// <item><description><para>SM4-128.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: AES-256</para>
+            /// <para>Default value: AES-256.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AES-256</para>
@@ -153,10 +172,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>Specifies whether to encrypt the system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: encrypts the disk.</para>
+            /// </description></item>
+            /// <item><description><para>false: does not encrypt the disk.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: false</para>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -166,7 +187,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key that you want to use to encrypt the system disk.</para>
+            /// <para>The ID of the KMS key to use for the system disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -176,12 +197,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string KMSKeyId { get; set; }
 
             /// <summary>
-            /// <para>The performance level (PL) of the system disk that is an enhanced SSD (ESSD). Valid values:</para>
+            /// <para>The performance level of the ESSD that is used as the system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: An ESSD can provide up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: An ESSD can provide up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: An ESSD can provide up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</description></item>
+            /// <item><description><para>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</para>
+            /// </description></item>
+            /// <item><description><para>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</para>
+            /// </description></item>
+            /// <item><description><para>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</para>
+            /// </description></item>
+            /// <item><description><para>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: PL1.</para>
             /// 
@@ -193,9 +218,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The IOPS metric that is preconfigured for the system disk.</para>
+            /// <para>The provisioned IOPS of the system disk.</para>
             /// <remarks>
-            /// <para>IOPS measures the number of read and write operations that an EBS device can process per second.</para>
+            /// <para>IOPS (input/output operations per second) indicates the number of I/O operations that a block storage device can process per second. It represents the read and write capabilities of the device.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -206,25 +231,29 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public long? ProvisionedIops { get; set; }
 
             /// <summary>
-            /// <para>The size of the system disk. Unit: GiB.</para>
+            /// <para>The size of the system disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>Basic disk: 20 to 500.</para>
             /// </description></item>
-            /// <item><description><para>ESSD (cloud_essd): The valid values vary based on the performance level of the ESSD.</para>
+            /// <item><description><para>ESSD:</para>
             /// <list type="bullet">
-            /// <item><description>PL0 ESSD: 1 to 2048.</description></item>
-            /// <item><description>PL1 ESSD: 20 to 2048.</description></item>
-            /// <item><description>PL2 ESSD: 461 to 2048.</description></item>
-            /// <item><description>PL3 ESSD: 1261 to 2048.</description></item>
+            /// <item><description><para>PL0: 1 to 2048.</para>
+            /// </description></item>
+            /// <item><description><para>PL1: 20 to 2048.</para>
+            /// </description></item>
+            /// <item><description><para>PL2: 461 to 2048.</para>
+            /// </description></item>
+            /// <item><description><para>PL3: 1261 to 2048.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>ESSD AutoPL disk (cloud_auto): 1 to 2048.</para>
+            /// <item><description><para>ESSD AutoPL disk: 1 to 2048.</para>
             /// </description></item>
             /// <item><description><para>Other disk categories: 20 to 2048.</para>
             /// </description></item>
             /// </list>
-            /// <para>The value of this parameter must be at least 1 and greater than or equal to the image size.</para>
-            /// <para>Default value: 40 or the size of the image, whichever is larger.</para>
+            /// <para>The value of this parameter must be greater than or equal to max{1, ImageSize}.</para>
+            /// <para>Default value: max{40, ImageSize}.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -236,12 +265,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to associate an ECS instance on a dedicated host with the dedicated host. Valid values:</para>
+        /// <para>Specifies whether to associate the instance with the dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>default: does not associate the ECS instance with the dedicated host. If you start an ECS instance that was stopped in economical mode and the original dedicated host has insufficient resources, the ECS instance is automatically deployed to another dedicated host in the automatic deployment resource pool.</description></item>
-        /// <item><description>host: associates the ECS instance with the dedicated host. If you start an ECS instance that was stopped in economical mode, the instance remains on the original dedicated host. If the original dedicated host has insufficient resources, the ECS instance fails to start.</description></item>
+        /// <item><description><para>default: The instance is not associated with the dedicated host. When you restart an instance that was stopped in economical mode, the instance may be placed on a different dedicated host in the automatic deployment resource pool if the original dedicated host has insufficient resources.</para>
+        /// </description></item>
+        /// <item><description><para>host: The instance is associated with the dedicated host. When you restart an instance that was stopped in economical mode, the instance is still placed on the original dedicated host. If the original dedicated host has insufficient resources, the instance fails to restart.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: default</para>
+        /// <para>Default value: default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -251,7 +282,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Affinity { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see the &quot;<a href="https://help.aliyun.com/document_detail/25693.html">How to ensure the idempotence of a request</a>&quot; topic.</para>
+        /// <para>Ensures the idempotence of the request. You can use the client to generate a unique parameter value to make sure that the same request is not repeated. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -261,10 +292,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The number of vCPUs.</para>
-        /// <para>You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set CPU to 2 and Memory to 16 to specify instance types that have 2 vCPUs and 16 GiB of memory. If you specify Cpu and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances by using the lowest-priced instance type.</para>
+        /// <para>The number of vCPUs. Unit: cores.</para>
+        /// <para>You can specify both Cpu and Memory to define a range of instance types. For example, if you set Cpu to 2 and Memory to 16, all instance types with 2 vCPUs and 16 GiB of memory are selected. Auto Scaling determines the available instance types based on factors such as I/O optimization and zone, and then creates an instance of the instance type that has the lowest price.</para>
         /// <remarks>
-        /// <para>You can specify Cpu and Memory to determine the range of instance types only if you set Scaling Policy to Cost Optimization Policy and you do not specify instance types in the scaling configuration.</para>
+        /// <para>This configuration is effective only when the cost optimization policy is enabled for the scaling group and no instance types are specified in the scaling configuration.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -277,10 +308,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The performance mode of the burstable instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Standard: standard mode</description></item>
-        /// <item><description>Unlimited: unlimited mode</description></item>
+        /// <item><description><para>Standard: standard mode.</para>
+        /// </description></item>
+        /// <item><description><para>Unlimited: unlimited mode.</para>
+        /// </description></item>
         /// </list>
-        /// <para>For more information, see the &quot;Performance modes&quot; section in the &quot;<a href="https://help.aliyun.com/document_detail/59977.html">Overview</a>&quot; topic.</para>
+        /// <para>For more information, see the Performance modes section in <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Standard</para>
@@ -290,27 +323,28 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string CreditSpecification { get; set; }
 
         /// <summary>
-        /// <para>The priority of the custom ECS instance type + vSwitch combination.</para>
+        /// <para>The custom priority for the combination of an ECS instance type and a vSwitch.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when Scaling Policy of the scaling group is set to Priority Policy.</para>
+        /// <para>Notice: This is effective only when the scaling policy of the scaling group is set to the priority policy.</para>
         /// </remarks>
-        /// <para>If Auto Scaling cannot create ECS instances by using the custom ECS instance type + vSwitch combination of the highest priority, Auto Scaling creates ECS instances by using the custom ECS instance type + vSwitch combination of the next highest priority.</para>
+        /// <para>If an instance cannot be created from a combination of an instance type and a vSwitch with a higher priority, Auto Scaling automatically tries the next combination in the list.</para>
         /// <remarks>
-        /// <para> If you specify the priorities of only partial custom ECS instance type + vSwitch combinations, Auto Scaling preferentially creates ECS instances by using the custom combinations that have specified priorities. If the custom combinations that have specified priorities do not provide sufficient resources, Auto Scaling creates ECS instances by using the custom combinations that do not have specified priorities based on the specified orders of vSwitches and instance types.</para>
-        /// </remarks>
+        /// <para>If you specify custom priorities for only some combinations of instance types and vSwitches, the unspecified combinations have a lower priority than the specified ones. The unspecified combinations are still prioritized based on the order of vSwitches in the scaling group and the order of instance types in the scaling configuration.</para>
         /// <list type="bullet">
-        /// <item><description>Example: the specified order of vSwitches for your scaling group is vsw1 and vsw2 and the specified order of instance types in your scaling configuration is type1 and type 2. In addition, you use CustomPriorities to specify [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;]. In this example, the vsw2+type2 combination has the highest priority and the vsw2+type1 combination has the lowest priority. The vsw1+type2 combination has a higher priority than the vsw1+type1 combination.</description></item>
+        /// <item><description>For example, if the vSwitch order in the scaling group is vsw1, vsw2, the instance type order in the scaling configuration is type1, type2, and the custom priority order is [&quot;vsw2+type2&quot;, &quot;vsw1+type2&quot;], the final priority will be: &quot;vsw2+type2&quot; &gt; &quot;vsw1+type2&quot; &gt; &quot;vsw1+type1&quot; &gt; &quot;vsw2+type1&quot;.</description></item>
         /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("CustomPriorities")]
         [Validation(Required=false)]
         public List<CreateScalingConfigurationRequestCustomPriorities> CustomPriorities { get; set; }
         public class CreateScalingConfigurationRequestCustomPriorities : TeaModel {
             /// <summary>
-            /// <para>The ECS instance type.</para>
+            /// <para>The instance type of the ECS instance.</para>
             /// <remarks>
-            /// <para> The ECS instance type must be included in the instance types specified in the scaling configuration.</para>
+            /// <para>Notice: </para>
             /// </remarks>
+            /// <para>Must be included in the list of instance types in the scaling configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.g6.large</para>
@@ -320,10 +354,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>The ID of the vSwitch.</para>
             /// <remarks>
-            /// <para> The vSwitch must be included in the vSwitch list of the scaling group.</para>
+            /// <para>Notice: </para>
             /// </remarks>
+            /// <para>Must be included in the list of vSwitches in the scaling group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-bp14zolna43z266bq****</para>
@@ -335,14 +370,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The data disks.</para>
+        /// <para>A collection of data disk information.</para>
         /// </summary>
         [NameInMap("DataDisks")]
         [Validation(Required=false)]
         public List<CreateScalingConfigurationRequestDataDisks> DataDisks { get; set; }
         public class CreateScalingConfigurationRequestDataDisks : TeaModel {
             /// <summary>
-            /// <para>The ID of the automatic snapshot policy that you want to apply to the data disk.</para>
+            /// <para>The ID of the automatic snapshot policy to apply to the data disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-bp19nq9enxqkomib****</para>
@@ -352,14 +387,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string AutoSnapshotPolicyId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the burst feature for the system disk. Valid values:</para>
+            /// <para>Specifies whether to enable performance burst for the system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: Enables performance burst.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disables performance burst.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is available only if you set <c>SystemDisk.Category</c> to <c>cloud_auto</c>.</para>
+            /// <para>This parameter is available only when <c>SystemDisk.Category</c> is set to <c>cloud_auto</c>.</para>
             /// </remarks>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL cloud disks</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -369,15 +408,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? BurstingEnabled { get; set; }
 
             /// <summary>
-            /// <para>The categories of the data disks. If Auto Scaling cannot create instances by using the disk category that has the highest priority, Auto Scaling creates instances by using the disk category that has the next highest priority. Valid values:</para>
+            /// <para>Multiple disk categories for the data disk. When a disk of a higher-priority category is unavailable, Auto Scaling automatically tries the next lower-priority category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud: basic disk. For a basic disk that is created together with the instance, DeleteWithInstance is set to true.</description></item>
-            /// <item><description>cloud_efficiency: ultra disk.</description></item>
-            /// <item><description>cloud_ssd: standard SSD.</description></item>
-            /// <item><description>cloud_essd: ESSD.</description></item>
+            /// <item><description><para>cloud: basic disk. The DeleteWithInstance attribute of a basic disk created with an instance is true.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_efficiency: ultra disk.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_ssd: standard SSD.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_essd: ESSD.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>If you specify Categories, you cannot specify <c>DataDisks.Category</c>.</para>
+            /// <para>If you specify this parameter, you cannot specify <c>DataDisks.Category</c>.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("Categories")]
@@ -387,17 +430,25 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The category of the data disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud: basic disk</description></item>
-            /// <item><description>cloud_efficiency: ultra disk</description></item>
-            /// <item><description>cloud_ssd: standard SSD</description></item>
-            /// <item><description>cloud_essd: ESSD</description></item>
-            /// <item><description>ephemeral_ssd: local SSD</description></item>
-            /// <item><description>cloud_auto: ESSD AutoPL disk</description></item>
+            /// <item><description><para>cloud: basic disk.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_efficiency: ultra disk.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_ssd: standard SSD.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_essd: ESSD.</para>
+            /// </description></item>
+            /// <item><description><para>ephemeral_ssd: local SSD.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_auto: ESSD AutoPL disk.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If you specify this parameter, you cannot specify Categories. If you do not specify Category or Categories, the default value of Category is used.</para>
+            /// <para>You cannot specify this parameter and DataDisk.Categories at the same time. If you do not specify this parameter or DataDisk.Categories, the default value of this parameter is used:</para>
             /// <list type="bullet">
-            /// <item><description>For I/O optimized instances, the default value is cloud_efficiency.</description></item>
-            /// <item><description>For non-I/O optimized instances, the default value is cloud.</description></item>
+            /// <item><description><para>For I/O optimized instances, the default value is cloud_efficiency.</para>
+            /// </description></item>
+            /// <item><description><para>For non-I/O optimized instances, the default value is cloud.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -408,13 +459,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to release the data disk when the instance to which the data disk is attached is released. Valid values:</para>
+            /// <para>Specifies whether to release the data disk when the instance is released. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: releases the disk when the instance is released.</para>
+            /// </description></item>
+            /// <item><description><para>false: retains the disk when the instance is released.</para>
+            /// </description></item>
             /// </list>
-            /// <para>This parameter is available only for independent disks whose value of Category is set to cloud, cloud_efficiency, cloud_ssd, or cloud_essd. If you specify this parameter for other disks, an error is reported.</para>
-            /// <para>Default value: true</para>
+            /// <para>This parameter can be set only for separately purchased cloud disks (DataDisks.Category is cloud, cloud_efficiency, cloud_ssd, or cloud_essd). Otherwise, an error occurs.</para>
+            /// <para>Default value: true.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -424,7 +477,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public bool? DeleteWithInstance { get; set; }
 
             /// <summary>
-            /// <para>The description of the data disk. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The description of the data disk. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test data disk.</para>
@@ -434,7 +487,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The mount target of the data disk. If you do not specify Device, a mount target is automatically assigned when Auto Scaling creates ECS instances. The names of mount targets range from /dev/xvdb to /dev/xvdz.</para>
+            /// <para>The mount point of the data disk. If you do not specify this parameter, the system automatically assigns a mount point when creating the ECS instance, starting from /dev/xvdb and ending at /dev/xvdz.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/dev/xvdb</para>
@@ -444,7 +497,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// <para>The name of the system disk. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter but cannot start with <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The name of the data disk. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), and hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_ssdData</para>
@@ -456,10 +509,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>Specifies whether to encrypt the data disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: encrypts the disk.</para>
+            /// </description></item>
+            /// <item><description><para>false: does not encrypt the disk.</para>
+            /// </description></item>
             /// </list>
-            /// <para>Default value: false</para>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -469,7 +524,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key that you want to use to encrypt the data disk.</para>
+            /// <para>The ID of the KMS key for the data disk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40****</para>
@@ -479,15 +534,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string KMSKeyId { get; set; }
 
             /// <summary>
-            /// <para>The PL of the data disk that is an ESSD. Valid values:</para>
+            /// <para>The performance level of the ESSD that is used as the data disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: An ESSD can provide up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: An ESSD can provide up to 50,000 random read/write IOPS.</description></item>
-            /// <item><description>PL2: An ESSD can provide up to 100,000 random read/write IOPS.</description></item>
-            /// <item><description>PL3: An ESSD can provide up to 1,000,000 random read/write IOPS.</description></item>
+            /// <item><description><para>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</para>
+            /// </description></item>
+            /// <item><description><para>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</para>
+            /// </description></item>
+            /// <item><description><para>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</para>
+            /// </description></item>
+            /// <item><description><para>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>For more information about how to select ESSD PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</para>
+            /// <para>For information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -498,9 +557,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string PerformanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The IOPS metric that is preconfigured for the data disk.</para>
+            /// <para>The provisioned IOPS of the data disk.</para>
             /// <remarks>
-            /// <para>IOPS measures the number of read and write operations that an EBS device can process per second.</para>
+            /// <para>IOPS (input/output operations per second) indicates the number of I/O operations that a block storage device can process per second. It represents the read and write capabilities of the device.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -513,12 +572,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>The size of the data disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If you set Categories to cloud: 5 to 2000.</description></item>
-            /// <item><description>If you set Categories to cloud_efficiency: 20 to 32768.</description></item>
-            /// <item><description>If you set Categories to cloud_essd: 20 to 32768.</description></item>
-            /// <item><description>If you set Categories to ephemeral_ssd: 5 to 800.</description></item>
+            /// <item><description><para>cloud: 5 to 2000.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_efficiency: 20 to 32768.</para>
+            /// </description></item>
+            /// <item><description><para>cloud_essd: 20 to 32768.</para>
+            /// </description></item>
+            /// <item><description><para>ephemeral_ssd: 5 to 800.</para>
+            /// </description></item>
             /// </list>
-            /// <para>The size of the data disk must be greater than or equal to the size of the snapshot that is specified by SnapshotId.</para>
+            /// <para>If you specify this parameter, the disk size must be greater than or equal to the snapshot size specified by SnapshotId.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -528,8 +591,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>The ID of the snapshot that you want to use to create data disks. If you specify this parameter, DataDisks.Size is ignored. The size of the data disk is the same as the size of the specified snapshot.</para>
-            /// <para>If you specify a snapshot that is created on or before July 15, 2013, the operation fails and the system returns InvalidSnapshot.TooOld.</para>
+            /// <para>The snapshot to use to create the data disk. If you specify this parameter, DataDisks.Size is ignored. The size of the created disk is the size of the specified snapshot.</para>
+            /// <para>If the snapshot was created on or before July 15, 2013, the call is rejected and an InvalidSnapshot.TooOld error is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>s-280s7****</para>
@@ -551,8 +614,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DedicatedHostClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dedicated host on which you want to create an ECS instance. You cannot create preemptible instances on dedicated hosts. If you specify DedicatedHostId, SpotStrategy and SpotPriceLimit are ignored.</para>
-        /// <para>You can call the DescribeDedicatedHosts operation to query dedicated host IDs.</para>
+        /// <para>Specifies whether to create the ECS instance on a dedicated host. If you specify the DedicatedHostId parameter, the SpotStrategy and SpotPriceLimit settings in the request are automatically ignored. This is because dedicated hosts do not support creating preemptible instances.</para>
+        /// <para>You can call the DescribeDedicatedHosts operation to query the list of dedicated host IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dh-bp67acfmxazb4p****</para>
@@ -562,6 +625,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DedicatedHostId { get; set; }
 
         /// <summary>
+        /// <para>The release protection attribute of the instance. This specifies whether you can release the instance through the ECS console or by calling the DeleteInstance API. This prevents accidental release of the instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: enables release protection. You cannot release the instance through the ECS console or by calling the DeleteInstance API.</para>
+        /// </description></item>
+        /// <item><description><para>false: disables release protection. You can release the instance through the ECS console or by calling the DeleteInstance API.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// <remarks>
+        /// <para>This attribute applies only to pay-as-you-go instances to prevent accidental release of instances scaled out by Auto Scaling. It does not affect normal scale-in activities. Instances with release protection enabled can be released during scale-in activities.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -570,7 +645,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>The ID of the deployment set of the ECS instances that are created by using the scaling configuration.</para>
+        /// <para>The ID of the deployment set to which the ECS instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ds-bp1frxuzdg87zh4pz****</para>
@@ -580,10 +655,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string DeploymentSetId { get; set; }
 
         /// <summary>
-        /// <para>The hostname of the ECS instance. The hostname cannot start or end with a period (.) or a hyphen (-). The hostname cannot contain consecutive periods (.) or hyphens (-). Naming conventions for different types of instances:</para>
+        /// <para>The hostname of the ECS instance. A period (.) or a hyphen (-) cannot be used as the first or last character of a hostname. Consecutive periods (.) or hyphens (-) are not allowed. The naming conventions for different instance types are as follows:</para>
         /// <list type="bullet">
-        /// <item><description>Windows instances: The hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.</description></item>
-        /// <item><description>Other instances, such as Linux instances: The hostname must be 2 to 64 characters in length. You can use periods (.) to separate a hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</description></item>
+        /// <item><description><para>For Windows instances, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). It cannot contain periods (.) or be all digits.</para>
+        /// </description></item>
+        /// <item><description><para>For other instance types, such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -594,7 +671,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Elastic High Performance Computing (E-HPC) cluster to which the ECS instances that are created by using the scaling configuration belong.</para>
+        /// <para>The ID of the High Performance Computing (HPC) cluster to which the ECS instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hpc-clusterid</para>
@@ -606,12 +683,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>Specifies whether to enable the access channel for instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enabled</description></item>
-        /// <item><description>disabled</description></item>
+        /// <item><description><para>enabled: enables the channel.</para>
+        /// </description></item>
+        /// <item><description><para>disabled: disables the channel.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: enabled.</para>
         /// <remarks>
-        /// <para> For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Obtain instance metadata</a>.</para>
+        /// <para>For information about instance metadata, see <a href="https://help.aliyun.com/document_detail/108460.html">Overview of instance metadata</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -622,14 +701,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HttpEndpoint { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcibly use the security hardening mode (IMDSv2) to access instance metadata. Valid values:</para>
+        /// <para>Specifies whether to enforce the security-hardened mode (IMDSv2) when accessing instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>optional: does not forcibly use the security hardening mode (IMDSv2).</description></item>
-        /// <item><description>required: forcibly uses the security hardening mode (IMDSv2). If you set this parameter to required, you cannot access instance metadata in normal mode.</description></item>
+        /// <item><description><para>optional: does not enforce the mode.</para>
+        /// </description></item>
+        /// <item><description><para>required: enforces the mode. If you set this value, you cannot access instance metadata in normal mode.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: optional.</para>
         /// <remarks>
-        /// <para> For more information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/108460.html">Access modes of instance metadata</a>.</para>
+        /// <para>For information about instance metadata access modes, see <a href="https://help.aliyun.com/document_detail/108460.html">Instance metadata access modes</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -640,7 +721,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string HttpTokens { get; set; }
 
         /// <summary>
-        /// <para>The name of the image family. If you specify this parameter, the most recent custom images that are available in the specified image family are returned. You can use the images to create instances. If you specify ImageId, you cannot specify ImageFamily.</para>
+        /// <para>The name of the image family. You can set this parameter to obtain the latest available image from the specified image family to create the instance. If you have specified the <c>ImageId</c> parameter, you cannot set this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hangzhou-daily-update</para>
@@ -650,7 +731,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ImageFamily { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image that Auto Scaling uses to automatically create ECS instances.</para>
+        /// <para>The ID of the image file to use for creating instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>centos6u5_64_20G_aliaegis****.vhd</para>
@@ -660,8 +741,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the image. Each image name must be unique in a region. If you specify ImageId, ImageName is ignored.</para>
-        /// <para>You cannot use ImageName to specify images that are purchased from Alibaba Cloud Marketplace.</para>
+        /// <para>The name of the image file. Image names must be unique within a region. If you specify ImageId, ImageName is ignored.</para>
+        /// <para>You cannot use ImageName to specify a Marketplace image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image****</para>
@@ -671,7 +752,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The description of the ECS instance. The description must be 2 to 256 characters in length. The description can contain letters and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the ECS instance. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test instance.</para>
@@ -681,7 +762,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the ECS instance that Auto Scaling creates based on the scaling configuration.</para>
+        /// <para>The name of the ECS instances that are created using the scaling configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>instance****</para>
@@ -691,21 +772,25 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The intelligent configuration settings, which determine the available instance types.</para>
+        /// <para>A collection of intelligent configuration information used to filter instance types that meet the requirements.</para>
         /// </summary>
         [NameInMap("InstancePatternInfos")]
         [Validation(Required=false)]
         public List<CreateScalingConfigurationRequestInstancePatternInfos> InstancePatternInfos { get; set; }
         public class CreateScalingConfigurationRequestInstancePatternInfos : TeaModel {
             /// <summary>
-            /// <para>The architecture types of the instance types. Valid values:</para>
+            /// <para>The architecture type of the instance type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>X86: x86 architecture.</description></item>
-            /// <item><description>Heterogeneous: heterogeneous computing, such as GPU-accelerated or FPGA-accelerated.</description></item>
-            /// <item><description>BareMetal: ECS Bare Metal Instance.</description></item>
-            /// <item><description>Arm: Arm.</description></item>
+            /// <item><description><para>X86: X86 compute.</para>
+            /// </description></item>
+            /// <item><description><para>Heterogeneous: heterogeneous computing, such as GPU or FPGA.</para>
+            /// </description></item>
+            /// <item><description><para>BareMental: ECS Bare Metal Instance.</para>
+            /// </description></item>
+            /// <item><description><para>Arm: Arm compute.</para>
+            /// </description></item>
             /// </list>
-            /// <para>By default, all values are selected.</para>
+            /// <para>Default value: all architecture types are included.</para>
             /// </summary>
             [NameInMap("Architectures")]
             [Validation(Required=false)]
@@ -714,9 +799,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             /// <summary>
             /// <para>Specifies whether to include burstable instance types. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Exclude: excludes burstable instance types.</description></item>
-            /// <item><description>Include: includes burstable instance types.</description></item>
-            /// <item><description>Required: includes only burstable instance types.</description></item>
+            /// <item><description><para>Exclude: does not include burstable instance types.</para>
+            /// </description></item>
+            /// <item><description><para>Include: includes burstable instance types.</para>
+            /// </description></item>
+            /// <item><description><para>Required: includes only burstable instance types.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: Include.</para>
             /// 
@@ -728,12 +816,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string BurstablePerformance { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs per instance type in intelligent configuration mode. You can specify this parameter to filter the available instance types. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</para>
-            /// <para>Take note of the following items:</para>
+            /// <para>In intelligent configuration mode, the number of vCPU cores of the instance type. This is used to filter instance types that meet the requirements. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+            /// <para>Note the following:</para>
             /// <list type="bullet">
-            /// <item><description>InstancePatternInfos applies only to scaling groups that reside in virtual private clouds (VPCs).</description></item>
-            /// <item><description>If you specify InstancePatternInfos, you must also specify InstancePatternInfos.Cores and InstancePatternInfos.Memory.</description></item>
-            /// <item><description>If you specify InstanceType or InstanceTypes, Auto Scaling preferentially uses the instance type specified by InstanceType or InstanceTypes to create instances during scale-out events. If the specified instance type has insufficient inventory, Auto Scaling uses the lowest-priced instance type specified by InstancePatternInfos to create instances during scale-out events.</description></item>
+            /// <item><description><para>The InstancePatternInfos parameter applies only when the network type of the scaling group is VPC.</para>
+            /// </description></item>
+            /// <item><description><para>When using InstancePatternInfos, you must specify both InstancePatternInfos.Cores and InstancePatternInfos.Memory.</para>
+            /// </description></item>
+            /// <item><description><para>If you have already specified instance types using the InstanceType or InstanceTypes parameter, Auto Scaling prioritizes the specified instance types for scale-outs. If the specified instance types are out of stock, Auto Scaling uses the instance type with the lowest price from the instance types that match the InstancePatternInfos parameter.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -744,13 +835,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Cores { get; set; }
 
             /// <summary>
-            /// <para>The CPU architectures of the instance types. Valid values:</para>
+            /// <para>The CPU architecture of the instance. Valid values:</para>
             /// <remarks>
-            /// <para> You can specify up to two CPU architectures.</para>
+            /// <para>You can specify multiple CPU architectures. N is an integer from 1 to 2.</para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>x86</description></item>
-            /// <item><description>Arm</description></item>
+            /// <item><description><para>X86.</para>
+            /// </description></item>
+            /// <item><description><para>ARM.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("CpuArchitectures")]
@@ -758,10 +851,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> CpuArchitectures { get; set; }
 
             /// <summary>
-            /// <para>The instance types that you want to exclude. You can use an asterisk (\*) as a wildcard character to exclude an instance type or an instance family. Examples:</para>
+            /// <para>The instance types to exclude. You can use a wildcard character (\*) to exclude a single instance type or an entire instance family. For example:</para>
             /// <list type="bullet">
-            /// <item><description>ecs.c6.large: excludes the ecs.c6.large instance type.</description></item>
-            /// <item><description>ecs.c6.\*: excludes the c6 instance family.</description></item>
+            /// <item><description><para>ecs.c6.large: excludes the ecs.c6.large instance type.</para>
+            /// </description></item>
+            /// <item><description><para>ecs.c6.\*: excludes all instance types in the c6 family.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("ExcludedInstanceTypes")]
@@ -769,33 +864,48 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> ExcludedInstanceTypes { get; set; }
 
             /// <summary>
-            /// <para>The GPU models.</para>
+            /// <para>The GPU type.</para>
             /// </summary>
             [NameInMap("GpuSpecs")]
             [Validation(Required=false)]
             public List<string> GpuSpecs { get; set; }
 
             /// <summary>
-            /// <para>The categories of the instance types. Valid values:</para>
+            /// <para>The category of the instance. Valid values:</para>
             /// <remarks>
-            /// <para> You can specify up to 10 categories.</para>
+            /// <para>You can specify multiple instance categories. N is an integer from 1 to 10.</para>
             /// </remarks>
             /// <list type="bullet">
-            /// <item><description>General-purpose: general-purpose instance type.</description></item>
-            /// <item><description>Compute-optimized: compute-optimized instance type.</description></item>
-            /// <item><description>Memory-optimized: memory-optimized instance type.</description></item>
-            /// <item><description>Big data: big data instance type.</description></item>
-            /// <item><description>Local SSDs: instance type that uses local SSDs.</description></item>
-            /// <item><description>High Clock Speed: instance type that has high clock speeds.</description></item>
-            /// <item><description>Enhanced: enhanced instance type.</description></item>
-            /// <item><description>Shared: shared instance type.</description></item>
-            /// <item><description>Compute-optimized with GPU: GPU-accelerated compute-optimized instance type.</description></item>
-            /// <item><description>Visual Compute-optimized: visual compute-optimized instance type.</description></item>
-            /// <item><description>Heterogeneous Service: heterogeneous service instance type.</description></item>
-            /// <item><description>Compute-optimized with FPGA: FPGA-accelerated compute-optimized instance type.</description></item>
-            /// <item><description>Compute-optimized with NPU: NPU-accelerated compute-optimized instance type.</description></item>
-            /// <item><description>ECS Bare Metal: ECS Bare Metal Instance type.</description></item>
-            /// <item><description>High Performance Compute: HPC-optimized instance type.</description></item>
+            /// <item><description><para>General-purpose: General-purpose.</para>
+            /// </description></item>
+            /// <item><description><para>Compute-optimized: compute-optimized.</para>
+            /// </description></item>
+            /// <item><description><para>Memory-optimized: memory-optimized.</para>
+            /// </description></item>
+            /// <item><description><para>Big data: big data.</para>
+            /// </description></item>
+            /// <item><description><para>Local SSDs : local SSDs.</para>
+            /// </description></item>
+            /// <item><description><para>High Clock Speed : high frequency.</para>
+            /// </description></item>
+            /// <item><description><para>Enhanced : enhanced instance families.</para>
+            /// </description></item>
+            /// <item><description><para>Shared: shared-resource instances.</para>
+            /// </description></item>
+            /// <item><description><para>Compute-optimized with GPU : GPU compute-optimized.</para>
+            /// </description></item>
+            /// <item><description><para>Visual Compute-optimized : visual compute-optimized.</para>
+            /// </description></item>
+            /// <item><description><para>Heterogeneous Service : heterogeneous service.</para>
+            /// </description></item>
+            /// <item><description><para>Compute-optimized with FPGA : FPGA compute-optimized.</para>
+            /// </description></item>
+            /// <item><description><para>Compute-optimized with NPU : NPU compute-optimized.</para>
+            /// </description></item>
+            /// <item><description><para>ECS Bare Metal : ECS Bare Metal Instance.</para>
+            /// </description></item>
+            /// <item><description><para>High Performance Compute: high-performance computing.</para>
+            /// </description></item>
             /// </list>
             /// </summary>
             [NameInMap("InstanceCategories")]
@@ -803,11 +913,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public List<string> InstanceCategories { get; set; }
 
             /// <summary>
-            /// <para>The level of the instance family. You can specify this parameter to match the available instance types. This parameter takes effect only if you set <c>CostOptimization</c> to true. Valid values:</para>
+            /// <para>The level of the instance family, used to filter instance types that meet the requirements. This parameter takes effect when <c>CostOptimization</c> is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>EntryLevel: entry-level (shared instance types). Instance types of this level are the most cost-effective but may not ensure stable computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared instance families</a>.</description></item>
-            /// <item><description>EnterpriseLevel: enterprise-level. Instance types of this level provide stable performance and dedicated resources and are suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</description></item>
-            /// <item><description>CreditEntryLevel: credit entry-level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview</a> of burstable instances.</description></item>
+            /// <item><description><para>EntryLevel: entry-level, which refers to shared-resource instances. This level offers lower costs but cannot guarantee stable computing performance. It is suitable for business scenarios with low CPU utilization. For more information, see <a href="https://help.aliyun.com/document_detail/108489.html">Shared-resource instances</a>.</para>
+            /// </description></item>
+            /// <item><description><para>EnterpriseLevel: enterprise-level. This level provides stable performance and dedicated resources, suitable for business scenarios that require high stability. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+            /// </description></item>
+            /// <item><description><para>CreditEntryLevel: credit entry-level, which refers to burstable instances. This level uses CPU credits to ensure computing performance and is suitable for business scenarios with low CPU utilization and occasional CPU bursts. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Overview of burstable instances</a>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -818,16 +931,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceFamilyLevel { get; set; }
 
             /// <summary>
-            /// <para>The instance families that you want to specify. You can specify up to 10 instance families in each call.</para>
+            /// <para>The instance families to query. You can specify multiple instance families. N is an integer from 1 to 10.</para>
             /// </summary>
             [NameInMap("InstanceTypeFamilies")]
             [Validation(Required=false)]
             public List<string> InstanceTypeFamilies { get; set; }
 
             /// <summary>
-            /// <para>The maximum hourly price of pay-as-you-go or preemptible instances in intelligent configuration mode. You can specify this parameter to filter the available instance types.</para>
+            /// <para>In intelligent configuration mode, the maximum hourly price you are willing to pay for a pay-as-you-go or preemptible instance. This is used to filter instance types that meet the requirements.</para>
             /// <remarks>
-            /// <para> If you set SpotStrategy to SpotWithPriceLimit, you must specify this parameter. In other cases, this parameter is optional.</para>
+            /// <para>This parameter is required when SpotStrategy is set to SpotWithPriceLimit. In other cases, this parameter is optional.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -838,9 +951,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? MaxPrice { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of vCPUs per instance type.</para>
+            /// <para>The maximum number of vCPU cores for the instance type.</para>
             /// <remarks>
-            /// <para> The value of MaximumCpuCoreCount cannot exceed four times the value of MinimumCpuCoreCount.</para>
+            /// <para>MaximumCpuCoreCount cannot be more than four times the value of MinimumCpuCoreCount.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -851,7 +964,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MaximumCpuCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of GPUs per instance. The value must be a positive integer.</para>
+            /// <para>The maximum number of GPUs for the instance. The value must be a positive integer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -861,7 +974,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MaximumGpuAmount { get; set; }
 
             /// <summary>
-            /// <para>The maximum memory size per instance. Unit: GiB.</para>
+            /// <para>The maximum memory size of the instance. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -871,7 +984,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? MaximumMemorySize { get; set; }
 
             /// <summary>
-            /// <para>The memory size per instance type in intelligent configuration mode. Unit: GiB. You can specify this parameter to filter the available instance types.</para>
+            /// <para>In intelligent configuration mode, the memory size of the instance type. Unit: GiB. This is used to filter instance types that meet the requirements.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -881,7 +994,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? Memory { get; set; }
 
             /// <summary>
-            /// <para>The baseline vCPU computing performance (overall baseline performance of all vCPUs) per t5 or t6 burstable instance.</para>
+            /// <para>The minimum baseline vCPU performance (the sum of all vCPUs) for burstable instances of the t5 or t6 family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -891,7 +1004,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MinimumBaselineCredit { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of vCPUs per instance type.</para>
+            /// <para>The minimum number of vCPU cores for the instance type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -901,7 +1014,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MinimumCpuCoreCount { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of IPv6 addresses per ENI.</para>
+            /// <para>The minimum number of IPv6 addresses that can be assigned to a single ENI.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -911,7 +1024,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MinimumEniIpv6AddressQuantity { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of IPv4 addresses per ENI.</para>
+            /// <para>The minimum number of private IPv4 addresses to assign to a single elastic network interface (ENI) of an instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -921,7 +1034,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MinimumEniPrivateIpAddressQuantity { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of elastic network interfaces (ENIs) per instance.</para>
+            /// <para>The minimum number of elastic network interfaces (ENIs) that can be attached to an instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -931,7 +1044,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MinimumEniQuantity { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of GPUs per instance. The value must be a positive integer.</para>
+            /// <para>The minimum number of GPUs for the instance. The value must be a positive integer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -941,7 +1054,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MinimumGpuAmount { get; set; }
 
             /// <summary>
-            /// <para>The initial vCPU credits per t5 or t6 burstable instance.</para>
+            /// <para>The minimum initial vCPU credit for burstable instances of the t5 or t6 family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -951,7 +1064,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? MinimumInitialCredit { get; set; }
 
             /// <summary>
-            /// <para>The minimum memory size per instance. Unit: GiB.</para>
+            /// <para>The minimum memory size of the instance. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -961,7 +1074,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public float? MinimumMemorySize { get; set; }
 
             /// <summary>
-            /// <para>The processor models of the instance types. You can specify up to 10 processor models.</para>
+            /// <para>The processor model of the instance. You can specify multiple processor models. N is an integer from 1 to 10.</para>
             /// </summary>
             [NameInMap("PhysicalProcessorModels")]
             [Validation(Required=false)]
@@ -970,7 +1083,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The instance type of the ECS instance. For more information, see the <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> topic.</para>
+        /// <para>The instance type of the ECS instance. For more information, see Instance families.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
@@ -979,26 +1092,63 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public string InstanceType { get; set; }
 
+        /// <summary>
+        /// <para>After you enable the candidate mode, if issues such as insufficient inventory occur, the system supplements the currently selected instance types with similar-sized alternatives or creates vSwitches in candidate zones and adds them to the scaling group.</para>
+        /// </summary>
         [NameInMap("InstanceTypeCandidateOptions")]
         [Validation(Required=false)]
         public CreateScalingConfigurationRequestInstanceTypeCandidateOptions InstanceTypeCandidateOptions { get; set; }
         public class CreateScalingConfigurationRequestInstanceTypeCandidateOptions : TeaModel {
+            /// <summary>
+            /// <para>When supplementing with vSwitches from other zones is allowed, you must specify the CIDR blocks for the candidate vSwitches.</para>
+            /// </summary>
             [NameInMap("AllowCidrBlocks")]
             [Validation(Required=false)]
             public List<string> AllowCidrBlocks { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to allow supplementing with vSwitches from other zones.</para>
+            /// <remarks>
+            /// <para>The instance type remains unchanged; only new zones are considered as candidates. When a scaling group cannot scale out in any of the selected zones due to issues like insufficient inventory, this configuration allows ESS to automatically add a vSwitch from a new zone to the scaling group.
+            /// For example, if a scaling group is configured for zones cn-hangzhou-h and cn-hangzhou-g, and neither can be scaled out, ESS might create and add a vSwitch in cn-hangzhou-k based on real-time inventory.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AllowCrossAz")]
             [Validation(Required=false)]
             public bool? AllowCrossAz { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to allow supplementing with instance types from other generations.</para>
+            /// <list type="bullet">
+            /// <item><description>For example, if the current instance type is ecs.c7.large, enabling this allows ecs.c6.large and ecs.c8.large as candidate types.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("AllowDifferentGeneration")]
             [Validation(Required=false)]
             public bool? AllowDifferentGeneration { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable the candidate mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("Enabled")]
             [Validation(Required=false)]
             public bool? Enabled { get; set; }
 
+            /// <summary>
+            /// <para>The maximum price for candidate instance types.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2.10</para>
+            /// </summary>
             [NameInMap("MaxPrice")]
             [Validation(Required=false)]
             public float? MaxPrice { get; set; }
@@ -1006,19 +1156,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The information about instance types.</para>
+        /// <para>Information about the specified instance types.</para>
         /// </summary>
         [NameInMap("InstanceTypeOverrides")]
         [Validation(Required=false)]
         public List<CreateScalingConfigurationRequestInstanceTypeOverrides> InstanceTypeOverrides { get; set; }
         public class CreateScalingConfigurationRequestInstanceTypeOverrides : TeaModel {
             /// <summary>
-            /// <para>If you want to scale instances in the scaling group based on the weight of an instance type, you must specify this property and WeightedCapacity.</para>
-            /// <para>The instance type specified by using this parameter overwrites the instance type of the launch template. You can specify N instance types by using the Extend Launch Template feature. You can specify 1 to 10 memory sizes, indicated by N.</para>
+            /// <para>If you want the scaling group to scale based on the capacity of instance types, specify both this parameter and WeightedCapacity.</para>
+            /// <para>This parameter specifies the instance type and overwrites the instance type in the launch template. You can specify this parameter up to 20 times. N is an integer from 1 to 20.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only if you specify LaunchTemplateId.</para>
+            /// <para>This parameter takes effect only when a launch template is specified by the LaunchTemplateId parameter.</para>
             /// </remarks>
-            /// <para>You can use this parameter to specify any instance types that are available for purchase.</para>
+            /// <para>Valid values for InstanceType: available ECS instance types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.c5.xlarge</para>
@@ -1028,20 +1178,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>If you need to specify the capacity of the instance type in the scaling configuration, you must specify this parameter after you specify InstanceTypeOverrides.InstanceType.</para>
-            /// <para>The weight specifies the capacity of an instance of the specified instance type in the scaling group. A higher weight specifies that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.</para>
-            /// <para>Performance metrics such as the number of vCPUs and memory size vary with each instance type. You can specify different weights for different instance types based on your business requirements.</para>
+            /// <para>To specify the capacity of an instance type in the scaling configuration, specify this parameter after you specify InstanceTypeOverrides.InstanceType.</para>
+            /// <para>This parameter specifies the weight of the instance type. The weight indicates the capacity of a single instance of the specified instance type in the scaling group. A higher weight means that fewer instances of that type are needed to meet the desired capacity.</para>
+            /// <para>You can configure different weights for different instance types based on their performance metrics, such as the number of vCPUs and memory size.</para>
             /// <para>For example:</para>
             /// <list type="bullet">
-            /// <item><description>Current capacity: 0.</description></item>
-            /// <item><description>Expected capacity: 6</description></item>
-            /// <item><description>Capacity of ecs.c5.xlarge: 4.</description></item>
+            /// <item><description><para>Current capacity: 0.</para>
+            /// </description></item>
+            /// <item><description><para>Expected capacity: 6.</para>
+            /// </description></item>
+            /// <item><description><para>Capacity of ecs.c5.xlarge: 4.</para>
+            /// </description></item>
             /// </list>
-            /// <para>To reach the expected capacity, Auto Scaling must scale out two instances of ecs.c5.xlarge.</para>
+            /// <para>To meet the expected capacity, the scaling group will scale out two ecs.c5.xlarge instances.</para>
             /// <remarks>
-            /// <para> The total capacity of the scaling group is constrained and cannot surpass the combined total of the maximum group size defined by MaxSize and the highest weight assigned to any instance type.</para>
+            /// <para>During a scale-out, the capacity of the scaling group cannot exceed the sum of MaxSize and the maximum weight of the instance type.</para>
             /// </remarks>
-            /// <para>Valid values of WeightedCapacity: 1 to 500.</para>
+            /// <para>Valid values for WeightedCapacity: 1 to 500.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -1053,20 +1206,22 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The instance types. If you specify InstanceTypes, InstanceType is ignored.</para>
-        /// <para>Auto Scaling creates instances based on a priority list of instance types. If it fails to create instances using the highest-priority type, it automatically moves to the next type in the priority order.</para>
+        /// <para>Multiple instance types. If you use InstanceTypes, InstanceType is ignored.</para>
+        /// <para>If an instance cannot be created from an instance type with a higher priority, Auto Scaling automatically tries the next instance type in the list.</para>
         /// </summary>
         [NameInMap("InstanceTypes")]
         [Validation(Required=false)]
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The metering method for network usage. Valid values:</para>
+        /// <para>The billing method for network usage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PayByBandwidth: You are charged for the maximum available bandwidth that is specified by InternetMaxBandwidthOut.</description></item>
-        /// <item><description>PayByTraffic: You are charged based on the amount of transferred data. InternetMaxBandwidthOut specifies only the maximum available bandwidth.</description></item>
+        /// <item><description><para>PayByBandwidth: pay-by-bandwidth. InternetMaxBandwidthOut specifies the fixed bandwidth.</para>
+        /// </description></item>
+        /// <item><description><para>PayByTraffic: pay-by-data-transfer. InternetMaxBandwidthOut specifies the maximum bandwidth. You are charged for the actual data transfer.</para>
+        /// </description></item>
         /// </list>
-        /// <para>For the classic network, the default value is PayByBandwidth. For VPCs, the default value is PayByTraffic.</para>
+        /// <para>If you do not specify this parameter, the default value is PayByBandwidth for classic network and PayByTraffic for VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByTraffic</para>
@@ -1078,12 +1233,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s, the valid values of this parameter are 1 to 10, and the default value is 10.</description></item>
-        /// <item><description>If the purchased outbound public bandwidth is greater than 10 Mbit/s, the valid values of this parameter are 1 to the value of <c>InternetMaxBandwidthOut</c>, and the default value is the value of <c>InternetMaxBandwidthOut</c>.</description></item>
+        /// <item><description><para>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</para>
+        /// </description></item>
+        /// <item><description><para>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <c>InternetMaxBandwidthOut</c>. Default value: the value of <c>InternetMaxBandwidthOut</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("InternetMaxBandwidthIn")]
         [Validation(Required=false)]
@@ -1094,16 +1251,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>Default value: 0.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>50</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("InternetMaxBandwidthOut")]
         [Validation(Required=false)]
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to create an I/O optimized instance. Valid values:</para>
-        /// <para>none: does not create an I/O optimized instance. optimized: creates an I/O optimized instance.</para>
-        /// <para>For instances of retired instance types, the default value is none. For instances of other instance types, the default value is optimized.</para>
+        /// <para>Specifies whether the instance is I/O optimized. Valid values:</para>
+        /// <para>none: The instance is not I/O optimized.
+        /// optimized: The instance is I/O optimized.</para>
+        /// <para>For retired instance types, the default value is none. For other instance types, the default value is optimized.</para>
         /// 
         /// <b>Example:</b>
         /// <para>optimized</para>
@@ -1113,7 +1271,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string IoOptimized { get; set; }
 
         /// <summary>
-        /// <para>The number of randomly generated IPv6 addresses that you want to allocate to the elastic network interface (ENI).</para>
+        /// <para>The number of randomly generated IPv6 addresses to assign to the ENI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -1123,10 +1281,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? Ipv6AddressCount { get; set; }
 
         /// <summary>
-        /// <para>The name of the key pair that you want to use to log on to an ECS instance.</para>
+        /// <para>The name of the key pair to use to log on to the ECS instance.</para>
         /// <list type="bullet">
-        /// <item><description>Windows instances do not support this parameter.</description></item>
-        /// <item><description>By default, the username and password authentication method is disabled for Linux instances.</description></item>
+        /// <item><description><para>For Windows instances, this parameter is ignored. The default value is empty.</para>
+        /// </description></item>
+        /// <item><description><para>For Linux instances, password-based logon is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1137,8 +1297,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>The weight of an ECS instance as a backend server. Valid values: 1 to 100.</para>
-        /// <para>Default value: 50</para>
+        /// <para>The weight of the ECS instance as a backend server of the load balancer. Valid values: 1 to 100.</para>
+        /// <para>Default value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -1149,9 +1309,9 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         /// <summary>
         /// <para>The memory size. Unit: GiB.</para>
-        /// <para>You can specify the number of vCPUs and the memory size to determine the range of instance types. For example, you can set Cpu to 2 and Memory to 16 to specify instance types that have 2 vCPUs and 16 GiB of memory. If you specify Cpu and Memory, Auto Scaling determines the available instance types based on factors such as I/O optimization requirements and zones. Then, Auto Scaling preferentially creates instances by using the lowest-priced instance type.</para>
+        /// <para>You can specify both Cpu and Memory to define a range of instance types. For example, if you set Cpu to 2 and Memory to 16, all instance types with 2 vCPUs and 16 GiB of memory are selected. Auto Scaling determines the available instance types based on factors such as I/O optimization and zone, and then creates an instance of the instance type that has the lowest price.</para>
         /// <remarks>
-        /// <para>You can specify Cpu and Memory to determine the range of instance types only if you set Scaling Policy to Cost Optimization Policy and you do not specify instance types in the scaling configuration.</para>
+        /// <para>This configuration is effective only when the cost optimization policy is enabled for the scaling group and no instance types are specified in the scaling configuration.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1161,11 +1321,23 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <para>The list of ENIs.</para>
+        /// </summary>
         [NameInMap("NetworkInterfaces")]
         [Validation(Required=false)]
         public List<CreateScalingConfigurationRequestNetworkInterfaces> NetworkInterfaces { get; set; }
         public class CreateScalingConfigurationRequestNetworkInterfaces : TeaModel {
             /// <summary>
+            /// <para>The type of ENI. When using this parameter, you must use NetworkInterfaces to set the primary NIC and cannot set the SecurityGroupId or SecurityGroupIds parameters. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Primary: primary NIC.</para>
+            /// </description></item>
+            /// <item><description><para>Secondary: secondary NIC.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: Secondary.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Primary</para>
             /// </summary>
@@ -1174,6 +1346,15 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceType { get; set; }
 
             /// <summary>
+            /// <para>The number of randomly generated IPv6 addresses to assign to the primary NIC.
+            /// Note:</para>
+            /// <list type="bullet">
+            /// <item><description><para>This parameter takes effect only when NetworkInterface.InstanceType is set to Primary. If NetworkInterface.InstanceType is set to Secondary or is empty, you cannot set this parameter.</para>
+            /// </description></item>
+            /// <item><description><para>If you set this parameter, you cannot set Ipv6AddressCount.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -1182,6 +1363,18 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public int? Ipv6AddressCount { get; set; }
 
             /// <summary>
+            /// <para>The communication mode of the NIC. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Standard: uses TCP communication mode.</para>
+            /// </description></item>
+            /// <item><description><para>HighPerformance: enables the Elastic RDMA Interface (ERI) and uses RDMA communication mode.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>Default value: Standard.</para>
+            /// <remarks>
+            /// <para>The number of ENIs in RDMA mode cannot exceed the limit for the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>HighPerformance</para>
             /// </summary>
@@ -1189,10 +1382,25 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string NetworkInterfaceTrafficMode { get; set; }
 
+            /// <summary>
+            /// <para>The number of secondary private IPv4 addresses to assign to the NIC. Valid values: 1 to 49.</para>
+            /// <list type="bullet">
+            /// <item><description><para>The value cannot exceed the IP address limit for the instance type. For more information, see <a href="https://help.aliyun.com/en/ecs/user-guide/overview-of-instance-families">Instance families</a>.</para>
+            /// </description></item>
+            /// <item><description><para>NetworkInterface.N.SecondaryPrivateIpAddressCount is used to assign a number of secondary private IPv4 addresses to the NIC (excluding the primary private IP address). The system randomly assigns these addresses from the available CIDR block of the vSwitch (NetworkInterface.N.VSwitchId) where the NIC is located.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>6</para>
+            /// </summary>
             [NameInMap("SecondaryPrivateIpAddressCount")]
             [Validation(Required=false)]
             public int? SecondaryPrivateIpAddressCount { get; set; }
 
+            /// <summary>
+            /// <para>One or more security group IDs to which the ENI belongs.</para>
+            /// </summary>
             [NameInMap("SecurityGroupIds")]
             [Validation(Required=false)]
             public List<string> SecurityGroupIds { get; set; }
@@ -1208,11 +1416,11 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password that you want to use to log on to an ECS instance. The password must be 8 to 30 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. The following special characters are supported:</para>
-        /// <para><c>`() ~!@#$%^&amp;*-_+=\\|{}[]:;\\&quot;&lt;&gt;,.?/</c></para>
-        /// <para>The password of a Windows instance cannot start with a forward slash (/).</para>
+        /// <para>The password of the ECS instance. The password must be 8 to 30 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters can be:</para>
+        /// <para>\<c>()</c> ~!@#$%^&amp;*-_+=\|{}[]:;\&quot;&lt;&gt;,.?/`</para>
+        /// <para>For Windows instances, the password cannot start with a forward slash (/).</para>
         /// <remarks>
-        /// <para>For security reasons, we recommend that you use HTTPS to send requests if you specify Password.</para>
+        /// <para>If you specify the Password parameter, we recommend that you send the request over HTTPS to prevent password leaks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -1223,10 +1431,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the password that is preconfigured in the image. Before you use this parameter, make sure that a password is configured in the image. Valid values:</para>
+        /// <para>Specifies whether to use the password preset in the image. If you use this parameter, make sure that a password is preset in the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: uses the preset password.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not use the preset password.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1237,7 +1447,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public bool? PasswordInherit { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role that you attach to the ECS instance. The name is provided and maintained by Resource Access Management (RAM). You can call the ListRoles operation to query the available RAM roles.</para>
+        /// <para>The name of the RAM role for the ECS instance. The name is provided and maintained by RAM. You can call the ListRoles operation to query the available RAM roles.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ramrole****</para>
@@ -1247,7 +1457,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the ECS instances that are created by using the scaling configuration belong.</para>
+        /// <para>The ID of the resource group to which the ECS instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-resource****</para>
@@ -1261,10 +1471,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The resource pools used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. When you specify this parameter, take note of the following items:</para>
+        /// <para>The resource pool policy to use when creating an instance. Note the following when you set this parameter:</para>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when you create pay-as-you-go instances.</description></item>
-        /// <item><description>If you specify this parameter, you cannot specify PrivatePoolOptions.MatchCriteria or PrivatePoolOptions.Id.</description></item>
+        /// <item><description><para>This parameter takes effect only when creating pay-as-you-go instances.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot set this parameter at the same time as PrivatePoolOptions.MatchCriteria and PrivatePoolOptions.Id.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("ResourcePoolOptions")]
@@ -1272,20 +1484,44 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public CreateScalingConfigurationRequestResourcePoolOptions ResourcePoolOptions { get; set; }
         public class CreateScalingConfigurationRequestResourcePoolOptions : TeaModel {
             /// <summary>
-            /// <para>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</para>
+            /// <para>The ID of the private pool. This is the ID of the Elastic Assurance or Capacity Reservation service. This parameter can only accept Target mode private pool IDs and cannot be specified at the same time as the PrivatePoolTags parameter.</para>
             /// </summary>
             [NameInMap("PrivatePoolIds")]
             [Validation(Required=false)]
             public List<string> PrivatePoolIds { get; set; }
 
+            /// <summary>
+            /// <para>Filter available Target private pools by tags. N is an integer from 1 to 20.
+            /// Note:</para>
+            /// <list type="bullet">
+            /// <item><description><para>When this parameter is configured, the system only selects from the associated Target private pools under the account that have matching tags and also meet the scaling group constraints (such as zone, instance type, etc.).</para>
+            /// </description></item>
+            /// <item><description><para>Tag matching rule: The private pool must match all specified tags.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter cannot be specified at the same time as the PrivatePoolIds parameter.</para>
+            /// </description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("PrivatePoolTags")]
             [Validation(Required=false)]
             public List<CreateScalingConfigurationRequestResourcePoolOptionsPrivatePoolTags> PrivatePoolTags { get; set; }
             public class CreateScalingConfigurationRequestResourcePoolOptionsPrivatePoolTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key of the private pool.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value of the private pool.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -1293,11 +1529,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The resource pool used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. Valid values:</para>
+            /// <para>The resource pool, which includes private pools generated after an Elastic Assurance or Capacity Reservation service takes effect, and the public pool, can be selected for instance startup. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PrivatePoolFirst: prioritizes private pools. When this option is set along with ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or if the specified private pools lack sufficient capacity, the system will automatically use available open private pools instead. If no matching private pools are available, the system defaults to the public pool.</description></item>
-            /// <item><description>PrivatePoolOnly: uses only private pools. If you set this value, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pools lack sufficient capacity, instance creation will fail.</description></item>
-            /// <item><description>None: uses no resource pools.</description></item>
+            /// <item><description><para>PrivatePoolFirst: Private pool first. When this policy is selected, if you specify ResourcePoolOptions.PrivatePoolIds or meet the PrivatePoolTags conditions, the corresponding private pool is used first. If no private pool is specified or the specified private pool has insufficient capacity, the system automatically matches an open-type private pool. If no eligible private pool is found, the instance is created using the public pool.</para>
+            /// </description></item>
+            /// <item><description><para>PrivatePoolOnly: Private pool only. When this policy is selected, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pool has insufficient capacity, the instance fails to start.</para>
+            /// </description></item>
+            /// <item><description><para>PublicPoolFirst: Public pool resources first. The system prioritizes creating the instance using the public pool. When public pool resources are insufficient, private pool resources are used as a supplement. The system first automatically matches an open-type private pool. If no eligible private pool is found, it uses a Target-type private pool that is specified by ResourcePoolOptions.PrivatePoolIds or meets the PrivatePoolTags conditions. (This policy is in invitational preview and is not yet available for use.)</para>
+            /// </description></item>
+            /// <item><description><para>None: No resource pool policy is used.</para>
+            /// </description></item>
             /// </list>
             /// <para>Default value: None.</para>
             /// 
@@ -1311,8 +1552,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The name of the scaling configuration. The name must be 2 to 64 characters in length and can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must start with a letter or a digit.</para>
-        /// <para>The name of the scaling configuration must be unique in a region. If you do not specify this parameter, the scaling configuration ID is used.</para>
+        /// <para>The name of the scaling configuration. The name must be 2 to 64 characters in length, and can contain digits, underscores (_), hyphens (-), and periods (.). It must start with a digit, a letter, or a Chinese character.</para>
+        /// <para>The name of a scaling configuration must be unique within a scaling group in a region. If you do not specify this parameter, the ID of the scaling configuration is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>scalingconfig****</para>
@@ -1322,7 +1563,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingConfigurationName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scaling group in which you want to create a scaling configuration.</para>
+        /// <para>The ID of the scaling group to which the scaling configuration belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -1333,7 +1574,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ScalingGroupId { get; set; }
 
         /// <summary>
-        /// <para>The scheduler options.</para>
+        /// <para>The scheduling options.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;testManagedPrivateSpaceId****&quot;]</para>
@@ -1345,8 +1586,10 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <summary>
         /// <para>Specifies whether to enable security hardening. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Active: enables security hardening. This value is applicable only to public images.</description></item>
-        /// <item><description>Deactive: disables security hardening. This value is applicable to all image types.</description></item>
+        /// <item><description><para>Active: enables security hardening. This setting is valid only for public images.</para>
+        /// </description></item>
+        /// <item><description><para>Deactive: disables security hardening. This setting is valid for all image types.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1357,7 +1600,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SecurityEnhancementStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group with which ECS instances are associated. ECS instances that are associated with the same security group can access each other.</para>
+        /// <para>The ID of the security group to which the ECS instance belongs. ECS instances in the same security group can communicate with each other.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-280ih****</para>
@@ -1367,24 +1610,29 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the security groups with which you want to associate the ECS instances that are created by using the scaling configuration. For more information, see the &quot;Security group limits&quot; section of the &quot;<a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>&quot; topic.</para>
+        /// <para>Adds the ECS instance to multiple security groups. For more information, see the Security groups section in <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</para>
         /// <remarks>
-        /// <para>If you specify SecurityGroupId, you cannot specify SecurityGroupIds.</para>
+        /// <para>You cannot specify both SecurityGroupId and SecurityGroupIds.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SecurityGroupIds")]
         [Validation(Required=false)]
         public List<string> SecurityGroupIds { get; set; }
 
+        /// <summary>
+        /// <para>The security options.</para>
+        /// </summary>
         [NameInMap("SecurityOptions")]
         [Validation(Required=false)]
         public CreateScalingConfigurationRequestSecurityOptions SecurityOptions { get; set; }
         public class CreateScalingConfigurationRequestSecurityOptions : TeaModel {
             /// <summary>
-            /// <para>The confidential computing mode. Valid values:</para>
+            /// <para>The confidential computing mode. Possible values:</para>
             /// <list type="bullet">
-            /// <item><description>Enclave: An enclave-based confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment by using Enclave</a>.</description></item>
-            /// <item><description>TDX: A Trust Domain Extensions (TDX) confidential computing environment is built on the instance. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</description></item>
+            /// <item><description><para>Enclave: The ECS instance uses an Enclave to build a confidential computing environment. For more information, see <a href="https://help.aliyun.com/document_detail/203433.html">Build a confidential computing environment using an Enclave</a>.</para>
+            /// </description></item>
+            /// <item><description><para>TDX: Builds a TDX confidential computing environment. For more information, see <a href="https://help.aliyun.com/document_detail/479090.html">Build a TDX confidential computing environment</a>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1397,12 +1645,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The retention period of the preemptible instance. Unit: hours. Valid values: 0, 1, 2, 3, 4, 5, and 6.</para>
+        /// <para>The protection period of the preemptible instance. Unit: hours. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>The following retention periods are available in invitational preview: 2, 3, 4, 5, and 6 hours. If you want to set this parameter to one of these values, submit a ticket.</description></item>
-        /// <item><description>If you set this parameter to 0, no protection period is specified for the preemptible instance.</description></item>
+        /// <item><description><para>1: The instance is retained for 1 hour after it is created. After 1 hour, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</para>
+        /// </description></item>
+        /// <item><description><para>0: The instance is not guaranteed to be retained for 1 hour after it is created. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: 1</para>
+        /// <remarks>
+        /// <para>Alibaba Cloud sends a notification to you through an ECS system event 5 minutes before the instance is released. Preemptible instances are billed by the second. We recommend that you select a protection period based on the time required for your task to complete.</para>
+        /// </remarks>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -1412,7 +1665,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? SpotDuration { get; set; }
 
         /// <summary>
-        /// <para>The interruption mode of the preemptible instance. Set the value to Terminate. The value specifies that the preemptible instance is to be released.</para>
+        /// <para>The interruption mode of the preemptible instance. Currently, only terminate is supported, which releases the instance by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Terminate</para>
@@ -1422,14 +1675,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SpotInterruptionBehavior { get; set; }
 
         /// <summary>
-        /// <para>The billing information of the spot instances.</para>
+        /// <para>A collection of billing information for preemptible instances.</para>
         /// </summary>
         [NameInMap("SpotPriceLimits")]
         [Validation(Required=false)]
         public List<CreateScalingConfigurationRequestSpotPriceLimits> SpotPriceLimits { get; set; }
         public class CreateScalingConfigurationRequestSpotPriceLimits : TeaModel {
             /// <summary>
-            /// <para>The instance type of the spot instances. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</para>
+            /// <para>The instance type of the preemptible instance. This parameter takes effect when SpotStrategy is set to SpotWithPriceLimit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecs.g6.large</para>
@@ -1439,7 +1692,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The price limit of the spot instances. This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit.</para>
+            /// <para>The bid price for the preemptible instance. This parameter takes effect when SpotStrategy is set to SpotWithPriceLimit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -1451,13 +1704,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The preemption policy that you want to apply to pay-as-you-go and preemptible instances. Valid values:</para>
+        /// <para>The preemption policy for pay-as-you-go instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NoSpot: The instance is created as a pay-as-you-go instance.</description></item>
-        /// <item><description>SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</description></item>
+        /// <item><description><para>NoSpot: The instance is a regular pay-as-you-go instance.</para>
+        /// </description></item>
+        /// <item><description><para>SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</para>
+        /// </description></item>
+        /// <item><description><para>SpotAsPriceGo: The instance is a preemptible instance for which the price is automatically bid based on the current market price.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: NoSpot</para>
+        /// <para>Default value: NoSpot.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoSpot</para>
@@ -1467,6 +1723,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
+        /// <para>The ID of the storage set.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ss-bp67acfmxazb4p****</para>
         /// </summary>
@@ -1475,6 +1733,8 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string StorageSetId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of partitions in the storage set. The value must be greater than or equal to 2.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -1483,15 +1743,19 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public int? StorageSetPartitionNumber { get; set; }
 
         /// <summary>
-        /// <para>The categories of the system disks. If Auto Scaling cannot create instances by using the disk category that has the highest priority, Auto Scaling creates instances by using the disk category that has the next highest priority. Valid values:</para>
+        /// <para>Multiple disk categories for the system disk. When a disk of a higher-priority category is unavailable, Auto Scaling automatically tries the next lower-priority category to create the system disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cloud: basic disk</description></item>
-        /// <item><description>cloud_efficiency: ultra disk</description></item>
-        /// <item><description>cloud_ssd: standard SSD</description></item>
-        /// <item><description>cloud_essd: ESSD</description></item>
+        /// <item><description><para>cloud: basic disk.</para>
+        /// </description></item>
+        /// <item><description><para>cloud_efficiency: ultra disk.</para>
+        /// </description></item>
+        /// <item><description><para>cloud_ssd: standard SSD.</para>
+        /// </description></item>
+        /// <item><description><para>cloud_essd: ESSD.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you specify SystemDiskCategories, you cannot specify <c>SystemDisk.Category</c>.</para>
+        /// <para>If you specify this parameter, you cannot specify <c>SystemDisk.Category</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SystemDiskCategories")]
@@ -1499,10 +1763,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public List<string> SystemDiskCategories { get; set; }
 
         /// <summary>
-        /// <para>The tags of the ECS instance. Tags must be specified as key-value pairs. You can specify up to 20 tags. When you specify tag keys and tag values, take note of the following items:</para>
+        /// <para>The tags of the ECS instance. You can specify up to 20 tags in key-value pairs. The following limits apply to keys and values:</para>
         /// <list type="bullet">
-        /// <item><description>A tag key can be up to 64 characters in length. The key cannot start with acs: or aliyun and cannot contain <c>http://</c> or <c>https://</c>. You cannot specify an empty string as a tag key.</description></item>
-        /// <item><description>A tag value can be up to 128 characters in length. The value cannot start with acs: or aliyun and cannot contain <c>http://</c> or <c>https://</c>. You can specify an empty string as a tag value.</description></item>
+        /// <item><description><para>A key can be up to 64 characters in length and cannot start with aliyun or acs:. It cannot contain <c>http://</c> or <c>https://</c>. If you use tags, the key cannot be an empty string.</para>
+        /// </description></item>
+        /// <item><description><para>A value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain <c>http://</c> or <c>https://</c>. The value can be an empty string.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1513,12 +1779,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Tags { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to create an ECS instance on a dedicated host. Valid values:</para>
+        /// <para>Specifies whether to create the instance on a dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>default: does not create an ECS instance on a dedicated host.</description></item>
-        /// <item><description>host: creates an ECS instance on a dedicated host. If you do not specify DedicatedHostId, Alibaba Cloud selects a dedicated host for the ECS instance.</description></item>
+        /// <item><description><para>default: creates the instance on a non-dedicated host.</para>
+        /// </description></item>
+        /// <item><description><para>host: creates the instance on a dedicated host. If you do not specify DedicatedHostId, Alibaba Cloud automatically selects a dedicated host for the instance.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: default</para>
+        /// <para>Default value: default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -1528,17 +1796,17 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string Tenancy { get; set; }
 
         /// <summary>
-        /// <para>The user data of the Elastic Compute Service (ECS) instance. The user data must be encoded in Base64 format. The size of raw data before Base64 encoding cannot exceed 32 KB.</para>
+        /// <para>The custom data of the ECS instance. The data must be Base64 encoded. The raw data can be up to 32 KB in size.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>echo hello ecs!</para>
+        /// <para>ZWNobyBoZWxsbyBlY3Mh</para>
         /// </summary>
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the ECS instance.</para>
+        /// <para>The ID of the zone to which the ECS instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-g</para>

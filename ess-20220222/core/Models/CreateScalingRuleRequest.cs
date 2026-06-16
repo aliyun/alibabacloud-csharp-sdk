@@ -68,11 +68,26 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 
         }
 
+        /// <summary>
+        /// <para>Definition of alerting properties.</para>
+        /// </summary>
         [NameInMap("AlarmOptions")]
         [Validation(Required=false)]
         public CreateScalingRuleRequestAlarmOptions AlarmOptions { get; set; }
         public class CreateScalingRuleRequestAlarmOptions : TeaModel {
             /// <summary>
+            /// <para>The period for aggregating monitoring metric data in a target tracking rule, in seconds. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>15</description></item>
+            /// <item><description>60</description></item>
+            /// <item><description>120</description></item>
+            /// <item><description>300</description></item>
+            /// <item><description>900</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>Default Value: 60.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>60</para>
             /// </summary>

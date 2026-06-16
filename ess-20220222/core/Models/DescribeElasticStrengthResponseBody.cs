@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class DescribeElasticStrengthResponseBody : TeaModel {
         /// <summary>
-        /// <para>The scaling strength level of the scaling group. Valid values:</para>
+        /// <para>The elastic strength of the current scaling group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Strong</description></item>
-        /// <item><description>Medium</description></item>
-        /// <item><description>Weak</description></item>
+        /// <item><description><para>Strong: high elastic strength.</para>
+        /// </description></item>
+        /// <item><description><para>Medium: medium elastic strength.</para>
+        /// </description></item>
+        /// <item><description><para>Weak: weak elastic strength.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,18 +28,21 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string ElasticStrength { get; set; }
 
         /// <summary>
-        /// <para>The scaling strength models.</para>
+        /// <para>An array of elastic strength details, returned when the API call targets multiple scaling groups.</para>
         /// </summary>
         [NameInMap("ElasticStrengthModels")]
         [Validation(Required=false)]
         public List<DescribeElasticStrengthResponseBodyElasticStrengthModels> ElasticStrengthModels { get; set; }
         public class DescribeElasticStrengthResponseBodyElasticStrengthModels : TeaModel {
             /// <summary>
-            /// <para>The scaling strength level of the scaling group. Valid values:</para>
+            /// <para>The elastic strength of the current scaling group. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Strong</description></item>
-            /// <item><description>Medium</description></item>
-            /// <item><description>Weak</description></item>
+            /// <item><description><para>Strong: high elastic strength.</para>
+            /// </description></item>
+            /// <item><description><para>Medium: medium elastic strength.</para>
+            /// </description></item>
+            /// <item><description><para>Weak: weak elastic strength.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -47,14 +53,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ElasticStrength { get; set; }
 
             /// <summary>
-            /// <para>The resource pools.</para>
+            /// <para>Details of the resource pools within the scaling group.</para>
             /// </summary>
             [NameInMap("ResourcePools")]
             [Validation(Required=false)]
             public List<DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePools> ResourcePools { get; set; }
             public class DescribeElasticStrengthResponseBodyElasticStrengthModelsResourcePools : TeaModel {
                 /// <summary>
-                /// <para>The error code returned when the scaling strength is the weakest.</para>
+                /// <para>The error code returned when the elastic strength is 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>InstanceTypesOrDiskTypesNotSupported</para>
@@ -63,6 +69,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 [Validation(Required=false)]
                 public string Code { get; set; }
 
+                /// <summary>
+                /// <para>The elastic strength of the resource pool, which is based on its inventory health and current stock. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para>Strong: high elastic strength.</para>
+                /// </description></item>
+                /// <item><description><para>Medium: medium elastic strength.</para>
+                /// </description></item>
+                /// <item><description><para>Weak: weak elastic strength.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Strong</para>
+                /// </summary>
                 [NameInMap("ElasticStrength")]
                 [Validation(Required=false)]
                 public string ElasticStrength { get; set; }
@@ -96,13 +116,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public int? AdequacyScore { get; set; }
 
                     /// <summary>
-                    /// <para>The score of the inventory health.</para>
+                    /// <para>The health score.</para>
                     /// <list type="bullet">
-                    /// <item><description>A score between 5 and 6 indicates a sufficient inventory.</description></item>
-                    /// <item><description>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</description></item>
-                    /// <item><description>A score between -3 and 0 indicates that the inventory is sufficient, and an alert is triggered. Select another instance type.</description></item>
+                    /// <item><description><para>A score from 5 to 6 indicates high confidence in supply.</para>
+                    /// </description></item>
+                    /// <item><description><para>A score from 1 to 4 indicates that supply is not guaranteed. Consider making on-demand reservations.</para>
+                    /// </description></item>
+                    /// <item><description><para>A score from -3 to 0 indicates a supply health alert. Consider using a different instance type.</para>
+                    /// </description></item>
                     /// </list>
-                    /// <para>Calculation formula: <c>HealthScore</c> = <c>AdequacyScore</c> + <c>SupplyScore</c> - <c>HotScore</c>.</para>
+                    /// <para>The health score is calculated using the formula: <c>HealthScore</c> = <c>AdequacyScore</c> + <c>SupplyScore</c> - <c>HotScore</c>.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -112,7 +135,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public int? HealthScore { get; set; }
 
                     /// <summary>
-                    /// <para>The popularity score.</para>
+                    /// <para>The hot score.</para>
                     /// <para>Valid values: 0 to 3.</para>
                     /// 
                     /// <b>Example:</b>
@@ -123,7 +146,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                     public int? HotScore { get; set; }
 
                     /// <summary>
-                    /// <para>The score of the replenishment capability.</para>
+                    /// <para>The supply score.</para>
                     /// <para>Valid values: 0 to 3.</para>
                     /// 
                     /// <b>Example:</b>
@@ -136,7 +159,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 }
 
                 /// <summary>
-                /// <para>The error message returned when the scaling strength is the weakest.</para>
+                /// <para>The error message returned when the elastic strength is 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>The instanceTypes or diskTypes are not supported.</para>
@@ -146,10 +169,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Msg { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the resource pool is available. Valid values:</para>
+                /// <para>The availability of the resource pool. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Available</description></item>
-                /// <item><description>Unavailable (If a constraint is not provided, the instance type is not deployed, or the instance type is out of stock, the resource pool becomes unavailable.)</description></item>
+                /// <item><description><para>Available: The resource pool is available.</para>
+                /// </description></item>
+                /// <item><description><para>Unavailable: The resource pool is unavailable. This can occur if the instance type is not deployed in the zone, has insufficient inventory, or does not meet other constraints.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -160,9 +185,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The scaling strength of the resource pool.</para>
-                /// <para>**</para>
-                /// <para><b>Warning</b> This parameter is deprecated.</para>
+                /// <para>The elastic strength of the resource pool.&gt;Warning:  This parameter is deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.6</para>
@@ -172,7 +195,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public double? Strength { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the vSwitches in the zones of the resource pool.</para>
+                /// <para>The VSwitches in the zone of the resource pool.</para>
                 /// </summary>
                 [NameInMap("VSwitchIds")]
                 [Validation(Required=false)]
@@ -191,7 +214,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The ID of the scaling group.</para>
+            /// <para>The scaling group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asg-wz98mnj7nblv9gc****</para>
@@ -201,9 +224,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string ScalingGroupId { get; set; }
 
             /// <summary>
-            /// <para>The scaling strength score of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength score of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</para>
-            /// <para>**</para>
-            /// <para><b>Warning</b> This parameter is deprecated.</para>
+            /// <para>The total elastic strength of the scaling group. The strength is the sum of scores from all configured instance type and zone combinations. Each combination is scored from 0 (low strength) to 1 (high strength) based on resource availability.&gt;Warning:  This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.5</para>
@@ -225,14 +246,14 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource pools.</para>
+        /// <para>An array of resource pools. This parameter is returned when the API call targets a single scaling group.</para>
         /// </summary>
         [NameInMap("ResourcePools")]
         [Validation(Required=false)]
         public List<DescribeElasticStrengthResponseBodyResourcePools> ResourcePools { get; set; }
         public class DescribeElasticStrengthResponseBodyResourcePools : TeaModel {
             /// <summary>
-            /// <para>The error code returned when the scaling strength is the weakest.</para>
+            /// <para>The error code returned when the elastic strength is 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IMG_NOT_SUPPORTED</para>
@@ -241,6 +262,20 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             [Validation(Required=false)]
             public string Code { get; set; }
 
+            /// <summary>
+            /// <para>The elastic strength of the resource pool, which is based on its inventory health and current stock. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Strong: high elastic strength.</para>
+            /// </description></item>
+            /// <item><description><para>Medium: medium elastic strength.</para>
+            /// </description></item>
+            /// <item><description><para>Weak: weak elastic strength.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Medium</para>
+            /// </summary>
             [NameInMap("ElasticStrength")]
             [Validation(Required=false)]
             public string ElasticStrength { get; set; }
@@ -274,13 +309,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? AdequacyScore { get; set; }
 
                 /// <summary>
-                /// <para>The inventory health score.</para>
+                /// <para>The health score.</para>
                 /// <list type="bullet">
-                /// <item><description>A score between 5 and 6 indicates a sufficient inventory.</description></item>
-                /// <item><description>A score between 1 and 4 indicates that there is no guarantee of a sufficient inventory. Select a reservation as necessary.</description></item>
-                /// <item><description>A score between -3 and 0 indicates that the inventory is sufficient, and an alert is triggered. Select another instance type.</description></item>
+                /// <item><description><para>A score from 5 to 6 indicates high confidence in supply.</para>
+                /// </description></item>
+                /// <item><description><para>A score from 1 to 4 indicates that supply is not guaranteed. Consider making on-demand reservations.</para>
+                /// </description></item>
+                /// <item><description><para>A score from -3 to 0 indicates a supply health alert. Consider using a different instance type.</para>
+                /// </description></item>
                 /// </list>
-                /// <para>Calculation formula: <c>HealthScore</c> = <c>AdequacyScore</c> + <c>SupplyScore</c> - <c>HotScore</c>.</para>
+                /// <para>The health score is calculated using the formula: <c>HealthScore</c> = <c>AdequacyScore</c> + <c>SupplyScore</c> - <c>HotScore</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -290,7 +328,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? HealthScore { get; set; }
 
                 /// <summary>
-                /// <para>The popularity score.</para>
+                /// <para>The hot score.</para>
                 /// <para>Valid values: 0 to 3.</para>
                 /// 
                 /// <b>Example:</b>
@@ -301,7 +339,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
                 public int? HotScore { get; set; }
 
                 /// <summary>
-                /// <para>The replenishment capability score.</para>
+                /// <para>The supply score.</para>
                 /// <para>Valid values: 0 to 3.</para>
                 /// 
                 /// <b>Example:</b>
@@ -314,7 +352,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             }
 
             /// <summary>
-            /// <para>The error message returned when the scaling strength is the weakest.</para>
+            /// <para>The error message returned when the elastic strength is 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The instanceType does not support the image in the configuration.</para>
@@ -324,10 +362,12 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Msg { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the resource pool is available. Valid values:</para>
+            /// <para>The availability of the resource pool. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Available</description></item>
-            /// <item><description>Unavailable (If a constraint is not provided, the instance type is not deployed, or the instance type is out of stock, the resource pool becomes unavailable.)</description></item>
+            /// <item><description><para>Available: The resource pool is available.</para>
+            /// </description></item>
+            /// <item><description><para>Unavailable: The resource pool is unavailable. This can occur if the instance type is not deployed in the zone, has insufficient inventory, or does not meet other constraints.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -338,7 +378,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The scaling strength of the resource pool.</para>
+            /// <para>The elastic strength of the resource pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.6</para>
@@ -348,7 +388,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
             public double? Strength { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the vSwitches in the zones of the resource pool.</para>
+            /// <para>The VSwitches in the zone of the resource pool.</para>
             /// </summary>
             [NameInMap("VSwitchIds")]
             [Validation(Required=false)]
@@ -367,9 +407,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         }
 
         /// <summary>
-        /// <para>The scaling strength score of the scaling group. Each combination of instance type + zone is scored from 0 to 1 based on its availability, with 0 being the weakest scaling strength and 1 being the strongest. The scaling strength score of the scaling group is measured by the combined scores of all the combinations of instance type + zone.</para>
-        /// <para>**</para>
-        /// <para><b>Warning</b> This parameter is deprecated.</para>
+        /// <para>The total elastic strength of the scaling group. The strength is the sum of scores from all configured instance type and zone combinations. Each combination is scored from 0 (low strength) to 1 (high strength) based on resource availability.&gt;Warning:  This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.5</para>

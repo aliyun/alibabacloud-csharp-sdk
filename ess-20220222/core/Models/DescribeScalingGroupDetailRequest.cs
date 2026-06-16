@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
         /// <para>The output format. Set the value to yaml.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>yaml</para>
+        /// <para>YAML</para>
         /// </summary>
         [NameInMap("OutputFormat")]
         [Validation(Required=false)]

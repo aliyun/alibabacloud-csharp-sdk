@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Ess20220222.Models
 {
     public class CreateNotificationConfigurationRequest : TeaModel {
         /// <summary>
+        /// <para>The codec for the content of message notifications. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PlainText: No encoding; messages are transmitted in plaintext.</description></item>
+        /// <item><description>Base64: Messages are encoded in Base64.</description></item>
+        /// </list>
+        /// <para>Default value: Base64.</para>
+        /// <remarks>
+        /// <para>This parameter applies only to MNS notification objects.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>PlainText</para>
         /// </summary>
