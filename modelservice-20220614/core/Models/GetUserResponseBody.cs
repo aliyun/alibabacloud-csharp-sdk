@@ -35,6 +35,10 @@ namespace AlibabaCloud.SDK.ModelService20220614.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("DashscopeHost")]
+        [Validation(Required=false)]
+        public string DashscopeHost { get; set; }
+
         [NameInMap("Host")]
         [Validation(Required=false)]
         public string Host { get; set; }
