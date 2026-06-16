@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateWorkspaceDiscoveryEndpointsRequest : TeaModel {
+        /// <summary>
+        /// <para>The discovery endpoint configuration to apply.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateDiscoveryEndpointsInput Body { get; set; }

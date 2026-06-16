@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class Sandbox : TeaModel {
         /// <summary>
-        /// <para>沙箱创建时间</para>
+        /// <para>Sandbox Creation Time</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>Sandbox stop time</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-11-26T10:54:17.770719+08:00</para>
         /// </summary>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string EndedAt { get; set; }
 
         /// <summary>
-        /// <para>最后更新时间</para>
+        /// <para>Last Update Time</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-11-26T10:54:17.770719+08:00</para>
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
+        /// <para>Sandbox metadata</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -47,6 +51,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
+        /// <para>Sandbox resource ARN</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1760720386195983:role/aliyunfcdefaultrole</para>
         /// </summary>
@@ -55,6 +61,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string SandboxArn { get; set; }
 
         /// <summary>
+        /// <para>Sandbox ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,12 +71,18 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string SandboxId { get; set; }
 
+        /// <summary>
+        /// <para>Sandbox lifecycle duration (deprecated)</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>已弃用</para>
+        /// </summary>
         [NameInMap("sandboxIdleTTLInSeconds")]
         [Validation(Required=false)]
         public int? SandboxIdleTTLInSeconds { get; set; }
 
         /// <summary>
-        /// <para>沙箱空闲超时时间（秒）</para>
+        /// <para>Sandbox idle timeout (seconds)</para>
         /// 
         /// <b>Example:</b>
         /// <para>1800</para>
@@ -79,6 +92,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? SandboxIdleTimeoutSeconds { get; set; }
 
         /// <summary>
+        /// <para>Status</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,6 +103,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Template ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,6 +114,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string TemplateId { get; set; }
 
         /// <summary>
+        /// <para>Template Name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-template</para>
         /// </summary>

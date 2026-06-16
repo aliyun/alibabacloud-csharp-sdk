@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CommonResult : TeaModel {
         /// <summary>
-        /// <para>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</para>
+        /// <para>Indicates the request status. A value of <c>SUCCESS</c> indicates success. On failure, an error code is returned, such as <c>ERR_BAD_REQUEST</c>, <c>ERR_VALIDATION_FAILED</c>, or <c>ERR_INTERNAL_SERVER_ERROR</c>.</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>实际的业务数据内容</para>
+        /// <para>The returned business data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>唯一的请求标识符，用于问题追踪</para>
+        /// <para>A unique request identifier for issue tracking.</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

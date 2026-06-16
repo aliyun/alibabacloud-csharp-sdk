@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>当前页码，从1开始计数</para>
+        /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页返回的记录数量</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The status of the template. Use this parameter to filter templates.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>READY</para>
         /// </summary>
@@ -38,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The name of the template. Use this parameter to filter templates.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>temp-abc</para>
         /// </summary>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>按模板类型过滤</para>
+        /// <para>The type of the template. Use this parameter to filter templates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Browser</para>
@@ -56,6 +60,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string TemplateType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the workspace to which the template belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aaa</para>
         /// </summary>
@@ -63,6 +69,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the workspaces. You can use this parameter to query templates from multiple workspaces.</para>
+        /// </summary>
         [NameInMap("workspaceIds")]
         [Validation(Required=false)]
         public string WorkspaceIds { get; set; }

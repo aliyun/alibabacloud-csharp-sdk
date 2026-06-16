@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class LogConfiguration : TeaModel {
         /// <summary>
-        /// <para>SLS日志库名称</para>
+        /// <para>The name of the SLS logstore.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-runtime-logs</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Logstore { get; set; }
 
         /// <summary>
-        /// <para>SLS项目名称</para>
+        /// <para>The name of the SLS project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent-runtime-logs</para>

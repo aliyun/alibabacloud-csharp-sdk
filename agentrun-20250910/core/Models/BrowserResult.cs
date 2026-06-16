@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class BrowserResult : TeaModel {
         /// <summary>
-        /// <para>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</para>
+        /// <para>The operation status code. <c>SUCCESS</c> indicates success. A failed operation returns an error code, such as <c>ERR_BAD_REQUEST</c>, <c>ERR_VALIDATION_FAILED</c>, or <c>ERR_INTERNAL_SERVER_ERROR</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>浏览器的详细信息</para>
+        /// <para>The returned browser object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public Browser Data { get; set; }
 
         /// <summary>
-        /// <para>唯一的请求标识符，用于问题追踪</para>
+        /// <para>The unique request identifier. Use it for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</para>

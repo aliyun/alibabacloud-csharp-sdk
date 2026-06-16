@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ActivateTemplateMCPRequest : TeaModel {
+        /// <summary>
+        /// <para>A list of tools to enable.</para>
+        /// </summary>
         [NameInMap("enabledTools")]
         [Validation(Required=false)]
         public List<string> EnabledTools { get; set; }
 
         /// <summary>
+        /// <para>The transport protocol.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>streamable-http</para>
         /// </summary>

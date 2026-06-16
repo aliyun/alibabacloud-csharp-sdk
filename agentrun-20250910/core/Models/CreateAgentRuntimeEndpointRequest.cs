@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateAgentRuntimeEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>包含要创建的智能体运行时端点配置信息的请求体</para>
+        /// <para>Create agent runtime endpoint input</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

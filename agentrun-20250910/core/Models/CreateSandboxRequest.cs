@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateSandboxRequest : TeaModel {
         /// <summary>
-        /// <para>创建沙箱所需的配置信息，包括模板名称、沙箱名称等</para>
+        /// <para>The configuration for the sandbox.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

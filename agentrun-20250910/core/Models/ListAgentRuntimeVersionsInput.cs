@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListAgentRuntimeVersionsInput : TeaModel {
         /// <summary>
-        /// <para>页码</para>
+        /// <para>The page number to retrieve.</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页记录数</para>
+        /// <para>The maximum number of results to return per page.</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]

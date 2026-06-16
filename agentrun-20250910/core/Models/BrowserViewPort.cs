@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class BrowserViewPort : TeaModel {
         /// <summary>
+        /// <para>The height of the browser viewport in pixels.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1080</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public double? Height { get; set; }
 
         /// <summary>
+        /// <para>The width of the browser viewport in pixels.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1920</para>
         /// </summary>

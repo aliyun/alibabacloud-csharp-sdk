@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class FlowEndpoint : TeaModel {
         /// <summary>
-        /// <para>工作流端点的创建时间，采用ISO 8601格式</para>
+        /// <para>The creation timestamp for the flow endpoint, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>工作流端点的描述信息</para>
+        /// <para>The description of the flow endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Production endpoint for flow</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否禁用该端点的公网访问</para>
+        /// <para>Set to true to disable public network access for this endpoint.</para>
         /// </summary>
         [NameInMap("disablePublicNetworkAccess")]
         [Validation(Required=false)]
         public bool? DisablePublicNetworkAccess { get; set; }
 
         /// <summary>
-        /// <para>工作流端点的全局唯一资源名称</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the flow endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:agentrun:cn-hangzhou:1760720386195983:workspaces/ws-xxx/flows/flow-xxx/endpoints/fe-xxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowEndpointArn { get; set; }
 
         /// <summary>
-        /// <para>工作流端点的唯一标识符</para>
+        /// <para>The unique identifier of the flow endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fe-1234567890abcdef</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowEndpointId { get; set; }
 
         /// <summary>
-        /// <para>工作流端点的名称</para>
+        /// <para>The name of the flow endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-flow-endpoint</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowEndpointName { get; set; }
 
         /// <summary>
-        /// <para>工作流的唯一标识符</para>
+        /// <para>The unique identifier of the flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>flow-1234567890abcdef</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowId { get; set; }
 
         /// <summary>
-        /// <para>工作流端点最后一次更新的时间，采用ISO 8601格式</para>
+        /// <para>The last update timestamp for the flow endpoint, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T11:45:00Z</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>工作流端点的版本路由配置</para>
+        /// <para>The routing configuration that distributes traffic to different versions of the flow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public List<FlowEndpointRoutingConfig> RoutingConfiguration { get; set; }
 
         /// <summary>
-        /// <para>工作流端点指向的目标版本号</para>
+        /// <para>The flow version targeted by the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

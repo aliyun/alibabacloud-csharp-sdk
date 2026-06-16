@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class NASMountConfig : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to enable encryption in transit. This option is supported only for general-purpose NAS.</para>
+        /// </summary>
         [NameInMap("enableTLS")]
         [Validation(Required=false)]
         public bool? EnableTLS { get; set; }
 
         /// <summary>
+        /// <para>Specifies the local mount directory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/home/test</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string MountDir { get; set; }
 
         /// <summary>
+        /// <para>Specifies the NAS server address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>***-uni85.cn-hangzhou.nas.com:/</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CodeInterpreter : TeaModel {
         /// <summary>
-        /// <para>代码解释器的唯一标识符</para>
+        /// <para>The unique identifier for the CodeInterpreter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ci-1234567890abcdef</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CodeInterpreterId { get; set; }
 
         /// <summary>
-        /// <para>代码解释器的名称，用于标识和区分不同的代码解释器实例</para>
+        /// <para>A user-defined name for the CodeInterpreter instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-code-interpreter</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CodeInterpreterName { get; set; }
 
         /// <summary>
+        /// <para>The number of CPU cores allocated to the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// <para>代码解释器的创建时间，采用ISO 8601格式</para>
+        /// <para>The creation timestamp for the CodeInterpreter, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>代码解释器的描述信息，说明该解释器的用途和功能</para>
+        /// <para>The description of the CodeInterpreter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Python code interpreter for data analysis</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>此代码解释器的执行角色</para>
+        /// <para>The ARN of the execution role for this CodeInterpreter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1760720386195983:role/CodeInterpreterExecutionRole</para>
@@ -68,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExecutionRoleArn { get; set; }
 
         /// <summary>
-        /// <para>代码解释器的最后更新时间，采用ISO 8601格式</para>
+        /// <para>The last update timestamp for the CodeInterpreter, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T11:45:00Z</para>
@@ -78,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>内存资源配置（单位：MB）</para>
+        /// <para>The memory allocated to the instance, in MB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2048</para>
@@ -88,14 +90,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>代码解释器的网络配置信息</para>
+        /// <para>The network configuration for the CodeInterpreter.</para>
         /// </summary>
         [NameInMap("networkConfiguration")]
         [Validation(Required=false)]
         public NetworkConfiguration NetworkConfiguration { get; set; }
 
         /// <summary>
-        /// <para>代码解释器的当前状态，如READY（就绪）、TERMINATED（已终止）等</para>
+        /// <para>The current status of the CodeInterpreter, such as READY or TERMINATED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>当前状态的原因说明（如适用）</para>
+        /// <para>The reason for the current status, if applicable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Code interpreter is ready for use</para>
@@ -115,6 +117,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string StatusReason { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the tenant.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tenant-1234567890abcdef</para>
         /// </summary>

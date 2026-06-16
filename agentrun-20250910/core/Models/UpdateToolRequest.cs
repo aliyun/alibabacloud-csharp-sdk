@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateToolRequest : TeaModel {
         /// <summary>
-        /// <para>更新工具的请求参数，只需提供需要修改的字段</para>
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

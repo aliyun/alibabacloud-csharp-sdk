@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListConsumerAPIKeysResult : TeaModel {
         /// <summary>
-        /// <para>SUCCESS 为成功，失败情况返回对应错误类型</para>
+        /// <para>The request status. <c>SUCCESS</c> indicates that the request was successful. Otherwise, this field returns the error type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>消费者API密钥列表的详细信息</para>
+        /// <para>The list of consumer API keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ListConsumerAPIKeysOutput Data { get; set; }
 
         /// <summary>
-        /// <para>唯一的请求标识符，用于问题追踪</para>
+        /// <para>The unique request ID. Use this ID for issue tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>更新模板所需的配置信息</para>
+        /// <para>The request body for the template update.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public UpdateTemplateInput Body { get; set; }
 
         /// <summary>
-        /// <para>用于确保请求幂等性的唯一标识符</para>
+        /// <para>A unique client token to ensure request idempotency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>clientToken</para>

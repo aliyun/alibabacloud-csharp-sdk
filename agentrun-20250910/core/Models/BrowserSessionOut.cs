@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class BrowserSessionOut : TeaModel {
         /// <summary>
+        /// <para>The unique identifier for the browser.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>browser-1234567890abcdef</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string BrowserId { get; set; }
 
         /// <summary>
+        /// <para>The browser name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-browser-session</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string BrowserName { get; set; }
 
         /// <summary>
+        /// <para>The time the session was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The time the session was last updated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T11:45:00Z</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the session.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>会话空闲超时时间，单位为秒</para>
+        /// <para>The session idle timeout, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -62,6 +71,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? SessionIdleTimeoutSeconds { get; set; }
 
         /// <summary>
+        /// <para>The session status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
         /// </summary>

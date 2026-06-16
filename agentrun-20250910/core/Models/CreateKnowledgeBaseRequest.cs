@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateKnowledgeBaseRequest : TeaModel {
+        /// <summary>
+        /// <para>The data structure to create a knowledge base.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateKnowledgeBaseInput Body { get; set; }

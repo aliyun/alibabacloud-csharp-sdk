@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class AgentRuntimeVersion : TeaModel {
         /// <summary>
-        /// <para>智能体运行时的ARN</para>
+        /// <para>The ARN of the agent runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:agentrun:cn-hangzhou:1760720386195983:runtimes/7a1b6d39-9f8f-4ce2-b9c9-6db1b0b9e169</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeArn { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的ID</para>
+        /// <para>The ID of the agent runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ar-1234567890abcdef</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeId { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的名称</para>
+        /// <para>The name of the agent runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-agent-runtime</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeName { get; set; }
 
         /// <summary>
-        /// <para>已发布版本的版本号</para>
+        /// <para>The version of the agent runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeVersion_ { get; set; }
 
         /// <summary>
-        /// <para>此版本的描述</para>
+        /// <para>The description of the agent runtime version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Initial release with basic functionality</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>最后更新的时间戳</para>
+        /// <para>The timestamp of the agent runtime version\&quot;s last update.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>

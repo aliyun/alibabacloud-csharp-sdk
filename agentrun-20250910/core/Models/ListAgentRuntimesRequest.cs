@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListAgentRuntimesRequest : TeaModel {
         /// <summary>
-        /// <para>根据智能体运行时名称进行模糊匹配过滤</para>
+        /// <para>Filters the results by agent runtime name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-runtime</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>用于服务发现的资源组标识符</para>
+        /// <para>The service discovery resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-123456</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string DiscoveryResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>当前页码，从1开始计数</para>
+        /// <para>The page number to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页返回的记录数量</para>
+        /// <para>The number of entries to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -53,13 +53,17 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <term><b>Obsolete</b></term>
+        /// 
+        /// <summary>
+        /// <para>The ID of the resource group. This parameter is deprecated.</para>
+        /// </summary>
         [NameInMap("resourceGroupId")]
         [Validation(Required=false)]
         [Obsolete]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>查询模式，支持精确查询和模糊查询</para>
+        /// <para>The search mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fuzzy</para>
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// <para>根据状态进行过滤，多个状态用逗号分隔，支持精确匹配</para>
+        /// <para>Filters the results by status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY,CREATING</para>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>根据系统标签进行过滤，多个标签用逗号分隔，支持精确匹配</para>
+        /// <para>Filters the results by system tags. Separate multiple tags with commas. This parameter supports only exact matches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ecs:tag1,acs:ecs:tag2</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string SystemTags { get; set; }
 
         /// <summary>
-        /// <para>根据工作空间ID进行过滤，用于资源隔离和权限管理</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-1234567890abcdef</para>
@@ -98,6 +102,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        /// <summary>
+        /// <para>A comma-separated string of workspace IDs.</para>
+        /// </summary>
         [NameInMap("workspaceIds")]
         [Validation(Required=false)]
         public string WorkspaceIds { get; set; }

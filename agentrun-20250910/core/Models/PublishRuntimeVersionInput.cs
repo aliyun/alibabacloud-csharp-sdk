@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class PublishRuntimeVersionInput : TeaModel {
         /// <summary>
-        /// <para>此版本的描述</para>
+        /// <para>Description of this version</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>发布此版本的用户或系统标识</para>
+        /// <para>Identity of the user or system that publishes this version</para>
         /// 
         /// <b>Example:</b>
         /// <para>user123</para>

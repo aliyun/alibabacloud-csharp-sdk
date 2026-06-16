@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class VersionWeight : TeaModel {
         /// <summary>
-        /// <para>智能体运行时版本号</para>
+        /// <para>Agent runtime version number</para>
         /// </summary>
         [NameInMap("version")]
         [Validation(Required=false)]
         public string Version { get; set; }
 
         /// <summary>
-        /// <para>流量权重比例（0.0-1.0）</para>
+        /// <para>Traffic weight ratio (0.0–1.0)</para>
         /// </summary>
         [NameInMap("weight")]
         [Validation(Required=false)]

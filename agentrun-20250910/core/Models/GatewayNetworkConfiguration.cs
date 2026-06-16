@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class GatewayNetworkConfiguration : TeaModel {
+        /// <summary>
+        /// <para>Network mode</para>
+        /// </summary>
         [NameInMap("networkMode")]
         [Validation(Required=false)]
         public string NetworkMode { get; set; }
 
+        /// <summary>
+        /// <para>Virtual private cloud (VPC) ID</para>
+        /// </summary>
         [NameInMap("vpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }

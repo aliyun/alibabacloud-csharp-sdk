@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateFlowRequest : TeaModel {
         /// <summary>
-        /// <para>包含要更新的工作流配置信息的请求体</para>
+        /// <para>The input parameters for updating the workflow.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

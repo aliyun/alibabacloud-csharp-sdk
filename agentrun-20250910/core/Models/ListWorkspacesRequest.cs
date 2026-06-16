@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the workspace. Used to filter the results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>intl_synonym_module</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The page number to return. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group to which the workspace belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-aek25sodlatnioq</para>
         /// </summary>

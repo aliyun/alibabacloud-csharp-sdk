@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class PathConfig : TeaModel {
         /// <summary>
-        /// <para>agent runtime 版本（仅当 resourceType 为 runtime 时有效）</para>
+        /// <para>The agent runtime version. This parameter takes effect only when <c>resourceType</c> is <c>runtime</c>.</para>
         /// </summary>
         [NameInMap("agentRuntimeEndpointName")]
         [Validation(Required=false)]
         public string AgentRuntimeEndpointName { get; set; }
 
         /// <summary>
-        /// <para>兼容协议，指定后端响应格式转换。仅当 resourceType 为 flow 时必填：native 表示 FnF 原生调用；openai、dify-workflow、dify-chatflow 为对应兼容 API。</para>
+        /// <para>The compatible protocol, used to convert the backend response format. This parameter is required only when <c>resourceType</c> is <c>flow</c>. Valid values: <c>native</c> indicates an FnF native call; <c>openai</c>, <c>dify-workflow</c>, and <c>dify-chatflow</c> map to their corresponding compatible APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>native</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CompatibleProtocol { get; set; }
 
         /// <summary>
-        /// <para>Flow 版本/别名（仅当 resourceType 为 flow 时有效，默认 Default）</para>
+        /// <para>The Flow version/alias. This parameter takes effect only when <c>resourceType</c> is <c>flow</c>. Default value: <c>Default</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Default</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowEndpointName { get; set; }
 
         /// <summary>
-        /// <para>支持的方法有：HEAD, GET, POST, PUT, DELETE, PATCH, OPTIONS</para>
+        /// <para>Supported methods: HEAD, GET, POST, PUT, DELETE, PATCH, and OPTIONS.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;GET&quot;]</para>
+        /// <para>[\&quot;GET\&quot;]</para>
         /// </summary>
         [NameInMap("methods")]
         [Validation(Required=false)]
         public List<string> Methods { get; set; }
 
         /// <summary>
-        /// <para>此条路由规则对应的请求路径。</para>
+        /// <para>The path for this routing rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/login</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? RemoveBasePathOnForward { get; set; }
 
         /// <summary>
-        /// <para>资源名称</para>
+        /// <para>The resource name.</para>
         /// </summary>
         [NameInMap("resourceName")]
         [Validation(Required=false)]
         public string ResourceName { get; set; }
 
         /// <summary>
-        /// <para>资源类型（和凭证关联资源类型一致）</para>
+        /// <para>The resource type. This type must match the one associated with the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>runtime</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateAgentRuntimeEndpointInput : TeaModel {
         /// <summary>
+        /// <para>The name of the agent runtime endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>production-endpoint</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeEndpointName { get; set; }
 
         /// <summary>
+        /// <para>The description of the agent runtime endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Production endpoint for customer service agent</para>
         /// </summary>
@@ -26,14 +30,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否禁用该端点的公网访问</para>
+        /// <para>Specifies whether to disable public network access for the endpoint.</para>
         /// </summary>
         [NameInMap("disablePublicNetworkAccess")]
         [Validation(Required=false)]
         public bool? DisablePublicNetworkAccess { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时端点的路由配置，支持多版本权重分配</para>
+        /// <para>The routing configuration for the agent runtime endpoint. This configuration distributes traffic to multiple versions based on weights.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ScalingConfig ScalingConfig { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的目标版本</para>
+        /// <para>The target version of the agent runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>

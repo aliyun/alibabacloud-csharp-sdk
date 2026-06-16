@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class BrowserStreams : TeaModel {
         /// <summary>
+        /// <para>automation stream</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public BrowserAutomationStream AutomationStream { get; set; }
 
         /// <summary>
+        /// <para>real-time view stream</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>

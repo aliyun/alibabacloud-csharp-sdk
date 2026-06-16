@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateRateLimitRuleInput : TeaModel {
         /// <summary>
-        /// <para>是否启用该限流规则</para>
+        /// <para>Specifies whether to enable the rate limit rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>限流时间窗口配置列表，提供时将整组覆盖</para>
+        /// <para>A list of time window configurations. Providing this parameter replaces the entire existing list.</para>
         /// </summary>
         [NameInMap("windows")]
         [Validation(Required=false)]

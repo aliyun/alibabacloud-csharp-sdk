@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class GetAccessTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The resource ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mod-kw1750tjqs94n9k37o5hjk</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The resource name of the agent runtime.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>COUPON_OPERATION_CALLBACK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ResourceName { get; set; }
 
         /// <summary>
+        /// <para>The resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SceneTestingTask</para>
         /// </summary>

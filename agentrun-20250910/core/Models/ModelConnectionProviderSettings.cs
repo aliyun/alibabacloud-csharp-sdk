@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ModelConnectionProviderSettings : TeaModel {
         /// <summary>
-        /// <para>模型提供商的默认API基础地址</para>
+        /// <para>The default API base URL for the model provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://api.openai.com/v1">https://api.openai.com/v1</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string BaseUrl { get; set; }
 
         /// <summary>
-        /// <para>该连接支持的模型名称列表</para>
+        /// <para>The list of model names supported by this connection.</para>
         /// </summary>
         [NameInMap("modelNames")]
         [Validation(Required=false)]

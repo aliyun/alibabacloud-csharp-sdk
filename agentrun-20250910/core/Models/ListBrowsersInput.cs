@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListBrowsersInput : TeaModel {
         /// <summary>
-        /// <para>按浏览器名称过滤</para>
+        /// <para>Filters the results by browser name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-browser</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string BrowserName { get; set; }
 
         /// <summary>
+        /// <para>The page number of the results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

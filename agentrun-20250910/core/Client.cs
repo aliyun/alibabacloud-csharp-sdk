@@ -18,7 +18,15 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shenzhen", "agentrun.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "agentrun.cn-shanghai.aliyuncs.com"},
+                {"cn-hangzhou", "agentrun.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "agentrun.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "agentrun.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("agentrun", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +47,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable the TemplateMCP service.</para>
+        /// <para>Activates the <c>MCP service</c> for a <c>sandbox</c> <c>template</c>. This enables a client to access the <c>sandbox</c> using the MCP protocol.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After activation, the platform automatically deploys the <c>MCP service</c> <c>function</c> for the specified <c>sandbox</c> <c>template</c>. The <c>MCP service</c> ensures a unique mapping between an <c>mcp-session-id</c> and a <c>SandboxID</c>. When an MCP <c>client</c> invokes a <c>tool</c>, the <c>MCP service</c> automatically creates a <c>sandbox</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActivateTemplateMCPRequest
@@ -89,8 +102,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable the TemplateMCP service.</para>
+        /// <para>Activates the <c>MCP service</c> for a <c>sandbox</c> <c>template</c>. This enables a client to access the <c>sandbox</c> using the MCP protocol.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After activation, the platform automatically deploys the <c>MCP service</c> <c>function</c> for the specified <c>sandbox</c> <c>template</c>. The <c>MCP service</c> ensures a unique mapping between an <c>mcp-session-id</c> and a <c>SandboxID</c>. When an MCP <c>client</c> invokes a <c>tool</c>, the <c>MCP service</c> automatically creates a <c>sandbox</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActivateTemplateMCPRequest
@@ -139,8 +157,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable the TemplateMCP service.</para>
+        /// <para>Activates the <c>MCP service</c> for a <c>sandbox</c> <c>template</c>. This enables a client to access the <c>sandbox</c> using the MCP protocol.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After activation, the platform automatically deploys the <c>MCP service</c> <c>function</c> for the specified <c>sandbox</c> <c>template</c>. The <c>MCP service</c> ensures a unique mapping between an <c>mcp-session-id</c> and a <c>SandboxID</c>. When an MCP <c>client</c> invokes a <c>tool</c>, the <c>MCP service</c> automatically creates a <c>sandbox</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActivateTemplateMCPRequest
@@ -158,8 +181,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enable the TemplateMCP service.</para>
+        /// <para>Activates the <c>MCP service</c> for a <c>sandbox</c> <c>template</c>. This enables a client to access the <c>sandbox</c> using the MCP protocol.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After activation, the platform automatically deploys the <c>MCP service</c> <c>function</c> for the specified <c>sandbox</c> <c>template</c>. The <c>MCP service</c> ensures a unique mapping between an <c>mcp-session-id</c> and a <c>SandboxID</c>. When an MCP <c>client</c> invokes a <c>tool</c>, the <c>MCP service</c> automatically creates a <c>sandbox</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ActivateTemplateMCPRequest
@@ -177,12 +205,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>转换Flow DSL</para>
+        /// <para>Converts a Flow DSL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</para>
+        /// <para>This operation converts a third-party workflow DSL, such as Dify or n8n, into an AgentRun Flow definition. It performs compatibility checks, identifies plugins, and extracts metadata. The operation runs in dry-run mode, returning the converted Flow configuration, a compatibility analysis report, and the required Toolset installation configuration without creating a Flow resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -223,12 +251,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>转换Flow DSL</para>
+        /// <para>Converts a Flow DSL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</para>
+        /// <para>This operation converts a third-party workflow DSL, such as Dify or n8n, into an AgentRun Flow definition. It performs compatibility checks, identifies plugins, and extracts metadata. The operation runs in dry-run mode, returning the converted Flow configuration, a compatibility analysis report, and the required Toolset installation configuration without creating a Flow resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -269,12 +297,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>转换Flow DSL</para>
+        /// <para>Converts a Flow DSL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</para>
+        /// <para>This operation converts a third-party workflow DSL, such as Dify or n8n, into an AgentRun Flow definition. It performs compatibility checks, identifies plugins, and extracts metadata. The operation runs in dry-run mode, returning the converted Flow configuration, a compatibility analysis report, and the required Toolset installation configuration without creating a Flow resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -293,12 +321,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>转换Flow DSL</para>
+        /// <para>Converts a Flow DSL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>将第三方工作流DSL（如Dify、n8n等）转换为AgentRun Flow定义。支持兼容性检查、插件识别和元数据提取，返回转换后的Flow配置、兼容性分析报告和所需的Toolset安装配置。此操作为dry-run模式，不会创建实际的Flow资源。</para>
+        /// <para>This operation converts a third-party workflow DSL, such as Dify or n8n, into an AgentRun Flow definition. It performs compatibility checks, identifies plugins, and extracts metadata. The operation runs in dry-run mode, returning the converted Flow configuration, a compatibility analysis report, and the required Toolset installation configuration without creating a Flow resource.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -317,7 +345,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateAgentRuntime</para>
+        /// <para>Creates an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -363,7 +391,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateAgentRuntime</para>
+        /// <para>Creates an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -409,7 +437,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateAgentRuntime</para>
+        /// <para>Creates an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -433,7 +461,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CreateAgentRuntime</para>
+        /// <para>Creates an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -457,12 +485,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能体运行时端点</para>
+        /// <para>Create an access endpoint for an agent runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定的智能体运行时创建新的端点，用于外部访问和调用。端点是智能体运行时对外提供服务的入口。</para>
+        /// <para>Creates a new endpoint for the specified agent runtime, used for external access and invocation. An endpoint serves as the entry point through which an agent runtime provides services externally.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -503,12 +531,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能体运行时端点</para>
+        /// <para>Create an access endpoint for an agent runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定的智能体运行时创建新的端点，用于外部访问和调用。端点是智能体运行时对外提供服务的入口。</para>
+        /// <para>Creates a new endpoint for the specified agent runtime, used for external access and invocation. An endpoint serves as the entry point through which an agent runtime provides services externally.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -549,12 +577,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能体运行时端点</para>
+        /// <para>Create an access endpoint for an agent runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定的智能体运行时创建新的端点，用于外部访问和调用。端点是智能体运行时对外提供服务的入口。</para>
+        /// <para>Creates a new endpoint for the specified agent runtime, used for external access and invocation. An endpoint serves as the entry point through which an agent runtime provides services externally.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -573,12 +601,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能体运行时端点</para>
+        /// <para>Create an access endpoint for an agent runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定的智能体运行时创建新的端点，用于外部访问和调用。端点是智能体运行时对外提供服务的入口。</para>
+        /// <para>Creates a new endpoint for the specified agent runtime, used for external access and invocation. An endpoint serves as the entry point through which an agent runtime provides services externally.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -597,12 +625,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建浏览器实例</para>
+        /// <para>Create Browser Sandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的浏览器实例，用于执行网页自动化任务。浏览器实例提供网页浏览、元素操作、截图录制等功能。</para>
+        /// <para>Create a new browser instance for executing web automation tasks. The browser instance provides features such as web browsing, element manipulation, and screenshot recording.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -643,12 +671,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建浏览器实例</para>
+        /// <para>Create Browser Sandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的浏览器实例，用于执行网页自动化任务。浏览器实例提供网页浏览、元素操作、截图录制等功能。</para>
+        /// <para>Create a new browser instance for executing web automation tasks. The browser instance provides features such as web browsing, element manipulation, and screenshot recording.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -689,12 +717,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建浏览器实例</para>
+        /// <para>Create Browser Sandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的浏览器实例，用于执行网页自动化任务。浏览器实例提供网页浏览、元素操作、截图录制等功能。</para>
+        /// <para>Create a new browser instance for executing web automation tasks. The browser instance provides features such as web browsing, element manipulation, and screenshot recording.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -713,12 +741,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建浏览器实例</para>
+        /// <para>Create Browser Sandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的浏览器实例，用于执行网页自动化任务。浏览器实例提供网页浏览、元素操作、截图录制等功能。</para>
+        /// <para>Create a new browser instance for executing web automation tasks. The browser instance provides features such as web browsing, element manipulation, and screenshot recording.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -737,7 +765,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建代码解释器</para>
+        /// <para>Creates a code interpreter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -783,7 +811,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建代码解释器</para>
+        /// <para>Creates a code interpreter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -829,7 +857,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建代码解释器</para>
+        /// <para>Creates a code interpreter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -853,7 +881,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建代码解释器</para>
+        /// <para>Creates a code interpreter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -877,8 +905,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a credential</para>
+        /// <para>Creates a new credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a credential for an agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -918,8 +951,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a credential</para>
+        /// <para>Creates a new credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a credential for an agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -959,8 +997,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a credential</para>
+        /// <para>Creates a new credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a credential for an agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -978,8 +1021,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a credential</para>
+        /// <para>Creates a new credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a credential for an agent.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -997,7 +1045,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义域名</para>
+        /// <para>Creates a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1038,7 +1086,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义域名</para>
+        /// <para>Creates a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1079,7 +1127,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义域名</para>
+        /// <para>Creates a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1098,7 +1146,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义域名</para>
+        /// <para>Creates a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1117,12 +1165,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</para>
+        /// <para>Creates a flow orchestration agent. Flow orchestration is a core component of the AgentRun service that supports visual orchestration and version management.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1163,12 +1211,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</para>
+        /// <para>Creates a flow orchestration agent. Flow orchestration is a core component of the AgentRun service that supports visual orchestration and version management.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1209,12 +1257,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</para>
+        /// <para>Creates a flow orchestration agent. Flow orchestration is a core component of the AgentRun service that supports visual orchestration and version management.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1233,12 +1281,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流</para>
+        /// <para>Creates a workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的工作流实例，用于定义和执行自动化流程。工作流是AgentRun服务的核心组件，支持可视化编排和版本管理。</para>
+        /// <para>Creates a flow orchestration agent. Flow orchestration is a core component of the AgentRun service that supports visual orchestration and version management.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1257,7 +1305,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流端点</para>
+        /// <para>Creates a flow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1303,7 +1351,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流端点</para>
+        /// <para>Creates a flow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1349,7 +1397,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流端点</para>
+        /// <para>Creates a flow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1373,7 +1421,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作流端点</para>
+        /// <para>Creates a flow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1397,12 +1445,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 IM Bot</para>
+        /// <para>Creates an IM Bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</para>
+        /// <para>A successful request returns an HTTP 201 status code. Once created, an IM Bot\&quot;s status is always <c>running</c>. The response is in a standard format, and its <c>data</c> field contains an <c>IMBotInfo</c> object.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1443,12 +1491,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 IM Bot</para>
+        /// <para>Creates an IM Bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</para>
+        /// <para>A successful request returns an HTTP 201 status code. Once created, an IM Bot\&quot;s status is always <c>running</c>. The response is in a standard format, and its <c>data</c> field contains an <c>IMBotInfo</c> object.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1489,12 +1537,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 IM Bot</para>
+        /// <para>Creates an IM Bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</para>
+        /// <para>A successful request returns an HTTP 201 status code. Once created, an IM Bot\&quot;s status is always <c>running</c>. The response is in a standard format, and its <c>data</c> field contains an <c>IMBotInfo</c> object.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1513,12 +1561,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 IM Bot</para>
+        /// <para>Creates an IM Bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>POST /2025-09-10/agents/im-bots；成功 HTTP 201；请求体无 status（创建后恒为 running）；Body 标准包装，data 为 IMBotInfo</para>
+        /// <para>A successful request returns an HTTP 201 status code. Once created, an IM Bot\&quot;s status is always <c>running</c>. The response is in a standard format, and its <c>data</c> field contains an <c>IMBotInfo</c> object.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1537,7 +1585,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建知识库</para>
+        /// <para>Creates a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1578,7 +1626,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建知识库</para>
+        /// <para>Creates a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1619,7 +1667,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建知识库</para>
+        /// <para>Creates a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1638,7 +1686,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建知识库</para>
+        /// <para>Creates a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1657,7 +1705,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加记忆存储</para>
+        /// <para>Creates a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1698,7 +1746,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加记忆存储</para>
+        /// <para>Creates a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1739,7 +1787,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加记忆存储</para>
+        /// <para>Creates a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1758,7 +1806,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加记忆存储</para>
+        /// <para>Creates a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1777,8 +1825,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型</para>
+        /// <para>Creates a Model Proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a Model Proxy based on the specified configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelProxyRequest
@@ -1818,8 +1871,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型</para>
+        /// <para>Creates a Model Proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a Model Proxy based on the specified configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelProxyRequest
@@ -1859,8 +1917,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型</para>
+        /// <para>Creates a Model Proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a Model Proxy based on the specified configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelProxyRequest
@@ -1878,8 +1941,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型</para>
+        /// <para>Creates a Model Proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a Model Proxy based on the specified configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelProxyRequest
@@ -1897,8 +1965,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型</para>
+        /// <para>Creates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a model service, such as a code interpreter, based on the specified configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -1938,8 +2011,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型</para>
+        /// <para>Creates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a model service, such as a code interpreter, based on the specified configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -1979,8 +2057,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型</para>
+        /// <para>Creates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a model service, such as a code interpreter, based on the specified configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -1998,8 +2081,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型</para>
+        /// <para>Creates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation creates a model service, such as a code interpreter, based on the specified configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateModelServiceRequest
@@ -2017,12 +2105,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建沙箱</para>
+        /// <para>Creates a sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据模板创建一个新的沙箱实例。沙箱是运行时的执行环境，可以执行代码或运行浏览器。</para>
+        /// <para>Creates a new sandbox instance from a specified template. A sandbox provides an isolated execution environment to run code or launch a browser.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2063,12 +2151,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建沙箱</para>
+        /// <para>Creates a sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据模板创建一个新的沙箱实例。沙箱是运行时的执行环境，可以执行代码或运行浏览器。</para>
+        /// <para>Creates a new sandbox instance from a specified template. A sandbox provides an isolated execution environment to run code or launch a browser.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2109,12 +2197,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建沙箱</para>
+        /// <para>Creates a sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据模板创建一个新的沙箱实例。沙箱是运行时的执行环境，可以执行代码或运行浏览器。</para>
+        /// <para>Creates a new sandbox instance from a specified template. A sandbox provides an isolated execution environment to run code or launch a browser.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2133,12 +2221,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建沙箱</para>
+        /// <para>Creates a sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据模板创建一个新的沙箱实例。沙箱是运行时的执行环境，可以执行代码或运行浏览器。</para>
+        /// <para>Creates a new sandbox instance from a specified template. A sandbox provides an isolated execution environment to run code or launch a browser.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2157,12 +2245,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a template.</para>
+        /// <para>Creates a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</para>
+        /// <para>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2203,12 +2291,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a template.</para>
+        /// <para>Creates a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</para>
+        /// <para>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2249,12 +2337,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a template.</para>
+        /// <para>Creates a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</para>
+        /// <para>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2273,12 +2361,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a template.</para>
+        /// <para>Creates a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的模板，用于后续创建沙箱。模板定义了沙箱的运行时环境、资源配置等。</para>
+        /// <para>Creates a template for launching sandboxes. A template defines the runtime environment, resource configuration, and other settings for a sandbox.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2297,12 +2385,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工具</para>
+        /// <para>Creates a tool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的工具，支持创建 MCP、函数调用和技能等多种类型的工具。工具创建后可以被 Agent 调用以扩展其能力。</para>
+        /// <para>This operation creates various types of tools, such as MCP, function call, and skill. An Agent can then call a tool to extend its capabilities.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2343,12 +2431,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工具</para>
+        /// <para>Creates a tool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的工具，支持创建 MCP、函数调用和技能等多种类型的工具。工具创建后可以被 Agent 调用以扩展其能力。</para>
+        /// <para>This operation creates various types of tools, such as MCP, function call, and skill. An Agent can then call a tool to extend its capabilities.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2389,12 +2477,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工具</para>
+        /// <para>Creates a tool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的工具，支持创建 MCP、函数调用和技能等多种类型的工具。工具创建后可以被 Agent 调用以扩展其能力。</para>
+        /// <para>This operation creates various types of tools, such as MCP, function call, and skill. An Agent can then call a tool to extend its capabilities.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2413,12 +2501,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工具</para>
+        /// <para>Creates a tool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建一个新的工具，支持创建 MCP、函数调用和技能等多种类型的工具。工具创建后可以被 Agent 调用以扩展其能力。</para>
+        /// <para>This operation creates various types of tools, such as MCP, function call, and skill. An Agent can then call a tool to extend its capabilities.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2437,12 +2525,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2483,12 +2571,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2529,12 +2617,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2553,12 +2641,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建工作空间</para>
+        /// <para>Creates a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2577,12 +2665,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体运行时</para>
+        /// <para>Delete Agent Runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified agent runtime instance, including all associated resources and data. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -2618,12 +2706,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体运行时</para>
+        /// <para>Delete Agent Runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified agent runtime instance, including all associated resources and data. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -2659,12 +2747,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体运行时</para>
+        /// <para>Delete Agent Runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified agent runtime instance, including all associated resources and data. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <returns>
@@ -2679,12 +2767,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能体运行时</para>
+        /// <para>Delete Agent Runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的智能体运行时实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified agent runtime instance, including all associated resources and data. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <returns>
@@ -2699,7 +2787,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete an agent runtime endpoint</para>
+        /// <para>Delete Agent Runtime Endpoint</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2735,7 +2823,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete an agent runtime endpoint</para>
+        /// <para>Delete Agent Runtime Endpoint</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -2771,7 +2859,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete an agent runtime endpoint</para>
+        /// <para>Delete Agent Runtime Endpoint</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2786,7 +2874,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete an agent runtime endpoint</para>
+        /// <para>Delete Agent Runtime Endpoint</para>
         /// </summary>
         /// 
         /// <returns>
@@ -2801,12 +2889,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除浏览器实例</para>
+        /// <para>Delete Browser Sandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的浏览器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Delete the specified browser instance, including all its associated resources and data. The deletion is irreversible. Please proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -2842,12 +2930,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除浏览器实例</para>
+        /// <para>Delete Browser Sandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的浏览器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Delete the specified browser instance, including all its associated resources and data. The deletion is irreversible. Please proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -2883,12 +2971,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除浏览器实例</para>
+        /// <para>Delete Browser Sandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的浏览器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Delete the specified browser instance, including all its associated resources and data. The deletion is irreversible. Please proceed with caution.</para>
         /// </description>
         /// 
         /// <returns>
@@ -2903,12 +2991,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除浏览器实例</para>
+        /// <para>Delete Browser Sandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的浏览器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Delete the specified browser instance, including all its associated resources and data. The deletion is irreversible. Please proceed with caution.</para>
         /// </description>
         /// 
         /// <returns>
@@ -2923,12 +3011,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除代码解释器</para>
+        /// <para>Delete Code Interpreter</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的代码解释器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Delete a specified code interpreter instance, including all its associated resources and data. This operation is irreversible. Please proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -2964,12 +3052,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除代码解释器</para>
+        /// <para>Delete Code Interpreter</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的代码解释器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Delete a specified code interpreter instance, including all its associated resources and data. This operation is irreversible. Please proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -3005,12 +3093,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除代码解释器</para>
+        /// <para>Delete Code Interpreter</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的代码解释器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Delete a specified code interpreter instance, including all its associated resources and data. This operation is irreversible. Please proceed with caution.</para>
         /// </description>
         /// 
         /// <returns>
@@ -3025,12 +3113,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除代码解释器</para>
+        /// <para>Delete Code Interpreter</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的代码解释器实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Delete a specified code interpreter instance, including all its associated resources and data. This operation is irreversible. Please proceed with caution.</para>
         /// </description>
         /// 
         /// <returns>
@@ -3045,8 +3133,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a credential</para>
+        /// <para>Deletes the specified credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes the specified credential. This action cannot be undone.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -3081,8 +3174,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a credential</para>
+        /// <para>Deletes the specified credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes the specified credential. This action cannot be undone.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -3117,8 +3215,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a credential</para>
+        /// <para>Deletes the specified credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes the specified credential. This action cannot be undone.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteCredentialResponse
@@ -3132,8 +3235,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a credential</para>
+        /// <para>Deletes the specified credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes the specified credential. This action cannot be undone.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteCredentialResponse
@@ -3147,7 +3255,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a custom domain</para>
+        /// <para>Deletes a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3183,7 +3291,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a custom domain</para>
+        /// <para>Deletes a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3219,7 +3327,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a custom domain</para>
+        /// <para>Deletes a custom domain.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3234,7 +3342,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete a custom domain</para>
+        /// <para>Deletes a custom domain.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3249,12 +3357,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified flow instance, along with all its related resources and data. This operation is irreversible and cannot be undone. Use with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3294,12 +3402,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified flow instance, along with all its related resources and data. This operation is irreversible and cannot be undone. Use with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3339,12 +3447,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified flow instance, along with all its related resources and data. This operation is irreversible and cannot be undone. Use with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3363,12 +3471,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流</para>
+        /// <para>Deletes a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工作流实例，包括其所有相关资源和数据。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified flow instance, along with all its related resources and data. This operation is irreversible and cannot be undone. Use with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3387,12 +3495,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流端点</para>
+        /// <para>Deletes a flow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes the specified flow endpoint. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3432,12 +3540,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流端点</para>
+        /// <para>Deletes a flow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes the specified flow endpoint. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3477,12 +3585,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流端点</para>
+        /// <para>Deletes a flow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes the specified flow endpoint. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3501,12 +3609,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流端点</para>
+        /// <para>Deletes a flow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工作流端点。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes the specified flow endpoint. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3525,12 +3633,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流版本</para>
+        /// <para>Deletes a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified version of a workflow. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3570,12 +3678,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流版本</para>
+        /// <para>Deletes a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified version of a workflow. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3615,12 +3723,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流版本</para>
+        /// <para>Deletes a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified version of a workflow. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3639,12 +3747,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作流版本</para>
+        /// <para>Deletes a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定工作流的指定版本。删除操作不可逆，请谨慎操作。</para>
+        /// <para>Deletes a specified version of a workflow. This operation is irreversible. Proceed with caution.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3663,12 +3771,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 IM Bot</para>
+        /// <para>Deletes an IM bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</para>
+        /// <para>This operation deletes an IM bot via a <c>DELETE</c> request to the <c>/2025-09-10/agents/im-bots/{imBotId}</c> endpoint. A successful request returns an HTTP <c>204 No Content</c> status code and an empty response body.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3708,12 +3816,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 IM Bot</para>
+        /// <para>Deletes an IM bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</para>
+        /// <para>This operation deletes an IM bot via a <c>DELETE</c> request to the <c>/2025-09-10/agents/im-bots/{imBotId}</c> endpoint. A successful request returns an HTTP <c>204 No Content</c> status code and an empty response body.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3753,12 +3861,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 IM Bot</para>
+        /// <para>Deletes an IM bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</para>
+        /// <para>This operation deletes an IM bot via a <c>DELETE</c> request to the <c>/2025-09-10/agents/im-bots/{imBotId}</c> endpoint. A successful request returns an HTTP <c>204 No Content</c> status code and an empty response body.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3777,12 +3885,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 IM Bot</para>
+        /// <para>Deletes an IM bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>DELETE /2025-09-10/agents/im-bots/{imBotId}；成功为 HTTP 204 No Content，无 JSON 响应体</para>
+        /// <para>This operation deletes an IM bot via a <c>DELETE</c> request to the <c>/2025-09-10/agents/im-bots/{imBotId}</c> endpoint. A successful request returns an HTTP <c>204 No Content</c> status code and an empty response body.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3801,7 +3909,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除知识库</para>
+        /// <para>Deletes a knowledge base.</para>
+        /// <remarks>
+        /// <para>This operation is permanent and cannot be undone.</para>
+        /// </remarks>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3837,7 +3948,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除知识库</para>
+        /// <para>Deletes a knowledge base.</para>
+        /// <remarks>
+        /// <para>This operation is permanent and cannot be undone.</para>
+        /// </remarks>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3873,7 +3987,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除知识库</para>
+        /// <para>Deletes a knowledge base.</para>
+        /// <remarks>
+        /// <para>This operation is permanent and cannot be undone.</para>
+        /// </remarks>
         /// </summary>
         /// 
         /// <returns>
@@ -3888,7 +4005,10 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除知识库</para>
+        /// <para>Deletes a knowledge base.</para>
+        /// <remarks>
+        /// <para>This operation is permanent and cannot be undone.</para>
+        /// </remarks>
         /// </summary>
         /// 
         /// <returns>
@@ -3903,7 +4023,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆存储</para>
+        /// <para>Deletes a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3939,7 +4059,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆存储</para>
+        /// <para>Deletes a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -3975,7 +4095,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆存储</para>
+        /// <para>Deletes a memory collection.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -3990,7 +4110,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除记忆存储</para>
+        /// <para>Deletes a memory collection.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -4005,8 +4125,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes the specified model proxy configuration without deleting the underlying models or related resources.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4041,8 +4166,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes the specified model proxy configuration without deleting the underlying models or related resources.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4077,8 +4207,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes the specified model proxy configuration without deleting the underlying models or related resources.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteModelProxyResponse
@@ -4092,8 +4227,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes the specified model proxy configuration without deleting the underlying models or related resources.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteModelProxyResponse
@@ -4107,8 +4247,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes a model service. You must specify the name of the service to delete.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4143,8 +4288,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes a model service. You must specify the name of the service to delete.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4179,8 +4329,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes a model service. You must specify the name of the service to delete.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteModelServiceResponse
@@ -4194,8 +4349,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation deletes a model service. You must specify the name of the service to delete.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteModelServiceResponse
@@ -4209,8 +4369,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Sandbox</para>
+        /// <para>Deletes a sandbox instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a sandbox instance.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4245,8 +4410,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Sandbox</para>
+        /// <para>Deletes a sandbox instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a sandbox instance.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -4281,8 +4451,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Sandbox</para>
+        /// <para>Deletes a sandbox instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a sandbox instance.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteSandboxResponse
@@ -4296,8 +4471,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Sandbox</para>
+        /// <para>Deletes a sandbox instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a sandbox instance.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeleteSandboxResponse
@@ -4311,12 +4491,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板</para>
+        /// <para>Deletes a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</para>
+        /// <para>Deletes the specified template. After you delete a template, you can no longer use it to create new sandboxes.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -4352,12 +4532,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板</para>
+        /// <para>Deletes a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</para>
+        /// <para>Deletes the specified template. After you delete a template, you can no longer use it to create new sandboxes.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -4393,12 +4573,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板</para>
+        /// <para>Deletes a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</para>
+        /// <para>Deletes the specified template. After you delete a template, you can no longer use it to create new sandboxes.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4413,12 +4593,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模板</para>
+        /// <para>Deletes a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的模板。删除后，该模板将无法再用于创建新的沙箱。</para>
+        /// <para>Deletes the specified template. After you delete a template, you can no longer use it to create new sandboxes.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4433,12 +4613,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工具</para>
+        /// <para>Delete a tool</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工具。删除操作不可逆，请谨慎操作。删除工具后，所有引用该工具的 Agent 将无法继续使用该工具。</para>
+        /// <para>Delete the specified tool. The delete operation is irreversible. Proceed with caution. After the tool is deleted, all Agents that reference this tool will no longer be able to use it.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -4474,12 +4654,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工具</para>
+        /// <para>Delete a tool</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工具。删除操作不可逆，请谨慎操作。删除工具后，所有引用该工具的 Agent 将无法继续使用该工具。</para>
+        /// <para>Delete the specified tool. The delete operation is irreversible. Proceed with caution. After the tool is deleted, all Agents that reference this tool will no longer be able to use it.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -4515,12 +4695,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工具</para>
+        /// <para>Delete a tool</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工具。删除操作不可逆，请谨慎操作。删除工具后，所有引用该工具的 Agent 将无法继续使用该工具。</para>
+        /// <para>Delete the specified tool. The delete operation is irreversible. Proceed with caution. After the tool is deleted, all Agents that reference this tool will no longer be able to use it.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4535,12 +4715,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工具</para>
+        /// <para>Delete a tool</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定的工具。删除操作不可逆，请谨慎操作。删除工具后，所有引用该工具的 Agent 将无法继续使用该工具。</para>
+        /// <para>Delete the specified tool. The delete operation is irreversible. Proceed with caution. After the tool is deleted, all Agents that reference this tool will no longer be able to use it.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4555,12 +4735,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作空间</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除工作空间</para>
+        /// <para>Deletes the specified workspace.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -4596,12 +4776,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作空间</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除工作空间</para>
+        /// <para>Deletes the specified workspace.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -4637,12 +4817,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作空间</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除工作空间</para>
+        /// <para>Deletes the specified workspace.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4657,12 +4837,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除工作空间</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除工作空间</para>
+        /// <para>Deletes the specified workspace.</para>
         /// </description>
         /// 
         /// <returns>
@@ -4677,8 +4857,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get access token for a resource</para>
+        /// <para>Obtains an access token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Obtains a temporary accessToken that is used to authenticate subsequent API requests.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAccessTokenRequest
@@ -4731,8 +4916,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get access token for a resource</para>
+        /// <para>Obtains an access token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Obtains a temporary accessToken that is used to authenticate subsequent API requests.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAccessTokenRequest
@@ -4785,8 +4975,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get access token for a resource</para>
+        /// <para>Obtains an access token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Obtains a temporary accessToken that is used to authenticate subsequent API requests.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAccessTokenRequest
@@ -4804,8 +4999,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get access token for a resource</para>
+        /// <para>Obtains an access token.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Obtains a temporary accessToken that is used to authenticate subsequent API requests.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAccessTokenRequest
@@ -4823,12 +5023,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能体运行时详情</para>
+        /// <para>Get Agent Runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据智能体运行时ID获取指定智能体运行时的详细信息，包括配置、状态、资源使用情况等。</para>
+        /// <para>Retrieves detailed information about a specified agent runtime by its agent runtime ID, including configuration, status, resource usage, and more.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4874,12 +5074,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能体运行时详情</para>
+        /// <para>Get Agent Runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据智能体运行时ID获取指定智能体运行时的详细信息，包括配置、状态、资源使用情况等。</para>
+        /// <para>Retrieves detailed information about a specified agent runtime by its agent runtime ID, including configuration, status, resource usage, and more.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4925,12 +5125,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能体运行时详情</para>
+        /// <para>Get Agent Runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据智能体运行时ID获取指定智能体运行时的详细信息，包括配置、状态、资源使用情况等。</para>
+        /// <para>Retrieves detailed information about a specified agent runtime by its agent runtime ID, including configuration, status, resource usage, and more.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4949,12 +5149,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能体运行时详情</para>
+        /// <para>Get Agent Runtime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据智能体运行时ID获取指定智能体运行时的详细信息，包括配置、状态、资源使用情况等。</para>
+        /// <para>Retrieves detailed information about a specified agent runtime by its agent runtime ID, including configuration, status, resource usage, and more.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4973,7 +5173,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get an agent runtime endpoint</para>
+        /// <para>Get Agent Runtime Access Endpoint</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5009,7 +5209,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get an agent runtime endpoint</para>
+        /// <para>Get Agent Runtime Access Endpoint</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5045,7 +5245,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get an agent runtime endpoint</para>
+        /// <para>Get Agent Runtime Access Endpoint</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5060,7 +5260,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get an agent runtime endpoint</para>
+        /// <para>Get Agent Runtime Access Endpoint</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5075,12 +5275,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取浏览器实例详情</para>
+        /// <para>GetBrowserSandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据浏览器ID获取指定浏览器实例的详细信息，包括配置、状态、资源使用情况等。</para>
+        /// <para>Retrieves detailed information about a specified browser instance by browser ID, including configuration, status, resource usage, and more.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -5116,12 +5316,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取浏览器实例详情</para>
+        /// <para>GetBrowserSandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据浏览器ID获取指定浏览器实例的详细信息，包括配置、状态、资源使用情况等。</para>
+        /// <para>Retrieves detailed information about a specified browser instance by browser ID, including configuration, status, resource usage, and more.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -5157,12 +5357,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取浏览器实例详情</para>
+        /// <para>GetBrowserSandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据浏览器ID获取指定浏览器实例的详细信息，包括配置、状态、资源使用情况等。</para>
+        /// <para>Retrieves detailed information about a specified browser instance by browser ID, including configuration, status, resource usage, and more.</para>
         /// </description>
         /// 
         /// <returns>
@@ -5177,12 +5377,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取浏览器实例详情</para>
+        /// <para>GetBrowserSandbox</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据浏览器ID获取指定浏览器实例的详细信息，包括配置、状态、资源使用情况等。</para>
+        /// <para>Retrieves detailed information about a specified browser instance by browser ID, including configuration, status, resource usage, and more.</para>
         /// </description>
         /// 
         /// <returns>
@@ -5197,7 +5397,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取代码解释器详情</para>
+        /// <para>Retrieves an interpreter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5238,7 +5438,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取代码解释器详情</para>
+        /// <para>Retrieves an interpreter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5279,7 +5479,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取代码解释器详情</para>
+        /// <para>Retrieves an interpreter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5299,7 +5499,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取代码解释器详情</para>
+        /// <para>Retrieves an interpreter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5319,8 +5519,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a credential</para>
+        /// <para>Retrieves information about a specific credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves detailed information about a specified credential, including its configuration, metadata, and related resources.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -5355,8 +5560,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a credential</para>
+        /// <para>Retrieves information about a specific credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves detailed information about a specified credential, including its configuration, metadata, and related resources.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -5391,8 +5601,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a credential</para>
+        /// <para>Retrieves information about a specific credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves detailed information about a specified credential, including its configuration, metadata, and related resources.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetCredentialResponse
@@ -5406,8 +5621,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get a credential</para>
+        /// <para>Retrieves information about a specific credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves detailed information about a specified credential, including its configuration, metadata, and related resources.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetCredentialResponse
@@ -5421,7 +5641,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义域名详情</para>
+        /// <para>Retrieves the configuration of a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5457,7 +5677,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义域名详情</para>
+        /// <para>Retrieves the configuration of a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -5493,7 +5713,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义域名详情</para>
+        /// <para>Retrieves the configuration of a custom domain.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5508,7 +5728,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取自定义域名详情</para>
+        /// <para>Retrieves the configuration of a custom domain.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -5523,7 +5743,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流详情</para>
+        /// <para>Get flow details</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5568,7 +5788,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流详情</para>
+        /// <para>Get flow details</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5613,7 +5833,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流详情</para>
+        /// <para>Get flow details</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5637,7 +5857,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流详情</para>
+        /// <para>Get flow details</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5661,7 +5881,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流草稿</para>
+        /// <para>Get the workflow draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5706,7 +5926,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流草稿</para>
+        /// <para>Get the workflow draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5751,7 +5971,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流草稿</para>
+        /// <para>Get the workflow draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5775,7 +5995,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流草稿</para>
+        /// <para>Get the workflow draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5799,7 +6019,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流端点详情</para>
+        /// <para>Retrieves the details of a workflow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5844,7 +6064,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流端点详情</para>
+        /// <para>Retrieves the details of a workflow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5889,7 +6109,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流端点详情</para>
+        /// <para>Retrieves the details of a workflow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5913,7 +6133,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流端点详情</para>
+        /// <para>Retrieves the details of a workflow endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -5937,12 +6157,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流版本详情</para>
+        /// <para>Retrieves the details of a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</para>
+        /// <para>Retrieves the details of a specific workflow version, including a complete configuration snapshot of its definition, environment variables, tracing configuration, and logging configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5982,12 +6202,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流版本详情</para>
+        /// <para>Retrieves the details of a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</para>
+        /// <para>Retrieves the details of a specific workflow version, including a complete configuration snapshot of its definition, environment variables, tracing configuration, and logging configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6027,12 +6247,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流版本详情</para>
+        /// <para>Retrieves the details of a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</para>
+        /// <para>Retrieves the details of a specific workflow version, including a complete configuration snapshot of its definition, environment variables, tracing configuration, and logging configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6051,12 +6271,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作流版本详情</para>
+        /// <para>Retrieves the details of a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据工作流名称和版本号获取指定版本的详细信息，包括该版本的完整配置快照（定义、环境变量、追踪配置、日志配置等）。</para>
+        /// <para>Retrieves the details of a specific workflow version, including a complete configuration snapshot of its definition, environment variables, tracing configuration, and logging configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6075,7 +6295,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 IM Bot</para>
+        /// <para>Gets the details of a specific IM Bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6120,7 +6340,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 IM Bot</para>
+        /// <para>Gets the details of a specific IM Bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6165,7 +6385,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 IM Bot</para>
+        /// <para>Gets the details of a specific IM Bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6189,7 +6409,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 IM Bot</para>
+        /// <para>Gets the details of a specific IM Bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6213,7 +6433,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库</para>
+        /// <para>Gets information about a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6249,7 +6469,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库</para>
+        /// <para>Gets information about a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6285,7 +6505,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库</para>
+        /// <para>Gets information about a knowledge base.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6300,7 +6520,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库</para>
+        /// <para>Gets information about a knowledge base.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6315,7 +6535,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆存储详情</para>
+        /// <para>Retrieves details for a specific memory collection.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6351,7 +6571,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆存储详情</para>
+        /// <para>Retrieves details for a specific memory collection.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6387,7 +6607,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆存储详情</para>
+        /// <para>Retrieves details for a specific memory collection.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6402,7 +6622,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆存储详情</para>
+        /// <para>Retrieves details for a specific memory collection.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6417,8 +6637,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看model</para>
+        /// <para>Retrieves model governance information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves the configuration details of a specific model proxy.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -6453,8 +6678,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看model</para>
+        /// <para>Retrieves model governance information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves the configuration details of a specific model proxy.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -6489,8 +6719,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看model</para>
+        /// <para>Retrieves model governance information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves the configuration details of a specific model proxy.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetModelProxyResponse
@@ -6504,8 +6739,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看model</para>
+        /// <para>Retrieves model governance information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves the configuration details of a specific model proxy.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetModelProxyResponse
@@ -6519,8 +6759,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看model</para>
+        /// <para>Retrieves the details of a specified model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified model service.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -6555,8 +6800,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看model</para>
+        /// <para>Retrieves the details of a specified model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified model service.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -6591,8 +6841,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看model</para>
+        /// <para>Retrieves the details of a specified model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified model service.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetModelServiceResponse
@@ -6606,8 +6861,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看model</para>
+        /// <para>Retrieves the details of a specified model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the details of a specified model service.</para>
+        /// </description>
         /// 
         /// <returns>
         /// GetModelServiceResponse
@@ -6621,12 +6881,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取沙箱</para>
+        /// <para>Retrieves the details of a specific sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据沙箱ID获取指定沙箱的详细信息，包括状态、配置等。</para>
+        /// <para>Retrieves the details of a specific sandbox by its <c>sandboxId</c>, including its status and configuration.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -6662,12 +6922,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取沙箱</para>
+        /// <para>Retrieves the details of a specific sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据沙箱ID获取指定沙箱的详细信息，包括状态、配置等。</para>
+        /// <para>Retrieves the details of a specific sandbox by its <c>sandboxId</c>, including its status and configuration.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -6703,12 +6963,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取沙箱</para>
+        /// <para>Retrieves the details of a specific sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据沙箱ID获取指定沙箱的详细信息，包括状态、配置等。</para>
+        /// <para>Retrieves the details of a specific sandbox by its <c>sandboxId</c>, including its status and configuration.</para>
         /// </description>
         /// 
         /// <returns>
@@ -6723,12 +6983,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取沙箱</para>
+        /// <para>Retrieves the details of a specific sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据沙箱ID获取指定沙箱的详细信息，包括状态、配置等。</para>
+        /// <para>Retrieves the details of a specific sandbox by its <c>sandboxId</c>, including its status and configuration.</para>
         /// </description>
         /// 
         /// <returns>
@@ -6743,12 +7003,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板</para>
+        /// <para>Retrieves a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据模板名称获取指定模板的详细信息，包括配置、状态等。</para>
+        /// <para>Retrieves the details of a template by its name. The response includes the template\&quot;s configuration and status.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -6784,12 +7044,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板</para>
+        /// <para>Retrieves a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据模板名称获取指定模板的详细信息，包括配置、状态等。</para>
+        /// <para>Retrieves the details of a template by its name. The response includes the template\&quot;s configuration and status.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -6825,12 +7085,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板</para>
+        /// <para>Retrieves a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据模板名称获取指定模板的详细信息，包括配置、状态等。</para>
+        /// <para>Retrieves the details of a template by its name. The response includes the template\&quot;s configuration and status.</para>
         /// </description>
         /// 
         /// <returns>
@@ -6845,12 +7105,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取模板</para>
+        /// <para>Retrieves a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据模板名称获取指定模板的详细信息，包括配置、状态等。</para>
+        /// <para>Retrieves the details of a template by its name. The response includes the template\&quot;s configuration and status.</para>
         /// </description>
         /// 
         /// <returns>
@@ -6865,12 +7125,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工具详情</para>
+        /// <para>Get a tool</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据工具名称获取工具的完整配置信息，包括工具的基本信息、资源配置、网络配置、运行状态等所有详细信息。</para>
+        /// <para>Obtain the complete configuration information of a tool by its name, including basic information, resource configuration, network configuration, running status, and all other detailed information.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -6906,12 +7166,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工具详情</para>
+        /// <para>Get a tool</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据工具名称获取工具的完整配置信息，包括工具的基本信息、资源配置、网络配置、运行状态等所有详细信息。</para>
+        /// <para>Obtain the complete configuration information of a tool by its name, including basic information, resource configuration, network configuration, running status, and all other detailed information.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -6947,12 +7207,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工具详情</para>
+        /// <para>Get a tool</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据工具名称获取工具的完整配置信息，包括工具的基本信息、资源配置、网络配置、运行状态等所有详细信息。</para>
+        /// <para>Obtain the complete configuration information of a tool by its name, including basic information, resource configuration, network configuration, running status, and all other detailed information.</para>
         /// </description>
         /// 
         /// <returns>
@@ -6967,12 +7227,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工具详情</para>
+        /// <para>Get a tool</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据工具名称获取工具的完整配置信息，包括工具的基本信息、资源配置、网络配置、运行状态等所有详细信息。</para>
+        /// <para>Obtain the complete configuration information of a tool by its name, including basic information, resource configuration, network configuration, running status, and all other detailed information.</para>
         /// </description>
         /// 
         /// <returns>
@@ -6987,12 +7247,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作空间</para>
+        /// <para>Retrieves the details of a specific workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查看工作空间</para>
+        /// <para>Retrieves the details of a specific workspace.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -7028,12 +7288,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作空间</para>
+        /// <para>Retrieves the details of a specific workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查看工作空间</para>
+        /// <para>Retrieves the details of a specific workspace.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -7069,12 +7329,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作空间</para>
+        /// <para>Retrieves the details of a specific workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查看工作空间</para>
+        /// <para>Retrieves the details of a specific workspace.</para>
         /// </description>
         /// 
         /// <returns>
@@ -7089,12 +7349,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看工作空间</para>
+        /// <para>Retrieves the details of a specific workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查看工作空间</para>
+        /// <para>Retrieves the details of a specific workspace.</para>
         /// </description>
         /// 
         /// <returns>
@@ -7109,7 +7369,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间下的发现端点</para>
+        /// <para>Gets the discovery endpoints for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7145,7 +7405,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间下的发现端点</para>
+        /// <para>Gets the discovery endpoints for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7181,7 +7441,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间下的发现端点</para>
+        /// <para>Gets the discovery endpoints for a workspace.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7196,7 +7456,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间下的发现端点</para>
+        /// <para>Gets the discovery endpoints for a workspace.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7211,7 +7471,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of access endpoints for an agent runtime</para>
+        /// <para>List Agent Runtime Endpoints</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7274,7 +7534,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of access endpoints for an agent runtime</para>
+        /// <para>List Agent Runtime Endpoints</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7337,7 +7597,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of access endpoints for an agent runtime</para>
+        /// <para>List Agent Runtime Endpoints</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7361,7 +7621,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of access endpoints for an agent runtime</para>
+        /// <para>List Agent Runtime Endpoints</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7385,7 +7645,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List agent runtime versions</para>
+        /// <para>Retrieves agent runtime versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7435,7 +7695,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List agent runtime versions</para>
+        /// <para>Retrieves agent runtime versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7485,7 +7745,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List agent runtime versions</para>
+        /// <para>Retrieves agent runtime versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7504,7 +7764,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List agent runtime versions</para>
+        /// <para>Retrieves agent runtime versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7523,12 +7783,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体运行时</para>
+        /// <para>Retrieves a list of agent runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有智能体运行时列表，支持按名称、标签等条件过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of agent runtimes for the current user. You can filter the results based on criteria such as name and tags. This operation supports pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7610,12 +7870,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体运行时</para>
+        /// <para>Retrieves a list of agent runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有智能体运行时列表，支持按名称、标签等条件过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of agent runtimes for the current user. You can filter the results based on criteria such as name and tags. This operation supports pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7697,12 +7957,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体运行时</para>
+        /// <para>Retrieves a list of agent runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有智能体运行时列表，支持按名称、标签等条件过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of agent runtimes for the current user. You can filter the results based on criteria such as name and tags. This operation supports pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7721,12 +7981,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出智能体运行时</para>
+        /// <para>Retrieves a list of agent runtimes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有智能体运行时列表，支持按名称、标签等条件过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of agent runtimes for the current user. You can filter the results based on criteria such as name and tags. This operation supports pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7745,12 +8005,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出浏览器实例</para>
+        /// <para>List Browser Sandboxes</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有浏览器实例列表，支持按名称、状态等条件过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of all browser instances for the current user. Supports filtering by conditions such as name and status, and supports paginated queries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7808,12 +8068,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出浏览器实例</para>
+        /// <para>List Browser Sandboxes</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有浏览器实例列表，支持按名称、状态等条件过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of all browser instances for the current user. Supports filtering by conditions such as name and status, and supports paginated queries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7871,12 +8131,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出浏览器实例</para>
+        /// <para>List Browser Sandboxes</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有浏览器实例列表，支持按名称、状态等条件过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of all browser instances for the current user. Supports filtering by conditions such as name and status, and supports paginated queries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7895,12 +8155,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出浏览器实例</para>
+        /// <para>List Browser Sandboxes</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有浏览器实例列表，支持按名称、状态等条件过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of all browser instances for the current user. Supports filtering by conditions such as name and status, and supports paginated queries.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7919,12 +8179,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出代码解释器</para>
+        /// <para>List Code Interpreters</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有代码解释器实例列表，支持按名称等条件过滤，支持分页查询。</para>
+        /// <para>Retrieve a list of all code interpreter instances for the current user, with support for filtering by name and pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7978,12 +8238,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出代码解释器</para>
+        /// <para>List Code Interpreters</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有代码解释器实例列表，支持按名称等条件过滤，支持分页查询。</para>
+        /// <para>Retrieve a list of all code interpreter instances for the current user, with support for filtering by name and pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8037,12 +8297,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出代码解释器</para>
+        /// <para>List Code Interpreters</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有代码解释器实例列表，支持按名称等条件过滤，支持分页查询。</para>
+        /// <para>Retrieve a list of all code interpreter instances for the current user, with support for filtering by name and pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8061,12 +8321,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出代码解释器</para>
+        /// <para>List Code Interpreters</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有代码解释器实例列表，支持按名称等条件过滤，支持分页查询。</para>
+        /// <para>Retrieve a list of all code interpreter instances for the current user, with support for filtering by name and pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8085,8 +8345,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List credentials</para>
+        /// <para>Lists all credentials.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the credentials in your account. This operation supports filtering and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -8163,8 +8428,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List credentials</para>
+        /// <para>Lists all credentials.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the credentials in your account. This operation supports filtering and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -8241,8 +8511,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List credentials</para>
+        /// <para>Lists all credentials.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the credentials in your account. This operation supports filtering and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -8260,8 +8535,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>List credentials</para>
+        /// <para>Lists all credentials.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the credentials in your account. This operation supports filtering and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -8279,7 +8559,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义域名列表</para>
+        /// <para>Lists custom domains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8345,7 +8625,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义域名列表</para>
+        /// <para>Lists custom domains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8411,7 +8691,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义域名列表</para>
+        /// <para>Lists custom domains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8430,7 +8710,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>自定义域名列表</para>
+        /// <para>Lists custom domains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8449,12 +8729,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流端点</para>
+        /// <para>List workflow endpoints.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取指定工作流的所有端点列表，支持分页查询。</para>
+        /// <para>Retrieve all endpoints for a specified workflow, with pagination support.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8504,12 +8784,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流端点</para>
+        /// <para>List workflow endpoints.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取指定工作流的所有端点列表，支持分页查询。</para>
+        /// <para>Retrieve all endpoints for a specified workflow, with pagination support.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8559,12 +8839,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流端点</para>
+        /// <para>List workflow endpoints.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取指定工作流的所有端点列表，支持分页查询。</para>
+        /// <para>Retrieve all endpoints for a specified workflow, with pagination support.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8583,12 +8863,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流端点</para>
+        /// <para>List workflow endpoints.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取指定工作流的所有端点列表，支持分页查询。</para>
+        /// <para>Retrieve all endpoints for a specified workflow, with pagination support.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8607,12 +8887,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流版本</para>
+        /// <para>Lists the versions of a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取指定工作流的所有版本列表，支持分页查询。</para>
+        /// <para>Returns a paginated list of all versions for a specified flow.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8662,12 +8942,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流版本</para>
+        /// <para>Lists the versions of a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取指定工作流的所有版本列表，支持分页查询。</para>
+        /// <para>Returns a paginated list of all versions for a specified flow.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8717,12 +8997,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流版本</para>
+        /// <para>Lists the versions of a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取指定工作流的所有版本列表，支持分页查询。</para>
+        /// <para>Returns a paginated list of all versions for a specified flow.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8741,12 +9021,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流版本</para>
+        /// <para>Lists the versions of a flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取指定工作流的所有版本列表，支持分页查询。</para>
+        /// <para>Returns a paginated list of all versions for a specified flow.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8765,7 +9045,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流</para>
+        /// <para>List flows</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8832,7 +9112,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流</para>
+        /// <para>List flows</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8899,7 +9179,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流</para>
+        /// <para>List flows</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8923,7 +9203,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作流</para>
+        /// <para>List flows</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -8947,12 +9227,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页列举 IM Bots</para>
+        /// <para>Retrieves a paginated list of IM bots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</para>
+        /// <para>Send a GET request to the <c>/2025-09-10/agents/im-bots</c> endpoint to retrieve a paginated list of IM bots. Use the <c>botName</c>, <c>agentRuntimeId</c>, <c>botBizType</c>, and <c>status</c> query parameters to filter the results. For pagination, the <c>pageNumber</c> defaults to 1 and the <c>pageSize</c> defaults to 20, with a maximum of 100.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9018,12 +9298,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页列举 IM Bots</para>
+        /// <para>Retrieves a paginated list of IM bots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</para>
+        /// <para>Send a GET request to the <c>/2025-09-10/agents/im-bots</c> endpoint to retrieve a paginated list of IM bots. Use the <c>botName</c>, <c>agentRuntimeId</c>, <c>botBizType</c>, and <c>status</c> query parameters to filter the results. For pagination, the <c>pageNumber</c> defaults to 1 and the <c>pageSize</c> defaults to 20, with a maximum of 100.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9089,12 +9369,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页列举 IM Bots</para>
+        /// <para>Retrieves a paginated list of IM bots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</para>
+        /// <para>Send a GET request to the <c>/2025-09-10/agents/im-bots</c> endpoint to retrieve a paginated list of IM bots. Use the <c>botName</c>, <c>agentRuntimeId</c>, <c>botBizType</c>, and <c>status</c> query parameters to filter the results. For pagination, the <c>pageNumber</c> defaults to 1 and the <c>pageSize</c> defaults to 20, with a maximum of 100.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9113,12 +9393,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页列举 IM Bots</para>
+        /// <para>Retrieves a paginated list of IM bots.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>GET /2025-09-10/agents/im-bots；200 OK；data 含 items、pageNumber、pageSize、total；pageNumber 默认 1、pageSize 默认 20、上限 100；可按 botName（子串忽略大小写）、agentRuntimeId、botBizType、status 筛选</para>
+        /// <para>Send a GET request to the <c>/2025-09-10/agents/im-bots</c> endpoint to retrieve a paginated list of IM bots. Use the <c>botName</c>, <c>agentRuntimeId</c>, <c>botBizType</c>, and <c>status</c> query parameters to filter the results. For pagination, the <c>pageNumber</c> defaults to 1 and the <c>pageSize</c> defaults to 20, with a maximum of 100.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9137,7 +9417,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出知识库</para>
+        /// <para>Lists the knowledge bases in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9199,7 +9479,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出知识库</para>
+        /// <para>Lists the knowledge bases in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9261,7 +9541,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出知识库</para>
+        /// <para>Lists the knowledge bases in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9280,7 +9560,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出知识库</para>
+        /// <para>Lists the knowledge bases in your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9299,7 +9579,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆存储列表</para>
+        /// <para>Returns a paginated list of memory collections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9369,7 +9649,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆存储列表</para>
+        /// <para>Returns a paginated list of memory collections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9439,7 +9719,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆存储列表</para>
+        /// <para>Returns a paginated list of memory collections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9458,7 +9738,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询记忆存储列表</para>
+        /// <para>Returns a paginated list of memory collections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9477,8 +9757,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的模型提供商及其模型</para>
+        /// <para>Lists all model providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the available model providers. This operation supports filtering and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelProvidersRequest
@@ -9539,8 +9824,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的模型提供商及其模型</para>
+        /// <para>Lists all model providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the available model providers. This operation supports filtering and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelProvidersRequest
@@ -9601,8 +9891,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的模型提供商及其模型</para>
+        /// <para>Lists all model providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the available model providers. This operation supports filtering and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelProvidersRequest
@@ -9620,8 +9915,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询支持的模型提供商及其模型</para>
+        /// <para>Lists all model providers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Lists the available model providers. This operation supports filtering and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelProvidersRequest
@@ -9639,8 +9939,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>model列表</para>
+        /// <para>Lists all Model Proxies.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a paginated list of all Model Proxies for the current user. You can filter the list by status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelProxiesRequest
@@ -9705,8 +10010,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>model列表</para>
+        /// <para>Lists all Model Proxies.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a paginated list of all Model Proxies for the current user. You can filter the list by status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelProxiesRequest
@@ -9771,8 +10081,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>model列表</para>
+        /// <para>Lists all Model Proxies.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a paginated list of all Model Proxies for the current user. You can filter the list by status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelProxiesRequest
@@ -9790,8 +10105,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>model列表</para>
+        /// <para>Lists all Model Proxies.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a paginated list of all Model Proxies for the current user. You can filter the list by status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelProxiesRequest
@@ -9809,8 +10129,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>model列表</para>
+        /// <para>Lists all models.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a list of all models for the current user. You can filter the models by type and paginate the results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelServicesRequest
@@ -9879,8 +10204,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>model列表</para>
+        /// <para>Lists all models.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a list of all models for the current user. You can filter the models by type and paginate the results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelServicesRequest
@@ -9949,8 +10279,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>model列表</para>
+        /// <para>Lists all models.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a list of all models for the current user. You can filter the models by type and paginate the results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelServicesRequest
@@ -9968,8 +10303,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>model列表</para>
+        /// <para>Lists all models.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves a list of all models for the current user. You can filter the models by type and paginate the results.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelServicesRequest
@@ -9987,12 +10327,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出沙箱</para>
+        /// <para>Returns a list of sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有沙箱列表，支持按模板名称过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of sandboxes for the current user. You can filter the results by template name, template type, or status. This operation supports pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10058,12 +10398,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出沙箱</para>
+        /// <para>Returns a list of sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有沙箱列表，支持按模板名称过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of sandboxes for the current user. You can filter the results by template name, template type, or status. This operation supports pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10129,12 +10469,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出沙箱</para>
+        /// <para>Returns a list of sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有沙箱列表，支持按模板名称过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of sandboxes for the current user. You can filter the results by template name, template type, or status. This operation supports pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10153,12 +10493,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出沙箱</para>
+        /// <para>Returns a list of sandboxes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有沙箱列表，支持按模板名称过滤，支持分页查询。</para>
+        /// <para>Retrieves a list of sandboxes for the current user. You can filter the results by template name, template type, or status. This operation supports pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10177,12 +10517,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出模板</para>
+        /// <para>Lists templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有模板列表，支持按模板类型过滤，支持分页查询。</para>
+        /// <para>Lists all templates for the current user. You can filter the results by template type and use pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10252,12 +10592,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出模板</para>
+        /// <para>Lists templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有模板列表，支持按模板类型过滤，支持分页查询。</para>
+        /// <para>Lists all templates for the current user. You can filter the results by template type and use pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10327,12 +10667,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出模板</para>
+        /// <para>Lists templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有模板列表，支持按模板类型过滤，支持分页查询。</para>
+        /// <para>Lists all templates for the current user. You can filter the results by template type and use pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10351,12 +10691,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出模板</para>
+        /// <para>Lists templates.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取当前用户的所有模板列表，支持按模板类型过滤，支持分页查询。</para>
+        /// <para>Lists all templates for the current user. You can filter the results by template type and use pagination.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10375,12 +10715,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具列表</para>
+        /// <para>List tools</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询工具列表，支持分页查询和按工具类型、工作空间等条件过滤。返回符合条件的工具列表及分页信息。</para>
+        /// <para>Query the tool list. Support paged query and conditional filtering by tool type, workspace, and other criteria. Return the list of tools that meet the conditions and paging information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10446,12 +10786,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具列表</para>
+        /// <para>List tools</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询工具列表，支持分页查询和按工具类型、工作空间等条件过滤。返回符合条件的工具列表及分页信息。</para>
+        /// <para>Query the tool list. Support paged query and conditional filtering by tool type, workspace, and other criteria. Return the list of tools that meet the conditions and paging information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10517,12 +10857,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具列表</para>
+        /// <para>List tools</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询工具列表，支持分页查询和按工具类型、工作空间等条件过滤。返回符合条件的工具列表及分页信息。</para>
+        /// <para>Query the tool list. Support paged query and conditional filtering by tool type, workspace, and other criteria. Return the list of tools that meet the conditions and paging information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10541,12 +10881,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具列表</para>
+        /// <para>List tools</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询工具列表，支持分页查询和按工具类型、工作空间等条件过滤。返回符合条件的工具列表及分页信息。</para>
+        /// <para>Query the tool list. Support paged query and conditional filtering by tool type, workspace, and other criteria. Return the list of tools that meet the conditions and paging information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10565,12 +10905,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间列表</para>
+        /// <para>Lists all workspaces in your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取工作空间列表</para>
+        /// <para>Lists all workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10628,12 +10968,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间列表</para>
+        /// <para>Lists all workspaces in your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取工作空间列表</para>
+        /// <para>Lists all workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10691,12 +11031,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间列表</para>
+        /// <para>Lists all workspaces in your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取工作空间列表</para>
+        /// <para>Lists all workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10715,12 +11055,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间列表</para>
+        /// <para>Lists all workspaces in your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取工作空间列表</para>
+        /// <para>Lists all workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10739,12 +11079,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停沙箱</para>
+        /// <para>Pause the sandbox and retain snapshots of its memory and file system. The sandbox enters the PAUSED state so that it can be recovered later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</para>
+        /// <para>This API is used to pause a sandbox. When invoked, the system takes a snapshot of the sandbox, capturing and persisting the memory and disk states. The user can recover the sandbox at a later time.<br>Note that sandbox snapshots are retained for only 30 days. After 30 days, recovery becomes unavailable.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -10780,12 +11120,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停沙箱</para>
+        /// <para>Pause the sandbox and retain snapshots of its memory and file system. The sandbox enters the PAUSED state so that it can be recovered later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</para>
+        /// <para>This API is used to pause a sandbox. When invoked, the system takes a snapshot of the sandbox, capturing and persisting the memory and disk states. The user can recover the sandbox at a later time.<br>Note that sandbox snapshots are retained for only 30 days. After 30 days, recovery becomes unavailable.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -10821,12 +11161,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停沙箱</para>
+        /// <para>Pause the sandbox and retain snapshots of its memory and file system. The sandbox enters the PAUSED state so that it can be recovered later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</para>
+        /// <para>This API is used to pause a sandbox. When invoked, the system takes a snapshot of the sandbox, capturing and persisting the memory and disk states. The user can recover the sandbox at a later time.<br>Note that sandbox snapshots are retained for only 30 days. After 30 days, recovery becomes unavailable.</para>
         /// </description>
         /// 
         /// <returns>
@@ -10841,12 +11181,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停沙箱</para>
+        /// <para>Pause the sandbox and retain snapshots of its memory and file system. The sandbox enters the PAUSED state so that it can be recovered later.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</para>
+        /// <para>This API is used to pause a sandbox. When invoked, the system takes a snapshot of the sandbox, capturing and persisting the memory and disk states. The user can recover the sandbox at a later time.<br>Note that sandbox snapshots are retained for only 30 days. After 30 days, recovery becomes unavailable.</para>
         /// </description>
         /// 
         /// <returns>
@@ -10861,12 +11201,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布工作流版本</para>
+        /// <para>Publishes a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定工作流发布新版本，用于版本管理和回滚。</para>
+        /// <para>Publishes a new version of a specified workflow. This operation supports version management and rollbacks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10907,12 +11247,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布工作流版本</para>
+        /// <para>Publishes a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定工作流发布新版本，用于版本管理和回滚。</para>
+        /// <para>Publishes a new version of a specified workflow. This operation supports version management and rollbacks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10953,12 +11293,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布工作流版本</para>
+        /// <para>Publishes a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定工作流发布新版本，用于版本管理和回滚。</para>
+        /// <para>Publishes a new version of a specified workflow. This operation supports version management and rollbacks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10977,12 +11317,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布工作流版本</para>
+        /// <para>Publishes a workflow version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定工作流发布新版本，用于版本管理和回滚。</para>
+        /// <para>Publishes a new version of a specified workflow. This operation supports version management and rollbacks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11001,12 +11341,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布运行时版本</para>
+        /// <para>Publishes a new version of an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</para>
+        /// <para>Publishes a new version for a specified agent runtime for version management and deployment. The new version can include code updates, configuration changes, and other content.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11047,12 +11387,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布运行时版本</para>
+        /// <para>Publishes a new version of an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</para>
+        /// <para>Publishes a new version for a specified agent runtime for version management and deployment. The new version can include code updates, configuration changes, and other content.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11093,12 +11433,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布运行时版本</para>
+        /// <para>Publishes a new version of an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</para>
+        /// <para>Publishes a new version for a specified agent runtime for version management and deployment. The new version can include code updates, configuration changes, and other content.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11117,12 +11457,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发布运行时版本</para>
+        /// <para>Publishes a new version of an agent runtime.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>为指定的智能体运行时发布新版本，用于版本管理和部署。新版本可以包含代码更新、配置变更等内容。</para>
+        /// <para>Publishes a new version for a specified agent runtime for version management and deployment. The new version can include code updates, configuration changes, and other content.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11141,8 +11481,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复沙箱</para>
+        /// <para>Resume a paused sandbox instance to restore it from the PAUSED state to the READY (running) state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API resumes a sandbox instance from the paused state to the ready state, allowing the user to invoke it and restore it to the state it was in before being paused.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -11177,8 +11522,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复沙箱</para>
+        /// <para>Resume a paused sandbox instance to restore it from the PAUSED state to the READY (running) state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API resumes a sandbox instance from the paused state to the ready state, allowing the user to invoke it and restore it to the state it was in before being paused.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -11213,8 +11563,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复沙箱</para>
+        /// <para>Resume a paused sandbox instance to restore it from the PAUSED state to the READY (running) state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API resumes a sandbox instance from the paused state to the ready state, allowing the user to invoke it and restore it to the state it was in before being paused.</para>
+        /// </description>
         /// 
         /// <returns>
         /// ResumeSandboxResponse
@@ -11228,8 +11583,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复沙箱</para>
+        /// <para>Resume a paused sandbox instance to restore it from the PAUSED state to the READY (running) state.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API resumes a sandbox instance from the paused state to the ready state, allowing the user to invoke it and restore it to the state it was in before being paused.</para>
+        /// </description>
         /// 
         /// <returns>
         /// ResumeSandboxResponse
@@ -11243,12 +11603,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止沙箱</para>
+        /// <para>Stops a sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</para>
+        /// <para>Stops the specified sandbox instance. After the operation, the sandbox enters the TERMINATED state.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -11284,12 +11644,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止沙箱</para>
+        /// <para>Stops a sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</para>
+        /// <para>Stops the specified sandbox instance. After the operation, the sandbox enters the TERMINATED state.</para>
         /// </description>
         /// 
         /// <param name="headers">
@@ -11325,12 +11685,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止沙箱</para>
+        /// <para>Stops a sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</para>
+        /// <para>Stops the specified sandbox instance. After the operation, the sandbox enters the TERMINATED state.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11345,12 +11705,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止沙箱</para>
+        /// <para>Stops a sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>停止指定的沙箱实例。停止后，沙箱将进入TERMINATED状态。</para>
+        /// <para>Stops the specified sandbox instance. After the operation, the sandbox enters the TERMINATED state.</para>
         /// </description>
         /// 
         /// <returns>
@@ -11365,8 +11725,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop the TemplateMCP service.</para>
+        /// <para>Stops the TemplateMCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stopping the MCP service deletes the associated MCP resources and makes the endpoint inaccessible.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -11401,8 +11766,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop the TemplateMCP service.</para>
+        /// <para>Stops the TemplateMCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stopping the MCP service deletes the associated MCP resources and makes the endpoint inaccessible.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -11437,8 +11807,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop the TemplateMCP service.</para>
+        /// <para>Stops the TemplateMCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stopping the MCP service deletes the associated MCP resources and makes the endpoint inaccessible.</para>
+        /// </description>
         /// 
         /// <returns>
         /// StopTemplateMCPResponse
@@ -11452,8 +11827,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stop the TemplateMCP service.</para>
+        /// <para>Stops the TemplateMCP service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Stopping the MCP service deletes the associated MCP resources and makes the endpoint inaccessible.</para>
+        /// </description>
         /// 
         /// <returns>
         /// StopTemplateMCPResponse
@@ -11467,12 +11847,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能体运行时</para>
+        /// <para>UpdateAgentRuntime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定智能体运行时的配置信息，包括资源分配、网络配置、环境变量等。更新操作会触发运行时重启。</para>
+        /// <para>Updates the configuration of a specified agent runtime, including resource allocation, network configuration, and environment variables. The update operation triggers a runtime restart.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11513,12 +11893,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能体运行时</para>
+        /// <para>UpdateAgentRuntime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定智能体运行时的配置信息，包括资源分配、网络配置、环境变量等。更新操作会触发运行时重启。</para>
+        /// <para>Updates the configuration of a specified agent runtime, including resource allocation, network configuration, and environment variables. The update operation triggers a runtime restart.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11559,12 +11939,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能体运行时</para>
+        /// <para>UpdateAgentRuntime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定智能体运行时的配置信息，包括资源分配、网络配置、环境变量等。更新操作会触发运行时重启。</para>
+        /// <para>Updates the configuration of a specified agent runtime, including resource allocation, network configuration, and environment variables. The update operation triggers a runtime restart.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11583,12 +11963,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能体运行时</para>
+        /// <para>UpdateAgentRuntime</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定智能体运行时的配置信息，包括资源分配、网络配置、环境变量等。更新操作会触发运行时重启。</para>
+        /// <para>Updates the configuration of a specified agent runtime, including resource allocation, network configuration, and environment variables. The update operation triggers a runtime restart.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11607,7 +11987,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update an agent runtime endpoint</para>
+        /// <para>Update Agent Runtime Endpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11648,7 +12028,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update an agent runtime endpoint</para>
+        /// <para>Update Agent Runtime Endpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11689,7 +12069,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update an agent runtime endpoint</para>
+        /// <para>Update Agent Runtime Endpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11708,7 +12088,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update an agent runtime endpoint</para>
+        /// <para>Update Agent Runtime Endpoint</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11727,8 +12107,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a credential</para>
+        /// <para>Updates a credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCredentialRequest
@@ -11768,8 +12153,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a credential</para>
+        /// <para>Updates a credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCredentialRequest
@@ -11809,8 +12199,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a credential</para>
+        /// <para>Updates a credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCredentialRequest
@@ -11828,8 +12223,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update a credential</para>
+        /// <para>Updates a credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCredentialRequest
@@ -11847,7 +12247,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义域名</para>
+        /// <para>Updates a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11888,7 +12288,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义域名</para>
+        /// <para>Updates a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11929,7 +12329,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义域名</para>
+        /// <para>Updates a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11948,7 +12348,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新自定义域名</para>
+        /// <para>Updates a custom domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11967,12 +12367,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates a workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</para>
+        /// <para>Updates the configuration of a specified workflow, including the definition, execution mode, and environment variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12013,12 +12413,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates a workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</para>
+        /// <para>Updates the configuration of a specified workflow, including the definition, execution mode, and environment variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12059,12 +12459,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates a workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</para>
+        /// <para>Updates the configuration of a specified workflow, including the definition, execution mode, and environment variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12083,12 +12483,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流</para>
+        /// <para>Updates a workflow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定工作流的配置信息，包括定义、执行模式、环境变量等。</para>
+        /// <para>Updates the configuration of a specified workflow, including the definition, execution mode, and environment variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12107,7 +12507,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流草稿</para>
+        /// <para>Update a flow draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12153,7 +12553,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流草稿</para>
+        /// <para>Update a flow draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12199,7 +12599,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流草稿</para>
+        /// <para>Update a flow draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12223,7 +12623,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流草稿</para>
+        /// <para>Update a flow draft.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12247,7 +12647,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流端点</para>
+        /// <para>Update Flow Endpoint</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12293,7 +12693,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流端点</para>
+        /// <para>Update Flow Endpoint</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12339,7 +12739,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流端点</para>
+        /// <para>Update Flow Endpoint</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12363,7 +12763,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作流端点</para>
+        /// <para>Update Flow Endpoint</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12387,7 +12787,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 IM Bot</para>
+        /// <para>Updates an IM bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12433,7 +12833,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 IM Bot</para>
+        /// <para>Updates an IM bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12479,7 +12879,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 IM Bot</para>
+        /// <para>Updates an IM bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12503,7 +12903,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新 IM Bot</para>
+        /// <para>Updates an IM bot.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -12527,7 +12927,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新知识库</para>
+        /// <para>Updates the configuration of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12568,7 +12968,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新知识库</para>
+        /// <para>Updates the configuration of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12609,7 +13009,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新知识库</para>
+        /// <para>Updates the configuration of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12628,7 +13028,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新知识库</para>
+        /// <para>Updates the configuration of a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12647,7 +13047,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆存储信息</para>
+        /// <para>Modifies a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12688,7 +13088,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆存储信息</para>
+        /// <para>Modifies a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12729,7 +13129,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆存储信息</para>
+        /// <para>Modifies a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12748,7 +13148,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改记忆存储信息</para>
+        /// <para>Modifies a memory collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12767,8 +13167,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates the configuration of a model proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this operation to update the configuration of a specific model proxy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelProxyRequest
@@ -12808,8 +13213,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates the configuration of a model proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this operation to update the configuration of a specific model proxy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelProxyRequest
@@ -12849,8 +13259,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates the configuration of a model proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this operation to update the configuration of a specific model proxy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelProxyRequest
@@ -12868,8 +13283,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates the configuration of a model proxy.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Use this operation to update the configuration of a specific model proxy.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelProxyRequest
@@ -12887,8 +13307,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation modifies the configuration of an existing model service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelServiceRequest
@@ -12928,8 +13353,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation modifies the configuration of an existing model service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelServiceRequest
@@ -12969,8 +13399,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation modifies the configuration of an existing model service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelServiceRequest
@@ -12988,8 +13423,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates a model service.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation modifies the configuration of an existing model service.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateModelServiceRequest
@@ -13007,12 +13447,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模板</para>
+        /// <para>Updates a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定模板的配置信息，包括资源配置、网络配置、环境变量等。</para>
+        /// <para>Updates a template\&quot;s configuration, including its resource configuration, network configuration, and environment variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13059,12 +13499,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模板</para>
+        /// <para>Updates a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定模板的配置信息，包括资源配置、网络配置、环境变量等。</para>
+        /// <para>Updates a template\&quot;s configuration, including its resource configuration, network configuration, and environment variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13111,12 +13551,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模板</para>
+        /// <para>Updates a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定模板的配置信息，包括资源配置、网络配置、环境变量等。</para>
+        /// <para>Updates a template\&quot;s configuration, including its resource configuration, network configuration, and environment variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13135,12 +13575,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模板</para>
+        /// <para>Updates a template.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新指定模板的配置信息，包括资源配置、网络配置、环境变量等。</para>
+        /// <para>Updates a template\&quot;s configuration, including its resource configuration, network configuration, and environment variables.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13159,12 +13599,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工具</para>
+        /// <para>Updates a tool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新现有工具的配置信息，可以修改工具的描述、资源配置、网络配置等。更新操作支持部分更新，只需提供需要修改的字段。</para>
+        /// <para>Updates the configuration of an existing tool. You can modify its description, resource configuration, network configuration, and more. This operation supports partial updates. You only need to specify the fields that you want to modify.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13205,12 +13645,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工具</para>
+        /// <para>Updates a tool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新现有工具的配置信息，可以修改工具的描述、资源配置、网络配置等。更新操作支持部分更新，只需提供需要修改的字段。</para>
+        /// <para>Updates the configuration of an existing tool. You can modify its description, resource configuration, network configuration, and more. This operation supports partial updates. You only need to specify the fields that you want to modify.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13251,12 +13691,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工具</para>
+        /// <para>Updates a tool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新现有工具的配置信息，可以修改工具的描述、资源配置、网络配置等。更新操作支持部分更新，只需提供需要修改的字段。</para>
+        /// <para>Updates the configuration of an existing tool. You can modify its description, resource configuration, network configuration, and more. This operation supports partial updates. You only need to specify the fields that you want to modify.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13275,12 +13715,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工具</para>
+        /// <para>Updates a tool.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新现有工具的配置信息，可以修改工具的描述、资源配置、网络配置等。更新操作支持部分更新，只需提供需要修改的字段。</para>
+        /// <para>Updates the configuration of an existing tool. You can modify its description, resource configuration, network configuration, and more. This operation supports partial updates. You only need to specify the fields that you want to modify.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13299,12 +13739,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作空间</para>
+        /// <para>Updates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新工作空间</para>
+        /// <para>Updates the properties of a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13345,12 +13785,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作空间</para>
+        /// <para>Updates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新工作空间</para>
+        /// <para>Updates the properties of a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13391,12 +13831,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作空间</para>
+        /// <para>Updates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新工作空间</para>
+        /// <para>Updates the properties of a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13415,12 +13855,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新工作空间</para>
+        /// <para>Updates a workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新工作空间</para>
+        /// <para>Updates the properties of a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13439,7 +13879,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间下的发现端点</para>
+        /// <para>Updates the discovery endpoint configuration for a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13480,7 +13920,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间下的发现端点</para>
+        /// <para>Updates the discovery endpoint configuration for a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13521,7 +13961,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间下的发现端点</para>
+        /// <para>Updates the discovery endpoint configuration for a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13540,7 +13980,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取工作空间下的发现端点</para>
+        /// <para>Updates the discovery endpoint configuration for a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">

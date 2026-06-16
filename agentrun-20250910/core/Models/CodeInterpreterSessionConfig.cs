@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CodeInterpreterSessionConfig : TeaModel {
         /// <summary>
-        /// <para>代码解释器会话的环境变量配置</para>
+        /// <para>The environment variables for the session, specified as key-value pairs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PYTHONPATH=/app,DEBUG=true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public Dictionary<string, string> Environment { get; set; }
 
         /// <summary>
-        /// <para>代码解释器会话的超时时间，单位为秒</para>
+        /// <para>The timeout for the session, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>代码解释器会话的工作目录路径</para>
+        /// <para>The working directory path for the session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/app</para>

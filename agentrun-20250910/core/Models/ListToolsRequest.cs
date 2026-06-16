@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListToolsRequest : TeaModel {
         /// <summary>
-        /// <para>当前页码，从 1 开始</para>
+        /// <para>Page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页返回的工具数量，用于分页查询</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Tool Name, supports fuzzy search</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tool-1</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ToolName { get; set; }
 
         /// <summary>
-        /// <para>按工具类型过滤，可选值：MCP、FUNCTIONCALL、SKILL</para>
+        /// <para>Tool type</para>
         /// 
         /// <b>Example:</b>
         /// <para>MCP</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ToolType { get; set; }
 
         /// <summary>
-        /// <para>按工作空间ID过滤，查询指定工作空间下的工具</para>
+        /// <para>Workspace ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace-xyz789</para>
@@ -58,6 +60,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>List of workspace IDs, separated by commas</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ws1,ws2</para>
         /// </summary>

@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListAgentRuntimeEndpointsInput : TeaModel {
         /// <summary>
-        /// <para>按端点名称过滤</para>
+        /// <para>Filter by endpoint name</para>
         /// </summary>
         [NameInMap("endpointName")]
         [Validation(Required=false)]
         public string EndpointName { get; set; }
 
         /// <summary>
-        /// <para>页码</para>
+        /// <para>Page number</para>
         /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页记录数</para>
+        /// <para>Number of records per page</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>按状态过滤</para>
+        /// <para>Filter by status</para>
         /// </summary>
         [NameInMap("statuses")]
         [Validation(Required=false)]

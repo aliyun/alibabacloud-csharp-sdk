@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateConsumerAPIKeyInput : TeaModel {
         /// <summary>
-        /// <para>是否启用该密钥</para>
+        /// <para>Indicates if the key is active.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? Active { get; set; }
 
         /// <summary>
-        /// <para>更新后的描述信息</para>
+        /// <para>A new description for the key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>更新后的密钥描述</para>

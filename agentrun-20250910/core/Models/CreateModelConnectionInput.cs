@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateModelConnectionInput : TeaModel {
         /// <summary>
-        /// <para>要绑定的消费者API密钥列表；空表示开放模式</para>
+        /// <para>A list of consumer API keys for the model connection. If this list is empty, the connection enters open mode.</para>
         /// </summary>
         [NameInMap("consumerApiKeys")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         }
 
         /// <summary>
-        /// <para>模型连接的描述信息</para>
+        /// <para>A description of the model connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenAI GPT-4 connection for production</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>模型连接的唯一名称标识</para>
+        /// <para>A unique name for the model connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ModelConnectionName { get; set; }
 
         /// <summary>
-        /// <para>模型元数据配置列表</para>
+        /// <para>A list of model metadata configurations.</para>
         /// </summary>
         [NameInMap("modelInfoConfigs")]
         [Validation(Required=false)]
         public List<ModelInfoConfig> ModelInfoConfigs { get; set; }
 
         /// <summary>
-        /// <para>模型提供商名称</para>
+        /// <para>The model provider name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>模型提供商的配置信息，包括基础URL、模型列表等</para>
+        /// <para>Configuration settings for the model provider, such as the base URL and a list of models.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ModelConnectionProviderSettings ProviderSettings { get; set; }
 
         /// <summary>
-        /// <para>模型连接所属的工作空间标识符</para>
+        /// <para>The ID of the workspace containing the model connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-1234567890abcdef</para>

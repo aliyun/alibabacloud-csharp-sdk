@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateConsumerAPIKeyResult : TeaModel {
         /// <summary>
-        /// <para>SUCCESS 为成功，失败情况返回对应错误类型</para>
+        /// <para><c>SUCCESS</c> for a successful operation; otherwise, the corresponding error type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>创建的消费者API密钥详细信息（包含完整密钥）</para>
+        /// <para>Details of the new consumer API key, including the complete key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public CreateConsumerAPIKeyOutput Data { get; set; }
 
         /// <summary>
-        /// <para>唯一的请求标识符，用于问题追踪</para>
+        /// <para>A unique request id for issue tracking.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</para>

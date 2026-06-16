@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateAgentRuntimeInput : TeaModel {
         /// <summary>
+        /// <para>The name of the agent runtime.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-agent-runtime</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ArmsConfiguration ArmsConfiguration { get; set; }
 
         /// <summary>
+        /// <para>The artifact type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Code</para>
         /// </summary>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ArtifactType { get; set; }
 
         /// <summary>
-        /// <para>当artifactType为Code时的代码配置信息，包括代码源、入口文件等</para>
+        /// <para>The code configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public CodeConfiguration CodeConfiguration { get; set; }
 
         /// <summary>
-        /// <para>当artifactType为Container时的容器配置信息，包括镜像地址、启动命令等</para>
+        /// <para>The container configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -56,6 +60,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ContainerConfiguration ContainerConfiguration { get; set; }
 
         /// <summary>
+        /// <para>The number of CPU cores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +71,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public float? Cpu { get; set; }
 
         /// <summary>
-        /// <para>用于访问智能体的凭证名称，访问智能体运行时将使用此凭证进行身份验证</para>
+        /// <para>The name of the credential that the agent runtime uses to authenticate requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-credential</para>
@@ -76,6 +81,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CredentialName { get; set; }
 
         /// <summary>
+        /// <para>The description of the agent runtime.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>更新后的智能体运行时描述</para>
         /// </summary>
@@ -84,7 +91,17 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否禁用会话亲和性。默认为 false（即默认启用会话亲和），设置为 true 时关闭会话亲和</para>
+        /// <para>Specifies whether to disable on-demand elasticity. Set to true to disable. Default: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("disableOndemand")]
+        [Validation(Required=false)]
+        public bool? DisableOndemand { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to disable session affinity. Set to true to disable. Default: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -93,6 +110,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public bool? DisableSessionAffinity { get; set; }
 
+        /// <summary>
+        /// <para>The disk size in gigabytes (GB).</para>
+        /// </summary>
         [NameInMap("diskSize")]
         [Validation(Required=false)]
         public int? DiskSize { get; set; }
@@ -102,7 +122,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>是否启用会话隔离，启用后每个会话将在独立的环境中运行</para>
+        /// <para>Specifies whether to enable session isolation. If enabled, each session runs in an isolated environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -112,7 +132,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? EnableSessionIsolation { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的环境变量配置，用于在运行时传递配置参数</para>
+        /// <para>Environment variables for the agent runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENV_VAR1=value1,ENV_VAR2=value2</para>
@@ -122,7 +142,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
         /// <summary>
-        /// <para>为智能体运行时提供访问云服务权限的执行角色ARN</para>
+        /// <para>The execution role ARN that grants the agent runtime permissions to access cloud services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1760720386195983:role/AgentRunExecutionRole</para>
@@ -132,7 +152,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExecutionRoleArn { get; set; }
 
         /// <summary>
-        /// <para>外部注册类型的智能体访问端点地址，用于连接已部署在外部的智能体服务</para>
+        /// <para>The endpoint URL for an externally registered agent. The platform uses this URL to connect to an agent service deployed outside the platform.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://external-agent.example.com/api">https://external-agent.example.com/api</a></para>
@@ -142,7 +162,27 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExternalAgentEndpointUrl { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的健康检查配置，用于监控运行时实例的健康状态</para>
+        /// <para>Specifies whether to perform a best-effort eviction of active Function Compute (FC) sessions when the configuration is updated. This helps the new settings take effect faster.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("forceEvictInstances")]
+        [Validation(Required=false)]
+        public bool? ForceEvictInstances { get; set; }
+
+        /// <summary>
+        /// <para>The name of the request header used for session affinity when sessionAffinityType is set to &quot;HEADER_FIELD&quot;.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>x-agentrun-session-id</para>
+        /// </summary>
+        [NameInMap("headerFieldName")]
+        [Validation(Required=false)]
+        public string HeaderFieldName { get; set; }
+
+        /// <summary>
+        /// <para>The health check configuration for monitoring the health of agent runtime instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -152,7 +192,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public HealthCheckConfiguration HealthCheckConfiguration { get; set; }
 
         /// <summary>
-        /// <para>SLS（简单日志服务）配置</para>
+        /// <para>The configuration for Simple Log Service (SLS).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -162,6 +202,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public LogConfiguration LogConfiguration { get; set; }
 
         /// <summary>
+        /// <para>The amount of memory in megabytes (MB).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1024</para>
         /// </summary>
@@ -170,7 +212,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>文件存储NAS的配置信息，用于挂载NAS文件系统到智能体运行时</para>
+        /// <para>Configuration for mounting a NAS file system to the agent runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -180,7 +222,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public NASConfig NasConfig { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的网络配置，包括VPC、安全组等网络访问设置</para>
+        /// <para>The network configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -190,7 +232,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public NetworkConfiguration NetworkConfiguration { get; set; }
 
         /// <summary>
-        /// <para>对象存储OSS的挂载配置信息，用于挂载OSS存储桶到智能体运行时</para>
+        /// <para>Configuration for mounting an OSS bucket to the agent runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -200,6 +242,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public OSSMountConfig OssMountConfig { get; set; }
 
         /// <summary>
+        /// <para>The port on which the agent service listens.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8080</para>
         /// </summary>
@@ -208,7 +252,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? Port { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的通信协议配置，定义运行时如何与外部系统交互</para>
+        /// <para>The protocol configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -218,7 +262,17 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ProtocolConfiguration ProtocolConfiguration { get; set; }
 
         /// <summary>
-        /// <para>每个运行时实例允许的最大并发会话数</para>
+        /// <para>The session affinity mode. Valid values: NONE (disables session affinity), HEADER_FIELD (routes requests based on a request header), and GENERATED_COOKIE (routes requests using a cookie generated by Function Compute (FC)). The value COOKIE is an alias for GENERATED_COOKIE.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>GENERATED_COOKIE</para>
+        /// </summary>
+        [NameInMap("sessionAffinityType")]
+        [Validation(Required=false)]
+        public string SessionAffinityType { get; set; }
+
+        /// <summary>
+        /// <para>The maximum number of concurrent sessions allowed per runtime instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -228,7 +282,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? SessionConcurrencyLimitPerInstance { get; set; }
 
         /// <summary>
-        /// <para>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</para>
+        /// <para>The idle timeout for a session, in seconds. If an instance remains idle longer than this timeout after receiving no requests, the session expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -238,7 +292,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? SessionIdleTimeoutSeconds { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的系统标签信息，用于系统级别的资源分类和管理</para>
+        /// <para>The system tags for the agent runtime, used for resource classification and management.</para>
         /// 
         /// <b>Example:</b>
         /// <para>system-tag-1,system-tag-2</para>
@@ -247,6 +301,9 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public List<string> SystemTags { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

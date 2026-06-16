@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class PublishFlowVersionRequest : TeaModel {
         /// <summary>
-        /// <para>包含版本描述等信息的请求体</para>
+        /// <para>The input parameters for publishing a workflow version.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

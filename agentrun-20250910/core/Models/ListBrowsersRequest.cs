@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListBrowsersRequest : TeaModel {
         /// <summary>
-        /// <para>根据浏览器实例名称进行模糊匹配过滤</para>
+        /// <para>Filter by browser name</para>
         /// 
         /// <b>Example:</b>
         /// <para>browser</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string BrowserName { get; set; }
 
         /// <summary>
-        /// <para>当前页码，从1开始计数</para>
+        /// <para>Page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页返回的记录数量</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>根据浏览器实例的运行状态进行过滤，可选值：CREATING、READY、DELETING等</para>
+        /// <para>Filter by status</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATING</para>

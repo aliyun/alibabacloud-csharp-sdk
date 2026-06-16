@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class AgentRuntimeEndpoint : TeaModel {
         /// <summary>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the agent runtime endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:agentrun:cn-hangzhou:1760720386195983:runtime-endpoints/e56d483c-db80-4116-9ec4-25f16f5facfd</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeEndpointArn { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the agent runtime endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>are-1234567890abcdef</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeEndpointId { get; set; }
 
         /// <summary>
+        /// <para>The name of the agent runtime endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>production-endpoint</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeEndpointName { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the agent runtime.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ar-1234567890abcdef</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeId { get; set; }
 
         /// <summary>
+        /// <para>The description of the agent runtime endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Production endpoint for customer service agent</para>
         /// </summary>
@@ -50,14 +60,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否禁用该端点的公网访问</para>
+        /// <para>If <c>true</c>, public access for this endpoint is disabled.</para>
         /// </summary>
         [NameInMap("disablePublicNetworkAccess")]
         [Validation(Required=false)]
         public bool? DisablePublicNetworkAccess { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时端点的公网访问地址</para>
+        /// <para>The public access address for the agent runtime endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://ar-1234567890abcdef.cn-hangzhou.agentrun.aliyuncs.com">https://ar-1234567890abcdef.cn-hangzhou.agentrun.aliyuncs.com</a></para>
@@ -67,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string EndpointPublicUrl { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时端点的路由配置，支持多版本权重分配</para>
+        /// <para>The configuration for weight-based routing across multiple agent versions.</para>
         /// </summary>
         [NameInMap("routingConfiguration")]
         [Validation(Required=false)]
@@ -81,6 +91,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ScalingStatus ScalingStatus { get; set; }
 
         /// <summary>
+        /// <para>The current status of the agent runtime endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
         /// </summary>
@@ -89,6 +101,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The reason for the current status of the endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Endpoint is active and ready</para>
         /// </summary>
@@ -97,6 +111,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string StatusReason { get; set; }
 
         /// <summary>
+        /// <para>The agent version that the endpoint targets.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>
         /// </summary>

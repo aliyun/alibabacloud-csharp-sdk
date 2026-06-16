@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class BrowserLiveViewStream : TeaModel {
         /// <summary>
+        /// <para>The WebSocket (WSS) stream endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>wss://browser-liveview.cn-hangzhou.agentrun.aliyuncs.com/stream/bs-1234567890abcdef</para>
         /// </summary>

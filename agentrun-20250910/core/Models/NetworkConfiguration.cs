@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class NetworkConfiguration : TeaModel {
         /// <summary>
+        /// <para>The network mode.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PRIVATE</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string NetworkMode { get; set; }
 
         /// <summary>
+        /// <para>The security group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sg-1234567890abcdef0</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The VPC ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-1234567890abcdef0</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>An array of VSwitch IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-1234567890abcdef0,vsw-abcdef1234567890</para>
         /// </summary>

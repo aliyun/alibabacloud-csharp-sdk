@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListModelProxiesRequest : TeaModel {
         /// <summary>
+        /// <para>The page number for pagination.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The default is 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>proxyMode</para>
+        /// <para>Specifies the proxy mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proxyMode</para>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ProxyMode { get; set; }
 
         /// <summary>
+        /// <para>Filters the list by Model Proxy status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CREATING</para>
         /// </summary>
@@ -43,10 +49,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the workspace.</para>
+        /// </summary>
         [NameInMap("workspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }
 
+        /// <summary>
+        /// <para>A comma-separated list of workspace IDs to query.</para>
+        /// </summary>
         [NameInMap("workspaceIds")]
         [Validation(Required=false)]
         public string WorkspaceIds { get; set; }

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateBrowserInput : TeaModel {
         /// <summary>
+        /// <para>The name of the browser.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string BrowserName { get; set; }
 
         /// <summary>
-        /// <para>CPU资源配置（单位：核）</para>
+        /// <para>The CPU cores to allocate to the browser instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public float? Cpu { get; set; }
 
         /// <summary>
+        /// <para>The credential ID used for authentication.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cred-1234567890abcdef</para>
         /// </summary>
@@ -39,6 +42,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CredentialId { get; set; }
 
         /// <summary>
+        /// <para>A description of the browser instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Web automation browser for testing</para>
         /// </summary>
@@ -47,6 +52,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The ARN of the execution role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1760720386195983:role/BrowserExecutionRole</para>
         /// </summary>
@@ -55,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExecutionRoleArn { get; set; }
 
         /// <summary>
-        /// <para>内存资源配置（单位：MB）</para>
+        /// <para>The memory (in MB) to allocate to the browser instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +73,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? Memory { get; set; }
 
         /// <summary>
+        /// <para>The network configuration for the browser instance.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("networkConfiguration")]
@@ -73,7 +81,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public NetworkConfiguration NetworkConfiguration { get; set; }
 
         /// <summary>
-        /// <para>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</para>
+        /// <para>The idle time in seconds before a session expires. When a session is idle, the instance enters an idle billing mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>

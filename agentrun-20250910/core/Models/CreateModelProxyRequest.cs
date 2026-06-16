@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateModelProxyRequest : TeaModel {
+        /// <summary>
+        /// <para>The configuration for the Model Proxy.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateModelProxyInput Body { get; set; }

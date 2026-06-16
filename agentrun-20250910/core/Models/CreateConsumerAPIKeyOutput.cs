@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateConsumerAPIKeyOutput : TeaModel {
         /// <summary>
-        /// <para>密钥是否启用</para>
+        /// <para>Indicates whether the consumer API key is active.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? Active { get; set; }
 
         /// <summary>
-        /// <para>完整的API密钥明文，仅在创建时返回一次，请妥善保存</para>
+        /// <para>The complete plaintext API key. This key is returned only upon creation and cannot be retrieved again. Store it securely.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxxxxxxxxxxxxxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>消费者API密钥的唯一标识符</para>
+        /// <para>The unique identifier of the consumer API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-123456789abc</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ConsumerApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>创建时间，采用ISO 8601格式</para>
+        /// <para>The creation time, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>消费者API密钥的描述信息</para>
+        /// <para>A description of the consumer API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>用于生产环境的API密钥</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>更新时间，采用ISO 8601格式</para>
+        /// <para>The last update time, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>API密钥的掩码展示形式</para>
+        /// <para>A masked version of the API key for display purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-****1234</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string MaskedKey { get; set; }
 
         /// <summary>
-        /// <para>关联的模型连接标识符</para>
+        /// <para>The associated model connection identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mc-1234567890abcdef</para>

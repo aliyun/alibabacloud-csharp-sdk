@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateCodeInterpreterInput : TeaModel {
         /// <summary>
-        /// <para>代码解释器的名称，用于标识和区分不同的代码解释器实例</para>
+        /// <para>The name of the code interpreter. Use this to identify and distinguish code interpreter instances.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CodeInterpreterName { get; set; }
 
         /// <summary>
-        /// <para>CPU资源配置（单位：核数）</para>
+        /// <para>The amount of CPU to allocate, in cores.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +32,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public float? Cpu { get; set; }
 
         /// <summary>
+        /// <para>The credential ID used for authentication.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cred-1234567890abcdef</para>
         /// </summary>
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// <para>代码解释器的描述信息，说明该解释器的用途和功能</para>
+        /// <para>A description of the code interpreter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Python code interpreter for data analysis</para>
@@ -50,7 +52,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>此代码解释器的执行角色</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the execution role for the code interpreter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1760720386195983:role/CodeInterpreterExecutionRole</para>
@@ -60,7 +62,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExecutionRoleArn { get; set; }
 
         /// <summary>
-        /// <para>内存资源配置（单位：MB）</para>
+        /// <para>The amount of memory to allocate, in megabytes (MB).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? Memory { get; set; }
 
         /// <summary>
-        /// <para>代码解释器的网络配置，包括VPC、安全组等网络访问设置</para>
+        /// <para>Specifies the network configuration for the code interpreter, including VPC and security group settings.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public NetworkConfiguration NetworkConfiguration { get; set; }
 
         /// <summary>
-        /// <para>会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</para>
+        /// <para>The idle timeout for a session, in seconds. If an instance has no new requests for this duration, its session expires and cannot be reused.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>

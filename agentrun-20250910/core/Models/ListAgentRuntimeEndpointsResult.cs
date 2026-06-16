@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListAgentRuntimeEndpointsResult : TeaModel {
         /// <summary>
-        /// <para>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</para>
+        /// <para>The status code of the response. <c>SUCCESS</c> indicates that the operation succeeded. If the operation fails, an error code is returned, such as <c>ERR_BAD_REQUEST</c>, <c>ERR_VALIDATION_FAILED</c>, or <c>ERR_INTERNAL_SERVER_ERROR</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时端点列表的详细信息</para>
+        /// <para>Detailed information about the agent runtime endpoints.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ListAgentRuntimeEndpointsOutput Data { get; set; }
 
         /// <summary>
-        /// <para>唯一的请求标识符，用于问题追踪</para>
+        /// <para>A unique request identifier for troubleshooting purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8A0F5F3-0C3E-4C82-9D4F-5E4B6A7C8D9E</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ModelConnection : TeaModel {
         /// <summary>
-        /// <para>绑定的消费者API密钥列表</para>
+        /// <para>A list of consumer API keys bound to this model connection.</para>
         /// </summary>
         [NameInMap("consumerApiKeys")]
         [Validation(Required=false)]
         public List<ModelConnectionConsumerAPIKey> ConsumerApiKeys { get; set; }
 
         /// <summary>
-        /// <para>模型连接的创建时间，采用ISO 8601格式</para>
+        /// <para>The time the model connection was created, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>模型连接的描述信息</para>
+        /// <para>A description of the model connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OpenAI GPT-4 connection for production</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>模型连接最后一次更新的时间，采用ISO 8601格式</para>
+        /// <para>The time the model connection was last updated, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T11:45:00Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>模型连接的唯一标识符</para>
+        /// <para>The model connection\&quot;s unique identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mc-1234567890abcdef</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ModelConnectionId { get; set; }
 
         /// <summary>
-        /// <para>模型连接的唯一名称标识</para>
+        /// <para>A unique name identifying the model connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-openai-connection</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ModelConnectionName { get; set; }
 
         /// <summary>
-        /// <para>模型元数据配置列表，包含各个模型的功能特性和参数规则</para>
+        /// <para>A list of model metadata configurations. Each configuration includes the features and parameter rules for a specific model.</para>
         /// </summary>
         [NameInMap("modelInfoConfigs")]
         [Validation(Required=false)]
         public List<ModelInfoConfig> ModelInfoConfigs { get; set; }
 
         /// <summary>
-        /// <para>模型提供商名称</para>
+        /// <para>The model provider\&quot;s name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>openai</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>模型提供商的配置信息</para>
+        /// <para>The settings for the model provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ModelConnectionProviderSettings ProviderSettings { get; set; }
 
         /// <summary>
-        /// <para>模型连接所属的工作空间标识符</para>
+        /// <para>The identifier of the workspace containing the model connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-1234567890abcdef</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListCustomDomainsRequest : TeaModel {
         /// <summary>
+        /// <para>The custom domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mydomain.com</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
+        /// <summary>
+        /// <para>The domain type used for filtering. Valid values: STANDARD and SANDBOX.</para>
+        /// </summary>
         [NameInMap("domainType")]
         [Validation(Required=false)]
         public string DomainType { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The name of the resource associated with the custom domain.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent-1</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ResourceName { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource associated with the custom domain.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>runtime</para>
         /// </summary>

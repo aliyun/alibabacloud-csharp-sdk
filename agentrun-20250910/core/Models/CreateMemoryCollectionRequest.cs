@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateMemoryCollectionRequest : TeaModel {
+        /// <summary>
+        /// <para>Configuration settings to create a memory collection.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public CreateMemoryCollectionInput Body { get; set; }

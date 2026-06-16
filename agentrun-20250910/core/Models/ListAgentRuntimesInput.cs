@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListAgentRuntimesInput : TeaModel {
         /// <summary>
-        /// <para>按名称过滤</para>
+        /// <para>Filters the results by agent runtime name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-agent-runtime</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AgentRuntimeName { get; set; }
 
         /// <summary>
-        /// <para>页码</para>
+        /// <para>The page number for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页记录数</para>
+        /// <para>The maximum number of results to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>按状态过滤</para>
+        /// <para>Filters the results by status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY,CREATING</para>

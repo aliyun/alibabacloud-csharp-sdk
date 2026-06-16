@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class WindowLimit : TeaModel {
         /// <summary>
-        /// <para>限流时间窗口的持续时间，单位为秒</para>
+        /// <para>The duration of the time window in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public long? DurationSecs { get; set; }
 
         /// <summary>
-        /// <para>在指定时间窗口内允许的最大请求数量</para>
+        /// <para>The maximum requests allowed within the time window.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

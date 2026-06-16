@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class OSSMountConfig : TeaModel {
+        /// <summary>
+        /// <para>An array of OSS mount points.</para>
+        /// </summary>
         [NameInMap("mountPoints")]
         [Validation(Required=false)]
         public List<OSSMountPoint> MountPoints { get; set; }

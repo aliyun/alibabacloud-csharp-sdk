@@ -10,16 +10,22 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class StartCodeInterpreterSessionResult : TeaModel {
         /// <summary>
-        /// <para>SUCCESS 为成功，失败情况返回对应错误类型，比如 ERR_BAD_REQUEST ERR_VALIDATION_FAILED ERR_INTERNAL_SERVER_ERROR</para>
+        /// <para>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data</para>
+        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public CodeInterpreterSessionOut Data { get; set; }
 
+        /// <summary>
+        /// <para>Request ID</para>
+        /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }

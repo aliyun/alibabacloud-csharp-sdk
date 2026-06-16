@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>创建模板所需的完整配置信息，包括模板名称、类型、资源规格、网络配置等</para>
+        /// <para>Contains the parameters for creating the template.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

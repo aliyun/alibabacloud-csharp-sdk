@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class RoutingConfiguration : TeaModel {
         /// <summary>
-        /// <para>不同版本的流量权重配置</para>
+        /// <para>Traffic weight configuration for different versions</para>
         /// </summary>
         [NameInMap("versionWeights")]
         [Validation(Required=false)]

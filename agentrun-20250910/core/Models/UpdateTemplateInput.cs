@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateTemplateInput : TeaModel {
         /// <summary>
+        /// <para>Specifies whether the data link is allowed to invoke APIs to create, stop, or delete sandboxes</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// 
@@ -20,19 +22,22 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public bool? AllowAnonymousManage { get; set; }
 
+        /// <summary>
+        /// <para>Configuration information for Application Real-Time Monitoring Service (ARMS)</para>
+        /// </summary>
         [NameInMap("armsConfiguration")]
         [Validation(Required=false)]
         public ArmsConfiguration ArmsConfiguration { get; set; }
 
         /// <summary>
-        /// <para>容器配置（内置的不可改）</para>
+        /// <para>Container configuration (built-in and immutable)</para>
         /// </summary>
         [NameInMap("containerConfiguration")]
         [Validation(Required=false)]
         public ContainerConfiguration ContainerConfiguration { get; set; }
 
         /// <summary>
-        /// <para>CPU资源配置（单位：核心）</para>
+        /// <para>CPU resource configuration (unit: core)</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -41,11 +46,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public float? Cpu { get; set; }
 
+        /// <summary>
+        /// <para>Credential configuration</para>
+        /// </summary>
         [NameInMap("credentialConfiguration")]
         [Validation(Required=false)]
         public CredentialConfiguration CredentialConfiguration { get; set; }
 
         /// <summary>
+        /// <para>Template description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>demo description</para>
         /// </summary>
@@ -54,6 +64,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Sandbox Agent toggle</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -65,11 +77,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public bool? EnablePreStop { get; set; }
 
+        /// <summary>
+        /// <para>Environment variables</para>
+        /// </summary>
         [NameInMap("environmentVariables")]
         [Validation(Required=false)]
         public Dictionary<string, string> EnvironmentVariables { get; set; }
 
         /// <summary>
+        /// <para>Execution role ARN</para>
+        /// 
         /// <b>Example:</b>
         /// <para>arn:acs:agentrun:cn-hangzhou:123456789:xxx/test</para>
         /// </summary>
@@ -77,12 +94,15 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string ExecutionRoleArn { get; set; }
 
+        /// <summary>
+        /// <para>Log configuration</para>
+        /// </summary>
         [NameInMap("logConfiguration")]
         [Validation(Required=false)]
         public LogConfiguration LogConfiguration { get; set; }
 
         /// <summary>
-        /// <para>内存资源配置（单位：MB）</para>
+        /// <para>Memory resource configuration (unit: MB)</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -91,14 +111,23 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? Memory { get; set; }
 
+        /// <summary>
+        /// <para>NAS mount configuration item</para>
+        /// </summary>
         [NameInMap("nasConfig")]
         [Validation(Required=false)]
         public NASConfig NasConfig { get; set; }
 
+        /// <summary>
+        /// <para>Network configuration</para>
+        /// </summary>
         [NameInMap("networkConfiguration")]
         [Validation(Required=false)]
         public NetworkConfiguration NetworkConfiguration { get; set; }
 
+        /// <summary>
+        /// <para>OSS mount configuration</para>
+        /// </summary>
         [NameInMap("ossConfiguration")]
         [Validation(Required=false)]
         public List<OssConfiguration> OssConfiguration { get; set; }
@@ -108,7 +137,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PreStopTimeoutInSeconds { get; set; }
 
         /// <summary>
-        /// <para>沙箱空闲超时时间（秒）</para>
+        /// <para>Sandbox idle timeout (seconds)</para>
         /// 
         /// <b>Example:</b>
         /// <para>21600</para>
@@ -118,7 +147,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? SandboxIdleTimeoutInSeconds { get; set; }
 
         /// <summary>
-        /// <para>沙箱存活时间（秒）</para>
+        /// <para>Sandbox time to live (seconds)</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>
@@ -127,18 +156,23 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? SandboxTTLInSeconds { get; set; }
 
+        /// <summary>
+        /// <para>Elasticity configuration</para>
+        /// </summary>
         [NameInMap("scalingConfig")]
         [Validation(Required=false)]
         public ScalingConfig ScalingConfig { get; set; }
 
         /// <summary>
-        /// <para>模板配置（灵活的对象结构，根据 templateType 不同而不同）</para>
+        /// <para>Template configuration (a flexible object structure that varies based on templateType)</para>
         /// </summary>
         [NameInMap("templateConfiguration")]
         [Validation(Required=false)]
         public Dictionary<string, object> TemplateConfiguration { get; set; }
 
         /// <summary>
+        /// <para>Associated Space ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ws-1234567890abcdef</para>
         /// </summary>

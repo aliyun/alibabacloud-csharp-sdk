@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
                 /// <para>解决建议</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Install Toolset &quot;google&quot; before using this flow</para>
+                /// <para>Install Toolset \&quot;google\&quot; before using this flow</para>
                 /// </summary>
                 [NameInMap("suggestion")]
                 [Validation(Required=false)]

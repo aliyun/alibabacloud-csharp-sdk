@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListKnowledgeBasesRequest : TeaModel {
         /// <summary>
+        /// <para>The page number to return. The value must be 1 or greater. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of results to return per page. The default value is 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The knowledge base provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bailian</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListSandboxesRequest : TeaModel {
         /// <summary>
-        /// <para>当前页码，从1开始计数</para>
+        /// <para>The maximum number of results to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next set of results. A non-empty value indicates that more data is available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dnLkmeaJc9vHgbzREh2l0J4dD+2BRJj42DLT6GrZysw=</para>
         /// </summary>
@@ -36,6 +38,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string SandboxId { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CREATING</para>
         /// </summary>
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>按模板名称过滤</para>
+        /// <para>Filters the results by template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>templateName</para>
@@ -54,6 +58,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string TemplateName { get; set; }
 
         /// <summary>
+        /// <para>Filters the results by template type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TASK</para>
         /// </summary>

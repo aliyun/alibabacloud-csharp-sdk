@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateToolRequest : TeaModel {
         /// <summary>
-        /// <para>创建工具的请求参数，包含工具的所有配置信息</para>
+        /// <para>The request body.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

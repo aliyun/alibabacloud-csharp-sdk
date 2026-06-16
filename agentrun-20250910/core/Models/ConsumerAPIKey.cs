@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ConsumerAPIKey : TeaModel {
         /// <summary>
-        /// <para>密钥是否启用，true表示启用，false表示禁用</para>
+        /// <para>Specifies if the key is enabled (true) or disabled (false).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? Active { get; set; }
 
         /// <summary>
-        /// <para>消费者API密钥的唯一标识符</para>
+        /// <para>The unique identifier of the consumer API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-123456789abc</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ConsumerApiKeyId { get; set; }
 
         /// <summary>
-        /// <para>消费者API密钥的创建时间，采用ISO 8601格式</para>
+        /// <para>The creation time of the consumer API key, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>消费者API密钥的描述信息</para>
+        /// <para>A user-defined description for the consumer API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>用于生产环境的API密钥</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>消费者API密钥最后一次更新的时间，采用ISO 8601格式</para>
+        /// <para>The last update time of the consumer API key, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T11:45:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>API密钥的掩码展示形式，仅显示前后几位字符</para>
+        /// <para>The masked API key, showing only the first and last few characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-****1234</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string MaskedKey { get; set; }
 
         /// <summary>
-        /// <para>关联的模型连接标识符</para>
+        /// <para>The identifier of the associated model connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mc-1234567890abcdef</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateRateLimitRuleInput : TeaModel {
         /// <summary>
-        /// <para>限流规则的描述符标识；非model维时必填，model维由服务端拼接</para>
+        /// <para>The descriptor ID for the rate limit rule. This parameter is required if the descriptor type is not <c>model</c>. For <c>model</c> types, the server assembles the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>model:gpt-4</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string DescriptorId { get; set; }
 
         /// <summary>
-        /// <para>限流规则的描述符类型，如model、user等</para>
+        /// <para>The descriptor type for the rate limit rule, such as <c>model</c> or <c>user</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string DescriptorType { get; set; }
 
         /// <summary>
-        /// <para>是否启用该限流规则</para>
+        /// <para>Whether to enable the rate limit rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>限流时间窗口配置列表，至少需要一个窗口</para>
+        /// <para>A list of time window configurations. At least one window is required.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("windows")]

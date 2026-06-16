@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class PolarFsMountConfig : TeaModel {
         /// <summary>
+        /// <para>Instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-cn-6sa48a6gk001</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Local mount folder.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string MountDir { get; set; }
 
         /// <summary>
+        /// <para>Remote mount folder</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/mnt/pfs</para>
         /// </summary>

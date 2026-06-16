@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateAgentRuntimeVersionInput : TeaModel {
         /// <summary>
-        /// <para>版本描述</para>
+        /// <para>A description of the agent runtime version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Version 1.0.0 release with new features</para>

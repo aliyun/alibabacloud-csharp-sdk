@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class Flow : TeaModel {
         /// <summary>
-        /// <para>工作流的创建时间，采用ISO 8601格式</para>
+        /// <para>The time when the workflow was created, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>工作流的定义内容</para>
+        /// <para>The definition of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Definition { get; set; }
 
         /// <summary>
-        /// <para>工作流的描述信息，说明该工作流的用途和功能</para>
+        /// <para>The description of the workflow, which explains the purpose and functionality of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Customer service automation flow</para>
@@ -40,31 +40,31 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否禁用该工作流的公网访问，作为工作流级别的默认策略</para>
+        /// <para>Specifies whether to disable public network access for the workflow. This setting serves as the default policy at the workflow level.</para>
         /// </summary>
         [NameInMap("disablePublicNetworkAccess")]
         [Validation(Required=false)]
         public bool? DisablePublicNetworkAccess { get; set; }
 
         /// <summary>
-        /// <para>工作流的环境变量配置，包含一组命名变量列表</para>
+        /// <para>The environment variable configuration of the workflow, which contains a list of named variables.</para>
         /// </summary>
         [NameInMap("environmentConfiguration")]
         [Validation(Required=false)]
         public EnvironmentConfiguration EnvironmentConfiguration { get; set; }
 
         /// <summary>
-        /// <para>为工作流提供访问云服务权限的执行角色ARN</para>
+        /// <para>The ARN of the execution role that grants the workflow permissions to access cloud services.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::1760720386195983:role/FlowExecutionRole</para>
+        /// <para>acs:ram::123456789012:role/FlowExecutionRole</para>
         /// </summary>
         [NameInMap("executionRoleArn")]
         [Validation(Required=false)]
         public string ExecutionRoleArn { get; set; }
 
         /// <summary>
-        /// <para>工作流的外部存储位置</para>
+        /// <para>The external storage location of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/path</para>
@@ -74,17 +74,17 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExternalStorageLocation { get; set; }
 
         /// <summary>
-        /// <para>工作流的全局唯一资源名称</para>
+        /// <para>The globally unique Alibaba Cloud Resource Name (ARN) of the workflow.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:agentrun:cn-hangzhou:1760720386195983:workspaces/ws-xxx/flows/flow-xxx</para>
+        /// <para>acs:agentrun:cn-hangzhou:123456789012:workspaces/ws-xxx/flows/flow-xxx</para>
         /// </summary>
         [NameInMap("flowArn")]
         [Validation(Required=false)]
         public string FlowArn { get; set; }
 
         /// <summary>
-        /// <para>工作流的唯一标识符</para>
+        /// <para>The unique identifier of the workflow.</para>
         /// 
         /// <b>Example:</b>
         /// <para>flow-1234567890abcdef</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowId { get; set; }
 
         /// <summary>
-        /// <para>工作流的名称，用于标识和区分不同的工作流实例</para>
+        /// <para>The name of the workflow, which is used to identify and distinguish different workflow instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-flow</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowName { get; set; }
 
         /// <summary>
-        /// <para>工作流最后一次更新的时间，采用ISO 8601格式</para>
+        /// <para>The time when the workflow was last updated, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T11:45:00Z</para>
@@ -114,14 +114,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>工作流的日志配置</para>
+        /// <para>The logging configuration of the workflow.</para>
         /// </summary>
         [NameInMap("loggingConfiguration")]
         [Validation(Required=false)]
         public LoggingConfiguration LoggingConfiguration { get; set; }
 
         /// <summary>
-        /// <para>工作流所属的资源组标识符</para>
+        /// <para>The ID of the resource group to which the workflow belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxsn4m4a4b4a</para>
@@ -131,14 +131,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>工作流的链路追踪配置</para>
+        /// <para>The Tracing Analysis configuration of the workflow.</para>
         /// </summary>
         [NameInMap("tracingConfiguration")]
         [Validation(Required=false)]
         public TracingConfiguration TracingConfiguration { get; set; }
 
         /// <summary>
-        /// <para>工作流所属的工作空间标识符</para>
+        /// <para>The ID of the workspace to which the workflow belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-1234567890abcdef</para>

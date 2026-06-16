@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateFlowInput : TeaModel {
         /// <summary>
-        /// <para>工作流的定义内容，采用JSON或YAML格式</para>
+        /// <para>The definition content of the workflow, in JSON or YAML format</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Definition { get; set; }
 
         /// <summary>
-        /// <para>工作流的描述信息，用于说明该工作流的用途和功能</para>
+        /// <para>The description of the workflow, used to explain its purpose and functionality</para>
         /// 
         /// <b>Example:</b>
         /// <para>Customer service automation flow</para>
@@ -30,31 +30,31 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否禁用该工作流的公网访问，作为工作流级别的默认策略。当 FlowEndpoint 未指定时，将继承此值</para>
+        /// <para>Whether to disable public network access for the workflow, serving as the default policy at the workflow level. When FlowEndpoint is not specified, this value will be inherited</para>
         /// </summary>
         [NameInMap("disablePublicNetworkAccess")]
         [Validation(Required=false)]
         public bool? DisablePublicNetworkAccess { get; set; }
 
         /// <summary>
-        /// <para>工作流的环境变量配置，包含一组命名变量列表</para>
+        /// <para>The environment variable configuration of the workflow, containing a list of named variables</para>
         /// </summary>
         [NameInMap("environmentConfiguration")]
         [Validation(Required=false)]
         public EnvironmentConfiguration EnvironmentConfiguration { get; set; }
 
         /// <summary>
-        /// <para>为工作流提供访问云服务权限的执行角色ARN</para>
+        /// <para>The execution role ARN that grants the workflow access permissions to cloud services</para>
         /// 
         /// <b>Example:</b>
-        /// <para>acs:ram::1760720386195983:role/FlowExecutionRole</para>
+        /// <para>acs:ram::123456789012:role/FlowExecutionRole</para>
         /// </summary>
         [NameInMap("executionRoleArn")]
         [Validation(Required=false)]
         public string ExecutionRoleArn { get; set; }
 
         /// <summary>
-        /// <para>工作流的外部存储位置，如OSS路径</para>
+        /// <para>The external storage location of the workflow, such as an OSS path</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://bucket/path</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ExternalStorageLocation { get; set; }
 
         /// <summary>
-        /// <para>工作流的唯一标识名称，用于区分不同的工作流实例</para>
+        /// <para>The unique identifier name of the workflow, used to distinguish different workflow instances</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-flow</para>
@@ -74,14 +74,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowName { get; set; }
 
         /// <summary>
-        /// <para>工作流的日志配置</para>
+        /// <para>The logging configuration of the workflow</para>
         /// </summary>
         [NameInMap("loggingConfiguration")]
         [Validation(Required=false)]
         public LoggingConfiguration LoggingConfiguration { get; set; }
 
         /// <summary>
-        /// <para>工作流所属的资源组标识符</para>
+        /// <para>The resource group identifier to which the workflow belongs</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxsn4m4a4b4a</para>
@@ -91,14 +91,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>工作流的链路追踪配置</para>
+        /// <para>The distributed tracing configuration of the workflow</para>
         /// </summary>
         [NameInMap("tracingConfiguration")]
         [Validation(Required=false)]
         public TracingConfiguration TracingConfiguration { get; set; }
 
         /// <summary>
-        /// <para>工作流所属的工作空间标识符，用于资源隔离和权限管理</para>
+        /// <para>The workspace identifier to which the workflow belongs, used for resource isolation and permission management</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-1234567890abcdef</para>

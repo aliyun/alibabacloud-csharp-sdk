@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateIMBotRequest : TeaModel {
         /// <summary>
+        /// <para>Contains the configuration details to update for the IM bot.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

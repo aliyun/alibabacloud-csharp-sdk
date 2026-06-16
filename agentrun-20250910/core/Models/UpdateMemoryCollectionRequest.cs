@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateMemoryCollectionRequest : TeaModel {
+        /// <summary>
+        /// <para>The request body to update the memory collection.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public UpdateMemoryCollectionInput Body { get; set; }

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// <para>TLS 加密套件列表。</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[&quot;TLS_RSA_WITH_RC4_128_SHA&quot;]</para>
+        /// <para>[\&quot;TLS_RSA_WITH_RC4_128_SHA\&quot;]</para>
         /// </summary>
         [NameInMap("cipherSuites")]
         [Validation(Required=false)]

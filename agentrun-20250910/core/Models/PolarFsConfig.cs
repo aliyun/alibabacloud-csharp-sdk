@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class PolarFsConfig : TeaModel {
         /// <summary>
+        /// <para>The ID of the group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public int? GroupId { get; set; }
 
+        /// <summary>
+        /// <para>The mount points for PFS.</para>
+        /// </summary>
         [NameInMap("mountPoints")]
         [Validation(Required=false)]
         public List<PolarFsMountConfig> MountPoints { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>

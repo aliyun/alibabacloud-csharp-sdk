@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListTemplatesOutput : TeaModel {
         /// <summary>
+        /// <para>An array of template objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("items")]
@@ -17,6 +18,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public List<Template> Items { get; set; }
 
         /// <summary>
+        /// <para>The page number of the returned results.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of items to return per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,6 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The total number of templates available.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

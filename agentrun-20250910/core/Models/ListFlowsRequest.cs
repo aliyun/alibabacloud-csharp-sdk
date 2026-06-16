@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListFlowsRequest : TeaModel {
         /// <summary>
-        /// <para>根据工作流名称进行模糊匹配过滤</para>
+        /// <para>Filter by flow name</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-flow</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowName { get; set; }
 
         /// <summary>
-        /// <para>当前页码，从1开始计数</para>
+        /// <para>Page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页返回的记录数量</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>根据工作空间ID进行过滤，用于资源隔离和权限管理</para>
+        /// <para>Workspace ID</para>
         /// 
         /// <b>Example:</b>
         /// <para>ws-1234567890abcdef</para>
@@ -50,6 +50,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>List of workspace IDs</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ws-1234567890abcdef,ws-1234567890bcdefg</para>
         /// </summary>

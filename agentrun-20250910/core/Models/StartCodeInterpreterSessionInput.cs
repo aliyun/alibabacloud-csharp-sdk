@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class StartCodeInterpreterSessionInput : TeaModel {
         /// <summary>
-        /// <para>代码解释器会话的名称，用于标识和区分不同的会话实例</para>
+        /// <para>The name of the code interpreter session, used to identify and distinguish between different session instances</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>

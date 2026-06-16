@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateIMBotRequest : TeaModel {
         /// <summary>
+        /// <para>The request body.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

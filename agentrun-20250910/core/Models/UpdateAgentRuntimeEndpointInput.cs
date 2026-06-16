@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateAgentRuntimeEndpointInput : TeaModel {
         /// <summary>
+        /// <para>Agent runtime endpoint Name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>production-endpoint</para>
         /// </summary>
@@ -25,6 +27,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? DeleteScalingConfig { get; set; }
 
         /// <summary>
+        /// <para>Description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Updated endpoint configuration</para>
         /// </summary>
@@ -33,14 +37,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否禁用该端点的公网访问</para>
+        /// <para>Whether to disable public network access for this endpoint</para>
         /// </summary>
         [NameInMap("disablePublicNetworkAccess")]
         [Validation(Required=false)]
         public bool? DisablePublicNetworkAccess { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时端点的路由配置，支持多版本权重分配</para>
+        /// <para>The Ingress configuration of the agent runtime endpoint, which supports weight assignment across multiple versions</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public ScalingConfig ScalingConfig { get; set; }
 
         /// <summary>
-        /// <para>智能体运行时的目标版本</para>
+        /// <para>Target Version of the agent runtime</para>
         /// 
         /// <b>Example:</b>
         /// <para>LATEST</para>

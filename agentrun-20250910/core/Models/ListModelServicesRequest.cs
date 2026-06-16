@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListModelServicesRequest : TeaModel {
         /// <summary>
+        /// <para>The model type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>system</c>: A built-in model.</para>
+        /// </description></item>
+        /// <item><description><para><c>deployment</c>: A model from a custom deployment.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +27,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ModelType { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -28,6 +37,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -36,6 +47,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The cloud provider. Currently, only Alibaba Cloud is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Aliyun</para>
         /// </summary>
@@ -44,6 +57,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Provider { get; set; }
 
         /// <summary>
+        /// <para>The provider type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>providerType</para>
         /// </summary>

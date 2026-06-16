@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ContainerConfiguration : TeaModel {
         /// <summary>
-        /// <para>阿里云容器镜像服务（ACR）的实例ID或名称</para>
+        /// <para>The instance ID or name of Alibaba Cloud Container Registry (ACR).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cri-xxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string AcrInstanceId { get; set; }
 
         /// <summary>
-        /// <para>在容器中运行的命令（例如：[&quot;python3&quot;, &quot;app.py&quot;]）</para>
+        /// <para>The sandbox entrypoint command. For example: [\&quot;python3\&quot;, \&quot;app.py\&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>python3,app.py</para>
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public List<string> Command { get; set; }
 
         /// <summary>
+        /// <para>The container image URI.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>registry.cn-hangzhou.aliyuncs.com/my-namespace/agent-runtime:latest</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Image { get; set; }
 
         /// <summary>
-        /// <para>容器镜像的来源类型，支持ACR（阿里云容器镜像服务）、ACREE（阿里云容器镜像服务企业版）、CUSTOM（自定义镜像仓库）</para>
+        /// <para>The source of the container image. Valid values: ACR (Alibaba Cloud Container Registry), ACREE (Alibaba Cloud Container Registry Enterprise Edition), and CUSTOM (a custom image repository).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACR</para>
@@ -47,6 +49,12 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         [Validation(Required=false)]
         public string ImageRegistryType { get; set; }
 
+        /// <summary>
+        /// <para>The listening port for the sandbox runtime.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5000</para>
+        /// </summary>
         [NameInMap("port")]
         [Validation(Required=false)]
         public int? Port { get; set; }

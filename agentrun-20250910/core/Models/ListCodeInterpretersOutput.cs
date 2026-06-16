@@ -9,18 +9,30 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListCodeInterpretersOutput : TeaModel {
+        /// <summary>
+        /// <para>List of code interpreters</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<CodeInterpreter> Items { get; set; }
 
+        /// <summary>
+        /// <para>Page number</para>
+        /// </summary>
         [NameInMap("pageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>Page size</para>
+        /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>Total count</para>
+        /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]
         public long? Total { get; set; }

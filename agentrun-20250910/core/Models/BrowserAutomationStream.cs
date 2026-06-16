@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class BrowserAutomationStream : TeaModel {
         /// <summary>
+        /// <para>The WebSocket URL for the stream endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>wss://browser-automation.cn-hangzhou.agentrun.aliyuncs.com/stream/bs-1234567890abcdef</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string StreamEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The status of the stream.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>
         /// </summary>

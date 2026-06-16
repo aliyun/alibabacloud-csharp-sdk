@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateBrowserRequest : TeaModel {
         /// <summary>
+        /// <para>Request body for creation parameters</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

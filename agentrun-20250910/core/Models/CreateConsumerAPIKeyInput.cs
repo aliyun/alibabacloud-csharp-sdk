@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateConsumerAPIKeyInput : TeaModel {
         /// <summary>
-        /// <para>用户自定义的完整API密钥；为空时由服务自动生成</para>
+        /// <para>A custom API key. If omitted, the service generates one automatically.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sk-xxxxxxxxxxxxxxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string ApiKey { get; set; }
 
         /// <summary>
-        /// <para>消费者API密钥的描述信息，用于说明该密钥的用途</para>
+        /// <para>A description for the consumer API key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>用于生产环境的API密钥</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>关联的模型连接标识符</para>
+        /// <para>The identifier for the model connection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

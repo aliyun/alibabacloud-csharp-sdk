@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateFlowEndpointInput : TeaModel {
         /// <summary>
-        /// <para>工作流端点的描述信息</para>
+        /// <para>The description of the flow endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Production endpoint for flow</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>是否禁用该端点的公网访问。创建时未指定则从父工作流继承</para>
+        /// <para>Whether to disable public network access for the endpoint. If unspecified, the endpoint inherits this setting from its parent workflow.</para>
         /// </summary>
         [NameInMap("disablePublicNetworkAccess")]
         [Validation(Required=false)]
         public bool? DisablePublicNetworkAccess { get; set; }
 
         /// <summary>
-        /// <para>工作流端点的唯一标识名称</para>
+        /// <para>The unique name of the flow endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string FlowEndpointName { get; set; }
 
         /// <summary>
-        /// <para>工作流端点的版本路由配置，用于流量分配</para>
+        /// <para>The routing configuration that defines traffic distribution across different flow versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public List<FlowEndpointRoutingConfig> RoutingConfiguration { get; set; }
 
         /// <summary>
-        /// <para>工作流端点指向的目标版本号</para>
+        /// <para>The target version for the flow endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

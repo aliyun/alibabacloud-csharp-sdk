@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class RateLimitRule : TeaModel {
         /// <summary>
-        /// <para>限流规则的创建时间，采用ISO 8601格式</para>
+        /// <para>The creation time of the rate limit rule, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T10:30:00Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>限流规则的描述符标识，用于关联具体的限流对象</para>
+        /// <para>The descriptor ID for the rate limit rule, which associates the rule with a specific throttling target.</para>
         /// 
         /// <b>Example:</b>
         /// <para>model:gpt-4</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string DescriptorId { get; set; }
 
         /// <summary>
-        /// <para>限流规则的描述符类型，如model、user等</para>
+        /// <para>The descriptor type for the rate limit rule, such as \&quot;model\&quot; or \&quot;user\&quot;.</para>
         /// 
         /// <b>Example:</b>
         /// <para>model</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string DescriptorType { get; set; }
 
         /// <summary>
-        /// <para>限流规则是否启用，true表示启用，false表示禁用</para>
+        /// <para>Indicates whether the rate limit rule is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>限流规则最后一次更新的时间，采用ISO 8601格式</para>
+        /// <para>The last update time of the rate limit rule, in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-10T11:45:00Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>限流规则的唯一标识符</para>
+        /// <para>The unique identifier for the rate limit rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-123456789abc</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string RateLimitRuleId { get; set; }
 
         /// <summary>
-        /// <para>限流时间窗口配置列表，支持多个窗口叠加限流</para>
+        /// <para>A list of time window configurations. Multiple windows can be used to enforce layered rate limiting.</para>
         /// </summary>
         [NameInMap("windows")]
         [Validation(Required=false)]

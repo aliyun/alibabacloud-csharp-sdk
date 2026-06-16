@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CodeInterpreterSessionOut : TeaModel {
         /// <summary>
-        /// <para>关联的代码解释器的唯一标识符</para>
+        /// <para>The Unique Identifier of the associated code interpreter</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("codeInterpreterId")]
@@ -18,28 +18,28 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CodeInterpreterId { get; set; }
 
         /// <summary>
-        /// <para>代码解释器会话的名称</para>
+        /// <para>The name of the code interpreter session</para>
         /// </summary>
         [NameInMap("codeInterpreterName")]
         [Validation(Required=false)]
         public string CodeInterpreterName { get; set; }
 
         /// <summary>
-        /// <para>代码解释器会话的创建时间，采用ISO 8601格式</para>
+        /// <para>The creation time of the code interpreter session, in ISO 8601 format</para>
         /// </summary>
         [NameInMap("createdAt")]
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>代码解释器会话的最后更新时间，采用ISO 8601格式</para>
+        /// <para>The last update time of the code interpreter session, in ISO 8601 format</para>
         /// </summary>
         [NameInMap("lastUpdatedAt")]
         [Validation(Required=false)]
         public string LastUpdatedAt { get; set; }
 
         /// <summary>
-        /// <para>代码解释器会话的唯一标识符</para>
+        /// <para>The Unique Identifier of the code interpreter session</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sessionId")]
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>代码解释器会话的空闲超时时间，单位为秒。实例没有会话请求后处于空闲状态，空闲态为闲置计费模式，超过此超时时间后会话自动过期，不可继续使用</para>
+        /// <para>The idle timeout duration of the code interpreter session, in seconds. After the instance receives no session requests, it enters an idle state, which is billed under the idle billing model. If the idle duration exceeds this timeout, the session automatically expires and can no longer be used.</para>
         /// </summary>
         [NameInMap("sessionIdleTimeoutSeconds")]
         [Validation(Required=false)]
         public int? SessionIdleTimeoutSeconds { get; set; }
 
         /// <summary>
-        /// <para>代码解释器会话的当前状态</para>
+        /// <para>The current status of the code interpreter session</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("status")]

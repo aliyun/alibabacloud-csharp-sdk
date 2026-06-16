@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListCodeInterpretersRequest : TeaModel {
         /// <summary>
-        /// <para>根据代码解释器实例名称进行模糊匹配过滤</para>
+        /// <para>Filter by code interpreter name</para>
         /// 
         /// <b>Example:</b>
         /// <para>code</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string CodeInterpreterName { get; set; }
 
         /// <summary>
-        /// <para>当前页码，从1开始计数</para>
+        /// <para>Page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页返回的记录数量</para>
+        /// <para>Page size</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

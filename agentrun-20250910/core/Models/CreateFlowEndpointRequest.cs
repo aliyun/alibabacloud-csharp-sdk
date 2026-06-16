@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CreateFlowEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>创建工作流端点所需的完整配置信息</para>
+        /// <para>Request parameters for creating a flow endpoint</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("body")]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CodeConfiguration : TeaModel {
         /// <summary>
-        /// <para>代码包的CRC-64校验值。如果提供了checksum，则函数计算会校验代码包的checksum是否和提供的一致</para>
+        /// <para>The CRC-64 checksum of the code package. If you provide <c>checksum</c>, Function Compute verifies that the code package\&quot;s computed checksum matches this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456789</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Checksum { get; set; }
 
         /// <summary>
-        /// <para>在运行时中运行的命令（例如：[&quot;python&quot;]）</para>
+        /// <para>The command and arguments to run in the runtime.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python,main.py</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public List<string> Command { get; set; }
 
         /// <summary>
-        /// <para>代码运行时的编程语言，如 python3、nodejs 等</para>
+        /// <para>The programming language for the function\&quot;s runtime, such as python3 or nodejs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python3.12</para>
@@ -40,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Language { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS bucket that contains the function\&quot;s code package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-agent-code-bucket</para>
         /// </summary>
@@ -48,6 +50,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
+        /// <para>The name of the OSS object for the function\&quot;s code package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent-code-v1.0.zip</para>
         /// </summary>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string OssObjectName { get; set; }
 
         /// <summary>
-        /// <para>智能体代码ZIP包的Base64编码</para>
+        /// <para>The base64-encoded content of the agent\&quot;s code package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UEsDBAoAAAAAANF</para>

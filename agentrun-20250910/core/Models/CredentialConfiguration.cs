@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class CredentialConfiguration : TeaModel {
         /// <summary>
-        /// <para>凭证的唯一标识符</para>
+        /// <para>The unique identifier for the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deepagent-key</para>

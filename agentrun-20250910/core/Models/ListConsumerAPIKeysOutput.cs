@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ListConsumerAPIKeysOutput : TeaModel {
         /// <summary>
-        /// <para>消费者API密钥列表</para>
+        /// <para>A list of consumer API keys.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ConsumerAPIKey> Items { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>每页记录数</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>符合条件的消费者API密钥总数</para>
+        /// <para>The total number of matching consumer API keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

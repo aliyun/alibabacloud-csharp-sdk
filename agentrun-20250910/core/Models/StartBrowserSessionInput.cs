@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class StartBrowserSessionInput : TeaModel {
         /// <summary>
+        /// <para>Browser session name</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-browser-session</para>
         /// 

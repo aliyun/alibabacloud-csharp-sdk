@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class UpdateModelConnectionInput : TeaModel {
         /// <summary>
-        /// <para>更新绑定的消费者API密钥列表</para>
+        /// <para>A list of consumer API keys to associate with the model connection.</para>
         /// </summary>
         [NameInMap("consumerApiKeys")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         }
 
         /// <summary>
-        /// <para>更新后的描述信息</para>
+        /// <para>A new description for the model connection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Updated connection description</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>更新后的模型元数据配置列表</para>
+        /// <para>A new list of model metadata configurations.</para>
         /// </summary>
         [NameInMap("modelInfoConfigs")]
         [Validation(Required=false)]
         public List<ModelInfoConfig> ModelInfoConfigs { get; set; }
 
         /// <summary>
-        /// <para>更新后的模型提供商配置信息</para>
+        /// <para>A new configuration for the model provider.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>

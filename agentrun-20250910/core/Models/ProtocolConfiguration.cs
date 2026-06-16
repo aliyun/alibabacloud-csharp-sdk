@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
 {
     public class ProtocolConfiguration : TeaModel {
         /// <summary>
-        /// <para>详细的协议配置信息</para>
+        /// <para>Detailed protocol configuration information</para>
         /// </summary>
         [NameInMap("protocolSettings")]
         [Validation(Required=false)]
@@ -19,6 +19,7 @@ namespace AlibabaCloud.SDK.AgentRun20250910.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
+        /// <para>Protocol Type</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
