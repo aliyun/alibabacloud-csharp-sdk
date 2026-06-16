@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class ListAllEndEntityInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number of the instance list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The list of instances.</para>
+        /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> List { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries returned in this call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token that you can use to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1d2db86sca4384811e0b5e8707e68181f</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? PageCount { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>443C05A8-6C16-52B5-BB97-5D8798F7A49A</para>
         /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries displayed on each page of a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? ShowSize { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class GetCAInstanceStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status information of the private CA instance.</para>
+        /// <para>The status details of the private CA instance.</para>
         /// </summary>
         [NameInMap("InstanceStatusList")]
         [Validation(Required=false)]
@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The expiration date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of the <b>Status</b> parameter is <b>USED</b> or <b>REVOKE</b>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</para>
+            /// <para>This parameter is returned only if <b>Status</b> is <b>USED</b> (the private CA instance is enabled) or <b>REVOKE</b> (the private CA instance is revoked).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The issuance date of the private CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of the <b>Status</b> parameter is <b>USED</b> or <b>REVOKE</b>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</para>
+            /// <para>This parameter is returned only if <b>Status</b> is <b>USED</b> (the private CA instance is enabled) or <b>REVOKE</b> (the private CA instance is revoked).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public long? BeforeTime { get; set; }
 
             /// <summary>
-            /// <para>The number of certificates that are issued by using the private CA instance.</para>
+            /// <para>The number of certificates that the private CA instance has issued.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -53,9 +53,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public int? CertIssuedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of certificates that can be issued by using the private CA instance.</para>
-            /// <para>For a private root CA instance whose <b>Type</b> is <b>ROOT</b>, this parameter indicates the number of intermediate CA certificates that can be issued.</para>
-            /// <para>For a private intermediate CA instance whose <b>Type</b> is <b>SUB_ROOT</b>, this parameter indicates the total number of client certificates and server certificates that can be issued</para>
+            /// <para>The number of certificates that the private CA instance can issue.</para>
+            /// <para>If the private CA is a root CA (<b>Type</b> is <b>ROOT</b>), this parameter indicates the number of intermediate CA certificates that can be issued. If the private CA is an intermediate CA (<b>Type</b> is <b>SUB_ROOT</b>), this parameter indicates the total number of client certificates and server-side certificates that can be issued.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -67,7 +66,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The unique identifier of the private CA certificate.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of the <b>Status</b> parameter is <b>USED</b> or <b>REVOKE</b>. The value USED indicates that the private CA instance is enabled, and the value REVOKE indicates that the instance is revoked.</para>
+            /// <para>This parameter is returned only if <b>Status</b> is <b>USED</b> (the private CA instance is enabled) or <b>REVOKE</b> (the private CA instance is revoked).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -90,10 +89,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The status of the private CA instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>BUY</b>: The private CA instance is purchased but is not enabled.</description></item>
-            /// <item><description><b>USED</b>: The private CA instance is enabled.</description></item>
-            /// <item><description><b>REFUND</b>: The private CA instance is refunded.</description></item>
-            /// <item><description><b>REVOKE</b>: The private CA instance is revoked.</description></item>
+            /// <item><description><para><b>BUY</b>: The instance is purchased but not enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>USED</b>: The instance is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>REFUND</b>: A refund has been issued for the instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>REVOKE</b>: The instance is revoked.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,8 +109,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The type of the private CA instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ROOT</b>: root CA instance</description></item>
-            /// <item><description><b>SUB_ROOT</b>: intermediate CA instance</description></item>
+            /// <item><description><para><b>ROOT</b>: Root CA instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUB_ROOT</b>: Intermediate CA instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,7 +125,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The expiration date of the private CA instance. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// <remarks>
-            /// <para> This parameter corresponds to the duration that you select when you purchase the private CA instance. The duration indicates the subscription period of the Private Certificate Authority (PCA) service.</para>
+            /// <para>This parameter corresponds to the subscription duration that you selected for the Private Certificate Authority (PCA) service when you purchased the instance.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

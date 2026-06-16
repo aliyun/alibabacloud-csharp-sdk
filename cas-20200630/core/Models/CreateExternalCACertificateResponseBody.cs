@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateExternalCACertificateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The content of the certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
         /// MIIEkjCCA3qgAwIBAgIQCgFBQgAAAVOFc2oLheynCDANBgkqhkiG9w0BAQsFADA/
@@ -24,6 +26,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Certificate { get; set; }
 
         /// <summary>
+        /// <para>The CA certificate chain.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
         /// ...
@@ -39,6 +43,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CertificateChain { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the certificate.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1ed4068c-6f1b-6deb-8e32-3f8439a851cb</para>
         /// </summary>
@@ -47,6 +53,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Identifier { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12345678-1234-1234-1234-123456789ABC</para>
         /// </summary>

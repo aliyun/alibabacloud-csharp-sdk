@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeClientCertificateStatusForSerialNumberRequest : TeaModel {
         /// <summary>
-        /// <para>The serial number of the certificate.</para>
+        /// <para>The serial number of the client or server certificate to query. To query multiple certificates, separate their serial numbers with a comma.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to retrieve the serial numbers of all client and server certificates.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

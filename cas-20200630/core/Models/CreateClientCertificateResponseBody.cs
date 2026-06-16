@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateClientCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The certificate chain of the client certificate.</para>
+        /// <para>The CA certificate chain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Identifier { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8C467B38-3910-447D-87BC-AC049166F216</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the certificate.</para>
+        /// <para>The certificate serial number.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0f29522da2dae7a1c4b6ab7132ad3c06</para>
+        /// <para>084bde9cd233f0ddae33adc438cfbbbd****</para>
         /// </summary>
         [NameInMap("SerialNumber")]
         [Validation(Required=false)]

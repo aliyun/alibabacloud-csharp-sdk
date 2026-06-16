@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class UploadPcaCertToCasRequest : TeaModel {
         /// <summary>
+        /// <para>The list of primary key identifiers to synchronize to Certificate Service. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

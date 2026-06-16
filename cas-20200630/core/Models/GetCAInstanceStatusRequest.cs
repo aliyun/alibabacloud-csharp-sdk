@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class GetCAInstanceStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the certificate.</para>
+        /// <para>The unique identifier of the client certificate or server-side certificate to query.</para>
+        /// <remarks>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> to query the unique identifiers of all client certificates and server-side certificates.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>160ae6bb538d538c70c01f81dcf2****</para>
@@ -20,9 +23,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Identifier { get; set; }
 
         /// <summary>
-        /// <para>The ID of the private CA instance.</para>
+        /// <para>The ID of the private CA instance to query.</para>
         /// <remarks>
-        /// <para> After you purchase a private CA instance by using the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">SSL Certificates Service console</a>, you can click <b>Details</b> for the private CA instance on the <b>Private Certificates</b> page to query the ID of the private CA instance.</para>
+        /// <para>After you purchase a private CA instance in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">CAS console</a>, you can go to the <b>Private Certificates</b> page and view the <b>details</b> of the instance to obtain its ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

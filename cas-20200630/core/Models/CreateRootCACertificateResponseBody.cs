@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateRootCACertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The root CA certificate in the PEM format.</para>
+        /// <para>The created root certificate in PEM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>The certificate chain of the root CA certificate.</para>
+        /// <para>The CA certificate chain of the created root certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\n......\n-----END CERTIFICATE-----\n</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CertificateChain { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the root CA certificate.</para>
+        /// <para>The unique identifier of the created root CA certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1a83bcbb89e562885e40aa0108f5****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Identifier { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6D9B4C5F-7140-5B41-924C-329181DC00C1</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class TagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The IDs of the resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource. Set the value to <b>instance</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,11 +39,16 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The tags to add to the resources. You can specify up to 20 tags.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testKey1</para>
             /// </summary>
@@ -49,6 +57,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testValue1</para>
             /// </summary>

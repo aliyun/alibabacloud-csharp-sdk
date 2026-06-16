@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCertificatePrivateKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The content of the encrypted private key.</para>
+        /// <para>The encrypted content of the private key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN ENCRYPTED PRIVATE KEY----- …… -----END ENCRYPTED PRIVATE KEY-----</para>

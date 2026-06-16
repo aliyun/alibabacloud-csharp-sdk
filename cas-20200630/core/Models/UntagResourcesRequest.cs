@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to remove all tags. This parameter takes effect only when TagKey.N is empty. Valid values: true and false. Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public bool? All { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource ID.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The type of the resource. Set the value to <b>instance</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +49,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
+        /// <summary>
+        /// <para>The tag key.</para>
+        /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]
         public List<string> TagKey { get; set; }

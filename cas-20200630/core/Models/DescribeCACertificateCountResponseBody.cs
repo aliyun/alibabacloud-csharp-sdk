@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of created CA certificates, which includes root CA certificates and intermediate CA certificates.</para>
+        /// <para>The total number of your CA certificates, including root and subordinate CA certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

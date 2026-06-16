@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCACertificateListRequest : TeaModel {
         /// <summary>
-        /// <para>Ca status.</para>
+        /// <para>The status of the CA. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>issue: inUse.</description></item>
-        /// <item><description>forbidden: forbidden.</description></item>
-        /// <item><description>revoke: revoked.</description></item>
+        /// <item><description><para>issue: enabled.</para>
+        /// </description></item>
+        /// <item><description><para>forbidden: disabled.</para>
+        /// </description></item>
+        /// <item><description><para>revoke: revoked.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,11 +28,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CaStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the certificate. Valid values:</para>
+        /// <para>The type of the CA. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>root: rootCA.</description></item>
-        /// <item><description>subRoot: subCA.</description></item>
-        /// <item><description>externalCa: import.</description></item>
+        /// <item><description><para>root: root CA.</para>
+        /// </description></item>
+        /// <item><description><para>subRoot: intermediate CA.</para>
+        /// </description></item>
+        /// <item><description><para>externalCa: an imported external CA.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,22 +58,25 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>The unique identifier of the CA certificate.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>160ae6bb538d538c70c01f81dcf2****</para>
+        /// <para>1ee47e24-c51b-67cc-aa6b-1f7561cf9d9a</para>
         /// </summary>
         [NameInMap("Identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }
 
         /// <summary>
-        /// <para>The CA Issuer Type.</para>
+        /// <para>The issuer of the CA. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>local: Private certificate.</description></item>
-        /// <item><description>iTrusChina: Compliance CA.</description></item>
-        /// <item><description>external: External Import.</description></item>
+        /// <item><description><para>local: private certificate.</para>
+        /// </description></item>
+        /// <item><description><para>iTrusChina: a trusted CA.</para>
+        /// </description></item>
+        /// <item><description><para>external: an imported external CA.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,12 +86,18 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string IssuerType { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-ae******4wia</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of CA certificates per page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,10 +107,12 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>valid time.</para>
+        /// <para>The validity status of the CA. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>valid: means in the valid period.</description></item>
-        /// <item><description>notValid: means expired.</description></item>
+        /// <item><description><para>valid: The CA certificate is valid.</para>
+        /// </description></item>
+        /// <item><description><para>notValid: The CA certificate has expired.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

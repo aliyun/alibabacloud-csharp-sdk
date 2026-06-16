@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class ListClientCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the details about all client certificates and server certificates.</para>
+        /// <para>A list of details about the client or server-side certificates.</para>
         /// </summary>
         [NameInMap("CertificateList")]
         [Validation(Required=false)]
@@ -29,9 +29,12 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The type of the encryption algorithm of the certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>RSA</b>: the Rivest-Shamir-Adleman (RSA) algorithm.</description></item>
-            /// <item><description><b>ECC</b>: the elliptic curve cryptography (ECC) algorithm.</description></item>
-            /// <item><description><b>SM2</b>: the SM2 algorithm, which is developed and approved by the State Cryptography Administration of China.</description></item>
+            /// <item><description><para><b>RSA</b>: RSA algorithm.</para>
+            /// </description></item>
+            /// <item><description><para><b>ECC</b>: ECC algorithm.</para>
+            /// </description></item>
+            /// <item><description><para><b>SM2</b>: SM2 algorithm.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,6 +44,12 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string Algorithm { get; set; }
 
+            /// <summary>
+            /// <para>The name of the issued certificate.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>生产培训10.153.13.177</para>
+            /// </summary>
             [NameInMap("AliasName")]
             [Validation(Required=false)]
             public string AliasName { get; set; }
@@ -58,8 +67,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The type of the certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>CLIENT</b>: client certificate</description></item>
-            /// <item><description><b>SERVER</b>: server certificate</description></item>
+            /// <item><description><para><b>CLIENT</b>: a client certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>SERVER</b>: a server-side certificate.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,8 +91,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>The code of the country in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</para>
-            /// <para>For more information about country codes, see the <b>&quot;Country codes&quot;</b> section of the <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a> topic.</para>
+            /// <para>The country code of the country where the organization associated with the issuing subordinate CA certificate is located.</para>
+            /// <para>For more information about country codes, see the <b>Country codes</b> section of <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CN</para>
@@ -90,6 +101,12 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string CountryCode { get; set; }
 
+            /// <summary>
+            /// <para>The custom identifier, which is a unique key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><b><b>48d8d3ecc9976d9ecd2b2f25</b></b></para>
+            /// </summary>
             [NameInMap("CustomIdentifier")]
             [Validation(Required=false)]
             public string CustomIdentifier { get; set; }
@@ -104,6 +121,12 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public int? Days { get; set; }
 
+            /// <summary>
+            /// <para>The primary key ID of the certificate.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>12321</para>
+            /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
@@ -129,7 +152,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public int? KeySize { get; set; }
 
             /// <summary>
-            /// <para>The name of the city in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</para>
+            /// <para>The city where the organization associated with the issuing subordinate CA certificate is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hangzhou</para>
@@ -149,17 +172,17 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Md5 { get; set; }
 
             /// <summary>
-            /// <para>The name of the organization. The organization is associated with the intermediate certificate from which the certificate is issued.</para>
+            /// <para>The name of the organization that is associated with the issuing subordinate CA certificate.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Alibaba Cloud Computing Co., Ltd.</para>
+            /// <para>阿里云计算有限公司</para>
             /// </summary>
             [NameInMap("Organization")]
             [Validation(Required=false)]
             public string Organization { get; set; }
 
             /// <summary>
-            /// <para>The name of the department in the organization. The organization is associated with the intermediate certificate authority (CA) certificate from which the certificate is issued.</para>
+            /// <para>The name of the department of the organization that is associated with the issuing subordinate certificate authority (CA) certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Security</para>
@@ -169,7 +192,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string OrganizationUnit { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the intermediate certificate from which the client certificate is issued.</para>
+            /// <para>The unique identifier of the subordinate CA certificate that issued this certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>160ae6bb538d538c70c01f81dcf2****</para>
@@ -178,23 +201,33 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string ParentIdentifier { get; set; }
 
+            /// <summary>
+            /// <para>The ID of the resource group to which the certificate belongs.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmyxa2uv6cu5a</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The subject alternative name (SAN) extension of the certificate. The value indicates additional information, including the additional domain names or IP addresses that are associated with the certificate.</para>
-            /// <para>The value is a string that consists of JSON arrays. Each element in a JSON array is a JSON struct that corresponds to a SAN extension. A SAN extension struct contains the following parameters:</para>
+            /// <para>The Subject Alternative Name (SAN) extension of the certificate. This extension indicates other domain names, IP addresses, and so on that are associated with the certificate.</para>
+            /// <para>This parameter is a string that is converted from a JSON array. Each element in the JSON array is a struct that corresponds to a SAN extension. Each SAN extension struct contains the following parameters:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Type</b>: the type of the extension. Data type: integer. Valid values:</para>
+            /// <item><description><para><b>Type</b>: The type of the extension. This parameter is of the Integer type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: an email address</description></item>
-            /// <item><description><b>2</b>: a domain name</description></item>
-            /// <item><description><b>6</b>: a Uniform Resource Identifier (URI)</description></item>
-            /// <item><description><b>7</b>: an IP address</description></item>
+            /// <item><description><para><b>1</b>: an email address.</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: a domain name.</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: a Uniform Resource Identifier (URI).</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: an IP address.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><b>Value</b>: the value of the extension. Data type: string.</para>
+            /// <item><description><para><b>Value</b>: The content of the extension. This parameter is of the String type.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -236,7 +269,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string SignAlgorithm { get; set; }
 
             /// <summary>
-            /// <para>The name of the province, municipality, or autonomous region in which the organization is located. The organization is associated with the intermediate certificate from which the certificate is issued.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization associated with the issuing subordinate CA certificate is located.
+            /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization associated with the issuing subordinate CA certificate is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Zhejiang</para>
@@ -248,8 +282,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             /// <summary>
             /// <para>The status of the certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ISSUE</b>: issued</description></item>
-            /// <item><description><b>REVOKE</b>: revoked</description></item>
+            /// <item><description><para><b>ISSUE</b>: The certificate is issued.</para>
+            /// </description></item>
+            /// <item><description><para><b>REVOKE</b>: The certificate is revoked.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -260,18 +296,31 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The distinguished name (DN) extension of the certificate, which indicates the user of the certificate. The DN extension includes the following information:</para>
+            /// <para>The Distinguished Name (DN) of the certificate. The DN indicates the user of the certificate and contains the following information:</para>
             /// <list type="bullet">
-            /// <item><description><b>C</b>: the country</description></item>
-            /// <item><description><b>O</b>: the organization</description></item>
-            /// <item><description><b>OU</b>: the department</description></item>
-            /// <item><description><b>L</b>: the city</description></item>
-            /// <item><description><b>ST</b>: the province, municipality, or autonomous region</description></item>
-            /// <item><description><b>CN</b>: the common name</description></item>
+            /// <item><description><para><b>C</b>: The country.</para>
+            /// </description></item>
+            /// <item><description><para><b>O</b>: The organization.</para>
+            /// </description></item>
+            /// <item><description><para><b>OU</b>: The department.</para>
+            /// </description></item>
+            /// <item><description><para><b>L</b>: The city.</para>
+            /// </description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description><b>ST</b>: The province, municipality, or autonomous region.</description></item>
+            /// </list>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>ST</b>: The province or state.</para>
+            /// </description></item>
+            /// <item><description><para><b>CN</b>: The common name.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>C=CN,O=Alibaba Cloud Computing Co., Ltd.,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</para>
+            /// <para>C=CN,O=阿里云计算有限公司,OU=Security,L=Hangzhou,ST=Zhejiang,CN=Aliyun</para>
             /// </summary>
             [NameInMap("SubjectDN")]
             [Validation(Required=false)]
@@ -290,7 +339,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         }
 
         /// <summary>
-        /// <para>The page number of the current page.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -299,12 +348,18 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>Paging parameter: the maximum number of entries in the result set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -324,7 +379,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of certificates that are returned per page.</para>
+        /// <para>The number of certificates returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -334,7 +389,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? ShowSize { get; set; }
 
         /// <summary>
-        /// <para>The number of client certificates and server certificates that are returned.</para>
+        /// <para>The total number of client and server-side certificates that are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

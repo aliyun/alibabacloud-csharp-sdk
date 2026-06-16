@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class ListClientCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,24 +20,30 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the client certificate or the server certificate that you want to query.</para>
+        /// <para>The unique identifier of the client or server-side certificate that you want to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> to query the unique identifiers of all client and server-side certificates.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>190ae6bb538d538c70c01f81dcf2****</para>
+        /// <para>160ae6bb538d538c70c01f81dcf2****</para>
         /// </summary>
         [NameInMap("Identifier")]
         [Validation(Required=false)]
         public string Identifier { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group. Call the <a href="https://help.aliyun.com/document_detail/2716559.html">ListResources</a> operation to obtain this ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-ae******4wia</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The number of certificates to return on each page. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

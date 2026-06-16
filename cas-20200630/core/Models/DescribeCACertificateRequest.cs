@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCACertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the CA certificate that you want to query.</para>
+        /// <para>The unique identifier of the CA certificate to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

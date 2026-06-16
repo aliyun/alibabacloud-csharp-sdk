@@ -10,17 +10,22 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class CreateSubCACertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the key algorithm of the intermediate CA. The key algorithm is in the <c>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</c> format. Valid values:</para>
+        /// <para>The key algorithm for the intermediate CA certificate. The algorithm is in the <c>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</c> format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RSA_1024</b>: The signature algorithm is Sha256WithRSA.</description></item>
-        /// <item><description><b>RSA_2048</b>: The signature algorithm is Sha256WithRSA.</description></item>
-        /// <item><description><b>RSA_4096</b>: The signature algorithm is Sha256WithRSA.</description></item>
-        /// <item><description><b>ECC_256</b>: The signature algorithm is Sha256WithECDSA.</description></item>
-        /// <item><description><b>SM2_256</b>: The signature algorithm is SM3WithSM2.</description></item>
+        /// <item><description><para><b>RSA_1024</b>: The corresponding signature algorithm is Sha256WithRSA.</para>
+        /// </description></item>
+        /// <item><description><para><b>RSA_2048</b>: The corresponding signature algorithm is Sha256WithRSA.</para>
+        /// </description></item>
+        /// <item><description><para><b>RSA_4096</b>: The corresponding signature algorithm is Sha256WithRSA.</para>
+        /// </description></item>
+        /// <item><description><para><b>ECC_256</b>: The corresponding signature algorithm is Sha256WithECDSA.</para>
+        /// </description></item>
+        /// <item><description><para><b>SM2_256</b>: The corresponding signature algorithm is SM3WithSM2.</para>
+        /// </description></item>
         /// </list>
-        /// <para>The encryption algorithm of an intermediate CA certificate must be consistent with the encryption algorithm of a root CA certificate. The length of the keys can be different. For example, if the key algorithm of the root CA certificate is <b>RSA_2048</b>, the key algorithm of the intermediate CA certificate must be <b>RSA_1024</b>, <b>RSA_2048</b>, or <b>RSA_4096</b>.</para>
+        /// <para>The encryption algorithm of the intermediate CA certificate must be the same as that of the root CA certificate, but the key length can be different. For example, if the root CA certificate uses the <b>RSA_2048</b> algorithm, the intermediate CA certificate must use <b>RSA_1024</b>, <b>RSA_2048</b>, or <b>RSA_4096</b>.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> operation to query the key algorithm of a root CA certificate.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> operation to get the key algorithm of the root CA certificate.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,12 +40,18 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public int? CertMaxTime { get; set; }
 
+        /// <summary>
+        /// <para>A client-generated token that is used to ensure the idempotence of the request. The token must be unique for each request. The token can be up to 64 ASCII characters in length.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>XXX</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The common name or abbreviation of the organization. The value can contain letters.</para>
+        /// <para>The common name of your organization. The name can contain Chinese characters and English letters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,8 +62,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CommonName { get; set; }
 
         /// <summary>
-        /// <para>The code of the country or region in which the organization is located. You can enter an alpha-2 or alpha-3 code. For example, you can use <b>CN</b> to indicate China and use <b>US</b> to indicate the United States.</para>
-        /// <para>For more information about country codes, see the <b>&quot;Country codes&quot;</b> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company profiles</a>.</para>
+        /// <para>The two- or three-letter country or region code in uppercase. For example, <b>CN</b> indicates China and <b>US</b> indicates the United States.</para>
+        /// <para>For more information, see the <b>Country codes</b> section in <a href="https://help.aliyun.com/document_detail/198289.html">Manage company information</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CN</para>
@@ -62,7 +73,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string CountryCode { get; set; }
 
         /// <summary>
-        /// <para>CRL validity period: 1-365 days</para>
+        /// <para>The validity period of the CRL, in days. Valid values: 1 to 365.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -72,28 +83,30 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public int? CrlDay { get; set; }
 
         /// <summary>
-        /// <para>Enable Crl Service.</para>
+        /// <para>Specifies whether to enable the certificate revocation list (CRL) feature.</para>
         /// <list type="bullet">
-        /// <item><description>0- No</description></item>
-        /// <item><description>1- Yes</description></item>
+        /// <item><description><para>false: No</para>
+        /// </description></item>
+        /// <item><description><para>true: Yes</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("EnableCrl")]
         [Validation(Required=false)]
         public bool? EnableCrl { get; set; }
 
         /// <summary>
-        /// <para>The extended key usages of the certificate.</para>
+        /// <para>The extended key usages.</para>
         /// </summary>
         [NameInMap("ExtendedKeyUsages")]
         [Validation(Required=false)]
         public List<string> ExtendedKeyUsages { get; set; }
 
         /// <summary>
-        /// <para>The name of the city in which the organization is located. The value can contain letters.</para>
+        /// <para>The name of the city where your organization is located. The name can contain Chinese characters and English letters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,18 +117,18 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string Locality { get; set; }
 
         /// <summary>
-        /// <para>The name of the organization that is associated with the intermediate CA certificate. You can enter the name of your enterprise or company. The value can contain letters.</para>
+        /// <para>The name of your organization, such as your company. The name can contain Chinese characters and English letters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Maizi Technology</para>
+        /// <para>Alibaba</para>
         /// </summary>
         [NameInMap("Organization")]
         [Validation(Required=false)]
         public string Organization { get; set; }
 
         /// <summary>
-        /// <para>The name of the department or branch in the organization. The value can contain letters.</para>
+        /// <para>The name of the department in your organization. The name can contain Chinese characters and English letters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -128,7 +141,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         /// <summary>
         /// <para>The unique identifier of the root CA certificate.</para>
         /// <remarks>
-        /// <para>You can call the [DescribeCACertificateList] operation to query the unique identifiers of all CA certificates.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/465957.html">DescribeCACertificateList</a> operation to get the unique identifiers of all CA certificates.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -139,7 +152,7 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         public string ParentIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The path length constraint of the certificate. Default value: 0.</para>
+        /// <para>The certificate path length constraint. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -148,12 +161,19 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public int? PathLenConstraint { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-ae****vty</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the province or state in which the organization is located. The value can contain letters.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The name of the province, municipality, or autonomous region where the organization is located. Chinese characters and English letters are supported.
+        /// &lt;props=&quot;intl&quot;&gt;The name of the province or state where the organization is located. Chinese characters and English letters are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -163,14 +183,29 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string State { get; set; }
 
+        /// <summary>
+        /// <para>A list of tags.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateSubCACertificateRequestTags> Tags { get; set; }
         public class CreateSubCACertificateRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>testKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -178,10 +213,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         }
 
         /// <summary>
-        /// <para>The validity period of the intermediate CA certificate. Unit: years.</para>
-        /// <para>We recommend that you set this parameter to 5 to 10.</para>
+        /// <para>The validity period of the intermediate CA certificate, in years. Valid values: 5 to 10.</para>
+        /// <para>Set this parameter to a value from 5 to 10.</para>
         /// <remarks>
-        /// <para>The validity period of the intermediate CA certificate cannot exceed the validity period of the root CA certificate. You can call the [DescribeCACertificate]operation to query the validity period of a root CA certificate.</para>
+        /// <para>The validity period of the intermediate CA certificate cannot exceed that of the root CA certificate. Call the <a href="https://help.aliyun.com/document_detail/465954.html">DescribeCACertificate</a> operation to get the validity period of the root CA certificate.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeClientCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the client certificate or the server certificate that you want to query.</para>
+        /// <para>The unique identifier of the client certificate or server-side certificate to query.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/465990.html">ListClientCertificate</a> to query the unique identifiers of all client certificates and server-side certificates.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

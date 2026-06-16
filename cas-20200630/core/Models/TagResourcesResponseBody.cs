@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class TagResourcesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9D85A4B3-8F5B-411B-A91C-EF91B5183E2E</para>
         /// </summary>

@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class ListCACertificateLogRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the CA certificate to query.</para>
+        /// <remarks>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> to query the unique identifiers of all CA certificates.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeClientCertificateStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of the status information about the certificates.</para>
+        /// <para>The details of the certificate status.</para>
         /// </summary>
         [NameInMap("CertificateStatus")]
         [Validation(Required=false)]
         public List<DescribeClientCertificateStatusResponseBodyCertificateStatus> CertificateStatus { get; set; }
         public class DescribeClientCertificateStatusResponseBodyCertificateStatus : TeaModel {
             /// <summary>
-            /// <para>The date on which the certificate was revoked.</para>
+            /// <para>The date when the certificate was revoked.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the value of the <b>Status</b> parameter is <b>revoked</b>. The value revoked indicates that the certificate is revoked.</para>
+            /// <para>This parameter is returned only when the value of <b>Status</b> is <b>revoked</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -40,11 +40,14 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public string SerialNumber { get; set; }
 
             /// <summary>
-            /// <para>The status of the certificate. Valid values:</para>
+            /// <para>The current status of the certificate. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>good</b>: The certificate is not revoked.</description></item>
-            /// <item><description><b>revoked</b>: The certificate is revoked.</description></item>
-            /// <item><description><b>unknown</b>: The server cannot determine the status of the certificate.</description></item>
+            /// <item><description><para><b>good</b>: The certificate is not revoked.</para>
+            /// </description></item>
+            /// <item><description><para><b>revoked</b>: The certificate is revoked.</para>
+            /// </description></item>
+            /// <item><description><para><b>unknown</b>: The server cannot determine the status of the certificate.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

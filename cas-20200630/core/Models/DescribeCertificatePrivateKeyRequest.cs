@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class DescribeCertificatePrivateKeyRequest : TeaModel {
         /// <summary>
-        /// <para>The password that is used to encrypt the private key. The password can contain letters, digits, and special characters, such as <c>, + - _ #</c>. The password can be up to 32 bytes in length.</para>
-        /// <para><b>Warning</b> You must remember the password that you specify. The password is required to decrypt the encrypted private key. If you forget the password, the encrypted private key that is returned cannot be decrypted. You must call this operation again.</para>
+        /// <para>The password to encrypt the private key. The password can contain uppercase letters, lowercase letters, digits, and special characters, such as <c>,.+-_#</c>. The maximum length is 32 bytes.</para>
+        /// <remarks>
+        /// <para>Warning: </para>
+        /// </remarks>
+        /// <para>Remember the password you set. You need this password to decrypt the encrypted private key. If you forget the password, you cannot decrypt the private key that you get from this API call. You must call this API again to get a new encrypted key.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>!QA@WS3ed</para>
+        /// <para>!Demo@WS3ed</para>
         /// </summary>
         [NameInMap("EncryptedCode")]
         [Validation(Required=false)]
         public string EncryptedCode { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the client certificate or server certificate that you want to query.</para>
+        /// <para>The unique identifier of the client or server-side certificate for which you want to get the private key.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/465990.html">ListClientCertificate</a> to query the unique identifiers of all client and server-side certificates.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,6 +38,12 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         [Validation(Required=false)]
         public string Identifier { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group to which the certificate belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

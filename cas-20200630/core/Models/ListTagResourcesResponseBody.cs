@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cas20200630.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListTagResourcesResponseBodyData Data { get; set; }
         public class ListTagResourcesResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The maximum number of entries returned for this call.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
+            /// <para>The token that is used to start the next query. If this parameter is empty, no more results exist.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>24262</para>
             /// </summary>
@@ -29,6 +36,9 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
             [Validation(Required=false)]
             public string NextToken { get; set; }
 
+            /// <summary>
+            /// <para>The tag resources.</para>
+            /// </summary>
             [NameInMap("TagResources")]
             [Validation(Required=false)]
             public ListTagResourcesResponseBodyDataTagResources TagResources { get; set; }
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.Cas20200630.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2D69A58F-345C-4FDE-88E4-BF5189484043</para>
         /// </summary>
