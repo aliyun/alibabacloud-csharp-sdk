@@ -40,8 +40,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
             /// <summary>
             /// <para>The type of the threshold. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>defense</b>: traffic scrubbing threshold</description></item>
-            /// <item><description><b>blackhole</b>: DDoS mitigation threshold</description></item>
+            /// <item><description><para><b>defense</b>: traffic scrubbing threshold</para>
+            /// </description></item>
+            /// <item><description><para><b>blackhole</b>: DDoS mitigation threshold</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,8 +89,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
             /// <summary>
             /// <para>Indicates whether the threshold is automatically adjusted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</description></item>
-            /// <item><description><b>false</b>: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</description></item>
+            /// <item><description><para><b>true</b>: The scrubbing thresholds are automatically adjusted based on the traffic load on the asset.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The scrubbing thresholds are not automatically adjusted. You must manually specify the scrubbing thresholds.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

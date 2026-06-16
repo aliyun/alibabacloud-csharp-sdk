@@ -54,13 +54,20 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <summary>
         /// <para>The type of the asset that is under DDoS attacks. The asset is assigned a public IP address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: an Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description><b>slb</b>: a Server Load Balancer (SLB) instance.</description></item>
-        /// <item><description><b>eip</b>: an elastic IP address (EIP).</description></item>
-        /// <item><description><b>ipv6</b>: an IPv6 gateway.</description></item>
-        /// <item><description><b>swas</b>: a simple application server.</description></item>
-        /// <item><description><b>waf</b>: a Web Application Firewall (WAF) instance of the Exclusive edition.</description></item>
-        /// <item><description><b>ga_basic</b>: a Global Accelerator (GA) instance.</description></item>
+        /// <item><description><para><b>ecs</b>: an Elastic Compute Service (ECS) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>slb</b>: a Server Load Balancer (SLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>eip</b>: an elastic IP address (EIP).</para>
+        /// </description></item>
+        /// <item><description><para><b>ipv6</b>: an IPv6 gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>swas</b>: a simple application server.</para>
+        /// </description></item>
+        /// <item><description><para><b>waf</b>: a Web Application Firewall (WAF) instance of the Exclusive edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>ga_basic</b>: a Global Accelerator (GA) instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

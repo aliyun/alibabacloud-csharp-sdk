@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
     public class DescribeDdosEventListRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return for a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the asset to query.</para>
+        /// <para>The region ID of the asset that is assigned a public IP address.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> to query all region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string DdosRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of asset to query.</para>
+        /// <para>The ID of the instance for the asset that is assigned a public IP address.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> to query the IDs of the ECS, SLB, and EIP instances that belong to your Alibaba Cloud account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,15 +48,22 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset to query. Valid values:</para>
+        /// <para>The instance type of the asset that is assigned a public IP address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: an Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description><b>slb</b>: a Server Load Balancer (SLB) instance.</description></item>
-        /// <item><description><b>eip</b>: an elastic IP address (EIP).</description></item>
-        /// <item><description><b>ipv6</b>: an IPv6 gateway.</description></item>
-        /// <item><description><b>swas</b>: a simple application server.</description></item>
-        /// <item><description><b>waf</b>: a Web Application Firewall (WAF) instance of the Exclusive edition.</description></item>
-        /// <item><description><b>ga_basic</b>: a Global Accelerator (GA) instance.</description></item>
+        /// <item><description><para><b>ecs</b>: an Elastic Compute Service (ECS) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>slb</b>: a Server Load Balancer (SLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>eip</b>: an elastic IP address (EIP) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ipv6</b>: an IPv6 Gateway instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>swas</b>: a simple application server instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>waf</b>: a dedicated Web Application Firewall (WAF) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ga_basic</b>: a Global Accelerator instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -68,7 +75,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the asset to query.</para>
+        /// <para>The IP address of the asset that is assigned a public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>121.199.XX.XX</para>
@@ -78,7 +85,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Default value: <b>10</b>.</para>
+        /// <para>The number of attack events to return on each page for a paged query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -87,6 +94,12 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The number of days to query backwards from the current time. Default value: 7.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7</para>
+        /// </summary>
         [NameInMap("QueryDays")]
         [Validation(Required=false)]
         public int? QueryDays { get; set; }

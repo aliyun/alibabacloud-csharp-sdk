@@ -26,8 +26,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <summary>
         /// <para>The type of the threshold. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>defense</b>: traffic scrubbing threshold</description></item>
-        /// <item><description><b>blackhole</b>: DDoS mitigation threshold</description></item>
+        /// <item><description><para><b>defense</b>: traffic scrubbing threshold</para>
+        /// </description></item>
+        /// <item><description><para><b>blackhole</b>: DDoS mitigation threshold</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,13 +57,20 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <summary>
         /// <para>The type of the asset that is assigned a public IP address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: ECS instances.</description></item>
-        /// <item><description><b>slb</b>: SLB instances.</description></item>
-        /// <item><description><b>eip</b>: EIPs.</description></item>
-        /// <item><description><b>ipv6</b>: IPv6 gateways.</description></item>
-        /// <item><description><b>swas</b>: simple application servers.</description></item>
-        /// <item><description><b>waf</b>: Web Application Firewall (WAF) instances of the Exclusive edition.</description></item>
-        /// <item><description><b>ga_basic</b>: Global Accelerator (GA) instances.</description></item>
+        /// <item><description><para><b>ecs</b>: ECS instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>slb</b>: SLB instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>eip</b>: EIPs.</para>
+        /// </description></item>
+        /// <item><description><para><b>ipv6</b>: IPv6 gateways.</para>
+        /// </description></item>
+        /// <item><description><para><b>swas</b>: simple application servers.</para>
+        /// </description></item>
+        /// <item><description><para><b>waf</b>: Web Application Firewall (WAF) instances of the Exclusive edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>ga_basic</b>: Global Accelerator (GA) instances.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

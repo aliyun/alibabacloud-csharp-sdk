@@ -39,12 +39,18 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
             /// <summary>
             /// <para>The security credit level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>A</b>: outstanding</description></item>
-            /// <item><description><b>B</b>: excellent</description></item>
-            /// <item><description><b>C</b>: good</description></item>
-            /// <item><description><b>D</b>: average</description></item>
-            /// <item><description><b>E</b>: poor</description></item>
-            /// <item><description><b>F</b>: poorer</description></item>
+            /// <item><description><para><b>A</b>: outstanding</para>
+            /// </description></item>
+            /// <item><description><para><b>B</b>: excellent</para>
+            /// </description></item>
+            /// <item><description><para><b>C</b>: good</para>
+            /// </description></item>
+            /// <item><description><para><b>D</b>: average</para>
+            /// </description></item>
+            /// <item><description><para><b>E</b>: poor</para>
+            /// </description></item>
+            /// <item><description><para><b>F</b>: poorer</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,8 +75,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: yes</description></item>
-        /// <item><description><b>false</b>: no</description></item>
+        /// <item><description><para><b>true</b>: yes</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

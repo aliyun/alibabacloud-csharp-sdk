@@ -13,9 +13,12 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <para>The traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset. When you modify Bps, Pps is required. Otherwise, Bps does not take effect.</para>
         /// <para>You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:</para>
         /// <list type="bullet">
-        /// <item><description>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</description></item>
-        /// <item><description>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</description></item>
-        /// <item><description>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</description></item>
+        /// <item><description><para>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</para>
+        /// </description></item>
+        /// <item><description><para>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</para>
+        /// </description></item>
+        /// <item><description><para>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,13 +59,20 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <summary>
         /// <para>The type of the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: an Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description><b>slb</b>: a Server Load Balancer (SLB) instance.</description></item>
-        /// <item><description><b>eip</b>: an elastic IP address (EIP).</description></item>
-        /// <item><description><b>ipv6</b>: an IPv6 gateway.</description></item>
-        /// <item><description><b>swas</b>: a simple application server.</description></item>
-        /// <item><description><b>waf</b>: a Web Application Firewall (WAF) instance of the Exclusive edition.</description></item>
-        /// <item><description><b>ga_basic</b>: a Global Accelerator (GA) instance.</description></item>
+        /// <item><description><para><b>ecs</b>: an Elastic Compute Service (ECS) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>slb</b>: a Server Load Balancer (SLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>eip</b>: an elastic IP address (EIP).</para>
+        /// </description></item>
+        /// <item><description><para><b>ipv6</b>: an IPv6 gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>swas</b>: a simple application server.</para>
+        /// </description></item>
+        /// <item><description><para><b>waf</b>: a Web Application Firewall (WAF) instance of the Exclusive edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>ga_basic</b>: a Global Accelerator (GA) instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -87,8 +97,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <summary>
         /// <para>Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: automatically adjusts the scrubbing threshold. You do not need to configure the <b>Bps</b> and <b>Pps</b> parameters.</description></item>
-        /// <item><description><b>false</b>: The scrubbing threshold is not automatically adjusted. You must configure the <b>Bps</b> and <b>Pps</b> parameters. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: automatically adjusts the scrubbing threshold. You do not need to configure the <b>Bps</b> and <b>Pps</b> parameters.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The scrubbing threshold is not automatically adjusted. You must configure the <b>Bps</b> and <b>Pps</b> parameters. This is the default value.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,9 +114,12 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <para>The packet scrubbing threshold. Unit: packets per second (PPS). When you modify Pps, Bps is required. Otherwise, Pps does not take effect.</para>
         /// <para>The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:</para>
         /// <list type="bullet">
-        /// <item><description>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</description></item>
-        /// <item><description>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</description></item>
-        /// <item><description>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</description></item>
+        /// <item><description><para>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</para>
+        /// </description></item>
+        /// <item><description><para>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</para>
+        /// </description></item>
+        /// <item><description><para>If the asset is an EIP, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

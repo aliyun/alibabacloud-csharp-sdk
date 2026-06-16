@@ -10,11 +10,17 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
 {
     public class ModifyDefenseThresholdRequest : TeaModel {
         /// <summary>
-        /// <para>The traffic scrubbing threshold. Unit: Mbit/s. The traffic scrubbing threshold cannot exceed the peak inbound or outbound Internet traffic, whichever is larger, of the asset. When you modify Bps, Pps is required. Otherwise, Bps does not take effect.</para>
-        /// <para>You can use the monitoring tool that is provided by the asset to query the Internet traffic of the asset:</para>
+        /// <para>The scrubbing threshold for traffic in Mbps. This value cannot exceed the peak public network traffic of the instance. If you specify Bps, you must also specify Pps. Otherwise, the change does not take effect.</para>
+        /// <para>Use the monitoring tools of your instance to query its public network traffic:</para>
         /// <list type="bullet">
-        /// <item><description>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</description></item>
-        /// <item><description>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</description></item>
+        /// <item><description><para>For an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</para>
+        /// </description></item>
+        /// <item><description><para>For an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>For an EIP instance, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,9 +35,9 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the asset for which you want to change the scrubbing thresholds.</para>
+        /// <para>The region ID of the asset that is assigned a public IP address.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/353250.html">DescribeRegions</a> to query all region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -43,9 +49,9 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string DdosRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the asset.</para>
+        /// <para>The instance ID of the asset that is assigned a public IP address.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> operation to query the IDs of ECS instances, SLB instances, and EIPs within the current Alibaba Cloud account.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/354191.html">DescribeInstance</a> to query the IDs of the ECS, SLB, and EIP instances that belong to your Alibaba Cloud account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,15 +63,22 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset. Valid values:</para>
+        /// <para>The instance type of the asset that is assigned a public IP address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: an Elastic Compute Service (ECS) instance.</description></item>
-        /// <item><description><b>slb</b>: a Server Load Balancer (SLB) instance.</description></item>
-        /// <item><description><b>eip</b>: an elastic IP address (EIP).</description></item>
-        /// <item><description><b>ipv6</b>: an IPv6 gateway.</description></item>
-        /// <item><description><b>swas</b>: a simple application server.</description></item>
-        /// <item><description><b>waf</b>: a Web Application Firewall (WAF) instance of the Exclusive edition.</description></item>
-        /// <item><description><b>ga_basic</b>: a Global Accelerator (GA) instance.</description></item>
+        /// <item><description><para><b>ecs</b>: Elastic Compute Service (ECS) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>slb</b>: Server Load Balancer (SLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>eip</b>: Elastic IP Address (EIP) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ipv6</b>: IPv6 Gateway instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>swas</b>: simple application server instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>waf</b>: dedicated Web Application Firewall (WAF) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ga_basic</b>: basic Global Accelerator (GA) instance.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,7 +90,7 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the asset.</para>
+        /// <para>The public IP address of the asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -87,12 +100,14 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public string InternetIp { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically adjust the scrubbing threshold based on the traffic load on the asset. Valid values:</para>
+        /// <para>Specifies whether to automatically adjust the scrubbing threshold based on the traffic loads of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: automatically adjusts the scrubbing thresholds. You do not need to configure the <b>Bps</b> and <b>Pps</b> parameters.</description></item>
-        /// <item><description><b>false</b>: The scrubbing threshold is not automatically adjusted. You must configure the <b>Bps</b> and <b>Pps</b> parameters.</description></item>
+        /// <item><description><para><b>true</b>: The scrubbing threshold is automatically adjusted. You do not need to set the <b>Bps</b> and <b>Pps</b> parameters.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The scrubbing threshold is not automatically adjusted. You must set the <b>Bps</b> and <b>Pps</b> parameters.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Default value: false</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -102,11 +117,17 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         public bool? IsAuto { get; set; }
 
         /// <summary>
-        /// <para>The packet scrubbing threshold. Unit: packets per second (PPS). When you modify Pps, Bps is required. Otherwise, Pps does not take effect.</para>
-        /// <para>The packet scrubbing threshold cannot exceed the peak number of inbound or outbound packets, whichever is larger, of the asset. You can use the monitoring tool that is provided by the asset to query the number of packets of the asset:</para>
+        /// <para>The scrubbing threshold for packets per second (pps). This value cannot exceed the peak packet traffic of the instance. If you specify Pps, you must also specify Bps. Otherwise, the change does not take effect.</para>
+        /// <para>Use the monitoring tools of your instance to query its packet traffic:</para>
         /// <list type="bullet">
-        /// <item><description>If the asset is an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</description></item>
-        /// <item><description>If the asset is an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</description></item>
+        /// <item><description><para>For an ECS instance, see <a href="https://help.aliyun.com/document_detail/25482.html">View instance monitoring information</a>.</para>
+        /// </description></item>
+        /// <item><description><para>For an SLB instance, see <a href="https://help.aliyun.com/document_detail/85982.html">View monitoring data</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description>For an EIP instance, see <a href="https://help.aliyun.com/document_detail/85354.html">View monitoring data</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

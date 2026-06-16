@@ -26,13 +26,20 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
         /// <summary>
         /// <para>The type of the asset to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: Elastic Compute Service (ECS) instances.</description></item>
-        /// <item><description><b>slb</b>: Server Load Balancer (SLB) instances.</description></item>
-        /// <item><description><b>eip</b>: elastic IP addresses (EIPs).</description></item>
-        /// <item><description><b>ipv6</b>: IPv6 gateways.</description></item>
-        /// <item><description><b>swas</b>: simple application servers.</description></item>
-        /// <item><description><b>waf</b>: Web Application Firewall (WAF) instances of the Exclusive edition.</description></item>
-        /// <item><description><b>ga_basic</b>: Global Accelerator (GA) instances.</description></item>
+        /// <item><description><para><b>ecs</b>: Elastic Compute Service (ECS) instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>slb</b>: Server Load Balancer (SLB) instances.</para>
+        /// </description></item>
+        /// <item><description><para><b>eip</b>: elastic IP addresses (EIPs).</para>
+        /// </description></item>
+        /// <item><description><para><b>ipv6</b>: IPv6 gateways.</para>
+        /// </description></item>
+        /// <item><description><para><b>swas</b>: simple application servers.</para>
+        /// </description></item>
+        /// <item><description><para><b>waf</b>: Web Application Firewall (WAF) instances of the Exclusive edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>ga_basic</b>: Global Accelerator (GA) instances.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

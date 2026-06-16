@@ -39,8 +39,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
             /// <summary>
             /// <para>The DDoS mitigation status of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>normal</b>: not under DDoS attacks.</description></item>
-            /// <item><description><b>abnormal</b>: under DDoS attacks.</description></item>
+            /// <item><description><para><b>normal</b>: not under DDoS attacks.</para>
+            /// </description></item>
+            /// <item><description><para><b>abnormal</b>: under DDoS attacks.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,9 +55,12 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
             /// <summary>
             /// <para>The type of the asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>ecs</b></description></item>
-            /// <item><description><b>slb</b></description></item>
-            /// <item><description><b>eip</b></description></item>
+            /// <item><description><para><b>ecs</b></para>
+            /// </description></item>
+            /// <item><description><para><b>slb</b></para>
+            /// </description></item>
+            /// <item><description><para><b>eip</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,9 +130,12 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
                 /// <summary>
                 /// <para>The DDoS mitigation status of the asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>mitigating</b>: indicates that traffic scrubbing is in progress.</description></item>
-                /// <item><description><b>blackholed</b>: indicates that blackhole filtering is triggered for the asset.</description></item>
-                /// <item><description><b>normal</b>: indicates that no DDoS attacks are launched against the asset.</description></item>
+                /// <item><description><para><b>mitigating</b>: indicates that traffic scrubbing is in progress.</para>
+                /// </description></item>
+                /// <item><description><para><b>blackholed</b>: indicates that blackhole filtering is triggered for the asset.</para>
+                /// </description></item>
+                /// <item><description><para><b>normal</b>: indicates that no DDoS attacks are launched against the asset.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -140,8 +148,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
                 /// <summary>
                 /// <para>The IP version of the IP address. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>v4</b>: IPv4.</description></item>
-                /// <item><description><b>v6</b>: IPv6.</description></item>
+                /// <item><description><para><b>v4</b>: IPv4.</para>
+                /// </description></item>
+                /// <item><description><para><b>v6</b>: IPv6.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -154,8 +164,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
                 /// <summary>
                 /// <para>Indicates whether the asset is added to the instance. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -168,8 +180,10 @@ namespace AlibabaCloud.SDK.Antiddos_public20170518.Models
                 /// <summary>
                 /// <para>Indicates whether best-effort protection is enabled for the asset. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: no.</description></item>
-                /// <item><description><b>1</b>: yes.</description></item>
+                /// <item><description><para><b>0</b>: no.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: yes.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
