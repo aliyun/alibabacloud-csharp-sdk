@@ -56,6 +56,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string SortShrink { get; set; }
 
+        [NameInMap("TenantCode")]
+        [Validation(Required=false)]
+        public string TenantCode { get; set; }
+
         /// <summary>
         /// <para>Keyword.</para>
         /// 

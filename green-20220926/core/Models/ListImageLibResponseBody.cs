@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 
         }
 
+        [NameInMap("MaxLibCount")]
+        [Validation(Required=false)]
+        public int? MaxLibCount { get; set; }
+
         /// <summary>
         /// <para>Further description of the error code.</para>
         /// 

@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("TenantCode")]
+        [Validation(Required=false)]
+        public string TenantCode { get; set; }
+
     }
 
 }

@@ -93,6 +93,16 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 [Validation(Required=false)]
                 public long? KeywordMd5Id { get; set; }
 
+                [NameInMap("Properties")]
+                [Validation(Required=false)]
+                public ListKeywordsResponseBodyDataItemsProperties Properties { get; set; }
+                public class ListKeywordsResponseBodyDataItemsProperties : TeaModel {
+                    [NameInMap("Attribute")]
+                    [Validation(Required=false)]
+                    public string Attribute { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>Keyword.</para>
                 /// 

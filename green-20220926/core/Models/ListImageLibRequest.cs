@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ServiceCode")]
+        [Validation(Required=false)]
+        public string ServiceCode { get; set; }
+
     }
 
 }
