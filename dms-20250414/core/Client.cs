@@ -18,7 +18,18 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "dms.us-west-1.aliyuncs.com"},
+                {"us-east-1", "dms.us-east-1.aliyuncs.com"},
+                {"cn-shenzhen", "dms.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "dms.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "dms.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "dms.cn-hangzhou.aliyuncs.com"},
+                {"cn-beijing", "dms.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "dms.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("dms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1887,7 +1898,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent workspace.</para>
+        /// <para>Creates a DataAgent collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1941,7 +1952,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent workspace.</para>
+        /// <para>Creates a DataAgent collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1995,7 +2006,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent workspace.</para>
+        /// <para>Creates a DataAgent collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2013,7 +2024,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a DataAgent workspace.</para>
+        /// <para>Creates a DataAgent collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4599,7 +4610,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a DataAgent session.</para>
+        /// <para>Retrieves the description of a DataAgent session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4649,7 +4660,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a DataAgent session.</para>
+        /// <para>Retrieves the description of a DataAgent session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4699,7 +4710,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a DataAgent session.</para>
+        /// <para>Retrieves the description of a DataAgent session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4717,7 +4728,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the details of a DataAgent session.</para>
+        /// <para>Retrieves the description of a DataAgent session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5827,7 +5838,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves workspace details.</para>
+        /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5873,7 +5884,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves workspace details.</para>
+        /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5919,7 +5930,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves workspace details.</para>
+        /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5937,7 +5948,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves workspace details.</para>
+        /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8083,7 +8094,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</para>
+        /// <para>Retrieves the collaborative workspaces under the primary account with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8157,7 +8168,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</para>
+        /// <para>Retrieves the collaborative workspaces under the primary account with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8231,7 +8242,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</para>
+        /// <para>Retrieves the collaborative workspaces under the primary account with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8249,7 +8260,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves paginated collaboration workspaces for an Alibaba Cloud account.</para>
+        /// <para>Retrieves the collaborative workspaces under the primary account with pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12419,19 +12430,19 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user message to a specified session or ends the session.</para>
+        /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>agent_id</c> and <c>session_id</c> fields are required.</description></item>
-        /// <item><description>The <c>message_type</c> field defaults to <c>primary</c>. Set it to <c>additional</c> to append information or to <c>cancel</c> to end the session.</description></item>
-        /// <item><description>The <c>reply_to</c> field specifies which agent message the current message is a response to. It defaults to <c>0</c>.</description></item>
+        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> when appending information or <c>cancel</c> when canceling a session.</description></item>
+        /// <item><description><c>reply_to</c> indicates which Agent message this message responds to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description>Use the <c>quoted_message</c> field to reference a previous user message.</description></item>
-        /// <item><description>The optional fields <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> provide more detailed context.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
+        /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12462,6 +12473,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.SessionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SessionConfig, "SessionConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskConfig))
+            {
+                request.TaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskConfig, "TaskConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -12511,6 +12526,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskConfigShrink))
+            {
+                query["TaskConfig"] = request.TaskConfigShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12532,19 +12551,19 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user message to a specified session or ends the session.</para>
+        /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>agent_id</c> and <c>session_id</c> fields are required.</description></item>
-        /// <item><description>The <c>message_type</c> field defaults to <c>primary</c>. Set it to <c>additional</c> to append information or to <c>cancel</c> to end the session.</description></item>
-        /// <item><description>The <c>reply_to</c> field specifies which agent message the current message is a response to. It defaults to <c>0</c>.</description></item>
+        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> when appending information or <c>cancel</c> when canceling a session.</description></item>
+        /// <item><description><c>reply_to</c> indicates which Agent message this message responds to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description>Use the <c>quoted_message</c> field to reference a previous user message.</description></item>
-        /// <item><description>The optional fields <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> provide more detailed context.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
+        /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12575,6 +12594,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.SessionConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SessionConfig, "SessionConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TaskConfig))
+            {
+                request.TaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TaskConfig, "TaskConfig", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -12624,6 +12647,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 query["SessionId"] = request.SessionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskConfigShrink))
+            {
+                query["TaskConfig"] = request.TaskConfigShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -12645,19 +12672,19 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user message to a specified session or ends the session.</para>
+        /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>agent_id</c> and <c>session_id</c> fields are required.</description></item>
-        /// <item><description>The <c>message_type</c> field defaults to <c>primary</c>. Set it to <c>additional</c> to append information or to <c>cancel</c> to end the session.</description></item>
-        /// <item><description>The <c>reply_to</c> field specifies which agent message the current message is a response to. It defaults to <c>0</c>.</description></item>
+        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> when appending information or <c>cancel</c> when canceling a session.</description></item>
+        /// <item><description><c>reply_to</c> indicates which Agent message this message responds to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description>Use the <c>quoted_message</c> field to reference a previous user message.</description></item>
-        /// <item><description>The optional fields <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> provide more detailed context.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
+        /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12676,19 +12703,19 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sends a user message to a specified session or ends the session.</para>
+        /// <para>Sends a user message to a specified session or cancels a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>The <c>agent_id</c> and <c>session_id</c> fields are required.</description></item>
-        /// <item><description>The <c>message_type</c> field defaults to <c>primary</c>. Set it to <c>additional</c> to append information or to <c>cancel</c> to end the session.</description></item>
-        /// <item><description>The <c>reply_to</c> field specifies which agent message the current message is a response to. It defaults to <c>0</c>.</description></item>
+        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> when appending information or <c>cancel</c> when canceling a session.</description></item>
+        /// <item><description><c>reply_to</c> indicates which Agent message this message responds to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description>Use the <c>quoted_message</c> field to reference a previous user message.</description></item>
-        /// <item><description>The optional fields <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> provide more detailed context.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
+        /// <item><description><c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, <c>session_config</c>, and other fields are optional but provide more detailed context information.</description></item>
         /// </list>
         /// </description>
         /// 

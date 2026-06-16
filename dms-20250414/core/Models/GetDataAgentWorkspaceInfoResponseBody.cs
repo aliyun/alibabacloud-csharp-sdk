@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class GetDataAgentWorkspaceInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDataAgentWorkspaceInfoResponseBodyData Data { get; set; }
         public class GetDataAgentWorkspaceInfoResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the workspace was created. This value is a UNIX timestamp in seconds.</para>
+            /// <para>The creation time of the session. Unit: seconds. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765960516</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The user ID (UID) of the workspace creator.</para>
+            /// <para>The UID of the workspace creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20282*****7591</para>
@@ -36,15 +36,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
-            /// <summary>
-            /// <para>Indicates whether session sharing is enabled.</para>
-            /// </summary>
             [NameInMap("IsSessionShareEnabled")]
             [Validation(Required=false)]
             public bool? IsSessionShareEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the workspace was last modified. This value is a UNIX timestamp in seconds.</para>
+            /// <para>The most recent modification time of the workspace. Unit: seconds. The value is a UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765961516</para>
@@ -54,7 +51,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The user\&quot;s role in the workspace.</para>
+            /// <para>The role name of the user in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>admin</para>
@@ -73,8 +70,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string TotalMember { get; set; }
 
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
+
             /// <summary>
-            /// <para>The description of the workspace.</para>
+            /// <para>The description of the collaborative workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>space for test</para>
@@ -84,7 +85,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string WorkspaceDesc { get; set; }
 
             /// <summary>
-            /// <para>The workspace ID.</para>
+            /// <para>The ID of the collaborative workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20923*****7291</para>
@@ -146,7 +147,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

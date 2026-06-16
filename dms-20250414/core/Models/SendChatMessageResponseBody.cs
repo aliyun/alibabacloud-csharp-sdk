@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public SendChatMessageResponseBodyData Data { get; set; }
         public class SendChatMessageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The agent ID.</para>
+            /// <para>AgentId</para>
             /// 
             /// <b>Example:</b>
             /// <para>3jqqdiuxun******</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>Describes the result of the request.</para>
+            /// <para>Message</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -36,8 +36,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Message { get; set; }
 
+            [NameInMap("MessageId")]
+            [Validation(Required=false)]
+            public string MessageId { get; set; }
+
             /// <summary>
-            /// <para>The session ID.</para>
+            /// <para>SessionId</para>
             /// 
             /// <b>Example:</b>
             /// <para>6zbqbho********</para>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         }
 
         /// <summary>
-        /// <para>The error code. A value of <c>Success</c> indicates that the request was successful.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -59,7 +63,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This field is empty if the request is successful.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Success</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data structure.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateDataAgentWorkspaceResponseBodyData Data { get; set; }
         public class CreateDataAgentWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time the workspace was created, as a UNIX timestamp in seconds.</para>
+            /// <para>The time when the workspace was created. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765960516</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the workspace creator.</para>
+            /// <para>The UID of the workspace creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20282*****7591</para>
@@ -36,15 +36,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string Creator { get; set; }
 
-            /// <summary>
-            /// <para>Indicates whether session sharing is enabled for the workspace.</para>
-            /// </summary>
             [NameInMap("IsSessionShareEnabled")]
             [Validation(Required=false)]
             public bool? IsSessionShareEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time the workspace was last modified, as a UNIX timestamp in seconds.</para>
+            /// <para>The time when the workspace was last modified. The value is a UNIX timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1765961516</para>
@@ -54,7 +51,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the user\&quot;s role in the workspace.</para>
+            /// <para>The role name of the user in the workspace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>owner</para>
@@ -72,6 +69,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("TotalMember")]
             [Validation(Required=false)]
             public long? TotalMember { get; set; }
+
+            [NameInMap("Type")]
+            [Validation(Required=false)]
+            public string Type { get; set; }
 
             /// <summary>
             /// <para>The description of the workspace.</para>

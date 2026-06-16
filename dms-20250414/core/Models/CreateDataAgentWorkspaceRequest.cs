@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateDataAgentWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The DMS unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public bool? IsSessionShareEnabled { get; set; }
 
         /// <summary>
-        /// <para>The description of the workspace.</para>
+        /// <para>The description of the collaborative workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Space for test</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the workspace.</para>
+        /// <para>The name of the collaborative workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspaceTest</para>

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class ListDataAgentWorkspaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListDataAgentWorkspaceResponseBodyData Data { get; set; }
         public class ListDataAgentWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the workspaces.</para>
+            /// <para>The configuration content.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public List<ListDataAgentWorkspaceResponseBodyDataContent> Content { get; set; }
             public class ListDataAgentWorkspaceResponseBodyDataContent : TeaModel {
                 /// <summary>
-                /// <para>The creation time of the workspace, provided as a UNIX timestamp in seconds.</para>
+                /// <para>The creation time of the workspace. This value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765960516</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator\&quot;s user ID (UID).</para>
+                /// <para>The UID of the workspace creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20282*****7591</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? IsSessionShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time of the workspace, provided as a UNIX timestamp in seconds.</para>
+                /// <para>The most recent modification time of the workspace. This value is a UNIX timestamp in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1765961516</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public long? ModifyTime { get; set; }
 
                 /// <summary>
-                /// <para>The name of the user\&quot;s role in the workspace.</para>
+                /// <para>The role name of the user in the workspace.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>admin</para>
@@ -87,8 +87,12 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 [Validation(Required=false)]
                 public long? TotalMember { get; set; }
 
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
                 /// <summary>
-                /// <para>The ID of the workspace.</para>
+                /// <para>The workspace ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20923*****7291</para>
@@ -120,7 +124,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             }
 
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The total number of pages.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12</para>
@@ -130,7 +134,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public long? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of workspaces on each page.</para>
+            /// <para>The number of workspaces per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -172,7 +176,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request fails.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter is not valid.</para>
@@ -182,7 +186,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not used.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>nu use</para>
@@ -192,7 +196,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not used.</para>
+        /// <para>The token information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>

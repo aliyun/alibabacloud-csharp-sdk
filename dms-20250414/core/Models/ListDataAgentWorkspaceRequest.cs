@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>This parameter is reserved for future use.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>This parameter is reserved for future use.</para>
+        /// <para>The token information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>no use</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The field to sort by.</para>
+        /// <para>The name of the field by which to sort.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CreateTime</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number to start from.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of records per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string WorkspaceName { get; set; }
 
         /// <summary>
-        /// <para>The workspace type.</para>
+        /// <para>The type of workspace to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
