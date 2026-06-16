@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiSearchEngine20260417.Models
 {
     public class GetDatasetResourceUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The dataset ID. You can view this in the dataset list on the console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>730</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.AiSearchEngine20260417.Models
         public string DatasetId { get; set; }
 
         /// <summary>
+        /// <para>The primary key value of the data record in the dataset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
