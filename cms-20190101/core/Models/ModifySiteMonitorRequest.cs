@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifySiteMonitorRequest : TeaModel {
         /// <summary>
-        /// <para>The URL or IP address that is monitored by the task.</para>
+        /// <para>The URL or IP address of the monitoring task.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Address { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert rule. You can call the DescribeMetricRuleList operation to query the IDs of existing alert rules in CloudMonitor. For more information, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+        /// <para>The ID of the alert rule. The ID of an existing alert rule in CloudMonitor. You can call the DescribeMetricRuleList operation to query alert rule IDs. For more information, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>49f7c317-7645-4cc9-94fd-ea42e122****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string AlertIds { get; set; }
 
         /// <summary>
-        /// <para>The custom detection period. You can only select a time period from Monday to Sunday for detection.</para>
+        /// <para>The custom monitoring schedule. You can select a specific time period from Monday to Sunday for monitoring.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;start_hour&quot;:0,&quot;end_hour&quot;:24, &quot;days&quot;:[0], &quot;time_zone&quot;:&quot;Local&quot;}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string CustomSchedule { get; set; }
 
         /// <summary>
-        /// <para>The interval at which detection requests are sent. Valid values: 1, 5, and 15. Unit: minutes. Default value: 1.</para>
+        /// <para>The monitoring frequency. Valid values: 1, 5, and 15. Unit: minutes. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Interval { get; set; }
 
         /// <summary>
-        /// <para>The unit of the metric.</para>
-        /// <para>Unit: milliseconds.</para>
+        /// <para>The unit of the monitoring metrics.</para>
+        /// <para>Unit: milliseconds (ms).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ms</para>
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string IntervalUnit { get; set; }
 
         /// <summary>
-        /// <para>The information of the detection points. The value is a JSON array. Example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>. The values of the <c>city</c> field indicate Beijing, Hangzhou, and Qingdao.</para>
+        /// <para>The detection point information. The value is in JSONArray format, for example: <c>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</c>, where <c>city</c> corresponds to Beijing, Hangzhou, and Qingdao respectively.</para>
         /// <remarks>
-        /// <para>You can call the DescribeSiteMonitorISPCityList operation to query the detection points. For more information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>. If you leave this parameter empty, the system randomly selects three detection points.</para>
+        /// <para>You can call the DescribeSiteMonitorISPCityList operation to query detection point information. For more information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>. If this parameter is left empty, the system randomly selects three detection points.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string IspCities { get; set; }
 
         /// <summary>
-        /// <para>The extended options of the protocol that is used by the site monitoring task. The options vary based on the protocol.</para>
+        /// <para>The advanced extended options for the protocol type of the monitoring task. Different protocol types correspond to different extended options.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;time_out&quot;:5000}</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site monitoring task.</para>
+        /// <para>The ID of the monitoring task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The name of the site monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</para>
+        /// <para>The name of the monitoring task. The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HanZhou_ECS2</para>

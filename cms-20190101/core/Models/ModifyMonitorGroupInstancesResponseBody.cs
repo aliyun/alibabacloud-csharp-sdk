@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMonitorGroupInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// <para>A value of 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FEC7EDB3-9B08-4AC0-A42A-329F5D14B95A</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</para>
+        /// <para>Indicates whether the operation was successful. A value of true indicates a success. A value of false indicates a failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

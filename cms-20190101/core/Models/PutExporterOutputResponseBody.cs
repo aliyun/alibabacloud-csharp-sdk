@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutExporterOutputResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// <para>The value 200 indicates that the call is successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. true: The request was successful. false: The request failed.</para>
+        /// <para>Indicates whether the call was successful. The value true indicates that the call was successful. The value false indicates that the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

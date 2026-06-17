@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorSLSGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// <para>A value of 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The queried Logstore groups.</para>
+        /// <para>The list of Logstore groups.</para>
         /// </summary>
         [NameInMap("List")]
         [Validation(Required=false)]
         public List<DescribeHybridMonitorSLSGroupResponseBodyList> List { get; set; }
         public class DescribeHybridMonitorSLSGroupResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>The time when the Logstore group was created.</para>
+            /// <para>The timestamp when the Logstore group was created.</para>
             /// <para>Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the Logstore group.</para>
+            /// <para>The configuration information of the Logstore group.</para>
             /// </summary>
             [NameInMap("SLSGroupConfig")]
             [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string SLSProject { get; set; }
 
                 /// <summary>
-                /// <para>The region ID.</para>
+                /// <para>The region.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -79,7 +79,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 /// <summary>
                 /// <para>The member ID.</para>
-                /// <para><b>Description</b> This parameter is returned when you call the operation by using an administrative account.</para>
+                /// <remarks>
+                /// <para>This parameter is returned only when you call this operation by using a management account.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>120886317861****</para>
@@ -92,6 +94,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// <para>The description of the Logstore group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Logstore group of Alibaba Cloud products.</para>
             /// </summary>
             [NameInMap("SLSGroupDescription")]
             [Validation(Required=false)]
@@ -108,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SLSGroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the Logstore group was modified.</para>
+            /// <para>The timestamp when the Logstore group was last modified.</para>
             /// <para>Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -161,18 +166,21 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

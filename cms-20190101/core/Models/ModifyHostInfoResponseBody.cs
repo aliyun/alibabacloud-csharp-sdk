@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyHostInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// <para>The value 200 indicates that the call was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EBB5215C-44AB-4000-A2D7-48634FDC4F04</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</para>
+        /// <para>Indicates whether the call was successful. The value true indicates that the call was successful. The value false indicates that the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

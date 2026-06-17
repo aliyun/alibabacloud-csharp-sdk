@@ -82,8 +82,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to return the total number of resources in the specified application group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default)</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true (default)</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

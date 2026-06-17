@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutResourceMetricRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>状态码。</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>200表示成功。</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>错误信息。</para>
         /// 
         /// <b>Example:</b>
         /// <para>The request processing has failed due to some unknown error.</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>15D1440E-BF24-5A41-93E4-36864635179E</para>
@@ -77,10 +77,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>操作是否成功。取值：</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true：成功。</para>
+        /// </description></item>
+        /// <item><description><para>false：失败。</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

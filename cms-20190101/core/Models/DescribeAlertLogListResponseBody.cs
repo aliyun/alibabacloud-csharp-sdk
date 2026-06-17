@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeAlertLogListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried alert logs.</para>
+        /// <para>The list of alert history entries.</para>
         /// </summary>
         [NameInMap("AlertLogList")]
         [Validation(Required=false)]
         public List<DescribeAlertLogListResponseBodyAlertLogList> AlertLogList { get; set; }
         public class DescribeAlertLogListResponseBodyAlertLogList : TeaModel {
             /// <summary>
-            /// <para>The timestamp that was generated when the alert was triggered.</para>
+            /// <para>The timestamp when the alert was triggered.</para>
             /// <para>Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -28,68 +28,86 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string AlertTime { get; set; }
 
             /// <summary>
-            /// <para>The details of the blacklist policy.</para>
+            /// <para>The details of the matched alert blacklist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>BlackListDetail</para>
+            /// <para>{&quot;id&quot;:12****,&quot;metricProject&quot;:&quot;acs_ecs_dashboard&quot;,&quot;userId&quot;:173651113438****,&quot;uuid&quot;:&quot;8410dbbd-7d30-41c5-94cb-<b><b>&quot;,&quot;name&quot;:&quot;alert-</b></b>&quot;,&quot;productCategory&quot;:&quot;ecs&quot;,&quot;instances&quot;:[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}],&quot;metrics&quot;:null,&quot;scopeType&quot;:&quot;USER&quot;,&quot;scopeValue&quot;:&quot;&quot;,&quot;startTime&quot;:&quot;0001-01-01T00:00:00Z&quot;,&quot;endTime&quot;:&quot;9999-12-31T23:59:59.999999999+08:00&quot;,&quot;effectiveTime&quot;:null,&quot;isEnable&quot;:true,&quot;status&quot;:1,&quot;gmtCreate&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;gmtModified&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;loadTime&quot;:&quot;2021-11-02T16:36:15.213072177+08:00&quot;}</para>
             /// </summary>
             [NameInMap("BlackListDetail")]
             [Validation(Required=false)]
             public string BlackListDetail { get; set; }
 
             /// <summary>
-            /// <para>The name of the blacklist policy.</para>
+            /// <para>The name of the matched alert blacklist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;id&quot;:123,&quot;metricProject&quot;:&quot;acs_ecs_dashboard&quot;,&quot;userId&quot;:1736511134389110,&quot;uuid&quot;:&quot;8410dbbd-7d30-41c5-94cb-<em><b>&quot;,&quot;name&quot;:&quot;alert-</b></em>&quot;,&quot;productCategory&quot;:&quot;ecs&quot;,&quot;instances&quot;:[{&quot;instanceId&quot;:&quot;host-***&quot;}],&quot;metrics&quot;:null,&quot;scopeType&quot;:&quot;USER&quot;,&quot;scopeValue&quot;:&quot;&quot;,&quot;startTime&quot;:&quot;0001-01-01T00:00:00Z&quot;,&quot;endTime&quot;:&quot;9999-12-31T23:59:59.999999999+08:00&quot;,&quot;effectiveTime&quot;:null,&quot;isEnable&quot;:true,&quot;status&quot;:1,&quot;gmtCreate&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;gmtModified&quot;:&quot;2021-11-02T16:35:59+08:00&quot;,&quot;loadTime&quot;:&quot;2021-11-02T16:36:15.213072177+08:00&quot;}</para>
+            /// <para>Black_Test</para>
             /// </summary>
             [NameInMap("BlackListName")]
             [Validation(Required=false)]
             public string BlackListName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the blacklist policy.</para>
+            /// <para>The UUID of the matched alert blacklist.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8410dbbd-7d30-41c5-94cb-*****</para>
+            /// <para>8410dbbd-7d30-41c5-94cb-****</para>
             /// </summary>
             [NameInMap("BlackListUUID")]
             [Validation(Required=false)]
             public string BlackListUUID { get; set; }
 
+            /// <summary>
+            /// <para>The list of Wangwang IDs of the alert contact.</para>
+            /// </summary>
             [NameInMap("ContactALIIWWList")]
             [Validation(Required=false)]
             public List<string> ContactALIIWWList { get; set; }
 
+            /// <summary>
+            /// <para>The list of DingTalk accounts of the alert contact.</para>
+            /// </summary>
             [NameInMap("ContactDingList")]
             [Validation(Required=false)]
             public List<string> ContactDingList { get; set; }
 
+            /// <summary>
+            /// <para>The list of alert contact groups.</para>
+            /// </summary>
             [NameInMap("ContactGroups")]
             [Validation(Required=false)]
             public List<string> ContactGroups { get; set; }
 
+            /// <summary>
+            /// <para>The list of email addresses of the alert contact.</para>
+            /// </summary>
             [NameInMap("ContactMailList")]
             [Validation(Required=false)]
             public List<string> ContactMailList { get; set; }
 
+            /// <summary>
+            /// <para>The list of phone numbers of the alert contact.</para>
+            /// </summary>
             [NameInMap("ContactOnCallList")]
             [Validation(Required=false)]
             public List<string> ContactOnCallList { get; set; }
 
+            /// <summary>
+            /// <para>The list of phone numbers that receive text messages of the alert contact.</para>
+            /// </summary>
             [NameInMap("ContactSMSList")]
             [Validation(Required=false)]
             public List<string> ContactSMSList { get; set; }
 
             /// <summary>
-            /// <para>The dimensions of the resource that triggered alerts.</para>
+            /// <para>The dimensions of the resource for which the alert is triggered.</para>
             /// </summary>
             [NameInMap("Dimensions")]
             [Validation(Required=false)]
             public List<DescribeAlertLogListResponseBodyAlertLogListDimensions> Dimensions { get; set; }
             public class DescribeAlertLogListResponseBodyAlertLogListDimensions : TeaModel {
                 /// <summary>
-                /// <para>The key of the dimension.</para>
+                /// <para>The key of the alerting resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>instanceId</para>
@@ -99,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the dimension.</para>
+                /// <para>The value of the alerting resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-m5e1qg6uo38rztr4****</para>
@@ -110,21 +128,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             }
 
+            /// <summary>
+            /// <para>The list of webhook URLs of DingTalk chatbots for the alert contact.</para>
+            /// </summary>
             [NameInMap("DingdingWebhookList")]
             [Validation(Required=false)]
             public List<string> DingdingWebhookList { get; set; }
 
             /// <summary>
-            /// <para>The alert rule based on which the alert is triggered.</para>
+            /// <para>The rule that triggers the alert.</para>
             /// </summary>
             [NameInMap("Escalation")]
             [Validation(Required=false)]
             public DescribeAlertLogListResponseBodyAlertLogListEscalation Escalation { get; set; }
             public class DescribeAlertLogListResponseBodyAlertLogListEscalation : TeaModel {
                 /// <summary>
-                /// <para>The description of the alert rule.</para>
+                /// <para>The description of the rule that triggers the alert.</para>
                 /// <remarks>
-                /// <para> The content of the alert rule. This parameter indicates the conditions that trigger an alert.</para>
+                /// <para>The body of the alert rule. An alert rule is triggered when the monitoring data meets the alert conditions.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -135,11 +156,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Expression { get; set; }
 
                 /// <summary>
-                /// <para>The alert level and the methods that are used to send alert notifications. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>P4: Alert notifications are sent by using emails and DingTalk chatbots.</description></item>
-                /// <item><description>OK: No alert is generated.</description></item>
-                /// </list>
+                /// <para>The alert level and notification methods. Valid values:</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;- P2: phone calls, text messages, emails, and DingTalk chatbots.</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;- P3: text messages, emails, and DingTalk chatbots.</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;- P4: emails and DingTalk chatbots.</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;- OK: no alerts.</para>
+                /// <para>&lt;props=&quot;intl&quot;&gt;- P4: emails and DingTalk chatbots.</para>
+                /// <para>&lt;props=&quot;intl&quot;&gt;- OK: no alerts.</para>
+                /// <para>&lt;props=&quot;partner&quot;&gt;- P4: emails and DingTalk chatbots.</para>
+                /// <para>&lt;props=&quot;partner&quot;&gt;- OK: no alerts.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>P4</para>
@@ -149,7 +174,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Level { get; set; }
 
                 /// <summary>
-                /// <para>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</para>
+                /// <para>The number of times that the alert is retried.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -161,7 +186,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The event name.</para>
+            /// <para>The name of the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IOHang</para>
@@ -171,14 +196,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The extended fields.</para>
+            /// <para>The extended information of the alert.</para>
             /// </summary>
             [NameInMap("ExtendedInfo")]
             [Validation(Required=false)]
             public List<DescribeAlertLogListResponseBodyAlertLogListExtendedInfo> ExtendedInfo { get; set; }
             public class DescribeAlertLogListResponseBodyAlertLogListExtendedInfo : TeaModel {
                 /// <summary>
-                /// <para>The name of the extended field.</para>
+                /// <para>The name of the extension field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>userId</para>
@@ -188,10 +213,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The value of the extended field.</para>
+                /// <para>The value of the extension field.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>120886317861****</para>
+                /// <para>100931896542****</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -220,7 +245,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>The ID of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-m5e1qg6uo38rztr4****</para>
@@ -230,7 +255,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The resource name.</para>
+            /// <para>The name of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>portalHost</para>
@@ -240,11 +265,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The alert level and the methods that are used to send alert notifications. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>P4: Alert notifications are sent by using emails and DingTalk chatbots.</description></item>
-            /// <item><description>OK: No alert is generated.</description></item>
-            /// </list>
+            /// <para>The alert level and notification methods. Valid values:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- P2: phone calls, text messages, emails, and DingTalk chatbots.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- P3: text messages, emails, and DingTalk chatbots.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- P4: emails and DingTalk chatbots.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- OK: no alerts.</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;- P4: emails and DingTalk chatbots.</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;- OK: no alerts.</para>
+            /// <para>&lt;props=&quot;partner&quot;&gt;- P4: emails and DingTalk chatbots.</para>
+            /// <para>&lt;props=&quot;partner&quot;&gt;- OK: no alerts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>P4</para>
@@ -254,10 +283,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the alert level was changed. Valid values:</para>
+            /// <para>The change of the alert level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>P4-&gt;OK</c>: The alert level was changed from P4 to OK.</description></item>
-            /// <item><description><c>P4-&gt;P4</c>: The alert level was still P4.</description></item>
+            /// <item><description><c>P4-&gt;OK</c>: The alert level changes from P4 to OK, which indicates that the alert is cleared.</description></item>
+            /// <item><description><c>P4-&gt;P4</c>: indicates a P4-level alert.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -271,14 +300,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The log ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>7818361[1523]@1671593992[1]</para>
+            /// <para>7510****::e8a472a0-46ae-4ac0-84b1-e46be368****</para>
             /// </summary>
             [NameInMap("LogId")]
             [Validation(Required=false)]
             public string LogId { get; set; }
 
             /// <summary>
-            /// <para>The alert information in a JSON string.</para>
+            /// <para>The alert-related information, which is a JSON string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;alertName&quot;:&quot;e47aa0ac-4076-44db-a47d-d1083968****_Availability&quot;}</para>
@@ -288,7 +317,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The metric name.</para>
+            /// <para>The name of the metric.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu_total</para>
@@ -308,10 +337,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the cloud service. Valid values:</para>
+            /// <para>The cloud service identifier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>If the cloud service is provided by Alibaba Cloud, the abbreviation of the service name is returned. Example: ECS.</description></item>
-            /// <item><description>If the cloud service is not provided by Alibaba Cloud, a value in the <c>acs_Service keyword</c> format is returned. Example: acs_networkmonitor.</description></item>
+            /// <item><description><para>For an Alibaba Cloud service, the value is the abbreviation of the cloud service name. Example: ECS.</para>
+            /// </description></item>
+            /// <item><description><para>For a non-Alibaba Cloud service, the value is in the format of <c>acs_Product keyword</c>. Example: acs_networkmonitor.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -333,35 +364,45 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// <para>The name of the alert rule.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CPU utilization</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The details about the sending results of alert notifications.</para>
+            /// <para>The details of the alert pushing result.</para>
             /// </summary>
             [NameInMap("SendDetail")]
             [Validation(Required=false)]
             public DescribeAlertLogListResponseBodyAlertLogListSendDetail SendDetail { get; set; }
             public class DescribeAlertLogListResponseBodyAlertLogListSendDetail : TeaModel {
                 /// <summary>
-                /// <para>The list of sending results that are categorized by notification method.</para>
+                /// <para>The list of alert pushing results by alert channel.</para>
                 /// </summary>
                 [NameInMap("ChannelResultList")]
                 [Validation(Required=false)]
                 public List<DescribeAlertLogListResponseBodyAlertLogListSendDetailChannelResultList> ChannelResultList { get; set; }
                 public class DescribeAlertLogListResponseBodyAlertLogListSendDetailChannelResultList : TeaModel {
                     /// <summary>
-                    /// <para>The method that is used to send alert notifications. Valid values:</para>
+                    /// <para>The alert pushing channel. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>MAIL: email</description></item>
-                    /// <item><description>SMS: text message</description></item>
-                    /// <item><description>WEBHOOK: alert callback</description></item>
-                    /// <item><description>SLS: Simple Log Service</description></item>
-                    /// <item><description>ONCALL: phone call</description></item>
-                    /// <item><description>FC: Function Compute</description></item>
-                    /// <item><description>MNS: Message Service queue</description></item>
+                    /// <item><description><para>MAIL: email.</para>
+                    /// </description></item>
+                    /// <item><description><para>SMS: text message.</para>
+                    /// </description></item>
+                    /// <item><description><para>WEBHOOK: alert callback.</para>
+                    /// </description></item>
+                    /// <item><description><para>SLS: Log Service.</para>
+                    /// </description></item>
+                    /// <item><description><para>ONCALL: phone call.</para>
+                    /// </description></item>
+                    /// <item><description><para>FC: Function Compute.</para>
+                    /// </description></item>
+                    /// <item><description><para>MNS: Message Service (MNS).</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -372,17 +413,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Channel { get; set; }
 
                     /// <summary>
-                    /// <para>The sending results of alert notifications.</para>
+                    /// <para>The list of alert information results that CloudMonitor sends to the alert channel.</para>
                     /// </summary>
                     [NameInMap("ResultList")]
                     [Validation(Required=false)]
                     public List<DescribeAlertLogListResponseBodyAlertLogListSendDetailChannelResultListResultList> ResultList { get; set; }
                     public class DescribeAlertLogListResponseBodyAlertLogListSendDetailChannelResultListResultList : TeaModel {
                         /// <summary>
-                        /// <para>The HTTP status code.</para>
+                        /// <para>The status code.</para>
                         /// <list type="bullet">
-                        /// <item><description>If the value of the <c>Channel</c> parameter is <c>WEBHOOK</c>, the status code is 200 or 500.</description></item>
-                        /// <item><description>If the value of the <c>Channel</c> parameter is <c>MAIL</c>, <c>SMS</c>, <c>SLS</c>, <c>ONCALL</c>, <c>FC</c>, or <c>MNS</c>, this parameter is empty or not returned.</description></item>
+                        /// <item><description><para>If <c>Channel</c> is set to <c>WEBHOOK</c>, the status code is 200 or 500.</para>
+                        /// </description></item>
+                        /// <item><description><para>If <c>Channel</c> is set to <c>MAIL</c>, <c>SMS</c>, <c>SLS</c>, <c>ONCALL</c>, <c>FC</c>, or <c>MNS</c>, this parameter is unavailable or empty.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -393,7 +436,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Code { get; set; }
 
                         /// <summary>
-                        /// <para>The details of the returned results.</para>
+                        /// <para>The details of the returned result.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{ }</para>
@@ -403,7 +446,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string Detail { get; set; }
 
                         /// <summary>
-                        /// <para>The request ID returned when CloudMonitor calls another cloud service.</para>
+                        /// <para>The request ID returned by calling another cloud service.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0BDAF8A8-04DC-5F0C-90E4-724D42C4****</para>
@@ -413,10 +456,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         public string RequestId { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the request was successful. Valid values:</para>
+                        /// <para>The result of calling the target.</para>
                         /// <list type="bullet">
-                        /// <item><description>true</description></item>
-                        /// <item><description>false</description></item>
+                        /// <item><description><para>true: The call was successful.</para>
+                        /// </description></item>
+                        /// <item><description><para>false: The call failed.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -426,6 +471,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         [Validation(Required=false)]
                         public bool? Success { get; set; }
 
+                        /// <summary>
+                        /// <para>The list of channel notifications.</para>
+                        /// </summary>
                         [NameInMap("notifyTargetList")]
                         [Validation(Required=false)]
                         public List<string> NotifyTargetList { get; set; }
@@ -435,10 +483,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the alert notifications are sent.</para>
+                /// <para>The pushing status of the alert information.</para>
                 /// <list type="bullet">
-                /// <item><description>If the alert notifications are sent, the value &quot;success&quot; is returned.</description></item>
-                /// <item><description>If the configuration is invalid, no alert notification is sent and an error code is returned.</description></item>
+                /// <item><description><para>success: The alert was pushed.</para>
+                /// </description></item>
+                /// <item><description><para>error code: If a configuration error occurs and the pushing list is empty, an error code is displayed.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -451,32 +501,32 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The sending results of alert notifications.</para>
+            /// <para>The list of alert sending results.</para>
             /// </summary>
             [NameInMap("SendResultList")]
             [Validation(Required=false)]
             public List<DescribeAlertLogListResponseBodyAlertLogListSendResultList> SendResultList { get; set; }
             public class DescribeAlertLogListResponseBodyAlertLogListSendResultList : TeaModel {
                 /// <summary>
-                /// <para>The category of the alert notification method. Valid values:</para>
+                /// <para>The channel that sends the alert. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>MAIL: email</description></item>
-                /// <item><description>ALIIM: TradeManager</description></item>
-                /// <item><description>SMS: text message</description></item>
-                /// <item><description>CALL: phone call</description></item>
-                /// <item><description>DING: DingTalk chatbot</description></item>
-                /// <item><description>Merged: alert merging</description></item>
+                /// <item><description>MAIL: email.</description></item>
+                /// <item><description>ALIIM: Wangwang.</description></item>
+                /// <item><description>SMS: text message.</description></item>
+                /// <item><description>CALL: phone call.</description></item>
+                /// <item><description>DING: DingTalk chatbot.</description></item>
+                /// <item><description>Merged: alert combination.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Mail</para>
+                /// <para>MAIL</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The notification object corresponding to the alert notification method.</para>
+                /// <para>The notification target that corresponds to the alert channel.</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -485,15 +535,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The status of the alert. Valid values:</para>
+            /// <para>The alert status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The alert is triggered or cleared.</description></item>
-            /// <item><description>1: The alert is ineffective.</description></item>
-            /// <item><description>2: The alert is muted.</description></item>
-            /// <item><description>3: The host is restarting.</description></item>
-            /// <item><description>4: No alert notification is sent.</description></item>
+            /// <item><description>0: An alert is triggered or cleared.</description></item>
+            /// <item><description>1: The current time is not within the effective period of the alert.</description></item>
+            /// <item><description>2: The current time is within the channel silence period.</description></item>
+            /// <item><description>3: The host is being restarted.</description></item>
+            /// <item><description>4: No alerts are sent.</description></item>
             /// </list>
-            /// <para>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P2, P3, or P4; the alert is cleared if Level is set to OK.
+            /// &lt;props=&quot;intl&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P4; the alert is cleared if Level is set to OK.
+            /// &lt;props=&quot;partner&quot;&gt;When the alert status is 0, an alert is triggered if Level is set to P4; the alert is cleared if Level is set to OK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -503,14 +555,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SendStatus { get; set; }
 
             /// <summary>
-            /// <para>The callback URLs.</para>
+            /// <para>The list of URLs that are called back when the alert is triggered.</para>
             /// </summary>
             [NameInMap("WebhookList")]
             [Validation(Required=false)]
             public List<DescribeAlertLogListResponseBodyAlertLogListWebhookList> WebhookList { get; set; }
             public class DescribeAlertLogListResponseBodyAlertLogListWebhookList : TeaModel {
                 /// <summary>
-                /// <para>The status code of the alert callback.</para>
+                /// <para>The status code returned for the alert callback.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200</para>
@@ -520,7 +572,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The message returned for the alert callback.</para>
+                /// <para>The information returned for the alert callback.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success</para>
@@ -530,7 +582,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The callback URL.</para>
+                /// <para>The URL that is called back when the alert is triggered.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://www.aliyun.com/webhook.html">https://www.aliyun.com/webhook.html</a></para>
@@ -546,7 +598,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code 200 indicates that the call was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -597,10 +649,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

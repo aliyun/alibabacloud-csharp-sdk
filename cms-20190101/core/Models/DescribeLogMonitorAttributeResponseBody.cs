@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>A status code of 200 indicates a successful request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The details of the log monitoring metric.</para>
+        /// <para>The details of the Log Monitoring task.</para>
         /// </summary>
         [NameInMap("LogMonitor")]
         [Validation(Required=false)]
         public DescribeLogMonitorAttributeResponseBodyLogMonitor LogMonitor { get; set; }
         public class DescribeLogMonitorAttributeResponseBodyLogMonitor : TeaModel {
             /// <summary>
-            /// <para>The aggregation logic.</para>
+            /// <para>The definitions of aggregations.</para>
             /// </summary>
             [NameInMap("Aggregates")]
             [Validation(Required=false)]
@@ -40,33 +40,41 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <para>The alias of the field.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>HostName</para>
+                /// <para>alias_******</para>
                 /// </summary>
                 [NameInMap("Alias")]
                 [Validation(Required=false)]
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The name of the field in logs.</para>
+                /// <para>The original name of the field in the log.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>hostName</para>
+                /// <para>field_******</para>
                 /// </summary>
                 [NameInMap("FieldName")]
                 [Validation(Required=false)]
                 public string FieldName { get; set; }
 
                 /// <summary>
-                /// <para>The function that is used to aggregate the monitoring data of logs within a statistical period. Valid values:</para>
+                /// <para>The function that is used to aggregate log data in a statistical period. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>count: counts the number</description></item>
-                /// <item><description>sum: calculates the total value</description></item>
-                /// <item><description>avg: calculates the average value</description></item>
-                /// <item><description>max: calculates the maximum value</description></item>
-                /// <item><description>min: calculates the minimum value</description></item>
-                /// <item><description>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period</description></item>
-                /// <item><description>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period</description></item>
-                /// <item><description>distinct: calculates the number of unique values of the specified field within a statistical period</description></item>
+                /// <item><description><para>count: Counts the number of logs.</para>
+                /// </description></item>
+                /// <item><description><para>sum: Calculates the sum of values in a field.</para>
+                /// </description></item>
+                /// <item><description><para>avg: Calculates the average of values in a field.</para>
+                /// </description></item>
+                /// <item><description><para>max: Selects the maximum value in a field.</para>
+                /// </description></item>
+                /// <item><description><para>min: Selects the minimum value in a field.</para>
+                /// </description></item>
+                /// <item><description><para>countps: Calculates the average number of logs that are generated per second in a statistical period.</para>
+                /// </description></item>
+                /// <item><description><para>sumps: Calculates the average sum of values in a field per second in a statistical period.</para>
+                /// </description></item>
+                /// <item><description><para>distinct: Counts the number of unique values in a field in a statistical period.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -80,7 +88,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <para>The maximum value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>10</para>
+                /// <para>0</para>
                 /// </summary>
                 [NameInMap("Max")]
                 [Validation(Required=false)]
@@ -99,11 +107,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The time when the metric was created.</para>
-            /// <para>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the task was created.</para>
+            /// <para>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1547431398000</para>
+            /// <para>1678440033000</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -113,42 +121,44 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The ID of the application group.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>12345</para>
+            /// <para>123******</para>
             /// </summary>
             [NameInMap("GroupId")]
             [Validation(Required=false)]
             public long? GroupId { get; set; }
 
+            /// <summary>
+            /// <para>The dimension based on which log data is aggregated. This parameter is equivalent to the \<c>GROUP BY\\</c> clause in an SQL statement. You can specify a dimension to group monitoring data. If you do not specify this parameter, all monitoring data is aggregated based on the aggregation method.</para>
+            /// </summary>
             [NameInMap("Groupbys")]
             [Validation(Required=false)]
             public List<string> Groupbys { get; set; }
 
             /// <summary>
-            /// <para>The ID of the log.</para>
+            /// <para>The ID of the Log Monitoring task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1234</para>
+            /// <para>123******</para>
             /// </summary>
             [NameInMap("LogId")]
             [Validation(Required=false)]
             public long? LogId { get; set; }
 
             /// <summary>
-            /// <para>The extended field. The extended field allows you to perform basic operations on the aggregation results.</para>
-            /// <para>For example, if you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.</para>
+            /// <para>The metric expression.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}</para>
+            /// <para>{}</para>
             /// </summary>
             [NameInMap("MetricExpress")]
             [Validation(Required=false)]
             public string MetricExpress { get; set; }
 
             /// <summary>
-            /// <para>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>The name of the metric.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cpu_total</para>
+            /// <para>cpu_total_******</para>
             /// </summary>
             [NameInMap("MetricName")]
             [Validation(Required=false)]
@@ -158,24 +168,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The name of the Simple Log Service Logstore.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test-logstore</para>
+            /// <para>logstore_******</para>
             /// </summary>
             [NameInMap("SlsLogstore")]
             [Validation(Required=false)]
             public string SlsLogstore { get; set; }
 
             /// <summary>
-            /// <para>The name of the SLS project.</para>
+            /// <para>The name of the Simple Log Service project.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test-project</para>
+            /// <para>project_******</para>
             /// </summary>
             [NameInMap("SlsProject")]
             [Validation(Required=false)]
             public string SlsProject { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the Simple Log Service (SLS) Logstore resides.</para>
+            /// <para>The ID of the region where Simple Log Service resides.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -184,37 +194,46 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string SlsRegionId { get; set; }
 
+            /// <summary>
+            /// <para>The pre-aggregation window. Unit: seconds. Cloud Monitor aggregates data in the specified pre-aggregation window.</para>
+            /// </summary>
             [NameInMap("Tumblingwindows")]
             [Validation(Required=false)]
             public List<string> Tumblingwindows { get; set; }
 
             /// <summary>
-            /// <para>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</para>
-            /// <para>If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</para>
+            /// <para>The filter conditions. This parameter is used with \<c>ValueFilterRelation\\</c>. This parameter is equivalent to the \<c>WHERE\\</c> clause in an SQL statement.</para>
+            /// <para>If you do not specify this parameter, all data is processed. For example, if a log contains a \<c>Level\\</c> field and you want to count the number of logs where the value of \<c>Level\\</c> is \<c>Error\\</c>, you can set the aggregation function to \<c>count\\</c> and specify a filter condition where \<c>Level\\</c> equals \<c>Error\\</c>.</para>
             /// </summary>
             [NameInMap("ValueFilter")]
             [Validation(Required=false)]
             public List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> ValueFilter { get; set; }
             public class DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter : TeaModel {
                 /// <summary>
-                /// <para>The name of the log field used for matching in the filter condition.</para>
+                /// <para>The key.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>hostName</para>
+                /// <para>key_******</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The method that is used to match the field value. Valid values:</para>
+                /// <para>The operator that is used to match the field value. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><c>contain</c>: contains</description></item>
-                /// <item><description><c>notContain</c>: does not contain</description></item>
-                /// <item><description><c>&gt;</c>: greater than</description></item>
-                /// <item><description><c>&lt;</c>: less than</description></item>
-                /// <item><description><c>&gt;=</c>: greater than or equal to</description></item>
-                /// <item><description><c>&lt;=</c>: less than or equal to</description></item>
+                /// <item><description><para><c>contain</c>: contains.</para>
+                /// </description></item>
+                /// <item><description><para><c>notContain</c>: does not contain.</para>
+                /// </description></item>
+                /// <item><description><para><c>&gt;</c>: greater than.</para>
+                /// </description></item>
+                /// <item><description><para><c>&lt;</c>: less than.</para>
+                /// </description></item>
+                /// <item><description><para><c>&gt;=</c>: greater than or equal to.</para>
+                /// </description></item>
+                /// <item><description><para><c>&lt;=</c>: less than or equal to.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -225,10 +244,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>The field value to be matched in the filter condition.</para>
+                /// <para>The value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>portal</para>
+                /// <para>value_******</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -237,10 +256,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters must be used in pair. Valid values:</para>
+            /// <para>The logical operator for the filter conditions. This parameter is used with \<c>ValueFilter\\</c>. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>and</description></item>
-            /// <item><description>or</description></item>
+            /// <item><description><para>and: The logical AND operator.</para>
+            /// </description></item>
+            /// <item><description><para>or: The logical OR operator.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -253,10 +274,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>successful</para>
+        /// <para>The specified resource is not found.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -273,10 +294,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -40,8 +40,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the policy.</para>
-        /// <para>Valid value: PauseNotify.</para>
+        /// <para>The type of the pause notification.</para>
+        /// <para>Currently, only PauseNotify is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

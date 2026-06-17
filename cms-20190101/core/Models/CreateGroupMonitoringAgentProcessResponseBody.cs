@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3F6150F9-45C7-43F9-9578-A58B2E726C90</para>
+        /// <para>718FEA81-64C3-4F23-8F90-0531F7489FC1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -64,8 +64,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
-        /// <item><description>false: The call fails.</description></item>
+        /// <item><description><para>true: The call is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The call fails.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,10 +33,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string LogId { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The returned message. Results:</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, <c>successful</c> is returned.</description></item>
-        /// <item><description>If the request failed, an error message is returned. Example: <c>alias of aggreate must be set value.</c></description></item>
+        /// <item><description><para>If the operation is successful, <c>successful</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the operation fails, an error message is returned, such as <c>alias of aggreate must be set value.</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,10 +59,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The operation is successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

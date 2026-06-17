@@ -25,8 +25,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <list type="bullet">
-        /// <item><description>If the request was successful, the value <c>successful</c> is returned.</description></item>
-        /// <item><description>If the request failed, an error message is returned.</description></item>
+        /// <item><description><para>If the request was successful, the value <c>successful</c> is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If the request failed, an error message is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,8 +71,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,9 +123,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The interval at which the CloudMonitor agent collects host monitoring data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>15</description></item>
-            /// <item><description>30</description></item>
-            /// <item><description>60</description></item>
+            /// <item><description><para>15</para>
+            /// </description></item>
+            /// <item><description><para>30</para>
+            /// </description></item>
+            /// <item><description><para>60</para>
+            /// </description></item>
             /// </list>
             /// <para>Unit: seconds.</para>
             /// 
@@ -165,10 +172,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The timeout period during which the CloudMonitor agent collects host monitoring data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0</description></item>
-            /// <item><description>15</description></item>
-            /// <item><description>30</description></item>
-            /// <item><description>60</description></item>
+            /// <item><description><para>0</para>
+            /// </description></item>
+            /// <item><description><para>15</para>
+            /// </description></item>
+            /// <item><description><para>30</para>
+            /// </description></item>
+            /// <item><description><para>60</para>
+            /// </description></item>
             /// </list>
             /// <para>Unit: seconds.</para>
             /// 
@@ -278,12 +289,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The method that is used to match the instance name. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>startWith: starts with a prefix</description></item>
-                /// <item><description>endWith: ends with a suffix</description></item>
-                /// <item><description>all: matches all</description></item>
-                /// <item><description>equals: equals</description></item>
-                /// <item><description>contains: contains</description></item>
-                /// <item><description>notContains: does not contain</description></item>
+                /// <item><description><para>startWith: starts with a prefix</para>
+                /// </description></item>
+                /// <item><description><para>endWith: ends with a suffix</para>
+                /// </description></item>
+                /// <item><description><para>all: matches all</para>
+                /// </description></item>
+                /// <item><description><para>equals: equals</para>
+                /// </description></item>
+                /// <item><description><para>contains: contains</para>
+                /// </description></item>
+                /// <item><description><para>notContains: does not contain</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -318,8 +335,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The relationship between the conditions that are used to filter metric import tasks. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>or</description></item>
-            /// <item><description>and</description></item>
+            /// <item><description><para>or</para>
+            /// </description></item>
+            /// <item><description><para>and</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -342,8 +361,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The network type of the host. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><c>vpc</c></description></item>
-            /// <item><description><c>Internet</c></description></item>
+            /// <item><description><para><c>vpc</c></para>
+            /// </description></item>
+            /// <item><description><para><c>Internet</c></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -419,14 +440,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                         /// <summary>
                         /// <para>The method that is used to filter logs imported from Log Service. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><c>contain</c>: contains</description></item>
-                        /// <item><description><c>notContain</c>: does not contain</description></item>
-                        /// <item><description><c>&gt;</c>: greater than</description></item>
-                        /// <item><description><c>&lt;</c>: less than</description></item>
-                        /// <item><description><c>=</c>: equal to</description></item>
-                        /// <item><description><c>! =</c>: not equal to</description></item>
-                        /// <item><description><c>&gt;=</c>: greater than or equal to</description></item>
-                        /// <item><description><c>&lt;=</c>: less than or equal to</description></item>
+                        /// <item><description><para><c>contain</c>: contains</para>
+                        /// </description></item>
+                        /// <item><description><para><c>notContain</c>: does not contain</para>
+                        /// </description></item>
+                        /// <item><description><para><c>&gt;</c>: greater than</para>
+                        /// </description></item>
+                        /// <item><description><para><c>&lt;</c>: less than</para>
+                        /// </description></item>
+                        /// <item><description><para><c>=</c>: equal to</para>
+                        /// </description></item>
+                        /// <item><description><para><c>! =</c>: not equal to</para>
+                        /// </description></item>
+                        /// <item><description><para><c>&gt;=</c>: greater than or equal to</para>
+                        /// </description></item>
+                        /// <item><description><para><c>&lt;=</c>: less than or equal to</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -461,8 +490,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The relationship between multiple filter conditions. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>and (default): Logs are processed only if all filter conditions are met.</description></item>
-                    /// <item><description>or: Logs are processed if one of the filter conditions is met.</description></item>
+                    /// <item><description><para>and (default): Logs are processed only if all filter conditions are met.</para>
+                    /// </description></item>
+                    /// <item><description><para>or: Logs are processed if one of the filter conditions is met.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -523,17 +554,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The function that is used to aggregate log data within a statistical period. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>count: counts the number.</description></item>
-                    /// <item><description>sum: calculates the total value.</description></item>
-                    /// <item><description>avg: calculates the average value.</description></item>
-                    /// <item><description>max: calculates the maximum value.</description></item>
-                    /// <item><description>min: calculates the minimum value.</description></item>
-                    /// <item><description>value: collects samples within the statistical period.</description></item>
-                    /// <item><description>countps: calculates the average number of the specified field per second by using the following formula: Counted number of the specified field/Total number of seconds within the statistical period.</description></item>
-                    /// <item><description>sumps: calculates the average number of the specified field per second by using the following formula: Total value of the specified field/Total number of seconds within the statistical period.</description></item>
-                    /// <item><description>distinct: counts the number of logs where the specified field appears within the statistical period.</description></item>
-                    /// <item><description>distribution: counts the number of logs that meet a specified condition within the statistical period.</description></item>
-                    /// <item><description>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</description></item>
+                    /// <item><description><para>count: counts the number.</para>
+                    /// </description></item>
+                    /// <item><description><para>sum: calculates the total value.</para>
+                    /// </description></item>
+                    /// <item><description><para>avg: calculates the average value.</para>
+                    /// </description></item>
+                    /// <item><description><para>max: calculates the maximum value.</para>
+                    /// </description></item>
+                    /// <item><description><para>min: calculates the minimum value.</para>
+                    /// </description></item>
+                    /// <item><description><para>value: collects samples within the statistical period.</para>
+                    /// </description></item>
+                    /// <item><description><para>countps: calculates the average number of the specified field per second by using the following formula: Counted number of the specified field/Total number of seconds within the statistical period.</para>
+                    /// </description></item>
+                    /// <item><description><para>sumps: calculates the average number of the specified field per second by using the following formula: Total value of the specified field/Total number of seconds within the statistical period.</para>
+                    /// </description></item>
+                    /// <item><description><para>distinct: counts the number of logs where the specified field appears within the statistical period.</para>
+                    /// </description></item>
+                    /// <item><description><para>distribution: counts the number of logs that meet a specified condition within the statistical period.</para>
+                    /// </description></item>
+                    /// <item><description><para>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -546,8 +588,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The value of the function that is used to aggregate logs imported from Log Service.</para>
                     /// <list type="bullet">
-                    /// <item><description>If the <c>Function</c> parameter is set to <c>distribution</c>, this parameter indicates the lower limit of the statistical interval. For example, 200 indicates that the number of HTTP requests whose status code is 2XX is calculated.</description></item>
-                    /// <item><description>If the <c>Function</c> parameter is set to <c>percentile</c>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</description></item>
+                    /// <item><description><para>If the <c>Function</c> parameter is set to <c>distribution</c>, this parameter indicates the lower limit of the statistical interval. For example, 200 indicates that the number of HTTP requests whose status code is 2XX is calculated.</para>
+                    /// </description></item>
+                    /// <item><description><para>If the <c>Function</c> parameter is set to <c>percentile</c>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -620,8 +664,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The type of the metric import task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>aliyun_fc: metric import tasks for Alibaba Cloud services</description></item>
-            /// <item><description>aliyun_sls: metrics for logs imported from Log Service</description></item>
+            /// <item><description><para>aliyun_fc: metric import tasks for Alibaba Cloud services</para>
+            /// </description></item>
+            /// <item><description><para>aliyun_sls: metrics for logs imported from Log Service</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -644,8 +690,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</para>
             /// <list type="bullet">
-            /// <item><description>namespace: the namespace of the Alibaba Cloud service.</description></item>
-            /// <item><description>metric_list: the metrics of the Alibaba Cloud service.</description></item>
+            /// <item><description><para>namespace: the namespace of the Alibaba Cloud service.</para>
+            /// </description></item>
+            /// <item><description><para>metric_list: the metrics of the Alibaba Cloud service.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

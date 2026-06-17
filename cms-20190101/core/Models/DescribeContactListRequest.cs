@@ -11,9 +11,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class DescribeContactListRequest : TeaModel {
         /// <summary>
         /// <para>The alert notification method. Valid values:</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- SMS: text message.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;- AliIM: TradeManager.</para>
         /// <list type="bullet">
-        /// <item><description>Mail: emails</description></item>
-        /// <item><description>DingWebHook: DingTalk chatbots</description></item>
+        /// <item><description><para>Mail: email.</para>
+        /// </description></item>
+        /// <item><description><para>DingWebHook: DingTalk chatbot.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +28,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ChanelType { get; set; }
 
         /// <summary>
-        /// <para>The value specified for the alert notification method.</para>
+        /// <para>The value of the alert notification method.</para>
         /// <remarks>
-        /// <para> This parameter is required only if you set the <c>ChanelType</c> parameter to <c>Mail</c>.</para>
+        /// <para>This parameter is required only when <c>ChanelType</c> is set to <c>Mail</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ContactName { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMetricRuleTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The value 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public DeleteMetricRuleTemplateResponseBodyResource Resource { get; set; }
         public class DeleteMetricRuleTemplateResponseBodyResource : TeaModel {
             /// <summary>
-            /// <para>The ID of the template.</para>
+            /// <para>The template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123****</para>
@@ -62,7 +62,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

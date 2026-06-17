@@ -27,8 +27,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// </description></item>
         /// <item><description><para>If you configure this parameter, the blacklist policy is effective only within the specified time range. Examples:</para>
         /// <list type="bullet">
-        /// <item><description><c>03:00-04:59</c>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</description></item>
-        /// <item><description><c>03:00-04:59 UTC+0700</c>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</description></item>
+        /// <item><description><para><c>03:00-04:59</c>: The blacklist policy is effective from 03:00 to 05:00 local time. 05:00 local time is excluded.</para>
+        /// </description></item>
+        /// <item><description><para><c>03:00-04:59 UTC+0700</c>: The blacklist policy is effective from 03:00 to 05:00 (UTC+7). 05:00 (UTC+7) is excluded.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -73,8 +75,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The metrics of the instance.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</description></item>
-        /// <item><description>If you configure this parameter, the blacklist policy applies only to the current metric.</description></item>
+        /// <item><description><para>If you do not configure this parameter, the blacklist policy applies to all metrics of the specified cloud service.</para>
+        /// </description></item>
+        /// <item><description><para>If you configure this parameter, the blacklist policy applies only to the current metric.</para>
+        /// </description></item>
         /// </list>
         /// </summary>
         [NameInMap("Metrics")]
@@ -136,8 +140,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The effective scope of the blacklist policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER (default): The blacklist policy takes effect only for the current Alibaba Cloud account.</description></item>
-        /// <item><description>GROUP: The blacklist policy takes effect only for the specified application group. For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</description></item>
+        /// <item><description><para>USER (default): The blacklist policy takes effect only for the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>GROUP: The blacklist policy takes effect only for the specified application group. For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

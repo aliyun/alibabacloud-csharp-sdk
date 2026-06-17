@@ -24,8 +24,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The CloudMonitor agent is automatically installed.</description></item>
-        /// <item><description>false (default): The CloudMonitor agent is not automatically installed.</description></item>
+        /// <item><description><para>true: The CloudMonitor agent is automatically installed.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): The CloudMonitor agent is not automatically installed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +40,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The application group automatically subscribes to event notifications.</description></item>
-        /// <item><description>false (default): The application group does not automatically subscribe to event notifications.</description></item>
+        /// <item><description><para>true: The application group automatically subscribes to event notifications.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): The application group does not automatically subscribe to event notifications.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>A status code of 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>The specified resource is not found.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation was successful. \<c>true\\</c>: The operation was successful. \<c>false\\</c>: The operation failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

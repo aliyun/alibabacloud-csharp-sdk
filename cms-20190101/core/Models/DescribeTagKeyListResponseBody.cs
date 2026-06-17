@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeTagKeyListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>状态码。</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>200表示成功。</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>错误信息。</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter PageSize is not valid.</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>B04B8CF3-4489-432D-83BA-6F128E5F2293</para>
@@ -43,11 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>用于标识本次调用是否成功</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

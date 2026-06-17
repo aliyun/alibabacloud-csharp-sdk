@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the data export rule.</para>
+        /// <para>The name of the export rules.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

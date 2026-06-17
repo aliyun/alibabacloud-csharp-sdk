@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The value 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -119,14 +119,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the site monitoring task.</para>
+        /// <para>The details of the monitoring task.</para>
         /// </summary>
         [NameInMap("SiteMonitors")]
         [Validation(Required=false)]
         public DescribeSiteMonitorAttributeResponseBodySiteMonitors SiteMonitors { get; set; }
         public class DescribeSiteMonitorAttributeResponseBodySiteMonitors : TeaModel {
             /// <summary>
-            /// <para>The URL that is monitored by the site monitoring task.</para>
+            /// <para>The monitored address of the monitoring task.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://aliyun.com">https://aliyun.com</a></para>
@@ -136,10 +136,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The type of the detection point. Default value: PC. Valid values:</para>
+            /// <para>The type of detection point. Default value: PC.
+            /// Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PC</description></item>
-            /// <item><description>MOBILE</description></item>
+            /// <item><description><para>PC: wired network.</para>
+            /// </description></item>
+            /// <item><description><para>MOBILE: mobile network.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -150,7 +153,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string AgentGroup { get; set; }
 
             /// <summary>
-            /// <para>The custom detection cycle. You can specify only a time range within a week (from Monday to Sunday).</para>
+            /// <para>The custom monitoring schedule. You can select a time range from Monday to Sunday for monitoring.</para>
             /// </summary>
             [NameInMap("CustomSchedule")]
             [Validation(Required=false)]
@@ -167,7 +170,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>The end time of the detection. Unit: hours.</para>
+                /// <para>The custom monitoring end time.</para>
+                /// <para>Unit: hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>18</para>
@@ -177,7 +181,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? EndHour { get; set; }
 
                 /// <summary>
-                /// <para>The start time of the detection. Unit: hours.</para>
+                /// <para>The custom monitoring start time.</para>
+                /// <para>Unit: hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -187,7 +192,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? StartHour { get; set; }
 
                 /// <summary>
-                /// <para>The time zone of the detection.</para>
+                /// <para>The time zone for custom monitoring.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>local</para>
@@ -199,7 +204,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The interval at which the site monitoring task is executed. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.</para>
+            /// <para>The monitoring interval. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -241,7 +246,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The extended options of the site monitoring task. The options vary based on the specified protocol. For more information, see <a href="https://help.aliyun.com/document_detail/115048.html">CreateSiteMonitor</a>.</para>
+            /// <para>The extended options. Each monitoring type has different extended options. For more information, see <a href="https://help.aliyun.com/document_detail/115048.html">CreateSiteMonitor</a>.</para>
             /// </summary>
             [NameInMap("OptionJson")]
             [Validation(Required=false)]
@@ -276,7 +281,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>The number of retries after a DNS failure occurred.</para>
+                /// <para>The number of retries after a DNS failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -285,46 +290,109 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public long? Attempts { get; set; }
 
+                /// <summary>
+                /// <para>The authentication information.</para>
+                /// </summary>
                 [NameInMap("auth_info")]
                 [Validation(Required=false)]
                 public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfo AuthInfo { get; set; }
                 public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfo : TeaModel {
+                    /// <summary>
+                    /// <para>Supported only in multi-step monitoring. The AccessKey ID used for Alibaba Cloud authentication. We recommend that you use encrypted storage.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testAk</para>
+                    /// </summary>
                     [NameInMap("access_key_id")]
                     [Validation(Required=false)]
                     public string AccessKeyId { get; set; }
 
+                    /// <summary>
+                    /// <para>Supported only in multi-step monitoring. The AccessKey secret used for Alibaba Cloud authentication. We recommend that you use encrypted storage.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>testSk</para>
+                    /// </summary>
                     [NameInMap("access_key_secret")]
                     [Validation(Required=false)]
                     public string AccessKeySecret { get; set; }
 
+                    /// <summary>
+                    /// <para>Supported only in multi-step monitoring. The API action of the request when using Alibaba Cloud operations.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>example_api</para>
+                    /// </summary>
                     [NameInMap("api_action")]
                     [Validation(Required=false)]
                     public string ApiAction { get; set; }
 
+                    /// <summary>
+                    /// <para>Supported only in multi-step monitoring. The API version of the request when using Alibaba Cloud operations.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2019-01-01</para>
+                    /// </summary>
                     [NameInMap("api_version")]
                     [Validation(Required=false)]
                     public string ApiVersion { get; set; }
 
+                    /// <summary>
+                    /// <para>The OAuth 2.0 authentication style. Valid values: ROA and RPC.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>ROA</para>
+                    /// </summary>
                     [NameInMap("auth_style")]
                     [Validation(Required=false)]
                     public string AuthStyle { get; set; }
 
+                    /// <summary>
+                    /// <para>The client ID used for client authentication in OAuth 2.0.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>client_id</para>
+                    /// </summary>
                     [NameInMap("client_id")]
                     [Validation(Required=false)]
                     public string ClientId { get; set; }
 
+                    /// <summary>
+                    /// <para>The client secret used for client authentication in OAuth 2.0.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>client_secret</para>
+                    /// </summary>
                     [NameInMap("client_secret")]
                     [Validation(Required=false)]
                     public string ClientSecret { get; set; }
 
+                    /// <summary>
+                    /// <para>The grant type used in OAuth 2.0 authentication. Valid values: client_credentials and password.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>password</para>
+                    /// </summary>
                     [NameInMap("grant_type")]
                     [Validation(Required=false)]
                     public string GrantType { get; set; }
 
+                    /// <summary>
+                    /// <para>The password used for HTTP Basic Authentication.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test_password</para>
+                    /// </summary>
                     [NameInMap("password")]
                     [Validation(Required=false)]
                     public string Password { get; set; }
 
+                    /// <summary>
+                    /// <para>Supported only in multi-step monitoring. The region ID of the request when using Alibaba Cloud authentication.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cn-hangzhou</para>
+                    /// </summary>
                     [NameInMap("region_id")]
                     [Validation(Required=false)]
                     public string RegionId { get; set; }
@@ -339,30 +407,72 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                     }
 
+                    /// <summary>
+                    /// <para>The service name of the request when using AWS authentication.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>example_service_name</para>
+                    /// </summary>
                     [NameInMap("service_name")]
                     [Validation(Required=false)]
                     public string ServiceName { get; set; }
 
+                    /// <summary>
+                    /// <para>The session token used for AWS authentication.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>example_token</para>
+                    /// </summary>
                     [NameInMap("session_token")]
                     [Validation(Required=false)]
                     public string SessionToken { get; set; }
 
+                    /// <summary>
+                    /// <para>The authorization server URL in OAuth 2.0.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para><a href="https://www.example.com">https://www.example.com</a></para>
+                    /// </summary>
                     [NameInMap("token_url")]
                     [Validation(Required=false)]
                     public string TokenUrl { get; set; }
 
+                    /// <summary>
+                    /// <para>The authentication type. HTTP Basic Authentication is supported. Valid values: basic.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>basic</para>
+                    /// </summary>
                     [NameInMap("type")]
                     [Validation(Required=false)]
                     public string Type { get; set; }
 
+                    /// <summary>
+                    /// <para>Specifies whether the key is stored in the client cookie for digest authentication.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
                     [NameInMap("use_cookie_session_key")]
                     [Validation(Required=false)]
                     public bool? UseCookieSessionKey { get; set; }
 
+                    /// <summary>
+                    /// <para>The username used for HTTP Basic Authentication.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>test_username</para>
+                    /// </summary>
                     [NameInMap("username")]
                     [Validation(Required=false)]
                     public string Username { get; set; }
 
+                    /// <summary>
+                    /// <para>Supported only in multi-step monitoring. Specifies whether additional resources exist when using Alibaba Cloud authentication for this step.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
                     [NameInMap("with_addon_resources")]
                     [Validation(Required=false)]
                     public bool? WithAddonResources { get; set; }
@@ -420,10 +530,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether certificate errors are ignored. Valid values:</para>
+                /// <para>Specifies whether to ignore certificate errors. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>false: Certificate errors are not ignored.</description></item>
-                /// <item><description>true: Certificate errors are ignored.</description></item>
+                /// <item><description>false: Does not ignore certificate errors.</description></item>
+                /// <item><description>true: Ignores certificate errors.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -434,10 +544,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public bool? BrowserInsecure { get; set; }
 
                 /// <summary>
-                /// <para>The version of the browser test task. Valid values:</para>
+                /// <para>The browser monitoring version. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>1: browser test for a single page</description></item>
-                /// <item><description>2: browser test for multiple pages</description></item>
+                /// <item><description>1: Single-page monitoring.</description></item>
+                /// <item><description>2: Multi-page monitoring.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -472,7 +582,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>The cookie of the HTTP request.</para>
+                /// <para>The cookie for the HTTP request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>lang=en</para>
@@ -482,10 +592,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Cookie { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the automatic MTR diagnostics feature is enabled for a failed task. Valid values:</para>
+                /// <para>Specifies whether to enable automatic MTR network diagnostics after a task failure. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>false: The automatic MTR diagnostics feature is disabled for a failed task.</description></item>
-                /// <item><description>true: The automatic MTR diagnostics feature is enabled for a failed task.</description></item>
+                /// <item><description>false: Disabled.</description></item>
+                /// <item><description>true: Enabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -496,10 +606,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public bool? DiagnosisMtr { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the automatic ping latency detection feature is enabled for a failed task. Valid values:</para>
+                /// <para>Specifies whether to enable automatic PING network latency detection after a task failure. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>false: The automatic ping latency detection feature is disabled for a failed task.</description></item>
-                /// <item><description>true: The automatic ping latency detection feature is enabled for a failed task.</description></item>
+                /// <item><description>false: Disabled.</description></item>
+                /// <item><description>true: Enabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -510,7 +620,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public bool? DiagnosisPing { get; set; }
 
                 /// <summary>
-                /// <para>The DNS hijack whitelist.</para>
+                /// <para>The DNS hijacking configuration list.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.taobao.com:www.taobao.com.danuoyi.tbcache.com">www.taobao.com:www.taobao.com.danuoyi.tbcache.com</a></para>
@@ -520,12 +630,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string DnsHijackWhitelist { get; set; }
 
                 /// <summary>
-                /// <para>The relationship between the list of expected aliases or IP addresses and the list of DNS results. Valid values:</para>
+                /// <para>The DNS matching rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>IN_DNS: The list of expected values is a subset of the list of DNS results.</description></item>
-                /// <item><description>DNS_IN: The list of DNS results is a subset of the list of expected values.</description></item>
-                /// <item><description>EQUAL: The list of DNS results is the same as the list of expected values.</description></item>
-                /// <item><description>ANY: The list of DNS results intersects with the list of expected values.</description></item>
+                /// <item><description>IN_DNS: The expected aliases or IP addresses are all included in the DNS response.</description></item>
+                /// <item><description>DNS_IN: All DNS responses are included in the expected aliases or IP addresses.</description></item>
+                /// <item><description>EQUAL: The DNS response exactly matches the expected aliases or IP addresses.</description></item>
+                /// <item><description>ANY: The DNS response and the expected aliases or IP addresses have an intersection.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -538,7 +648,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The IP address of the DNS server.</para>
                 /// <remarks>
-                /// <para> This parameter is returned only if the TaskType parameter is set to DNS.</para>
+                /// <para>This parameter applies only to the DNS monitoring type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -549,13 +659,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string DnsServer { get; set; }
 
                 /// <summary>
-                /// <para>The type of the DNS record. This parameter is returned only if the TaskType parameter is set to DNS. Valid values:</para>
+                /// <para>The DNS resolution type. This parameter applies only to the DNS monitoring type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>A (default): a record that specifies an IP address related to the specified host name or domain name.</description></item>
-                /// <item><description>CNAME: a record that maps multiple domain names to a domain name.</description></item>
-                /// <item><description>NS: a record that specifies a DNS server used to parse domain names.</description></item>
-                /// <item><description>MX: a record that links domain names to the address of a mail server.</description></item>
-                /// <item><description>TXT: a record that stores the text information of host name or domain names. The text must be 1 to 512 bytes in length. The TXT record serves as a Sender Policy Framework (SPF) record to fight against spam.</description></item>
+                /// <item><description>A: Specifies the IP address corresponding to a hostname or domain name.</description></item>
+                /// <item><description>CNAME: Maps multiple domain names to another domain name.</description></item>
+                /// <item><description>NS: Specifies the DNS server that resolves a domain name.</description></item>
+                /// <item><description>MX: Points a domain name to a mail server address.</description></item>
+                /// <item><description>TXT: A description of the hostname or domain name. The text length is limited to 512 bytes and is typically used for SPF (Sender Policy Framework) records for anti-spam purposes.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -566,7 +676,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string DnsType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the WebSocket task is allowed to return no response or return an empty response. Default value: false. Valid values: false and true.</para>
+                /// <para>Specifies whether the WebSocket task is allowed to return no message or an empty message. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>false (default): Not allowed.</description></item>
+                /// <item><description>true: Allowed.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -575,6 +689,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? EmptyMessage { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to enable packet capture for this task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>true</para>
+                /// </summary>
                 [NameInMap("enable_packet_capture")]
                 [Validation(Required=false)]
                 public bool? EnablePacketCapture { get; set; }
@@ -600,9 +720,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>The domain name or alias to be parsed.</para>
+                /// <para>The alias or address to be resolved.</para>
                 /// <remarks>
-                /// <para> This parameter is returned only if the TaskType parameter is set to DNS.</para>
+                /// <para>This parameter applies only to the DNS monitoring type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -615,7 +735,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The packet loss rate.</para>
                 /// <remarks>
-                /// <para> This parameter is returned only if the TaskType parameter is set to PING.</para>
+                /// <para>This parameter applies only to the PING monitoring type.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -626,7 +746,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public float? FailureRate { get; set; }
 
                 /// <summary>
-                /// <para>The header of the HTTP request.</para>
+                /// <para>The HTTP request header.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testKey:testValue</para>
@@ -636,7 +756,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Header { get; set; }
 
                 /// <summary>
-                /// <para>The number of hops to perform traceroute diagnostics if the PING task fails.</para>
+                /// <para>The number of hops for traceroute diagnostics when a PING task fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -646,7 +766,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? Hops { get; set; }
 
                 /// <summary>
-                /// <para>The custom hosts for the HTTP test task. Format: ip1,ip2:address. You can specify values in multiple lines. Specify the A record or CNAME record that can be resolved by the domain name at the left of the colon. Separate multiple records with commas (,). Specify the domain name at the right of the colon.</para>
+                /// <para>The custom host for HTTP tasks. The format is ip1,ip2:address. Multiple mappings can be configured. The left side of the colon contains A records or CNAMEs that the domain name can be resolved to, separated by commas. The right side of the colon is the domain name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127.0.0.1:<a href="http://www.aliyun.com">www.aliyun.com</a></para>
@@ -656,7 +776,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string HostBinding { get; set; }
 
                 /// <summary>
-                /// <para>The host binding type. Valid values: 0 and 1. 0 indicates random. 1 indicates polling.</para>
+                /// <para>Specifies how the custom host takes effect. Valid values: 0 (random) and 1 (round-robin).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -668,9 +788,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The HTTP request method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>get</description></item>
+                /// <item><description>get </description></item>
                 /// <item><description>post</description></item>
-                /// <item><description>head</description></item>
+                /// <item><description>head.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -681,7 +801,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string HttpMethod { get; set; }
 
                 /// <summary>
-                /// <para>The timeout period of a PING task that uses ICMP. Unit: milliseconds.</para>
+                /// <para>The timeout period for a single PING request using the ICMP protocol. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -691,7 +811,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? IcmpTimeoutMillis { get; set; }
 
                 /// <summary>
-                /// <para>ip_network indicates the network type of the task. Valid values: v4, v6, and auto. Default value: v4.</para>
+                /// <para>The network type of the task. Valid values: v4, v6, and auto. Default value: v4.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v4</para>
@@ -701,20 +821,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string IpNetwork { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to perform Base64 decoding and then store the password. Valid values: true and false.</para>
+                /// <para>Specifies whether to decode and store the password using Base64. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: The password is decoded and stored using Base64.</description></item>
+                /// <item><description>false: The password is not decoded and stored using Base64.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>true</para>
+                /// <para>false</para>
                 /// </summary>
                 [NameInMap("isBase64Encode")]
                 [Validation(Required=false)]
                 public string IsBase64Encode { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the alert rule is included. Valid values:</para>
+                /// <para>Specifies whether alert rules are included. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>0: The alert rule is included.</description></item>
-                /// <item><description>1: The alert rule is excluded.</description></item>
+                /// <item><description>0: Yes.</description></item>
+                /// <item><description>1: No.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -724,12 +848,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? MatchRule { get; set; }
 
+                /// <summary>
+                /// <para>The maximum TLS version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tlsv1.3</para>
+                /// </summary>
                 [NameInMap("max_tls_version")]
                 [Validation(Required=false)]
                 public string MaxTlsVersion { get; set; }
 
                 /// <summary>
-                /// <para>The minimum TLS version. By default, TLS 1.2 and later versions are supported. TLS 1.0 and 1.1 are disabled. If you still require TLS 1.0 or 1.1, you can change the configuration.</para>
+                /// <para>The minimum TLS version. TLS 1.2 and later are supported by default. TLS 1.0 and 1.1 are disabled. To support these versions, modify the configuration.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tlsv1.2</para>
@@ -739,7 +869,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string MinTlsVersion { get; set; }
 
                 /// <summary>
-                /// <para>The password of the SMTP, POP3, or FTP protocol.</para>
+                /// <para>The password for SMTP, POP3, or FTP monitoring types.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123****</para>
@@ -749,7 +879,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Password { get; set; }
 
                 /// <summary>
-                /// <para>The heartbeat of the PING protocol.</para>
+                /// <para>The number of PING packets for the PING monitoring type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>29</para>
@@ -759,7 +889,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? PingNum { get; set; }
 
                 /// <summary>
-                /// <para>The port number for TCP pings.</para>
+                /// <para>The PING port. This parameter applies to TCP PING.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -771,20 +901,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The PING protocol type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>icmp</description></item>
-                /// <item><description>tcp</description></item>
-                /// <item><description>udp</description></item>
+                /// <item><description><para>icmp</para>
+                /// </description></item>
+                /// <item><description><para>tcp</para>
+                /// </description></item>
+                /// <item><description><para>udp.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>icmp,tcp,udp</para>
+                /// <para>icmp</para>
                 /// </summary>
                 [NameInMap("ping_type")]
                 [Validation(Required=false)]
                 public string PingType { get; set; }
 
                 /// <summary>
-                /// <para>The port number of the TCP, UDP, SMTP, or POP3 protocol.</para>
+                /// <para>The port for TCP, UDP, SMTP, or POP3 monitoring types.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>110</para>
@@ -794,6 +927,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public int? Port { get; set; }
 
                 /// <summary>
+                /// <para>The certificate file name of the private certificate.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cert.pem</para>
                 /// </summary>
@@ -802,7 +937,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string PrivateCrtFileName { get; set; }
 
                 /// <summary>
-                /// <para>The protocol that is used to send the request.</para>
+                /// <para>The monitoring protocol.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TCP</para>
@@ -812,7 +947,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the Quick UDP Internet Connections (QUIC) protocol is used for browser detection. Valid values: true false Default value: false.</para>
+                /// <para>Specifies whether the browser monitoring task uses the QUIC protocol. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Uses the QUIC protocol.</description></item>
+                /// <item><description>false: Does not use the QUIC protocol.
+                /// Default value: false.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -832,7 +972,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>The content of the HTTP request.</para>
+                /// <para>The request content for the HTTP monitoring type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>aa=bb</para>
@@ -842,10 +982,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string RequestContent { get; set; }
 
                 /// <summary>
-                /// <para>The format of the HTTP request. Valid values:</para>
+                /// <para>The format of the HTTP request content. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>hex: hexadecimal</description></item>
-                /// <item><description>txt: text</description></item>
+                /// <item><description>hex: hexadecimal.</description></item>
+                /// <item><description>txt: text.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -856,7 +996,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string RequestFormat { get; set; }
 
                 /// <summary>
-                /// <para>The response to the HTTP request.</para>
+                /// <para>The expected response content to match.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>txt</para>
@@ -866,10 +1006,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string ResponseContent { get; set; }
 
                 /// <summary>
-                /// <para>The format of the HTTP response. Valid values:</para>
+                /// <para>The format of the HTTP response content. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>hex: hexadecimal</description></item>
-                /// <item><description>txt: text</description></item>
+                /// <item><description>hex: hexadecimal.</description></item>
+                /// <item><description>txt: text.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -880,7 +1020,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string ResponseFormat { get; set; }
 
                 /// <summary>
-                /// <para>The number of retries for failed detections.</para>
+                /// <para>The number of retries after a monitoring failure.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -889,12 +1029,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public int? RetryDelay { get; set; }
 
+                /// <summary>
+                /// <para>This parameter takes effect for SMTP monitoring tasks. Set this parameter to 1 to use a secure connection. Default value: 0.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("safe_link")]
                 [Validation(Required=false)]
                 public int? SafeLink { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether page screenshot is enabled.</para>
+                /// <para>Specifies whether to enable page screenshots.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -904,7 +1050,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public bool? ScreenShot { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether to scroll to the bottom of the page after opening the page. This parameter is valid for a browser test task.</para>
+                /// <para>For browser monitoring tasks, specifies whether to scroll to the bottom of the page after it is opened.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -913,6 +1059,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public bool? ScrollEnd { get; set; }
 
+                /// <summary>
+                /// <para>The Server Name Indication (SNI).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="http://www.aliyun.com">www.aliyun.com</a></para>
+                /// </summary>
                 [NameInMap("server_name")]
                 [Validation(Required=false)]
                 public string ServerName { get; set; }
@@ -1009,16 +1161,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
-                /// <summary>
-                /// <para>Indicates whether to allow the loading failures of some page elements. Valid values: false and true.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>false</para>
-                /// </summary>
                 [NameInMap("strict_mode")]
                 [Validation(Required=false)]
                 public bool? StrictMode { get; set; }
 
+                /// <summary>
+                /// <para>The supported cipher suites.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TLS_AES_256_GCM_SHA384</para>
+                /// </summary>
                 [NameInMap("supported_cipher_suits")]
                 [Validation(Required=false)]
                 public string SupportedCipherSuits { get; set; }
@@ -1033,10 +1185,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public long? TimeOut { get; set; }
 
+                /// <summary>
+                /// <para>The deployment region of the target application when integrating with Managed Service for OpenTelemetry.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou</para>
+                /// </summary>
                 [NameInMap("trace_region")]
                 [Validation(Required=false)]
                 public string TraceRegion { get; set; }
 
+                /// <summary>
+                /// <para>Settings for the Tracing Analysis protocol used when integrating with Managed Service for OpenTelemetry.
+                /// Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>OpenTelemetry</description></item>
+                /// <item><description>Zipkin</description></item>
+                /// <item><description>Jaeger.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>OpenTelemetry</para>
+                /// </summary>
                 [NameInMap("trace_type")]
                 [Validation(Required=false)]
                 public string TraceType { get; set; }
@@ -1052,7 +1222,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>When redirection occurs, if the browser loads more than the specified number of resources, traffic hijacking is considered to have occurred. If you set the value to 0, no validation is performed. Default value: 0.</para>
+                /// <para>When a redirect occurs, if the number of resources loaded by the browser exceeds this value, traffic hijacking is considered to have occurred. When this value is 0, no verification is performed. Default value: 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -1071,16 +1241,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
                 }
 
+                /// <summary>
+                /// <para>Specifies whether to use a private certificate.</para>
+                /// </summary>
                 [NameInMap("use_private_crt")]
                 [Validation(Required=false)]
                 public bool? UsePrivateCrt { get; set; }
 
+                /// <summary>
+                /// <para>Specifies whether to use an SSL connection when performing a TCP task.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>tlsv1.0</para>
+                /// </summary>
                 [NameInMap("use_ssl")]
                 [Validation(Required=false)]
                 public bool? UseSsl { get; set; }
 
                 /// <summary>
-                /// <para>The username of the FTP, SMTP, or POP3 protocol.</para>
+                /// <para>The username for FTP, SMTP, or POP3.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testUser</para>
@@ -1090,7 +1269,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Username { get; set; }
 
                 /// <summary>
-                /// <para>The additional waiting time after a page is opened in a browser test task.</para>
+                /// <para>The additional wait time after the page is opened in a browser monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -1102,7 +1281,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The ID of the site monitoring task.</para>
+            /// <para>The ID of the monitoring task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cc641dff-c19d-45f3-ad0a-818a0c4f****</para>
@@ -1112,7 +1291,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the site monitoring task.</para>
+            /// <para>The name of the monitoring task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test123</para>
@@ -1122,10 +1301,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The status of the site monitoring task. Valid values:</para>
+            /// <para>The status of the monitoring task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: The task is enabled.</description></item>
-            /// <item><description>2: The task is disabled.</description></item>
+            /// <item><description>1: Enabled.</description></item>
+            /// <item><description>2: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1136,7 +1315,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TaskState { get; set; }
 
             /// <summary>
-            /// <para>The protocol that is used by the site monitoring task. Valid values: HTTP, HTTPS, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</para>
+            /// <para>The type of the monitoring task. Site monitoring task types include HTTP(S), PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP</para>
@@ -1146,14 +1325,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TaskType { get; set; }
 
             /// <summary>
-            /// <para>The VPC configurations of the synthetic test task.</para>
+            /// <para>The VPC configuration for the internal network monitoring task.</para>
             /// </summary>
             [NameInMap("VpcConfig")]
             [Validation(Required=false)]
             public DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig VpcConfig { get; set; }
             public class DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig : TeaModel {
                 /// <summary>
-                /// <para>The region of the website for synthetic monitoring.</para>
+                /// <para>The region where the target site of the internal network monitoring task is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-beijing</para>
@@ -1163,7 +1342,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the security group.</para>
+                /// <para>The ID of the security group associated with the internal network monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-xxxxxx</para>
@@ -1173,7 +1352,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string SecurityGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the VPC used by the synthetic test task.</para>
+                /// <para>The ID of the VPC associated with the internal network monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vpc-xxxxxx</para>
@@ -1183,7 +1362,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string VpcId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vSwitch used by the synthetic test task.</para>
+                /// <para>The ID of the vSwitch associated with the internal network monitoring task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>vsw-xxxxxx</para>
@@ -1197,10 +1376,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

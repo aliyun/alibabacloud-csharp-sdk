@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The responses code.</para>
+        /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The value 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The quota.</para>
+        /// <para>The quota information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>Indicates whether second-level monitoring is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Second-level monitoring is enabled.</description></item>
-            /// <item><description>false: Second-level monitoring is disabled.</description></item>
+            /// <item><description><para>true: enabled.</para>
+            /// </description></item>
+            /// <item><description><para>false: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public bool? SecondMonitor { get; set; }
 
             /// <summary>
-            /// <para>The quota of detection points that are provided by Alibaba Cloud. Five detection points are provided for free.</para>
+            /// <para>The quota of Alibaba detection points. The free quota is 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? SiteMonitorIdcQuota { get; set; }
 
             /// <summary>
-            /// <para>The quota of detection points that are not provided by Alibaba Cloud. Default value: 0.</para>
+            /// <para>The quota of non-Alibaba detection points. Default value: 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? SiteMonitorOperatorQuotaQuota { get; set; }
 
             /// <summary>
-            /// <para>The used quota of site monitoring tasks.</para>
+            /// <para>The number of used site monitoring detection task quotas.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? SiteMonitorQuotaTaskUsed { get; set; }
 
             /// <summary>
-            /// <para>The quota of site monitoring tasks.</para>
+            /// <para>The quota of site monitoring detection tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -86,8 +88,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The version of site monitoring. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>V1</description></item>
-            /// <item><description>V2</description></item>
+            /// <item><description><para>V1: the old version.</para>
+            /// </description></item>
+            /// <item><description><para>V2: the new version.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,6 +105,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The returned message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Request succeeded.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -117,10 +124,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

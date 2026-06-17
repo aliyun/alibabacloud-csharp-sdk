@@ -13,11 +13,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The monitoring dimensions of the specified resource.</para>
         /// <para>Set the value to a collection of <c>key:value</c> pairs. Example: <c>{&quot;userId&quot;:&quot;120886317861****&quot;}</c> or <c>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</c>.</para>
         /// <remarks>
-        /// <para> You can query a maximum of 50 instances in each request.</para>
+        /// <para>You can query a maximum of 50 instances in each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;instanceId&quot;:&quot;i-abcdefgh12****&quot;}]</para>
+        /// <para>[{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}]</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
@@ -26,9 +26,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The end of the time range to query monitoring data.</para>
         /// <list type="bullet">
-        /// <item><description>For second-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 20 minutes earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</description></item>
-        /// <item><description>For minute-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 2 hours earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</description></item>
-        /// <item><description>For hour-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and two days earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</description></item>
+        /// <item><description><para>For second-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 20 minutes earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</para>
+        /// </description></item>
+        /// <item><description><para>For minute-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 2 hours earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</para>
+        /// </description></item>
+        /// <item><description><para>For hour-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and two days earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +55,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The number of entries per page.</para>
         /// <para>Default value: 1000. This value indicates that a maximum of 1,000 entries of monitoring data can be returned on each page.</para>
         /// <remarks>
-        /// <para> The maximum value of the Length parameter for each request is 1440.</para>
+        /// <para>The maximum value of the Length parameter for each request is 1440.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,8 +92,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The pagination token.</para>
         /// <list type="bullet">
-        /// <item><description>If the number of results exceeds the maximum number of entries allowed on a single page, a pagination token is returned.</description></item>
-        /// <item><description>This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</description></item>
+        /// <item><description><para>If the number of results exceeds the maximum number of entries allowed on a single page, a pagination token is returned.</para>
+        /// </description></item>
+        /// <item><description><para>This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

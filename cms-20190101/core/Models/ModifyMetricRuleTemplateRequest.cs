@@ -27,17 +27,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description><para>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanThreshold: greater than the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanOrEqualToThreshold: less than or equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanThreshold: less than the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>NotEqualToThreshold: not equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanYesterday: greater than the metric value at the same time yesterday</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanYesterday: less than the metric value at the same time yesterday</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanLastWeek: greater than the metric value at the same time last week</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanLastWeek: less than the metric value at the same time last week</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanLastPeriod: less than the metric value in the last monitoring cycle</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>Valid values of N: 1 to 200.</para>
                     /// <remarks>
@@ -107,17 +118,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description><para>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanThreshold: greater than the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanOrEqualToThreshold: less than or equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanThreshold: less than the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>NotEqualToThreshold: not equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanYesterday: greater than the metric value at the same time yesterday</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanYesterday: less than the metric value at the same time yesterday</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanLastWeek: greater than the metric value at the same time last week</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanLastWeek: less than the metric value at the same time last week</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanLastPeriod: less than the metric value in the last monitoring cycle</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>Valid values of N: 1 to 200.</para>
                     /// <remarks>
@@ -187,17 +209,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     /// <summary>
                     /// <para>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description><para>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanThreshold: greater than the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanOrEqualToThreshold: less than or equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanThreshold: less than the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>NotEqualToThreshold: not equal to the threshold</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanYesterday: greater than the metric value at the same time yesterday</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanYesterday: less than the metric value at the same time yesterday</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanLastWeek: greater than the metric value at the same time last week</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanLastWeek: less than the metric value at the same time last week</para>
+                    /// </description></item>
+                    /// <item><description><para>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</para>
+                    /// </description></item>
+                    /// <item><description><para>LessThanLastPeriod: less than the metric value in the last monitoring cycle</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>Valid values of N: 1 to 200.</para>
                     /// <remarks>
@@ -317,7 +350,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>Valid values of N: 1 to 200.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>rule1</para>
+            /// <para>Rule_123</para>
             /// </summary>
             [NameInMap("RuleName")]
             [Validation(Required=false)]
@@ -344,7 +377,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp">https://apiwebhook.hipac.cn/api/v1/alarm/aly/eregfeeferrtbnmkdszp</a></para>
+            /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
             /// </summary>
             [NameInMap("Webhook")]
             [Validation(Required=false)]
@@ -367,7 +400,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>For information about how to obtain the name of an alert template, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test123</para>
+        /// <para>Template_123</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -383,7 +416,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("RestVersion")]
         [Validation(Required=false)]

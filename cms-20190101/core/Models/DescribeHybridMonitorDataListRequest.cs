@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The metric name.</para>
         /// <remarks>
-        /// <para> PromQL statements are supported.</para>
+        /// <para>PromQL statements are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

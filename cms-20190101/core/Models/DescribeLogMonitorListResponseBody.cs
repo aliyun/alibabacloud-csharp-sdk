@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -120,12 +120,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The method that is used to match the field value. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>contain: contains</description></item>
-                /// <item><description>notContain: does not contain</description></item>
-                /// <item><description><c>&gt;</c>: greater than</description></item>
-                /// <item><description><c>&lt;</c>: less than</description></item>
-                /// <item><description><c>&gt;=</c>: greater than or equal to</description></item>
-                /// <item><description><c>&lt;=</c>: less than or equal to</description></item>
+                /// <item><description><para>contain: contains</para>
+                /// </description></item>
+                /// <item><description><para>notContain: does not contain</para>
+                /// </description></item>
+                /// <item><description><para><c>&gt;</c>: greater than</para>
+                /// </description></item>
+                /// <item><description><para><c>&lt;</c>: less than</para>
+                /// </description></item>
+                /// <item><description><para><c>&gt;=</c>: greater than or equal to</para>
+                /// </description></item>
+                /// <item><description><para><c>&lt;=</c>: less than or equal to</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -150,8 +156,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>and</description></item>
-            /// <item><description>or</description></item>
+            /// <item><description><para>and</para>
+            /// </description></item>
+            /// <item><description><para>or</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -206,8 +214,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

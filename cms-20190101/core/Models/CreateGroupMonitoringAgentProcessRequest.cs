@@ -21,17 +21,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The operator that is used to compare the metric value with the threshold. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-            /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-            /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-            /// <item><description>LessThanThreshold: less than the threshold</description></item>
-            /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-            /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-            /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-            /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-            /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-            /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-            /// <item><description>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</description></item>
+            /// <item><description><para>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</para>
+            /// </description></item>
+            /// <item><description><para>GreaterThanThreshold: greater than the threshold</para>
+            /// </description></item>
+            /// <item><description><para>LessThanOrEqualToThreshold: less than or equal to the threshold</para>
+            /// </description></item>
+            /// <item><description><para>LessThanThreshold: less than the threshold</para>
+            /// </description></item>
+            /// <item><description><para>NotEqualToThreshold: not equal to the threshold</para>
+            /// </description></item>
+            /// <item><description><para>GreaterThanYesterday: greater than the metric value at the same time yesterday</para>
+            /// </description></item>
+            /// <item><description><para>LessThanYesterday: less than the metric value at the same time yesterday</para>
+            /// </description></item>
+            /// <item><description><para>GreaterThanLastWeek: greater than the metric value at the same time last week</para>
+            /// </description></item>
+            /// <item><description><para>LessThanLastWeek: less than the metric value at the same time last week</para>
+            /// </description></item>
+            /// <item><description><para>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</para>
+            /// </description></item>
+            /// <item><description><para>LessThanLastPeriod: less than the metric value in the previous monitoring cycle</para>
+            /// </description></item>
             /// </list>
             /// <para>Valid values of N: 1 to 3.</para>
             /// <para>This parameter is required.</para>
@@ -48,7 +59,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>Valid values of N: 1 to 3.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>00:00-23:59</para>
+            /// <para>07:00-22:59</para>
             /// </summary>
             [NameInMap("EffectiveInterval")]
             [Validation(Required=false)]
@@ -57,9 +68,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The alert level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>critical (default)</description></item>
-            /// <item><description>warn</description></item>
-            /// <item><description>info</description></item>
+            /// <item><description><para>critical (default)</para>
+            /// </description></item>
+            /// <item><description><para>warn</para>
+            /// </description></item>
+            /// <item><description><para>info</para>
+            /// </description></item>
             /// </list>
             /// <para>Valid values of N: 1 to 3.</para>
             /// <para>This parameter is required.</para>
@@ -75,7 +89,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>This parameter is deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>00:00-23:59</para>
+            /// <para>00:00-05:30</para>
             /// </summary>
             [NameInMap("NoEffectiveInterval")]
             [Validation(Required=false)]
@@ -85,7 +99,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</para>
             /// <para>Valid values of N: 1 to 3.</para>
             /// <remarks>
-            /// <para> Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</para>
+            /// <para>Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -99,7 +113,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The statistical aggregation method that is used to calculate the metric values.</para>
             /// <para>Valid values of N: 1 to 3.</para>
             /// <remarks>
-            /// <para> Set the value to Average.</para>
+            /// <para>Set the value to Average.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -130,14 +144,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// </description></item>
                 /// <item><description><para>{Resource type}: the type of the resource that triggers the alert. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>queues</b></description></item>
-                /// <item><description><b>topics</b></description></item>
+                /// <item><description><para><b>queues</b></para>
+                /// </description></item>
+                /// <item><description><para><b>topics</b></para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
                 /// <item><description><para>{Resource name}: the resource name.</para>
                 /// <list type="bullet">
-                /// <item><description>If the resource type is <b>queues</b>, the resource name is the queue name.</description></item>
-                /// <item><description>If the resource type is <b>topics</b>, the resource name is the topic name.</description></item>
+                /// <item><description><para>If the resource type is <b>queues</b>, the resource name is the queue name.</para>
+                /// </description></item>
+                /// <item><description><para>If the resource type is <b>topics</b>, the resource name is the topic name.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -173,9 +191,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The alert level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INFO</description></item>
-                /// <item><description>WARN</description></item>
-                /// <item><description>CRITICAL</description></item>
+                /// <item><description><para>INFO</para>
+                /// </description></item>
+                /// <item><description><para>WARN</para>
+                /// </description></item>
+                /// <item><description><para>CRITICAL</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -203,7 +224,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>The number of times for which the threshold can be consecutively exceeded. Default value: 3.</para>
             /// <para>Valid values of N: 1 to 3.</para>
             /// <remarks>
-            /// <para> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</para>
+            /// <para>A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -219,7 +240,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <para>Valid values of N: 1 to 3.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
+            /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
             /// </summary>
             [NameInMap("Webhook")]
             [Validation(Required=false)]
@@ -233,7 +254,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>3607****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -250,12 +271,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The matching condition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>all (default value): matches all</description></item>
-            /// <item><description>startWith: starts with a prefix</description></item>
-            /// <item><description>endWith: ends with a suffix</description></item>
-            /// <item><description>contains: contains</description></item>
-            /// <item><description>notContains: does not contain</description></item>
-            /// <item><description>equals: equals</description></item>
+            /// <item><description><para>all (default value): matches all</para>
+            /// </description></item>
+            /// <item><description><para>startWith: starts with a prefix</para>
+            /// </description></item>
+            /// <item><description><para>endWith: ends with a suffix</para>
+            /// </description></item>
+            /// <item><description><para>contains: contains</para>
+            /// </description></item>
+            /// <item><description><para>notContains: does not contain</para>
+            /// </description></item>
+            /// <item><description><para>equals: equals</para>
+            /// </description></item>
             /// </list>
             /// <para>Valid values of N: 1 to 3.</para>
             /// 
@@ -296,9 +323,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The logical operator used between conditional expressions that are used to match instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>all</description></item>
-        /// <item><description>and</description></item>
-        /// <item><description>or</description></item>
+        /// <item><description><para>all</para>
+        /// </description></item>
+        /// <item><description><para>and</para>
+        /// </description></item>
+        /// <item><description><para>or</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -313,7 +343,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test1</para>
+        /// <para>Process_Java</para>
         /// </summary>
         [NameInMap("ProcessName")]
         [Validation(Required=false)]

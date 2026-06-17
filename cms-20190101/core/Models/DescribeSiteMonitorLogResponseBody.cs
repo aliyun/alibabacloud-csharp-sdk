@@ -10,9 +10,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorLogResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
-        /// <para>**</para>
-        /// <para><b>Description</b> The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code.</para>
+        /// <remarks>
+        /// <para>A status code of 200 indicates that the operation was successful.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -22,10 +23,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The logs of the instant test tasks.</para>
+        /// <para>The detection logs of the one-time detection task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\\&quot;redirectCount\\&quot;:0.0,\\&quot;SSLConnectTime\\&quot;:0.0,\\&quot;pingDetail\\&quot;:\\&quot;\\&quot;,\\&quot;HTTPConnectTime\\&quot;:0.0,\\&quot;isp\\&quot;:\\&quot;465\\&quot;,\\&quot;errorCode\\&quot;:611,\\&quot;ispCN\\&quot;:\\&quot;Alibaba\\&quot;,\\&quot;resolution\\&quot;:\\&quot;\\&quot;,\\&quot;areaEN\\&quot;:\\&quot;HuaBei\\&quot;,\\&quot;taskEndTimestamp\\&quot;:1638422475687,\\&quot;targetIspEN\\&quot;:\\&quot;\\&quot;,\\&quot;TotalTime\\&quot;:1.0,\\&quot;taskStartTimestamp\\&quot;:1638422474389,\\&quot;countryCN\\&quot;:\\&quot;China\\&quot;,\\&quot;provinceEN\\&quot;:\\&quot;Beijing\\&quot;,\\&quot;countryEN\\&quot;:\\&quot;China\\&quot;,\\&quot;targetCityEN\\&quot;:\\&quot;\\&quot;,\\&quot;curlConnectTime\\&quot;:0.0,\\&quot;ips\\&quot;:\\&quot;\\&quot;,\\&quot;route\\&quot;:\\&quot;\\&quot;,\\&quot;tcpConnectTime\\&quot;:0.0,\\&quot;cityEN\\&quot;:\\&quot;Beijing\\&quot;,\\&quot;HTTPDownloadSpeed\\&quot;:0.0,\\&quot;HTTPDownloadTime\\&quot;:0.0,\\&quot;HTTPResponseCode\\&quot;:0.0,\\&quot;areaCN\\&quot;:\\&quot;North China\\&quot;,\\&quot;city\\&quot;:\\&quot;546\\&quot;,\\&quot;expection\\&quot;:\\&quot;\\&quot;,\\&quot;suorceIp\\&quot;:\\&quot;192.168.XX.XX \\&quot;,\\&quot;ispEN\\&quot;:\\&quot;Alibaba\\&quot;,\\&quot;HTTPDNSTime\\&quot;:1.0,\\&quot;targetIsp\\&quot;:\\&quot;\\&quot;,\\&quot;curlStarttransferTime\\&quot;:0.0,\\&quot;provinceCN\\&quot;:\\&quot;Beijing\\&quot;,\\&quot;timestamp\\&quot;:1638422474000,\\&quot;redirectTime\\&quot;:0.0,\\&quot;targetCity\\&quot;:\\&quot;\\&quot;, \\&quot;expect\\&quot;:\\&quot;\\&quot;,\\&quot;HTTPDownloadSize\\&quot;:0.0,\\&quot;localDns\\&quot;:\\&quot;192.168.XX.XX\\&quot;,\\&quot;cityCN\\&quot;:\\&quot;Beijing\\&quot;,\\&quot;taskId\\&quot;:\\&quot;afa5c3ce-f944-4363-9edb-ce919a29\<em>\</em>\<em>\</em>\\&quot;}]</para>
+        /// <para>[{\&quot;redirectCount\&quot;:0.0,\&quot;SSLConnectTime\&quot;:0.0,\&quot;pingDetail\&quot;:\&quot;\&quot;,\&quot;HTTPConnectTime\&quot;:0.0,\&quot;isp\&quot;:\&quot;465\&quot;,\&quot;errorCode\&quot;:611,\&quot;ispCN\&quot;:\&quot;阿里巴巴\&quot;,\&quot;resolution\&quot;:\&quot;\&quot;,\&quot;areaEN\&quot;:\&quot;HuaBei\&quot;,\&quot;taskEndTimestamp\&quot;:1638422475687,\&quot;targetIspEN\&quot;:\&quot;\&quot;,\&quot;TotalTime\&quot;:1.0,\&quot;taskStartTimestamp\&quot;:1638422474389,\&quot;countryCN\&quot;:\&quot;中国\&quot;,\&quot;provinceEN\&quot;:\&quot;Beijing\&quot;,\&quot;countryEN\&quot;:\&quot;China\&quot;,\&quot;targetCityEN\&quot;:\&quot;\&quot;,\&quot;curlConnectTime\&quot;:0.0,\&quot;ips\&quot;:\&quot;\&quot;,\&quot;route\&quot;:\&quot;\&quot;,\&quot;tcpConnectTime\&quot;:0.0,\&quot;cityEN\&quot;:\&quot;Beijing\&quot;,\&quot;HTTPDownloadSpeed\&quot;:0.0,\&quot;HTTPDownloadTime\&quot;:0.0,\&quot;HTTPResponseCode\&quot;:0.0,\&quot;areaCN\&quot;:\&quot;华北\&quot;,\&quot;city\&quot;:\&quot;546\&quot;,\&quot;expection\&quot;:\&quot;\&quot;,\&quot;suorceIp\&quot;:\&quot;192.168.XX.XX \&quot;,\&quot;ispEN\&quot;:\&quot;Alibaba\&quot;,\&quot;HTTPDNSTime\&quot;:1.0,\&quot;targetIsp\&quot;:\&quot;\&quot;,\&quot;curlStarttransferTime\&quot;:0.0,\&quot;provinceCN\&quot;:\&quot;北京市\&quot;,\&quot;timestamp\&quot;:1638422474000,\&quot;redirectTime\&quot;:0.0,\&quot;targetCity\&quot;:\&quot;\&quot;, \&quot;expect\&quot;:\&quot;\&quot;,\&quot;HTTPDownloadSize\&quot;:0.0,\&quot;localDns\&quot;:\&quot;192.168.XX.XX\&quot;,\&quot;cityCN\&quot;:\&quot;北京市\&quot;,\&quot;taskId\&quot;:\&quot;afa5c3ce-f944-4363-9edb-ce919a29****\&quot;}]</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -42,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to query the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IWBjqMYSy0is7zSMGu16****</para>
@@ -62,10 +63,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

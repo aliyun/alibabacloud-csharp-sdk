@@ -11,16 +11,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
     public class CreateGroupMetricRulesRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the application group.</para>
-        /// <para>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
+        /// <para>For information about how to obtain the application group ID, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456</para>
+        /// <para>3607****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public long? GroupId { get; set; }
 
+        /// <summary>
+        /// <para>The list of metric-based alert rules for the application group.</para>
+        /// </summary>
         [NameInMap("GroupMetricRules")]
         [Validation(Required=false)]
         public List<CreateGroupMetricRulesRequestGroupMetricRules> GroupMetricRules { get; set; }
@@ -34,20 +37,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical Critical { get; set; }
                 public class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsCritical : TeaModel {
                     /// <summary>
-                    /// <para>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid value: </para>
+                    /// <para>紧急级别阈值比较符。取值：</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold：大于等于。 </description></item>
+                    /// <item><description>GreaterThanThreshold：大于。 </description></item>
+                    /// <item><description>LessThanOrEqualToThreshold：小于等于。 </description></item>
+                    /// <item><description>LessThanThreshold：小于。 </description></item>
+                    /// <item><description>NotEqualToThreshold：不等于。 </description></item>
+                    /// <item><description>GreaterThanYesterday：同比昨天时间上涨。 </description></item>
+                    /// <item><description>LessThanYesterday：同比昨天时间下降。 </description></item>
+                    /// <item><description>GreaterThanLastWeek：同比上周同一时间上涨。 </description></item>
+                    /// <item><description>LessThanLastWeek：同比上周同一时间下降。 </description></item>
+                    /// <item><description>GreaterThanLastPeriod：环比上周期上涨。 </description></item>
+                    /// <item><description>LessThanLastPeriod：环比上周期下降。</description></item>
                     /// </list>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>GreaterThanOrEqualToThreshold</para>
@@ -65,12 +72,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical methods for Critical-level alerts. Separate multiple statistical methods with commas (,). Valid values of N: 1 to 200. Valid value: </para>
-                    /// <list type="bullet">
-                    /// <item><description>Average: the average value</description></item>
-                    /// <item><description>Minimum: the minimum value</description></item>
-                    /// <item><description>Maximum: the maximum value</description></item>
-                    /// </list>
+                    /// <para>紧急级别报警统计方法。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <para>该参数的取值由指定云产品的<c>MetricName</c>对应的<c>Statistics</c>列决定，例如：Maximum、Minimum和Average。关于如何获取该参数的取值，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Average</para>
@@ -80,7 +87,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Critical-level alerts. Valid values of N: 1 to 200.</para>
+                    /// <para>触发紧急级别报警通知的阈值。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>90</para>
@@ -90,7 +101,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered. Valid values of N: 1 to 200.</para>
+                    /// <para>发送紧急报警通知需要监控指标达到报警阈值的次数。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -106,20 +121,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo Info { get; set; }
                 public class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsInfo : TeaModel {
                     /// <summary>
-                    /// <para>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid value: </para>
+                    /// <para>普通级别阈值比较符。取值：</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold：大于等于。 </description></item>
+                    /// <item><description>GreaterThanThreshold：大于。 </description></item>
+                    /// <item><description>LessThanOrEqualToThreshold：小于等于。 </description></item>
+                    /// <item><description>LessThanThreshold：小于。 </description></item>
+                    /// <item><description>NotEqualToThreshold：不等于。 </description></item>
+                    /// <item><description>GreaterThanYesterday：同比昨天时间上涨。 </description></item>
+                    /// <item><description>LessThanYesterday：同比昨天时间下降。 </description></item>
+                    /// <item><description>GreaterThanLastWeek：同比上周同一时间上涨。 </description></item>
+                    /// <item><description>LessThanLastWeek：同比上周同一时间下降。 </description></item>
+                    /// <item><description>GreaterThanLastPeriod：环比上周期上涨。 </description></item>
+                    /// <item><description>LessThanLastPeriod：环比上周期下降。</description></item>
                     /// </list>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>GreaterThanOrEqualToThreshold</para>
@@ -137,12 +156,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical methods for Info-level alerts. Separate multiple statistical methods with commas (,). Valid values of N: 1 to 200. Valid value: </para>
-                    /// <list type="bullet">
-                    /// <item><description>Average: the average value</description></item>
-                    /// <item><description>Minimum: the minimum value</description></item>
-                    /// <item><description>Maximum: the maximum value</description></item>
-                    /// </list>
+                    /// <para>普通级别报警统计方法。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <para>该参数的取值由指定云产品的<c>MetricName</c>对应的<c>Statistics</c>列决定，例如：Maximum、Minimum和Average。关于如何获取该参数的取值，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Average</para>
@@ -152,7 +171,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Info-level alerts. Valid values of N: 1 to 200.</para>
+                    /// <para>普通级别报警阈值。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -162,7 +185,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered. Valid values of N: 1 to 200.</para>
+                    /// <para>发送普通报警通知需要监控指标达到报警阈值的次数。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -178,20 +205,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn Warn { get; set; }
                 public class CreateGroupMetricRulesRequestGroupMetricRulesEscalationsWarn : TeaModel {
                     /// <summary>
-                    /// <para>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid value: </para>
+                    /// <para>警告级别阈值比较符。取值：</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold：大于等于。 </description></item>
+                    /// <item><description>GreaterThanThreshold：大于。 </description></item>
+                    /// <item><description>LessThanOrEqualToThreshold：小于等于。 </description></item>
+                    /// <item><description>LessThanThreshold：小于。 </description></item>
+                    /// <item><description>NotEqualToThreshold：不等于。 </description></item>
+                    /// <item><description>GreaterThanYesterday：同比昨天时间上涨。 </description></item>
+                    /// <item><description>LessThanYesterday：同比昨天时间下降。 </description></item>
+                    /// <item><description>GreaterThanLastWeek：同比上周同一时间上涨。 </description></item>
+                    /// <item><description>LessThanLastWeek：同比上周同一时间下降。 </description></item>
+                    /// <item><description>GreaterThanLastPeriod：环比上周期上涨。 </description></item>
+                    /// <item><description>LessThanLastPeriod：环比上周期下降。</description></item>
                     /// </list>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>GreaterThanOrEqualToThreshold</para>
@@ -209,12 +240,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical methods for Warn-level alerts. Separate multiple statistical methods with commas (,). Valid values of N: 1 to 200. Valid value: </para>
-                    /// <list type="bullet">
-                    /// <item><description>Average: the average value</description></item>
-                    /// <item><description>Minimum: the minimum value</description></item>
-                    /// <item><description>Maximum: the maximum value</description></item>
-                    /// </list>
+                    /// <para>警告级别报警统计方法。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <para>该参数的取值由指定云产品的<c>MetricName</c>对应的<c>Statistics</c>列决定，例如：Maximum、Minimum和Average。关于如何获取该参数的取值，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Average</para>
@@ -224,7 +255,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Warn-level alerts. Valid values of N: 1 to 200.</para>
+                    /// <para>警告级别报警阈值。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -234,7 +269,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered. Valid values of N: 1 to 200.</para>
+                    /// <para>发送警告报警通知需要监控指标达到报警阈值的次数。</para>
+                    /// <para>N的取值范围：1~200。</para>
+                    /// <remarks>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -248,136 +287,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The name of the cloud service. Valid values of N: 1 to 200. Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description>PolarDB: PolarDB</description></item>
-            /// <item><description>NewBGPDDoS: Anti-DDoS Pro</description></item>
-            /// <item><description>IoTDevice: IoT Platform</description></item>
-            /// <item><description>DRDS: Distributed Relational Database Service (DRDS)</description></item>
-            /// <item><description>VS: Video Surveillance System</description></item>
-            /// <item><description>AMQP: Alibaba Cloud Message Queue for AMQP</description></item>
-            /// <item><description>ADS: AnalyticDB</description></item>
-            /// <item><description>APIGateway: API Gateway</description></item>
-            /// <item><description>InternetSharedBandwidth: EIP Bandwidth Plan</description></item>
-            /// <item><description>CDN: Alibaba Cloud Content Delivery Network (CDN)</description></item>
-            /// <item><description>CEN: Cloud Enterprise Network (CEN)</description></item>
-            /// <item><description>DCDN: Dynamic Route for CDN (DCDN)</description></item>
-            /// <item><description>DDoS: Anti-DDoS</description></item>
-            /// <item><description>ECS: Elastic Compute Service (ECS)</description></item>
-            /// <item><description>DirectMail: Direct Mail</description></item>
-            /// <item><description>Elasticsearch: Elasticsearch</description></item>
-            /// <item><description>EMR: E-MapReduce (EMR)</description></item>
-            /// <item><description>ESS: Auto Scaling</description></item>
-            /// <item><description>FunctionCompute: Function Compute</description></item>
-            /// <item><description>RealtimeCompute: Realtime Compute for Apache Flink</description></item>
-            /// <item><description>GlobalAcceleration: Global Accelerator (GA)</description></item>
-            /// <item><description>Hbase: ApsaraDB for HBase</description></item>
-            /// <item><description>TSDB: Time Series Database (TSDB)</description></item>
-            /// <item><description>IPv6trans: IPv6 Translation Service</description></item>
-            /// <item><description>Kafka: Message Queue for Apache Kafka</description></item>
-            /// <item><description>Kubernetes: Container Service for Kubernetes (ACK)</description></item>
-            /// <item><description>KVstore: ApsaraDB for Redis</description></item>
-            /// <item><description>MNS: Message Service (MNS)</description></item>
-            /// <item><description>MongoDB: ApsaraDB for MongoDB</description></item>
-            /// <item><description>MQ: Message Queue</description></item>
-            /// <item><description>NAT: NAT Gateway</description></item>
-            /// <item><description>OpenAd: Open Ad</description></item>
-            /// <item><description>OpenSearch: Open Search</description></item>
-            /// <item><description>OSS: Object Storage Service (OSS)</description></item>
-            /// <item><description>PCDN: P2P CDN</description></item>
-            /// <item><description>petadata: HybridDB for MySQL</description></item>
-            /// <item><description>RDS: ApsaraDB RDS</description></item>
-            /// <item><description>SCDN: Secure CDN</description></item>
-            /// <item><description>SLB: Server Load Balancer (SLB)</description></item>
-            /// <item><description>SLS: Log Service</description></item>
-            /// <item><description>VideoLive: ApsaraVideo Live</description></item>
-            /// <item><description>VOD: ApsaraVideo VOD</description></item>
-            /// <item><description>EIP: Elastic IP Address (EIP)</description></item>
-            /// <item><description>VPN: VPN Gateway</description></item>
-            /// <item><description>AIRec: Artificial Intelligence Recommendation</description></item>
-            /// <item><description>GPDB: AnalyticDB for PostgreSQL</description></item>
-            /// <item><description>DBS: Database Backup (DBS)</description></item>
-            /// <item><description>SAG: Smart Access Gateway (SAG)</description></item>
-            /// <item><description>Memcache: ApsaraDB for Memcache</description></item>
-            /// <item><description>IOT_EDGE: Link IoT Edge</description></item>
-            /// <item><description>OCS: ApsaraDB for Memcache (previous version)</description></item>
-            /// <item><description>VPC: Express Connect</description></item>
-            /// <item><description>EHPC: Elastic High Performance Computing (E-HPC)</description></item>
-            /// <item><description>MPS: ApsaraVideo Media Processing</description></item>
-            /// <item><description>ENS: Edge Node Service (ENS)</description></item>
-            /// <item><description>MaxCompute_Prepay: MaxCompute</description></item>
-            /// <item><description>IoT_Kubernetes: Edge Application Hosting</description></item>
-            /// <item><description>CMS: CloudMonitor</description></item>
-            /// <item><description>batchcomputenew: Batch Compute</description></item>
-            /// <item><description>HBaseUE: ApsaraDB for HBase Performance-enhanced Edition</description></item>
-            /// <item><description>UIS: Ultimate Internet Service (UIS)</description></item>
-            /// <item><description>nls: Intelligent Speech Interaction</description></item>
-            /// <item><description>ots: Tablestore</description></item>
-            /// <item><description>NAS: File Storage NAS</description></item>
-            /// <item><description>ECI: Elastic Container Instance (ECI)</description></item>
-            /// <item><description>OpenAPI: OpenAPI Explorer</description></item>
-            /// <item><description>pvtzpost: Alibaba Cloud DNS PrivateZone</description></item>
-            /// <item><description>blinkonk8s: Flink on Kubernetes</description></item>
-            /// <item><description>FunctionFlow: Serverless Workflow (SWF)</description></item>
-            /// <item><description>SMC: Server Migration Center (SMC)</description></item>
-            /// <item><description>ddosbgp: Anti-DDoS Origin</description></item>
-            /// <item><description>baas: Blockchain as a Service</description></item>
-            /// <item><description>privatelink: PrivateLink</description></item>
-            /// <item><description>cds: ApsaraDB for Cassandra</description></item>
-            /// <item><description>DDH: Dedicated Host</description></item>
-            /// <item><description>RocketMQ: Message Queue for Apache RocketMQ</description></item>
-            /// <item><description>ECC: Express Cloud Connect</description></item>
-            /// <item><description>hbaseserverless: ApsaraDB for HBase Serverless Edition</description></item>
-            /// <item><description>mns_tmp: Message Service</description></item>
-            /// <item><description>hdr: Hybrid Disaster Recovery (HDR)</description></item>
-            /// <item><description>hbr: Hybrid Backup Recovery (HBR)</description></item>
-            /// <item><description>ADB: AnalyticDB for MySQL V3.0</description></item>
-            /// <item><description>tag: Tag Service</description></item>
-            /// <item><description>GDB: Graph Database</description></item>
-            /// <item><description>WAF: Web Application Firewall (WAF)</description></item>
-            /// <item><description>hcs_sgw: Cloud Storage Gateway (CSG)</description></item>
-            /// <item><description>ipv6gateway: IPv6 Gateway</description></item>
-            /// <item><description>RDS_SAR: ApsaraDB Exclusive Host Group</description></item>
-            /// <item><description>learn: Machine Learning Platform for AI</description></item>
-            /// <item><description>ROS: Resource Orchestration Service (ROS)</description></item>
-            /// <item><description>OOS: Operation Orchestration Service (OOS)</description></item>
-            /// <item><description>bds: Data Synchronization for HBase</description></item>
-            /// <item><description>cfw: Cloud Firewall</description></item>
-            /// <item><description>ddosDip: Anti-DDoS Premium</description></item>
-            /// <item><description>datahub: DataHub</description></item>
-            /// <item><description>hologres: Hologres</description></item>
-            /// <item><description>ExpressConnect: Express Connect</description></item>
-            /// <item><description>dbfs: Database File System (DBFS)</description></item>
-            /// <item><description>clickhouse: ApsaraDB for ClickHouse</description></item>
-            /// <item><description>k8s: Container Service for Kubernetes (ACK)</description></item>
-            /// <item><description>DTS: Data Transmission Service (DTS)</description></item>
-            /// <item><description>AnycastEIP: Anycast Elastic IP Address</description></item>
-            /// <item><description>Lindorm: ApsaraDB for Lindorm</description></item>
-            /// <item><description>config: Cloud Config</description></item>
-            /// <item><description>spark: Databricks DataInsight (DDI)</description></item>
-            /// <item><description>serverless: Serverless App Engine (SAE)</description></item>
-            /// <item><description>alb: Application Load Balancer (ALB)</description></item>
-            /// <item><description>oceanbase: ApsaraDB for OceanBase</description></item>
-            /// <item><description>KMS: Key Management Service (KMS)</description></item>
-            /// <item><description>lvwang: Content Moderation</description></item>
-            /// <item><description>LinkVisual: LinkVisual</description></item>
-            /// <item><description>tair: ApsaraDB for Redis Enhanced Edition (Tair)</description></item>
-            /// <item><description>dlf: Data Lake Formation (DLF)</description></item>
-            /// <item><description>networkmonitor: Site Monitoring</description></item>
-            /// <item><description>pnc: Physical Network Change</description></item>
-            /// <item><description>AIS: Alibaba Cloud Infrastructure</description></item>
-            /// <item><description>cloudgame: Cloud Gaming Platform</description></item>
-            /// <item><description>RTC: Real-Time Communication</description></item>
-            /// <item><description>cloudbox: CloudBox</description></item>
-            /// <item><description>actiontrail: ActionTrail</description></item>
-            /// <item><description>cc: Cloud Connector</description></item>
-            /// <item><description>disk: Elastic Block Storage (EBS)</description></item>
-            /// <item><description>easygene: Genomics Computing Platform</description></item>
-            /// <item><description>cloudphone: Elastic Cloud Phone</description></item>
-            /// <item><description>BMS: Bare Metal Management Service</description></item>
-            /// <item><description>swas: Simple Application Server</description></item>
-            /// <item><description>AvailabilityMonitoring: Availability Monitoring of CloudMonitor</description></item>
-            /// </list>
+            /// <para>The abbreviation of the Alibaba Cloud service name.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For information about how to obtain the abbreviation, see the <c>metricCategory</c> tag in the <c>Labels</c> response parameter of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -388,8 +300,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The alert contact groups. Valid values of N: 1 to 200.</para>
-            /// <para>For information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</para>
+            /// <para>The alert contact group.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For information about how to obtain the alert contact group, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECS_Group</para>
@@ -399,8 +312,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string ContactGroups { get; set; }
 
             /// <summary>
-            /// <para>The dimension of the alert rule. Valid values of N: 1 to 200.</para>
-            /// <para>Set the value to a set of key-value pairs, for example, <c>userId:120886317861****</c> or <c>instanceId:i-m5e1qg6uo38rztr4****</c>.</para>
+            /// <para>The monitoring dimensions of the specified resource.</para>
+            /// <para>The value is a collection of <c>key:value</c> pairs, such as <c>{&quot;userId&quot;:&quot;120886317861****&quot;}</c> and <c>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[{&quot;instanceId&quot;:&quot;i-m5e1qg6uo38rztr4****&quot;}]</para>
@@ -410,7 +323,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Dimensions { get; set; }
 
             /// <summary>
-            /// <para>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</para>
+            /// <para>The effective period of the alert rule. Valid values of N: 1 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>05:31-23:59</para>
@@ -420,17 +333,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EffectiveInterval { get; set; }
 
             /// <summary>
-            /// <para>The subject of the alert notification email. Valid values of N: 1 to 200.</para>
+            /// <para>The subject of the alert notification email.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ECS instance</para>
             /// </summary>
             [NameInMap("EmailSubject")]
             [Validation(Required=false)]
             public string EmailSubject { get; set; }
 
             /// <summary>
-            /// <para>The interval at which CloudMonitor checks whether the alert rule is triggered. Valid values of N: 1 to 200.</para>
-            /// <para>Unit: seconds. The default value is the lowest frequency at which the metric is polled.</para>
+            /// <para>The detection period of the alert rule.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>Unit: seconds. The default value is the minimum reporting period of the metric.</para>
             /// <remarks>
-            /// <para> We recommend that you set the interval to the data aggregation period. If the interval is shorter than the data aggregation period, alerts cannot be triggered due to insufficient data.</para>
+            /// <para>Keep the detection period of the alert rule consistent with the data reporting period. If the detection period is shorter than the data reporting period, alerts may not be triggered due to insufficient data.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -440,12 +358,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Interval { get; set; }
 
+            /// <summary>
+            /// <para>The tag keys of the alert rule.</para>
+            /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<CreateGroupMetricRulesRequestGroupMetricRulesLabels> Labels { get; set; }
             public class CreateGroupMetricRulesRequestGroupMetricRulesLabels : TeaModel {
                 /// <summary>
-                /// <para>The tag key of the alert rule. The specified tag is contained in alert notifications.</para>
+                /// <para>The tag key of the alert rule. The tag is included in alert notifications.</para>
                 /// <para>Valid values of N: 1 to 200.</para>
                 /// 
                 /// <b>Example:</b>
@@ -456,7 +377,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value of the alert rule. The specified tag is contained in alert notifications.</para>
+                /// <para>The tag value of the alert rule. The tag is included in alert notifications.</para>
                 /// <para>Valid values of N: 1 to 200.</para>
                 /// 
                 /// <b>Example:</b>
@@ -469,8 +390,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The name of the metric. Valid values of N: 1 to 200.</para>
-            /// <para>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>The name of the metric.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -481,8 +403,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the cloud service. Valid values of N: 1 to 200.</para>
-            /// <para>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>The namespace of the Alibaba Cloud service.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
+            /// <para>For information about how to obtain the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -493,12 +416,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to handle alerts when no monitoring data is found. Valid values of N: 1 to 200. Valid value:</para>
+            /// <para>The processing method when no monitoring data is found. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>KEEP_LAST_STATE (default value): No operation is performed.</description></item>
-            /// <item><description>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</description></item>
-            /// <item><description>OK: The alert rule has no active alerts.</description></item>
+            /// <item><description>KEEP_LAST_STATE (default): No action is performed.</description></item>
+            /// <item><description>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient Data&quot; is triggered.</description></item>
+            /// <item><description>OK: The status is considered normal.</description></item>
             /// </list>
+            /// <para>Valid values of N: 1 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>KEEP_LAST_STATE</para>
@@ -518,6 +442,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string NoEffectiveInterval { get; set; }
 
             /// <summary>
+            /// <para>The advanced settings.</para>
+            /// <para>Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;}. For example, {&quot;NotSendOK&quot;:true} specifies whether to send an alert recovery notification. The key is NotSendOK, and the value is true (do not send) or false (send, which is the default).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{
             ///       &quot;NotSendOK&quot;: true
@@ -528,8 +455,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Options { get; set; }
 
             /// <summary>
-            /// <para>The aggregation period of the metric data. Valid values of N: 1 to 200.</para>
-            /// <para>Set the <c>Period</c> parameter to an integral multiple of 60. Unit: seconds. Default value: 300.</para>
+            /// <para>The reporting period of monitoring data.</para>
+            /// <para>Valid values of N: 1 to 200. </para>
+            /// <para>The value of <c>Period</c> must be 60 or a multiple of 60. Unit: seconds. Default value: 300.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -539,7 +467,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Period { get; set; }
 
             /// <summary>
-            /// <para>The ID of the alert rule. Valid values of N: 1 to 200.</para>
+            /// <para>The ID of the alert rule.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -550,7 +479,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert rule. Valid values of N: 1 to 200.</para>
+            /// <para>The name of the alert rule.</para>
+            /// <para>Valid values of N: 1 to 200.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -561,7 +491,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.</para>
+            /// <para>The mute period of the alert notification. Valid values of N: 1 to 200.</para>
             /// <para>Unit: seconds. Default value: 86400. Minimum value: 3600.</para>
             /// 
             /// <b>Example:</b>
@@ -572,8 +502,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? SilenceTime { get; set; }
 
             /// <summary>
-            /// <para>The callback URL. Valid values of N: 1 to 200.</para>
-            /// <para>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</para>
+            /// <para>The callback URL to which an alert notification is sent. Valid values of N: 1 to 200.</para>
+            /// <para>Enter a publicly accessible URL. CloudMonitor sends alert information to this URL by using POST requests. Only the HTTP protocol is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>

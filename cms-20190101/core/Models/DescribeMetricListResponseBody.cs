@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
+        /// <para>A value of 200 indicates that the call was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The monitoring data.</para>
+        /// <para>The list of monitoring data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;timestamp&quot;:1548777660000,&quot;userId&quot;:&quot;120886317861****&quot;,&quot;instanceId&quot;:&quot;i-abc&quot;,&quot;Minimum&quot;:9.92,&quot;Average&quot;:9.92,&quot;Maximum&quot;:9.92}]</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The paging token.</para>
+        /// <para>The pagination cursor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15761441850009dd70bb64cff1f0fff6d0b08ffff073be5fb1e785e2b020f7fed9b5e137bd810a6d6cff5ae****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The interval at which the monitoring data is queried. Unit: seconds. Valid values: 60, 300, and 900.</para>
+        /// <para>The statistical period. Unit: seconds. Valid values: 60, 300, and 900.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3121AE7D-4AFF-4C25-8F1D-C8226EBB1F42</para>
@@ -73,10 +73,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
-        /// <item><description>false: The call failed.</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

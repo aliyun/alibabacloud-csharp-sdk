@@ -26,10 +26,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</para>
-        /// <para>Unit: seconds. Default value: 86400, which indicates one day.</para>
+        /// <para>The mute period.</para>
+        /// <para>Unit: seconds. Default value: 86400 (1 day).</para>
         /// <remarks>
-        /// <para> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</para>
+        /// <para>When monitoring data continuously exceeds the alert rule threshold, only one alert notification is sent within each mute period.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorLogRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the browser.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Chrome</para>
         /// </summary>
@@ -17,12 +19,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Browser { get; set; }
 
+        /// <summary>
+        /// <para>This parameter is deprecated. You do not need to specify this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>无</para>
+        /// </summary>
         [NameInMap("BrowserInfo")]
         [Validation(Required=false)]
         public string BrowserInfo { get; set; }
 
         /// <summary>
-        /// <para>The city identification code.</para>
+        /// <para>The city ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>546</para>
@@ -32,6 +40,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string City { get; set; }
 
         /// <summary>
+        /// <para>The type of the device. This parameter specifies the screen size for impersonation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>laptop</para>
         /// </summary>
@@ -40,13 +50,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Device { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Valid values:</para>
+        /// <para>The end of the time range to query. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</description></item>
-        /// <item><description>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</description></item>
+        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</para>
+        /// </description></item>
+        /// <item><description><para>UTC format: YYYY-MM-DDThh:mm:ssZ.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> We recommend that you use UNIX timestamps to prevent time zone-related issues.</para>
+        /// <para>Use UNIX timestamps to prevent time zone-related issues.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -57,8 +69,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The filter condition.</para>
-        /// <para>You can specify a simple expression, for example, <c>TotalTime&gt;100</c>. In this case, the operation returns only the data for instant test tasks whose total response time exceeds 100 milliseconds.</para>
+        /// <para>The filter expression for detection results.</para>
+        /// <para>Simple expressions are supported. For example, you can use the <c>TotalTime&gt;100</c> expression to query the detection data whose total response time exceeds 100 milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TotalTime&gt;100</para>
@@ -68,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>The carrier identification code.</para>
+        /// <para>The carrier ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>465</para>
@@ -78,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Isp { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 1440.</para>
+        /// <para>The number of entries to return on each page for a paged query. Valid values: 1 to 1440.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -88,7 +100,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Length { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric.</para>
+        /// <para>The metric.</para>
         /// <para>Only the <c>ProbeLog</c> metric is supported.</para>
         /// 
         /// <b>Example:</b>
@@ -99,7 +111,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to initiate the next request if the response of the current request is truncated. You can use the token to initiate another request and obtain the remaining records.``</para>
+        /// <para>If the response is truncated, use the <c>NextToken</c> parameter to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IWBjqMYSy0is7zSMGu16****</para>
@@ -113,17 +125,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The following formats are supported:</para>
+        /// <para>The beginning of the time range to query. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</description></item>
-        /// <item><description>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format</description></item>
+        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</para>
+        /// </description></item>
+        /// <item><description><para>UTC format: YYYY-MM-DDThh:mm:ssZ.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description>The specified time range includes the end time and excludes the start time. The start time must be earlier than the end time.\
-        /// We recommend that you use UNIX timestamps to prevent time zone-related issues.</description></item>
+        /// <item><description>The start time and end time follow the (StartTime, EndTime] pattern. The value of StartTime cannot be the same as or later than the value of EndTime.<br> - Use UNIX timestamps to prevent time zone-related issues.<br></description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1638422474389</para>
@@ -133,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instant test tasks. Separate multiple task IDs with commas (,).</para>
+        /// <para>The ID of the detection task. You can specify multiple task IDs. Separate them with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

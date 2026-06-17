@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyMonitorGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The alert groups that can receive alert notifications for the application group.</para>
+        /// <para>The alert contact group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alarm_ecs_group</para>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The abbreviation of the cloud service name. Valid values of N: 1 to 200.</para>
         /// <remarks>
-        /// <para> For more information about how to obtain the abbreviation of a cloud service name, see <c>metricCategory</c> in the response parameter <c>Labels</c> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
+        /// <para>For more information about how to obtain the abbreviation of a cloud service name, see <c>metricCategory</c> in the response parameter <c>Labels</c> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12345</para>
+        /// <para>123****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The instance ID. You can query multiple instances by specifying multiple IDs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i-x1234568</para>
+        /// <para>i-bp12g4xbl4i0brkn****</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The keyword used to search for instances. Fuzzy search based on instance names is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>s1</para>
+        /// <para>test-s1</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]

@@ -536,9 +536,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The current edition of CloudMonitor. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>free: Free Edition</description></item>
-            /// <item><description>pro: Pro Edition</description></item>
-            /// <item><description>cms_post: pay-as-you-go</description></item>
+            /// <item><description><para>free: Free Edition</para>
+            /// </description></item>
+            /// <item><description><para>pro: Pro Edition</para>
+            /// </description></item>
+            /// <item><description><para>cms_post: pay-as-you-go</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

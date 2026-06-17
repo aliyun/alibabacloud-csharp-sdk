@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DisableHostAvailabilityRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the availability monitoring task. Valid values of N: 1 to 20.</para>
+        /// <para>The IDs of the availability monitoring jobs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

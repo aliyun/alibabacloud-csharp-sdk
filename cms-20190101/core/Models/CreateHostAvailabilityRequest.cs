@@ -14,10 +14,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public CreateHostAvailabilityRequestAlertConfig AlertConfig { get; set; }
         public class CreateHostAvailabilityRequestAlertConfig : TeaModel {
             /// <summary>
-            /// <para>The end of the time range during which the alert rule is effective. Valid values: 0 to 23.</para>
-            /// <para>For example, if the <c>AlertConfig.StartTime</c> parameter is set to 0 and the <c>AlertConfig.EndTime</c> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</para>
+            /// <para>报警生效的结束时间。取值范围：0~23。</para>
+            /// <para>例如：<c>AlertConfig.StartTime</c>为0，<c>AlertConfig.EndTime</c>为22，表示报警生效时间为00:00:00至22:00:00。</para>
             /// <remarks>
-            /// <para>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</para>
+            /// <para>如果报警不在生效时间内，则超过阈值也不会发送报警通知。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -28,8 +28,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The alert notification methods. Valid values:</para>
-            /// <para>0: Alert notifications are sent by using emails and DingTalk chatbots.</para>
+            /// <para>报警通知类型。取值：</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 2：电话+短信+邮件+钉钉机器人。</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 1：短信+邮件+钉钉机器人。</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 0：邮件+钉钉机器人。</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;0：邮件+钉钉机器人。</para>
+            /// <para>&lt;props=&quot;partner&quot;&gt;0：邮件+钉钉机器人。</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? NotifyType { get; set; }
 
             /// <summary>
-            /// <para>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400. The default value indicates one day.</para>
+            /// <para>通道沉默时间。单位：秒，默认值：86400（1天）。</para>
             /// 
             /// <b>Example:</b>
             /// <para>86400</para>
@@ -50,10 +54,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? SilenceTime { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range during which the alert rule is effective. Valid values: 0 to 23.</para>
-            /// <para>For example, if the <c>AlertConfig.StartTime</c> parameter is set to 0 and the <c>AlertConfig.EndTime</c> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</para>
+            /// <para>报警生效的开始时间。取值范围：0~23。</para>
+            /// <para>例如：<c>AlertConfig.StartTime</c>为0，<c>AlertConfig.EndTime</c>为22，表示报警生效时间为00:00:00至22:00:00。</para>
             /// <remarks>
-            /// <para>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</para>
+            /// <para>如果报警不在生效时间内，则超过阈值也不会发送报警通知。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The callback URL.</para>
+            /// <para>URL回调地址。</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://www.aliyun.com/webhook.json">https://www.aliyun.com/webhook.json</a></para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public CreateHostAvailabilityRequestTaskOption TaskOption { get; set; }
         public class CreateHostAvailabilityRequestTaskOption : TeaModel {
             /// <summary>
-            /// <para>The header of the HTTP request. Format: <c>Parameter name:Parameter value</c>. Separate multiple parameters with carriage return characters. Example:</para>
+            /// <para>HTTP请求的Header。格式为<c>参数名:参数</c>，多个参数之间用回车符分隔，例如：</para>
             /// <pre><c>params1:value1
             /// params2:value2
             /// </c></pre>
@@ -93,14 +97,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string HttpHeader { get; set; }
 
             /// <summary>
-            /// <para>The HTTP request method. Valid values:</para>
+            /// <para>探测类型的方法。取值：</para>
             /// <list type="bullet">
             /// <item><description>GET</description></item>
             /// <item><description>POST</description></item>
             /// <item><description>HEAD</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter must be specified when TaskType is set to HTTP.</para>
+            /// <para>如果任务的探测类型为HTTP，则需要设置该参数。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -111,13 +115,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string HttpMethod { get; set; }
 
             /// <summary>
-            /// <para>The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:</para>
+            /// <para>匹配HTTP响应内容的报警规则。取值：</para>
             /// <list type="bullet">
-            /// <item><description>true: If the HTTP response body includes the alert rule, an alert is triggered.</description></item>
-            /// <item><description>false: If the HTTP response does not include the alert rule, an alert is triggered.</description></item>
+            /// <item><description>true：如果HTTP响应内容包含设置的报警规则，则报警。</description></item>
+            /// <item><description>false：如果HTTP响应内容不包含设置的报警规则，则报警。</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter must be specified when TaskType is set to HTTP.</para>
+            /// <para>如果任务的探测类型为HTTP，则该参数生效。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -128,7 +132,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public bool? HttpNegative { get; set; }
 
             /// <summary>
-            /// <para>The content of the HTTP POST request.</para>
+            /// <para>HTTP探测类型探测请求的Post内容。</para>
             /// 
             /// <b>Example:</b>
             /// <para>params1=paramsValue1</para>
@@ -138,9 +142,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string HttpPostContent { get; set; }
 
             /// <summary>
-            /// <para>The character set that is used in the HTTP response.</para>
+            /// <para>HTTP探测类型的响应字符集。</para>
             /// <remarks>
-            /// <para>Only UTF-8 is supported.</para>
+            /// <para>仅支持UTF-8。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string HttpResponseCharset { get; set; }
 
             /// <summary>
-            /// <para>The response to the HTTP request.</para>
+            /// <para>匹配响应的内容。</para>
             /// 
             /// <b>Example:</b>
             /// <para>ok</para>
@@ -161,19 +165,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string HttpResponseMatchContent { get; set; }
 
             /// <summary>
-            /// <para>The URI that you want to monitor. This parameter is required if the TaskType parameter is set to HTTP or Telnet.</para>
+            /// <para>HTTP、Telnet探测类型的探测URI地址。</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>
+            /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a>
+            /// telnet://127.0.0.1:80</para>
             /// </summary>
             [NameInMap("HttpURI")]
             [Validation(Required=false)]
             public string HttpURI { get; set; }
 
             /// <summary>
-            /// <para>The interval at which detection requests are sent. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.</para>
+            /// <para>探测频率。单位：秒。取值：15、30、60、120、300、900、1800和3600。</para>
             /// <remarks>
-            /// <para>This parameter is available only for the CloudMonitor agent V3.5.1 or later.</para>
+            /// <para>仅3.5.1及以上版本的云监控插件支持该参数。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -184,9 +189,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? Interval { get; set; }
 
             /// <summary>
-            /// <para>The domain name or IP address that you want to monitor.</para>
+            /// <para>探测的域名或地址。</para>
             /// <remarks>
-            /// <para> This parameter is required if the TaskType parameter is set to PING.</para>
+            /// <para>如果探测任务类型为PING，则需要设置该参数。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -199,7 +204,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>None</para>
+        /// <para>None.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AlertConfigEscalationList")]
@@ -207,16 +212,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<CreateHostAvailabilityRequestAlertConfigEscalationList> AlertConfigEscalationList { get; set; }
         public class CreateHostAvailabilityRequestAlertConfigEscalationList : TeaModel {
             /// <summary>
-            /// <para>The method used to calculate the metric values that trigger alerts. Valid values of N: 1 to 21. Valid values:</para>
+            /// <para>The statistical method for the alert. Valid values of N: 1 to 21. The valid values vary based on the metric:</para>
             /// <list type="bullet">
-            /// <item><description>HttpStatus: Value</description></item>
-            /// <item><description>HttpLatency: Average</description></item>
-            /// <item><description>TelnetStatus: Value</description></item>
-            /// <item><description>TelnetLatency: Average</description></item>
-            /// <item><description>PingLostRate: Average</description></item>
+            /// <item><description>HttpStatus: Value.</description></item>
+            /// <item><description>HttpLatency: Average.</description></item>
+            /// <item><description>TelnetStatus: Value.</description></item>
+            /// <item><description>TelnetLatency: Average.</description></item>
+            /// <item><description>PingLostRate: Average.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics such as the latency and packet loss rate.</para>
+            /// <para>The statistical method for status code metrics is the raw value (Value). The statistical method for latency or packet loss rate metrics is the average value (Average).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -227,13 +232,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Aggregate { get; set; }
 
             /// <summary>
-            /// <para>The metric for which the alert feature is enabled. Valid values of N: 1 to 21. Valid values:</para>
+            /// <para>The metric for the alert. Valid values of N: 1 to 21. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>HttpStatus: HTTP status code</description></item>
-            /// <item><description>HttpLatency: HTTP response time</description></item>
-            /// <item><description>TelnetStatus: Telnet status code</description></item>
-            /// <item><description>TelnetLatency: Telnet response time</description></item>
-            /// <item><description>PingLostRate: Ping packet loss rate</description></item>
+            /// <item><description>HttpStatus: HTTP status code.</description></item>
+            /// <item><description>HttpLatency: HTTP latency.</description></item>
+            /// <item><description>TelnetStatus: Telnet status code.</description></item>
+            /// <item><description>TelnetLatency: Telnet latency.</description></item>
+            /// <item><description>PingLostRate: Ping packet loss rate.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -245,13 +250,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The comparison operator that is used in the alert rule. Valid values of N: 1 to 21. Valid values:</para>
+            /// <para>The comparison operator for the alert rule. Valid values of N: 1 to 21. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><c>&gt;</c></description></item>
             /// <item><description><c>&gt;=</c></description></item>
             /// <item><description><c>&lt;</c></description></item>
             /// <item><description><c>&lt;=</c></description></item>
-            /// <item><description><c>=</c></description></item>
+            /// <item><description><c>=</c>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -263,7 +268,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Operator { get; set; }
 
             /// <summary>
-            /// <para>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered. Valid values of N: 1 to 21.</para>
+            /// <para>The number of alert retries. Valid values of N: 1 to 21.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -285,28 +290,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The resources for which alerts are triggered.</para>
+        /// <para>The alert trigger targets.</para>
         /// </summary>
         [NameInMap("AlertConfigTargetList")]
         [Validation(Required=false)]
         public List<CreateHostAvailabilityRequestAlertConfigTargetList> AlertConfigTargetList { get; set; }
         public class CreateHostAvailabilityRequestAlertConfigTargetList : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <c>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. Fields:</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Format: <c>acs:{AbbreviatedServiceName}:{regionId}:{userId}:/{ResourceType}/{ResourceName}/message</c>. Example: <c>acs:mns:ap-southeast-1:120886317861****:/queues/test123/message</c>. The following list describes the parameters:</para>
             /// <list type="bullet">
-            /// <item><description><para>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</para>
+            /// <item><description><para>{AbbreviatedServiceName}: Only Simple Message Queue (formerly MNS) is supported.</para>
             /// </description></item>
-            /// <item><description><para>{userId}: the ID of the Alibaba Cloud account.</para>
+            /// <item><description><para>{userId}: The Alibaba Cloud account ID.</para>
             /// </description></item>
-            /// <item><description><para>{regionId}: the region ID of the SMQ queue or topic.</para>
+            /// <item><description><para>{regionId}: The region where the Simple Message Queue (formerly MNS) queue or topic resides.</para>
             /// </description></item>
-            /// <item><description><para>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</para>
+            /// <item><description><para>{ResourceType}: The type of the resource that accepts alerts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>queues</b></description></item>
-            /// <item><description><b>topics</b></description></item>
+            /// <item><description><b>queues</b>: queue.</description></item>
+            /// <item><description><b>topics</b>: topic.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para>{Resource name}: the resource name.</para>
+            /// <item><description><para>{ResourceName}: The name of the resource.</para>
             /// <list type="bullet">
             /// <item><description>If the resource type is <b>queues</b>, the resource name is the queue name.</description></item>
             /// <item><description>If the resource type is <b>topics</b>, the resource name is the topic name.</description></item>
@@ -322,7 +327,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource for which alerts are triggered.</para>
+            /// <para>The ID of the alert trigger target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -332,7 +337,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the alert callback. The parameters are in the JSON format.</para>
+            /// <para>The JSON-formatted parameters for the alert callback.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</para>
@@ -344,9 +349,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The alert level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INFO</description></item>
-            /// <item><description>WARN</description></item>
-            /// <item><description>CRITICAL</description></item>
+            /// <item><description>INFO: information.</description></item>
+            /// <item><description>WARN: warning.</description></item>
+            /// <item><description>CRITICAL: critical.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -370,9 +375,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ECS instances that are monitored. Valid values of N: 1 to 21.</para>
+        /// <para>The list of ECS instances that initiate detection. Valid values of N: 1 to 21.</para>
         /// <remarks>
-        /// <para>This parameter must be specified when <c>TaskScope</c> is set to <c>GROUP_SPEC_INSTANCE</c>.</para>
+        /// <para>Set this parameter when <c>TaskScope</c> is set to <c>GROUP_SPEC_INSTANCE</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -387,7 +392,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the availability monitoring task. The name must be 4 to 100 characters in length, and can contain letters, digits, and underscores (_).</para>
+        /// <para>The name of the availability monitoring task. The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -398,10 +403,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The range of instances that are monitored by the availability monitoring task. Valid values:</para>
+        /// <para>The detection scope of the availability monitoring task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GROUP: All ECS instances in the application group are monitored.</description></item>
-        /// <item><description>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList parameter. The InstanceList parameter specifies the ECS instances to be monitored.</description></item>
+        /// <item><description>GROUP: uses all ECS instances in the current application group as detection probes.</description></item>
+        /// <item><description>GROUP_SPEC_INSTANCE: uses specified ECS instances in the current application group as detection probes. If you set this parameter to GROUP_SPEC_INSTANCE, you must also set InstanceList to specify the ECS instances that initiate detection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -412,11 +417,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskScope { get; set; }
 
         /// <summary>
-        /// <para>The monitoring type of the availability monitoring task. Valid values:</para>
+        /// <para>The detection type of the availability monitoring task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PING</description></item>
         /// <item><description>TELNET</description></item>
-        /// <item><description>HTTP</description></item>
+        /// <item><description>HTTP.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The order of alerts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default value): reverse chronological order</description></item>
-        /// <item><description>false: chronological order</description></item>
+        /// <item><description><para>true (default value): reverse chronological order</para>
+        /// </description></item>
+        /// <item><description><para>false: chronological order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,8 +131,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status of the alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ALARM (default value): Alerts are triggered.</description></item>
-        /// <item><description>OK: No alerts are triggered.</description></item>
+        /// <item><description><para>ALARM (default value): Alerts are triggered.</para>
+        /// </description></item>
+        /// <item><description><para>OK: No alerts are triggered.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -143,9 +147,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether alerts are muted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>2 (default value): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</description></item>
-        /// <item><description>0: Alerts are triggered or cleared.</description></item>
-        /// <item><description>1: The alert rule is ineffective.</description></item>
+        /// <item><description><para>2 (default value): Alerts are muted and are not triggered within the mute period, even if the condition specified in the alert rule is met.</para>
+        /// </description></item>
+        /// <item><description><para>0: Alerts are triggered or cleared.</para>
+        /// </description></item>
+        /// <item><description><para>1: The alert rule is ineffective.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

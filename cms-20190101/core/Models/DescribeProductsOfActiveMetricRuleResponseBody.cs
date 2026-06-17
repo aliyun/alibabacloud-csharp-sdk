@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,17 +85,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The information about the services for which the initiative alert feature is enabled. Services are separated with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ECS: Elastic Compute Service (ECS)</description></item>
-        /// <item><description>rds: ApsaraDB RDS</description></item>
-        /// <item><description>slb: Server Load Balancer (SLB)</description></item>
-        /// <item><description>redis_standard: Redis Open-Source Edition (standard architecture)</description></item>
-        /// <item><description>redis_sharding: Redis Open-Source Edition (cluster architecture)</description></item>
-        /// <item><description>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</description></item>
-        /// <item><description>mongodb: ApsaraDB for MongoDB of the replica set architecture</description></item>
-        /// <item><description>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</description></item>
-        /// <item><description>hbase: ApsaraDB for HBase</description></item>
-        /// <item><description>elasticsearch: Elasticsearch</description></item>
-        /// <item><description>opensearch: OpenSearch</description></item>
+        /// <item><description><para>ECS: Elastic Compute Service (ECS)</para>
+        /// </description></item>
+        /// <item><description><para>rds: ApsaraDB RDS</para>
+        /// </description></item>
+        /// <item><description><para>slb: Server Load Balancer (SLB)</para>
+        /// </description></item>
+        /// <item><description><para>redis_standard: Redis Open-Source Edition (standard architecture)</para>
+        /// </description></item>
+        /// <item><description><para>redis_sharding: Redis Open-Source Edition (cluster architecture)</para>
+        /// </description></item>
+        /// <item><description><para>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</para>
+        /// </description></item>
+        /// <item><description><para>mongodb: ApsaraDB for MongoDB of the replica set architecture</para>
+        /// </description></item>
+        /// <item><description><para>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</para>
+        /// </description></item>
+        /// <item><description><para>hbase: ApsaraDB for HBase</para>
+        /// </description></item>
+        /// <item><description><para>elasticsearch: Elasticsearch</para>
+        /// </description></item>
+        /// <item><description><para>opensearch: OpenSearch</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,8 +139,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

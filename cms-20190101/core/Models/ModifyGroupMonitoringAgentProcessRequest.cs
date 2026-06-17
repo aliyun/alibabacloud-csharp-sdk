@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyGroupMonitoringAgentProcessRequest : TeaModel {
         /// <summary>
-        /// <para>The alert rule configurations.</para>
+        /// <para>The configurations of the alert rule.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AlertConfig")]
@@ -18,19 +18,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<ModifyGroupMonitoringAgentProcessRequestAlertConfig> AlertConfig { get; set; }
         public class ModifyGroupMonitoringAgentProcessRequestAlertConfig : TeaModel {
             /// <summary>
-            /// <para>The comparison operator that is used to compare the metric value with the threshold. Valid values of N: 1 to 200. Valid values:</para>
+            /// <para>The comparison operator for the threshold of the Critical alert level. The value of N can be 1 to 200. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-            /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-            /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-            /// <item><description>LessThanThreshold: less than the threshold.</description></item>
-            /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-            /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday.</description></item>
-            /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-            /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-            /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-            /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-            /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+            /// <item><description><para>GreaterThanOrEqualToThreshold: greater than or equal to</para>
+            /// </description></item>
+            /// <item><description><para>GreaterThanThreshold: greater than</para>
+            /// </description></item>
+            /// <item><description><para>LessThanOrEqualToThreshold: less than or equal to</para>
+            /// </description></item>
+            /// <item><description><para>LessThanThreshold: less than</para>
+            /// </description></item>
+            /// <item><description><para>NotEqualToThreshold: not equal to</para>
+            /// </description></item>
+            /// <item><description><para>GreaterThanYesterday: greater than the value at the same time yesterday</para>
+            /// </description></item>
+            /// <item><description><para>LessThanYesterday: less than the value at the same time yesterday</para>
+            /// </description></item>
+            /// <item><description><para>GreaterThanLastWeek: greater than the value at the same time last week</para>
+            /// </description></item>
+            /// <item><description><para>LessThanLastWeek: less than the value at the same time last week</para>
+            /// </description></item>
+            /// <item><description><para>GreaterThanLastPeriod: greater than the value in the last monitoring cycle</para>
+            /// </description></item>
+            /// <item><description><para>LessThanLastPeriod: less than the value in the last monitoring cycle</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -42,7 +53,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string ComparisonOperator { get; set; }
 
             /// <summary>
-            /// <para>The time period during which the alert rule is effective. Valid values of N: 1 to 200.</para>
+            /// <para>The time period when the alert rule is effective. The value of N can be 1 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00-22:59</para>
@@ -52,11 +63,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EffectiveInterval { get; set; }
 
             /// <summary>
-            /// <para>The level of the alert. Valid values of N: 1 to 200. Valid values:</para>
+            /// <para>The alert level. The value of N can be 1 to 200. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>critical (default value): critical</description></item>
-            /// <item><description>warn: warning</description></item>
-            /// <item><description>info: information</description></item>
+            /// <item><description><para>critical (default): critical</para>
+            /// </description></item>
+            /// <item><description><para>warn: warning</para>
+            /// </description></item>
+            /// <item><description><para>info: information</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -68,20 +82,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EscalationsLevel { get; set; }
 
             /// <summary>
-            /// <para>The time period during which the alert rule is ineffective. Valid values of N: 1 to 200.</para>
+            /// <para>This parameter is deprecated. You can ignore it.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>23:00-23:59</para>
+            /// <para>00:00-05:30</para>
             /// </summary>
             [NameInMap("NoEffectiveInterval")]
             [Validation(Required=false)]
             public string NoEffectiveInterval { get; set; }
 
             /// <summary>
-            /// <para>The mute period during which new alerts are not sent even if the trigger conditions are met. Valid values of N: 1 to 200.</para>
-            /// <para>Unit: seconds. Minimum value: 3600, which is equivalent to one hour. Default value: 86400, which is equivalent to one day.</para>
+            /// <para>The mute period. The value of N can be 1 to 200.</para>
+            /// <para>Unit: seconds. Minimum value: 3600. Default value: 86400.</para>
             /// <remarks>
-            /// <para> Only one alert notification is sent during a mute period even if the metric value exceeds the alert threshold during consecutive checks.</para>
+            /// <para>If monitoring data continuously exceeds the alert threshold, an alert notification is sent only once during each mute period.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -92,9 +106,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SilenceTime { get; set; }
 
             /// <summary>
-            /// <para>The statistical aggregation method that is used to calculate the metric values. Valid values of N: 1 to 200.</para>
+            /// <para>The statistical method for alerts. The value of N can be 1 to 200.</para>
             /// <remarks>
-            /// <para> Set the value to Average.</para>
+            /// <para>Only Average is supported.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -105,7 +119,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Statistics { get; set; }
 
             /// <summary>
-            /// <para>The alert trigger.</para>
+            /// <para>None.</para>
             /// </summary>
             [NameInMap("TargetList")]
             [Validation(Required=false)]
@@ -113,20 +127,29 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public class ModifyGroupMonitoringAgentProcessRequestAlertConfigTargetList : TeaModel {
                 /// <summary>
                 /// <para>The Alibaba Cloud Resource Name (ARN) of the resource.</para>
-                /// <para>For information about how to obtain the ARN of a resource, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</para>
-                /// <para>Format: <c>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</c>. Example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. Fields:</para>
+                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</para>
+                /// <para>The ARN of a resource is in the following format: <c>acs:{product-abbreviation}:{regionId}:{userId}:/{resource-type}/{resource-name}/message</c>. For example: <c>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</c>. The parameters are described as follows:</para>
                 /// <list type="bullet">
-                /// <item><description>{Service name abbreviation}: the abbreviation of the service name. Valid value: mns.</description></item>
-                /// <item><description>{userId}: the ID of the Alibaba Cloud account.</description></item>
-                /// <item><description>{regionId}: the region ID of the message queue or topic.</description></item>
-                /// <item><description>{Resource type}: the type of the resource for which alerts are triggered. Valid values: <list type="bullet">
-                /// <item><description><b>queues</b> </description></item>
-                /// <item><description><b>topics</b></description></item>
+                /// <item><description><para>{product-abbreviation}: Currently, only Simple Message Queue (formerly MNS) is supported.</para>
+                /// </description></item>
+                /// <item><description><para>{userId}: The ID of your Alibaba Cloud account.</para>
+                /// </description></item>
+                /// <item><description><para>{regionId}: The region where the Simple Message Queue (formerly MNS) queue or subject is located.</para>
+                /// </description></item>
+                /// <item><description><para>{resource-type}: The type of the resource that receives alerts. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>queues</b>: a queue.</para>
+                /// </description></item>
+                /// <item><description><para><b>topics</b>: a subject.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description>{Resourcename}: the name of the resource. <list type="bullet">
-                /// <item><description>If the resource type is set to <b>queues</b>, the resource name is the name of the message queue. </description></item>
-                /// <item><description>If the resource type is set to <b>topics</b>, the resource name is the name of the topic.`</description></item>
+                /// <item><description><para>{resource-name}: The name of the resource.</para>
+                /// <list type="bullet">
+                /// <item><description><para>If the resource type is <b>queues</b>, the resource name is the queue name.</para>
+                /// </description></item>
+                /// <item><description><para>If the resource type is <b>topics</b>, the resource name is the subject name.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
                 /// </list>
@@ -139,8 +162,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Arn { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the resource for which alerts are triggered.</para>
-                /// <para>For information about how to obtain the ID of a resource for which alerts are triggered, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</para>
+                /// <para>The ID of the alert-triggered target.</para>
+                /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/121592.html">DescribeMetricRuleTargets</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -150,7 +173,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The parameters of the alert callback. The parameters are in the JSON format.</para>
+                /// <para>The JSON-formatted parameters for the alert callback.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</para>
@@ -160,11 +183,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string JsonParams { get; set; }
 
                 /// <summary>
-                /// <para>The level of the alert. Valid values:</para>
+                /// <para>The alert level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INFO: information</description></item>
-                /// <item><description>WARN: warning</description></item>
-                /// <item><description>CRITICAL: critical</description></item>
+                /// <item><description><para>INFO: information</para>
+                /// </description></item>
+                /// <item><description><para>WARN: warning</para>
+                /// </description></item>
+                /// <item><description><para>CRITICAL: critical</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -177,7 +203,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The alert threshold. Valid values of N: 1 to 200.</para>
+            /// <para>The alert threshold. The value of N can be 1 to 200.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -188,9 +214,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Threshold { get; set; }
 
             /// <summary>
-            /// <para>The number of times for which the threshold can be consecutively exceeded. Valid values of N: 1 to 200. Default value: 3.</para>
+            /// <para>The number of consecutive times that the alert level is reached. The value of N can be 1 to 200. Default value: 3.</para>
             /// <remarks>
-            /// <para> A metric triggers an alert only after the metric value reaches the threshold consecutively for the specified times.</para>
+            /// <para>An alert is triggered only when the alert level is reached the specified number of consecutive times and the threshold is met.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -202,7 +228,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Times { get; set; }
 
             /// <summary>
-            /// <para>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule. Valid values of N: 1 to 200.</para>
+            /// <para>The callback URL. A POST request is sent to this URL when an alert is triggered. The value of N can be 1 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.aliyun.com">http://www.aliyun.com</a></para>
@@ -225,7 +251,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the process monitoring task.</para>
+        /// <para>The ID of the process monitoring job for the application group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -236,12 +262,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The logical operator used between conditional expressions that are used to match instances. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>all</description></item>
-        /// <item><description>and</description></item>
-        /// <item><description>or</description></item>
-        /// </list>
+        /// <para>This parameter is deprecated. You can ignore it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>

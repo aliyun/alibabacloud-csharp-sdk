@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The response code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Success</para>
+        /// <para>successfull</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The request ID. You can use the request ID to query logs and troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7ADD7EFB-7555-4EC1-A3D9-F9955C189CCF</para>
+        /// <para>142989D9-CC52-54D0-928D-2C9B1D9F051C</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -45,8 +45,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><para><c>true</c></para>
+        /// </description></item>
+        /// <item><description><para><c>false</c></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

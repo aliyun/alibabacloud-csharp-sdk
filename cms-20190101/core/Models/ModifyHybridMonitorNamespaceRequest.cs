@@ -10,16 +10,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyHybridMonitorNamespaceRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the namespace.</para>
+        /// <para>The description of the metric store.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Alibaba Cloud product metric repository.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
-        /// <para>The name can contain letters, digits, and hyphens (-).</para>
-        /// <para>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</para>
+        /// <para>The name of the metric store.</para>
+        /// <para>Format: consists of uppercase letters, lowercase letters, digits, and hyphens (-).</para>
+        /// <para>For information about how to obtain the name of a metric store, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,16 +37,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The data retention period. Valid values:</para>
+        /// <para>The data storage duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cms.s1.large: Data is stored for 15 days.</description></item>
-        /// <item><description>cms.s1.xlarge: Data is stored for 32 days.</description></item>
-        /// <item><description>cms.s1.2xlarge: Data is stored for 63 days.</description></item>
-        /// <item><description>cms.s1.3xlarge: Data is stored for 93 days.</description></item>
-        /// <item><description>cms.s1.6xlarge: Data is stored for 185 days.</description></item>
-        /// <item><description>cms.s1.12xlarge: Data is stored for 376 days.</description></item>
+        /// <item><description>cms.s1.large: 15 days.</description></item>
+        /// <item><description>cms.s1.xlarge: 32 days.</description></item>
+        /// <item><description>cms.s1.2xlarge: 63 days.</description></item>
+        /// <item><description>cms.s1.3xlarge: 93 days.</description></item>
+        /// <item><description>cms.s1.6xlarge: 185 days.</description></item>
+        /// <item><description>cms.s1.12xlarge: 376 days.</description></item>
         /// </list>
-        /// <para>For information about the pricing for different retention periods, see the <b>Pricing</b> section in <a href="https://help.aliyun.com/document_detail/223532.html">Billing of the dashboard feature</a>.</para>
+        /// <para>For the prices of different storage duration specifications, see the <b>Pricing</b> section in <a href="https://help.aliyun.com/document_detail/223532.html">Dashboard</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cms.s1.2xlarge</para>

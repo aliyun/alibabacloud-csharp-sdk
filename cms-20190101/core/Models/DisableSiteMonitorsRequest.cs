@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the site monitoring task. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of site monitoring tasks. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

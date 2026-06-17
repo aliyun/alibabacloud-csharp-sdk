@@ -16,8 +16,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to return information about used quotas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): yes</description></item>
-        /// <item><description>false: no</description></item>
+        /// <item><description><para>true (default): yes</para>
+        /// </description></item>
+        /// <item><description><para>false: no</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -31,9 +31,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The cloud service to which the alert rule is applied. Valid values of N: 1 to 3. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ecs: Elastic Compute Service (ECS)</description></item>
-            /// <item><description>rds: ApsaraDB RDS</description></item>
-            /// <item><description>slb: Server Load Balancer (SLB)</description></item>
+            /// <item><description><para>ecs: Elastic Compute Service (ECS)</para>
+            /// </description></item>
+            /// <item><description><para>rds: ApsaraDB RDS</para>
+            /// </description></item>
+            /// <item><description><para>slb: Server Load Balancer (SLB)</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -47,8 +50,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The logical operator used between conditional expressions in the alert rule. Valid values of N: 1 to 3. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>and: The instances that meet all the conditional expressions are automatically added to the application group.</description></item>
-            /// <item><description>or: The instances that meet one of the conditional expressions are automatically added to the application group.</description></item>
+            /// <item><description><para>and: The instances that meet all the conditional expressions are automatically added to the application group.</para>
+            /// </description></item>
+            /// <item><description><para>or: The instances that meet one of the conditional expressions are automatically added to the application group.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -70,10 +75,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The method that is used to filter instances. Valid values of N: 1 to 3. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>contains: contains</description></item>
-                /// <item><description>notContains: does not contain</description></item>
-                /// <item><description>startWith: starts with a prefix</description></item>
-                /// <item><description>endWith: ends with a suffix</description></item>
+                /// <item><description><para>contains: contains</para>
+                /// </description></item>
+                /// <item><description><para>notContains: does not contain</para>
+                /// </description></item>
+                /// <item><description><para>startWith: starts with a prefix</para>
+                /// </description></item>
+                /// <item><description><para>endWith: ends with a suffix</para>
+                /// </description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -114,8 +123,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The mode for creating the alert rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: creates asynchronously</description></item>
-        /// <item><description>false (default): creates synchronously</description></item>
+        /// <item><description><para>true: creates asynchronously</para>
+        /// </description></item>
+        /// <item><description><para>false (default): creates synchronously</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

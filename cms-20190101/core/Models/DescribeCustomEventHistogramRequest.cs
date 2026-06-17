@@ -43,9 +43,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The severity level of the event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CRITICAL</description></item>
-        /// <item><description>WARN</description></item>
-        /// <item><description>INFO</description></item>
+        /// <item><description><para>CRITICAL</para>
+        /// </description></item>
+        /// <item><description><para>WARN</para>
+        /// </description></item>
+        /// <item><description><para>INFO</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,8 +75,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The keywords that are used to search for the event.</para>
         /// <list type="bullet">
-        /// <item><description>If you need to query the custom event whose content contains a and b, set the value to &quot;a and b&quot;.</description></item>
-        /// <item><description>If you need to query the custom event whose content contains a or b, set the value to &quot;a or b&quot;.</description></item>
+        /// <item><description><para>If you need to query the custom event whose content contains a and b, set the value to &quot;a and b&quot;.</para>
+        /// </description></item>
+        /// <item><description><para>If you need to query the custom event whose content contains a or b, set the value to &quot;a or b&quot;.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The MD5 value of the HTTP request body. The MD5 value is a 128-bit hash value used to verify the uniqueness of the reported monitoring data.</para>
         /// <remarks>
-        /// <para> <c>Md5</c> is returned when you query the reported monitoring data of a metric.</para>
+        /// <para><c>Md5</c> is returned when you query the reported monitoring data of a metric.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The ID of the request for reporting monitoring data.</para>
         /// <remarks>
-        /// <para> <c>UUID</c> is returned when you query the reported monitoring data of a metric. We recommend that you specify the <c>Md5</c> parameter.</para>
+        /// <para><c>UUID</c> is returned when you query the reported monitoring data of a metric. We recommend that you specify the <c>Md5</c> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

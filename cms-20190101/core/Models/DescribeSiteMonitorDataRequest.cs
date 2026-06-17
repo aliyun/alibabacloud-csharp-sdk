@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The end of the time range to query. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</description></item>
-        /// <item><description>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</description></item>
+        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</para>
+        /// </description></item>
+        /// <item><description><para>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +38,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The metric name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Availability</description></item>
-        /// <item><description>ResponseTime</description></item>
+        /// <item><description><para>Availability</para>
+        /// </description></item>
+        /// <item><description><para>ResponseTime</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The statistical period. The value is an integral multiple of 60. Unit: seconds.</para>
         /// <remarks>
-        /// <para> The default value equals the minimum interval at which detection requests are sent to the monitored address.</para>
+        /// <para>The default value equals the minimum interval at which detection requests are sent to the monitored address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -78,8 +82,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The start of the time range to query. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</description></item>
-        /// <item><description>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</description></item>
+        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 UTC on Thursday, January 1, 1970.</para>
+        /// </description></item>
+        /// <item><description><para>UTC time: the UTC time that follows the YYYY-MM-DDThh:mm:ssZ format.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,8 +109,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The type of the monitored object whose monitoring data is to be queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>metric</description></item>
-        /// <item><description>event</description></item>
+        /// <item><description><para>metric</para>
+        /// </description></item>
+        /// <item><description><para>event</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

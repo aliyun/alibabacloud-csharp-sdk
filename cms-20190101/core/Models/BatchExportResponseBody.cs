@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class BatchExportResponseBody : TeaModel {
         /// <summary>
-        /// <para>The timestamp of the data requested by the backend. A larger timestamp indicates that the data export time is closer to the current time.</para>
+        /// <para>The timestamp when the backend requested the data. A larger timestamp indicates that the exported data is closer to the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1678781819000</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public long? Anchor { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The value 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The Cursor information that is used to call this operation again.</para>
+        /// <para>The cursor that is used to call this operation again.</para>
         /// <remarks>
-        /// <para> If <c>null</c> is returned, the monitoring data is exported.</para>
+        /// <para>If the returned result is <c>null</c>, the monitoring data has been exported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Cursor { get; set; }
 
         /// <summary>
-        /// <para>The data returned in this call.</para>
+        /// <para>The data returned by this call.</para>
         /// </summary>
         [NameInMap("DataResults")]
         [Validation(Required=false)]
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the data has been exported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Some data is not exported.</description></item>
-        /// <item><description>false: All the data is exported.</description></item>
+        /// <item><description>true: Some data has not been exported.</description></item>
+        /// <item><description>false: All data has been exported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? HasNext { get; set; }
 
         /// <summary>
-        /// <para>The number of data entries returned in this call.</para>
+        /// <para>The number of data entries returned for this call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -97,10 +97,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: successful</para>
+        /// </description></item>
+        /// <item><description><para>false: failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

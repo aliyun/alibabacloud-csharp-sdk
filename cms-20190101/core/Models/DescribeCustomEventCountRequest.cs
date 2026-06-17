@@ -57,8 +57,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The keywords that are used to search for the event.</para>
         /// <list type="bullet">
-        /// <item><description>If you need to query the custom event whose content contains a and b, set the value to a and b.</description></item>
-        /// <item><description>If you need to query the custom event whose content contains a or b, set the value to a or b.</description></item>
+        /// <item><description><para>If you need to query the custom event whose content contains a and b, set the value to a and b.</para>
+        /// </description></item>
+        /// <item><description><para>If you need to query the custom event whose content contains a or b, set the value to a or b.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

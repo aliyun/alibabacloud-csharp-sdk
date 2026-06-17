@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutEventRuleTargetsRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the alert contact groups that receive alert notifications.</para>
+        /// <para>The alert contact group notification method.</para>
         /// </summary>
         [NameInMap("ContactParameters")]
         [Validation(Required=false)]
@@ -18,13 +18,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public class PutEventRuleTargetsRequestContactParameters : TeaModel {
             /// <summary>
             /// <para>The name of the alert contact group. Valid values of N: 1 to 5.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Default alert contact group</para>
             /// </summary>
             [NameInMap("ContactGroupName")]
             [Validation(Required=false)]
             public string ContactGroupName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</para>
+            /// <para>The unique identifier of the rule target. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -34,11 +37,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The alert notification methods. Valid values of N: 1 to 5. Valid values:</para>
-            /// <para>4: Alert notifications are sent by using DingTalk and emails.</para>
+            /// <para>The alert notification level. Valid values of N: 1 to 5. Valid values:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 2: phone call, text message, DingTalk, and email</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 3: text message, DingTalk, and email</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;- 4: DingTalk and email</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;4: DingTalk and email</para>
+            /// <para>&lt;props=&quot;partner&quot;&gt;4: DingTalk and email.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>3</para>
+            /// <para>4</para>
             /// </summary>
             [NameInMap("Level")]
             [Validation(Required=false)]
@@ -47,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The information about the recipients in Function Compute.</para>
+        /// <para>The Function Compute notification method.</para>
         /// </summary>
         [NameInMap("FcParameters")]
         [Validation(Required=false)]
@@ -64,7 +71,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string FunctionName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</para>
+            /// <para>The unique identifier of the rule target. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -74,7 +81,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The region where Function Compute is deployed. Valid values of N: 1 to 5.</para>
+            /// <para>The region where the Function Compute service resides. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -84,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The name of the Function Compute service. Valid values of N: 1 to 5.</para>
+            /// <para>The service name of the Function Compute service. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fc-test</para>
@@ -96,14 +103,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The notifications of Simple Message Queue (formerly MNS) (SMQ).</para>
+        /// <para>The Simple Message Queue (formerly MNS) notification method.</para>
         /// </summary>
         [NameInMap("MnsParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestMnsParameters> MnsParameters { get; set; }
         public class PutEventRuleTargetsRequestMnsParameters : TeaModel {
             /// <summary>
-            /// <para>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</para>
+            /// <para>The unique identifier of the rule target. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -113,7 +120,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the SMQ queue. Valid values of N: 1 to 5.</para>
+            /// <para>The name of the queue. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>queue1</para>
@@ -123,7 +130,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Queue { get; set; }
 
             /// <summary>
-            /// <para>The region for SMQ. Valid values of N: 1 to 5.</para>
+            /// <para>The region where Simple Message Queue (formerly MNS) resides. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -133,7 +140,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The SMQ topic.</para>
+            /// <para>The topic of Simple Message Queue (formerly MNS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>topic_sample</para>
@@ -145,7 +152,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The parameters of API callback notification.</para>
+        /// <para>The list of API callback notification parameters.</para>
         /// </summary>
         [NameInMap("OpenApiParameters")]
         [Validation(Required=false)]
@@ -162,13 +169,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5. Format: <c>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</c>. Fields:</para>
+            /// <para>The Alibaba Cloud Resource Name (ARN) of the resource. Valid values of N: 1 to 5.
+            /// Format: <c>arn:acs:${Service}:${Region}:${Account}:${ResourceType}/${ResourceId}</c>. The fields are described as follows:</para>
             /// <list type="bullet">
-            /// <item><description>Service: the code of a cloud service</description></item>
-            /// <item><description>Region: the region ID</description></item>
-            /// <item><description>Account: the ID of an Alibaba Cloud account</description></item>
-            /// <item><description>ResourceType: the resource type</description></item>
-            /// <item><description>ResourceId: the resource ID</description></item>
+            /// <item><description>Service: the Alibaba Cloud service.</description></item>
+            /// <item><description>Region: the region ID.</description></item>
+            /// <item><description>Account: the Alibaba Cloud account ID.</description></item>
+            /// <item><description>ResourceType: the resource type.</description></item>
+            /// <item><description>ResourceId: the resource ID.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("Arn")]
@@ -176,7 +184,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The ID of the recipient that receives alert notifications sent by an API callback.</para>
+            /// <para>The unique identifier of the API callback notification method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -186,7 +194,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the alert callback. Specify the parameters in the JSON format.</para>
+            /// <para>The JSON-formatted parameters of the alert callback.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</para>
@@ -196,7 +204,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string JsonParams { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud service to which the API operation belongs.</para>
+            /// <para>The ID of the Alibaba Cloud service to which the API belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>log</para>
@@ -216,7 +224,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>The name of the role.</para>
+            /// <para>The role name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyRole</para>
@@ -226,7 +234,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The version of the API.</para>
+            /// <para>The API version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-01</para>
@@ -253,14 +261,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The information about the recipients in Simple Log Service.</para>
+        /// <para>The Simple Log Service notification method.</para>
         /// </summary>
         [NameInMap("SlsParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestSlsParameters> SlsParameters { get; set; }
         public class PutEventRuleTargetsRequestSlsParameters : TeaModel {
             /// <summary>
-            /// <para>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</para>
+            /// <para>The unique identifier of the rule target. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -270,7 +278,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service Logstore. Valid values of N: 1 to 5.</para>
+            /// <para>The Logstore of Simple Log Service. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testlogstore</para>
@@ -280,7 +288,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string LogStore { get; set; }
 
             /// <summary>
-            /// <para>The name of the Simple Log Service project. Valid values of N: 1 to 5.</para>
+            /// <para>The project of Simple Log Service. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testproject</para>
@@ -290,7 +298,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Project { get; set; }
 
             /// <summary>
-            /// <para>The region where Simple Log Service is deployed. Valid values of N: 1 to 5.</para>
+            /// <para>The region where Simple Log Service resides. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -302,14 +310,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The information about the callback URLs that are used to receive alert notifications.</para>
+        /// <para>The URL callback notification method.</para>
         /// </summary>
         [NameInMap("WebhookParameters")]
         [Validation(Required=false)]
         public List<PutEventRuleTargetsRequestWebhookParameters> WebhookParameters { get; set; }
         public class PutEventRuleTargetsRequestWebhookParameters : TeaModel {
             /// <summary>
-            /// <para>The ID of the recipient that receives alert notifications. Valid values of N: 1 to 5.</para>
+            /// <para>The unique identifier of the rule target. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -319,8 +327,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The HTTP request method. Valid values of N: 1 to 5.</para>
-            /// <para>Valid values: GET and POST.</para>
+            /// <para>The request method of the HTTP callback. Valid values of N: 1 to 5.</para>
+            /// <para>Only GET and POST are supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GET</para>
@@ -330,11 +338,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Method { get; set; }
 
             /// <summary>
-            /// <para>The name of the protocol. Valid values of N: 1 to 5. Valid values:</para>
+            /// <para>The protocol name. Valid values of N: 1 to 5. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>http</description></item>
             /// <item><description>telnet</description></item>
-            /// <item><description>ping</description></item>
+            /// <item><description>ping.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

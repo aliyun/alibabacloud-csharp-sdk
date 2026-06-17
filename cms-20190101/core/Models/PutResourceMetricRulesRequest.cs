@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutResourceMetricRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The threshold-triggered alert rules.</para>
-        /// <para>Valid values of N: 1 to 500.</para>
+        /// <para>The list of threshold alert rules.</para>
+        /// <para>Valid values of N: 1 to 50.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Rules")]
@@ -27,24 +27,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public PutResourceMetricRulesRequestRulesEscalationsCritical Critical { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsCritical : TeaModel {
                     /// <summary>
-                    /// <para>The operator that is used to compare the metric value with the threshold for Critical-level alerts. Valid values:</para>
+                    /// <para>Critical级别阈值比较符。取值：</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>EqualToThreshold: equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold：大于等于。</description></item>
+                    /// <item><description>GreaterThanThreshold：大于。</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold：小于等于。</description></item>
+                    /// <item><description>LessThanThreshold：小于。</description></item>
+                    /// <item><description>NotEqualToThreshold：不等于。</description></item>
+                    /// <item><description>EqualToThreshold：等于。</description></item>
+                    /// <item><description>GreaterThanYesterday：同比昨天时间上涨。</description></item>
+                    /// <item><description>LessThanYesterday：同比昨天时间下降。</description></item>
+                    /// <item><description>GreaterThanLastWeek：同比上周同一时间上涨。</description></item>
+                    /// <item><description>LessThanLastWeek：同比上周同一时间下降。</description></item>
+                    /// <item><description>GreaterThanLastPeriod：环比上周期上涨。</description></item>
+                    /// <item><description>LessThanLastPeriod：环比上周期下降。</description></item>
                     /// </list>
-                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>N的取值范围：1~50。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -63,11 +63,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical methods for Critical-level alerts.</para>
-                    /// <para>Valid values of N: 1 to 500.</para>
-                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+                    /// <para>Critical级别报警统计方法。</para>
+                    /// <para>N的取值范围：1~50。</para>
+                    /// <para>该参数的取值由指定云产品的<c>MetricName</c>对应的<c>Statistics</c>列决定，例如：Maximum、Minimum和Average。关于如何获取该参数的取值，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -78,10 +78,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Critical-level alerts.</para>
-                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>Critical级别报警阈值。</para>
+                    /// <para>N的取值范围：1~50。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -92,10 +92,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The consecutive number of times for which the metric value meets the alert condition before a Critical-level alert is triggered.</para>
-                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>Critical级别报警重试次数。</para>
+                    /// <para>N的取值范围：1~50。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -112,24 +112,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public PutResourceMetricRulesRequestRulesEscalationsInfo Info { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsInfo : TeaModel {
                     /// <summary>
-                    /// <para>The operator that is used to compare the metric value with the threshold for Info-level alerts. Valid values:</para>
+                    /// <para>Info级别阈值比较符。取值：</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>EqualToThreshold: equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold：大于等于。</description></item>
+                    /// <item><description>GreaterThanThreshold：大于。</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold：小于等于。</description></item>
+                    /// <item><description>LessThanThreshold：小于。</description></item>
+                    /// <item><description>NotEqualToThreshold：不等于。</description></item>
+                    /// <item><description>EqualToThreshold：等于。</description></item>
+                    /// <item><description>GreaterThanYesterday：同比昨天时间上涨。</description></item>
+                    /// <item><description>LessThanYesterday：同比昨天时间下降。</description></item>
+                    /// <item><description>GreaterThanLastWeek：同比上周同一时间上涨。</description></item>
+                    /// <item><description>LessThanLastWeek：同比上周同一时间下降。</description></item>
+                    /// <item><description>GreaterThanLastPeriod：环比上周期上涨。</description></item>
+                    /// <item><description>LessThanLastPeriod：环比上周期下降。</description></item>
                     /// </list>
-                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>N的取值范围：1~50。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -148,11 +148,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical methods for Info-level alerts.</para>
-                    /// <para>Valid values of N: 1 to 500.</para>
-                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+                    /// <para>Info级别报警统计方法。</para>
+                    /// <para>N的取值范围：1~50。</para>
+                    /// <para>该参数的取值由指定云产品的<c>MetricName</c>对应的<c>Statistics</c>列决定，例如：Maximum、Minimum和Average。关于如何获取该参数的取值，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -163,9 +163,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Info-level alerts.</para>
+                    /// <para>Info级别报警阈值。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -176,10 +176,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The consecutive number of times for which the metric value meets the alert condition before an Info-level alert is triggered.</para>
-                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>Info级别报警重试次数。</para>
+                    /// <para>N的取值范围：1~50。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -196,24 +196,24 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public PutResourceMetricRulesRequestRulesEscalationsWarn Warn { get; set; }
                 public class PutResourceMetricRulesRequestRulesEscalationsWarn : TeaModel {
                     /// <summary>
-                    /// <para>The operator that is used to compare the metric value with the threshold for Warn-level alerts. Valid values:</para>
+                    /// <para>Warn级别阈值比较符。取值：</para>
                     /// <list type="bullet">
-                    /// <item><description>GreaterThanOrEqualToThreshold: greater than or equal to the threshold</description></item>
-                    /// <item><description>GreaterThanThreshold: greater than the threshold</description></item>
-                    /// <item><description>LessThanOrEqualToThreshold: less than or equal to the threshold</description></item>
-                    /// <item><description>LessThanThreshold: less than the threshold</description></item>
-                    /// <item><description>NotEqualToThreshold: not equal to the threshold</description></item>
-                    /// <item><description>EqualToThreshold: equal to the threshold</description></item>
-                    /// <item><description>GreaterThanYesterday: greater than the metric value at the same time yesterday</description></item>
-                    /// <item><description>LessThanYesterday: less than the metric value at the same time yesterday</description></item>
-                    /// <item><description>GreaterThanLastWeek: greater than the metric value at the same time last week</description></item>
-                    /// <item><description>LessThanLastWeek: less than the metric value at the same time last week</description></item>
-                    /// <item><description>GreaterThanLastPeriod: greater than the metric value in the last monitoring cycle</description></item>
-                    /// <item><description>LessThanLastPeriod: less than the metric value in the last monitoring cycle</description></item>
+                    /// <item><description>GreaterThanOrEqualToThreshold：大于等于。</description></item>
+                    /// <item><description>GreaterThanThreshold：大于。</description></item>
+                    /// <item><description>LessThanOrEqualToThreshold：小于等于。</description></item>
+                    /// <item><description>LessThanThreshold：小于。</description></item>
+                    /// <item><description>NotEqualToThreshold：不等于。</description></item>
+                    /// <item><description>EqualToThreshold：等于。</description></item>
+                    /// <item><description>GreaterThanYesterday：同比昨天时间上涨。</description></item>
+                    /// <item><description>LessThanYesterday：同比昨天时间下降。</description></item>
+                    /// <item><description>GreaterThanLastWeek：同比上周同一时间上涨。</description></item>
+                    /// <item><description>LessThanLastWeek：同比上周同一时间下降。</description></item>
+                    /// <item><description>GreaterThanLastPeriod：环比上周期上涨。</description></item>
+                    /// <item><description>LessThanLastPeriod：环比上周期下降。</description></item>
                     /// </list>
-                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>N的取值范围：1~50。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -232,11 +232,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string PreCondition { get; set; }
 
                     /// <summary>
-                    /// <para>The statistical methods for Warn-level alerts.</para>
-                    /// <para>Valid values of N: 1 to 500.</para>
-                    /// <para>The value of this parameter is determined by the <c>Statistics</c> column corresponding to the <c>MetricName</c> parameter of the specified cloud service. The value of this parameter can be Maximum, Minimum, or Average. For more information about how to obtain the value of this parameter, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+                    /// <para>Warn级别报警统计方法。</para>
+                    /// <para>N的取值范围：1~50。</para>
+                    /// <para>该参数的取值由指定云产品的<c>MetricName</c>对应的<c>Statistics</c>列决定，例如：Maximum、Minimum和Average。关于如何获取该参数的取值，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -247,10 +247,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Statistics { get; set; }
 
                     /// <summary>
-                    /// <para>The threshold for Warn-level alerts.</para>
-                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>Warn级别报警阈值。</para>
+                    /// <para>N的取值范围：1~50。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -261,10 +261,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Threshold { get; set; }
 
                     /// <summary>
-                    /// <para>The consecutive number of times for which the metric value meets the alert condition before a Warn-level alert is triggered.</para>
-                    /// <para>Valid values of N: 1 to 500.</para>
+                    /// <para>Warn级别报警重试次数。</para>
+                    /// <para>N的取值范围：1~50。</para>
                     /// <remarks>
-                    /// <para> You must select at least one of the Critical, Warn, and Info alert levels and specify the Statistics, ComparisonOperator, Threshold, and Times parameters for each alert level.</para>
+                    /// <para>报警级别Critical（严重）、Warn（警告）或Info（信息）至少设置一个，且该报警级别中的参数Statistics、ComparisonOperator、Threshold和Times必须同时设置。</para>
                     /// </remarks>
                     /// 
                     /// <b>Example:</b>
@@ -279,10 +279,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The alert contact groups. The alert notifications are sent to the alert contacts in the alert contact group.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>报警联系组。报警通知会发送给该报警联系组中的报警联系人。</para>
+            /// <para>N的取值范围：1~50。</para>
             /// <remarks>
-            /// <para> An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>.</para>
+            /// <para>报警联系组是一组报警联系人，可以包含一个或多个报警联系人。关于如何创建报警联系人和报警联系组，请参见<a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a>和<a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>。</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -294,8 +294,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string ContactGroups { get; set; }
 
             /// <summary>
-            /// <para>The time period during which the alert rule is effective.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>报警规则的生效时间范围。</para>
+            /// <para>N的取值范围：1~50。</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00-23:59</para>
@@ -305,19 +305,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EffectiveInterval { get; set; }
 
             /// <summary>
-            /// <para>The subject of the alert notification email.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>报警邮件主题。</para>
+            /// <para>N的取值范围：1~50。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ECS instance alert</para>
             /// </summary>
             [NameInMap("EmailSubject")]
             [Validation(Required=false)]
             public string EmailSubject { get; set; }
 
             /// <summary>
-            /// <para>The interval at which alerts are triggered based on the alert rule.</para>
-            /// <para>Unit: seconds.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>报警规则的触发周期。</para>
+            /// <para>单位：秒。</para>
+            /// <para>N的取值范围：1~50。</para>
             /// <remarks>
-            /// <para> For information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>关于如何查询监控项的统计周期，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -328,14 +331,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Interval { get; set; }
 
             /// <summary>
-            /// <para>If the metric meets the specified condition in the alert rule and CloudMonitor sends an alert notification, the tag is also written to the metric and displayed in the alert notification.</para>
+            /// <para>当监控项达到报警条件并进行报警时，标签同时写入监控项，在报警通知中进行展示。</para>
             /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public List<PutResourceMetricRulesRequestRulesLabels> Labels { get; set; }
             public class PutResourceMetricRulesRequestRulesLabels : TeaModel {
                 /// <summary>
-                /// <para>The tag key.</para>
+                /// <para>标签键。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tagKey1</para>
@@ -345,9 +348,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The tag value.</para>
+                /// <para>标签值。</para>
                 /// <remarks>
-                /// <para> You can use a template parameter to specify a tag value. CloudMonitor replaces the value of the template parameter with an actual tag value.</para>
+                /// <para>标签值支持模板参数，将模板参数替换为实际标签值。</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -360,9 +363,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The metric name.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
-            /// <para>For information about how to query the name of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>监控项名称。</para>
+            /// <para>N的取值范围：1~50。</para>
+            /// <para>关于如何查询监控项名称，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
             /// 
             /// <b>Example:</b>
             /// <para>cpu_total</para>
@@ -372,9 +375,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string MetricName { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the cloud service.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
-            /// <para>For information about how to query the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>云产品的数据命名空间。</para>
+            /// <para>N的取值范围：1~50。</para>
+            /// <para>关于如何查询云产品的数据命名空间，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -385,13 +388,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to handle alerts when no monitoring data is found. Valid values:</para>
+            /// <para>无监控数据时报警的处理方式。取值：</para>
             /// <list type="bullet">
-            /// <item><description>KEEP_LAST_STATE (default): No operation is performed.</description></item>
-            /// <item><description>INSUFFICIENT_DATA: An alert whose content is &quot;Insufficient data&quot; is triggered.</description></item>
-            /// <item><description>OK: The status is considered normal.</description></item>
+            /// <item><description>KEEP_LAST_STATE（默认值）：不做任何处理。</description></item>
+            /// <item><description>INSUFFICIENT_DATA：报警内容为无数据。</description></item>
+            /// <item><description>OK：正常。</description></item>
             /// </list>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>N的取值范围：1~50。</para>
             /// 
             /// <b>Example:</b>
             /// <para>KEEP_LAST_STATE</para>
@@ -401,8 +404,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string NoDataPolicy { get; set; }
 
             /// <summary>
-            /// <para>The time period during which the alert rule is ineffective.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>报警规则的失效时间范围。</para>
+            /// <para>N的取值范围：1~50。</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00-06:00</para>
@@ -412,11 +415,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string NoEffectiveInterval { get; set; }
 
             /// <summary>
-            /// <para>The statistical period of the metric.</para>
-            /// <para>Unit: seconds. The default value is the interval at which the monitoring data of the metric is collected.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>监控项的统计周期。</para>
+            /// <para>单位：秒。默认为监控项的原始上报周期。</para>
+            /// <para>N的取值范围：1~50。</para>
             /// <remarks>
-            /// <para> For information about how to query the statistical period of a metric, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>关于如何查询监控项的统计周期，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -427,9 +430,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Period { get; set; }
 
             /// <summary>
-            /// <para>The information about the resource. Example: <c>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</c> or <c>[{&quot;userId&quot;:&quot;100931896542****&quot;}]</c>.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
-            /// <para>For more information about the supported dimensions that are used to query resources, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>资源信息，例如：<c>[{&quot;instanceId&quot;:&quot;i-uf6j91r34rnwawoo****&quot;}]</c>、<c>[{&quot;userId&quot;:&quot;100931896542****&quot;}]</c>。</para>
+            /// <para>N的取值范围：1~50。</para>
+            /// <para>关于资源信息支持的维度Dimensions，请参见<a href="https://help.aliyun.com/document_detail/163515.html">云产品监控项</a>。</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -440,11 +443,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Resources { get; set; }
 
             /// <summary>
-            /// <para>The ID of the alert rule.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
-            /// <para>You can specify a new ID or the ID of an existing alert rule. For information about how to query the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+            /// <para>报警规则ID。</para>
+            /// <para>N的取值范围：1~50。</para>
+            /// <para>您可以输入新的报警规则ID，也可以使用云监控已存在的报警规则ID。关于如何查询报警规则ID，请参见<a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>。</para>
             /// <remarks>
-            /// <para> If you specify a new ID, a threshold-triggered alert rule is created.</para>
+            /// <para>输入新的报警规则ID，表示创建一条阈值报警规则。</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -456,11 +459,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string RuleId { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert rule.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
-            /// <para>You can specify a new name or the name of an existing alert rule. For information about how to query the name of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</para>
+            /// <para>报警规则名称。</para>
+            /// <para>N的取值范围：1~50。</para>
+            /// <para>您可以输入新的报警规则名称，也可以使用云监控已存在的报警规则名称。关于如何查询报警规则名称，请参见<a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>。</para>
             /// <remarks>
-            /// <para> If you specify a new name, a threshold-triggered alert rule is created.</para>
+            /// <para>输入新的报警规则名称，表示创建一条阈值报警规则。</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -471,16 +474,22 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string RuleName { get; set; }
 
+            /// <summary>
+            /// <para>是否发送恢复通知</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
             [NameInMap("SendOK")]
             [Validation(Required=false)]
             public bool? SendOK { get; set; }
 
             /// <summary>
-            /// <para>The mute period during which new alert notifications are not sent even if the trigger conditions are met.</para>
-            /// <para>Unit: seconds. Default value: 86400.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>通道沉默周期。</para>
+            /// <para>单位：秒，默认值：86400。</para>
+            /// <para>N的取值范围：1~50。</para>
             /// <remarks>
-            /// <para> If an alert is not cleared after the mute period ends, CloudMonitor resends an alert notification.</para>
+            /// <para>通道沉默周期是指报警发生后未恢复正常，间隔多久重新发送一次报警通知。</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -491,8 +500,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? SilenceTime { get; set; }
 
             /// <summary>
-            /// <para>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</para>
-            /// <para>Valid values of N: 1 to 500.</para>
+            /// <para>报警发生回调时指定的URL地址，向URL发送POST请求。</para>
+            /// <para>N的取值范围：1~50。</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://alert.aliyun.com.com:8080/callback">https://alert.aliyun.com.com:8080/callback</a></para>

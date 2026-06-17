@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorListRequest : TeaModel {
         /// <summary>
-        /// <para>Task network type. Valid values:</para>
+        /// <para>The type of detection points used by the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PC: Cable Network</para>
+        /// <item><description><para>PC: PC-based detection points.</para>
         /// </description></item>
-        /// <item><description><para>MOBILE: Mobile Cellular Network</para>
+        /// <item><description><para>MOBILE: mobile-based detection points.</para>
         /// </description></item>
-        /// <item><description><para>FC: Alibaba Cloud VPC Network</para>
+        /// <item><description><para>FC: internal detection points.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string AgentGroup { get; set; }
 
         /// <summary>
-        /// <para>The keyword to be matched.</para>
+        /// <para>The keyword used to search for site monitoring tasks.</para>
         /// <remarks>
-        /// <para> You can search for tasks by name or address. Fuzzy search is supported.</para>
+        /// <para>Fuzzy match is supported based on the task name or task address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,8 +77,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1: The task is enabled.</description></item>
-        /// <item><description>2: The task is disabled.</description></item>
+        /// <item><description><para>1: Normal.</para>
+        /// </description></item>
+        /// <item><description><para>2: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +91,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskState { get; set; }
 
         /// <summary>
-        /// <para>The protocol that is used by the site monitoring task. Valid values: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</para>
+        /// <para>The type of the site monitoring task. CloudMonitor supports the following types: HTTP, PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>

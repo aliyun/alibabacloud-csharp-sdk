@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutExporterOutputRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration set for exporting monitoring data. It is a JSON object string. The string must include the following fields:</para>
+        /// <para>The configuration of the data export. The value is a JSONObject string that must contain the following fields:</para>
         /// <list type="bullet">
-        /// <item><description>endpoint: the endpoint of Log Service.</description></item>
-        /// <item><description>project: the Log Service project to which monitoring data is exported.</description></item>
-        /// <item><description>logstore: the Log Service Logstore to which the monitoring data is exported.</description></item>
+        /// <item><description>endpoint: the domain name that corresponds to the data of Log Service (SLS).</description></item>
+        /// <item><description>project: the project.</description></item>
+        /// <item><description>logstore: the Logstore.</description></item>
         /// <item><description>ak: the AccessKey ID.</description></item>
         /// <item><description>as: the AccessKey secret.</description></item>
         /// </list>
@@ -28,17 +28,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ConfigJson { get; set; }
 
         /// <summary>
-        /// <para>The description of the configuration set.</para>
+        /// <para>The description of the configuration.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Export CPU metrics</para>
+        /// <para>CPU metric export</para>
         /// </summary>
         [NameInMap("Desc")]
         [Validation(Required=false)]
         public string Desc { get; set; }
 
         /// <summary>
-        /// <para>The name of the configuration set.</para>
+        /// <para>The name of the configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string DestName { get; set; }
 
         /// <summary>
-        /// <para>The service to which the monitoring data is exported.</para>
+        /// <para>The product to which the data is exported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sls</para>

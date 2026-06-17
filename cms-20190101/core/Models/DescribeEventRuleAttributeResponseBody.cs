@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeEventRuleAttributeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The event pattern. This parameter describes the trigger conditions of an event.</para>
+            /// <para>The event pattern. Describes the trigger conditions of the event.</para>
             /// </summary>
             [NameInMap("EventPattern")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 }
 
                 /// <summary>
-                /// <para>The keyword for filtering.</para>
+                /// <para>The filter keyword.</para>
                 /// </summary>
                 [NameInMap("KeywordFilterObj")]
                 [Validation(Required=false)]
@@ -94,10 +94,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                     /// <summary>
-                    /// <para>The relationship between multiple keywords in a condition. Valid values:</para>
+                    /// <para>The condition for multiple keywords. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>OR: The relationship between keywords is OR.</description></item>
-                    /// <item><description>NOT: The keyword is excluded. The value NOT indicates that all events that do not contain the keywords are matched.</description></item>
+                    /// <item><description>OR: The relationship between multiple keywords is OR.</description></item>
+                    /// <item><description>NOT: Does not contain the keyword. Matches all events that are not in the keyword list.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Product { get; set; }
 
                 /// <summary>
-                /// <para>Indicates that logs are filtered based on the specified SQL statement. If the specified conditions are met, an alert is triggered.</para>
+                /// <para>Filters logs by using SQL statements. An alert is triggered if the filter conditions are met.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ycccluster1 and (i-23ij0o82612 or Executed1) or Asimulated not 222</para>
@@ -164,8 +164,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The event type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SYSTEM: system event</description></item>
-            /// <item><description>CUSTOM: custom event</description></item>
+            /// <item><description><para>SYSTEM: system event.</para>
+            /// </description></item>
+            /// <item><description><para>CUSTOM: custom event.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -176,7 +178,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the application group.</para>
+            /// <para>The application group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3607****</para>
@@ -198,8 +200,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The status of the event-triggered alert rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ENABLED</description></item>
-            /// <item><description>DISABLED</description></item>
+            /// <item><description><para>ENABLED: enabled.</para>
+            /// </description></item>
+            /// <item><description><para>DISABLED: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -212,10 +216,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

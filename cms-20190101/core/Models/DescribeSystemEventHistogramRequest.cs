@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The event type.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,9 +46,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The level of the event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CRITICAL</description></item>
-        /// <item><description>WARN</description></item>
-        /// <item><description>INFO</description></item>
+        /// <item><description><para>CRITICAL</para>
+        /// </description></item>
+        /// <item><description><para>WARN</para>
+        /// </description></item>
+        /// <item><description><para>INFO</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The event name.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The abbreviation of the service name.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -91,8 +94,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The keywords that are used to search for the system event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to search for the system event whose content contains a and b, set the value to <c>a and b</c>.</description></item>
-        /// <item><description>If you want to search for the system event whose content contains a or b, set the value to <c>a or b</c>.</description></item>
+        /// <item><description><para>If you want to search for the system event whose content contains a and b, set the value to <c>a and b</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you want to search for the system event whose content contains a or b, set the value to <c>a or b</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,7 +121,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The event status.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the status of system events.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the status of system events.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

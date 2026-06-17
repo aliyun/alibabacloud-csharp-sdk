@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomEventRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The alert contact group that receives alert notifications. Separate multiple contact groups with commas (,).</para>
+        /// <para>The alert contact group. Separate multiple contact groups with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string ContactGroups { get; set; }
 
         /// <summary>
-        /// <para>The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.</para>
+        /// <para>The time period during which the alert rule is effective. Valid values: 00:00-23:59.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00:00-23:59</para>
@@ -31,14 +31,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EffectiveInterval { get; set; }
 
         /// <summary>
-        /// <para>The subject of the alert notification email.</para>
+        /// <para>The subject of the alert email.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ECS instance</para>
         /// </summary>
         [NameInMap("EmailSubject")]
         [Validation(Required=false)]
         public string EmailSubject { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom event. For more information about how to obtain the event name, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</para>
+        /// <para>The name of the custom event. For information about how to obtain the name, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,9 +52,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application group. For more information about how to obtain the group ID, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</para>
+        /// <para>The ID of the application group. For information about how to obtain the ID, see <a href="https://help.aliyun.com/document_detail/115262.html">DescribeCustomEventAttribute</a>.</para>
         /// <remarks>
-        /// <para> The value 0 indicates that the reported custom event does not belong to any application Group.</para>
+        /// <para>A value of 0 indicates that the reported custom event does not belong to any application group.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,11 +66,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The level of the alert. Valid values:</para>
+        /// <para>The alert level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CRITICAL: critical issue</description></item>
-        /// <item><description>WARN: warning</description></item>
-        /// <item><description>INFO: information</description></item>
+        /// <item><description>CRITICAL</description></item>
+        /// <item><description>WARN</description></item>
+        /// <item><description>INFO</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The cycle that is used to aggregate monitoring data of the custom event. Unit: seconds. Set the value to an integral multiple of 60. Default value: 300.</para>
+        /// <para>The aggregation period of the monitoring data for the custom event. Unit: seconds. The value must be 60 or a multiple of 60. Default value: 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -91,7 +94,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The ID of the alert rule.</para>
         /// <remarks>
-        /// <para> You can specify an existing ID to modify the corresponding alert rule or specify a new ID to create an alert rule.</para>
+        /// <para>If the alert rule ID already exists, the alert rule is modified. If the alert rule ID does not exist, an alert rule is created.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -125,7 +128,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Threshold { get; set; }
 
         /// <summary>
-        /// <para>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</para>
+        /// <para>The callback URL to which a POST request is sent when an alert is triggered.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://www.aliyun.com">https://www.aliyun.com</a></para>

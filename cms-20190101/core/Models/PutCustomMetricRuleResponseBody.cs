@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomMetricRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>状态码。</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>200表示成功。</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned message. If the request was successful, the return value is null. If the request failed, an error message is returned.</para>
+        /// <para>返回信息。接口调用成功时，返回为空；接口调用失败时，返回失败原因。</para>
         /// 
         /// <b>Example:</b>
         /// <para>ComparisonOperator is mandatory for this action.</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>请求ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>65D50468-ECEF-48F1-A6E1-D952E89D9432</para>
@@ -43,10 +43,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>操作是否成功。取值：</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true：成功。</para>
+        /// </description></item>
+        /// <item><description><para>false：失败。</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

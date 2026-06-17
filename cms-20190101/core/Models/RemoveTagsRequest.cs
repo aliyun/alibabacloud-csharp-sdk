@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class RemoveTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the application groups.</para>
+        /// <para>The ID of the application group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The tag key.</para>
             /// <remarks>
-            /// <para>The tag key (<c>Tag.N.Key</c>) and tag value (<c>Tag.N.Value</c>) must be specified at the same time.</para>
+            /// <para>You must specify both the tag key (<c>Tag.N.Key</c>) and the tag value (<c>Tag.N.Value</c>).</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The tag value.</para>
             /// <remarks>
-            /// <para>The tag key (<c>Tag.N.Key</c>) and tag value (<c>Tag.N.Value</c>) must be specified at the same time.</para>
+            /// <para>You must specify both the tag key (<c>Tag.N.Key</c>) and the tag value (<c>Tag.N.Value</c>).</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 

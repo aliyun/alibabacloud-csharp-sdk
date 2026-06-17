@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The tags of the metric.</para>
         /// <remarks>
-        /// <para> This parameter is required only if the <c>TaskType</c> parameter is set to <c>aliyun_sls</c>.</para>
+        /// <para>This parameter is required only when TaskType is set to <c>aliyun_sls</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("AttachLabels")]
@@ -41,6 +41,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         }
 
+        /// <summary>
+        /// <para>The IDs of the accounts of other cloud providers that are connected to CloudMonitor.</para>
+        /// </summary>
         [NameInMap("CloudAccessId")]
         [Validation(Required=false)]
         public List<string> CloudAccessId { get; set; }
@@ -53,7 +56,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// </list>
         /// <para>Unit: seconds.</para>
         /// <remarks>
-        /// <para> This parameter is required only if the <c>TaskType</c> parameter is set to <c>aliyun_sls</c>.</para>
+        /// <para>This parameter is required only when TaskType is set to <c>aliyun_sls</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -64,10 +67,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string CollectInterval { get; set; }
 
         /// <summary>
-        /// <para>The type of the collection target.</para>
+        /// <para>The type of the collection target for monitoring data.</para>
         /// <list type="bullet">
-        /// <item><description>If the <c>TaskType</c> parameter is set to <c>aliyun_fc</c>, enter <c>aliyun_fc</c>.</description></item>
-        /// <item><description>If the <c>TaskType</c> parameter is set to <c>aliyun_sls</c>, enter the name of the Logstore group.</description></item>
+        /// <item><description>If TaskType is set to <c>aliyun_fc</c>, set this parameter to <c>aliyun_fc</c>.</description></item>
+        /// <item><description>If TaskType is set to <c>aliyun_sls</c>, set this parameter to the name of the Logstore group for SLS logs.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -79,7 +82,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string CollectTargetType { get; set; }
 
         /// <summary>
-        /// <para>The description of the metric import task.</para>
+        /// <para>The description of the monitoring task.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Alibaba Cloud product data ingestion task.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -87,9 +93,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The ID of the application group.</para>
-        /// <para>For information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
+        /// <para>For information about how to obtain the application group ID, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</para>
         /// <remarks>
-        /// <para> This parameter is required only if the <c>TaskType</c> parameter is set to <c>aliyun_sls</c>.</para>
+        /// <para>This parameter is required only when TaskType is set to <c>aliyun_sls</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -100,8 +106,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
-        /// <para>For information about how to obtain the name of a namespace, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</para>
+        /// <para>The name of the metric repository.</para>
+        /// <para>For information about how to obtain the name of a metric repository, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,9 +122,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the logs that are imported from Simple Log Service.</para>
+        /// <para>The configurations of SLS logs.</para>
         /// <remarks>
-        /// <para> This parameter is required only if the <c>TaskType</c> parameter is set to <c>aliyun_sls</c>.</para>
+        /// <para>This parameter is required only when TaskType is set to <c>aliyun_sls</c>.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SLSProcessConfig")]
@@ -126,14 +132,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public CreateHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig { get; set; }
         public class CreateHybridMonitorTaskRequestSLSProcessConfig : TeaModel {
             /// <summary>
-            /// <para>The extended fields that specify the results of basic operations performed on aggregation results.</para>
+            /// <para>The result of arithmetic operations on the extended fields of SLS log statistics results.</para>
             /// </summary>
             [NameInMap("Express")]
             [Validation(Required=false)]
             public List<CreateHybridMonitorTaskRequestSLSProcessConfigExpress> Express { get; set; }
             public class CreateHybridMonitorTaskRequestSLSProcessConfigExpress : TeaModel {
                 /// <summary>
-                /// <para>The alias of the extended field that specifies the result of basic operations performed on aggregation results.</para>
+                /// <para>The alias of the arithmetic operation result on the extended fields of SLS log statistics results.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SuccRate</para>
@@ -143,7 +149,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The extended field that specifies the result of basic operations performed on aggregation results.</para>
+                /// <para>The result of arithmetic operations on the extended fields of SLS log statistics results.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>success_count</para>
@@ -155,30 +161,30 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The conditions that are used to filter logs imported from Simple Log Service.</para>
+            /// <para>The filter conditions for parameters in SLS logs.</para>
             /// </summary>
             [NameInMap("Filter")]
             [Validation(Required=false)]
             public CreateHybridMonitorTaskRequestSLSProcessConfigFilter Filter { get; set; }
             public class CreateHybridMonitorTaskRequestSLSProcessConfigFilter : TeaModel {
                 /// <summary>
-                /// <para>The conditions that are used to filter logs imported from Simple Log Service.</para>
+                /// <para>The list of filter conditions for parameters in SLS logs.</para>
                 /// </summary>
                 [NameInMap("Filters")]
                 [Validation(Required=false)]
                 public List<CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters> Filters { get; set; }
                 public class CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters : TeaModel {
                     /// <summary>
-                    /// <para>The method that is used to filter logs imported from Simple Log Service. Valid values:</para>
+                    /// <para>The method used to filter parameter values in SLS logs. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><c>contain</c>: contains</description></item>
-                    /// <item><description><c>notContain</c>: does not contain</description></item>
-                    /// <item><description><c>&gt;</c>: greater than</description></item>
-                    /// <item><description><c>&lt;</c>: less than</description></item>
-                    /// <item><description><c>=</c>: equal to</description></item>
-                    /// <item><description><c>! =</c>: not equal to</description></item>
-                    /// <item><description><c>&gt;=</c>: greater than or equal to</description></item>
-                    /// <item><description><c>&lt;=</c>: less than or equal to</description></item>
+                    /// <item><description><c>contain</c>: contains.</description></item>
+                    /// <item><description><c>notContain</c>: does not contain.</description></item>
+                    /// <item><description><c>&gt;</c>: greater than.</description></item>
+                    /// <item><description><c>&lt;</c>: less than.</description></item>
+                    /// <item><description><c>=</c>: equal to.</description></item>
+                    /// <item><description><c>!=</c>: not equal to.</description></item>
+                    /// <item><description><c>&gt;=</c>: greater than or equal to.</description></item>
+                    /// <item><description><c>&lt;=</c>: less than or equal to.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -189,7 +195,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the key that is used to filter logs imported from Simple Log Service.</para>
+                    /// <para>The name of the parameter to filter in SLS logs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>code</para>
@@ -199,7 +205,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     public string SLSKeyName { get; set; }
 
                     /// <summary>
-                    /// <para>The value of the key that is used to filter logs imported from Simple Log Service.</para>
+                    /// <para>The filter value of the parameter in SLS logs.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -213,8 +219,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 /// <summary>
                 /// <para>The relationship between multiple filter conditions. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>and (default): Logs are processed only if all filter conditions are met.</description></item>
-                /// <item><description>or: Logs are processed if one of the filter conditions is met.</description></item>
+                /// <item><description>and (default): Logs are processed only when all filter conditions are met.</description></item>
+                /// <item><description>or: Logs are processed when any filter condition is met.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -227,14 +233,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</para>
+            /// <para>Aggregates data by spatial dimension, which is equivalent to the GROUP BY clause in SQL.</para>
             /// </summary>
             [NameInMap("GroupBy")]
             [Validation(Required=false)]
             public List<CreateHybridMonitorTaskRequestSLSProcessConfigGroupBy> GroupBy { get; set; }
             public class CreateHybridMonitorTaskRequestSLSProcessConfigGroupBy : TeaModel {
                 /// <summary>
-                /// <para>The alias of the aggregation result.</para>
+                /// <para>The alias of the SLS log statistics result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ApiResult</para>
@@ -244,7 +250,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The name of the key that is used to aggregate logs imported from Simple Log Service.</para>
+                /// <para>The name of the parameter for SLS log statistics.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>code</para>
@@ -256,14 +262,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The method that is used to aggregate logs imported from Simple Log Service.</para>
+            /// <para>The method used to aggregate SLS log data.</para>
             /// </summary>
             [NameInMap("Statistics")]
             [Validation(Required=false)]
             public List<CreateHybridMonitorTaskRequestSLSProcessConfigStatistics> Statistics { get; set; }
             public class CreateHybridMonitorTaskRequestSLSProcessConfigStatistics : TeaModel {
                 /// <summary>
-                /// <para>The alias of the aggregation result.</para>
+                /// <para>The alias of the SLS log statistics result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>level_count</para>
@@ -273,19 +279,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Alias { get; set; }
 
                 /// <summary>
-                /// <para>The function that is used to aggregate the log data of a statistical period. Valid values:</para>
+                /// <para>Aggregates log data within the statistical period by using the specified statistical method. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>count: counts the number.</description></item>
-                /// <item><description>sum: calculates the total value.</description></item>
-                /// <item><description>avg: calculates the average value.</description></item>
-                /// <item><description>max: calculates the maximum value.</description></item>
-                /// <item><description>min: calculates the minimum value.</description></item>
-                /// <item><description>value: collects samples within the statistical period.</description></item>
-                /// <item><description>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period.</description></item>
-                /// <item><description>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period.</description></item>
-                /// <item><description>distinct: calculates the number of unique values of the specified field within a statistical period.</description></item>
-                /// <item><description>distribution: calculates the number of logs that meet a specified condition within the statistical period.</description></item>
-                /// <item><description>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</description></item>
+                /// <item><description>count: counts the number of occurrences.</description></item>
+                /// <item><description>sum: calculates the sum.</description></item>
+                /// <item><description>avg: calculates the average.</description></item>
+                /// <item><description>max: returns the maximum value.</description></item>
+                /// <item><description>min: returns the minimum value.</description></item>
+                /// <item><description>value: samples within the statistical period.</description></item>
+                /// <item><description>countps: calculates the average count per second for the specified field within the statistical period.</description></item>
+                /// <item><description>sumps: calculates the average sum per second for the specified field within the statistical period.</description></item>
+                /// <item><description>distinct: counts the number of occurrences of the specified field after deduplication within the statistical period.</description></item>
+                /// <item><description>distribution: counts the number of occurrences of field values within a specified range.</description></item>
+                /// <item><description>percentile: calculates the distribution value of field values, such as P50.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -296,10 +302,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Function { get; set; }
 
                 /// <summary>
-                /// <para>The value of the function that is used to aggregate logs imported from Simple Log Service.</para>
+                /// <para>The statistical value of SLS logs.</para>
                 /// <list type="bullet">
-                /// <item><description>If the <c>Function</c> parameter is set to <c>distribution</c>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</description></item>
-                /// <item><description>If the <c>Function</c> parameter is set to <c>percentile</c>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</description></item>
+                /// <item><description><para>If Function is set to <c>distribution</c>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 200.</para>
+                /// </description></item>
+                /// <item><description><para>If Function is set to <c>percentile</c>, this parameter specifies the percentile of the statistical distribution. For example, 0.5 indicates P50.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -310,9 +318,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Parameter1 { get; set; }
 
                 /// <summary>
-                /// <para>The value of the function that is used to aggregate logs imported from Simple Log Service.</para>
+                /// <para>The statistical value of SLS logs.</para>
                 /// <remarks>
-                /// <para> This parameter is required only if the <c>Function</c> parameter is set to <c>distribution</c>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</para>
+                /// <para>This parameter is required only when Function is set to <c>distribution</c>. This parameter specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -323,7 +331,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string Parameter2 { get; set; }
 
                 /// <summary>
-                /// <para>The name of the key that is used to aggregate logs imported from Simple Log Service.</para>
+                /// <para>The name of the parameter for SLS log statistics.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -338,9 +346,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The ID of the member account.</para>
-        /// <para>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</para>
+        /// <para>When you call this operation by using a management account, you can connect any Alibaba Cloud service of any member account in the resource directory to Hybrid Cloud Monitoring. This allows you to use the resource directory to monitor the Alibaba Cloud services of member accounts across the enterprise in a unified manner.</para>
         /// <remarks>
-        /// <para> This parameter is required only if the <c>TaskType</c> parameter is set to <c>aliyun_fc</c>.</para>
+        /// <para>This parameter is required only when TaskType is set to <c>aliyun_fc</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -351,9 +359,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TargetUserId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the member accounts. Separate multiple member account IDs with commas (,).</para>
+        /// <para>The IDs of the member accounts. Separate multiple IDs with commas (,).</para>
         /// <remarks>
-        /// <para> This parameter is required only if you call this operation by using the management account.</para>
+        /// <para>This parameter is required only when you call this operation by using a management account.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -364,10 +372,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TargetUserIdList { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric import task.</para>
+        /// <para>The name of the monitoring task.</para>
         /// <list type="bullet">
-        /// <item><description>If the <c>TaskType</c> parameter is set to <c>aliyun_fc</c>, enter the name of the metric import task.</description></item>
-        /// <item><description>If the <c>TaskType</c> parameter is set to <c>aliyun_sls</c>, enter the name of the metric for logs imported from Simple Log Service.</description></item>
+        /// <item><description>If TaskType is set to <c>aliyun_fc</c>, specify the name of the data import task for the Alibaba Cloud service.</description></item>
+        /// <item><description>If TaskType is set to <c>aliyun_sls</c>, specify the metric name for SLS logs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -378,10 +386,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The type of the metric import task. Valid values:</para>
+        /// <para>The type of the monitoring task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aliyun_fc: metric import tasks for Alibaba Cloud services.</description></item>
-        /// <item><description>aliyun_sls: metrics for logs imported from Simple Log Service.</description></item>
+        /// <item><description>aliyun_fc: data import task for an Alibaba Cloud service.</description></item>
+        /// <item><description>aliyun_sls: metric for SLS logs.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -393,12 +401,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</para>
+        /// <para>The configuration file of the Alibaba Cloud service that is connected to Hybrid Cloud Monitoring.</para>
         /// <list type="bullet">
         /// <item><description>namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</description></item>
         /// <item><description>metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</description></item>
         /// </list>
-        /// <para>The following code shows a sample configuration file:</para>
+        /// <para>The following example shows a sample configuration file:</para>
         /// <pre><c>products:
         /// - namespace: acs_ecs_dashboard
         ///   metric_info:
@@ -418,7 +426,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         ///     - MySQL_TPS
         /// </c></pre>
         /// <remarks>
-        /// <para> This parameter is required only if the <c>TaskType</c> parameter is set to <c>aliyun_fc</c>.</para>
+        /// <para>This parameter is required only when TaskType is set to <c>aliyun_fc</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

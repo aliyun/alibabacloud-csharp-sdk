@@ -27,8 +27,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to enable the blacklist policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The blacklist policy is enabled.</description></item>
-        /// <item><description>false (default): The blacklist policy is disabled.</description></item>
+        /// <item><description><para>true: The blacklist policy is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): The blacklist policy is disabled.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

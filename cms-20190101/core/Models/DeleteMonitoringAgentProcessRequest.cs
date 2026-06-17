@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The process ID.</para>
         /// <remarks>
-        /// <para>You must configure either <c>ProcessId</c> or <c>ProcessName</c>.</para>
+        /// <para>You must specify either ProcessId or ProcessName.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The process name.</para>
         /// <remarks>
-        /// <para>You must configure either <c>ProcessId</c> or <c>ProcessName</c>.</para>
+        /// <para>You must specify either ProcessId or ProcessName.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

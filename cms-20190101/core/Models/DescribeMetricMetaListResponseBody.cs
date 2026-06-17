@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The response code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>0CCE0AF0-053C-4B13-A583-DC9A85785D49</para>
+        /// <para>CDE9EAFF-D54E-4024-BBFC-B0AAC883143B</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -89,8 +89,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12</para>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

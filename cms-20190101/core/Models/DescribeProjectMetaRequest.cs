@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeProjectMetaRequest : TeaModel {
         /// <summary>
-        /// <para>The tags. Tags are used to filter services.</para>
-        /// <para>You can filter services only by the tag whose <c>name</c> is <c>product</c>. Example: {&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}.</para>
+        /// <para>The tags. Tags are used to filter alerts, and each alert can be marked with special tags.</para>
+        /// <para>Currently, only filtering by product is supported. That is, the <c>name</c> is <c>product</c>. For example: {&quot;name&quot;:&quot;product&quot;,&quot;value&quot;:&quot;ECS&quot;}.</para>
         /// <remarks>
-        /// <para>We recommend that you do not use the special tags in the CloudMonitor console.</para>
+        /// <para>We do not recommend that you use the special tags for the CloudMonitor console in Alibaba Cloud.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>Valid values: 1 to 10000.</para>
         /// <para>Default value: 30.</para>
         /// <remarks>
-        /// <para>The value of this parameter is not limited. You can view a large number of entries per page.</para>
+        /// <para>Currently, Alibaba Cloud does not impose a limit on this parameter. If you need to obtain all results, set the page size to a large value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The alert contact group. The alert notifications of the application group are sent to the alert contacts that belong to the alert contact group.</para>
         /// <remarks>
-        /// <para> An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="~~PutContact~~">PutContact</a> and <a href="~~PutContactGroup~~">PutContactGroup</a>.</para>
+        /// <para>An alert contact group can contain one or more alert contacts. For information about how to create alert contacts and alert contact groups, see <a href="~~PutContact~~">PutContact</a> and <a href="~~PutContactGroup~~">PutContactGroup</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

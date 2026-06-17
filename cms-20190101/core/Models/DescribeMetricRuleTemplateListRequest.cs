@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to display the history of applying the alert templates to application groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,8 +48,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The sorting order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): ascending order</description></item>
-        /// <item><description>false: descending order</description></item>
+        /// <item><description><para>true (default): ascending order</para>
+        /// </description></item>
+        /// <item><description><para>false: descending order</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,8 +64,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The sorting basis. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>gmtMotified: sorts alert templates by modification time</description></item>
-        /// <item><description>gmtCreate (default): sorts alert templates by creation time</description></item>
+        /// <item><description><para>gmtMotified: sorts alert templates by modification time</para>
+        /// </description></item>
+        /// <item><description><para>gmtCreate (default): sorts alert templates by creation time</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

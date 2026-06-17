@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-01</para>
+        /// <para>John Doe</para>
         /// </summary>
         [NameInMap("ContactName")]
         [Validation(Required=false)]

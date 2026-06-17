@@ -13,12 +13,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The tags for filtering metrics. Specify a JSON string.</para>
         /// <para>Format: <c>[{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;},{&quot;name&quot;:&quot;tag key&quot;,&quot;value&quot;:&quot;tag value&quot;}] </c>. The following tags are available:</para>
         /// <list type="bullet">
-        /// <item><description>metricCategory: the category of the metric.</description></item>
-        /// <item><description>alertEnable: specifies whether to report alerts for the metric.</description></item>
-        /// <item><description>alertUnit: the unit of the metric in the alerts.</description></item>
-        /// <item><description>unitFactor: the factor for metric unit conversion.</description></item>
-        /// <item><description>minAlertPeriod: the minimum interval at which the alert is reported.</description></item>
-        /// <item><description>productCategory: the category of the service.</description></item>
+        /// <item><description><para>metricCategory: the category of the metric.</para>
+        /// </description></item>
+        /// <item><description><para>alertEnable: specifies whether to report alerts for the metric.</para>
+        /// </description></item>
+        /// <item><description><para>alertUnit: the unit of the metric in the alerts.</para>
+        /// </description></item>
+        /// <item><description><para>unitFactor: the factor for metric unit conversion.</para>
+        /// </description></item>
+        /// <item><description><para>minAlertPeriod: the minimum interval at which the alert is reported.</para>
+        /// </description></item>
+        /// <item><description><para>productCategory: the category of the service.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

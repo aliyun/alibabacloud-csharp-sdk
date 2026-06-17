@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateDynamicTagGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The alert contact groups. The value of N can be from 1 to 100. Alert notifications for the application group are sent to the alert contacts in these alert contact groups.</para>
+        /// <para>An alert contact group can contain one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,10 +22,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<string> ContactGroupList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the CloudMonitor agent is automatically installed for the application group. CloudMonitor determines whether to automatically install the CloudMonitor agent for the hosts in an application group based on the value of this parameter. Valid values:</para>
+        /// <para>Specifies whether to automatically install the CloudMonitor agent for the application group. CloudMonitor automatically installs the agent on the hosts in the application group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The CloudMonitor agent is automatically installed.</description></item>
-        /// <item><description>false (default value): The CloudMonitor agent is not automatically installed.</description></item>
+        /// <item><description><para>true: enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +38,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? EnableInstallAgent { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the application group automatically subscribes to event notifications. If events whose severity level is critical or warning occur on resources in an application group, CloudMonitor sends alert notifications. Valid values:</para>
+        /// <para>Specifies whether to automatically subscribe to event notifications for the application group. When a critical or warning event occurs on a resource in the application group, CloudMonitor sends an alert notification. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The application group automatically subscribes to event notifications.</description></item>
-        /// <item><description>false (default value): The application group does not automatically subscribe to event notifications.</description></item>
+        /// <item><description><para>true: enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? EnableSubscribeEvent { get; set; }
 
         /// <summary>
-        /// <para>The conditional expressions used to create an application group based on the tag.</para>
+        /// <para>The match expressions that are used to create an application group from tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MatchExpress")]
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<CreateDynamicTagGroupRequestMatchExpress> MatchExpress { get; set; }
         public class CreateDynamicTagGroupRequestMatchExpress : TeaModel {
             /// <summary>
-            /// <para>The keys of the tags that are used to create the application group. If a specified key is attached to multiple resources, the resources that have the same key-value pair are added to the same group.</para>
+            /// <para>The key of the tag that is used to create the group. If multiple resources have this tag key, the resources that meet the filter conditions are added to the same group based on the same key-value pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>appname</para>
@@ -66,9 +72,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TagName { get; set; }
 
             /// <summary>
-            /// <para>The tag values of the cloud resources. Set the value of N to 1.</para>
+            /// <para>The value of the resource tag. The value of N is 1.</para>
             /// <remarks>
-            /// <para> If you set the <c>MatchExpress.N.TagValueMatchFunction</c> parameter, you must also set the <c>MatchExpress.N.TagValue</c> parameter.</para>
+            /// <para>You must specify both the <c>MatchExpress.N.TagValueMatchFunction</c> and <c>MatchExpress.N.TagValue</c> parameters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,17 +85,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TagValue { get; set; }
 
             /// <summary>
-            /// <para>The method that is used to match the tag values of the cloud resources. Set the value of N to 1. Valid values:</para>
+            /// <para>The method that is used to match the values of resource tags. The value of N is 1. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>contains: contains</description></item>
-            /// <item><description>startWith: starts with a prefix</description></item>
-            /// <item><description>endWith: ends with a suffix</description></item>
-            /// <item><description>notContains: does not contain</description></item>
-            /// <item><description>equals: equals</description></item>
-            /// <item><description>all: matches all</description></item>
+            /// <item><description><para>contains: includes.</para>
+            /// </description></item>
+            /// <item><description><para>startWith: prefix.</para>
+            /// </description></item>
+            /// <item><description><para>endWith: suffix.</para>
+            /// </description></item>
+            /// <item><description><para>notContains: does not include.</para>
+            /// </description></item>
+            /// <item><description><para>equals: equals.</para>
+            /// </description></item>
+            /// <item><description><para>all: all.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> If you set the <c>MatchExpress.N.TagValueMatchFunction</c> parameter, you must also set the <c>MatchExpress.N.TagValue</c> parameter.</para>
+            /// <para>You must specify both the <c>MatchExpress.N.TagValueMatchFunction</c> and <c>MatchExpress.N.TagValue</c> parameters.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -102,10 +114,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:</para>
+        /// <para>The relationship between the conditional expressions for the tag values. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>and (default)</description></item>
-        /// <item><description>or</description></item>
+        /// <item><description><para>and (default)</para>
+        /// </description></item>
+        /// <item><description><para>or</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,8 +134,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tag keys of the cloud resources.</para>
-        /// <para>For more information about how to obtain tag keys, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</para>
+        /// <para>The tag key of the resource.</para>
+        /// <para>For more information about how to query the tag keys of resources, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,7 +146,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TagKey { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the tags belong.</para>
+        /// <para>The ID of the region to which the tag belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -142,6 +156,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string TagRegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the alert template.</para>
+        /// <para>For more information about how to query the IDs of alert templates, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>85****</para>
         /// </summary>

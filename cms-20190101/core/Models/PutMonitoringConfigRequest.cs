@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</description></item>
-        /// <item><description>false: The CloudMonitor agent is not automatically installed on new ECS instances.</description></item>
+        /// <item><description><para>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</para>
+        /// </description></item>
+        /// <item><description><para>false: The CloudMonitor agent is not automatically installed on new ECS instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

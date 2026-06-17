@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteEventRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
-        /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
-        /// </remarks>
+        /// <para>The status code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -33,17 +30,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. You can use this ID to query logs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>E5A72B5B-4F44-438C-B68A-147FD5DC53A8</para>
+        /// <para>45231A42-5A09-5AFF-953C-A5B3D4ED8925</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

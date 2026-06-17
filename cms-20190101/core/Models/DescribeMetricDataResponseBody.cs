@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The HTTP status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,10 +25,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The monitoring data. The value includes the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><c>timestamp</c>: the time when the alert was triggered.</description></item>
-        /// <item><description><c>userId</c>: the ID of the user for which the alert was triggered.</description></item>
-        /// <item><description><c>instanceId</c>: the ID of the instance for which the alert was triggered.</description></item>
-        /// <item><description><c>Minimum</c>, <c>Average</c>, and <c>Maximum</c>: the aggregation methods.</description></item>
+        /// <item><description><para><c>timestamp</c>: the time when the alert was triggered.</para>
+        /// </description></item>
+        /// <item><description><para><c>userId</c>: the ID of the user for which the alert was triggered.</para>
+        /// </description></item>
+        /// <item><description><para><c>instanceId</c>: the ID of the instance for which the alert was triggered.</para>
+        /// </description></item>
+        /// <item><description><para><c>Minimum</c>, <c>Average</c>, and <c>Maximum</c>: the aggregation methods.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

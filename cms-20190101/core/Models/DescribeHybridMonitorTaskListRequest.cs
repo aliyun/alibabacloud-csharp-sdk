@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether the returned result includes metric import tasks for Alibaba Cloud services. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): The returned result includes metric import tasks for Alibaba Cloud services.</description></item>
-        /// <item><description>false: The returned result excludes metric import tasks for Alibaba Cloud services.</description></item>
+        /// <item><description><para>true (default): The returned result includes metric import tasks for Alibaba Cloud services.</para>
+        /// </description></item>
+        /// <item><description><para>false: The returned result excludes metric import tasks for Alibaba Cloud services.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,8 +109,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The type of the metric import task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>aliyun_fc: metric import tasks for Alibaba Cloud services</description></item>
-        /// <item><description>aliyun_sls: metrics for logs imported from Log Service</description></item>
+        /// <item><description><para>aliyun_fc: metric import tasks for Alibaba Cloud services</para>
+        /// </description></item>
+        /// <item><description><para>aliyun_sls: metrics for logs imported from Log Service</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

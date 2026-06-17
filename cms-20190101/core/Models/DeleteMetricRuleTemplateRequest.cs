@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the alert template.</para>
+        /// <para>The ID of the alert rule template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class PutCustomMetricRequest : TeaModel {
         /// <summary>
-        /// <para>The monitoring data.</para>
+        /// <para>The list of monitoring data.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MetricList")]
@@ -18,12 +18,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<PutCustomMetricRequestMetricList> MetricList { get; set; }
         public class PutCustomMetricRequestMetricList : TeaModel {
             /// <summary>
-            /// <para>The dimensions based on which the resources are queried. Valid values of N: 1 to 21.</para>
-            /// <para>Set this parameter to a collection of key-value pairs. Format: <c>{&quot;Key&quot;:&quot;Value&quot;}</c>.</para>
-            /// <para>The key or value must be 1 to 64 bytes in length. Excessive characters are truncated.</para>
-            /// <para>The key or value can contain letters, digits, periods (.), hyphens (-), underscores (_), forward slashes (/), and backslashes (\\).</para>
+            /// <para>The dimension map, which is used to query monitoring data of a specified resource. Valid values of N: 1 to 21.</para>
+            /// <para>Format: a collection of key-value pairs. A commonly used key-value pair collection is: <c>{&quot;Key&quot;:&quot;Value&quot;}</c>.</para>
+            /// <para>The length of Key and Value is 1 to 64 characters. Characters beyond the first 64 are truncated.</para>
+            /// <para>The values of Key and Value can contain letters, digits, periods (.), hyphens (-), underscores (_), forward slashes (/), and backslashes (\).</para>
             /// <remarks>
-            /// <para> Dimensions must be formatted as a JSON string in a specified order.</para>
+            /// <para>Dimensions must be passed in as a JSON string that represents the map object, and must be passed in order.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The ID of the application group. Valid values of N: 1 to 21.</para>
             /// <remarks>
-            /// <para> If the metric does not belong to any application group, enter 0.</para>
+            /// <para>If the metric does not belong to any application group, enter 0.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The metric name. Valid values of N: 1 to 21. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+            /// <para>The name of the metric. Valid values of N: 1 to 21. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics of cloud services</a>.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The aggregation period. Valid values of N: 1 to 21. Unit: seconds. Valid values: 60 and 300.</para>
             /// <remarks>
-            /// <para> If the Type parameter is set to 1, the Period parameter is required.</para>
+            /// <para>If the type of the reported value is 1, you must set this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Period { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the metric data is generated. Valid values of N: 1 to 21. The timestamp can be in one of the following formats:</para>
+            /// <para>The time when the metric occurred. Valid values of N: 1 to 21. The following two types of values are supported:</para>
             /// <list type="bullet">
-            /// <item><description>A UTC timestamp in the YYYY-MM-DDThh:mm:ssZ format. Example: 20171012T132456.888+0800.</description></item>
-            /// <item><description>A UNIX timestamp of the LONG type. Example: 1508136760000.</description></item>
+            /// <item><description>UTC time. Format: YYYY-MM-DDThh:mm:ssZ. For example: 20171012T132456.888+0800.</description></item>
+            /// <item><description>A Long-type timestamp. For example: 1508136760000.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -87,13 +87,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Time { get; set; }
 
             /// <summary>
-            /// <para>The type of the monitoring data. Valid values of N: 1 to 21. Valid values:</para>
+            /// <para>The type of the reported value. Valid values of N: 1 to 21. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: raw data</description></item>
-            /// <item><description>1: aggregate data</description></item>
+            /// <item><description>0: raw data.</description></item>
+            /// <item><description>1: aggregate data.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> We recommend that you report aggregate data in both the aggregation periods of 60 seconds and 300 seconds. Otherwise, you cannot query monitoring data in a time span that is more than seven days.</para>
+            /// <para>When you report aggregate data, we recommend that you report both data with a period of 60 seconds and data with a period of 300 seconds. Otherwise, monitoring data cannot be queried for a time span of more than 7 days.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The collection of metric values. Valid values of N: 1 to 21.</para>
             /// <remarks>
-            /// <para> If the Type parameter is set to 0, the keys in this parameter must be set to the specified value. CloudMonitor aggregates raw data in each aggregation period to generate multiple statistical values, such as the maximum value, the count, and the total value.</para>
+            /// <para>If the type of the reported value is 0, the raw values are reported. CloudMonitor aggregates raw values into multiple values, such as maximum, count, and sum, by period.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 

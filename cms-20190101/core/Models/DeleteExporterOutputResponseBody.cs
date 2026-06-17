@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteExporterOutputResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</para>
+        /// <para>A status code of 200 indicates success. Other values indicate failure.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><c>true</c></description></item>
-        /// <item><description><c>false</c></description></item>
+        /// <item><description><c>true</c>: success</description></item>
+        /// <item><description><c>false</c>: failure</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

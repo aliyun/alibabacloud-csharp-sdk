@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorNamespaceListRequest : TeaModel {
         /// <summary>
-        /// <para>The search keyword.</para>
+        /// <para>The keyword for the search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The name of the namespace.</para>
-        /// <para>The name can contain letters, digits, and hyphens (-).</para>
+        /// <para>The name can contain uppercase letters, lowercase letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun-test</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The page number.</para>
-        /// <para>Page numbers start from 1. Default value: 1.</para>
+        /// <para>Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Page numbers start from 1. Default value: 10.</para>
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Minimum value: 1. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -57,10 +57,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return the configuration details of metric import tasks for Alibaba Cloud services and the number of metric import tasks for third-party services. Valid values:</para>
+        /// <para>Specifies whether to display the configuration details of data import tasks for Alibaba Cloud services and the number of data import tasks for non-Alibaba Cloud services. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeHybridMonitorNamespaceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -27,28 +27,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespace> DescribeHybridMonitorNamespace { get; set; }
         public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespace : TeaModel {
             /// <summary>
-            /// <para>The configuration details of metric import tasks for Alibaba Cloud services.</para>
+            /// <para>The configuration details of data import tasks for Alibaba Cloud services.</para>
             /// </summary>
             [NameInMap("AliyunProductMetricList")]
             [Validation(Required=false)]
             public List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricList> AliyunProductMetricList { get; set; }
             public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricList : TeaModel {
                 /// <summary>
-                /// <para>The namespaces.</para>
+                /// <para>The list of namespaces.</para>
                 /// </summary>
                 [NameInMap("NamespaceList")]
                 [Validation(Required=false)]
                 public List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceList> NamespaceList { get; set; }
                 public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceList : TeaModel {
                     /// <summary>
-                    /// <para>The metrics for the Alibaba Cloud service.</para>
+                    /// <para>The list of metrics for the Alibaba Cloud service.</para>
                     /// </summary>
                     [NameInMap("MetricList")]
                     [Validation(Required=false)]
                     public List<DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceListMetricList> MetricList { get; set; }
                     public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceAliyunProductMetricListNamespaceListMetricList : TeaModel {
                         /// <summary>
-                        /// <para>The metrics.</para>
+                        /// <para>The list of metrics.</para>
                         /// </summary>
                         [NameInMap("List")]
                         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                     }
 
                     /// <summary>
-                    /// <para>The namespace for the Alibaba Cloud service.</para>
+                    /// <para>The data namespace of the Alibaba Cloud service.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>acs_ecs_dashboard</para>
@@ -90,11 +90,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// <para>The configuration file of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring.</para>
+                /// <para>The configuration file for the Alibaba Cloud service that is connected to Hybrid Cloud Monitoring.</para>
                 /// <list type="bullet">
-                /// <item><description>namespace: the namespace of the Alibaba Cloud service.</description></item>
-                /// <item><description>metric_list: the metrics of the Alibaba Cloud service.</description></item>
-                /// <item><description>dimension: the resources of the Alibaba Cloud service that you want to monitor by using Hybrid Cloud Monitoring. If you do not specify a dimension, all resources of the Alibaba Cloud service are monitored.</description></item>
+                /// <item><description><para>namespace: the namespace of the Alibaba Cloud service.</para>
+                /// </description></item>
+                /// <item><description><para>metric_list: the metrics of the Alibaba Cloud service.</para>
+                /// </description></item>
+                /// <item><description><para>dimension: the resources of the Alibaba Cloud service that can be queried in Hybrid Cloud Monitoring. If this parameter is empty, all resources are monitored.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The timestamp that was generated when the namespace was created.</para>
+            /// <para>The timestamp when the namespace was created.</para>
             /// <para>Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -128,16 +131,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The details of the data retention period.</para>
+            /// <para>The details of the data storage duration.</para>
             /// </summary>
             [NameInMap("Detail")]
             [Validation(Required=false)]
             public DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail Detail { get; set; }
             public class DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail : TeaModel {
                 /// <summary>
-                /// <para>The region where the metric data is stored.</para>
+                /// <para>The region where the monitoring data is stored.</para>
                 /// <remarks>
-                /// <para> This parameter is returned if you select <c>m_prom_user</c> for <c>NamespaceType</c> when you create a namespace.</para>
+                /// <para>This parameter is returned if you set <c>NamespaceType</c> to <c>m_prom_user</c> when you create the namespace.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -147,14 +150,23 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 [Validation(Required=false)]
                 public string NamespaceRegion { get; set; }
 
+                /// <summary>
+                /// <para>The Prometheus instance where the monitoring data is stored.</para>
+                /// <remarks>
+                /// <para>This parameter is returned if you set <c>NamespaceType</c> to <c>aliyun_prometheus</c> when you create the namespace.</para>
+                /// </remarks>
+                /// 
+                /// <b>Example:</b>
+                /// <para>rw-57******************7f</para>
+                /// </summary>
                 [NameInMap("PrometheusInstanceId")]
                 [Validation(Required=false)]
                 public string PrometheusInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The project where the metric data is located.</para>
+                /// <para>The Simple Log Service (SLS) project where the monitoring data is stored.</para>
                 /// <remarks>
-                /// <para> This parameter is returned if you select <c>m_prom_user</c> for <c>NamespaceType</c> when you create a namespace.</para>
+                /// <para>This parameter is returned if you set <c>NamespaceType</c> to <c>m_prom_user</c> when you create the namespace.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -165,14 +177,20 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
                 public string SLSProject { get; set; }
 
                 /// <summary>
-                /// <para>The data retention period. Valid values:</para>
+                /// <para>The data storage duration. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>cms.s1.large (Retention Period 15 Days)</description></item>
-                /// <item><description>cms.s1.xlarge (Retention Period 32 Days)</description></item>
-                /// <item><description>cms.s1.2xlarge (Retention Period 63 Days)</description></item>
-                /// <item><description>cms.s1.3xlarge (Retention Period 93 Days)</description></item>
-                /// <item><description>cms.s1.6xlarge (Retention Period 185 Days)</description></item>
-                /// <item><description>cms.s1.12xlarge (Retention Period 367 Days)</description></item>
+                /// <item><description><para>cms.s1.large: 15 days.</para>
+                /// </description></item>
+                /// <item><description><para>cms.s1.xlarge: 32 days.</para>
+                /// </description></item>
+                /// <item><description><para>cms.s1.2xlarge: 63 days.</para>
+                /// </description></item>
+                /// <item><description><para>cms.s1.3xlarge: 93 days.</para>
+                /// </description></item>
+                /// <item><description><para>cms.s1.6xlarge: 185 days.</para>
+                /// </description></item>
+                /// <item><description><para>cms.s1.12xlarge: 376 days.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -185,7 +203,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             }
 
             /// <summary>
-            /// <para>The ID of the namespace.</para>
+            /// <para>The namespace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3****</para>
@@ -197,8 +215,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>Indicates whether the namespace is deleted. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: The namespace is not deleted.</description></item>
-            /// <item><description>1: The namespace is deleted.</description></item>
+            /// <item><description><para>0: The namespace is not deleted.</para>
+            /// </description></item>
+            /// <item><description><para>1: The namespace is deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,7 +229,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? IsDelete { get; set; }
 
             /// <summary>
-            /// <para>The timestamp that was generated when the namespace was last modified.</para>
+            /// <para>The timestamp when the namespace was last modified. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1652682744000</para>
@@ -229,21 +249,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Namespace { get; set; }
 
             /// <summary>
-            /// <para>The storage scheme of metric data. Valid values:</para>
+            /// <para>The storage solution for monitoring data. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>m_prom_user: The metric data is stored in Simple Log Service.</description></item>
-            /// <item><description>m_prom_pool: The metric data is stored in the storage space provided by CloudMonitor.</description></item>
+            /// <item><description><para>m_prom_user: The monitoring data is stored in SLS.</para>
+            /// </description></item>
+            /// <item><description><para>m_prom_pool: The monitoring data is stored in the storage space provided by Cloud Monitor.</para>
+            /// </description></item>
+            /// <item><description><para>aliyun_prometheus: The monitoring data is stored in a Prometheus instance.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>m_prom_user</para>
+            /// <para>aliyun_prometheus</para>
             /// </summary>
             [NameInMap("NamespaceType")]
             [Validation(Required=false)]
             public string NamespaceType { get; set; }
 
             /// <summary>
-            /// <para>The number of metric import tasks for third-party services.</para>
+            /// <para>The number of data import tasks for non-Alibaba Cloud services.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -255,7 +279,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter PageSize is not valid.</para>
@@ -275,7 +299,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -295,10 +319,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -309,7 +335,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

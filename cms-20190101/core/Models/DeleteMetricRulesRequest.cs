@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMetricRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the alert rules to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

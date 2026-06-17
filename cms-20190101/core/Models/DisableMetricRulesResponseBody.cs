@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DisableMetricRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The responses code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para> The status code 200 indicates that the request was successful.</para>
+        /// <para>A value of 200 indicates that the request was successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>RuleId is mandatory for this action.</para>
+        /// <para>The specified resource is not found.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -43,11 +43,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
-        /// </list>
+        /// <para>Indicates whether the operation was successful. A value of \<c>true\\</c> indicates success and a value of \<c>false\\</c> indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

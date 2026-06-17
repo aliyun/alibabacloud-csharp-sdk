@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class CreateInstantSiteMonitorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the call was successful.</para>
+        /// <para>A value of 200 indicates that the call is successful.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The results for creating the instant test task.</para>
+        /// <para>The results of the one-time detection task.</para>
         /// </summary>
         [NameInMap("CreateResultList")]
         [Validation(Required=false)]
         public List<CreateInstantSiteMonitorResponseBodyCreateResultList> CreateResultList { get; set; }
         public class CreateInstantSiteMonitorResponseBodyCreateResultList : TeaModel {
             /// <summary>
-            /// <para>The ID of the instant test task.</para>
+            /// <para>The ID of the detection task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2c8dbdf9-a3ab-46a1-85a4-f094965e****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The name of the instant test task.</para>
+            /// <para>The name of the detection task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task1</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68192f5d-0d45-4b98-9724-892813f86c71</para>
@@ -72,10 +72,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

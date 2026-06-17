@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <remarks>
-        /// <para>The status code 200 indicates that the request was successful.</para>
+        /// <para>The value 200 indicates success.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</para>
+        /// <para>Indicates whether the operation was successful. Valid values: true and false. The value true indicates success, and the value false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>

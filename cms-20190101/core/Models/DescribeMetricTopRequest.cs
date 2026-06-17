@@ -13,11 +13,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The monitoring dimensions of the specified resource.</para>
         /// <para>Set the value to a collection of <c>key:value</c> pairs. Example: <c>{&quot;userId&quot;:&quot;120886317861****&quot;}</c> or <c>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</c>.</para>
         /// <remarks>
-        /// <para> You can query a maximum of 50 instances in each request.</para>
+        /// <para>You can query a maximum of 50 instances in each request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;instanceId&quot;: &quot;i-abcdefgh12****&quot;}]</para>
+        /// <para>[{&quot;instanceId&quot;: &quot;i-2ze2d6j5uhg20x47****&quot;}]</para>
         /// </summary>
         [NameInMap("Dimensions")]
         [Validation(Required=false)]
@@ -26,23 +26,28 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The end of the time range to query monitoring data.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the <c>StartTime</c> and <c>EndTime</c> parameters are not specified, the monitoring data of the last statistical period is queried.``</para>
+        /// <item><description><para>If the <c>StartTime</c> and <c>EndTime</c> parameters are not specified, the monitoring data of the last statistical period is queried.\<c>\\</c></para>
         /// </description></item>
-        /// <item><description><para>If the <c>StartTime</c> and <c>EndTime</c> parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.````</para>
+        /// <item><description><para>If the <c>StartTime</c> and <c>EndTime</c> parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.\<c>\\</c>\<c>\\</c></para>
         /// <list type="bullet">
-        /// <item><description>If you set the <c>Period</c> parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.</description></item>
-        /// <item><description>If you set the <c>Period</c> parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.</description></item>
-        /// <item><description>If you set the <c>Period</c> parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.</description></item>
+        /// <item><description><para>If you set the <c>Period</c> parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the <c>Period</c> parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the <c>Period</c> parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <para>The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</description></item>
-        /// <item><description>Time format: YYYY-MM-DDThh:mm:ssZ</description></item>
+        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</para>
+        /// </description></item>
+        /// <item><description><para>Time format: YYYY-MM-DDThh:mm:ssZ</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> We recommend that you use UNIX timestamps to prevent time zone-related issues.</para>
+        /// <para>We recommend that you use UNIX timestamps to prevent time zone-related issues.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,7 +60,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The expression that is used to compute the query results in real time.</para>
         /// <remarks>
-        /// <para> Only the <c>groupby</c> expression is supported. This expression is similar to the GROUP BY statement used in databases.</para>
+        /// <para>Only the <c>groupby</c> expression is supported. This expression is similar to the GROUP BY statement used in databases.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +74,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The number of entries per page.</para>
         /// <para>Default value: 10.</para>
         /// <remarks>
-        /// <para> The maximum value of the Length parameter in a request is 1440.</para>
+        /// <para>The maximum value of the Length parameter in a request is 1440.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -106,12 +111,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The order in which data is sorted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True: sorts data in ascending order.</description></item>
-        /// <item><description>False (default): sorts data in descending order.</description></item>
+        /// <item><description><para>True: sorts data in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para>False (default): sorts data in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>False</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("OrderDesc")]
         [Validation(Required=false)]
@@ -120,9 +127,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The field based on which data is sorted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Average</description></item>
-        /// <item><description>Minimum</description></item>
-        /// <item><description>Maximum</description></item>
+        /// <item><description><para>Average</para>
+        /// </description></item>
+        /// <item><description><para>Minimum</para>
+        /// </description></item>
+        /// <item><description><para>Maximum</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -160,20 +170,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The start of the time range to query monitoring data.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the <c>StartTime</c> and <c>EndTime</c> parameters are not specified, the monitoring data of the last statistical period is queried.``</para>
+        /// <item><description><para>If the <c>StartTime</c> and <c>EndTime</c> parameters are not specified, the monitoring data of the last statistical period is queried.\<c>\\</c></para>
         /// </description></item>
-        /// <item><description><para>If the <c>StartTime</c> and <c>EndTime</c> parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.````</para>
+        /// <item><description><para>If the <c>StartTime</c> and <c>EndTime</c> parameters are specified, the monitoring data of the last statistical period in the specified time range is queried.\<c>\\</c>\<c>\\</c></para>
         /// <list type="bullet">
-        /// <item><description>If you set the <c>Period</c> parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.</description></item>
-        /// <item><description>If you set the <c>Period</c> parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.</description></item>
-        /// <item><description>If you set the <c>Period</c> parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.</description></item>
+        /// <item><description><para>If you set the <c>Period</c> parameter to 15, the specified time range must be less than or equal to 20 minutes. For example, if you set the StartTime parameter to 2021-05-08 08:10:00 and the EndTime parameter to 2021-05-08 08:30:00, the monitoring data of the last 15 seconds in the time range is queried.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the <c>Period</c> parameter to 60 or 900, the specified time range must be less than or equal to 2 hours. For example, if you set the Period parameter to 60, the StartTime parameter to 2021-05-08 08:00:00, and the EndTime parameter to 2021-05-08 10:00:00, the monitoring data of the last 60 seconds in the time range is queried.</para>
+        /// </description></item>
+        /// <item><description><para>If you set the <c>Period</c> parameter to 3600, the specified time range must be less than or equal to two days. For example, if you set the StartTime parameter to 2021-05-08 08:00:00 and the EndTime parameter to 2021-05-10 08:00:00, the monitoring data of the last 3,600 seconds in the time range is queried.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <para>The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</description></item>
-        /// <item><description>Time format: YYYY-MM-DDThh:mm:ssZ</description></item>
+        /// <item><description><para>UNIX timestamp: the number of milliseconds that have elapsed since 00:00:00 Thursday, January 1, 1970</para>
+        /// </description></item>
+        /// <item><description><para>Time format: YYYY-MM-DDThh:mm:ssZ</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// </remarks>

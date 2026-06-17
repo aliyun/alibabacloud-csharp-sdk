@@ -10,10 +10,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorISPCityListRequest : TeaModel {
         /// <summary>
-        /// <para>The name or ID of the city.</para>
+        /// <para>The name or ID of the city where the carrier detection point resides.</para>
         /// <remarks>
-        /// <para>City names support fuzzy match.</para>
+        /// <para>Fuzzy match is supported for city names.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Guiyang</para>
         /// </summary>
         [NameInMap("City")]
         [Validation(Required=false)]
@@ -22,8 +25,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to query IPv4 probes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): IPv4 probes are queried.</description></item>
-        /// <item><description>false: IPv4 probes are not queried.</description></item>
+        /// <item><description>true (default): Queries IPv4 probes.</description></item>
+        /// <item><description>false: Does not query IPv4 probes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +39,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to query IPv6 probes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): IPv6 probes are queried.</description></item>
-        /// <item><description>false: IPv6 probes are not queried.</description></item>
+        /// <item><description>true (default): Queries IPv6 probes.</description></item>
+        /// <item><description>false: Does not query IPv6 probes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,10 +51,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? IPV6 { get; set; }
 
         /// <summary>
-        /// <para>The name or ID of the carrier.</para>
+        /// <para>The name or ID of the carrier detection point.</para>
         /// <remarks>
-        /// <para>Carrier names support fuzzy match.</para>
+        /// <para>Fuzzy match is supported for carrier names.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>China Unicom</para>
         /// </summary>
         [NameInMap("Isp")]
         [Validation(Required=false)]
@@ -64,8 +70,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Specifies whether to return all detection points. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default): returns all detection points.</description></item>
-        /// <item><description>false: returns only available detection points.</description></item>
+        /// <item><description>true (default): Returns all detection points.</description></item>
+        /// <item><description>false: Returns only available detection points.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

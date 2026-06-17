@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteMetricRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
-        /// <remarks>
-        /// <para> The status code 200 indicates a success.</para>
-        /// </remarks>
+        /// <para>The status code. A value of 200 indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -26,17 +23,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The specified resource is not found.</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>E5599964-8D0D-40DC-8E90-27A619384B81</para>
+        /// <para>09B3A484-1A2B-5743-BB6B-D796416F2677</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -45,8 +42,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: successful.</description></item>
-        /// <item><description>false: failed.</description></item>
+        /// <item><description><para>true: The operation was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The operation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

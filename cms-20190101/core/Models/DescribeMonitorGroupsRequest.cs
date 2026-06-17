@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitorGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the tag rule.</para>
+        /// <para>The ID of the dynamic tag rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6b882d9a-5117-42e2-9d0c-4749a0c6****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string DynamicTagRuleId { get; set; }
 
         /// <summary>
-        /// <para>The tag key that is created for the application group by using the tag rule.</para>
+        /// <para>The tag key of the application group that is created using a dynamic tag rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GroupKey1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupFounderTagKey { get; set; }
 
         /// <summary>
-        /// <para>The tag value that is created for the application group by using the tag rule.</para>
+        /// <para>The tag value of the application group that is created using a dynamic tag rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GroupValue1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupFounderTagValue { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application group. Separate multiple application group IDs with commas (,).</para>
+        /// <para>The IDs of the application groups. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>92****</para>
@@ -60,10 +60,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the historical alert templates that are applied to the application group in the response. Valid values:</para>
+        /// <para>Specifies whether to include the history of alert templates that are applied to the application group in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? IncludeTemplateHistory { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. This parameter is used to query the application group to which the specified instance belongs.</para>
+        /// <para>The ID of the instance. This parameter is used to query the application group to which the specified instance belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-abcdefgh12****</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used for the search.</para>
+        /// <para>The keyword for the search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -94,7 +96,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// <para>Pages start from page 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -120,10 +122,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the alert contact groups in the response. Valid values:</para>
+        /// <para>Specifies whether to include alert contact groups in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -141,7 +145,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public List<DescribeMonitorGroupsRequestTag> Tag { get; set; }
         public class DescribeMonitorGroupsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the application group. Valid values of N: 1 to 5.</para>
+            /// <para>The key of tag N. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagKey1</para>
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the application group. Valid values of N: 1 to 5.</para>
+            /// <para>The value of tag N. Valid values of N: 1 to 5.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tagValue1</para>
@@ -165,9 +169,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The type of the application group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>custom: a self-managed application group</description></item>
-        /// <item><description>ehpc_cluster: an application group that is synchronized from an E-HPC cluster</description></item>
-        /// <item><description>kubernetes: an application group that is synchronized from an ACK cluster</description></item>
+        /// <item><description><para>custom: a custom application group.</para>
+        /// </description></item>
+        /// <item><description><para>ehpc_cluster: an application group that is synchronized from an E-HPC cluster.</para>
+        /// </description></item>
+        /// <item><description><para>kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -180,12 +187,18 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The type of the application group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>custom: a self-managed application group</description></item>
-        /// <item><description>ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster</description></item>
-        /// <item><description>kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster</description></item>
-        /// <item><description>tag: an application group that is automatically created by using tags</description></item>
-        /// <item><description>resMgr: an application group that is created by using resource groups</description></item>
-        /// <item><description>ess: an application group that is synchronized from Auto Scaling (ESS)</description></item>
+        /// <item><description><para>custom: a custom application group.</para>
+        /// </description></item>
+        /// <item><description><para>ehpc_cluster: an application group that is synchronized from an E-HPC cluster.</para>
+        /// </description></item>
+        /// <item><description><para>kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster.</para>
+        /// </description></item>
+        /// <item><description><para>tag: an application group that is automatically created based on tags.</para>
+        /// </description></item>
+        /// <item><description><para>resMgr: an application group that is created based on a resource group.</para>
+        /// </description></item>
+        /// <item><description><para>ess: an application group that is synchronized from Auto Scaling (ESS).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

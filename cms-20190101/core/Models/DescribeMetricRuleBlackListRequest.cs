@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMetricRuleBlackListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the blacklist policy.</para>
+        /// <para>The category of the Alibaba Cloud service. For example, Redis has different editions, such as <c>kvstore_standard</c> (Standard Edition), <c>kvstore_sharding</c> (Cluster Edition), and <c>kvstore_splitrw</c> (Read/write Splitting Edition).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -19,13 +19,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         [Validation(Required=false)]
         public string Category { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the blacklist policies.</para>
+        /// </summary>
         [NameInMap("Ids")]
         [Validation(Required=false)]
         public List<string> Ids { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the instances in the blacklist policy.</para>
-        /// <para>Valid values of N: 0 to 10.</para>
+        /// <para>The IDs of instances in the blacklist policy.</para>
+        /// <para>The value of N can be an integer from 0 to 10.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
@@ -34,8 +37,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status of the blacklist policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The blacklist policy is enabled.</description></item>
-        /// <item><description>false: The blacklist policy is disabled.</description></item>
+        /// <item><description><para>true: enabled.</para>
+        /// </description></item>
+        /// <item><description><para>false: disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +52,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The name of the blacklist policy.</para>
-        /// <para>This parameter supports fuzzy match.</para>
+        /// <para>Fuzzy queries are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Blacklist-01</para>
@@ -57,8 +62,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The timestamp when the blacklist policy expired.</para>
-        /// <para>Unit: milliseconds.</para>
+        /// <para>The namespace of the Alibaba Cloud service.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs_ecs_dashboard</para>
@@ -68,10 +73,13 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
-        /// <remarks>
-        /// <para> The status code 200 indicates that the call was successful.</para>
-        /// </remarks>
+        /// <para>The order in which to sort the results by time. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>DESC (default): descending order.</para>
+        /// </description></item>
+        /// <item><description><para>ASC: ascending order.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DESC</para>
@@ -81,7 +89,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? Order { get; set; }
 
         /// <summary>
-        /// <para>The name of the metric.</para>
+        /// <para>The page number.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -91,7 +100,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The categories of the Alibaba Cloud service. For example, ApsaraDB for Redis includes the following categories: ApsaraDB for Redis (standard architecture), ApsaraDB for Redis (cluster architecture), and ApsaraDB for Redis (read/write splitting architecture). In this case, the valid values of this parameter for ApsaraDB for Redis include <c>kvstore_standard</c>, <c>kvstore_sharding</c>, and <c>kvstore_splitrw</c>.</para>
+        /// <para>The number of entries to return on each page.</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -105,10 +115,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the blacklist policy. Valid values:</para>
+        /// <para>The scope of the blacklist policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER: The blacklist policy takes effect only within the current Alibaba Cloud account.</description></item>
-        /// <item><description>GROUP: The blacklist policy takes effect only within the specified application group.</description></item>
+        /// <item><description><para>USER: The blacklist policy takes effect only for the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>GROUP: The blacklist policy takes effect for the specified application groups.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

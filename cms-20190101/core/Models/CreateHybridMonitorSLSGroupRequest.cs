@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SLSLogstore { get; set; }
 
             /// <summary>
-            /// <para>The Simple Log Service project.</para>
+            /// <para>The project.</para>
             /// <para>Valid values of N: 1 to 25.</para>
             /// <para>This parameter is required.</para>
             /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string SLSProject { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The region.</para>
             /// <para>Valid values of N: 1 to 25.</para>
             /// <para>This parameter is required.</para>
             /// 
@@ -61,9 +61,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             /// <summary>
             /// <para>The member ID.</para>
             /// <para>Valid values of N: 1 to 25.</para>
-            /// <para>If you call this operation by using the management account of a resource directory, you can connect the Alibaba Cloud services that are activated for all members in the resource directory to Hybrid Cloud Monitoring. You can use the resource directory to monitor Alibaba Cloud services across enterprise accounts.</para>
+            /// <para>If you invoke this operation by using a management account, you can associate the Alibaba Cloud services of any member in the resource folder with Hybrid Cloud Monitoring through cloud native mode. You can use the resource folder to monitor the Alibaba Cloud services of multiple accounts.</para>
             /// <remarks>
-            /// <para>If a member uses CloudMonitor for the first time, you must make sure that the service-linked role AliyunServiceRoleForCloudMonitor is attached to the member. For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">Manage the service-linked role for CloudMonitor</a>.</para>
+            /// <para>If a member uses CloudMonitor for the first time, make sure that the member has been granted the authorization for the CloudMonitor service-linked role (AliyunServiceRoleForCloudMonitor). For more information, see <a href="https://help.aliyun.com/document_detail/170423.html">CloudMonitor service-linked role</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -77,6 +77,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The description of the Logstore group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Logstore group of Alibaba Cloud products.</para>
         /// </summary>
         [NameInMap("SLSGroupDescription")]
         [Validation(Required=false)]

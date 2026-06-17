@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSystemEventCountRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Unit: milliseconds.</para>
+        /// <para>The timestamp of the end time for the event query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635993921000</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the system event.</para>
-        /// <para>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <c>EventType</c>. The value of the EventType parameter indicates the types of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
+        /// <para>The event type.</para>
+        /// <para>Call the DescribeSystemEventMetaList operation to obtain the value of the <c>EventType</c> response parameter, which provides the event types for all Alibaba Cloud services under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StatusNotification</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the application group.</para>
+        /// <para>The application group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17285****</para>
@@ -41,13 +41,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The level of the system event. Valid values:</para>
+        /// <para>The event level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Critical</description></item>
-        /// <item><description>Warn</description></item>
-        /// <item><description>Info</description></item>
+        /// <item><description><para>Critical: critical.</para>
+        /// </description></item>
+        /// <item><description><para>Warn: warning.</para>
+        /// </description></item>
+        /// <item><description><para>Info: information.</para>
+        /// </description></item>
         /// </list>
-        /// <para>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <c>Level</c>. The value of the Level parameter indicates the levels of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
+        /// <para>Call the DescribeSystemEventMetaList operation to obtain the value of the <c>Level</c> response parameter, which provides the event levels for all Alibaba Cloud services under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Info</para>
@@ -57,8 +60,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Level { get; set; }
 
         /// <summary>
-        /// <para>The name of the system event.</para>
-        /// <para>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <c>Name</c>. The value of the Name parameter indicates the names of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
+        /// <para>The event name.</para>
+        /// <para>Call the DescribeSystemEventMetaList operation to obtain the value of the <c>Name</c> response parameter, which provides the event names for all Alibaba Cloud services under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Instance:StateChange</para>
@@ -68,8 +71,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud service.</para>
-        /// <para>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <c>Product</c>. The value of the Product parameter indicates the names of all cloud services in which the system events of your Alibaba Cloud account occurred. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
+        /// <para>The name of the Alibaba Cloud service.</para>
+        /// <para>Call the DescribeSystemEventMetaList operation to obtain the value of the <c>Product</c> response parameter, which provides the Alibaba Cloud service names for all events under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS</para>
@@ -83,10 +86,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The keywords that are used to search for the system event. Valid values:</para>
+        /// <para>The keywords contained in the event content for searching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you want to search for the system event whose content contains a and b, set the value to <c>a and b</c>.</description></item>
-        /// <item><description>If you want to search for the system event whose content contains a or b, set the value to <c>a or b</c>.</description></item>
+        /// <item><description><para>To search for event content that contains both a and b, search for <c>a and b</c>.</para>
+        /// </description></item>
+        /// <item><description><para>To search for event content that contains either a or b, search for <c>a or b</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +102,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string SearchKeywords { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Unit: milliseconds.</para>
+        /// <para>The timestamp of the start time for the event query. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1635993541000</para>
@@ -107,8 +112,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the system event.</para>
-        /// <para>You can call the DescribeSystemEventMetaList operation to obtain the value of the response parameter <c>Status</c>. The value of the Status parameter indicates the status of system events that occurred for all cloud services in your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
+        /// <para>The event status.</para>
+        /// <para>Call the DescribeSystemEventMetaList operation to obtain the value of the <c>Status</c> response parameter, which provides the event statuses for all Alibaba Cloud services under the current Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DeleteSiteMonitorsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to delete the alert rules configured for the site monitoring tasks. Valid values:</para>
+        /// <para>Specifies whether to delete the alert rules associated with the tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default value)</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true (default): Deletes the alert rules.</para>
+        /// </description></item>
+        /// <item><description><para>false: Does not delete the alert rules.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the site monitoring tasks that you want to delete. Separate multiple task IDs with commas (,).</para>
+        /// <para>The IDs of the tasks to be deleted. Separate multiple task IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

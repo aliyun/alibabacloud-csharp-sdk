@@ -41,8 +41,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The type of the alert event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>TRIGGERED: The alert is triggered.</description></item>
-        /// <item><description>RESOLVED: The alert is resolved.</description></item>
+        /// <item><description><para>TRIGGERED: The alert is triggered.</para>
+        /// </description></item>
+        /// <item><description><para>RESOLVED: The alert is resolved.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,11 +57,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>product</c>: aggregates data by cloud service.</description></item>
-        /// <item><description><c>level</c>: aggregates data by alert level.</description></item>
-        /// <item><description><c>groupId</c>: aggregates data by application group.</description></item>
-        /// <item><description><c>contactGroup</c>: aggregates data by alert contact group.</description></item>
-        /// <item><description><c>product,metricName</c>: aggregates data both by cloud service and by metric.</description></item>
+        /// <item><description><para><c>product</c>: aggregates data by cloud service.</para>
+        /// </description></item>
+        /// <item><description><para><c>level</c>: aggregates data by alert level.</para>
+        /// </description></item>
+        /// <item><description><para><c>groupId</c>: aggregates data by application group.</para>
+        /// </description></item>
+        /// <item><description><para><c>contactGroup</c>: aggregates data by alert contact group.</para>
+        /// </description></item>
+        /// <item><description><para><c>product,metricName</c>: aggregates data both by cloud service and by metric.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,8 +99,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The severity level and notification methods of the alert. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>P4: Alert notifications are sent by using emails and DingTalk chatbots.</description></item>
-        /// <item><description>OK: No alert is generated.</description></item>
+        /// <item><description><para>P4: Alert notifications are sent by using emails and DingTalk chatbots.</para>
+        /// </description></item>
+        /// <item><description><para>OK: No alert is generated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The metric name.</para>
         /// <remarks>
-        /// <para> For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -119,7 +128,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The namespace of the Alibaba Cloud service.</para>
         /// <remarks>
-        /// <para> For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
+        /// <para>For more information about the namespaces of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -199,11 +208,16 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The alert status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The alert is triggered or cleared.</description></item>
-        /// <item><description>1: The alert is ineffective.</description></item>
-        /// <item><description>2: The alert is muted and not triggered in a specified period.</description></item>
-        /// <item><description>3: The host is restarting.</description></item>
-        /// <item><description>4: No alert notification is sent.</description></item>
+        /// <item><description><para>0: The alert is triggered or cleared.</para>
+        /// </description></item>
+        /// <item><description><para>1: The alert is ineffective.</para>
+        /// </description></item>
+        /// <item><description><para>2: The alert is muted and not triggered in a specified period.</para>
+        /// </description></item>
+        /// <item><description><para>3: The host is restarting.</para>
+        /// </description></item>
+        /// <item><description><para>4: No alert notification is sent.</para>
+        /// </description></item>
         /// </list>
         /// <para>If the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</para>
         /// 
@@ -218,7 +232,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None</para>
+        /// <para>无</para>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]

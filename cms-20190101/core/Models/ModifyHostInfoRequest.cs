@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class ModifyHostInfoRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the host.</para>
+        /// <para>The host name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>portalHost</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance. Only hosts not on Alibaba Cloud are supported.</para>
+        /// <para>The instance ID. Only non-Alibaba Cloud hosts are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

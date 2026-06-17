@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSiteMonitorStatisticsRequest : TeaModel {
         /// <summary>
-        /// <para>The metric name. Valid values:</para>
+        /// <para>The name of the metric. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Availability</description></item>
-        /// <item><description>ErrorRate</description></item>
-        /// <item><description>ResponseTime</description></item>
+        /// <item><description>Availability: the availability.</description></item>
+        /// <item><description>ErrorRate: the error rate.</description></item>
+        /// <item><description>ResponseTime: the response time.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The beginning of the time range to query.</para>
-        /// <para>Unit: milliseconds. The default value is 1 hour ahead of the current time.</para>
+        /// <para>Unit: milliseconds. Default value: 1 hour before the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1576142850527</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The ID of the site monitoring task.</para>
-        /// <para>For more information about how to obtain the ID of a site monitoring task, see <a href="https://help.aliyun.com/document_detail/115052.html">DescribeSiteMonitorList</a>.</para>
+        /// <para>For information about how to obtain the ID of a site monitoring task, see <a href="https://help.aliyun.com/document_detail/115052.html">DescribeSiteMonitorList</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The statistical period.</para>
-        /// <para>Unit: minutes. Default value: 1440 (one day). Maximum value: 43200 (30 days).</para>
+        /// <para>Unit: minutes. Default value: 1440 (1 day). Maximum value: 43200 (30 days).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1440</para>

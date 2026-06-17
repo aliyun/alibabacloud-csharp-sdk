@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeSyntheticProbeListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,17 +20,25 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The queried detection points.</para>
+        /// <para>The list of detection points.</para>
         /// </summary>
         [NameInMap("IspCityList")]
         [Validation(Required=false)]
         public List<DescribeSyntheticProbeListResponseBodyIspCityList> IspCityList { get; set; }
         public class DescribeSyntheticProbeListResponseBodyIspCityList : TeaModel {
+            /// <summary>
+            /// <para>The name of the area in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>华北</para>
+            /// </summary>
             [NameInMap("AreaCn")]
             [Validation(Required=false)]
             public string AreaCn { get; set; }
 
             /// <summary>
+            /// <para>The name of the area in English.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Huabei</para>
             /// </summary>
@@ -37,6 +47,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string AreaEn { get; set; }
 
             /// <summary>
+            /// <para>The city ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>738</para>
             /// </summary>
@@ -44,11 +56,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string City { get; set; }
 
+            /// <summary>
+            /// <para>The name of the city in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>北京</para>
+            /// </summary>
             [NameInMap("CityCn")]
             [Validation(Required=false)]
             public string CityCn { get; set; }
 
             /// <summary>
+            /// <para>The name of the city in English.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Beijing</para>
             /// </summary>
@@ -57,6 +77,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string CityEn { get; set; }
 
             /// <summary>
+            /// <para>The country code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>629</para>
             /// </summary>
@@ -64,11 +86,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Country { get; set; }
 
+            /// <summary>
+            /// <para>The name of the country in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>中国</para>
+            /// </summary>
             [NameInMap("CountryCn")]
             [Validation(Required=false)]
             public string CountryCn { get; set; }
 
             /// <summary>
+            /// <para>The name of the country or region in English.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>China</para>
             /// </summary>
@@ -77,6 +107,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string CountryEn { get; set; }
 
             /// <summary>
+            /// <para>The number of IPv4 detection points in data centers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -85,7 +117,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? IdcV4ProbeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of IPv6 nodes in data centers.</para>
+            /// <para>The number of IDC IPv6 nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -95,13 +127,15 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? IdcV6ProbeCount { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses of the monitored nodes.</para>
+            /// <para>The list of node IP addresses.</para>
             /// </summary>
             [NameInMap("IpPool")]
             [Validation(Required=false)]
             public List<string> IpPool { get; set; }
 
             /// <summary>
+            /// <para>The carrier ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>232</para>
             /// </summary>
@@ -109,11 +143,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Isp { get; set; }
 
+            /// <summary>
+            /// <para>The name of the carrier in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>联通</para>
+            /// </summary>
             [NameInMap("IspCn")]
             [Validation(Required=false)]
             public string IspCn { get; set; }
 
             /// <summary>
+            /// <para>The name of the carrier in English.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>China-Unicom</para>
             /// </summary>
@@ -122,6 +164,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public string IspEn { get; set; }
 
             /// <summary>
+            /// <para>The number of last-mile detection points.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -130,6 +174,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? LmProbeCount { get; set; }
 
             /// <summary>
+            /// <para>The number of mobile detection points.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -138,6 +184,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             public int? MbProbeCount { get; set; }
 
             /// <summary>
+            /// <para>The province code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>264</para>
             /// </summary>
@@ -145,11 +193,19 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
             [Validation(Required=false)]
             public string Region { get; set; }
 
+            /// <summary>
+            /// <para>The name of the province in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>江西省</para>
+            /// </summary>
             [NameInMap("RegionCn")]
             [Validation(Required=false)]
             public string RegionCn { get; set; }
 
             /// <summary>
+            /// <para>The name of the province in English.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Jiangxi</para>
             /// </summary>
@@ -160,6 +216,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>The specified resource is not found.</para>
         /// </summary>
@@ -168,6 +226,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>87170bc7-e28a-4c93-b9bf-90a1dbe84736</para>
         /// </summary>
@@ -176,6 +236,8 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

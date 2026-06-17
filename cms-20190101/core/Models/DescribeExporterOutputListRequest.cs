@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The number of records per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

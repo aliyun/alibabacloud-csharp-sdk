@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class DescribeMonitoringAgentHostsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to query Elastic Compute Service (ECS) instances that are provided by Alibaba Cloud or to query hosts that are not provided by Alibaba Cloud. Valid values:</para>
+        /// <para>Specifies whether to filter for Alibaba Cloud Elastic Compute Service (ECS) instances. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true (default value): queries all the ECS instances that are provided by Alibaba Cloud.</description></item>
-        /// <item><description>false: queries all the hosts that are not provided by Alibaba Cloud.</description></item>
+        /// <item><description><para>true (default): Returns only ECS instances.</para>
+        /// </description></item>
+        /// <item><description><para>false: Returns only hosts that are not ECS instances.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public bool? AliyunHost { get; set; }
 
         /// <summary>
-        /// <para>The name of the host.</para>
+        /// <para>The hostname.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hostNam1</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string HostName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-a3d1q1pm2f9yr29e****</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region where the instance resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string InstanceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The keyword that is used in fuzzy match.</para>
+        /// <para>The keyword for a fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>host1</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string KeyWord { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,13 +78,17 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>10</description></item>
-        /// <item><description>20</description></item>
-        /// <item><description>50</description></item>
-        /// <item><description>100</description></item>
+        /// <item><description><para>10</para>
+        /// </description></item>
+        /// <item><description><para>20</para>
+        /// </description></item>
+        /// <item><description><para>50</para>
+        /// </description></item>
+        /// <item><description><para>100</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Although Alibaba Cloud does not limit the maximum value of this parameter, we recommend that you do not set it to an excessively large value. If you set it to an excessively large value, a timeout error may occur.</para>
+        /// <para>Alibaba Cloud does not limit the maximum value of this parameter. However, setting this parameter to a large value may cause a timeout.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,9 +104,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
         /// <summary>
         /// <para>The serial number of the host.</para>
-        /// <para>After the CloudMonitor agent is installed on a host, a globally unique serial number is generated. A host that is not provided by Alibaba Cloud has a serial number instead of an instance ID.</para>
+        /// <para>A globally unique serial number is generated after the CloudMonitor agent is successfully installed on a host. Hosts that are not Alibaba Cloud instances do not have an instance ID, but have a serial number.</para>
         /// <remarks>
-        /// <para>This parameter can be used to accurately search for a monitored host.</para>
+        /// <para>Use this parameter to find a specific monitored host.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -111,10 +117,12 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string SerialNumbers { get; set; }
 
         /// <summary>
-        /// <para>The status of the hosts that you want to query. Valid values:</para>
+        /// <para>The status of the host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Running: queries the hosts that are running.</description></item>
-        /// <item><description>Stopped: queries the hosts that are stopped, are not installed, or fail to be installed.</description></item>
+        /// <item><description><para>Running: The host is running.</para>
+        /// </description></item>
+        /// <item><description><para>Stopped: The host is stopped, the agent is not installed, or the agent installation failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -127,10 +135,14 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The status of SysOM. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>installing: SysOM is being installed.</description></item>
-        /// <item><description>running: SysOM is running.</description></item>
-        /// <item><description>stopped: SysOM is stopped.</description></item>
-        /// <item><description>uninstalling: SysOM is being uninstalled.</description></item>
+        /// <item><description><para>installing: SysOM is being enabled.</para>
+        /// </description></item>
+        /// <item><description><para>running: SysOM is running.</para>
+        /// </description></item>
+        /// <item><description><para>stopped: SysOM is stopped.</para>
+        /// </description></item>
+        /// <item><description><para>uninstalling: SysOM is being disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

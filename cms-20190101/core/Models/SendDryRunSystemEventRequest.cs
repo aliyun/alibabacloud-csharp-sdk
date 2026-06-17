@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The content of the system event.</para>
         /// <remarks>
-        /// <para> The value of this parameter is a JSON object. We recommend that you include the <c>product</c>, <c>resourceId</c>, and <c>regionId</c> fields in the JSON object.</para>
+        /// <para>The value of this parameter is a JSON object. We recommend that you include the <c>product</c>, <c>resourceId</c>, and <c>regionId</c> fields in the JSON object.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The name of the system event.</para>
         /// <remarks>
-        /// <para> For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The name of the cloud service.</para>
         /// <remarks>
-        /// <para> For information about the Alibaba Cloud services that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/167388.html">Supported cloud services and their system events</a>.</para>
+        /// <para>For information about the Alibaba Cloud services that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/167388.html">Supported cloud services and their system events</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

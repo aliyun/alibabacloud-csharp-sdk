@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the process monitoring task.</para>
+        /// <para>The ID of the group process.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

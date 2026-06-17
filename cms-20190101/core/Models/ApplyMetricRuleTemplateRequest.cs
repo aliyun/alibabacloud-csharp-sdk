@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The template application policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>all (default): deletes all the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the template.</description></item>
-        /// <item><description>append: deletes the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the existing template.</description></item>
+        /// <item><description><para>all (default): deletes all the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the template.</para>
+        /// </description></item>
+        /// <item><description><para>append: deletes the rules that are created by using the alert template from the selected application group, and then creates alert rules based on the existing template.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The mode in which the alert template is applied. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GROUP_INSTANCE_FIRST: The metrics in the application group take precedence. If a metric specified in the alert template does not exist in the application group, the system does not generate an alert rule for the metric based on the alert template.</description></item>
-        /// <item><description>ALARM_TEMPLATE_FIRST: The metrics specified in the alert template take precedence. If a metric specified in the alert template does not exist in the application group, the system still generates an alert rule for the metric based on the alert template.</description></item>
+        /// <item><description><para>GROUP_INSTANCE_FIRST: The metrics in the application group take precedence. If a metric specified in the alert template does not exist in the application group, the system does not generate an alert rule for the metric based on the alert template.</para>
+        /// </description></item>
+        /// <item><description><para>ALARM_TEMPLATE_FIRST: The metrics specified in the alert template take precedence. If a metric specified in the alert template does not exist in the application group, the system still generates an alert rule for the metric based on the alert template.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <summary>
         /// <para>The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400.</para>
         /// <remarks>
-        /// <para> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</para>
+        /// <para>Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>contact_group_2019_templatedfkXQ</para>
+        /// <para>My alert group</para>
         /// </summary>
         [NameInMap("ContactGroupName")]
         [Validation(Required=false)]

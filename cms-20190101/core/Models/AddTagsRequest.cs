@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 {
     public class AddTagsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the application group.</para>
-        /// <para>Valid values of N: 1 to 20.</para>
-        /// <para>For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/2513168.html">DescribeMonitorGroups</a>.</para>
+        /// <para>The IDs of the application groups.</para>
+        /// <para>The value of N can be from 1 to 20.</para>
+        /// <para>For information about how to obtain application group IDs, see <a href="https://help.aliyun.com/document_detail/2513168.html">DescribeMonitorGroups</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>A list of tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -36,10 +36,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
         public class AddTagsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
-            /// <para>Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.</para>
-            /// <para>You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/2513189.html">DescribeTagKeyList</a>.</para>
+            /// <para>The value of N can be from 1 to 3. The tag key must be 1 to 64 characters in length.</para>
+            /// <para>Enter a new tag key or use an existing tag key from Cloud Monitor. For information about how to obtain tag keys, see <a href="https://help.aliyun.com/document_detail/2513189.html">DescribeTagKeyList</a>.</para>
             /// <remarks>
-            /// <para> The tag key cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key (<c>Tag.N.Key</c>) and tag value (<c>Tag.N.Value</c>) must be specified at the same time.</para>
+            /// <para>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>. The <c>Tag.N.Key</c> and <c>Tag.N.Value</c> parameters must be specified together.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -52,10 +52,10 @@ namespace AlibabaCloud.SDK.Cms20190101.Models
 
             /// <summary>
             /// <para>The tag value.</para>
-            /// <para>Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.</para>
-            /// <para>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/2513188.html">DescribeTagValueList</a>.</para>
+            /// <para>The value of N can be from 1 to 3. The tag value must be 1 to 64 characters in length.</para>
+            /// <para>Enter a new tag value or use an existing tag value from Cloud Monitor. For information about how to obtain tag values, see <a href="https://help.aliyun.com/document_detail/2513188.html">DescribeTagValueList</a>.</para>
             /// <remarks>
-            /// <para> The tag value cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key (<c>Tag.N.Key</c>) and tag value (<c>Tag.N.Value</c>) must be specified at the same time.</para>
+            /// <para>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>. The <c>Tag.N.Key</c> and <c>Tag.N.Value</c> parameters must be specified together.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
