@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTrafficTopResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of traffic data entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? DataCount { get; set; }
 
+        /// <summary>
+        /// <para>The list of traffic data.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeInternetTrafficTopResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetTrafficTopResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The name of the country.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>US</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DataName { get; set; }
 
             /// <summary>
+            /// <para>The inbound traffic percentage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>47.12</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DataValue { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the data is subscribed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>false</para>
             /// </summary>
@@ -45,11 +56,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public bool? IsSubscribed { get; set; }
 
+            /// <summary>
+            /// <para>The list of labels.</para>
+            /// </summary>
             [NameInMap("LabelList")]
             [Validation(Required=false)]
             public List<string> LabelList { get; set; }
 
             /// <summary>
+            /// <para>The number of sessions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>27</para>
             /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
+            /// <para>The total traffic. Unit: bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -68,6 +86,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The type of traffic data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>in_src_ip</para>
         /// </summary>
@@ -76,6 +96,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DataType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15FCCC52-1E23-57AE-B5EF-3E00A3******</para>
         /// </summary>

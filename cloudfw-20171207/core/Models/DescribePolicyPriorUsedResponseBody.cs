@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePolicyPriorUsedResponseBody : TeaModel {
         /// <summary>
-        /// <para>The lowest priority of existing access control policies.</para>
+        /// <para>The lowest priority of your access control policies.</para>
         /// <remarks>
-        /// <para> The value -1 indicates the lowest priority.</para>
+        /// <para>A larger value indicates a lower priority.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The highest priority of existing access control policies.</para>
+        /// <para>The highest priority of your access control policies.</para>
         /// <remarks>
-        /// <para> The value 0 indicates the highest priority.</para>
+        /// <para>A smaller value indicates a higher priority.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

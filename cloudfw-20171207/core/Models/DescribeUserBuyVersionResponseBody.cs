@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeUserBuyVersionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The quota for ACK cluster connectors.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AckClusterConnectorQuota { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is used to purchase Cloud Firewall.</para>
+        /// <para>The ID of the Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>119898001566xxxx</para>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AliUid { get; set; }
 
         /// <summary>
+        /// <para>The default bandwidth of the edition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -36,12 +40,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DefaultBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The time when Cloud Firewall expires.</para>
+        /// <para>The expiration time of the Cloud Firewall instance.</para>
         /// <remarks>
-        /// <para> The value is a timestamp in milliseconds.</para>
+        /// <para>The value is a UNIX timestamp in milliseconds.</para>
         /// </remarks>
         /// <remarks>
-        /// <para> If you use Cloud Firewall that uses the pay-as-you-go billing method, ignore this parameter.</para>
+        /// <para>This parameter does not apply to pay-as-you-go editions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,6 +56,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? Expire { get; set; }
 
         /// <summary>
+        /// <para>The extended bandwidth.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -60,6 +66,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? ExtensionBandwidth { get; set; }
 
         /// <summary>
+        /// <para>The number of general-purpose instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -68,9 +76,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? GeneralInstance { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of Cloud Firewall.</para>
+        /// <para>The ID of the Cloud Firewall instance.</para>
         /// <remarks>
-        /// <para> If you use a trial of Cloud Firewall, ignore this parameter.</para>
+        /// <para>This parameter does not apply to trial editions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,13 +89,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The status of Cloud Firewall. Valid values:</para>
+        /// <para>The operational status of the Cloud Firewall instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal</b>: Cloud Firewall is running as expected.</description></item>
-        /// <item><description><b>init</b>: Cloud Firewall is being initialized.</description></item>
-        /// <item><description><b>deleting</b>: Cloud Firewall is being deleted.</description></item>
-        /// <item><description><b>abnormal</b>: An exception occurs in Cloud Firewall.</description></item>
-        /// <item><description><b>free</b>: Cloud Firewall is invalid.</description></item>
+        /// <item><description><para><b>normal</b>: The instance is running as expected.</para>
+        /// </description></item>
+        /// <item><description><para><b>init</b>: The instance is being initialized.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: The instance is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>abnormal</b>: The instance is in an abnormal state.</para>
+        /// </description></item>
+        /// <item><description><para><b>free</b>: No valid instance is available.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +111,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>The peak Internet traffic that can be protected.</para>
+        /// <para>The purchased traffic processing capability for the Internet firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -110,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The number of public IP addresses that can be protected.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</para>
+        /// <para>This parameter applies only to subscription instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -123,8 +136,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Indicates whether log delivery is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,9 +150,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? LogStatus { get; set; }
 
         /// <summary>
-        /// <para>The log storage capacity.</para>
+        /// <para>The purchased log storage capacity.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</para>
+        /// <para>This parameter applies only to subscription instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -148,6 +163,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? LogStorage { get; set; }
 
         /// <summary>
+        /// <para>The major version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -156,13 +173,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MajorVersion { get; set; }
 
         /// <summary>
-        /// <para>The status of the burstable protected traffic feature. Valid values:</para>
+        /// <para>Indicates whether elastic billing for excess traffic is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1000000</b>: enabled.</description></item>
-        /// <item><description><b>0</b>: disabled.</description></item>
+        /// <item><description><para><b>1000000</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Disabled</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</para>
+        /// <para>This parameter applies only to subscription instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -173,7 +192,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxOverflow { get; set; }
 
         /// <summary>
-        /// <para>The peak traffic of NAT private network that can be protected.</para>
+        /// <para>The purchased traffic processing capability for the NAT firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -183,6 +202,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? NatBandwidth { get; set; }
 
         /// <summary>
+        /// <para>The quota for private DNS connectors.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -191,7 +212,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PrivateDnsConnectorQuota { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F71B03EE-xxxxx-91D79CC6AA1A</para>
@@ -201,6 +222,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether data leakage prevention is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -209,9 +232,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? Sdl { get; set; }
 
         /// <summary>
-        /// <para>The time when Cloud Firewall was activated.</para>
+        /// <para>The time when the Cloud Firewall instance was enabled.</para>
         /// <remarks>
-        /// <para> The value is a timestamp in milliseconds.</para>
+        /// <para>The value is a UNIX timestamp in milliseconds.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -222,6 +245,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The temporary bandwidth.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -230,6 +255,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TemporaryBandwidth { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether threat intelligence is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -238,10 +265,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? ThreatIntelligence { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Cloud Firewall is valid. Valid values:</para>
+        /// <para>The status of the Cloud Firewall instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The instance is valid.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The instance is invalid.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -252,12 +281,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? UserStatus { get; set; }
 
         /// <summary>
-        /// <para>The edition of Cloud Firewall. Valid values:</para>
+        /// <para>The edition of the Cloud Firewall instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b>: Premium Edition.</description></item>
-        /// <item><description><b>3</b>: Enterprise Edition.</description></item>
-        /// <item><description><b>4</b>: Ultimate Edition.</description></item>
-        /// <item><description><b>10</b>: Cloud Firewall that uses the pay-as-you-go billing method.</description></item>
+        /// <item><description><para><b>2</b>: Premium Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Enterprise Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Ultimate Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: Pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -268,7 +301,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? Version { get; set; }
 
         /// <summary>
-        /// <para>The peak cross-VPC traffic that can be protected.</para>
+        /// <para>The purchased traffic processing capability for the VPC firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3000</para>
@@ -278,9 +311,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? VpcBandwidth { get; set; }
 
         /// <summary>
-        /// <para>The number of virtual private clouds (VPCs) that can be protected.</para>
+        /// <para>The number of purchased VPC firewalls.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only for Cloud Firewall that uses the subscription billing method.</para>
+        /// <para>This parameter applies only to subscription instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

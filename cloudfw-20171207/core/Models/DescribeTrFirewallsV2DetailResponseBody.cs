@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The description of the VPC firewall.</para>
+        /// <para>The description of the firewall.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>VPC Firewall</para>
+        /// <para>vpc-firewall-description</para>
         /// </summary>
         [NameInMap("FirewallDescription")]
         [Validation(Required=false)]
         public string FirewallDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Elastic Network Interface (ENI) with which the VPC firewall is associated.</para>
+        /// <para>The ID of the elastic network interface (ENI) of the firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eni-uf621u00nafypeex****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallEniId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC to which the ENI is attached.</para>
+        /// <para>The ID of the VPC to which the ENI of the firewall belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeppcci782zeh2bk****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallEniVpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch with which the ENI is associated.</para>
+        /// <para>The ID of the vSwitch to which the ENI of the firewall belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6ptq1kl1c1d9pw9****</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallEniVswitchId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The ID of the VPC firewall instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-9c7c711abdfa4d80****</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The name of the VPC firewall.</para>
+        /// <para>The name of the VPC firewall instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudfirewall-manual</para>
@@ -80,11 +80,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallName { get; set; }
 
         /// <summary>
-        /// <para>The status of the VPC firewall. Valid values:</para>
+        /// <para>The status of the firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Creating</description></item>
-        /// <item><description>Deleting</description></item>
-        /// <item><description>Ready</description></item>
+        /// <item><description><para>Creating: The firewall is being created.</para>
+        /// </description></item>
+        /// <item><description><para>Deleting: The firewall is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para>Ready: The firewall is ready.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallStatus { get; set; }
 
         /// <summary>
-        /// <para>The subnet CIDR block of the VPC in which the ENI of the firewall is stored in automatic mode.</para>
+        /// <para>The CIDR block of the vSwitch that is automatically created in the firewall VPC to host the ENI of the firewall in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.1.0/24</para>
@@ -107,13 +110,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The status of the VPC firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>opened</b>: The VPC firewall is enabled.</description></item>
-        /// <item><description><b>closed</b>: The VPC firewall is disabled.</description></item>
-        /// <item><description><b>notconfigured</b>: The VPC firewall is not created.</description></item>
-        /// <item><description><b>configured</b>: The VPC firewall is created but is not enabled.</description></item>
-        /// <item><description><b>creating</b>: The VPC firewall is being created.</description></item>
-        /// <item><description><b>opening</b>: The VPC firewall is being enabled.</description></item>
-        /// <item><description><b>deleting</b>: The VPC firewall is being deleted.</description></item>
+        /// <item><description><para><b>opened</b>: The firewall is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>closed</b>: The firewall is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>notconfigured</b>: The firewall is not configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>configured</b>: The firewall is configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>creating</b>: The firewall is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>opening</b>: The firewall is being enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: The firewall is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>If you do not specify this parameter, VPC firewalls in all states are queried.</para>
@@ -127,7 +137,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitchStatus { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block that is allocated to the VPC created for the VPC firewall in automatic mode.</para>
+        /// <para>The CIDR block of the VPC that is automatically created for the firewall in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.0.0/16</para>
@@ -137,7 +147,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallVpcCidr { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the transit router.</para>
+        /// <para>The region ID of the transit router instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
@@ -147,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E53A7FB-3EB9-5E33-8E50-B8F417D1E02B</para>
@@ -157,10 +167,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The routing mode of the VPC firewall. Valid values:</para>
+        /// <para>The routing mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>managed</b>: automatic mode</description></item>
-        /// <item><description><b>manual</b>: manual mode</description></item>
+        /// <item><description><para><b>managed</b>: automatic mode</para>
+        /// </description></item>
+        /// <item><description><para><b>manual</b>: manual mode</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -170,12 +182,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RouteMode { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the transit router attachment.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tr-attach-r1llaxxeha71jsm36v</para>
+        /// </summary>
         [NameInMap("TrAttachmentId")]
         [Validation(Required=false)]
         public string TrAttachmentId { get; set; }
 
         /// <summary>
-        /// <para>The primary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</para>
+        /// <para>The primary CIDR block of the vSwitch that is automatically created in the firewall VPC to connect to the transit router in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.2.0/24</para>
@@ -185,7 +203,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TrAttachmentMasterCidr { get; set; }
 
         /// <summary>
-        /// <para>In automatic mode, the primary availability zone of the subnet in the firewall VPC used for connecting to TR.</para>
+        /// <para>The primary zone of the vSwitch that is automatically created in the firewall VPC to connect to the transit router in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-h</para>
@@ -195,7 +213,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TrAttachmentMasterZone { get; set; }
 
         /// <summary>
-        /// <para>The secondary subnet CIDR block that the VPC uses to connect to the transit router in automatic mode.</para>
+        /// <para>The secondary CIDR block of the vSwitch that is automatically created in the firewall VPC to connect to the transit router in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.0.3.0/24</para>
@@ -205,7 +223,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TrAttachmentSlaveCidr { get; set; }
 
         /// <summary>
-        /// <para>In automatic mode, the backup availability zone for the subnet used to connect TR in the firewall VPC.</para>
+        /// <para>The secondary zone of the vSwitch that is automatically created in the firewall VPC to connect to the transit router in automatic mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>
@@ -215,7 +233,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TrAttachmentSlaveZone { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The ID of the transit router instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-wz9y8sgug8b1xb416****</para>

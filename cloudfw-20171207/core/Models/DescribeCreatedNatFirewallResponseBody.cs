@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeCreatedNatFirewallResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of the created NAT firewalls.</para>
+        /// </summary>
         [NameInMap("CreatedNatFirewalls")]
         [Validation(Required=false)]
         public List<DescribeCreatedNatFirewallResponseBodyCreatedNatFirewalls> CreatedNatFirewalls { get; set; }
         public class DescribeCreatedNatFirewallResponseBodyCreatedNatFirewalls : TeaModel {
             /// <summary>
+            /// <para>The ID of the NAT firewall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cfw-adk2ad45sf4t8****</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatFirewallId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the NAT Gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ngw-uf6i0zkjtz4t2sttf****</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
+            /// <para>The name of the NAT Gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ngw-text</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>072B5287-8A85-529E-BD47-F8AC2DB1****</para>
         /// </summary>

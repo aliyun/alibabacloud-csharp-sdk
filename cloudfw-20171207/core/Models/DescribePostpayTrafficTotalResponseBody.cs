@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of assets protected all types of firewalls.</para>
+        /// <para>The total number of assets that are protected by border firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalAssets { get; set; }
 
         /// <summary>
-        /// <para>The volume of burstable protected traffic for which fees are generated. Unit: bytes.</para>
+        /// <para>For the subscription edition, this is the total billed elastic traffic after deductions are applied. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2320274874426</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalBillTraffic { get; set; }
 
         /// <summary>
-        /// <para>The total number of assets protected by the Internet firewall.</para>
+        /// <para>The total number of assets that are protected by Internet Border firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>128</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalInternetAssets { get; set; }
 
         /// <summary>
-        /// <para>The total traffic for the Internet firewall. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the Internet boundary. Unit: bytes.</para>
+        /// <para>The total traffic of the Internet Border. For the subscription edition, this is the total elastic traffic of the Internet Border. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2320274874426</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalInternetTraffic { get; set; }
 
         /// <summary>
-        /// <para>The total number of assets protected by NAT firewalls.</para>
+        /// <para>The total number of assets that are protected by NAT border firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalNatAssets { get; set; }
 
         /// <summary>
-        /// <para>The total traffic for NAT firewalls. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the NAT boundary. Unit: bytes.</para>
+        /// <para>The total traffic of the NAT border. For the subscription edition, this is the total elastic traffic of the NAT border. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>560646279</para>
@@ -80,17 +80,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalNatTraffic { get; set; }
 
         /// <summary>
-        /// <para>Data Leak Detection Total Fee Flow.</para>
+        /// <para>The total billed traffic for data leakage detection.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>22879916142</para>
+        /// <para>0</para>
         /// </summary>
         [NameInMap("TotalSdlBillTraffic")]
         [Validation(Required=false)]
         public long? TotalSdlBillTraffic { get; set; }
 
         /// <summary>
-        /// <para>Data Leak Detection Total free usage traffic.</para>
+        /// <para>The total free traffic for data leakage detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalSdlFreeTraffic { get; set; }
 
         /// <summary>
-        /// <para>The total volume of traffic. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic. Unit: bytes.</para>
+        /// <para>The total traffic. For the subscription edition, this is the total elastic traffic. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2320274874426</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalTraffic { get; set; }
 
         /// <summary>
-        /// <para>The total number of assets protected by virtual private cloud (VPC) firewalls.</para>
+        /// <para>The total number of assets that are protected by VPC border firewalls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalVpcAssets { get; set; }
 
         /// <summary>
-        /// <para>The total traffic for VPC firewalls. If you use Cloud Firewall that uses the subscription billing method, this parameter indicates the total volume of burstable protected traffic on the VPC boundary. Unit: bytes.</para>
+        /// <para>The total traffic of the VPC border. For the subscription edition, this is the total elastic traffic of the VPC border. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2320274874426</para>

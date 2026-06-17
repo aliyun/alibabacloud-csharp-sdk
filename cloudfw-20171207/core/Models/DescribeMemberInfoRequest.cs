@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeMemberInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The UID of the member account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>150795602499****</para>
         /// </summary>

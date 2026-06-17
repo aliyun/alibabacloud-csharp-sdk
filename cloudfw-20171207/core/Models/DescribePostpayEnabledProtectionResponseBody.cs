@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePostpayEnabledProtectionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of days that protection has been disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DisabledDays { get; set; }
 
         /// <summary>
+        /// <para>The type of asset for which protection is disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>nat</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DisabledType { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the protection feature is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsEnabledProtection { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the protection feature is activated but currently disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsOpenButDisabled { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>95CA5E2B-E5FB-5838-BC50-6A2C763C****</para>
         /// </summary>

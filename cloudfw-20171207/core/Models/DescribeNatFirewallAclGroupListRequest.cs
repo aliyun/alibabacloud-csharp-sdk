@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallAclGroupListRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the request and response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>

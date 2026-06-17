@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyUserAlarmConfigResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3B168A0F-A43D-5FD0-8059-B51BDD6E****</para>
         /// </summary>

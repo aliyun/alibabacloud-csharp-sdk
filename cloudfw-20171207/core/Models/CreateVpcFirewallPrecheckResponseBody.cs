@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateVpcFirewallPrecheckResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the precheck task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4197</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrecheckId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</para>
         /// </summary>

@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteAddressBookRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the address book.</para>
-        /// <para>To delete the address book, you must provide the ID of the address book. You can call the DescribeAddressBook operation to query the ID.</para>
+        /// <para>The unique ID of the address book.</para>
+        /// <remarks>
+        /// <para>To obtain this ID, call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,11 +24,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupUuid { get; set; }
 
         /// <summary>
-        /// <para>The natural language of the request and response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
-        /// </list>
+        /// <para>The language of the content within the request and response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

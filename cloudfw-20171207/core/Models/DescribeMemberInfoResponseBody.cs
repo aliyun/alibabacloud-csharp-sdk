@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeMemberInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The name of the Alibaba Cloud account.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tianzhuang</para>
+        /// </summary>
         [NameInMap("AdminName")]
         [Validation(Required=false)]
         public string AdminName { get; set; }
 
         /// <summary>
+        /// <para>The UID of the Alibaba Cloud account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>164705101205****</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AdminUid { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the account is a member account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsMember { get; set; }
 
         /// <summary>
+        /// <para>The UID of the member account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>128720273643****</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F2665618-3C41-51A4-8DAF-586FB68****</para>
         /// </summary>

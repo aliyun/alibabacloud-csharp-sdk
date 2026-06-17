@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceVSwitchListRequest : TeaModel {
         /// <summary>
+        /// <para>The UID of the Alibaba Cloud account to which the resource belongs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vSwitch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-qzeaol304m***</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VPC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-uf6b5lyul0x******</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>
         /// </summary>

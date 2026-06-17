@@ -20,16 +20,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of risks.</para>
+        /// <para>The list of threats.</para>
         /// </summary>
         [NameInMap("RiskList")]
         [Validation(Required=false)]
         public List<DescribeCfwRiskLevelSummaryResponseBodyRiskList> RiskList { get; set; }
         public class DescribeCfwRiskLevelSummaryResponseBodyRiskList : TeaModel {
             /// <summary>
-            /// <para>The risk levels. Valid values:</para>
+            /// <para>The threat level. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description><b>medium</b></description></item>
+            /// <item><description><b>medium</b>: medium</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The number of at-risk Elastic Compute Service (ECS) instances.</para>
+            /// <para>The number of ECS instances at risk.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>

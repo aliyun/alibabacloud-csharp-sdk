@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrafficLogRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the pre-matched ACL rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>00000000-0000-0000-0000-000000000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclPreRuleId { get; set; }
 
         /// <summary>
+        /// <para>The pre-matching status of the ACL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>normal</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclPreState { get; set; }
 
         /// <summary>
+        /// <para>The status of deep packet inspection.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AppDpiState { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AppId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetRegion { get; set; }
 
         /// <summary>
+        /// <para>The attack type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AttackType { get; set; }
 
         /// <summary>
+        /// <para>The page number of the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The direction.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>out</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
+        /// <para>The domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DomainName { get; set; }
 
         /// <summary>
+        /// <para>The URL in the flow log.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DomainUrl { get; set; }
 
         /// <summary>
+        /// <para>The destination IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>182.92.206.XXX</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstIP { get; set; }
 
         /// <summary>
+        /// <para>The destination port.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9876</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstPort { get; set; }
 
         /// <summary>
+        /// <para>The destination VPC ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-wz95m1aq9b0h****vk1yb</para>
         /// </summary>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstVpcId { get; set; }
 
         /// <summary>
+        /// <para>The region of the destination VPC asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
         /// </summary>
@@ -122,6 +150,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstVpcRegionNo { get; set; }
 
         /// <summary>
+        /// <para>The end time. This value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,6 +161,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The firewall type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>VpcFirewall</para>
         /// </summary>
@@ -140,6 +171,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
+        /// <para>The flow log type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>All</para>
         /// </summary>
@@ -148,6 +181,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FlowType { get; set; }
 
         /// <summary>
+        /// <para>The protocol type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>icmp</para>
         /// </summary>
@@ -156,6 +191,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
+        /// <para>The IP version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -163,11 +200,25 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string IpVersion { get; set; }
 
+        /// <summary>
+        /// <para>The Internet Service Provider (ISP).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>telecom</para>
+        /// </summary>
         [NameInMap("Isp")]
         [Validation(Required=false)]
         public string Isp { get; set; }
 
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -175,11 +226,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The region of the source or destination IP address.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Hangzhou</para>
+        /// </summary>
         [NameInMap("Location")]
         [Validation(Required=false)]
         public string Location { get; set; }
 
         /// <summary>
+        /// <para>The UID of the member account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>128599825273****</para>
         /// </summary>
@@ -188,6 +247,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the NAT firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-7a9c8901ed394****</para>
         /// </summary>
@@ -196,6 +257,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatFirewallId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the NAT Gateway.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ngw-2zew6yn017hhzbm****</para>
         /// </summary>
@@ -204,6 +267,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
+        /// <para>The page number to query. The maximum value is 20.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -212,6 +277,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The rule ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8b115ae3-da64-4b80-81c1-1cd2dd42****</para>
         /// </summary>
@@ -220,6 +287,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleId { get; set; }
 
         /// <summary>
+        /// <para>The action of the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -228,6 +297,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleResult { get; set; }
 
         /// <summary>
+        /// <para>The source of the rule.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -236,6 +307,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleSource { get; set; }
 
         /// <summary>
+        /// <para>The module that takes effect in the end.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("RuleSourceFinal")]
+        [Validation(Required=false)]
+        public string RuleSourceFinal { get; set; }
+
+        /// <summary>
+        /// <para>The traceability code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -246,6 +328,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceCode { get; set; }
 
         /// <summary>
+        /// <para>The source IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>139.217.234.XXX</para>
         /// </summary>
@@ -254,6 +338,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
+        /// <para>The source IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.68.60.XXX</para>
         /// </summary>
@@ -262,6 +348,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcIP { get; set; }
 
         /// <summary>
+        /// <para>The source port.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8082</para>
         /// </summary>
@@ -270,6 +358,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcPort { get; set; }
 
         /// <summary>
+        /// <para>The private source IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.100.134.XX</para>
         /// </summary>
@@ -278,6 +368,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcPrivateIP { get; set; }
 
         /// <summary>
+        /// <para>The source VPC ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-wz9309pkwe06lv****tk4</para>
         /// </summary>
@@ -286,6 +378,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcVpcId { get; set; }
 
         /// <summary>
+        /// <para>The region of the source VPC asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -294,6 +388,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcVpcRegionNo { get; set; }
 
         /// <summary>
+        /// <para>The start time. This value is a UNIX timestamp. Unit: seconds. You can query data within the last 7 days. The time range for a single query cannot exceed one day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -304,6 +399,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the TLS inspection scope.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tis-98fd64c5****</para>
         /// </summary>
@@ -312,6 +409,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TlsScopeId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the VPC border firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vfw-a42bbb7b887148c9****</para>
         /// </summary>
@@ -320,6 +419,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VpcFirewallId { get; set; }
 
         /// <summary>
+        /// <para>The vulnerability level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

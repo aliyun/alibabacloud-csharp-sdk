@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class UpdateAclCheckDetailStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The new status of the ACL policy. Valid values:</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The ID of the ACL check task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the ACL policy whose status you want to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

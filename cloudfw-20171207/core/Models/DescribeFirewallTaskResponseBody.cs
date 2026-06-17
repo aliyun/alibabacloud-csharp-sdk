@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeFirewallTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the task exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsFound { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7D5483BF-2262-586D-8706-BDDB8B42****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The timestamp when the task was completed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>17151381075</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskFinishTimestamp { get; set; }
 
         /// <summary>
+        /// <para>The ID of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>189997648</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TaskId { get; set; }
 
         /// <summary>
+        /// <para>The name of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>egressgw</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskName { get; set; }
 
         /// <summary>
+        /// <para>The timestamp when the task started.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>17151361285</para>
         /// </summary>
@@ -58,6 +70,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TaskStartTimestamp { get; set; }
 
         /// <summary>
+        /// <para>The status of the task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>init</b></para>
+        /// </description></item>
+        /// <item><description><para><b>running</b></para>
+        /// </description></item>
+        /// <item><description><para><b>finished</b></para>
+        /// </description></item>
+        /// <item><description><para><b>rollback</b></para>
+        /// </description></item>
+        /// <item><description><para><b>rollbackDone</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>init</para>
         /// </summary>
@@ -65,11 +91,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string TaskStatus { get; set; }
 
+        /// <summary>
+        /// <para>The steps of the task.</para>
+        /// </summary>
         [NameInMap("TaskSteps")]
         [Validation(Required=false)]
         public List<DescribeFirewallTaskResponseBodyTaskSteps> TaskSteps { get; set; }
         public class DescribeFirewallTaskResponseBodyTaskSteps : TeaModel {
             /// <summary>
+            /// <para>The information about the task step.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>abcd</para>
             /// </summary>
@@ -78,6 +109,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepInfo { get; set; }
 
             /// <summary>
+            /// <para>Creating the Cloud Firewall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Create Firewall</para>
             /// </summary>
@@ -86,6 +119,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepName { get; set; }
 
             /// <summary>
+            /// <para>The progress of the task step.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>80</para>
             /// </summary>
@@ -94,6 +129,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StepProgress { get; set; }
 
             /// <summary>
+            /// <para>The status of the task step. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>init</b></para>
+            /// </description></item>
+            /// <item><description><para><b>running</b></para>
+            /// </description></item>
+            /// <item><description><para><b>finished</b></para>
+            /// </description></item>
+            /// <item><description><para><b>failed</b></para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>init</para>
             /// </summary>
@@ -104,6 +151,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The waiting time in minutes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>

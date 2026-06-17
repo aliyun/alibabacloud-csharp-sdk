@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAclCheckQuotaResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The quota.</para>
+        /// </summary>
         [NameInMap("Quota")]
         [Validation(Required=false)]
         public DescribeAclCheckQuotaResponseBodyQuota Quota { get; set; }
         public class DescribeAclCheckQuotaResponseBodyQuota : TeaModel {
             /// <summary>
+            /// <para>The available quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>500</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? AvailableQuota { get; set; }
 
             /// <summary>
+            /// <para>The consumed quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1500</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ConsumedQuota { get; set; }
 
             /// <summary>
+            /// <para>The total quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2000</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
+            /// <para>The time when the quota was last updated. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1724982259</para>
             /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7D5483BF-2262-586D-8706-BDDB8B42****</para>
         /// </summary>

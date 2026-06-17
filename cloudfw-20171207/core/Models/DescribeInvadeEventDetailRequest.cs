@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInvadeEventDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the asset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the threat detection event.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventUuid { get; set; }
 
         /// <summary>
+        /// <para>The language of the content within the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The public IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>182.92.103.XXX</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the visitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>218.76.30.XXX</para>
         /// </summary>

@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyPolicyAdvancedConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The IP addresses. The versions of the IP addresses must be the same. You can specify a maximum of 100 IP addresses.</para>
+        /// <para>A list of IP addresses. The IP addresses must use the same protocol version. You can specify up to 100 IP addresses.</para>
         /// </summary>
         [NameInMap("Eips")]
         [Validation(Required=false)]
         public List<string> Eips { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the strict mode for the access control policy. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the strict mode for access control policies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enables the strict mode.</description></item>
-        /// <item><description><b>off</b>: disables the strict mode.</description></item>
+        /// <item><description><para><b>on</b>: Enables strict mode.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: Disables strict mode.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,10 +34,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InternetSwitch { get; set; }
 
         /// <summary>
-        /// <para>The natural language of the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>

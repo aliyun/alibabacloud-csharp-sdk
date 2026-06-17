@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteAckClusterConnectorRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ACK cluster connector.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

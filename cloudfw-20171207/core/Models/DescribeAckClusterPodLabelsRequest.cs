@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAckClusterPodLabelsRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ACK cluster connector. You can obtain the ID by calling the following operation:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: queries a list of ACK cluster connectors.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

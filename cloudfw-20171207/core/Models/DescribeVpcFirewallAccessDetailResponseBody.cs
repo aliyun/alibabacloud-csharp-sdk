@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAccessDetailResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data entries.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeVpcFirewallAccessDetailResponseBodyDataList> DataList { get; set; }
         public class DescribeVpcFirewallAccessDetailResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The number of received bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>17845821669.0</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
+            /// <para>The number of sent bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1123</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
+            /// <para>The IP address of the peer asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.125.1.XX</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PeerAssetIP { get; set; }
 
             /// <summary>
+            /// <para>The instance ID of the peer asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-123451</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PeerAssetInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The instance name of the peer asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PeerAssetInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the peer VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-123411</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PeerVpcId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the region where the asset is located.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
+            /// <para>The total number of sessions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>27</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
+            /// <para>The name of the peer VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-test</para>
             /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8EAC2347-E85A-5DFF-9F49-B8E1BAFB****</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9</para>
         /// </summary>

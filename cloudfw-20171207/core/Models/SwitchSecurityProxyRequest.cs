@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class SwitchSecurityProxyRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,17 +30,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>proxy-natbfd2fafbb77042308d1b</para>
+        /// <para>proxy-natbf******</para>
         /// </summary>
         [NameInMap("ProxyId")]
         [Validation(Required=false)]
         public string ProxyId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the NAT firewall. Valid values:</para>
+        /// <para>The security protection switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>open: yes</description></item>
-        /// <item><description>close: no</description></item>
+        /// <item><description><para>open: Enables security protection.</para>
+        /// </description></item>
+        /// <item><description><para>close: Disables security protection.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

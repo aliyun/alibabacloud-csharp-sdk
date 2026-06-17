@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeCtrlInstanceMemberAccountsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of Cloud Firewall member accounts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? InstanceMemberCount { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of member accounts supported by Cloud Firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1000</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxInstanceMemberNum { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9CC69FDA-69F6-585B-9262-A306F425****</para>
         /// </summary>

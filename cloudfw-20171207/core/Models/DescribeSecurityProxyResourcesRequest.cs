@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSecurityProxyResourcesRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The UID of the member account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>136481150091****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the NAT Gateway.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ngw-uf6y16l23fm8hq0****</para>
         /// </summary>

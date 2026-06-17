@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallListRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member that is managed by your Alibaba Cloud account.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>147783******</para>
@@ -34,10 +36,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The ID of the NAT Gateway.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>nat-bp123456g******</para>
+        /// <para>ngw-bp123456g******</para>
         /// </summary>
         [NameInMap("NatGatewayId")]
         [Validation(Required=false)]
@@ -54,8 +56,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// <para>Default value: <b>10</b>.**** Maximum value: <b>50</b>.</para>
+        /// <para>The number of NAT firewalls to return on each page for a paged query.</para>
+        /// <para>The default value is <b>10</b>. The maximum value is <b>50</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -75,17 +77,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ProxyId { get; set; }
 
         /// <summary>
-        /// <para>The name of the NAT firewall. The name must be 4 to 50 characters in length, and can contain letters, digits, and underscores (_). The name cannot start with an underscore.</para>
+        /// <para>The name of the NAT firewall. The name must be 4 to 50 characters in length. It can contain letters, digits, and underscores (<em>). It cannot start with an underscore (</em>).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>proxy-******</para>
+        /// <para>nat-firewall</para>
         /// </summary>
         [NameInMap("ProxyName")]
         [Validation(Required=false)]
         public string ProxyName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the virtual private cloud (VPC).</para>
+        /// <para>The region ID of the VPC.</para>
+        /// <remarks>
+        /// <para>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -95,15 +100,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The status of the NAT firewall. Valid values:</para>
+        /// <para>The status of the Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>configuring</description></item>
-        /// <item><description>deleting</description></item>
-        /// <item><description>normal</description></item>
-        /// <item><description>abnormal</description></item>
-        /// <item><description>opening</description></item>
-        /// <item><description>closing</description></item>
-        /// <item><description>closed</description></item>
+        /// <item><description><para>configuring: The firewall is being created.</para>
+        /// </description></item>
+        /// <item><description><para>deleting: The firewall is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para>normal: The firewall is working as expected.</para>
+        /// </description></item>
+        /// <item><description><para>abnormal: The firewall is not working as expected.</para>
+        /// </description></item>
+        /// <item><description><para>opening: The firewall is being enabled.</para>
+        /// </description></item>
+        /// <item><description><para>closing: The firewall is being disabled.</para>
+        /// </description></item>
+        /// <item><description><para>closed: The firewall is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,7 +126,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC.</para>
+        /// <para>The ID of the VPC instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-8vbwbo90rq0anm6t****</para>

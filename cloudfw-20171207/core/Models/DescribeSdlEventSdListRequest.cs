@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSdlEventSdListRequest : TeaModel {
         /// <summary>
+        /// <para>The number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The destination IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>47.100.102.XXX</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DstIp { get; set; }
 
         /// <summary>
+        /// <para>The end time. The value is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1761185080</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The language of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The source IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>172.16.0.XXX</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcIp { get; set; }
 
         /// <summary>
+        /// <para>The start time. The value is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1656664560</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? StartTime { get; set; }
 
         /// <summary>
+        /// <para>The unique ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aa58cdf6-6cf8-493c-912d-97619a24****</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ReleaseExpiredInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Cloud Firewall instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

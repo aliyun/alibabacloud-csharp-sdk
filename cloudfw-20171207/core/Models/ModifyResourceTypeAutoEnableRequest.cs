@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyResourceTypeAutoEnableRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable automatic protection for the resource type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;SlbEIP&quot;:true,&quot;GaEIP&quot;:false,&quot;EcsIPv6&quot;:true,&quot;NatPublicIP&quot;:true,&quot;SlbIPv6&quot;:false,&quot;BastionHostIngressIP&quot;:false,&quot;EIP&quot;:true,&quot;NatEIP&quot;:true,&quot;SlbPublicIP&quot;:true,&quot;EcsEIP&quot;:true,&quot;EniEIP&quot;:true,&quot;HAVIP&quot;:true,&quot;NlbEIP&quot;:true,&quot;NlbIPv6&quot;:false,&quot;EniEIPv6&quot;:false,&quot;EcsPublicIP&quot;:true,&quot;AlbIPv6&quot;:true,&quot;BastionHostIP&quot;:false,&quot;BastionHostEgressIP&quot;:true,&quot;GaEIPV6&quot;:false,&quot;AlbEIP&quot;:false}</para>
         /// </summary>

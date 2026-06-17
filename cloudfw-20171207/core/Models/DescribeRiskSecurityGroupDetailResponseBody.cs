@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRiskSecurityGroupDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>33C94306-2064-5A06-9645-01419967****</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The details of the risk security group.</para>
+        /// </summary>
         [NameInMap("RiskSgDetail")]
         [Validation(Required=false)]
         public List<DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetail> RiskSgDetail { get; set; }
         public class DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetail : TeaModel {
             /// <summary>
+            /// <para>The number of associated ECS instances.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -45,11 +56,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? EcsCount { get; set; }
 
+            /// <summary>
+            /// <para>The ECS information.</para>
+            /// </summary>
             [NameInMap("EcsInfo")]
             [Validation(Required=false)]
             public List<DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetailEcsInfo> EcsInfo { get; set; }
             public class DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetailEcsInfo : TeaModel {
                 /// <summary>
+                /// <para>The ID of the ECS instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>i-bp1gra23yai47d8e****</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string EcsInstanceId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the ECS instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>tyf_test</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string EcsInstanceName { get; set; }
 
                 /// <summary>
+                /// <para>The private IP address of the ECS instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>172.24.121.XXX</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string PrivateIp { get; set; }
 
                 /// <summary>
+                /// <para>The public IP address of the ECS instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>47.107.141.XXX</para>
                 /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
+            /// <para>The ID of the security group instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sg-2vc0p803vgxumn6r****</para>
             /// </summary>
@@ -92,6 +116,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test-instance-name</para>
             /// </summary>
@@ -100,6 +126,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
             /// </summary>
@@ -108,6 +136,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
+            /// <para>The risk level of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>high</para>
             /// </summary>
@@ -115,11 +145,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string RiskLevel { get; set; }
 
+            /// <summary>
+            /// <para>The information about the risk security group rule.</para>
+            /// </summary>
             [NameInMap("RuleInfo")]
             [Validation(Required=false)]
             public List<DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetailRuleInfo> RuleInfo { get; set; }
             public class DescribeRiskSecurityGroupDetailResponseBodyRiskSgDetailRuleInfo : TeaModel {
                 /// <summary>
+                /// <para>The description of the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -128,6 +163,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The risk level of the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>high</para>
                 /// </summary>
@@ -136,6 +173,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string RiskLevel { get; set; }
 
                 /// <summary>
+                /// <para>The name of the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -144,6 +183,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
+                /// <para>The status of the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>enable</para>
                 /// </summary>
@@ -152,6 +193,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string RuleStatus { get; set; }
 
                 /// <summary>
+                /// <para>The UUID of the rule.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4c1e72c9-6690-408b-9048-065f0f10****</para>
                 /// </summary>
@@ -160,6 +203,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string RuleUuid { get; set; }
 
                 /// <summary>
+                /// <para>The optimization suggestion.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -170,6 +215,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
+            /// <para>The ID of the VPC instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-8vbuzirdl3w1r7exw****</para>
             /// </summary>
@@ -180,6 +227,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallTrafficAssetListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeVpcFirewallTrafficAssetListResponseBodyDataList> DataList { get; set; }
         public class DescribeVpcFirewallTrafficAssetListResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The IP address of the asset.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>a.com</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string IP { get; set; }
 
             /// <summary>
+            /// <para>The number of intrusion prevention system (IPS) hits.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpsHitCnt { get; set; }
 
             /// <summary>
+            /// <para>The number of sessions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
+            /// <para>The total traffic in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>253023143</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalBytes { get; set; }
 
             /// <summary>
+            /// <para>The VPC where the asset resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>a.com</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>The name of the VPC where the asset resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1mos0vhefmx5ah6****</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C5BE1AA4-934A-5085-89CC-9AD1CAC3****</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>132</para>
         /// </summary>

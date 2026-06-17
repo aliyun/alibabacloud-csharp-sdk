@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallDefaultIPSConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable basic protection. Valid values:</para>
+        /// <para>Specifies whether to enable the basic policies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes.</description></item>
-        /// <item><description><b>0</b>: no.</description></item>
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>Specifies whether to enable virtual patching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes.</description></item>
-        /// <item><description><b>0</b>: no.</description></item>
+        /// <item><description><b>1</b>: yes</description></item>
+        /// <item><description><b>0</b>: no</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,8 +42,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><b>zh</b> (default): Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member that is managed by your Alibaba Cloud account.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -64,11 +64,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The level of the rule group for the IPS. Valid values:</para>
+        /// <para>The IPS rule group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: loose</description></item>
-        /// <item><description><b>2</b>: medium</description></item>
-        /// <item><description><b>3</b>: strict</description></item>
+        /// <item><description><b>1</b>: Loose</description></item>
+        /// <item><description><b>2</b>: Medium</description></item>
+        /// <item><description><b>3</b>: Strict</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The mode of the intrusion prevention system (IPS). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: block mode.</description></item>
+        /// <item><description><b>1</b>: Block Mode.</description></item>
         /// <item><description><b>0</b>: monitor mode.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -107,10 +107,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The instance ID of the VPC firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the VPC firewall protects traffic between a VPC and a network instance that is attached to a Cloud Enterprise Network (CEN) instance, the value of this parameter is the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the IDs of CEN instances.</description></item>
-        /// <item><description>If the VPC firewall protects traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter is the instance ID of the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</description></item>
+        /// <item><description>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) and a specified VPC, use the ID of the CEN instance. The network instance can be a VPC, a virtual border router (VBR), or a Cloud Connect Network (CCN) instance. You can call the <a href="https://help.aliyun.com/document_detail/345777.html">DescribeVpcFirewallCenList</a> operation to query the IDs of CEN instances.</description></item>
+        /// <item><description>If the VPC firewall protects traffic between two VPCs that are connected using an Express Connect circuit, use the instance ID of the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

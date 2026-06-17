@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDomainResolveRequest : TeaModel {
         /// <summary>
-        /// <para>The domain name whose DNS record you want to query.</para>
+        /// <para>The domain name to resolve.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The IP version of the asset that is protected by Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>4</b>: IPv4 (default)</description></item>
-        /// <item><description><b>6</b>: IPv6</description></item>
+        /// <item><description><para><b>4</b> (default): IPv4</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: IPv6</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,11 +37,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response.</para>
+        /// <para>The language of the response message.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>

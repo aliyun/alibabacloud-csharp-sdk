@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSignatureLibVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C50C2A9-4BBB-5504-8ADA-C41A79B8C946</para>
@@ -37,29 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<DescribeSignatureLibVersionResponseBodyVersion> Version { get; set; }
         public class DescribeSignatureLibVersionResponseBodyVersion : TeaModel {
             /// <summary>
-            /// <para>The type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>ips</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>Basic Rules and Virtual Patching</para>
-            /// <!-- -->
-            /// 
-            /// <para>.</para>
-            /// </description></item>
-            /// <item><description><para>intelligence</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>Threat Intelligence</para>
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The type of the signature library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ips</para>
@@ -69,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Update time.</para>
+            /// <para>The time when the signature library was updated. This value is a Unix timestamp in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1741067915</para>
@@ -79,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The version number.</para>
+            /// <para>The version number of the signature library.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IPS-2307-02</para>

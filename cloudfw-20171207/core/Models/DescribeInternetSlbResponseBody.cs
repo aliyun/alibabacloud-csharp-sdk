@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetSlbResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of data.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeInternetSlbResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetSlbResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The access control ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>acl-uf66n6l9mf3fgq8xs****</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclId { get; set; }
 
             /// <summary>
+            /// <para>The status of access control.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclStatus { get; set; }
 
             /// <summary>
+            /// <para>The access control type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>white</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AclType { get; set; }
 
             /// <summary>
+            /// <para>The health check status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>normal</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string HealthStatus { get; set; }
 
             /// <summary>
+            /// <para>The ID of the SLB instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>lb-2ze8v2x5kd9qyvp2****</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The name of the SLB instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>buyerpro1</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The protocol type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string IpProtocol { get; set; }
 
             /// <summary>
+            /// <para>The port number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1883</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Port { get; set; }
 
             /// <summary>
+            /// <para>The public IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>39.108.57.XXX</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PublicIp { get; set; }
 
             /// <summary>
+            /// <para>The region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
             /// </summary>
@@ -93,17 +116,25 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string RegionNo { get; set; }
 
+            /// <summary>
+            /// <para>The list of tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<string> Tags { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The pagination information.</para>
+        /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public DescribeInternetSlbResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeInternetSlbResponseBodyPageInfo : TeaModel {
             /// <summary>
+            /// <para>The page number of the returned page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -112,6 +143,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
+            /// <para>The number of entries returned on the current page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -120,6 +153,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? PageSize { get; set; }
 
             /// <summary>
+            /// <para>The total number of entries.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -130,6 +165,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>135BF83A-0416-5A11-96BB-FA7604D4****</para>
         /// </summary>

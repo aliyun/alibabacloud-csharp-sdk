@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsType { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number for a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time when the public IP address was exposed. The value is a UNIX timestamp. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1663640336</para>
@@ -61,10 +61,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response message.</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page for a paged query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,10 +120,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The risk level. If you leave this parameter empty, all risk levels are queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3</b>: high risk</description></item>
-        /// <item><description><b>2</b>: medium risk</description></item>
-        /// <item><description><b>1</b>: low risk</description></item>
-        /// <item><description><b>0</b>: no risk</description></item>
+        /// <item><description><para><b>3</b>: high</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: medium</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: low</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: none</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +138,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
-        /// <para>The application.</para>
+        /// <para>The name of the application to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SSH</para>
@@ -142,7 +148,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time when the public IP address was exposed. The value is a UNIX timestamp. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1681957629</para>

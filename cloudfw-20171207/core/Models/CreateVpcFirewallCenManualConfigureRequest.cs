@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateVpcFirewallCenManualConfigureRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the CEN instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CenId { get; set; }
 
         /// <summary>
+        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -28,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The UID of the member account of Cloud Firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
         /// </summary>
@@ -36,6 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
+        /// <para>The ID of the vSwitch that is used to create the elastic network interface (ENI) of the Cloud Firewall.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,13 +58,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The name of the VPC border firewall.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-firewall-test</para>
         /// </summary>
         [NameInMap("VpcFirewallName")]
         [Validation(Required=false)]
         public string VpcFirewallName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

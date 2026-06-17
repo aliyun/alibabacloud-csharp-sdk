@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number for a paged query. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The name of the VPC firewall.</para>
+        /// <para>The instance name of the VPC firewall.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>vpc-firewall-test</para>
         /// </summary>
         [NameInMap("FirewallName")]
         [Validation(Required=false)]
@@ -52,16 +52,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The status of the VPC firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>opened</b>: The VPC firewall is enabled.</description></item>
-        /// <item><description><b>closed</b>: The VPC firewall is disabled.</description></item>
-        /// <item><description><b>notconfigured</b>: The VPC firewall is not created.</description></item>
-        /// <item><description><b>configured</b>: The VPC firewall is created but is not enabled.</description></item>
-        /// <item><description><b>creating</b>: The VPC firewall is being created.</description></item>
-        /// <item><description><b>opening</b>: The VPC firewall is being enabled.</description></item>
-        /// <item><description><b>deleting</b>: The VPC firewall is being deleted.</description></item>
+        /// <item><description><para><b>opened</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>closed</b>: Disabled</para>
+        /// </description></item>
+        /// <item><description><para><b>notconfigured</b>: The VPC firewall is not configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>configured</b>: The VPC firewall is configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>creating</b>: The VPC firewall is being created.</para>
+        /// </description></item>
+        /// <item><description><para><b>opening</b>: The VPC firewall is being enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: The VPC firewall is being deleted.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, VPC firewalls in all states are queried.</para>
+        /// <para>If you do not specify this parameter, VPC firewalls in all states are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -72,10 +79,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitchStatus { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +99,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10.</para>
+        /// <para>The maximum number of entries to return on each page in a paged query. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -100,7 +109,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the transit router.</para>
+        /// <para>The region ID of the transit router instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -110,13 +119,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The routing mode of the VPC firewall. Valid values:</para>
+        /// <para>The routing mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>managed</b>: automatic mode</description></item>
-        /// <item><description><b>manual</b>: manual mode</description></item>
+        /// <item><description><para><b>managed</b>: automatic mode.</para>
+        /// </description></item>
+        /// <item><description><para><b>manual</b>: manual mode.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, VPC firewalls in all routing modes are queried.</para>
+        /// <para>If you do not specify this parameter, VPC firewalls in all routing modes are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,7 +138,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RouteMode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transit router.</para>
+        /// <para>The instance ID of the transit router.</para>
         /// 
         /// <b>Example:</b>
         /// <para>tr-uf6egtvyaedvt20xl****</para>

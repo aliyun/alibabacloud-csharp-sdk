@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsIP { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The ID of the affected instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ins_1321_asedb_****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the instance.</para>
+        /// <para>The name of the affected instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECS_test</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The number of the page to return.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>Default: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query ends at the current time.</para>
+        /// <para>The end of the time range to query. This must be a UNIX timestamp in seconds. If you omit this parameter, the query defaults to the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656837360</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the breach awareness event.</para>
+        /// <para>A unique identifier for the breach awareness event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69d189e2-ec17-4676-a2fe-02969234****</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the breach awareness event.</para>
+        /// <para>The universally unique identifier (UUID) of the breach awareness event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>fadd-dfdd-****</para>
@@ -91,10 +91,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventUuid { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the breach awareness event is ignored. Valid values:</para>
+        /// <para>Specifies whether to query for ignored breach awareness events. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The breach awareness event is ignored.</description></item>
-        /// <item><description><b>false</b>: The breach awareness event is not ignored.</description></item>
+        /// <item><description><para><b>true</b>: Ignored.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Not ignored.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -105,10 +107,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IsIgnore { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>
@@ -129,8 +133,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
-        /// <para>Default value: 6. Maximum value: 10.</para>
+        /// <para>The number of entries to return per page.</para>
+        /// <para>Default: 6. Maximum: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -140,14 +144,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The handling status of breach awareness events.</para>
+        /// <para>An array of processing statuses to filter events by. Only events with a status specified in this array are returned.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1358090477156271</para>
         /// </summary>
         [NameInMap("ProcessStatusList")]
         [Validation(Required=false)]
         public List<int?> ProcessStatusList { get; set; }
 
         /// <summary>
-        /// <para>The risk levels.</para>
+        /// <para>An array of risk levels to filter events by. Only events with a risk level specified in this array are returned.</para>
         /// </summary>
         [NameInMap("RiskLevel")]
         [Validation(Required=false)]
@@ -156,7 +163,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address that initiated the event.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -167,7 +174,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds. If you do not specify this parameter, the query starts from 30 days before the current time.</para>
+        /// <para>The start of the time range to query. This must be a UNIX timestamp in seconds. If you omit this parameter, the query defaults to the last 30 days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656750960</para>

@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The status of the task. Valid values:</para>
-        /// <para>finish: The task finished. You can query the task to obtain the download link of the file.</para>
-        /// <para>start: The task start.</para>
-        /// <para>error: An error occurred.</para>
-        /// <para>expire: The task file is invalid and cannot be downloaded.</para>
+        /// <para>finish: The task is complete. You can query the task to get the file download link.</para>
+        /// <para>start: The task has started.</para>
+        /// <para>error: The task failed.</para>
+        /// <para>expire: The task expired. The task file is invalid and cannot be downloaded.</para>
         /// 
         /// <b>Example:</b>
         /// <para>start</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The name of the file download task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Internet Boundary Firewall Assets - IPv4</para>
+        /// <para>test-IPv4</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

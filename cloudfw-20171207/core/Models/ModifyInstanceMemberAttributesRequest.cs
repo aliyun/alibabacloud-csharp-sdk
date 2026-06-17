@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyInstanceMemberAttributesRequest : TeaModel {
         /// <summary>
-        /// <para>The members that to be modified.</para>
+        /// <para>The member accounts in Cloud Firewall.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Members")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<ModifyInstanceMemberAttributesRequestMembers> Members { get; set; }
         public class ModifyInstanceMemberAttributesRequestMembers : TeaModel {
             /// <summary>
-            /// <para>The remarks of the member in Cloud Firewall.</para>
+            /// <para>The description of the member account.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberDesc { get; set; }
 
             /// <summary>
-            /// <para>The UID of the member in Cloud Firewall.</para>
+            /// <para>The UID of the member account.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

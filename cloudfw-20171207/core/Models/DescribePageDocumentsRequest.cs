@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePageDocumentsRequest : TeaModel {
         /// <summary>
+        /// <para>The language.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The page name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageName { get; set; }
 
         /// <summary>
+        /// <para>The tracing code for the source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceCode { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the visitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>223.167.221.XXX</para>
         /// </summary>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
+        /// <para>The name of the protected object in the access control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

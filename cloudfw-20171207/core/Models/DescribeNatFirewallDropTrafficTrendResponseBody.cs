@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallDropTrafficTrendResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of data for the Overview page.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeNatFirewallDropTrafficTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeNatFirewallDropTrafficTrendResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The number of blocked sessions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DropSession { get; set; }
 
             /// <summary>
+            /// <para>The data timestamp. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1659405600</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? Time { get; set; }
 
             /// <summary>
+            /// <para>The total number of requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>153188</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The peak number of dropped sessions for the specified period.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>62436</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DropSessionMax { get; set; }
 
         /// <summary>
+        /// <para>The timestamp that corresponds to the peak number of dropped sessions. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1525662720</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DropSessionMaxTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F0F82705-CFC7-5F83-86C8-A063892F****</para>
         /// </summary>

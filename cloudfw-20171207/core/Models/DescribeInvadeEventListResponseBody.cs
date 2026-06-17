@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInvadeEventListResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array that consists of breach awareness events.</para>
+        /// <para>The list of breach detection events.</para>
         /// </summary>
         [NameInMap("EventList")]
         [Validation(Required=false)]
         public List<DescribeInvadeEventListResponseBodyEventList> EventList { get; set; }
         public class DescribeInvadeEventListResponseBodyEventList : TeaModel {
             /// <summary>
-            /// <para>The ID of the affected asset.</para>
+            /// <para>The instance ID of the affected asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-ECS****</para>
@@ -39,17 +39,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The type of the affected asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>BastionHostIP</b>: the egress IP address of a bastion host</description></item>
-            /// <item><description><b>BastionHostIngressIP</b>: the ingress IP address of a bastion host</description></item>
-            /// <item><description><b>EcsEIP</b>: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</description></item>
-            /// <item><description><b>EcsPublicIP</b>: the public IP address of an ECS instance</description></item>
-            /// <item><description><b>EIP</b>: the EIP</description></item>
-            /// <item><description><b>EniEIP</b>: the EIP of an elastic network interface (ENI)</description></item>
-            /// <item><description><b>NatEIP</b>: the EIP of a NAT gateway</description></item>
-            /// <item><description><b>SlbEIP</b>: the EIP of a Server Load Balancer (SLB) instance</description></item>
-            /// <item><description><b>SlbPublicIP</b>: the public IP address of an SLB instance</description></item>
-            /// <item><description><b>NatPublicIP</b>: the public IP address of a NAT gateway</description></item>
-            /// <item><description><b>HAVIP</b>: the high-availability virtual IP address (HAVIP)</description></item>
+            /// <item><description><para><b>BastionHostIP</b>: the egress IP address of a bastion host.</para>
+            /// </description></item>
+            /// <item><description><para><b>BastionHostIngressIP</b>: the ingress IP address of a bastion host.</para>
+            /// </description></item>
+            /// <item><description><para><b>EcsEIP</b>: the EIP of an ECS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>EcsPublicIP</b>: the public IP address of an ECS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>EIP</b>: an EIP.</para>
+            /// </description></item>
+            /// <item><description><para><b>EniEIP</b>: the EIP of an ENI.</para>
+            /// </description></item>
+            /// <item><description><para><b>NatEIP</b>: the EIP of a NAT gateway.</para>
+            /// </description></item>
+            /// <item><description><para><b>SlbEIP</b>: the EIP of a CLB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>SlbPublicIP</b>: the public IP address of a CLB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>NatPublicIP</b>: the public IP address of a NAT gateway.</para>
+            /// </description></item>
+            /// <item><description><para><b>HAVIP</b>: an HAVIP.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -60,7 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AssetsType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the breach awareness event.</para>
+            /// <para>The ID of the breach detection event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69d189e2-ec17-4676-a2fe-02969234****</para>
@@ -70,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EventKey { get; set; }
 
             /// <summary>
-            /// <para>The name of the breach awareness event.</para>
+            /// <para>The name of the breach detection event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>event_test</para>
@@ -80,10 +91,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The type of the breach awareness event. Valid values:</para>
+            /// <para>The source of the breach detection event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>IPS</b>: intrusion prevention event</description></item>
-            /// <item><description><b>offline</b>: disconnection event</description></item>
+            /// <item><description><para><b>IPS</b>: an intrusion prevention system event.</para>
+            /// </description></item>
+            /// <item><description><para><b>offline</b>: an offline event.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EventSrc { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the breach awareness event.</para>
+            /// <para>The UUID of the breach detection event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fadd-dfdd-****</para>
@@ -104,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EventUuid { get; set; }
 
             /// <summary>
-            /// <para>The time when the breach awareness event first occurred. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the breach detection event first occurred. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1656750960</para>
@@ -114,10 +127,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? FirstTime { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the breach awareness event is ignored. Valid values:</para>
+            /// <para>Indicates whether the breach detection event is ignored. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: The breach awareness event is ignored.</description></item>
-            /// <item><description><b>false</b>: The breach awareness event is not ignored.</description></item>
+            /// <item><description><para><b>true</b>: The event is ignored.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The event is not ignored.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,7 +143,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public bool? IsIgnore { get; set; }
 
             /// <summary>
-            /// <para>The time when the breach awareness event last occurred. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time when the breach detection event last occurred. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1656837360</para>
@@ -138,7 +153,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? LastTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the member.</para>
+            /// <para>The UID of the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>135809047715****</para>
@@ -158,10 +173,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrivateIP { get; set; }
 
             /// <summary>
-            /// <para>The handling status of the breach awareness event. Valid values:</para>
+            /// <para>The handling status of the breach detection event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: unhandled</description></item>
-            /// <item><description><b>20</b>: handled</description></item>
+            /// <item><description><para><b>0</b>: pending</para>
+            /// </description></item>
+            /// <item><description><para><b>20</b>: handled</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,17 +201,28 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The type of the affected asset. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>BastionHostIP</b>: the egress IP address of a bastion host</description></item>
-            /// <item><description><b>BastionHostIngressIP</b>: the ingress IP address of a bastion host</description></item>
-            /// <item><description><b>EcsEIP</b>: the EIP of an ECS instance</description></item>
-            /// <item><description><b>EcsPublicIP</b>: the public IP address of an ECS instance</description></item>
-            /// <item><description><b>EIP</b>: the EIP</description></item>
-            /// <item><description><b>EniEIP</b>: the EIP of an ENI</description></item>
-            /// <item><description><b>NatEIP</b>: the EIP of a NAT gateway</description></item>
-            /// <item><description><b>SlbEIP</b>: the EIP of an SLB instance</description></item>
-            /// <item><description><b>SlbPublicIP</b>: the public IP address of an SLB instance</description></item>
-            /// <item><description><b>NatPublicIP</b>: the public IP address of a NAT gateway</description></item>
-            /// <item><description><b>HAVIP</b>: the HAVIP</description></item>
+            /// <item><description><para><b>BastionHostIP</b>: the egress IP address of a bastion host.</para>
+            /// </description></item>
+            /// <item><description><para><b>BastionHostIngressIP</b>: the ingress IP address of a bastion host.</para>
+            /// </description></item>
+            /// <item><description><para><b>EcsEIP</b>: the EIP of an ECS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>EcsPublicIP</b>: the public IP address of an ECS instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>EIP</b>: an EIP.</para>
+            /// </description></item>
+            /// <item><description><para><b>EniEIP</b>: the EIP of an ENI.</para>
+            /// </description></item>
+            /// <item><description><para><b>NatEIP</b>: the EIP of a NAT gateway.</para>
+            /// </description></item>
+            /// <item><description><para><b>SlbEIP</b>: the EIP of a CLB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>SlbPublicIP</b>: the public IP address of a CLB instance.</para>
+            /// </description></item>
+            /// <item><description><para><b>NatPublicIP</b>: the public IP address of a NAT gateway.</para>
+            /// </description></item>
+            /// <item><description><para><b>HAVIP</b>: an HAVIP.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -207,9 +235,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The risk level. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: low</description></item>
-            /// <item><description><b>2</b>: medium</description></item>
-            /// <item><description><b>3</b>: high</description></item>
+            /// <item><description><para><b>1</b>: low</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: medium</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: high</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -279,7 +310,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of breach awareness events.</para>
+            /// <para>The total number of breach detection events.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40</para>
@@ -291,7 +322,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0F82705-CFC7-5F83-86C8-A063892F****</para>

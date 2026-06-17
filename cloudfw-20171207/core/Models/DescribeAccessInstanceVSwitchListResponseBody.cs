@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceVSwitchListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>450D47F5-956E-543E-8502-2F71C8C54E72</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -41,15 +49,23 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? TotalCount { get; set; }
 
+        /// <summary>
+        /// <para>The list of zones.</para>
+        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<DescribeAccessInstanceVSwitchListResponseBodyZones> Zones { get; set; }
         public class DescribeAccessInstanceVSwitchListResponseBodyZones : TeaModel {
+            /// <summary>
+            /// <para>The list of vSwitches.</para>
+            /// </summary>
             [NameInMap("VSwitchList")]
             [Validation(Required=false)]
             public List<DescribeAccessInstanceVSwitchListResponseBodyZonesVSwitchList> VSwitchList { get; set; }
             public class DescribeAccessInstanceVSwitchListResponseBodyZonesVSwitchList : TeaModel {
                 /// <summary>
+                /// <para>The number of available IP addresses in the vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>254</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public long? AvailableIpAddressCount { get; set; }
 
                 /// <summary>
+                /// <para>The IPv4 CIDR block of the vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>192.168.0.0/16</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the vSwitch is in a VPC that is managed by Cloud Firewall.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public bool? FirewallVSwitch { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vsw-qzeaol304m***</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string VSwitchId { get; set; }
 
                 /// <summary>
+                /// <para>The name of the vSwitch.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ManagedVSW</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string VSwitchName { get; set; }
 
                 /// <summary>
+                /// <para>The ID of the VPC to which the vSwitch belongs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>vpc-uf6b5lyul0x******</para>
                 /// </summary>
@@ -100,6 +126,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>
             /// </summary>

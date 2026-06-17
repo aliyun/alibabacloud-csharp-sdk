@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The connection type of the VPC firewall. The value is fixed as <b>expressconnect</b>, which indicates Express Connect circuits.</para>
+        /// <para>The connection type of the VPC firewall. The value is fixed as <b>expressconnect</b>, which indicates Express Connect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>expressconnect</para>
@@ -32,10 +32,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The status of the VPC firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>opened</b>: The VPC firewall is enabled.</description></item>
-        /// <item><description><b>closed</b>: The VPC firewall is disabled.</description></item>
-        /// <item><description><b>notconfigured</b>: The VPC firewall is not configured.</description></item>
-        /// <item><description><b>configured</b>: The VPC firewall is configured.</description></item>
+        /// <item><description><para><b>opened</b>: The firewall is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>closed</b>: The firewall is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>notconfigured</b>: The firewall is not configured.</para>
+        /// </description></item>
+        /// <item><description><para><b>configured</b>: The firewall is configured.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,14 +50,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitchStatus { get; set; }
 
         /// <summary>
-        /// <para>The details about the local VPC.</para>
+        /// <para>The details of the local VPC.</para>
         /// </summary>
         [NameInMap("LocalVpc")]
         [Validation(Required=false)]
         public DescribeVpcFirewallDetailResponseBodyLocalVpc LocalVpc { get; set; }
         public class DescribeVpcFirewallDetailResponseBodyLocalVpc : TeaModel {
             /// <summary>
-            /// <para>The ID of the ENI for the local VPC.</para>
+            /// <para>The instance ID of the ENI in the local VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-8vbhfosfqv2rff42****</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EniId { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the elastic network interface (ENI) for the local VPC.</para>
+            /// <para>The private IP address of the elastic network interface (ENI) in the local VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The router interface ID of the local VPC.</para>
+            /// <para>The ID of the router interface in the local VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vrt-m5eb5me6c3l5sezae****</para>
@@ -93,14 +97,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RouterInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The CIDR blocks of the local VPC.</para>
+            /// <para>A list of CIDR blocks for the local VPC.</para>
             /// </summary>
             [NameInMap("VpcCidrTableList")]
             [Validation(Required=false)]
             public List<DescribeVpcFirewallDetailResponseBodyLocalVpcVpcCidrTableList> VpcCidrTableList { get; set; }
             public class DescribeVpcFirewallDetailResponseBodyLocalVpcVpcCidrTableList : TeaModel {
                 /// <summary>
-                /// <para>The route entries of the local VPC.</para>
+                /// <para>A list of routes for the local VPC.</para>
                 /// </summary>
                 [NameInMap("RouteEntryList")]
                 [Validation(Required=false)]
@@ -117,7 +121,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public string DestinationCidr { get; set; }
 
                     /// <summary>
-                    /// <para>The instance ID of the next hop for the local VPC.</para>
+                    /// <para>The ID of the next hop instance in the local VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vrt-m5eb5me6c3l5sezae****</para>
@@ -141,7 +145,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The ID of the local VPC.</para>
+            /// <para>The instance ID of the local VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-8vbwbo90rq0anm6t****</para>
@@ -151,10 +155,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The name of the local VPC.</para>
+            /// <para>The instance name of the local VPC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Vitasoy</para>
+            /// <para>vpc-test-instancel</para>
             /// </summary>
             [NameInMap("VpcName")]
             [Validation(Required=false)]
@@ -163,7 +167,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The UID of the member that is managed by your Alibaba Cloud account.</para>
+        /// <para>The UID of the Cloud Firewall member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -173,14 +177,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The details about the peer VPC.</para>
+        /// <para>The details of the peer VPC.</para>
         /// </summary>
         [NameInMap("PeerVpc")]
         [Validation(Required=false)]
         public DescribeVpcFirewallDetailResponseBodyPeerVpc PeerVpc { get; set; }
         public class DescribeVpcFirewallDetailResponseBodyPeerVpc : TeaModel {
             /// <summary>
-            /// <para>The ID of the ENI for the peer VPC.</para>
+            /// <para>The instance ID of the ENI in the peer VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eni-8vbhfosfqv2rff42****</para>
@@ -190,7 +194,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string EniId { get; set; }
 
             /// <summary>
-            /// <para>The private IP address of the ENI for the peer VPC.</para>
+            /// <para>The private IP address of the ENI in the peer VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192.168.XX.XX</para>
@@ -210,7 +214,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The router interface ID of the peer VPC.</para>
+            /// <para>The ID of the router interface in the peer VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vrt-m5eb5me6c3l5sezae****</para>
@@ -220,14 +224,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RouterInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The CIDR blocks of the peer VPC.</para>
+            /// <para>A list of CIDR blocks for the peer VPC.</para>
             /// </summary>
             [NameInMap("VpcCidrTableList")]
             [Validation(Required=false)]
             public List<DescribeVpcFirewallDetailResponseBodyPeerVpcVpcCidrTableList> VpcCidrTableList { get; set; }
             public class DescribeVpcFirewallDetailResponseBodyPeerVpcVpcCidrTableList : TeaModel {
                 /// <summary>
-                /// <para>The route entries of the peer VPC.</para>
+                /// <para>A list of routes for the peer VPC.</para>
                 /// </summary>
                 [NameInMap("RouteEntryList")]
                 [Validation(Required=false)]
@@ -244,7 +248,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public string DestinationCidr { get; set; }
 
                     /// <summary>
-                    /// <para>The instance ID of the next hop for the peer VPC.</para>
+                    /// <para>The ID of the next hop instance in the peer VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vrt-m5eb5me6c3l5sezae****</para>
@@ -268,7 +272,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The ID of the peer VPC.</para>
+            /// <para>The instance ID of the peer VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-90rq0anm6t8vbwbo****</para>
@@ -278,10 +282,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The name of the peer VPC.</para>
+            /// <para>The instance name of the peer VPC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>zcy_prod</para>
+            /// <para>test-vpc2</para>
             /// </summary>
             [NameInMap("VpcName")]
             [Validation(Required=false)]
@@ -290,7 +294,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>850A84D6-0DE4-4797-A1E8-00090125g4d2</para>
@@ -313,7 +317,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The instance name of the VPC firewall.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>tf-test</para>
+        /// <para>vpc-firewall-test</para>
         /// </summary>
         [NameInMap("VpcFirewallName")]
         [Validation(Required=false)]

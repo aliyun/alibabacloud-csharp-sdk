@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSdlEventStatisticRequest : TeaModel {
         /// <summary>
+        /// <para>The end time. The value is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1732586712</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The language of the request and response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The start time. The value is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1656750960</para>
         /// </summary>

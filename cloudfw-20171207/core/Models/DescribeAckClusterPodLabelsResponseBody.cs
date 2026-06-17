@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAckClusterPodLabelsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of ACK labels.</para>
+        /// </summary>
         [NameInMap("AckLabels")]
         [Validation(Required=false)]
         public List<DescribeAckClusterPodLabelsResponseBodyAckLabels> AckLabels { get; set; }
         public class DescribeAckClusterPodLabelsResponseBodyAckLabels : TeaModel {
             /// <summary>
+            /// <para>The tag key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>app</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The tag value.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>storage-operator</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6169C0A4-B91A-5D48-AE4D-B9432D15****</para>
         /// </summary>

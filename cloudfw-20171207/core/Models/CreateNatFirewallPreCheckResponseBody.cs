@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateNatFirewallPreCheckResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the precheck.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2122</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PreCheckId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A426611F-04FA-5205-8D04-4F6DCF09****</para>
         /// </summary>

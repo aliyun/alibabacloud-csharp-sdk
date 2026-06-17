@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateAclCheckResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4FB718F0-CC04-5A12-B17B-188CFC3F****</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of task IDs.</para>
+        /// </summary>
         [NameInMap("TaskIds")]
         [Validation(Required=false)]
         public List<string> TaskIds { get; set; }

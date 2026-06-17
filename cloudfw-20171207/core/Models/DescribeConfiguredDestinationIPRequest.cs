@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeConfiguredDestinationIPRequest : TeaModel {
         /// <summary>
+        /// <para>The page number of the returned page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The destination IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.1.1.1</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string DestinationIP { get; set; }
 
+        /// <summary>
+        /// <para>The destination ISP.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>telecom</para>
+        /// </summary>
         [NameInMap("DestinationISP")]
         [Validation(Required=false)]
         public string DestinationISP { get; set; }
 
         /// <summary>
+        /// <para>The destination region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
         /// </summary>
@@ -38,6 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DestinationRegion { get; set; }
 
         /// <summary>
+        /// <para>The traffic direction.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +61,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
+        /// <para>The group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +72,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupName { get; set; }
 
         /// <summary>
+        /// <para>The language of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -66,6 +82,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -74,6 +92,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The trace code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,6 +103,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceCode { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the visitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123.113.99.XXX</para>
         /// </summary>

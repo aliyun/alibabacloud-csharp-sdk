@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAccessDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The IP address of the local asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetIP { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The traffic direction. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>in</b>: inbound</para>
+        /// </description></item>
+        /// <item><description><para><b>out</b>: outbound</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>If you do not specify this parameter, traffic in all directions is queried.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>in</para>
         /// </summary>
@@ -34,6 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query. This value is a UNIX timestamp that is accurate to the second.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +60,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The protocol type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>tcp</b>: TCP</para>
+        /// </description></item>
+        /// <item><description><para><b>udp</b>: UDP</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>tcp</para>
         /// </summary>
@@ -52,6 +76,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IPProtocol { get; set; }
 
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -60,6 +92,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The sort order. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>asc</b>: ascending</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b> (default): descending</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>desc</para>
         /// </summary>
@@ -68,6 +108,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Order { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -76,6 +118,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The IP address of the peer asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.125.1.XX</para>
         /// </summary>
@@ -84,6 +128,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PeerAssetIP { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the peer asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i-123451</para>
         /// </summary>
@@ -92,6 +138,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PeerAssetInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The instance name of the peer asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ecs22</para>
         /// </summary>
@@ -100,6 +148,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PeerAssetInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the peer VPC.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-90rq0anm6t8vbwbo****</para>
         /// </summary>
@@ -108,6 +158,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PeerVpcId { get; set; }
 
         /// <summary>
+        /// <para>The port number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80</para>
         /// </summary>
@@ -116,6 +168,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Port { get; set; }
 
         /// <summary>
+        /// <para>The risk level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -124,6 +178,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RiskLevel { get; set; }
 
         /// <summary>
+        /// <para>The sorting criterion. Valid values are:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>InBytes</b></para>
+        /// </description></item>
+        /// <item><description><para><b>OutBytes</b></para>
+        /// </description></item>
+        /// <item><description><para><b>TotalBytes</b></para>
+        /// </description></item>
+        /// <item><description><para><b>InPackets</b></para>
+        /// </description></item>
+        /// <item><description><para><b>OutPackets</b></para>
+        /// </description></item>
+        /// <item><description><para><b>SessionCount</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>InBytes</para>
         /// </summary>
@@ -132,6 +202,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
+        /// <para>The start of the time range to query. This value is a UNIX timestamp that is accurate to the second.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -142,6 +213,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

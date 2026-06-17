@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTrafficTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The average inbound network throughput, which indicates the average number of bits that are sent inbound per second. Unit: bit/s.</para>
+        /// <para>The average inbound network throughput. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6114152</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AvgInBps { get; set; }
 
         /// <summary>
-        /// <para>The average outbound network throughput, which indicates the average number of bits that are sent outbound per second. Unit: bit/s.</para>
+        /// <para>The average outbound network throughput. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70148993</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AvgSession { get; set; }
 
         /// <summary>
-        /// <para>The total average inbound and outbound network throughput, which indicates the average number of bits that are sent inbound and outbound per second. Unit: bit/s.</para>
+        /// <para>The average total network throughput for inbound and outbound traffic. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2306</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AvgTotalBps { get; set; }
 
         /// <summary>
-        /// <para>The statistics on traffic.</para>
+        /// <para>A list of traffic statistics.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeInternetTrafficTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeInternetTrafficTrendResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The inbound network throughput, which indicates the number of bits that are sent inbound per second. Unit: bit/s.</para>
+            /// <para>The inbound network throughput. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>187</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBps { get; set; }
 
             /// <summary>
-            /// <para>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</para>
+            /// <para>The inbound traffic. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>235</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</para>
+            /// <para>The inbound packet rate. Unit: pps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NewConn { get; set; }
 
             /// <summary>
-            /// <para>The outbound network throughput, which indicates the number of bits that are sent outbound per second. Unit: bit/s.</para>
+            /// <para>The outbound network throughput. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>45</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBps { get; set; }
 
             /// <summary>
-            /// <para>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</para>
+            /// <para>The outbound traffic. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1123</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</para>
+            /// <para>The outbound packet rate. Unit: pps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -137,8 +137,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
-            /// <para>The time when traffic is generated. The value is a UNIX timestamp. Unit: seconds.</para>
-            /// <para>If processing is not complete at this point in time, -1 is returned for all other fields.</para>
+            /// <para>The time when the traffic was recorded. This value is a UNIX timestamp in seconds.</para>
+            /// <para>If data for this time point has not been processed, the values of other fields are -1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1659405600</para>
@@ -148,10 +148,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Time { get; set; }
 
             /// <summary>
-            /// <para>The total outbound and inbound network throughput, which indicates the total number of bits that are sent inbound and outbound per second. Unit: bit/s.</para>
+            /// <para>The total inbound and outbound network throughput. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>323</para>
+            /// <para>232</para>
             /// </summary>
             [NameInMap("TotalBps")]
             [Validation(Required=false)]
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The timestamp generated when the bandwidth reaches the peak value. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The UNIX timestamp when the peak bandwidth was reached. Unit: seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1672736400</para>
@@ -170,7 +170,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxBandwidthTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum volume of excess traffic allowed per day.</para>
+        /// <para>The peak daily excess traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>873</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxDayExceedBytes { get; set; }
 
         /// <summary>
-        /// <para>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</para>
+        /// <para>The peak inbound network throughput. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10275643</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxInBps { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.</para>
+        /// <para>The peak outbound network throughput. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>395188</para>
@@ -200,7 +200,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxOutBps { get; set; }
 
         /// <summary>
-        /// <para>The number of requests during the peak hour of the network throughout.</para>
+        /// <para>The peak number of requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>931641</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxSession { get; set; }
 
         /// <summary>
-        /// <para>The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.</para>
+        /// <para>The peak total network throughput for inbound and outbound traffic. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>89783147</para>
@@ -220,7 +220,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxTotalBps { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C7E837BE-0379-565E-B7B4-DE595C8D337C</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total inbound and outbound network throughput, which indicates the total number of bytes that are sent inbound and outbound. Unit: bytes.</para>
+        /// <para>The total inbound and outbound traffic. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>963227674958</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalBytes { get; set; }
 
         /// <summary>
-        /// <para>The total volume of excess traffic.</para>
+        /// <para>The total excess traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4243873</para>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalExceedBytes { get; set; }
 
         /// <summary>
-        /// <para>The inbound network throughput, which indicates the total number of bytes that are sent inbound. Unit: bytes.</para>
+        /// <para>The total inbound traffic. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>41536824243873</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalInBytes { get; set; }
 
         /// <summary>
-        /// <para>The outbound network throughput, which indicates the total number of bytes that are sent outbound. Unit: bytes.</para>
+        /// <para>The total outbound traffic. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2660894567178</para>

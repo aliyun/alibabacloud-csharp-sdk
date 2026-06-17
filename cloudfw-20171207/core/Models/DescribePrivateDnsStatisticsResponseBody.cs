@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrivateDnsStatisticsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of private DNS instances in an abnormal state.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AbnormalPrivateDnsCount { get; set; }
 
         /// <summary>
+        /// <para>The number of created private DNS instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? CreatedPrivateDnsCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of configured domain names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DomainNameTotalCount { get; set; }
 
         /// <summary>
+        /// <para>The number of configured domain names that were created within the specified time range.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? NewDomainNameTotalCount { get; set; }
 
         /// <summary>
+        /// <para>The number of private DNS instances in a normal state.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>21</para>
         /// </summary>
@@ -49,11 +59,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public long? NormalPrivateDnsCount { get; set; }
 
+        /// <summary>
+        /// <para>A list of DNS regions.</para>
+        /// </summary>
         [NameInMap("PrivateDnsRegionList")]
         [Validation(Required=false)]
         public List<DescribePrivateDnsStatisticsResponseBodyPrivateDnsRegionList> PrivateDnsRegionList { get; set; }
         public class DescribePrivateDnsStatisticsResponseBodyPrivateDnsRegionList : TeaModel {
             /// <summary>
+            /// <para>The number of configured domain names for private DNS in the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DomainNameCount { get; set; }
 
             /// <summary>
+            /// <para>The number of configured domain names that were created in the region within the specified time range.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? NewDomainNameCount { get; set; }
 
             /// <summary>
+            /// <para>The number of private DNS instances in the region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? PrivateDnsCount { get; set; }
 
             /// <summary>
+            /// <para>The region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5716ED52-1B82-5DE1-8695-EFEC453D****</para>
         /// </summary>

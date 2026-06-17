@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class SetAutoProtectNewAssetsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The firewall module.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>api_server</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Module { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F0F82705-CFC7-5F83-86C8-A063892F****</para>
         /// </summary>

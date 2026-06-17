@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceRiskLevelsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the instances.</para>
+        /// <para>The list of instance threats.</para>
         /// </summary>
         [NameInMap("InstanceRisks")]
         [Validation(Required=false)]
         public List<DescribeInstanceRiskLevelsResponseBodyInstanceRisks> InstanceRisks { get; set; }
         public class DescribeInstanceRiskLevelsResponseBodyInstanceRisks : TeaModel {
             /// <summary>
-            /// <para>The risk levels of the Elastic Compute Service (ECS) instance.</para>
+            /// <para>The list of threats for the ECS instances.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<DescribeInstanceRiskLevelsResponseBodyInstanceRisksDetails> Details { get; set; }
             public class DescribeInstanceRiskLevelsResponseBodyInstanceRisksDetails : TeaModel {
                 /// <summary>
-                /// <para>The IP addresses of servers.</para>
+                /// <para>The IP address of the server.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>203.107.XX.XX</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Ip { get; set; }
 
                 /// <summary>
-                /// <para>The risk levels. Valid values:</para>
+                /// <para>The threat level. Valid value:</para>
                 /// <list type="bullet">
-                /// <item><description><b>medium</b></description></item>
+                /// <item><description><b>medium</b>: medium</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The instance ID of your Cloud Firewall.</para>
+            /// <para>The ID of the Cloud Firewall instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vipcloudfw-cn-7mz2fj8nm0u</para>
@@ -69,9 +69,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The risk levels. Valid values:</para>
+            /// <para>The threat level. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description><b>medium</b></description></item>
+            /// <item><description><b>medium</b>: medium</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallSummaryInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The remaining quota for VPC firewalls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? AvailableVpcFirewallQuota { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs connected using Cloud Enterprise Network (CEN) and Express Connect.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CenExpressConnectVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of CEN VPCs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CenFirewallVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs on the CEN transit router.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>13</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CenTrVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of configured CEN firewalls that are disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ClosedCenFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of configured Express Connect firewalls that are disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ClosedExpressConnectFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of configured VPC firewalls that are disabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ClosedVpcFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of configured CEN firewall instances of the Basic Edition.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ConfiguredCenFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of regions where CEN firewalls are configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ConfiguredCenFirewallRegionCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs for which CEN firewalls are configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>18</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ConfiguredCenFirewallVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of configured CEN transit router firewall instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -98,6 +120,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ConfiguredCenTrFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of configured Express Connect circuits.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -106,6 +130,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ConfiguredExpressConnectFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs for which Express Connect firewalls are configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -114,6 +140,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ConfiguredExpressConnectVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of configured VPC firewalls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -122,6 +150,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ConfiguredVpcFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs for which VPC firewalls are configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -130,6 +160,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ConfiguredVpcFirewallVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of Express Connect VPCs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -138,6 +170,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ExpressConnectVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of CEN firewalls that are not configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -146,6 +180,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? NotConfiguredCenFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of CEN transit router firewall instances that are not configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -154,6 +190,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? NotConfiguredCenTrFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of Express Connect firewalls that are not configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -162,6 +200,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? NotConfiguredExpressConnectFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPC firewalls that are not configured.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>12</para>
         /// </summary>
@@ -170,6 +210,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? NotConfiguredVpcFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs that are connected using CEN and Express Connect and have the firewall enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -178,6 +220,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedCenExpressConnectVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of enabled CEN firewalls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -186,6 +230,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedCenFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs protected by CEN firewalls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -194,6 +240,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedCenFirewallVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs protected by the CEN transit router firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -202,6 +250,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedCenTrFirewallVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of enabled CEN Express Connect Routers (ECRs).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -210,6 +260,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedEcrCount { get; set; }
 
         /// <summary>
+        /// <para>The number of enabled Express Connect firewalls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>15</para>
         /// </summary>
@@ -218,6 +270,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedExpressConnectFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPCs protected by Express Connect firewalls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -226,6 +280,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedExpressConnectVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of inter-region connections protected by the CEN transit router firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -234,6 +290,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedPeerTrCount { get; set; }
 
         /// <summary>
+        /// <para>The number of Virtual Border Routers (VBRs) protected by the CEN transit router firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -242,6 +300,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedVbrCount { get; set; }
 
         /// <summary>
+        /// <para>The number of protected VPCs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>17</para>
         /// </summary>
@@ -250,6 +310,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The number of enabled VPC firewalls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9</para>
         /// </summary>
@@ -258,6 +320,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedVpcFirewallCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VPN gateways protected by the CEN transit router firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -266,6 +330,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? OpenedVpnCount { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8AABEF64-7ABF-52CB-BA6C-0598E3DB****</para>
         /// </summary>
@@ -274,6 +340,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of ECRs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -282,6 +350,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalEcrCount { get; set; }
 
         /// <summary>
+        /// <para>The number of inter-region connections on the CEN transit router.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6</para>
         /// </summary>
@@ -290,6 +360,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalPeerTrCount { get; set; }
 
         /// <summary>
+        /// <para>The number of VBRs on the CEN transit router.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -298,6 +370,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalVbrCount { get; set; }
 
         /// <summary>
+        /// <para>The number of interconnected VPCs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -306,6 +380,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalVpcCount { get; set; }
 
         /// <summary>
+        /// <para>The total quota for VPC firewalls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
@@ -314,6 +390,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalVpcFirewallQuota { get; set; }
 
         /// <summary>
+        /// <para>The number of VPN gateways on the CEN transit router.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

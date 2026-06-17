@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallControlPolicyPositionRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the access control policy.</para>
-        /// <para>If you want to modify the configurations of an access control policy, you must provide the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/159758.html">DescribeVpcFirewallControlPolicy</a> operation to query the UUID.</para>
+        /// <para>The unique ID of the access control policy.</para>
+        /// <para>To modify an access control policy, provide the unique ID of the policy. Call the <a href="https://help.aliyun.com/document_detail/159758.html">DescribeVpcFirewallControlPolicy</a> operation to obtain the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2746d9ff-5d7c-449d-a2a9-ccaa15fe****</para>
@@ -21,11 +21,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and the response.</para>
+        /// <para>The language of the request and response.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (Default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The new priority of the access control policy.</para>
         /// <remarks>
-        /// <para> For more information about the valid values of the new priority, see <a href="https://help.aliyun.com/document_detail/474145.html">DescribeVpcFirewallPolicyPriorUsed</a>.</para>
+        /// <para>For more information about the valid range of priorities, see <a href="https://help.aliyun.com/document_detail/474145.html">DescribePolicyPriorities</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The original priority of the access control policy.</para>
         /// <remarks>
-        /// <para>This parameter is not recommended. We recommend that you use the AclUuid parameter to specify the policy that you want to modify.</para>
+        /// <para>This parameter is deprecated. Use the AclUuid parameter to specify the policy to modify.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,13 +65,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string OldOrder { get; set; }
 
         /// <summary>
-        /// <para>The ID of the group to which the access control policy belongs. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</para>
+        /// <para>The ID of the policy group for the VPC firewall. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the VPC firewall is used to protect a CEN instance, the value of this parameter must be the ID of the CEN instance.</para>
+        /// <item><description><para>If the VPC firewall protects a Cloud Enterprise Network (CEN) instance, the ID of the policy group is the ID of the CEN instance.</para>
         /// <para>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em></para>
         /// </description></item>
-        /// <item><description><para>If the VPC firewall is used to protect an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</para>
+        /// <item><description><para>If the VPC firewall protects an Express Connect circuit, the ID of the policy group is the ID of the VPC firewall instance.</para>
         /// <para>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em></para>
         /// </description></item>
         /// </list>

@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the VPC firewall. Valid values:</para>
+        /// <para>The status of the VPC firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: After you create the VPC firewall, the VPC firewall is automatically enabled. This is the default value.</description></item>
-        /// <item><description><b>close</b>: After you create the VPC firewall, the VPC firewall is disabled. You can call the <a href="https://help.aliyun.com/document_detail/345780.html">ModifyVpcFirewallCenSwitchStatus</a> operation to manually enable the VPC firewall.</description></item>
+        /// <item><description><para><b>open</b> (default): The VPC firewall is enabled after it is created.</para>
+        /// </description></item>
+        /// <item><description><para><b>close</b>: The VPC firewall is disabled after it is created. Call the <a href="https://help.aliyun.com/document_detail/345780.html">ModifyVpcFirewallCenSwitchStatus</a> operation to enable the firewall.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,10 +38,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitch { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the vSwitch that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VSWITCH VPC that is automatically created for the VPC firewall for traffic redirection. The CIDR block does not conflict with your network plan. The subnet mask of the CIDR block must be less than or equal to 29 bits in length. The CIDR block of the vSwitch must be within the network segment of the VPC.</para>
-        /// <para>If you do not specify a value, the CIDR block 10.219.219.216/29 is automatically allocated.</para>
+        /// <para>The CIDR block of the vSwitch that is used by the firewall. Specify a CIDR block with a subnet mask of 29 bits or less that does not conflict with your network plan. This CIDR block is allocated to the vSwitch that is automatically created in the firewall VPC (Cloud_Firewall_VSWITCH) for traffic redirection. The vSwitch CIDR block must be a subnet of the firewall VPC CIDR block. If you do not specify this parameter, the system automatically allocates the 10.219.219.216/29 CIDR block.</para>
+        /// <para>If you leave this parameter empty, the CIDR block 10.219.219.216/29 is automatically allocated.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</para>
+        /// <para>This parameter is valid only when you create a VPC firewall for the first time in the current region of the CEN.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("FirewallVSwitchCidrBlock")]
@@ -47,10 +49,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallVSwitchCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The CIDR block of the VPC that is automatically created for the VPC firewall. You must specify a CIDR block for the Cloud_Firewall_VPC VPC that is automatically created for the VPC firewall for traffic redirection. The subnet mask of the CIDR block must be less than or equal to 28 bits in length.</para>
-        /// <para>If you do not specify a value, the CIDR block 10.0.0.0/8 is automatically allocated.</para>
+        /// <para>The CIDR block of the VPC that is used by the firewall. Specify a CIDR block with a subnet mask of 28 bits or less. This CIDR block is allocated to the VPC that is automatically created for the firewall for traffic redirection. If you do not specify this parameter, the system automatically allocates the 10.0.0.0/8 CIDR block.</para>
+        /// <para>If you leave this property empty, the CIDR block 10.0.0.0/8 is automatically allocated.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region.</para>
+        /// <para>This parameter is valid only when you create a VPC firewall for the first time in the current region of the CEN.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,10 +63,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallVpcCidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The ID of the backup availability zone to which the firewall belongs. The firewall will automatically switch to the backup availability zone to continue running only if the primary availability zone service is unavailable.
-        /// If this parameter is not filled, the backup availability zone for the firewall will be automatically assigned.</para>
+        /// <para>The ID of the secondary zone for the firewall. If the service in the primary zone becomes unavailable, the firewall automatically switches to the secondary zone. If you do not specify this parameter, the system automatically assigns a secondary zone for the firewall.</para>
+        /// <para>If you do not specify a value, a zone is automatically allocated to the VPC firewall.</para>
         /// <remarks>
-        /// <para>This parameter is only effective when creating a VPC firewall for the first time in this CEN region.</para>
+        /// <para>This parameter is valid only when you create a VPC firewall for the first time in the current region of the CEN.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,10 +77,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallVpcStandbyZoneId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone to which the vSwitch belongs. If your service is latency-sensitive, you can specify the same zone for the vSwitch of the firewall and the vSwitch of your business VPC to minimize latency.</para>
-        /// <para>If you do not specify a value, a zone is automatically assigned for the vSwitch.</para>
+        /// <para>The ID of the primary zone for the firewall. If your business is sensitive to latency, specify the same zone for the firewall and the vSwitch of your business VPC to reduce latency. If you do not specify this parameter, the system automatically assigns a zone for the firewall.</para>
+        /// <para>If you do not specify a value, a zone is automatically allocated to the VPC firewall.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when you create a VPC firewall for the first time in the current CEN instance and region. For more information about zones that are supported by each region, see <a href="https://help.aliyun.com/document_detail/36064.html">Query zones</a>.</para>
+        /// <para>This parameter is valid only when you create a VPC firewall for the first time in the current region of the CEN.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,10 +91,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallVpcZoneId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member that is managed by your Alibaba Cloud account.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NetworkInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the vSwitch that is used to associate with the elastic network interface (ENI) required by the VPC firewall.</para>
+        /// <para>The ID of the vSwitch that is used by the Cloud Firewall interface.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-qzeaol304m***</para>
@@ -134,20 +138,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The instance name of the VPC firewall.</para>
+        /// <para>The name of the VPC firewall instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test instance</para>
+        /// <para>vpc-firewall-test</para>
         /// </summary>
         [NameInMap("VpcFirewallName")]
         [Validation(Required=false)]
         public string VpcFirewallName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the VPC belongs.</para>
+        /// <para>The region ID of the VPC for which you want to create the VPC firewall.</para>
         /// <remarks>
-        /// <para>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// <para>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

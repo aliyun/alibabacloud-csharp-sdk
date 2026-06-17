@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDownloadTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. Maximum value: 50.</para>
+        /// <para>The maximum number of entries to return on each page for a paged query. The default value is 10. The maximum value is 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. For more information about task types, see the descriptions in the &quot;DescribeDownloadTaskType&quot; topic. If you do not specify this parameter, all files are queried by default.</para>
+        /// <para>The type of the task. This is an enumeration. For a list of valid values, see the API for querying file download task types. If you do not set this parameter, tasks for all file types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InternetFirewallAsset</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyIpsRulesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30FB7F84-1FC5-5A3D-BBBE-5779FC74****</para>
         /// </summary>

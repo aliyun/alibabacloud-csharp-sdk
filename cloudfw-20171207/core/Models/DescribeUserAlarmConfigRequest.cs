@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeUserAlarmConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values: zh and en. Default value: zh.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>59.82.135.XXX</para>
         /// </summary>

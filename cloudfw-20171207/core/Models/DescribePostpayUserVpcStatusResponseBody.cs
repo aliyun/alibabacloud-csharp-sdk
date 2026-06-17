@@ -20,11 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the VPC Firewall feature. Valid values:</para>
+        /// <para>The status of the VPC border firewall for Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: enabled</description></item>
-        /// <item><description><b>init</b>: being enabled</description></item>
-        /// <item><description><b>closed</b>: disabled</description></item>
+        /// <item><description><para><b>open</b>: The firewall is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>init</b>: The firewall is being enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>closed</b>: The firewall is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The number of days during which no asset is added to the VPC Firewall feature for protection. This parameter is valid only when the value of Status is open.</para>
+        /// <para>The number of days that protection was disabled. This parameter is valid only when the firewall is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

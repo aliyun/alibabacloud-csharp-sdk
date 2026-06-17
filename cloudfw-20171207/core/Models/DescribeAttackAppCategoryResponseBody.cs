@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAttackAppCategoryResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of attack application categories.</para>
+        /// </summary>
         [NameInMap("AppCategories")]
         [Validation(Required=false)]
         public List<DescribeAttackAppCategoryResponseBodyAppCategories> AppCategories { get; set; }
         public class DescribeAttackAppCategoryResponseBodyAppCategories : TeaModel {
+            /// <summary>
+            /// <para>A list of attack applications.</para>
+            /// </summary>
             [NameInMap("AttackApps")]
             [Validation(Required=false)]
             public List<string> AttackApps { get; set; }
 
             /// <summary>
+            /// <para>The name of the attack application category.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -28,6 +36,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B14757D0-4640-4B44-AC67-7F558FE****</para>
         /// </summary>

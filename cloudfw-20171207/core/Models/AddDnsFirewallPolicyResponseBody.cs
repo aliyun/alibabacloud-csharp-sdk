@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddDnsFirewallPolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the access control list.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>f88dae6f-XXX-XXX-613de9ab2be8</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>71209DFE-XXX-XXX-52B4A4E9DA3B</para>
         /// </summary>

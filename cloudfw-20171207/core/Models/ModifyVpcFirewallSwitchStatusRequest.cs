@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallSwitchStatusRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the VPC firewall. Valid values:</para>
+        /// <para>The status of the VPC firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: yes</description></item>
-        /// <item><description><b>close</b>: no</description></item>
+        /// <item><description><para><b>open</b>: enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>close</b>: disabled.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,10 +27,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallSwitch { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member that is managed by your Alibaba Cloud account.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The instance ID of the VPC firewall.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> API call to query the instance ID of the VPC firewall.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

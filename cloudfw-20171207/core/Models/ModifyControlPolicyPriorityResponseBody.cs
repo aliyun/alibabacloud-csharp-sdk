@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyControlPolicyPriorityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>586F34E8-3F16-4C08-9FFC-8FFDC64B9D0D</para>
+        /// <para>586F34E8-3F16-4C08-9FFC-8FFDC64B****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

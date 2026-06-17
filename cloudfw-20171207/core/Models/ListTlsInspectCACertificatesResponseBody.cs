@@ -9,11 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ListTlsInspectCACertificatesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of certificates.</para>
+        /// </summary>
         [NameInMap("Certificates")]
         [Validation(Required=false)]
         public List<ListTlsInspectCACertificatesResponseBodyCertificates> Certificates { get; set; }
         public class ListTlsInspectCACertificatesResponseBodyCertificates : TeaModel {
             /// <summary>
+            /// <para>The encryption algorithm of the CA certificate. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>RSA</b>: the RSA algorithm.</para>
+            /// </description></item>
+            /// <item><description><para><b>ECC</b>: the ECC algorithm.</para>
+            /// </description></item>
+            /// <item><description><para><b>SM2</b>: the SM2 algorithm.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>RSA</para>
             /// </summary>
@@ -22,6 +35,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Algorithm { get; set; }
 
             /// <summary>
+            /// <para>The alias of the certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rsa_ml_***_root</para>
             /// </summary>
@@ -30,6 +45,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AliasName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the CA certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2732BB48-2969-5716-B5D9-******CA85</para>
             /// </summary>
@@ -38,6 +55,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CaCertId { get; set; }
 
             /// <summary>
+            /// <para>The type of the CA certificate. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>ROOT</b>: a root CA certificate.</para>
+            /// </description></item>
+            /// <item><description><para><b>SUB_ROOT</b>: a subordinate CA certificate.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ROOT</para>
             /// </summary>
@@ -46,6 +71,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CaCertType { get; set; }
 
             /// <summary>
+            /// <para>The expiration timestamp.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1934***149</para>
             /// </summary>
@@ -54,6 +81,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ExpirationTime { get; set; }
 
             /// <summary>
+            /// <para>The key length of the CA certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2048</para>
             /// </summary>
@@ -62,6 +91,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? KeySize { get; set; }
 
             /// <summary>
+            /// <para>The ID of the parent CA certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>340BB48-2969-5716-B5D9-****ACA85</para>
             /// </summary>
@@ -70,6 +101,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ParentCaCertId { get; set; }
 
             /// <summary>
+            /// <para>The signature algorithm of the CA certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SHA256WITHRSA</para>
             /// </summary>
@@ -78,6 +111,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SignAlgorithm { get; set; }
 
             /// <summary>
+            /// <para>The status of the certificate. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>ISSUE</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>REVOKE</b>: revoked.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ISSUE</para>
             /// </summary>
@@ -88,6 +129,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CBF1E9B7-D6A0-4E9E-AD3E-******837D</para>
         /// </summary>
@@ -96,6 +139,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

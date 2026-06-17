@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyFirewallV2RoutePolicySwitchRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of the virtual private cloud (VPC) firewall.</para>
+        /// <para>The instance ID of the VPC boundary firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-5b202e7f0be64611****</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restore the traffic redirection configurations. Valid values:</para>
+        /// <para>Specifies whether to restore the traffic redirection configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: roll back</description></item>
-        /// <item><description>false: withdraw</description></item>
+        /// <item><description><para>true: Rolls back the route.</para>
+        /// </description></item>
+        /// <item><description><para>false: Revokes the route.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ShouldRecover { get; set; }
 
         /// <summary>
-        /// <para>The ID of the routing policy.</para>
+        /// <para>The ID of the routing policy for the firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-93684cc5caa44b2e****</para>
@@ -58,10 +62,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TrFirewallRoutePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The status of the routing policy. Valid values:</para>
+        /// <para>The status of the policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>open: enabled</description></item>
-        /// <item><description>close: disabled</description></item>
+        /// <item><description><para>open: Enables the policy.</para>
+        /// </description></item>
+        /// <item><description><para>close: Disables the policy.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

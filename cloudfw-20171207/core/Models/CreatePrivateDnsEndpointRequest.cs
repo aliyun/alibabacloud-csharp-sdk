@@ -10,13 +10,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreatePrivateDnsEndpointRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the private instance.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("AccessInstanceName")]
         [Validation(Required=false)]
         public string AccessInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The type of the Cloud Firewall. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>internet</b></para>
+        /// </description></item>
+        /// <item><description><para><b>vpc</b></para>
+        /// </description></item>
+        /// <item><description><para><b>nat</b></para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("FirewallType")]
@@ -24,6 +37,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> FirewallType { get; set; }
 
         /// <summary>
+        /// <para>The IP protocol. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>TCP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>UDP</para>
         /// </summary>
@@ -32,6 +53,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
+        /// <para>The UID of the member account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
         /// </summary>
@@ -40,6 +63,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
+        /// <para>The port number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>80</para>
         /// </summary>
@@ -48,6 +73,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? Port { get; set; }
 
         /// <summary>
+        /// <para>The primary DNS server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.1.1.1</para>
         /// </summary>
@@ -56,6 +83,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrimaryDns { get; set; }
 
         /// <summary>
+        /// <para>The ID of the primary vSwitch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-uf6b0dkyryer8******</para>
         /// </summary>
@@ -64,6 +93,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrimaryVSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The IP address of the primary vSwitch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.1.1.1</para>
         /// </summary>
@@ -72,6 +103,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrimaryVSwitchIp { get; set; }
 
         /// <summary>
+        /// <para>The type of the private DNS. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>PrivateZone</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Custom</b> (default)</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,6 +120,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrivateDnsType { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,6 +131,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
+        /// <para>The standby DNS server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.1.1.2</para>
         /// </summary>
@@ -100,6 +141,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StandbyDns { get; set; }
 
         /// <summary>
+        /// <para>The ID of the standby vSwitch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-8vb6jk75wfcwn******</para>
         /// </summary>
@@ -108,6 +151,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StandbyVSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The IP address of the standby vSwitch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.2.2.2</para>
         /// </summary>
@@ -116,6 +161,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StandbyVSwitchIp { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VPC instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

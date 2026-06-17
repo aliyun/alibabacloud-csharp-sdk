@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceRiskLevelsRequest : TeaModel {
         /// <summary>
-        /// <para>The information about the instances.</para>
+        /// <para>The list of instances.</para>
         /// </summary>
         [NameInMap("Instances")]
         [Validation(Required=false)]
         public List<DescribeInstanceRiskLevelsRequestInstances> Instances { get; set; }
         public class DescribeInstanceRiskLevelsRequestInstances : TeaModel {
             /// <summary>
-            /// <para>The instance ID of your Cloud Firewall.</para>
+            /// <para>The ID of the Cloud Firewall instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vipcloudfw-cn-7mz2fj8nm0u</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The public IP addresses of instances.</para>
+            /// <para>The public IP address of the instance.</para>
             /// </summary>
             [NameInMap("InternetIp")]
             [Validation(Required=false)]
@@ -56,10 +56,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

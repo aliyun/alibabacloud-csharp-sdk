@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRiskEventTopAttackAssetRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of attack applications.</para>
+        /// </summary>
         [NameInMap("AttackApp")]
         [Validation(Required=false)]
         public List<string> AttackApp { get; set; }
 
         /// <summary>
+        /// <para>The type of the attack application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AttackType { get; set; }
 
         /// <summary>
+        /// <para>The edition of Cloud Firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -30,6 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string BuyVersion { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The language of the content that is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -48,6 +58,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the visitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>125.33.253.XX</para>
         /// </summary>
@@ -56,6 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
+        /// <para>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeIspInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of ISPs.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeIspInfoResponseBodyDataList> DataList { get; set; }
         public class DescribeIspInfoResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The ID of the ISP.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>isp-dhyw2lxfpc****</para>
             /// </summary>
@@ -21,6 +26,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public int? IspId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the ISP.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>telecom</para>
+            /// </summary>
             [NameInMap("IspName")]
             [Validation(Required=false)]
             public string IspName { get; set; }
@@ -28,6 +39,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F0F82705-CFC7-5F83-86C8-A063892F****</para>
         /// </summary>
@@ -36,6 +49,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeUserAssetIPTrafficInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end time of the query, as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656923760</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The network throughput, which indicates the inbound traffic rate. Unit: bit/s.</para>
+        /// <para>The inbound network throughput, in bits per second (bps).</para>
         /// 
         /// <b>Example:</b>
         /// <para>4520</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? InBps { get; set; }
 
         /// <summary>
-        /// <para>The inbound network throughput, which indicates the number of packets that are sent inbound per second. Unit: packets per second (pps).</para>
+        /// <para>The inbound packet rate, in packets per second (pps).</para>
         /// 
         /// <b>Example:</b>
         /// <para>233</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? InPps { get; set; }
 
         /// <summary>
-        /// <para>The new connection creation rate.</para>
+        /// <para>The number of new connections.</para>
         /// 
         /// <b>Example:</b>
         /// <para>43</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? NewConn { get; set; }
 
         /// <summary>
-        /// <para>The network throughput, which indicates the outbound traffic rate. Unit: bit/s.</para>
+        /// <para>The outbound network throughput, in bits per second (bps).</para>
         /// 
         /// <b>Example:</b>
         /// <para>4180</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? OutBps { get; set; }
 
         /// <summary>
-        /// <para>The outbound network throughput, which indicates the number of packets that are sent outbound per second. Unit: pps.</para>
+        /// <para>The outbound packet rate, in packets per second (pps).</para>
         /// 
         /// <b>Example:</b>
         /// <para>224</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of requests.</para>
+        /// <para>The number of sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? SessionCount { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start time of the query, as a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1656837360</para>

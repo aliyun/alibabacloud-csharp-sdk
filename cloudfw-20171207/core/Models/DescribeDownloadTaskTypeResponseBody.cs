@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task types.</para>
+        /// <para>The list of task types.</para>
         /// </summary>
         [NameInMap("TaskTypeArray")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The name of the task type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Internet Boundary Firewall Assets</para>
+            /// <para>Internet Border Firewall Assets</para>
             /// </summary>
             [NameInMap("TaskName")]
             [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

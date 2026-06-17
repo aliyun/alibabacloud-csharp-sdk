@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteDnsFirewallPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the access control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
+        /// <para>The language of the request and response. Valid values: <b>zh</b> for Chinese and <b>en</b> for English.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>140.210.39.***</para>
         /// </summary>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyControlPolicyPositionRequest : TeaModel {
         /// <summary>
-        /// <para>The direction of the traffic to which the IPv4 access control policy applies. Valid values:</para>
+        /// <para>The traffic direction of the IPv4 access control policy for the Internet firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>in: inbound traffic</description></item>
-        /// <item><description>out: outbound traffic</description></item>
+        /// <item><description><para>in: inbound traffic.</para>
+        /// </description></item>
+        /// <item><description><para>out: outbound traffic.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,10 +27,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese (default)</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,9 +43,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</para>
+        /// <para>The new priority for the IPv4 access control policy of the Internet firewall. The priority is a number. A smaller number indicates a higher priority. The value 1 indicates the highest priority.</para>
         /// <remarks>
-        /// <para> The new priority cannot exceed the priority range of the IPv4 access control policy. Otherwise, an error occurs when you call this operation. Before you call this operation, we recommend that you use the <a href="https://help.aliyun.com/document_detail/138862.html">DescribePolicyPriorUsed</a> operation to query the priority range of the IPv4 access control policy in the specified direction.</para>
+        /// <para>The new priority value cannot be outside the range of existing priorities for IPv4 policies. Otherwise, the API call fails. Before you call this operation, call <a href="https://help.aliyun.com/document_detail/138862.html">DescribePolicyPriorUsed</a> to query the priority range of IPv4 policies for a specific traffic direction.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NewOrder { get; set; }
 
         /// <summary>
-        /// <para>The original priority of the IPv4 access control policy.</para>
+        /// <para>The current priority of the IPv4 access control policy that you want to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>

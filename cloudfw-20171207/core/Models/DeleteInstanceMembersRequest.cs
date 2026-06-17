@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteInstanceMembersRequest : TeaModel {
         /// <summary>
-        /// <para>The UIDs of the members.</para>
+        /// <para>The UIDs of the member accounts.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

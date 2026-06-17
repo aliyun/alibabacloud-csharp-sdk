@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAclChecksRequest : TeaModel {
         /// <summary>
+        /// <para>The type of ACL check.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclType { get; set; }
 
         /// <summary>
+        /// <para>The language.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>

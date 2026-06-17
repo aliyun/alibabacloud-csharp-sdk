@@ -10,11 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetTrafficTrendRequest : TeaModel {
         /// <summary>
-        /// <para>The direction of the internet traffic.</para>
-        /// <para>Valid values:</para>
+        /// <para>The direction of the Internet traffic. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound traffic</description></item>
-        /// <item><description><b>out</b>: outbound traffic</description></item>
+        /// <item><description><para><b>in</b>: inbound</para>
+        /// </description></item>
+        /// <item><description><para><b>out</b>: outbound</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The end of the time range to query. This value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,10 +37,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the content in the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source code.</para>
+        /// <para>The source tracking code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +66,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The IP address of the access source.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>101.80.171.196</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The private IP address of the source.</para>
+        /// <para>The source private IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.100.134.60</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcPrivateIP { get; set; }
 
         /// <summary>
-        /// <para>The public IP address of the source.</para>
+        /// <para>The source public IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.112.210.136</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcPublicIP { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start of the time range to query. This value is a UNIX timestamp in seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,10 +108,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the traffic that is captured. Valid values:</para>
+        /// <para>The type of traffic to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>max</b> (default): peak traffic</description></item>
-        /// <item><description><b>avg</b>: average traffic</description></item>
+        /// <item><description><para><b>max</b> (default): peak traffic</para>
+        /// </description></item>
+        /// <item><description><para><b>avg</b>: average traffic</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

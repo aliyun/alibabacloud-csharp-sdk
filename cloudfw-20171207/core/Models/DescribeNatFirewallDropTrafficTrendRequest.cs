@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallDropTrafficTrendRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1758334822</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? EndTime { get; set; }
 
         /// <summary>
+        /// <para>The source IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>122.190.56.XXX</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
+        /// <para>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1740968766</para>
         /// </summary>

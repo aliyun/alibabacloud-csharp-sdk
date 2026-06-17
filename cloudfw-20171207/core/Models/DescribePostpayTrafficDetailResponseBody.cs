@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of traffic statistics entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>132</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The statistics on traffic.</para>
+        /// <para>The list of traffic statistics.</para>
         /// </summary>
         [NameInMap("TrafficList")]
         [Validation(Required=false)]
         public List<DescribePostpayTrafficDetailResponseBodyTrafficList> TrafficList { get; set; }
         public class DescribePostpayTrafficDetailResponseBodyTrafficList : TeaModel {
             /// <summary>
-            /// <para>The inbound network throughput, which indicates the total number of bytes that are received Unit: bytes.</para>
+            /// <para>The inbound network throughput, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1115096939</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? InBytes { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the asset.</para>
+            /// <para>The ID of the asset instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-8vb2d7c9mtn0bo9qcraq</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The asset type. This value takes effect only for the Internet firewall.</para>
+            /// <para>The asset type. This value is valid only for the Internet border.</para>
             /// 
             /// <b>Example:</b>
             /// <para>EcsPublicIP</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string InstanceType { get; set; }
 
             /// <summary>
-            /// <para>The outbound network throughput, which indicates the total number of bytes that are sent. Unit: bytes.</para>
+            /// <para>The outbound network throughput, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000000</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? OutBytes { get; set; }
 
             /// <summary>
-            /// <para>Protection duration. Unit: hours.</para>
+            /// <para>The protection duration, in hours.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ProtectionDuration { get; set; }
 
             /// <summary>
-            /// <para>The region ID.</para>
+            /// <para>The ID of the region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The resource ID. The resource ID for the Internet firewall is the public IP address that is protected the Internet firewall, and the resource ID for a NAT firewall is the instance ID of the NAT firewall.</para>
+            /// <para>The ID of the resource. For Internet border traffic, this is the public IP address of the asset. For NAT border traffic, this is the instance ID of the firewall.</para>
             /// 
             /// <b>Example:</b>
             /// <para>39.106.146.214</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The total inbound and outbound network throughput, which indicates the total number of bytes that are received and sent. Unit: bytes.</para>
+            /// <para>The total network throughput for both inbound and outbound traffic, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1215096939</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? TotalBytes { get; set; }
 
             /// <summary>
-            /// <para>The date on which the statistics are collected.</para>
+            /// <para>The date of the traffic statistics.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20231001</para>
@@ -127,11 +127,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TrafficDay { get; set; }
 
             /// <summary>
-            /// <para>The traffic type. Valid values:</para>
+            /// <para>The type of the firewall border for which traffic is queried. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>EIP_TRAFFIC</b>: traffic for the Internet firewall</description></item>
-            /// <item><description><b>NatGateway_TRAFFIC</b>: traffic for NAT firewalls</description></item>
-            /// <item><description><b>VPC_TRAFFIC</b>: traffic for VPC firewalls</description></item>
+            /// <item><description><para><b>EIP_TRAFFIC</b>: traffic on the Internet border.</para>
+            /// </description></item>
+            /// <item><description><para><b>NatGateway_TRAFFIC</b>: traffic on the NAT border.</para>
+            /// </description></item>
+            /// <item><description><para><b>VPC_TRAFFIC</b>: traffic on the VPC border.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

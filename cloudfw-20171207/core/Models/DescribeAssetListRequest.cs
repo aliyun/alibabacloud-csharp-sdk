@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetListRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Valid values: 1 to 50.</para>
+        /// <para>The page number to return.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The IP version of the asset that is protected by Cloud Firewall. Valid values:</para>
+        /// <para>The IP version of the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>4</b>: IPv4 (default)</description></item>
-        /// <item><description><b>6</b>: IPv6</description></item>
+        /// <item><description><para><b>4</b> (default): IPv4</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: IPv6</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member that is added to Cloud Firewall.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -59,11 +63,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The time when the asset was added. Valid values:</para>
+        /// <para>Filters for assets discovered within a specific time window. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>discovered in 1 hour</b>: within one hour.</description></item>
-        /// <item><description><b>discovered in 1 day</b>: within one day.</description></item>
-        /// <item><description><b>discovered in 7 days</b>: within seven days.</description></item>
+        /// <item><description><para><b>discovered in 1 hour</b>: The asset was added within the last hour.</para>
+        /// </description></item>
+        /// <item><description><para><b>discovered in 1 day</b>: The asset was added within the last day.</para>
+        /// </description></item>
+        /// <item><description><para><b>discovered in 7 days</b>: The asset was added within the last 7 days.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +81,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NewResourceTag { get; set; }
 
         /// <summary>
-        /// <para>Whether to query external traffic information.</para>
+        /// <para>Specifies whether to query information about outbound traffic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -84,7 +91,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string OutStatistic { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 50.</para>
+        /// <para>The number of assets to return per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,9 +102,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of your Cloud Firewall.</para>
+        /// <para>The region ID of your Cloud Firewall instance.</para>
         /// <remarks>
-        /// <para>For more information about the regions, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
+        /// <para>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,19 +115,46 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset. Valid values:</para>
+        /// <para>The asset type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>BastionHostEgressIP</b>: the egress IP address of a bastion host</description></item>
-        /// <item><description><b>BastionHostIngressIP</b>: the ingress IP address of a bastion host</description></item>
-        /// <item><description><b>EcsEIP</b>: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description><b>EcsPublicIP</b>: the public IP address of an ECS instance</description></item>
-        /// <item><description><b>EIP</b>: the EIP</description></item>
-        /// <item><description><b>EniEIP</b>: the EIP of an elastic network interface (ENI)</description></item>
-        /// <item><description><b>NatEIP</b>: the EIP of a NAT gateway</description></item>
-        /// <item><description><b>SlbEIP</b>: the EIP of a Server Load Balancer (SLB) instance or a Classic Load Balancer (CLB) instance</description></item>
-        /// <item><description><b>SlbPublicIP</b>: the public IP address of an SLB instance or a CLB instance</description></item>
-        /// <item><description><b>NatPublicIP</b>: the public IP address of a NAT gateway</description></item>
-        /// <item><description><b>HAVIP</b>: the high-availability virtual IP address (HAVIP)</description></item>
+        /// <item><description><para><b>BastionHostEgressIP</b>: The egress IP address of a Bastionhost instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>BastionHostIngressIP</b>: The ingress IP address of a Bastionhost instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>EcsEIP</b>: The Elastic IP Address (EIP) of an ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>EcsPublicIP</b>: The public IP address of an ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>EIP</b>: An Elastic IP Address (EIP).</para>
+        /// </description></item>
+        /// <item><description><para><b>EniEIP</b>: The EIP of an elastic network interface (ENI).</para>
+        /// </description></item>
+        /// <item><description><para><b>NatEIP</b>: The EIP of a NAT Gateway instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>SlbEIP</b>: The EIP of a Server Load Balancer (SLB) or Classic Load Balancer (CLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>SlbPublicIP</b>: The public IP address of a Server Load Balancer (SLB) or Classic Load Balancer (CLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>NatPublicIP</b>: The public IP address of a NAT Gateway instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>HAVIP</b>: A High-availability Virtual IP (HAVIP).</para>
+        /// </description></item>
+        /// <item><description><para><b>NlbEIP</b>: The EIP of a Network Load Balancer (NLB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ApiGatewayEIP</b>: The public IP address of an API Gateway instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>AlbEIP</b>: The EIP of an Application Load Balancer (ALB) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>AiGatewayEIP</b>: The public IP address of an AI Gateway instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>GaEIP</b>: The EIP of a Global Accelerator (GA) instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>SwasEIP</b>: The public IP address of a Simple Application Server instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>EcdEIP</b>: The public IP address of a Wuying instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>BastionHostIP</b>: The IP address of a Bastionhost instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -131,7 +165,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The instance ID or IP address of the asset.</para>
+        /// <para>The IP address or instance ID of the asset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -141,7 +175,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SearchItem { get; set; }
 
         /// <summary>
-        /// <para>Data leakage detection activation status.</para>
+        /// <para>The status of the data leak detection feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>open</para>
@@ -153,12 +187,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The status of the security group policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pass</b>: delivered</description></item>
-        /// <item><description><b>block</b>: undelivered</description></item>
-        /// <item><description><b>unsupport</b>: unsupported</description></item>
+        /// <item><description><para><b>pass</b>: The security group policy is enforced.</para>
+        /// </description></item>
+        /// <item><description><para><b>block</b>: The security group policy is not enforced.</para>
+        /// </description></item>
+        /// <item><description><para><b>unsupport</b>: The asset does not support security group policies.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the assets on which security group policies in all states take effect are queried.</para>
+        /// <para>If you do not specify this parameter, assets are queried regardless of the security group policy status.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -169,15 +206,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SgStatus { get; set; }
 
         /// <summary>
-        /// <para>The status of the firewall. Valid values:</para>
+        /// <para>The protection status of the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>open</b>: The firewall is enabled.</description></item>
-        /// <item><description><b>opening</b>: The firewall is being enabled.</description></item>
-        /// <item><description><b>closed</b>: The firewall is disabled.</description></item>
-        /// <item><description><b>closing</b>: The firewall is being disabled.</description></item>
+        /// <item><description><para><b>open</b>: Protection is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>opening</b>: Protection is being enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>closed</b>: Protection is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>closing</b>: Protection is being disabled.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the assets that are configured for firewalls in all states are queried.</para>
+        /// <para>If you do not specify this parameter, assets are queried regardless of their protection status.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -198,10 +239,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The edition of Cloud Firewall. Valid values:</para>
+        /// <para>The type of the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>buy</b>: a paid edition (default)</description></item>
-        /// <item><description><b>free</b>: Free Edition</description></item>
+        /// <item><description><para><b>buy</b> (default): A user with a paid subscription.</para>
+        /// </description></item>
+        /// <item><description><para><b>free</b>: A user on the free tier.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

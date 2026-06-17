@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The ID of the VPC firewall instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-m5e7dbc4y****</para>

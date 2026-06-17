@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRiskEventTopAttackAssetResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The statistics of the assets.</para>
+        /// </summary>
         [NameInMap("Assets")]
         [Validation(Required=false)]
         public List<DescribeRiskEventTopAttackAssetResponseBodyAssets> Assets { get; set; }
         public class DescribeRiskEventTopAttackAssetResponseBodyAssets : TeaModel {
             /// <summary>
+            /// <para>The number of attacks.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AttackCnt { get; set; }
 
             /// <summary>
+            /// <para>The number of dropped attempts.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? DropCnt { get; set; }
 
             /// <summary>
+            /// <para>The IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10.3.54.XXX</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Ip { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-chengdu</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
+            /// <para>The ID of the asset instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>i-8vbdrjrxzt78****</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The name of the resource instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test_resource</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The type of the resource instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>EcsPublicIP</para>
             /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B9BF7C33-9A23-5096-8568-A3DACAF0****</para>
         /// </summary>

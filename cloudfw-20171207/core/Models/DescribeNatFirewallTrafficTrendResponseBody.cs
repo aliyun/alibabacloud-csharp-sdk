@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallTrafficTrendResponseBody : TeaModel {
         /// <summary>
-        /// <para>The statistics on traffic.</para>
+        /// <para>A list of traffic statistics.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeNatFirewallTrafficTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeNatFirewallTrafficTrendResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</para>
+            /// <para>The peak inbound network throughput. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18038632</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? MaxInBps { get; set; }
 
             /// <summary>
-            /// <para>The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.</para>
+            /// <para>The peak outbound network throughput. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>122596487</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? MaxOutBps { get; set; }
 
             /// <summary>
-            /// <para>The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.</para>
+            /// <para>The peak total network throughput for inbound and outbound traffic. Unit: bps.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66953194</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? MaxTotalBps { get; set; }
 
             /// <summary>
-            /// <para>The time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// <para>The time of the query. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1734418980</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The maximum inbound network throughput, which indicates the maximum number of bits that are sent inbound per second. Unit: bit/s.</para>
+        /// <para>The peak inbound network throughput. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18038632</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxInBps { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound network throughput, which indicates the maximum number of bits that are sent outbound per second. Unit: bit/s.</para>
+        /// <para>The peak outbound network throughput. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>122596487</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxOutBps { get; set; }
 
         /// <summary>
-        /// <para>The total maximum inbound and outbound network throughput, which indicates the maximum number of bits that are sent inbound and outbound per second. Unit: bit/s.</para>
+        /// <para>The peak total network throughput for inbound and outbound traffic. Unit: bps.</para>
         /// 
         /// <b>Example:</b>
         /// <para>66953194</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxTotalBps { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>87F23A3A-6F57-59C3-8237-A090D0613D71</para>

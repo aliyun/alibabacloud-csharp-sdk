@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyDefaultIPSConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable basic protection. Valid values:</para>
+        /// <para>The switch for basic policies. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: Enable.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Disable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? BasicRules { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable threat intelligence. Valid values:</para>
+        /// <para>The switch for threat intelligence. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: Enable.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Disable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +42,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CtiRules { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</para>
+        /// <para>The daily traffic limit for sensitive data detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -62,10 +68,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxSdl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable virtual patching. Valid values:</para>
+        /// <para>The switch for virtual patching. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: Enable.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Disable.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,11 +84,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PatchRules { get; set; }
 
         /// <summary>
-        /// <para>The level of the rule group for the IPS. Valid values:</para>
+        /// <para>The IPS rule group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: loose</description></item>
-        /// <item><description><b>2</b>: medium</description></item>
-        /// <item><description><b>3</b>: strict</description></item>
+        /// <item><description><para><b>1</b>: Loose rule group.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Medium rule group.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Strict rule group.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -93,8 +104,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The mode of the IPS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: block mode</description></item>
-        /// <item><description><b>0</b>: monitor mode</description></item>
+        /// <item><description><para><b>1</b>: Block Mode.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Monitor Mode.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

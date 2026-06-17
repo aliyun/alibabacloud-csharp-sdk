@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeDefaultIPSConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether basic protection is enabled. Valid values:</para>
+        /// <para>The status of the basic policies feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? BasicRules { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether threat intelligence is enabled. Valid values:</para>
+        /// <para>The status of the threat intelligence feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CtiRules { get; set; }
 
         /// <summary>
-        /// <para>The maximum amount of traffic that can be processed by the sensitive data leak detection feature each day.</para>
+        /// <para>The maximum daily traffic that can be scanned for sensitive data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -48,10 +52,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MaxSdl { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether virtual patching is enabled. Valid values:</para>
+        /// <para>The status of the virtual patching feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><para><b>1</b>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,7 +68,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PatchRules { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>133173B9-8010-5DF5-8B93-********</para>
@@ -72,11 +78,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The level of the rule group for the IPS. Valid values:</para>
+        /// <para>The strictness level of the intrusion prevention system (IPS) rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: loose</description></item>
-        /// <item><description><b>2</b>: medium</description></item>
-        /// <item><description><b>3</b>: strict</description></item>
+        /// <item><description><para><b>1</b>: Loose</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Medium</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Strict</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,8 +98,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The mode of the IPS. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: block mode</description></item>
-        /// <item><description><b>0</b>: monitor mode</description></item>
+        /// <item><description><para><b>1</b>: Block Mode</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Monitor Mode</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

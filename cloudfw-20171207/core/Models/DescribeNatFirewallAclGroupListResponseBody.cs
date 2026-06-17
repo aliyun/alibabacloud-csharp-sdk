@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallAclGroupListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of NAT firewalls.</para>
+        /// </summary>
         [NameInMap("NatFirewalls")]
         [Validation(Required=false)]
         public List<DescribeNatFirewallAclGroupListResponseBodyNatFirewalls> NatFirewalls { get; set; }
         public class DescribeNatFirewallAclGroupListResponseBodyNatFirewalls : TeaModel {
             /// <summary>
+            /// <para>The number of policies in the access control policy group of the NAT firewall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>32</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AclRuleCount { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the NAT firewall is the default one.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
+            /// <para>The ID of the NAT Gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ngw-2zed6z6qkd7ogc****</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
+            /// <para>The name of the NAT Gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ngw-test</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayName { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F06DE24D-6EB9-5F55-B588-7BB946DF****</para>
         /// </summary>

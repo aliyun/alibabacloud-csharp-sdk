@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeIpsPrivateAssocRequest : TeaModel {
         /// <summary>
+        /// <para>The number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -26,6 +36,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud account ID of the resource owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
         /// </summary>
@@ -34,6 +46,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? MemberUid { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -42,6 +56,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The public IP address of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>203.0.113.1</para>
         /// </summary>
@@ -50,6 +66,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIp { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ngw-c5vhmjdfp5t****</para>
         /// </summary>
@@ -58,6 +76,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ResourceId { get; set; }
 
         /// <summary>
+        /// <para>The status of the asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>close</para>
         /// </summary>

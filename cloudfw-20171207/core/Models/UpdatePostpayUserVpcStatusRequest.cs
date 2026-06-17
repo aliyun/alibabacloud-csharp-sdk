@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class UpdatePostpayUserVpcStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of Cloud Firewall.</para>
+        /// <para>The ID of the Cloud Firewall instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cfw_elasticity_public_cn-************</para>
@@ -20,11 +20,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language of the request and response.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,9 +37,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The operation type.</para>
+        /// <para>The operation to perform. Currently, only the open operation is supported.</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to open.</description></item>
+        /// <item><description>open: Enables the VPC border firewall.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddAddressBookRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ACK cluster connector. You can obtain this value from the following operation:</para>
+        /// <list type="bullet">
+        /// <item><description><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries a list of ACK cluster connectors.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ac-7c1bad6c3cc84c33baab1</para>
         /// </summary>
@@ -17,11 +22,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string AckClusterConnectorId { get; set; }
 
+        /// <summary>
+        /// <para>The list of ACK cluster pod labels.</para>
+        /// <remarks>
+        /// <para>You can specify a maximum of 10 labels.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("AckLabels")]
         [Validation(Required=false)]
         public List<AddAddressBookRequestAckLabels> AckLabels { get; set; }
         public class AddAddressBookRequestAckLabels : TeaModel {
             /// <summary>
+            /// <para>The key of the ACK cluster pod label.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>app</para>
             /// </summary>
@@ -30,6 +43,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of the ACK cluster pod label.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>storage-operator</para>
             /// </summary>
@@ -39,34 +54,39 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         }
 
+        /// <summary>
+        /// <para>The list of ACK cluster pod namespaces.</para>
+        /// <remarks>
+        /// <para>You can specify a maximum of 10 namespaces.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("AckNamespaces")]
         [Validation(Required=false)]
         public List<string> AckNamespaces { get; set; }
 
         /// <summary>
-        /// <para>The addresses that you want to add to the address book. Separate multiple addresses with commas (,).</para>
+        /// <para>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address, separate the address and its description with a space.</para>
         /// <remarks>
-        /// <para> If you set GroupType to <c>ip</c>, <c>port</c> or <c>domain</c>, you must specify AddressList.</para>
+        /// <para>This parameter is required when GroupType is set to <c>ip</c>, <c>port</c>, or <c>domain</c>.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>If you set GroupType to <c>ip</c>, you must add IP addresses to the address book. Example: 192.0.XX.XX/32,192.0.XX.XX/24.</description></item>
-        /// <item><description>If you set GroupType to <c>port</c>, you must add port numbers or port ranges to the address book. Example: 80,100/200.</description></item>
-        /// <item><description>If you set GroupType to <c>domain</c>, you must add domain names to the address book. Example: example.com,aliyundoc.com.</description></item>
+        /// <item><description><para>If you set GroupType to <c>ip</c>, enter IP addresses in the list. Example: 192.0.XX.XX/32 development segment,10.0.0.X/24,192.0.XX.XX/24 test segment.</para>
+        /// </description></item>
+        /// <item><description><para>If you set GroupType to <c>port</c>, enter ports or port ranges in the list. Example: 80 HTTP port,100/200,3306 database port.</para>
+        /// </description></item>
+        /// <item><description><para>If you set GroupType to <c>domain</c>, enter domain names in the list. Example: example.com test domain name,aliyundoc.com,www\.aliyun.com Alibaba Cloud official website.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>192.0.XX.XX/32, 192.0.XX.XX/24</para>
+        /// <para>192.0.XX.XX/32 ,192.0.XX.XX/24</para>
         /// </summary>
         [NameInMap("AddressList")]
         [Validation(Required=false)]
         public string AddressList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically add public IP addresses of ECS instances to the address book if the instances match the specified tags. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b> (default): no</description></item>
-        /// </list>
+        /// <para>Specifies whether to automatically add the public IP addresses of ECS instances that match the specified tags to the address book.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,13 +118,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The type of the address book. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>ip</b>: IP address book</description></item>
-        /// <item><description><b>domain</b>: domain address book</description></item>
-        /// <item><description><b>port</b>: port address book</description></item>
-        /// <item><description><b>tag</b>: ECS tag-based address book</description></item>
-        /// </list>
+        /// <para>The type of the address book.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,11 +129,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
-        /// </list>
+        /// <para>The language of the address book description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>
@@ -131,7 +141,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -142,7 +152,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The ECS tags that you want to match.</para>
+        /// <para>The list of ECS tags.</para>
         /// </summary>
         [NameInMap("TagList")]
         [Validation(Required=false)]
@@ -171,11 +181,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The logical relation among the ECS tags that you want to match. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>and</b> (default): Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</description></item>
-        /// <item><description><b>or</b>: The public IP addresses of ECS instances that match one of the specified tags can be added to the address book.</description></item>
-        /// </list>
+        /// <para>The logical relationship between multiple ECS tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>and</para>

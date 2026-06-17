@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddAclBackupDataRequest : TeaModel {
         /// <summary>
+        /// <para>The backup time, specified as a Unix timestamp (the number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string BackUpTime { get; set; }
 
         /// <summary>
+        /// <para>The description of the backup data.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>bj-001</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The language of the request and response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>115.194.124.XXX</para>
         /// </summary>

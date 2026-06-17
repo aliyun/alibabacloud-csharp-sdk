@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteControlPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the access control policy.</para>
-        /// <para>To delete an access control policy, you must specify the UUID of the policy. You can call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to query the UUID.</para>
+        /// <para>The unique ID of the access control policy.</para>
+        /// <para>To delete an access control policy, you must provide its ID. Call the <a href="https://help.aliyun.com/document_detail/138866.html">DescribeControlPolicy</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,11 +22,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The direction of the traffic to which the access control policy applies.</para>
+        /// <para>The traffic direction that the access control policy controls.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound.</description></item>
-        /// <item><description><b>out</b>: outbound.</description></item>
+        /// <item><description><para><b>in</b>: inbound traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>out</b>: outbound traffic.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,11 +39,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language of the request and response.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

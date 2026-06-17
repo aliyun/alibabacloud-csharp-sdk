@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddInstanceMembersRequest : TeaModel {
         /// <summary>
-        /// <para>The members.</para>
+        /// <para>The members that you want to add to Cloud Firewall.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Members")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<AddInstanceMembersRequestMembers> Members { get; set; }
         public class AddInstanceMembersRequestMembers : TeaModel {
             /// <summary>
-            /// <para>The remarks of the member. The value must be 1 to 256 characters in length.</para>
+            /// <para>The remarks of the member. The remarks must be 1 to 256 characters in length. You can add up to 20 members at a time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>renewal</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberDesc { get; set; }
 
             /// <summary>
-            /// <para>The UID of the member. You can add up to 20 members to Cloud Firewall at a time.</para>
+            /// <para>The UID of the member. You can add up to 20 members at a time.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

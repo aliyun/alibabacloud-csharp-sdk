@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceMembersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the member.</para>
+        /// <para>The information about the Cloud Firewall member accounts.</para>
         /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<DescribeInstanceMembersResponseBodyMembers> Members { get; set; }
         public class DescribeInstanceMembersResponseBodyMembers : TeaModel {
             /// <summary>
-            /// <para>The time when the member was added to Cloud Firewall. The value is a timestamp. Unit: seconds.</para>
+            /// <para>The time when the member account was added to Cloud Firewall. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1615189819</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The remarks of the member.</para>
+            /// <para>The description of the Cloud Firewall member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>renewal</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberDesc { get; set; }
 
             /// <summary>
-            /// <para>The name of the member.</para>
+            /// <para>The name of the Cloud Firewall member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloudfirewall_2</para>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The status of the member. Valid values:</para>
+            /// <para>The status of the Cloud Firewall member account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>normal</b></description></item>
-            /// <item><description><b>deleting</b></description></item>
+            /// <item><description><para><b>normal</b>: Normal</para>
+            /// </description></item>
+            /// <item><description><para><b>deleting</b>: Deleting</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -61,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberStatus { get; set; }
 
             /// <summary>
-            /// <para>The UID of the member.</para>
+            /// <para>The UID of the Cloud Firewall member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>258039427902****</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? MemberUid { get; set; }
 
             /// <summary>
-            /// <para>The time when the member was last modified. The value is a timestamp. Unit: seconds.</para>
+            /// <para>The time when the member account was last modified. This value is a UNIX timestamp. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1615189819</para>
@@ -90,7 +92,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public DescribeInstanceMembersResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeInstanceMembersResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the returned page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -100,7 +102,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -110,7 +112,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of the members.</para>
+            /// <para>The total number of Cloud Firewall member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -122,7 +124,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A531AE1A-FBA2-48B6-BAB8-84D02BD409EE</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the routing policy.</para>
+        /// <para>The ID of the routing policy for the VPC firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>policy-8ebed27e13e14ce2****</para>

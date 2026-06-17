@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAccessInstanceRegionListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of regions that support the specified type of synchronization node.</para>
+        /// </summary>
         [NameInMap("RegionNoList")]
         [Validation(Required=false)]
         public List<string> RegionNoList { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B2841452-CB8D-4F7D-B247-38E1CF7334F8</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrivateDnsStatisticsRequest : TeaModel {
         /// <summary>
+        /// <para>The end of the domain name creation time. The value is a UNIX timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1726305596</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DomainNameCreatedEndTime { get; set; }
 
         /// <summary>
+        /// <para>The start of the domain name creation time. The value is a UNIX timestamp.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1725864531</para>
         /// </summary>

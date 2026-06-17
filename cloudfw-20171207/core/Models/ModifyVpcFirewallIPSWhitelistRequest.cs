@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyVpcFirewallIPSWhitelistRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: user-defined</description></item>
-        /// <item><description><b>2</b>: address book</description></item>
+        /// <item><description><para><b>1</b>: user-defined</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: address book</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? ListType { get; set; }
 
         /// <summary>
-        /// <para>The entry in the list.</para>
+        /// <para>The value that corresponds to the list type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.130.0.0/20,10.130.17.11/32</para>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ListValue { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member that is managed by your Alibaba Cloud account.</para>
+        /// <para>The UID of the member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1415189284827022</para>
@@ -72,8 +76,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: destination</description></item>
-        /// <item><description><b>2</b>: source</description></item>
+        /// <item><description><para><b>1</b>: destination</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: source</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the VPCs.</para>
+        /// <para>The list of VPCs.</para>
         /// </summary>
         [NameInMap("VpcList")]
         [Validation(Required=false)]
         public List<DescribeVpcListLiteResponseBodyVpcList> VpcList { get; set; }
         public class DescribeVpcListLiteResponseBodyVpcList : TeaModel {
             /// <summary>
-            /// <para>The region ID of the VPC.</para>
+            /// <para>The ID of the region to which the VPC belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The ID of the VPC.</para>
+            /// <para>The instance ID of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz9dqhljd10fk0b4eh885</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The name of the VPC.</para>
+            /// <para>The instance name of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Cloud_Firewall_VPC</para>

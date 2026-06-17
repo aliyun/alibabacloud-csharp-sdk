@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutEnableFwSwitchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status information of the asset when it is not synchronized to Cloud Firewall.</para>
+        /// <para>Information about unsynchronized assets.</para>
         /// </summary>
         [NameInMap("AbnormalResourceStatusList")]
         [Validation(Required=false)]
         public List<PutEnableFwSwitchResponseBodyAbnormalResourceStatusList> AbnormalResourceStatusList { get; set; }
         public class PutEnableFwSwitchResponseBodyAbnormalResourceStatusList : TeaModel {
             /// <summary>
-            /// <para>The message displayed when the asset is not synchronized to Cloud Firewall. Valid values:</para>
+            /// <para>A message that provides details about why an asset was not synchronized. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description>cloudfirewall do not sync this ip address: This IP address is not synchronized to Cloud Firewall.</description></item>
+            /// <item><description><c>cloudfirewall do not sync this ip address</c>: Cloud Firewall does not synchronize the IP address of the asset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -40,9 +40,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Resource { get; set; }
 
             /// <summary>
-            /// <para>The status of the asset when it is not synchronized to Cloud Firewall. Valid values:</para>
+            /// <para>The synchronization status of the asset. Valid value:</para>
             /// <list type="bullet">
-            /// <item><description>ip_not_sync: The asset is not synchronized.</description></item>
+            /// <item><description><c>ip_not_sync</c>: The asset is not synchronized.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2841452-CB8D-4F7D-B247-38E1CF7334F8</para>

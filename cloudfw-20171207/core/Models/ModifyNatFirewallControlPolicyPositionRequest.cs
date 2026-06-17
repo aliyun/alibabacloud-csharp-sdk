@@ -10,20 +10,21 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyNatFirewallControlPolicyPositionRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the access control policy.</para>
+        /// <para>The unique ID of the access control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>66961eea-e659-4225-84c9-9b6da76ec401</para>
+        /// <para>66461eea-e659-4225-84c9-*****</para>
         /// </summary>
         [NameInMap("AclUuid")]
         [Validation(Required=false)]
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The direction of the traffic to which the access control policy applies.</para>
+        /// <para>The traffic direction of the access control policy.</para>
+        /// <para>Valid value:</para>
         /// <list type="bullet">
-        /// <item><description>Set the value to <b>out</b>.</description></item>
+        /// <item><description><b>out</b>: outbound traffic.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +35,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The ID of the NAT Gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,11 +62,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The new priority of the IPv4 access control policy. You must specify a numeric value for this parameter. The value 1 indicates the highest priority. A larger value indicates a lower priority.</para>
+        /// <para>The new priority for the IPv4 access control policy of the NAT firewall.
+        /// Priorities are represented by numbers. A smaller number indicates a higher priority. The value 1 indicates the highest priority.</para>
         /// <remarks>
-        /// <para>Make sure that the value of this parameter is within the priority range of existing IPv4 access control policies. Otherwise, an error occurs when you call this operation.</para>
+        /// <para>The new priority must be within the range of existing priorities for IPv4 policies of the NAT firewall. Otherwise, the call fails.</para>
         /// </remarks>
-        /// <para>Before you call this operation, we recommend that you call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of the IPv4 access control policies in the specified traffic direction.</para>
+        /// <para>Before calling this operation, call the DescribeNatFirewallPolicyPriorUsed operation to query the priority range of existing IPv4 policies for the specified traffic direction of the NAT firewall.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

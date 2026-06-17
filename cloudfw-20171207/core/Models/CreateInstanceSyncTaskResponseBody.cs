@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class CreateInstanceSyncTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The application module.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ips_server</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Module { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D19D8F70-D64B-5A95-905A-6073BF4A****</para>
         /// </summary>

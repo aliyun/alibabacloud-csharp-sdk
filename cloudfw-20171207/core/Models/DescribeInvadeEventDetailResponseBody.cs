@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInvadeEventDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>i-8vb2nmm070m****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the asset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ECS_test</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AssetsInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The description of the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventDesc { get; set; }
 
         /// <summary>
+        /// <para>The details of the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventDetail { get; set; }
 
         /// <summary>
+        /// <para>The key of the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C&amp;CActivity</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventKey { get; set; }
 
         /// <summary>
+        /// <para>The name of the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>event_test</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventName { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the threat detection event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aa6e786c-5034-457a-8e05-1c63fab****</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EventUuid { get; set; }
 
         /// <summary>
+        /// <para>The time when the event first occurred. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1735006706</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? FirstTime { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the event is ignored.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? IsIgnore { get; set; }
 
         /// <summary>
+        /// <para>The time when the event last occurred. This value is a UNIX timestamp. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1740104108</para>
         /// </summary>
@@ -89,11 +109,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? LastTime { get; set; }
 
+        /// <summary>
+        /// <para>The list of remediation operations.</para>
+        /// </summary>
         [NameInMap("OperationList")]
         [Validation(Required=false)]
         public List<DescribeInvadeEventDetailResponseBodyOperationList> OperationList { get; set; }
         public class DescribeInvadeEventDetailResponseBodyOperationList : TeaModel {
             /// <summary>
+            /// <para>The parameters for the operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Args { get; set; }
 
             /// <summary>
+            /// <para>The operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RunMode</para>
             /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The private IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10.21.186.XXX</para>
         /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PrivateIP { get; set; }
 
         /// <summary>
+        /// <para>The handling status of the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? ProcessStatus { get; set; }
 
         /// <summary>
+        /// <para>The public IP address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>106.15.185.XXX</para>
         /// </summary>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIP { get; set; }
 
         /// <summary>
+        /// <para>The reference information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -144,6 +179,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Reference { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -152,6 +189,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8022D695-4A35-50BC-8697-EA9C233A****</para>
         /// </summary>
@@ -160,6 +199,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The risk level of the event.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -167,11 +208,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public int? RiskLevel { get; set; }
 
+        /// <summary>
+        /// <para>The list of unhandled operations.</para>
+        /// </summary>
         [NameInMap("UnhandleOperationList")]
         [Validation(Required=false)]
         public List<DescribeInvadeEventDetailResponseBodyUnhandleOperationList> UnhandleOperationList { get; set; }
         public class DescribeInvadeEventDetailResponseBodyUnhandleOperationList : TeaModel {
             /// <summary>
+            /// <para>The parameters for the operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -180,6 +226,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Args { get; set; }
 
             /// <summary>
+            /// <para>The operation.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RunMode</para>
             /// </summary>

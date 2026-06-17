@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class UpdateSecurityProxyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The application module.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ips_server</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Module { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9E2CCAB4-E789-5BC9-88DC-5CE0358E****</para>
         /// </summary>

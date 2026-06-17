@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b></description></item>
-        /// <item><description><b>TransitRouter</b></description></item>
+        /// <item><description><para><b>VPC</b>: VPC</para>
+        /// </description></item>
+        /// <item><description><para><b>TransitRouter</b>: Transit Router</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Environment { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member in Cloud Firewall.</para>
+        /// <para>The UID of the Cloud Firewall member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1415189284827022</para>

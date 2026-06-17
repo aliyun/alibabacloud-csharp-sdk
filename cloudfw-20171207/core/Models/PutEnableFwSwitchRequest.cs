@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class PutEnableFwSwitchRequest : TeaModel {
         /// <summary>
+        /// <para>The IP version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -18,9 +20,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses.</para>
+        /// <para>The list of IP addresses.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</para>
+        /// <para>You must specify at least one of the <c>IpaddrList</c>, <c>RegionList</c>, and <c>ResourceTypeList</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,10 +33,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> IpaddrList { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response.</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,6 +49,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The UID of the member.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234</para>
         /// </summary>
@@ -53,9 +59,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The regions.</para>
+        /// <para>The list of regions.</para>
         /// <remarks>
-        /// <para>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</para>
+        /// <para>You must specify at least one of the <c>IpaddrList</c>, <c>RegionList</c>, and <c>ResourceTypeList</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -66,23 +72,50 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> RegionList { get; set; }
 
         /// <summary>
-        /// <para>The types of the assets.</para>
+        /// <para>The list of asset types.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BastionHostIP: the egress IP address of a bastion host</description></item>
-        /// <item><description>BastionHostIngressIP: the ingress IP address of a bastion host</description></item>
-        /// <item><description>EcsEIP: the elastic IP address (EIP) of an Elastic Compute Service (ECS) instance</description></item>
-        /// <item><description>EcsPublicIP: the public IP address of an ECS instance</description></item>
-        /// <item><description>EIP: the EIP</description></item>
-        /// <item><description>EniEIP: the EIP of an elastic network interface (ENI)</description></item>
-        /// <item><description>NatEIP: the EIP of a NAT gateway</description></item>
-        /// <item><description>SlbEIP: the EIP of a Server Load Balancer (SLB) instance</description></item>
-        /// <item><description>SlbPublicIP: the public IP address of an SLB instance</description></item>
-        /// <item><description>NatPublicIP: the public IP address of a NAT gateway</description></item>
-        /// <item><description>HAVIP: the high-availability virtual IP address (HAVIP)</description></item>
+        /// <item><description><para><b>BastionHostEgressIP</b>: the egress IP address of a bastion host.</para>
+        /// </description></item>
+        /// <item><description><para><b>BastionHostIngressIP</b>: the ingress IP address of a bastion host.</para>
+        /// </description></item>
+        /// <item><description><para><b>EcsEIP</b>: the EIP of an ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>EcsPublicIP</b>: the public IP address of an ECS instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>EIP</b>: an EIP.</para>
+        /// </description></item>
+        /// <item><description><para><b>EniEIP</b>: the EIP of an ENI.</para>
+        /// </description></item>
+        /// <item><description><para><b>NatEIP</b>: the EIP of a NAT gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>SlbEIP</b>: the EIP of an SLB instance or a CLB instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>SlbPublicIP</b>: the public IP address of an SLB instance or a CLB instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>NatPublicIP</b>: the public IP address of a NAT gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>HAVIP</b>: an HAVIP.</para>
+        /// </description></item>
+        /// <item><description><para><b>NlbEIP</b>: the EIP of an NLB instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>ApiGatewayEIP</b>: the public IP address of an API gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>AlbEIP</b>: the EIP of an ALB instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>AiGatewayEIP</b>: the public IP address of an AI gateway.</para>
+        /// </description></item>
+        /// <item><description><para><b>GaEIP</b>: the EIP of a GA instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>SwasEIP</b>: the public IP address of a Simple Application Server instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>EcdEIP</b>: the public IP address of an Elastic Desktop Service instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>BastionHostIP</b>: the IP address of a bastion host.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You must specify at least one of the IpaddrList, RegionList, and ResourceTypeList parameters.</para>
+        /// <para>You must specify at least one of the <c>IpaddrList</c>, <c>RegionList</c>, and <c>ResourceTypeList</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The source IP address of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>192.0.X.X</para>
+        /// <para>192.0.XX.XX</para>
         /// </summary>
         [NameInMap("SourceIp")]
         [Validation(Required=false)]

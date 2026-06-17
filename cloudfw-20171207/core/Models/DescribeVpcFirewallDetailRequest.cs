@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The natural language of the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the local VPC.</para>
+        /// <para>The instance ID of the local VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-8vbwbo90rq0anm6t****</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string LocalVpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the peer VPC.</para>
+        /// <para>The instance ID of the peer VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-90rq0anm6t8vbwbo****</para>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The instance ID of the VPC firewall.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance IDs of VPC firewalls.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the VPC firewall.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

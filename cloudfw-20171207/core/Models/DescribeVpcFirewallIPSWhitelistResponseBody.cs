@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B5EE02F9-4F21-56CA-AA49-F9F8D69483C1</para>
+        /// <para>B5EE02F9<b><b>AA49</b></b>F9F8D69483C1</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The details of the IPS whitelist of the VPC firewall.</para>
+        /// <para>The details of the IPS whitelist for the VPC firewall.</para>
         /// </summary>
         [NameInMap("Whitelists")]
         [Validation(Required=false)]
@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The type of the list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: user-defined</description></item>
-            /// <item><description><b>2</b>: address book</description></item>
+            /// <item><description><para><b>1</b>: custom</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: address book</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ListType { get; set; }
 
             /// <summary>
-            /// <para>The entries in the list.</para>
+            /// <para>The value of the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.10.200.4/32,10.10.200.25/32</para>
@@ -54,14 +56,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The instance ID of the VPC firewall.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>vfw-57431e9abe424852a578</para>
+            /// <para>cen-l6t5yj5fi762******</para>
             /// </summary>
             [NameInMap("VpcFirewallId")]
             [Validation(Required=false)]
             public string VpcFirewallId { get; set; }
 
             /// <summary>
-            /// <para>An array of entries in the list.</para>
+            /// <para>The content of the list.</para>
             /// </summary>
             [NameInMap("WhiteListValue")]
             [Validation(Required=false)]
@@ -70,8 +72,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <summary>
             /// <para>The type of the whitelist. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: destination</description></item>
-            /// <item><description><b>2</b>: source</description></item>
+            /// <item><description><para><b>1</b>: destination</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: source</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

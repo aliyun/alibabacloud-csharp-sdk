@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInternetSlbRequest : TeaModel {
         /// <summary>
+        /// <para>The number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the SLB instance. Fuzzy search is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lb-2ze8v2x5kd9qyvp2****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the SLB instance. Fuzzy search is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The protocol type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tcp</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpProtocol { get; set; }
 
         /// <summary>
+        /// <para>The language of the response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The port.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>63389</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Port { get; set; }
 
         /// <summary>
+        /// <para>The public IP address. Fuzzy search is supported. If you do not specify this parameter, all public IP addresses are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>47.108.60.XXX</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PublicIp { get; set; }
 
         /// <summary>
+        /// <para>The region. If you do not specify this parameter, all regions are queried.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the visitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>112.64.233.XXX</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
+        /// <para>The tag. If you do not specify this parameter, all tags are searched.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

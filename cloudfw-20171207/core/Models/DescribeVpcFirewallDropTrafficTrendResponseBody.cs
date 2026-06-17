@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallDropTrafficTrendResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of returned data.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeVpcFirewallDropTrafficTrendResponseBodyDataList> DataList { get; set; }
         public class DescribeVpcFirewallDropTrafficTrendResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The number of sessions blocked by the access control list (ACL).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>12</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? AclDrop { get; set; }
 
             /// <summary>
+            /// <para>The data timestamp. The value is a string in the YYYY-MM-DD HH:mm:ss format.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2018-08-25 12:00:00</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DataTime { get; set; }
 
             /// <summary>
+            /// <para>The number of blocked sessions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? DropSession { get; set; }
 
             /// <summary>
+            /// <para>The number of sessions blocked by the intrusion prevention system (IPS).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpsDrop { get; set; }
 
             /// <summary>
+            /// <para>The data timestamp. This value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1659405600</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? Time { get; set; }
 
             /// <summary>
+            /// <para>The total number of sessions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>153188</para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The maximum number of blocked connections.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? DropSessionMax { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C87C1797-02E6-5EEB-A943-4416207D****</para>
         /// </summary>

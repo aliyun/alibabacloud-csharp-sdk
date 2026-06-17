@@ -9,11 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSensitiveSwitchRequest : TeaModel {
+        /// <summary>
+        /// <para>The name of the category.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Identity card</para>
+        /// </summary>
         [NameInMap("CategoryName")]
         [Validation(Required=false)]
         public string CategoryName { get; set; }
 
         /// <summary>
+        /// <para>The number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -22,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
+        /// <para>The language of the request and response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The number of the page to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The parent class.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>universal_industry_template</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ParentCategory { get; set; }
 
         /// <summary>
+        /// <para>The type of the sensitive credential.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>id_card</para>
         /// </summary>
@@ -54,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SensitiveCategory { get; set; }
 
         /// <summary>
+        /// <para>The sensitivity level.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>S3</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SensitiveLevel { get; set; }
 
         /// <summary>
+        /// <para>The status of the sensitive data detection switch.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

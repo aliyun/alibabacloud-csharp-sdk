@@ -10,33 +10,42 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAddressBookResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the address book.</para>
+        /// <para>A list of address books.</para>
         /// </summary>
         [NameInMap("Acls")]
         [Validation(Required=false)]
         public List<DescribeAddressBookResponseBodyAcls> Acls { get; set; }
         public class DescribeAddressBookResponseBodyAcls : TeaModel {
             /// <summary>
+            /// <para>The ID of the ACK cluster connector.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>ac-7c1bad6c3cc84c33baab1</para>
+            /// <para>ac-7c1bad6c3cc84c33baab</para>
             /// </summary>
             [NameInMap("AckClusterConnectorId")]
             [Validation(Required=false)]
             public string AckClusterConnectorId { get; set; }
 
             /// <summary>
+            /// <para>The name of the ACK cluster connector.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>ACK集群连接器</para>
+            /// <para>ack-cluster-connector-name</para>
             /// </summary>
             [NameInMap("AckClusterConnectorName")]
             [Validation(Required=false)]
             public string AckClusterConnectorName { get; set; }
 
+            /// <summary>
+            /// <para>A list of ACK pod labels.</para>
+            /// </summary>
             [NameInMap("AckLabels")]
             [Validation(Required=false)]
             public List<DescribeAddressBookResponseBodyAclsAckLabels> AckLabels { get; set; }
             public class DescribeAddressBookResponseBodyAclsAckLabels : TeaModel {
                 /// <summary>
+                /// <para>The key of the ACK pod label.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>app</para>
                 /// </summary>
@@ -45,6 +54,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The value of the ACK pod label.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>storage-operator</para>
                 /// </summary>
@@ -54,12 +65,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             }
 
+            /// <summary>
+            /// <para>A list of ACK namespaces.</para>
+            /// </summary>
             [NameInMap("AckNamespaces")]
             [Validation(Required=false)]
             public List<string> AckNamespaces { get; set; }
 
             /// <summary>
-            /// <para>The addresses in the address book.</para>
+            /// <para>A list of CIDR blocks in the address book.</para>
             /// </summary>
             [NameInMap("AddressList")]
             [Validation(Required=false)]
@@ -76,14 +90,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AddressListCount { get; set; }
 
             /// <summary>
-            /// <para>A list of addresses in the address book, each with a single address description.</para>
+            /// <para>A list of addresses, each with a description.</para>
             /// </summary>
             [NameInMap("Addresses")]
             [Validation(Required=false)]
             public List<DescribeAddressBookResponseBodyAclsAddresses> Addresses { get; set; }
             public class DescribeAddressBookResponseBodyAclsAddresses : TeaModel {
                 /// <summary>
-                /// <para>Address information in the address book.</para>
+                /// <para>The IP address or CIDR block.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>192.168.0.1/32</para>
@@ -93,10 +107,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>Single address description.</para>
+                /// <para>The note for the address.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>description</para>
+                /// <para>Single Address Description</para>
                 /// </summary>
                 [NameInMap("Note")]
                 [Validation(Required=false)]
@@ -105,11 +119,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the public IP addresses of ECS instances are automatically added to the address book if the instances match the specified tags. The setting takes effect on both newly purchased ECS instances whose tag settings are complete and ECS instances whose tag settings are modified. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>1</b>: yes</description></item>
-            /// <item><description><b>0</b>: no</description></item>
-            /// </list>
+            /// <para>Indicates whether to automatically add the public IPs of tagged ECS instances to the address book. This applies to newly purchased instances and existing instances whose tags are modified to match.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -122,7 +132,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The description of the address book.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>my address book</para>
+            /// <para>DEMO</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -140,14 +150,6 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
             /// <summary>
             /// <para>The type of the address book. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>ip</b>: IP address book</description></item>
-            /// <item><description><b>domain</b>: domain address book</description></item>
-            /// <item><description><b>port</b>: port address book</description></item>
-            /// <item><description><b>tag</b>: ECS tag-based address book</description></item>
-            /// <item><description><b>allCloud</b>: cloud service address book</description></item>
-            /// <item><description><b>threat</b>: threat intelligence address book</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -167,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string GroupUuid { get; set; }
 
             /// <summary>
-            /// <para>The number of times that the address book is referenced.</para>
+            /// <para>The number of times the address book is referenced.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -177,6 +179,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? ReferenceCount { get; set; }
 
             /// <summary>
+            /// <para>The region where the ACK cluster connector is deployed. This parameter is returned only when the GroupType parameter is &quot;ack&quot;.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -185,14 +189,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The details about the ECS tags that can be automatically added to the address book.</para>
+            /// <para>A list of ECS tags.</para>
             /// </summary>
             [NameInMap("TagList")]
             [Validation(Required=false)]
             public List<DescribeAddressBookResponseBodyAclsTagList> TagList { get; set; }
             public class DescribeAddressBookResponseBodyAclsTagList : TeaModel {
                 /// <summary>
-                /// <para>The key of the ECS tag.</para>
+                /// <para>The key of the tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>company</para>
@@ -202,10 +206,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public string TagKey { get; set; }
 
                 /// <summary>
-                /// <para>The value of the ECS tag.</para>
+                /// <para>The value of the tag.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>admin</para>
+                /// <para>ALL VALUE</para>
                 /// </summary>
                 [NameInMap("TagValue")]
                 [Validation(Required=false)]
@@ -214,11 +218,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
-            /// <para>The logical relationship among ECS tags. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>and</b>: Only the public IP addresses of ECS instances that match all the specified tags can be added to the address book.</description></item>
-            /// <item><description><b>or</b>: The public IP addresses of ECS instances that match any of the specified tags can be added to the address book.</description></item>
-            /// </list>
+            /// <para>The logical relationship among multiple ECS tags. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>and</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of address books returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -260,7 +260,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of the returned address books.</para>
+        /// <para>The total number of address books.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

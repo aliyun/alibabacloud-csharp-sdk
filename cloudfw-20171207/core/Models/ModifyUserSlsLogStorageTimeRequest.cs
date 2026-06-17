@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyUserSlsLogStorageTimeRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The log version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? LogVersion { get; set; }
 
         /// <summary>
+        /// <para>The region ID of Log Service (SLS).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ap-southeast-1</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SlsRegionId { get; set; }
 
         /// <summary>
+        /// <para>The retention period, in days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyUserIPSWhitelistRequest : TeaModel {
         /// <summary>
+        /// <para>The traffic direction for the Internet Border.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? Direction { get; set; }
 
         /// <summary>
+        /// <para>The IP version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ipv4</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
+        /// <para>The language.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The type of address in the Internet Border whitelist.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -42,6 +50,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? ListType { get; set; }
 
         /// <summary>
+        /// <para>The value of the Internet Border whitelist.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If ListType is set to <c>Custom</c>: the name of the address book.</para>
+        /// </description></item>
+        /// <item><description><para>If ListType is set to <c>Address book</c>: the IPv4 address.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>115.236.36.114/32</para>
         /// </summary>
@@ -50,6 +66,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ListValue { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the visitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>47.100.XX.XX</para>
         /// </summary>
@@ -58,6 +76,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SourceIp { get; set; }
 
         /// <summary>
+        /// <para>The type of source or destination for which the Internet Border whitelist takes effect.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeletePrivateDnsDomainNameRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AccessInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The list of domain names.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DomainNameList")]
@@ -27,6 +29,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> DomainNameList { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeInstanceMembersRequest : TeaModel {
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The page number. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The remarks of the member. The remarks must be 1 to 256 characters in length.</para>
+        /// <para>The description of the Cloud Firewall member account. The description must be 1 to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>renewal</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberDesc { get; set; }
 
         /// <summary>
-        /// <para>The name of the member.</para>
+        /// <para>The name of the Cloud Firewall member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloudfirewall_2</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The UID of the member.</para>
+        /// <para>The UID of the Cloud Firewall member account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>258039427902****</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         /// <summary>
         /// <para>The number of entries per page.</para>
-        /// <para>Default value: <b>20</b>.</para>
+        /// <para>The default value is <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

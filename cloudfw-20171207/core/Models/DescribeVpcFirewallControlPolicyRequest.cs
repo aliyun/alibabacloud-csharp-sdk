@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallControlPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The action that Cloud Firewall performs on the traffic. Valid values:</para>
+        /// <para>The action that is performed on traffic. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>accept</b>: allows the traffic.</description></item>
-        /// <item><description><b>drop</b>: blocks the traffic.</description></item>
-        /// <item><description><b>log</b>: monitors the traffic.</description></item>
+        /// <item><description><para><b>accept</b>: allows the traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>drop</b>: denies the traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>log</b>: monitors the traffic.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, access control policies are queried based on all actions.</para>
+        /// <para>If you do not set this parameter, policies of all actions are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AclUuid { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +63,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The destination address in the access control policy. Fuzzy match is supported.</para>
         /// <remarks>
-        /// <para>The value of this parameter can be a CIDR block or an address book name.</para>
+        /// <para>The value can be a CIDR block, a domain name, or an address book.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,11 +74,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Destination { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language of the request and response.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -96,7 +101,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// <para>Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
@@ -109,13 +114,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The protocol type in the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>TCP</b></description></item>
-        /// <item><description><b>UDP</b></description></item>
-        /// <item><description><b>ICMP</b></description></item>
-        /// <item><description><b>ANY</b>: all protocol types</description></item>
+        /// <item><description><para><b>TCP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>UDP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ICMP</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ANY</b>: all protocols</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, access control policies of all protocol types are queried.</para>
+        /// <para>If you do not set this parameter, policies of all protocols are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,8 +137,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The status of the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enabled</description></item>
-        /// <item><description><b>false</b>: disabled</description></item>
+        /// <item><description><para><b>true</b>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,13 +151,18 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Release { get; set; }
 
         /// <summary>
-        /// <para>The recurrence type for the access control policy to take effect. Valid values:</para>
+        /// <para>The recurrence type of the access control policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Permanent</b> (default): The policy always takes effect.</description></item>
-        /// <item><description><b>None</b>: The policy takes effect for only once.</description></item>
-        /// <item><description><b>Daily</b>: The policy takes effect on a daily basis.</description></item>
-        /// <item><description><b>Weekly</b>: The policy takes effect on a weekly basis.</description></item>
-        /// <item><description><b>Monthly</b>: The policy takes effect on a monthly basis.</description></item>
+        /// <item><description><para><b>Permanent</b> (default): The policy is always in effect.</para>
+        /// </description></item>
+        /// <item><description><para><b>None</b>: The policy is a one-time policy.</para>
+        /// </description></item>
+        /// <item><description><para><b>Daily</b>: The policy recurs daily.</para>
+        /// </description></item>
+        /// <item><description><para><b>Weekly</b>: The policy recurs weekly.</para>
+        /// </description></item>
+        /// <item><description><para><b>Monthly</b>: The policy recurs monthly.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -159,7 +175,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The source address in the access control policy. Fuzzy match is supported.</para>
         /// <remarks>
-        /// <para>The value of this parameter can be a CIDR block or an address book name.</para>
+        /// <para>The value can be a CIDR block or an address book.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -170,13 +186,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall. Valid values:</para>
+        /// <para>The instance ID of the VPC boundary firewall. You can specify one of the following IDs:</para>
         /// <list type="bullet">
-        /// <item><description>If the VPC firewall protects the traffic between two VPCs that are connected by using a CEN instance, the value of this parameter must be the ID of the CEN instance.</description></item>
-        /// <item><description>If the VPC firewall protects the traffic between two VPCs that are connected by using an Express Connect circuit, the value of this parameter must be the instance ID of the VPC firewall.</description></item>
+        /// <item><description><para>The ID of a Cloud Enterprise Network (CEN) instance if the firewall protects traffic between two VPCs connected via the CEN instance.</para>
+        /// </description></item>
+        /// <item><description><para>The instance ID of the VPC boundary firewall if the firewall protects traffic between two VPCs connected via an Express Connect circuit.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallList</a> operation to obtain the ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

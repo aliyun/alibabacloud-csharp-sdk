@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallPolicyPriorUsedRequest : TeaModel {
         /// <summary>
-        /// <para>The direction of the traffic to which the access control policy applies.</para>
-        /// <para>Valid values:</para>
+        /// <para>The traffic direction of the access control policy.</para>
+        /// <para>Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>out</b>: outbound traffic</description></item>
+        /// <item><description><b>out</b>: outbound traffic.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +25,9 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The IP version supported by the access control policy. Valid values:</para>
+        /// <para>The IP version. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>4</b>: IPv4 (default)</description></item>
+        /// <item><description><b>4</b> (default): IPv4</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the NAT gateway.</para>
+        /// <para>The ID of the NAT Gateway.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePostpayUserVpcStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID of Cloud Firewall.</para>
+        /// <para>The ID of the Cloud Firewall instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cfw_elasticity_public_cn-************</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

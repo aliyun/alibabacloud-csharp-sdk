@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRiskEventGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The names of the attacked applications. Set the value in the <c>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</c> format.</para>
+        /// <para>A list of names of the attacked applications. Use the <c>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;MySql&quot;,&quot;DNS&quot;]</para>
@@ -20,31 +20,44 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> AttackApp { get; set; }
 
         /// <summary>
-        /// <para>A list of categories of attacked applications, expressed in the format [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;].</para>
+        /// <para>A list of categories of the attacked applications. Use the [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;] format.</para>
         /// </summary>
         [NameInMap("AttackAppCategory")]
         [Validation(Required=false)]
         public List<string> AttackAppCategory { get; set; }
 
         /// <summary>
-        /// <para>The attack type of the intrusion events. Valid values:</para>
+        /// <para>The type of the attack. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: suspicious connection</description></item>
-        /// <item><description><b>2</b>: command execution</description></item>
-        /// <item><description><b>3</b>: brute-force attack</description></item>
-        /// <item><description><b>4</b>: scanning</description></item>
-        /// <item><description><b>5</b>: others</description></item>
-        /// <item><description><b>6</b>: information leak</description></item>
-        /// <item><description><b>7</b>: DoS attack</description></item>
-        /// <item><description><b>8</b>: buffer overflow attack</description></item>
-        /// <item><description><b>9</b>: web attack</description></item>
-        /// <item><description><b>10</b>: trojan backdoor</description></item>
-        /// <item><description><b>11</b>: computer worm</description></item>
-        /// <item><description><b>12</b>: mining</description></item>
-        /// <item><description><b>13</b>: reverse shell</description></item>
+        /// <item><description><para><b>1</b>: abnormal connection</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: command execution</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: brute-force attack</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: scan</para>
+        /// </description></item>
+        /// <item><description><para><b>5</b>: other</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: information leakage</para>
+        /// </description></item>
+        /// <item><description><para><b>7</b>: DoS attack</para>
+        /// </description></item>
+        /// <item><description><para><b>8</b>: overflow attack</para>
+        /// </description></item>
+        /// <item><description><para><b>9</b>: web attack</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: backdoor trojan</para>
+        /// </description></item>
+        /// <item><description><para><b>11</b>: virus or worm</para>
+        /// </description></item>
+        /// <item><description><para><b>12</b>: mining behavior</para>
+        /// </description></item>
+        /// <item><description><para><b>13</b>: reverse shell</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the intrusion events of all attack types are queried.</para>
+        /// <para>If you do not set this parameter, events of all attack types are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -55,12 +68,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string AttackType { get; set; }
 
         /// <summary>
-        /// <para>The edition of Cloud Firewall that you purchase. Valid values:</para>
+        /// <para>The edition of Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b>: Premium Edition</description></item>
-        /// <item><description><b>3</b>: Enterprise Edition</description></item>
-        /// <item><description><b>4</b>: Ultimate Edition</description></item>
-        /// <item><description><b>10</b>: Cloud Firewall that uses the pay-as-you-go billing method</description></item>
+        /// <item><description><para><b>2</b>: Premium Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Enterprise Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: Ultimate Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>10</b>: pay-as-you-go</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,7 +88,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? BuyVersion { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the returned data.
+        /// Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -81,8 +99,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The type of the risk events.\
-        /// Set the value to <b>session</b>, which indicates intrusion events.</para>
+        /// <para>The type of the risk event.<br>
+        /// Set the value to <b>session</b>, which indicates intrusion prevention events.<br></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,13 +111,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The direction of the traffic for the intrusion events. Valid values:</para>
+        /// <para>The traffic direction of the intrusion prevention event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound</description></item>
-        /// <item><description><b>out</b>: outbound</description></item>
+        /// <item><description><para><b>in</b>: inbound</para>
+        /// </description></item>
+        /// <item><description><para><b>out</b>: outbound</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the intrusion events that are recorded for both inbound and outbound traffic are queried.</para>
+        /// <para>If you do not set this parameter, events in all traffic directions are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -110,7 +130,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The destination IP address to query. If you specify this parameter, all intrusion events with the specified destination IP address are queried.</para>
+        /// <para>The destination IP address to query. If you set this parameter, only intrusion prevention events that contain the specified destination IP address are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -122,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The ID of the destination VPC.</para>
         /// <remarks>
-        /// <para>If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.</para>
+        /// <para>This parameter is required only when \<c>FirewallType\\</c> is set to \<c>VpcFirewall\\</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -144,10 +164,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the intrusion event.</para>
+        /// <para>The name of the intrusion prevention event.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Webshell communication</para>
+        /// <para>wooden horse rear door communication</para>
         /// </summary>
         [NameInMap("EventName")]
         [Validation(Required=false)]
@@ -156,8 +176,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The type of the firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VpcFirewall</b>: virtual private cloud (VPC) firewall</description></item>
-        /// <item><description><b>InternetFirewall</b>: Internet firewall (default)</description></item>
+        /// <item><description><para><b>VpcFirewall</b>: VPC firewall</para>
+        /// </description></item>
+        /// <item><description><para><b>InternetFirewall</b> (default): Internet firewall</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -168,7 +190,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallType { get; set; }
 
         /// <summary>
-        /// <para>Whether to query only the data that has completed private network tracing.</para>
+        /// <para>Specifies whether to query only the data that is traced to private IP addresses.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -178,10 +200,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IsOnlyPrivateAssoc { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,10 +216,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the information about the geographical locations of IP addresses.</para>
+        /// <para>Specifies whether to query the IP address location information. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: does not query the information about the geographical locations of IP addresses.</description></item>
-        /// <item><description><b>false</b>: queries the information about the geographical locations of IP addresses. This is the default value.</description></item>
+        /// <item><description><para><b>true</b>: Does not query the IP geolocation information.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Queries the IP geolocation information.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -206,10 +232,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string NoLocation { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the results. Valid values:</para>
+        /// <para>The sorting order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b>: the ascending order.</description></item>
-        /// <item><description><b>desc</b>: the descending order. This is the default value.</description></item>
+        /// <item><description><para><b>asc</b>: ascending</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b> (default): descending</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -231,13 +259,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the firewall. Valid values:</para>
+        /// <para>The handling status of Cloud Firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: alerting</description></item>
-        /// <item><description><b>2</b>: blocking</description></item>
+        /// <item><description><para><b>1</b>: Alert</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Block</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, all intrusion events that are detected by the firewall are queried, regardless of the firewall status.</para>
+        /// <para>If you do not set this parameter, events in all handling statuses are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -248,14 +278,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleResult { get; set; }
 
         /// <summary>
-        /// <para>The module of the rule that is used to detect the intrusion events. Valid values:</para>
+        /// <para>The source of the rule that is used to detect the intrusion prevention event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: basic protection</description></item>
-        /// <item><description><b>2</b>: virtual patching</description></item>
-        /// <item><description><b>4</b>: threat intelligence</description></item>
+        /// <item><description><para><b>1</b>: basic protection</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: virtual patching</para>
+        /// </description></item>
+        /// <item><description><para><b>4</b>: threat intelligence</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the intrusion events that are detected by all rules are queried.</para>
+        /// <para>If you do not set this parameter, events detected based on all types of rules are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -266,10 +299,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RuleSource { get; set; }
 
         /// <summary>
-        /// <para>The field based on which you want to sort the results. Valid values:</para>
+        /// <para>The field to use for sorting. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VulLevel</b>: The results are sorted based on the risk level field. This is the default value.</description></item>
-        /// <item><description><b>LastTime</b>: The results are sorted based on the most recent occurrence time.</description></item>
+        /// <item><description><para><b>VulLevel</b> (default): Sorts by risk level.</para>
+        /// </description></item>
+        /// <item><description><para><b>LastTime</b>: Sorts by the most recent occurrence time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -280,7 +315,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Sort { get; set; }
 
         /// <summary>
-        /// <para>The source IP address to query. If you specify this parameter, all intrusion events with the specified source IP address are queried.</para>
+        /// <para>The source IP address to query. If you set this parameter, only intrusion prevention events that contain the specified source IP address are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.0.XX.XX</para>
@@ -292,7 +327,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <summary>
         /// <para>The ID of the source VPC.</para>
         /// <remarks>
-        /// <para>If the FirewallType parameter is set to VpcFirewall, you must specify this parameter.</para>
+        /// <para>This parameter is required only when \<c>FirewallType\\</c> is set to \<c>VpcFirewall\\</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -303,7 +338,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string SrcNetworkInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
+        /// <para>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -314,14 +349,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The risk level of the intrusion events. Valid values:</para>
+        /// <para>The risk level of the intrusion prevention event. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: low</description></item>
-        /// <item><description><b>2</b>: medium</description></item>
-        /// <item><description><b>3</b>: high</description></item>
+        /// <item><description><para><b>1</b>: low</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: medium</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: high</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the intrusion events that are at all risk levels are queried.</para>
+        /// <para>If you do not set this parameter, events of all risk levels are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

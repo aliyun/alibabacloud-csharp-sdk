@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The ID of the routing policy.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>policy-4d724d0139df48f18091</para>
+        /// <para>policy-4d724d0139df48f1****</para>
         /// </summary>
         [NameInMap("TrFirewallRoutePolicyId")]
         [Validation(Required=false)]

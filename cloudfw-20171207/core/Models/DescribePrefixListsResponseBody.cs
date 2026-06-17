@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrefixListsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the prefix lists.</para>
+        /// <para>An array of prefix lists.</para>
         /// </summary>
         [NameInMap("PrefixList")]
         [Validation(Required=false)]
         public List<DescribePrefixListsResponseBodyPrefixList> PrefixList { get; set; }
         public class DescribePrefixListsResponseBodyPrefixList : TeaModel {
             /// <summary>
-            /// <para>The IP address family of the prefix list. Valid values:</para>
+            /// <para>The address family of the prefix list. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>IPv4</description></item>
-            /// <item><description>IPv6</description></item>
+            /// <item><description><para>IPv4</para>
+            /// </description></item>
+            /// <item><description><para>IPv6</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? AssociationCount { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time the prefix list was created. The timestamp is in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-16T08:31:06Z</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The description.</para>
+            /// <para>The description of the prefix list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TCP_14900-14911</para>
@@ -71,7 +73,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? MaxEntries { get; set; }
 
             /// <summary>
-            /// <para>The ID of the prefix list.</para>
+            /// <para>The prefix list ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pl-uf64nco3ujjqchx6aaji</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrefixListId { get; set; }
 
             /// <summary>
-            /// <para>The name of the prefix list.</para>
+            /// <para>The prefix list name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>participant-name</para>
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>67FD76C2-C493-5815-8107-643FD7AB77C7</para>

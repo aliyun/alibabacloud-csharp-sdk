@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTransitRouterResourcesListRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cen-djz1i6p8shzioz****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CenId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of the border firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-741de4c8956341****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
+        /// <para>The language of the request and response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RegionNo { get; set; }
 
         /// <summary>
+        /// <para>The asset type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TR</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ResourceType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the TransitRouter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tr-2zefgvkcl2qcexbb7****</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string TransitRouterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the VPC instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-wz9lllsbftdm0svpj****</para>
         /// </summary>

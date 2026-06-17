@@ -10,11 +10,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePolicyPriorUsedRequest : TeaModel {
         /// <summary>
-        /// <para>The direction of the traffic to which the access control policy applies.</para>
+        /// <para>The traffic direction of the access control policy.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound.</description></item>
-        /// <item><description><b>out</b>: outbound.</description></item>
+        /// <item><description><para><b>in</b>: Inbound traffic</para>
+        /// </description></item>
+        /// <item><description><para><b>out</b>: Outbound traffic</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,11 +28,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The IP version of the asset that is protected by Cloud Firewall.</para>
+        /// <para>The IP version for assets protected by Cloud Firewall.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>4</b> (default): IPv4.</description></item>
-        /// <item><description><b>6</b>: IPv6.</description></item>
+        /// <item><description><para><b>4</b> (Default): IPv4</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: IPv6</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,11 +45,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language of the request and response.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (Default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

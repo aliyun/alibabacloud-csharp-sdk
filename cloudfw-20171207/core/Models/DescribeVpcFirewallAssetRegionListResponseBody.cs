@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallAssetRegionListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of regions.</para>
+        /// </summary>
         [NameInMap("RegionNoList")]
         [Validation(Required=false)]
         public List<string> RegionNoList { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>00933CCB-65A4-5E51-B180-3D154281****</para>
         /// </summary>

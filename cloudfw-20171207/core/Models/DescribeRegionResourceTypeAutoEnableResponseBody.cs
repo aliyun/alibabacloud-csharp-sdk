@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeRegionResourceTypeAutoEnableResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The automatic traffic redirection settings for asset types in the region.</para>
+        /// </summary>
         [NameInMap("RegionResourceAutoEnable")]
         [Validation(Required=false)]
         public Dictionary<string, Dictionary<string, object>> RegionResourceAutoEnable { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B2841452-CB8D-4F7D-B247-38E1CF7334F8</para>

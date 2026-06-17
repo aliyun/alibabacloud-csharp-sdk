@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSecurityProxyResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of NAT firewalls.</para>
+        /// </summary>
         [NameInMap("ProxyList")]
         [Validation(Required=false)]
         public List<DescribeSecurityProxyResponseBodyProxyList> ProxyList { get; set; }
         public class DescribeSecurityProxyResponseBodyProxyList : TeaModel {
             /// <summary>
+            /// <para>The IPv4 CIDR block of the VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.0.0/16</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
+            /// <para>The details of the exception.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>“”</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Detail { get; set; }
 
             /// <summary>
+            /// <para>The UID of the Cloud Firewall member account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1797733170015112</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string MemberUid { get; set; }
 
             /// <summary>
+            /// <para>The ID of the NAT Gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ngw-2zex8sf4s5vus8rq3rjqo</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayId { get; set; }
 
             /// <summary>
+            /// <para>The name of the NAT Gateway.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecs-slb-eip-waf</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string NatGatewayName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the NAT firewall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>proxy-nat4921f192b6cf438d93f8</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProxyId { get; set; }
 
             /// <summary>
+            /// <para>The name of the NAT firewall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>nat-idmp-fir</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ProxyName { get; set; }
 
             /// <summary>
+            /// <para>The region ID of the VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ap-southeast-1</para>
             /// </summary>
@@ -77,11 +96,32 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string RegionNo { get; set; }
 
+            /// <summary>
+            /// <para>The list of SNAT IP addresses.</para>
+            /// </summary>
             [NameInMap("SnatIpList")]
             [Validation(Required=false)]
             public List<string> SnatIpList { get; set; }
 
             /// <summary>
+            /// <para>The status of the Cloud Firewall. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>configuring</b>: The firewall is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>deleting</b>: The firewall is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>normal</b>: The firewall is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>abnormal</b>: The firewall is not running as expected.</para>
+            /// </description></item>
+            /// <item><description><para><b>opening</b>: The firewall is being enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>closing</b>: The firewall is being disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>closed</b>: The firewall is disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>normal</para>
             /// </summary>
@@ -90,6 +130,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the strict mode is enabled. 1: The strict mode is enabled. 0: The strict mode is disabled.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -98,6 +140,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? StrictMode { get; set; }
 
             /// <summary>
+            /// <para>The ID of the vSwitch to which the Cloud Firewall instance belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vsw-5gu2qqfmjmwl8ktzgfekl</para>
             /// </summary>
@@ -106,6 +150,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the VPC instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-wz9xn35tq33hunzvpu0se</para>
             /// </summary>
@@ -114,6 +160,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>The instance name of the VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1kw9igsq0yyzeanqamx</para>
             /// </summary>
@@ -124,6 +172,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F0F82705-CFC7-5F83-86C8-A063892F****</para>
         /// </summary>
@@ -132,6 +182,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

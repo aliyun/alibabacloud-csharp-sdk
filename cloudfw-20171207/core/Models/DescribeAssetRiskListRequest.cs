@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAssetRiskListRequest : TeaModel {
         /// <summary>
-        /// <para>The IP addresses to query. Separate the IP addresses with commas (,). You can specify up to 20 IP addresses at a time.</para>
+        /// <para>The IP addresses to query. Separate multiple IP addresses with commas (,). You can query a maximum of 20 IP addresses at a time.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Example IPv4 address: 47.97.XX.XX.</para>
+        /// <item><description><para>Example of an IPv4 address: 47.97.XX.XX.</para>
         /// </description></item>
-        /// <item><description><para>Example IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</para>
+        /// <item><description><para>Example of an IPv6 address: 2001:db8:ffff:ffff:ffff:XXXX:ffff.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// </summary>
         [NameInMap("IpAddrList")]
         [Validation(Required=false)]
@@ -28,8 +28,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The IP version of the asset that is protected by Cloud Firewall.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>4</b> (default): IPv4</description></item>
-        /// <item><description><b>6</b>: IPv6</description></item>
+        /// <item><description><para><b>4</b> (default): IPv4</para>
+        /// </description></item>
+        /// <item><description><para><b>6</b>: IPv6</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -41,10 +43,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response message. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.100.XX.XX</para>

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyControlPolicyPriorityRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the access control policy.</para>
+        /// <para>The unique ID of the access control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3770d603-3534-4878-b845-f00095ee5048</para>
+        /// <para>3770d603-3534-4878-b845-f00095ee****</para>
         /// </summary>
         [NameInMap("AclUuid")]
         [Validation(Required=false)]

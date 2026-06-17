@@ -20,11 +20,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether VPC firewalls are configured. Valid values:</para>
+        /// <para>The configuration status of the VPC boundary firewall. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>notconfigured</b>: VPC firewalls are not configured.</description></item>
-        /// <item><description><b>configured</b>: VPC firewalls are configured.</description></item>
-        /// <item><description>If you do not specify this parameter, the access control policies of all VPC firewalls are queried.</description></item>
+        /// <item><description><para><b>configured</b>: The VPC boundary firewall is configured.</para>
+        /// </description></item>
+        /// <item><description><para>If you omit this parameter, the operation queries the access control policies for all VPC boundary firewalls.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +36,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallConfigureStatus { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the VPC firewall.</para>
+        /// <para>The instance ID of the VPC boundary firewall.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vfw-tr-5b202e7f0be64611****</para>
@@ -45,10 +46,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 50.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

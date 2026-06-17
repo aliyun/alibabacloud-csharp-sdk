@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNetworkInstanceRelationListRequest : TeaModel {
         /// <summary>
+        /// <para>The connection type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cen</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ConnectType { get; set; }
 
         /// <summary>
+        /// <para>The configuration status of Cloud Firewall.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>notconfigured</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string FirewallConfigureStatus { get; set; }
 
         /// <summary>
+        /// <para>The language of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -33,10 +39,22 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string Lang { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the local network instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-2vcwkr****</para>
+        /// </summary>
         [NameInMap("NetworkInstanceId")]
         [Validation(Required=false)]
         public string NetworkInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the peer network instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vpc-dsf232d****</para>
+        /// </summary>
         [NameInMap("PeerNetworkInstanceId")]
         [Validation(Required=false)]
         public string PeerNetworkInstanceId { get; set; }

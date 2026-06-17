@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeSdlEventStatisticResponseBody : TeaModel {
         /// <summary>
+        /// <para>The number of AI-related leak threats.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AiSensitiveDataCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of assets.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? AssetCount { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C5DDD596-1191-5F36-A504-8733045A****</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The number of sensitive data leak events.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? SensitiveDataCount { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public long? TotalCount { get; set; }
 
         /// <summary>
+        /// <para>The total traffic. Unit: bytes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

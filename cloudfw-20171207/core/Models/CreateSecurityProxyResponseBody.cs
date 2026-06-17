@@ -13,17 +13,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         /// <para>The ID of the NAT firewall.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>proxy-nat97ac4d7cc3834a5daf40</para>
+        /// <para>proxy-nat97a******</para>
         /// </summary>
         [NameInMap("ProxyId")]
         [Validation(Required=false)]
         public string ProxyId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>15FCCC52-1E23-57AE-B5EF-3E00A3DC3CAB</para>
+        /// <para>15FCCC52-1E23-57AE-B5EF-3E00A3******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

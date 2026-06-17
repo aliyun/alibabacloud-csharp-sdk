@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeAckClustersRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the ACK cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cb0f5640b1b2d404cad6ba21509d7847b</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the ACK cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ack-cluster-name</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ClusterName { get; set; }
 
         /// <summary>
+        /// <para>The specification of the ACK cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ack.pro.small</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ClusterSpec { get; set; }
 
         /// <summary>
+        /// <para>The status of the ACK cluster connector.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ready</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ConnectorStatus { get; set; }
 
         /// <summary>
+        /// <para>The Alibaba Cloud UID of the account to which the ACK cluster resources belong.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>135809047715****</para>
         /// </summary>
@@ -50,6 +60,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string MemberUid { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +71,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +82,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the ACK cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

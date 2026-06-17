@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The zones.</para>
+        /// <para>The list of zones.</para>
         /// </summary>
         [NameInMap("ZoneList")]
         [Validation(Required=false)]
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The name of the zone.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Hangzhou Zone B</para>
+            /// <para>China East 1 Zone B</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The zone ID.</para>
+            /// <para>The ID of the zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-b</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ZoneId { get; set; }
 
             /// <summary>
-            /// <para>The zone type. Default value: AvailabilityZone. This value indicates Alibaba Cloud zones.</para>
+            /// <para>The type of the zone. The default value is \<c>AvailabilityZone\\</c>, which indicates a standard cloud zone.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AvailabilityZone</para>

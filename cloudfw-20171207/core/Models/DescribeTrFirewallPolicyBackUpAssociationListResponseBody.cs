@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTrFirewallPolicyBackUpAssociationListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The route tables.</para>
+        /// <para>The list of route tables to recover.</para>
         /// </summary>
         [NameInMap("PolicyAssociationBackupConfigs")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             /// <para>The name of the traffic redirection instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>vpc-instance</para>
             /// </summary>
             [NameInMap("CandidateName")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CandidateType { get; set; }
 
             /// <summary>
-            /// <para>The route table that is used after traffic redirection.</para>
+            /// <para>The ID of the route table used after traffic redirection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-wz9898grickmh5j09****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string CurrentRouteTableId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the route table.</para>
+            /// <para>The ID of the original route table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vtb-wz9slp3s7m4qrzvnq****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C264A756-9B48-57E3-B312-716941E146C6</para>

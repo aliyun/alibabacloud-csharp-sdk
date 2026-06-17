@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ModifyObjectGroupOperationRequest : TeaModel {
         /// <summary>
-        /// <para>The remarks of the operation.</para>
+        /// <para>The remarks for the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -20,11 +20,13 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The direction of the traffic to which the access control policy applies.</para>
+        /// <para>The traffic direction that is controlled by the access control policy.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>in</b>: inbound.</description></item>
-        /// <item><description><b>out</b>: outbound.</description></item>
+        /// <item><description><para><b>in</b>: Inbound traffic.</para>
+        /// </description></item>
+        /// <item><description><para><b>out</b>: Outbound traffic.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,10 +38,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the response. Valid values:</para>
+        /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default)</description></item>
-        /// <item><description><b>en</b></description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The operation objects.</para>
+        /// <para>The list of objects.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ObjectList")]
@@ -58,12 +62,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public List<string> ObjectList { get; set; }
 
         /// <summary>
-        /// <para>The operation. Valid values:</para>
+        /// <para>The operation to perform. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ignore</b>: adds the operation object to the whitelist.</description></item>
-        /// <item><description><b>cancelIgnore</b>: removes the operation object from the whitelist.</description></item>
-        /// <item><description><b>subscribe</b>: follows the operation object.</description></item>
-        /// <item><description><b>unsubscribe</b>: unfollows the operation object.</description></item>
+        /// <item><description><para><b>subscribe</b>: Follows the object.</para>
+        /// </description></item>
+        /// <item><description><para><b>unsubscribe</b>: Unfollows the object.</para>
+        /// </description></item>
+        /// <item><description><para><b>ignore</b>: Adds the object to the whitelist.</para>
+        /// </description></item>
+        /// <item><description><para><b>cancelIgnore</b>: Removes the object from the whitelist.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,13 +83,17 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ObjectOperation { get; set; }
 
         /// <summary>
-        /// <para>The type of the operation object.</para>
+        /// <para>The type of object to add to the whitelist or follow.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>assetsIp</b>: the asset IP address.</description></item>
-        /// <item><description><b>destinationIp</b>: the destination IP address.</description></item>
-        /// <item><description><b>destinationPort</b>: the destination port.</description></item>
-        /// <item><description><b>destinationDomain</b>: the destination domain name.</description></item>
+        /// <item><description><para><b>assetsIp</b>: Asset IP address.</para>
+        /// </description></item>
+        /// <item><description><para><b>destinationIp</b>: Destination IP address.</para>
+        /// </description></item>
+        /// <item><description><para><b>destinationPort</b>: Destination port.</para>
+        /// </description></item>
+        /// <item><description><para><b>destinationDomain</b>: Destination domain name.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -93,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the visitor.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123.xxx.251.60</para>

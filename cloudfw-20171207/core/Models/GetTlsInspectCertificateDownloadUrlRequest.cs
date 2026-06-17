@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class GetTlsInspectCertificateDownloadUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the CA certificate.</para>
+        /// <remarks>
+        /// <para>Call the ListTlsInspectCACertificates operation to query existing CA certificates.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

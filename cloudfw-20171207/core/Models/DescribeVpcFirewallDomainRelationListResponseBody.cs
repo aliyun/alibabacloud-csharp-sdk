@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeVpcFirewallDomainRelationListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of data entries.</para>
+        /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeVpcFirewallDomainRelationListResponseBodyDataList> DataList { get; set; }
         public class DescribeVpcFirewallDomainRelationListResponseBodyDataList : TeaModel {
             /// <summary>
+            /// <para>The business category of the website.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Google</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Business { get; set; }
 
             /// <summary>
+            /// <para>The domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string Domain { get; set; }
 
             /// <summary>
+            /// <para>The destination IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.0.XX.XX</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DstIP { get; set; }
 
             /// <summary>
+            /// <para>The ID of the destination region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DstRegionId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the destination VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-bp10w5nb30r4jzfyc****</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DstVpcId { get; set; }
 
             /// <summary>
+            /// <para>The name of the destination VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-****</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DstVpcName { get; set; }
 
             /// <summary>
+            /// <para>The Unix timestamp for the first access, in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1767147003</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? FirstTime { get; set; }
 
             /// <summary>
+            /// <para>The name of the organization.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Google</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string GroupName { get; set; }
 
             /// <summary>
+            /// <para>The IPS hit count.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? IpsHitCnt { get; set; }
 
             /// <summary>
+            /// <para>The Unix timestamp for the last access, in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1767147003</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? LastTime { get; set; }
 
             /// <summary>
+            /// <para>The request traffic, in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10000</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? RequestBytes { get; set; }
 
             /// <summary>
+            /// <para>The response traffic, in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10000</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? ResponseBytes { get; set; }
 
             /// <summary>
+            /// <para>The total number of sessions.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>27</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? SessionCount { get; set; }
 
             /// <summary>
+            /// <para>The source IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.0.XX.XX</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcIP { get; set; }
 
             /// <summary>
+            /// <para>The ID of the source region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -134,6 +167,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcRegionId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the source VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-t4nlt09olhpazpoeg****</para>
             /// </summary>
@@ -142,6 +177,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcVpcId { get; set; }
 
             /// <summary>
+            /// <para>The name of the source VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-****</para>
             /// </summary>
@@ -150,6 +187,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string SrcVpcName { get; set; }
 
             /// <summary>
+            /// <para>The total traffic, in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16287823</para>
             /// </summary>
@@ -159,11 +198,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 
         }
 
+        /// <summary>
+        /// <para>A list of destination VPCs.</para>
+        /// </summary>
         [NameInMap("DstVpcList")]
         [Validation(Required=false)]
         public List<DescribeVpcFirewallDomainRelationListResponseBodyDstVpcList> DstVpcList { get; set; }
         public class DescribeVpcFirewallDomainRelationListResponseBodyDstVpcList : TeaModel {
             /// <summary>
+            /// <para>The ID of the destination VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-bp10w5nb30r4jzfyc****</para>
             /// </summary>
@@ -172,6 +216,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>The name of the destination VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-****</para>
             /// </summary>
@@ -182,6 +228,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C5DDD596-1191-5F36-A504-8733045A****</para>
         /// </summary>
@@ -190,6 +238,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>132</para>
         /// </summary>

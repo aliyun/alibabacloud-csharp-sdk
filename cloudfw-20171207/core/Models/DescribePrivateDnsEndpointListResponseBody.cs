@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribePrivateDnsEndpointListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of private instances.</para>
+        /// </summary>
         [NameInMap("AccessInstanceList")]
         [Validation(Required=false)]
         public List<DescribePrivateDnsEndpointListResponseBodyAccessInstanceList> AccessInstanceList { get; set; }
         public class DescribePrivateDnsEndpointListResponseBodyAccessInstanceList : TeaModel {
             /// <summary>
+            /// <para>The ID of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AccessInstanceId { get; set; }
 
             /// <summary>
+            /// <para>The name of the private instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string AccessInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The UID of the Alibaba Cloud account that owns the Cloud Firewall.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1379490574415****</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? AliUid { get; set; }
 
             /// <summary>
+            /// <para>The number of domain names.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -45,11 +56,24 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public long? DomainNameCount { get; set; }
 
+            /// <summary>
+            /// <para>The type of Cloud Firewall. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>internet</b></para>
+            /// </description></item>
+            /// <item><description><para><b>vpc</b></para>
+            /// </description></item>
+            /// <item><description><para><b>nat</b></para>
+            /// </description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("FirewallType")]
             [Validation(Required=false)]
             public List<string> FirewallType { get; set; }
 
             /// <summary>
+            /// <para>The time when the instance was created. The value is a UNIX timestamp measured in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1715075765</para>
             /// </summary>
@@ -58,6 +82,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The IP protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>TCP</b></para>
+            /// </description></item>
+            /// <item><description><para><b>UDP</b></para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>tcp</para>
             /// </summary>
@@ -66,6 +98,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? IpProtocol { get; set; }
 
             /// <summary>
+            /// <para>The UID of the Cloud Firewall member account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1844802493****</para>
             /// </summary>
@@ -74,6 +108,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public long? MemberUid { get; set; }
 
             /// <summary>
+            /// <para>The port number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>443</para>
             /// </summary>
@@ -82,6 +118,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Port { get; set; }
 
             /// <summary>
+            /// <para>The primary DNS server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
             /// </summary>
@@ -90,6 +128,14 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrimaryDns { get; set; }
 
             /// <summary>
+            /// <para>The type of private DNS. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>PrivateZone</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Custom</b> (default)</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Custom</para>
             /// </summary>
@@ -98,6 +144,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrivateDnsType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the region where the instance resides.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -106,6 +154,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string RegionNo { get; set; }
 
             /// <summary>
+            /// <para>The standby DNS server.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.1.1.2</para>
             /// </summary>
@@ -114,6 +164,20 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string StandbyDns { get; set; }
 
             /// <summary>
+            /// <para>The status of the instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>creating</b>: The instance is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>deleting</b>: The instance is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>normal</b>: The instance is running as expected.</para>
+            /// </description></item>
+            /// <item><description><para><b>updating</b>: The instance is being updated.</para>
+            /// </description></item>
+            /// <item><description><para><b>abnormal</b>: The instance is in an abnormal state.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>normal</para>
             /// </summary>
@@ -122,6 +186,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public int? Status { get; set; }
 
             /// <summary>
+            /// <para>The unique ID of the task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -130,6 +196,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string TaskId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-2zelphbaourpun****</para>
             /// </summary>
@@ -140,6 +208,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -148,6 +218,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -156,6 +228,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>850A84D6-0DE4-4797-A1E8-00090****</para>
         /// </summary>
@@ -164,6 +238,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>

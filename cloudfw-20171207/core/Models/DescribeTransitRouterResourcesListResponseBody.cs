@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeTransitRouterResourcesListResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A61A2516-0A22-5B3F-986B-3D4BF2A****</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of Transit Router resources.</para>
+        /// </summary>
         [NameInMap("TransitRouterAttachedResources")]
         [Validation(Required=false)]
         public List<DescribeTransitRouterResourcesListResponseBodyTransitRouterAttachedResources> TransitRouterAttachedResources { get; set; }
         public class DescribeTransitRouterResourcesListResponseBodyTransitRouterAttachedResources : TeaModel {
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>eas-r-8k1a6jjofkp0cq****</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceId { get; set; }
 
             /// <summary>
+            /// <para>The instance name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string ResourceName { get; set; }
 
             /// <summary>
+            /// <para>The asset type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>VPC</para>
             /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class AddDomainResolveRealtimeTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>337A4DBA-8A01-5E9C-99CA-84293E13****</para>
         /// </summary>

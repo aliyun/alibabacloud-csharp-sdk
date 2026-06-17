@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ResetRuleHitCountResponseBody : TeaModel {
         /// <summary>
+        /// <para>The application module.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sg_server</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Module { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>706B2093-CBA0-51B2-BEBF-58903FC6****</para>
         /// </summary>

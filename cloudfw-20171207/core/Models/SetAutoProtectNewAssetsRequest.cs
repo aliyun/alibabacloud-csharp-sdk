@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class SetAutoProtectNewAssetsRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable automatic traffic redirection. Valid values:</para>
+        /// <para><b>true****false</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public bool? AutoProtect { get; set; }
 
         /// <summary>
+        /// <para>The language. Valid values are zh (Chinese) and <b>en</b> (English). The default value is <b>zh</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>zh</para>
         /// </summary>
@@ -28,6 +32,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The source IP address of the visitor.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60.182.79.XXX</para>
         /// </summary>

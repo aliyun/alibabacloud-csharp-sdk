@@ -9,15 +9,26 @@ using Tea;
 namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeConfiguredDestinationIPResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of destinations.</para>
+        /// </summary>
         [NameInMap("Destinations")]
         [Validation(Required=false)]
         public List<DescribeConfiguredDestinationIPResponseBodyDestinations> Destinations { get; set; }
         public class DescribeConfiguredDestinationIPResponseBodyDestinations : TeaModel {
+            /// <summary>
+            /// <para>The remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
+            /// <para>The destination IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
             /// </summary>
@@ -25,11 +36,19 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string DestinationIP { get; set; }
 
+            /// <summary>
+            /// <para>The ISP of the destination.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>telecom</para>
+            /// </summary>
             [NameInMap("DestinationISP")]
             [Validation(Required=false)]
             public string DestinationISP { get; set; }
 
             /// <summary>
+            /// <para>The destination region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
             /// </summary>
@@ -38,6 +57,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string DestinationRegion { get; set; }
 
             /// <summary>
+            /// <para>The time of the operation. The value is a UNIX timestamp. Unit: seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1534408189</para>
             /// </summary>
@@ -48,6 +69,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -56,6 +79,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -64,6 +89,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F0AE91F8-E6C5-50D4-983F-FC53672****</para>
         /// </summary>
@@ -72,6 +99,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32</para>
         /// </summary>

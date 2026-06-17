@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DeleteSecurityProxyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7447795A-39AB-52CB-8F92-128DF4898F36</para>
+        /// <para>7447795A-39AB-52CB-8F92-128DF******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

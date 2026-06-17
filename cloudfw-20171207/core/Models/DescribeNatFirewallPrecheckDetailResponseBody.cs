@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class DescribeNatFirewallPrecheckDetailResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether a task exists.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         [Validation(Required=false)]
         public bool? IsFound { get; set; }
 
+        /// <summary>
+        /// <para>The details of the precheck.</para>
+        /// </summary>
         [NameInMap("PrecheckDetail")]
         [Validation(Required=false)]
         public DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetail PrecheckDetail { get; set; }
         public class DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetail : TeaModel {
             /// <summary>
+            /// <para>The ID of the firewall instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vfw-tr-7a9c8901ed394****</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string FirewallId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the network instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-m5emh0w6v2e15****</para>
             /// </summary>
@@ -37,11 +46,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             [Validation(Required=false)]
             public string NetworkInstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The list of precheck item groups.</para>
+            /// </summary>
             [NameInMap("PrecheckEntityGroups")]
             [Validation(Required=false)]
             public List<DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroups> PrecheckEntityGroups { get; set; }
             public class DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroups : TeaModel {
                 /// <summary>
+                /// <para>The number of failed precheck items.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>9</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 public int? FailedCount { get; set; }
 
                 /// <summary>
+                /// <para>The name of the precheck instance.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
                 /// </summary>
@@ -57,15 +73,26 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
+                /// <summary>
+                /// <para>The execution status of each precheck item.</para>
+                /// </summary>
                 [NameInMap("PrecheckEntities")]
                 [Validation(Required=false)]
                 public List<DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroupsPrecheckEntities> PrecheckEntities { get; set; }
                 public class DescribeNatFirewallPrecheckDetailResponseBodyPrecheckDetailPrecheckEntityGroupsPrecheckEntities : TeaModel {
+                    /// <summary>
+                    /// <para>The information about the failed precheck item.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>VPC Firewall Quota Full</para>
+                    /// </summary>
                     [NameInMap("Info")]
                     [Validation(Required=false)]
                     public string Info { get; set; }
 
                     /// <summary>
+                    /// <para>The name of the precheck item.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>Precheck test</para>
                     /// </summary>
@@ -74,6 +101,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     public string Name { get; set; }
 
                     /// <summary>
+                    /// <para>The status of each precheck item. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><para><b>running</b>: The precheck is in progress.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>passed</b>: The precheck is passed.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>failed</b>: The precheck failed.</para>
+                    /// </description></item>
+                    /// </list>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>passed</para>
                     /// </summary>
@@ -81,6 +118,12 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                     [Validation(Required=false)]
                     public string Status { get; set; }
 
+                    /// <summary>
+                    /// <para>The suggested solution.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The VPC firewall quota is full. We recommend that you increase the firewall quota</para>
+                    /// </summary>
                     [NameInMap("Suggestion")]
                     [Validation(Required=false)]
                     public string Suggestion { get; set; }
@@ -88,6 +131,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
                 }
 
                 /// <summary>
+                /// <para>The status of the precheck. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>running</b></para>
+                /// </description></item>
+                /// <item><description><para><b>passed</b></para>
+                /// </description></item>
+                /// <item><description><para><b>failed</b></para>
+                /// </description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>running</para>
                 /// </summary>
@@ -98,6 +151,16 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             }
 
             /// <summary>
+            /// <para>The status of the precheck. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>running</b>: The precheck is in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>passed</b>: The precheck is passed.</para>
+            /// </description></item>
+            /// <item><description><para><b>failed</b>: The precheck failed.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>failed</para>
             /// </summary>
@@ -106,6 +169,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrecheckStatus { get; set; }
 
             /// <summary>
+            /// <para>The timestamp of the precheck.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1715136000</para>
             /// </summary>
@@ -114,6 +179,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
             public string PrecheckTimestamp { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-shenzhen</para>
             /// </summary>
@@ -124,6 +191,8 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>99A65AA0-C5B5-5092-BFCF-8111B436****</para>
         /// </summary>
