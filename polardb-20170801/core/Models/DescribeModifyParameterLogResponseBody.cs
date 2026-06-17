@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeModifyParameterLogResponseBody : TeaModel {
         /// <summary>
+        /// <para>The cluster engine.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polardb_mysql</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
+        /// <para>The engine version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8.0</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EngineVersion { get; set; }
 
+        /// <summary>
+        /// <para>The list of parameter modification history.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeModifyParameterLogResponseBodyItems> Items { get; set; }
         public class DescribeModifyParameterLogResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The time when the parameter was last modified.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-29T09:31:37Z</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
+            /// <para>The parameter value after the modification.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test01</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string NewParameterValue { get; set; }
 
             /// <summary>
+            /// <para>The parameter value before the modification.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string OldParameterValue { get; set; }
 
             /// <summary>
+            /// <para>The parameter name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>hz</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ParameterName { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the modification was applied successfully.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>True</para>
             /// </summary>
@@ -72,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD35F3-F3-44CA-AFFF-BAF869******</para>

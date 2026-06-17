@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClustersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the clusters.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeDBClustersResponseBodyItems Items { get; set; }
@@ -222,7 +225,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -232,7 +235,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of clusters returned per page.</para>
+        /// <para>The number of clusters returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -242,7 +245,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B7BFB11-C077-4FE3-B051-F69CEB******</para>
@@ -252,7 +255,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>

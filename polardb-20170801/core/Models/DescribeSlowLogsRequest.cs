@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSlowLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PolarDB_MySQL</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. The time span between the start time and the end time cannot exceed 31 days. Specify the time in the yyyy-MM-ddZ format. The time must be in UTC.</para>
+        /// <para>The end date of the query range. The end date cannot be earlier than the start date, and the interval between the start and end dates cannot exceed 31 days. Specify the date in <c>yyyy-MM-ddZ</c> format. The time is in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from 1.</para>
-        /// <para>Default value: 1.</para>
+        /// <para>The page number.</para>
+        /// <para>The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 30 to 100. Default value: 30.</para>
+        /// <para>The number of logs to return on each page. Valid values: 30 to 100. The default value is 30.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the yyyy-MM-ddZ format. The time must be in UTC.</para>
+        /// <para>The start date of the query range. The date can be up to 31 days in the past. Specify the date in <c>yyyy-MM-ddZ</c> format. The time is in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

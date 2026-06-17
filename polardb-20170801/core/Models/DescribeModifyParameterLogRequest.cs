@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeModifyParameterLogRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query. The end time must be later than the start time. The time is in the <c>YYYY-MM-DDThh:mmZ</c> format and is in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query the details of all clusters in a region, including the cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyActiveOperationMaintainConfRequest : TeaModel {
         /// <summary>
+        /// <para>The remarks for the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Comment { get; set; }
 
         /// <summary>
+        /// <para>The time of the cycle.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If CycleType is set to Month, specify the day of the month. Valid values: 1 to 28. Use commas (,) to separate multiple days.</para>
+        /// </description></item>
+        /// <item><description><para>If CycleType is set to Week, specify the day of the week. Valid values: 1 to 7. Use commas (,) to separate multiple days.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +37,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CycleTime { get; set; }
 
         /// <summary>
+        /// <para>The cycle type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Month</para>
+        /// </description></item>
+        /// <item><description><para>Week</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CycleType { get; set; }
 
         /// <summary>
+        /// <para>The end time of the maintenance window. Use the HH:mmZ format. The time is in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
+        /// <para>The start time of the task. The time must be in UTC and in the yyyy-mm-ddThh:mm:ssZ format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +95,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
         /// </summary>
@@ -96,6 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the configuration. Valid values: 1 (Enable) and 2 (Disable).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

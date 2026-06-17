@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBDescriptionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The description of the database. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>It must be 2 to 256 characters in length.</description></item>
+        /// <item><description><para>Cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Must be 2 to 256 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

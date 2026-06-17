@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGlobalDatabaseNetworksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to find the IDs of all clusters in a region.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specify the region in which you want to query GDNs. You can create secondary clusters for the GDNs.</para>
+        /// <para>Returns only GDNs that support creating a secondary cluster in the specified region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -35,10 +35,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The description of the GDN. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>It must start with a letter.</description></item>
-        /// <item><description>It can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>It must be 2 to 126 characters in length.</description></item>
+        /// <item><description><para>It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter or a Chinese character.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 126 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GDNDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the GDN.</para>
+        /// <para>The GDN ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-****************</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. Default value: 1. The value must be an integer that is greater than 0.</para>
+        /// <para>The page number. The value must be greater than 0. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -77,11 +81,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 30. Valid values:</para>
+        /// <para>The number of entries to return on each page. Default value: 30. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>30</description></item>
-        /// <item><description>50</description></item>
-        /// <item><description>100</description></item>
+        /// <item><description><para>30</para>
+        /// </description></item>
+        /// <item><description><para>50</para>
+        /// </description></item>
+        /// <item><description><para>100</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>

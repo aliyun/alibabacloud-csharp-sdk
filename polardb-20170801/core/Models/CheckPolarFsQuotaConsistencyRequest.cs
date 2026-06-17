@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CheckPolarFsQuotaConsistencyRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to repair an inconsistent quota. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>false</para>
+        /// </description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,6 +26,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? EnableRepair { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to calculate the total usage of the directory in strict mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>false</para>
+        /// </description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -26,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? EnableStrictCalculate { get; set; }
 
         /// <summary>
+        /// <para>The directory path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/test</para>
         /// </summary>
@@ -34,6 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PolarFS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAccountPasswordZonalRequest : TeaModel {
         /// <summary>
+        /// <para>The account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>A client-generated, case-sensitive token that you can use to ensure the idempotence of the request. The token must be unique among different requests and can be up to 64 ASCII characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The new password for the account. The password must meet the following requirements:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// </description></item>
+        /// <item><description><para>Be 8 to 32 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>The special characters are <c>!@#$%^&amp;*()_+-=</c>.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The password type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Tair</para>
         /// </summary>

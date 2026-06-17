@@ -14,13 +14,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the I/O Burst feature for the ESSD AutoPL disk. Valid value:</para>
+        /// <para>Specifies if the I/O performance burst feature is enabled for an ESSD AutoPL disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled (Default)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is available only when the StorageType parameter is set to ESSDAUTOPL.</para>
+        /// <para>This parameter applies only when StorageType is set to ESSDAUTOPL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,6 +33,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BurstingEnabled { get; set; }
 
         /// <summary>
+        /// <para>A client-generated token that ensures request idempotence. The token must be unique for each request. It is case-sensitive and can be up to 64 ASCII characters long.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f******************</para>
         /// </summary>
@@ -39,6 +43,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,6 +54,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The modification type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Upgrade</b>: Upgrades the storage performance.</para>
+        /// </description></item>
+        /// <item><description><para><b>Downgrade</b>: Downgrades the storage performance.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Upgrade</para>
         /// </summary>
@@ -65,6 +78,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>Valid values: 0 to min{50,000, 1000 \* capacity - baseline performance}.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>Baseline performance = min{1,800 + 50 \* capacity, 50,000}.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <remarks>
+        /// <para>This parameter applies only when StorageType is set to ESSDAUTOPL.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2500</para>
         /// </summary>
@@ -77,6 +99,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The target storage type. Valid values for Enterprise Edition:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>PSL5</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PSL4</b></para>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid values for Standard Edition:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>ESSDPL0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ESSDPL1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ESSDPL2</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ESSDPL3</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ESSDAUTOPL</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ESSDAUTOPL</para>
         /// </summary>

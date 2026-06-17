@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// <para>The dedicated cluster ID.</para>
+        /// <para>The ID of the dedicated cluster.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>VpcId</b> and <b>DedicatedHostGroupId</b> parameters.</para>
+        /// <para>Specify at least one of the <b>VpcId</b> and <b>DedicatedHostGroupId</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: 1.</para>
+        /// <para>The page number of the list. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 50. The default value is 50.</para>
+        /// <para>The number of entries to return on each page for a paged query. The maximum value is 50. The default value is 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the vSwitch is deployed.</para>
+        /// <para>The region ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -83,9 +83,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private type (VPC) to which the vSwitch belongs.</para>
+        /// <para>The ID of the virtual private cloud (VPC) to which the vSwitch belongs.</para>
         /// <remarks>
-        /// <para> You must specify at least one of the <b>VpcId</b> and <b>DedicatedHostGroupId</b> parameters.</para>
+        /// <para>Specify at least one of the <b>VpcId</b> and <b>DedicatedHostGroupId</b> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the zone to which the vSwitch belongs.</para>
+        /// <para>The zone ID of the vSwitch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-d</para>

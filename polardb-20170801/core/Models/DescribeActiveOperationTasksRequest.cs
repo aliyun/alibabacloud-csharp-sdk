@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActiveOperationTasksRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to allow cancellation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>-1</b> (default): all.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: returns only tasks that do not allow cancellation.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: returns only tasks that allow cancellation.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>-1</para>
         /// </summary>
@@ -18,6 +28,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? AllowCancel { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to allow time modification. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>-1</b> (default): all.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: returns only tasks that do not allow time modification.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: returns only tasks that allow time modification.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>-1</para>
         /// </summary>
@@ -26,6 +46,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? AllowChange { get; set; }
 
         /// <summary>
+        /// <para>The task level. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>all</b> (default): all.</para>
+        /// </description></item>
+        /// <item><description><para><b>S0</b>: returns tasks at the abnormal repair level.</para>
+        /// </description></item>
+        /// <item><description><para><b>S1</b>: returns tasks at the system maintenance level.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>all</para>
         /// </summary>
@@ -34,6 +64,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChangeLevel { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query detailed information about all clusters under your account, including cluster IDs.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-3ns***********d5d</para>
         /// </summary>
@@ -42,6 +77,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The database engine type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
         /// </summary>
@@ -58,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. The value must be an integer that is greater than 0. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,11 +113,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b> (default)</description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b> (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -83,6 +131,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the pending event.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,6 +157,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>-1: all tasks.</para>
+        /// </description></item>
+        /// <item><description><para>3: pending tasks.</para>
+        /// </description></item>
+        /// <item><description><para>4: tasks in progress.</para>
+        /// </description></item>
+        /// <item><description><para>5: successfully completed tasks.</para>
+        /// </description></item>
+        /// <item><description><para>6: failed tasks.</para>
+        /// </description></item>
+        /// <item><description><para>7: canceled tasks.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>-1</para>
         /// </summary>
@@ -113,6 +181,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? Status { get; set; }
 
         /// <summary>
+        /// <para>The type of the pending event task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>DatabaseSoftwareUpgrading</b>: database software upgrade</para>
+        /// </description></item>
+        /// <item><description><para><b>DatabaseHardwareMaintenance</b>: hardware maintenance and upgrade</para>
+        /// </description></item>
+        /// <item><description><para><b>DatabaseStorageUpgrading</b>: database storage upgrade</para>
+        /// </description></item>
+        /// <item><description><para><b>DatabaseProxyUpgrading</b>: proxy minor version upgrade</para>
+        /// </description></item>
+        /// <item><description><para><b>all</b>: returns all types of pending events</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>When <c>Region</c> is set to <b>all</b>, <c>TaskType</c> must also be set to <b>all</b>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>DatabaseProxyUpgrading</para>
         /// </summary>

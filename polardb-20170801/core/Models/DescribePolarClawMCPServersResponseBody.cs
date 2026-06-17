@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarClawMCPServersResponseBody : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The message returned for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The configurations of the MCP servers.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;dev-mcp-server&quot;: &quot;{\&quot;args\&quot;:[\&quot;-y\&quot;,\&quot;@polarclaw/mcp-dev\&quot;],\&quot;command\&quot;:\&quot;node\&quot;}&quot;

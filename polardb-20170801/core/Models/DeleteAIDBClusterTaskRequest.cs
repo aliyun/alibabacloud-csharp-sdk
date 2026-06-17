@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAIDBClusterTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pm-2ze9***</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PolarDB database instance for the AI model service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-2zejpr***</para>
         /// </summary>

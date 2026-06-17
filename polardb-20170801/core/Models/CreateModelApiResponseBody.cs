@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateModelApiResponseBody : TeaModel {
         /// <summary>
+        /// <para>The invocation endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string InvokeEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The model API ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mi-xxxxxx</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApiId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The model API status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
         /// </summary>

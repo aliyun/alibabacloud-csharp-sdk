@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarFsObjectsRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-***</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The list of objects to delete.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ObjectsToDelete")]
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<string> ObjectsToDelete { get; set; }
 
         /// <summary>
+        /// <para>The PolarLakebase instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

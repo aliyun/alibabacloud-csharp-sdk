@@ -9,23 +9,55 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyBackupPolicyShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The advanced backup policies.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported for PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is supported only for clusters for which <c>BackupPolicyLevel</c> is set to <c>Advanced</c>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// </summary>
         [NameInMap("AdvancedDataPolicies")]
         [Validation(Required=false)]
         public string AdvancedDataPoliciesShrink { get; set; }
 
         /// <summary>
-        /// <para>The backup frequency. Default value: Normal. Valid values:</para>
+        /// <para>The backup frequency. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: standard backup. The system backs up data once a day.</description></item>
-        /// <item><description><b>2/24H</b>: enhanced backup. The system backs up data every 2 hours.</description></item>
-        /// <item><description><b>3/24H</b>: enhanced backup. The system backs up data every 3 hours.</description></item>
-        /// <item><description><b>4/24H</b>: enhanced backup. The system backs up data every 4 hours.</description></item>
+        /// <item><description><para><b>Normal</b> (default): standard backup. The cluster is backed up once a day.</para>
+        /// </description></item>
+        /// <item><description><para><b>2/24H</b>: high-frequency backup. The cluster is backed up every 2 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>3/24H</b>: high-frequency backup. The cluster is backed up every 3 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>4/24H</b>: high-frequency backup. The cluster is backed up every 4 hours.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you enable enhanced backup, all backups are retained for 24 hours. For backup files that are created earlier than the previous 24 hours, the system permanently retains only the first backup that is created after 00:00 every day and deletes the rest.</description></item>
-        /// <item><description>If you enable enhanced backup, <b>PreferredBackupPeriod</b> is automatically set to all days in a week (from Monday to Sunday).</description></item>
-        /// <item><description>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>If you enable high-frequency backup, all backups completed within the last 24 hours are retained. For backups older than 24 hours, the system retains only the first backup completed after 00:00 each day and deletes the rest.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>If you enable high-frequency backup, the <b>PreferredBackupPeriod</b> parameter is automatically set to all days of the week (from Monday to Sunday).</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported if your PolarDB for MySQL cluster is in a region that supports the cross-region backup feature. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -36,19 +68,50 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string BackupFrequency { get; set; }
 
+        /// <summary>
+        /// <para>The level of the backup policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Normal</b>: standard backup</para>
+        /// </description></item>
+        /// <item><description><para><b>Advanced</b>: advanced backup</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported for PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>Check the <c>AdvancedPolicyOption</c> parameter in the response of the <a href="https://help.aliyun.com/document_detail/2319231.html">DescribeBackupPolicy</a> operation to determine whether the cluster supports advanced backup. If the cluster supports advanced backup, you can request this feature in <a href="~611727~~">Advanced backup settings</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>After you enable advanced backup, you <b>cannot</b> switch back to standard backup.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Normal</para>
+        /// </summary>
         [NameInMap("BackupPolicyLevel")]
         [Validation(Required=false)]
         public string BackupPolicyLevel { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain backups when a cluster is deleted. Valid values:</para>
+        /// <para>Specifies whether to retain backups when you delete the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b>: permanently retains all backups.</description></item>
-        /// <item><description><b>LATEST</b>: permanently retains the most recent backup.</description></item>
-        /// <item><description><b>NONE</b>: does not retain backups.</description></item>
+        /// <item><description><para><b>ALL</b>: Permanently retains all backups.</para>
+        /// </description></item>
+        /// <item><description><para><b>LATEST</b>: Permanently retains the last backup.</para>
+        /// </description></item>
+        /// <item><description><para><b>NONE</b>: Does not retain backup sets.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value of the parameter is NONE.</para>
+        /// <para>The default value is <c>NONE</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,9 +122,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupRetentionPolicyOnClusterDeletion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters that are deployed in a specified region, such as the cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in a specified region, including the cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -73,17 +136,31 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The frequency of level-1 backups. Default value: Normal. Valid values:</para>
+        /// <para>The backup frequency. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: standard backup. The system backs up data once a day.</description></item>
-        /// <item><description><b>2/24H</b>: enhanced backup. The system backs up data every 2 hours.</description></item>
-        /// <item><description><b>3/24H</b>: enhanced backup. The system backs up data every 3 hours.</description></item>
-        /// <item><description><b>4/24H</b>: enhanced backup. The system backs up data every 4 hours.</description></item>
+        /// <item><description><para><b>Normal</b> (default): standard backup. The cluster is backed up once a day.</para>
+        /// </description></item>
+        /// <item><description><para><b>2/24H</b>: high-frequency backup. The cluster is backed up every 2 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>3/24H</b>: high-frequency backup. The cluster is backed up every 3 hours.</para>
+        /// </description></item>
+        /// <item><description><para><b>4/24H</b>: high-frequency backup. The cluster is backed up every 4 hours.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</description></item>
-        /// <item><description>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported for PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported if your PolarDB for MySQL cluster is in a region that supports the cross-region backup feature. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -95,21 +172,41 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DataLevel1BackupFrequency { get; set; }
 
         /// <summary>
-        /// <para>The backup cycle of level-1 backups. Valid values:</para>
+        /// <para>The level-1 backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><para><b>Monday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Tuesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Wednesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Thursday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Friday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Saturday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Sunday</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You need to specify at least two values. Separate multiple values with commas (,).</description></item>
-        /// <item><description>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</description></item>
-        /// <item><description>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>You must select at least two days. Separate multiple values with commas.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported for PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported if your PolarDB for MySQL cluster is in a region that supports the cross-region backup feature. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -121,7 +218,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DataLevel1BackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The retention period of level-1 backups. Valid values: 3 to 14. Unit: days.</para>
+        /// <para>The retention period for level-1 backups, in days. Valid values: 3 to 14.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -131,11 +233,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DataLevel1BackupRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The time period during which automatic backup for level-1 backup is performed. The time period is in the <c>hh:mmZ-hh:mmZ</c> format and is displayed in UTC. The start time and end time are on the hour and have an interval of 1 hour. Example: <c>14:00Z-15:00Z</c>.</para>
+        /// <para>The time window for automatic backups. Specify the time in UTC and in the <c>hh:mmZ-hh:mmZ</c> format. The time window must be a one-hour period that starts on the hour. For example, <c>14:00Z-15:00Z</c>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</description></item>
-        /// <item><description>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// <item><description><para>This parameter is not supported for PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is not supported if your PolarDB for MySQL cluster is in a region that supports the cross-region backup feature. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -147,7 +251,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DataLevel1BackupTime { get; set; }
 
         /// <summary>
-        /// <para>The region where the cross-region level-2 backup is stored. For information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</para>
+        /// <para>The destination region for the cross-region level-2 backup. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -159,12 +268,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The retention period of cross-region level-2 backups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The cross-region level-2 backup feature is disabled.</description></item>
-        /// <item><description><b>30 to 7300</b>: Cross-region level-2 backups are retained for 30 to 7,300 days.</description></item>
-        /// <item><description><b>1</b>: Cross-region level-2 backups are permanently retained.</description></item>
+        /// <item><description><para><b>0</b>: Disables the cross-region level-2 backup feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>30 to 7300</b>: The retention period of cross-region level-2 backups, in days.</para>
+        /// </description></item>
+        /// <item><description><para><b>-1</b>: Cross-region level-2 backups are permanently retained.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value of the parameter is <b>0</b>.</para>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>When you create a cluster, the default value is <b>0</b>, which disables the cross-region level-2 backup feature.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -175,21 +296,41 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DataLevel2BackupAnotherRegionRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The backup cycle of level-2 backups. Valid values:</para>
+        /// <para>The level-2 backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><para><b>Monday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Tuesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Wednesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Thursday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Friday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Saturday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Sunday</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You need to specify at least two values. Separate multiple values with commas (,).</description></item>
-        /// <item><description>This parameter is invalid for PolarDB for Oracle clusters or PolarDB for PostgreSQL clusters.</description></item>
-        /// <item><description>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed does not support the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>You must select at least two days. Separate multiple values with commas.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported for PolarDB for PostgreSQL (compatible with Oracle) and PolarDB for PostgreSQL.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported if your PolarDB for MySQL cluster is in a region that supports the cross-region backup feature. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -203,12 +344,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The retention period of level-2 backups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The level-2 backup feature is disabled.</description></item>
-        /// <item><description><b>30 to 7300</b>: Level-2 backups are retained for 30 to 7,300 days.</description></item>
-        /// <item><description><b>1</b>: Level-2 backups are permanently retained.</description></item>
+        /// <item><description><para><b>0</b>: Disables the level-2 backup feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>30 to 7300</b>: The retention period of level-2 backups, in days.</para>
+        /// </description></item>
+        /// <item><description><para><b>-1</b>: Level-2 backups are permanently retained.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value of this parameter is <b>0</b>.</para>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>When you create a cluster, the default value is <b>0</b>, which disables the level-2 backup feature.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -229,18 +382,35 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The backup cycle. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Monday</b></description></item>
-        /// <item><description><b>Tuesday</b></description></item>
-        /// <item><description><b>Wednesday</b></description></item>
-        /// <item><description><b>Thursday</b></description></item>
-        /// <item><description><b>Friday</b></description></item>
-        /// <item><description><b>Saturday</b></description></item>
-        /// <item><description><b>Sunday</b></description></item>
+        /// <item><description><para><b>Monday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Tuesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Wednesday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Thursday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Friday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Saturday</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Sunday</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You need to specify at least two values. Separate multiple values with commas (,).</description></item>
-        /// <item><description>This parameter is invalid if the region where your PolarDB for MySQL cluster is deployed supports the cross-region backup feature. For information about the regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>You must select at least two days. Separate multiple values with commas.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>This parameter is not supported if your PolarDB for MySQL cluster is in a region that supports the cross-region backup feature. For more information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>After you enable advanced backup, this parameter is no longer effective. Use the <c>AdvancedDataPolicies</c> parameter instead.</description></item>
+        /// </list>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -252,7 +422,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PreferredBackupPeriod { get; set; }
 
         /// <summary>
-        /// <para>The time period during which automatic backup for level-1 backup is performed. The format is <c>hh:mmZ-hh:mmZ</c> format. The time is displayed in UTC. The start time and end time are on the hour and with an interval of one hour. Example: <c>14:00Z-15:00Z</c>.</para>
+        /// <para>The time window for automatic backups. Specify the time in UTC and in the <c>hh:mmZ-hh:mmZ</c> format. The time window must be a one-hour period that starts on the hour. For example, <c>14:00Z-15:00Z</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15:00Z-16:00Z</para>

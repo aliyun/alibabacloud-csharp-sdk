@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClustersResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the AI clusters.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public DescribeAIDBClustersResponseBodyItems Items { get; set; }
@@ -130,6 +133,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -138,6 +143,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>
@@ -146,7 +153,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9D6CE7C6-1C52-5BF6-B3D7-10977D44542C</para>
@@ -156,6 +163,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

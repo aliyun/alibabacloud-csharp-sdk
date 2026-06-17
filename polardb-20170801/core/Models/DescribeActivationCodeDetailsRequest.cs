@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? ActivationCodeId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud order ID (including the virtual order ID).</para>
+        /// <para>The Alibaba Cloud order ID, including virtual orders.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

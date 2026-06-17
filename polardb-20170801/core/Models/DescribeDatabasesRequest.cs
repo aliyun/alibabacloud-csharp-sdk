@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. The value must be an integer that is greater than 0 and does not exceed the maximum value of an integer. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -52,11 +52,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>30</b>.</para>
         /// 

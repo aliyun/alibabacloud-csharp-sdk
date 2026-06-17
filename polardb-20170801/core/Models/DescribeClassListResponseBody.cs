@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeClassListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster specifications.</para>
+        /// <para>The list of cluster specifications.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeClassListResponseBodyItems> Items { get; set; }
         public class DescribeClassListResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The specifications of the cluster.</para>
+            /// <para>The cluster specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>polar.mysql.x4.medium</para>
@@ -27,12 +27,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ClassCode { get; set; }
 
             /// <summary>
-            /// <para>The instance family of the cluster. Valid values:</para>
+            /// <para>The family of the cluster specifications. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Exclusive package: dedicated</description></item>
-            /// <item><description>Exclusive physical machine: dedicated host</description></item>
-            /// <item><description>Beginner: starter</description></item>
-            /// <item><description>Historical specifications: historical</description></item>
+            /// <item><description><para>Exclusive package</para>
+            /// </description></item>
+            /// <item><description><para>Exclusive physical machine</para>
+            /// </description></item>
+            /// <item><description><para>Beginner</para>
+            /// </description></item>
+            /// <item><description><para>Historical specifications</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ClassGroup { get; set; }
 
             /// <summary>
-            /// <para>The specification type of the cluster.</para>
+            /// <para>The specification type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>enterprise</para>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ClassTypeLevel { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPU cores. Unit: cores.</para>
+            /// <para>The number of CPU cores. Unit: cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Cpu { get; set; }
 
             /// <summary>
-            /// <para>The maximum ESSD storage capacity. Unit: TB.</para>
+            /// <para>The maximum storage capacity of an ESSD. Unit: TB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>64</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EssdMaxStorageCapacity { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent connections in the cluster.</para>
+            /// <para>The maximum number of concurrent connections to the cluster.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8000</para>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MaxConnections { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS. Unit: operations per second.</para>
+            /// <para>The maximum IOPS. Unit: IOPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32000</para>
@@ -103,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MaxStorageCapacity { get; set; }
 
             /// <summary>
-            /// <para>The memory size. Unit: GB.</para>
+            /// <para>The memory capacity. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32</para>
@@ -113,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MemoryClass { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS of an enhanced SSD (ESSD) of performance level 1 (PL1). Unit: operations per second.</para>
+            /// <para>The maximum IOPS of an Enhanced SSD (ESSD) at performance level 1 (PL1). Unit: IOPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000</para>
@@ -123,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Pl1MaxIOPS { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS of an ESSD of performance level 2 (PL2). Unit: operations per second.</para>
+            /// <para>The maximum IOPS of an ESSD at PL2. Unit: IOPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100000</para>
@@ -133,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Pl2MaxIOPS { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS of an ESSD of performance level 3 (PL3). Unit: operations per second.</para>
+            /// <para>The maximum IOPS of an ESSD at PL3. Unit: IOPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000000</para>
@@ -143,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Pl3MaxIOPS { get; set; }
 
             /// <summary>
-            /// <para>The maximum PSL4/PSL5 storage capacity. Unit: TB.</para>
+            /// <para>The maximum storage capacity of PSL4/PSL5. Unit: TB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>
@@ -153,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PolarStoreMaxStorageCapacity { get; set; }
 
             /// <summary>
-            /// <para>The maximum Input/output operations per second (IOPS) for PolarStore Level 4 (PSL4). Unit: operations per second.</para>
+            /// <para>The maximum input/output operations per second (IOPS) of PSL4. Unit: IOPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48000</para>
@@ -163,7 +167,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Psl4MaxIOPS { get; set; }
 
             /// <summary>
-            /// <para>The maximum IOPS for PolarStore Level 5 (PSL5). Unit: operations per second.</para>
+            /// <para>The maximum IOPS of PSL5. Unit: IOPS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>96000</para>
@@ -174,11 +178,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The additional price.</para>
-            /// <para>Unit: cents (USD).</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;Unit: cents (CNY).
+            /// &lt;props=&quot;intl&quot;&gt;Unit: cents (USD).</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the same as the value of ReferencePrice.</description></item>
-            /// <item><description>If you set MasterHa to cluster or single, the value of ReferenceExtPrice is the price of the single-node cluster.</description></item>
+            /// <item><description><para>If you set the MasterHa parameter to cluster or single, the value of this parameter is the same as the value of the ReferencePrice parameter.</para>
+            /// </description></item>
+            /// <item><description><para>If you set the MasterHa parameter to cluster or single, the price for a single-node commodity is returned.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -191,11 +198,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The price.</para>
-            /// <para>Unit: cents (USD).</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;Unit: cents (CNY).
+            /// &lt;props=&quot;intl&quot;&gt;Unit: cents (USD).</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>If you set CommodityCode to a commodity that uses the pay-as-you-go billing method, ReferencePrice indicates the hourly fee that you need to pay.</description></item>
-            /// <item><description>If you set CommodityCode to a commodity that uses the subscription billing method, ReferencePrice indicates the monthly fee that you need to pay.</description></item>
+            /// <item><description><para>If you set the CommodityCode parameter to a pay-as-you-go commodity code, the hourly price is returned.</para>
+            /// </description></item>
+            /// <item><description><para>If you set the CommodityCode parameter to a subscription commodity code, the monthly price is returned.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -209,7 +219,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -219,7 +229,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69A85BAF-1089-4CDF-A82F-0A140F******</para>

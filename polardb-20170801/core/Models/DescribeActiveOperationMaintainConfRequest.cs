@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-re*********</para>
         /// </summary>

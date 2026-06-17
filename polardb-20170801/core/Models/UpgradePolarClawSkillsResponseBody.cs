@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpgradePolarClawSkillsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>45D24263-7E3A-4140-9472-************</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>32077061</para>
         /// </summary>

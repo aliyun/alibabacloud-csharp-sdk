@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAvailableResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The available zones of the cluster.</para>
+        /// <para>The list of available resources.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
         public List<DescribeDBClusterAvailableResourcesResponseBodyAvailableZones> AvailableZones { get; set; }
         public class DescribeDBClusterAvailableResourcesResponseBodyAvailableZones : TeaModel {
             /// <summary>
-            /// <para>The region ID of the cluster.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The database engines that the available resources support.</para>
+            /// <para>The list of available engines.</para>
             /// </summary>
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
@@ -43,16 +43,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                     /// <summary>
                     /// <para>The edition of the cluster. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>Normal</b>: Cluster Edition.</description></item>
-                    /// <item><description><b>Basic</b>: Single Node Edition.</description></item>
-                    /// <item><description><b>ArchiveNormal</b>: X-Engine.</description></item>
-                    /// <item><description><b>NormalMultimaster</b>: Multi-master Cluster (Database/Table) Edition.</description></item>
-                    /// <item><description><b>SENormal</b>: Standard Edition.</description></item>
+                    /// <item><description><para><b>Normal</b>: Cluster Edition.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Basic</b>: Single Node Edition.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>ArchiveNormal</b>: X-Engine.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>NormalMultimaster</b>: Multi-master Cluster (Database/Table) Edition.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>SENormal</b>: Standard Edition.</para>
+                    /// </description></item>
                     /// </list>
                     /// <remarks>
                     /// <list type="bullet">
-                    /// <item><description>Only PolarDB for MySQL supports Single Node Edition.</description></item>
-                    /// <item><description>Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</description></item>
+                    /// <item><description><para>Only PolarDB for MySQL supports Single Node Edition.</para>
+                    /// </description></item>
+                    /// <item><description><para>Only PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster (Database/Table) Edition.</para>
+                    /// </description></item>
                     /// </list>
                     /// </remarks>
                     /// 
@@ -88,7 +95,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The zone ID of the cluster.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-i</para>
@@ -100,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2B19F698-8FFC-4918-B9E2-58D878******</para>

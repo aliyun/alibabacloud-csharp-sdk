@@ -26,10 +26,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable real-time synchronization. Valid values:</para>
+        /// <para>Specifies the synchronization mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b>: T + 1</description></item>
+        /// <item><description><para><b>true</b>: Real-time synchronization.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: T+1 synchronization.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

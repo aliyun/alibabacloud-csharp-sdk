@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarFsObjectsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The PolarLakebase instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-2ze0i7*****</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C890995A-CF06-4F4D-8DB8-DD26C2******</para>

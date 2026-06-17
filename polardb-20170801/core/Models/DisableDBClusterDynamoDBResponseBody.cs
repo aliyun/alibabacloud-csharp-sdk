@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DisableDBClusterDynamoDBResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>925B84D9-CA72-432C-95CF-738C22******</para>

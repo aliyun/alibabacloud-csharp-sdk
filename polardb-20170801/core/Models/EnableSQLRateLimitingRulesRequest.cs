@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class EnableSQLRateLimitingRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable or disable the specified SQL throttling rules. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Enable.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disable.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter applies only when you specify the <b>RuleNameList</b> parameter.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +57,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The names of the SQL throttling rules to enable. To specify multiple rules, separate the names with a comma (,).</para>
+        /// <remarks>
+        /// <para>You can view all SQL throttling rules and their names on the SQL Firewall tab of the Security Management page for the cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

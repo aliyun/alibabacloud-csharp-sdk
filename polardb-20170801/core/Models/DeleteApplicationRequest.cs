@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteApplicationRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

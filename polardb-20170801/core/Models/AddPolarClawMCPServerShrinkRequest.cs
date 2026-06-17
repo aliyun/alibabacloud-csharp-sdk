@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AddPolarClawMCPServerShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The configuration object for the MCP server.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;command&quot;: &quot;node&quot;,
@@ -34,6 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerConfigShrink { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for the MCP server.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the original resource group.</para>
+        /// <para>The original resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-**********</para>

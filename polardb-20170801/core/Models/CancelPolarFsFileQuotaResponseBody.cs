@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CancelPolarFsFileQuotaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The file paths for which the quotas were deleted. Multiple paths are separated by a comma (<c>,</c>).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/path1,/path2</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FilePathIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Polarlakebase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-2ze0i74ka607*****</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2FED790E-FB61-4721-8C1C-07C627******</para>

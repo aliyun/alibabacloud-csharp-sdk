@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpgradePolarClawPluginRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The name and version of the new npm package.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NpmPackage { get; set; }
 
         /// <summary>
+        /// <para>The ID of the plugin to upgrade.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway after the upgrade. The default is true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

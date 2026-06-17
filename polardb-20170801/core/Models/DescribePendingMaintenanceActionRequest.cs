@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to return the historical tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: returns the current task.</description></item>
-        /// <item><description><b>1</b>: returns the historical tasks.</description></item>
+        /// <item><description><para><b>0</b>: returns the current task.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: returns the historical tasks.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>0</b>.</para>
         /// 
@@ -57,8 +59,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The region ID of the pending event. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions and zones that are supported by PolarDB.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can set this parameter to <b>all</b> to view all pending events within your account.</description></item>
-        /// <item><description>If you set <c>Region</c> to <b>all</b>, you must set <c>TaskType</c> to <b>all</b>.</description></item>
+        /// <item><description><para>You can set this parameter to <b>all</b> to view all pending events within your account.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <c>Region</c> to <b>all</b>, you must set <c>TaskType</c> to <b>all</b>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -95,11 +99,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The task type of pending events. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DatabaseSoftwareUpgrading</b>: database software upgrades</description></item>
-        /// <item><description><b>DatabaseHardwareMaintenance</b>: hardware maintenance and upgrades</description></item>
-        /// <item><description><b>DatabaseStorageUpgrading</b>: database storage upgrades</description></item>
-        /// <item><description><b>DatabaseProxyUpgrading</b>: minor version upgrades of the proxy</description></item>
-        /// <item><description><b>all</b>: queries the details of the pending events of all preceding types.</description></item>
+        /// <item><description><para><b>DatabaseSoftwareUpgrading</b>: database software upgrades</para>
+        /// </description></item>
+        /// <item><description><para><b>DatabaseHardwareMaintenance</b>: hardware maintenance and upgrades</para>
+        /// </description></item>
+        /// <item><description><para><b>DatabaseStorageUpgrading</b>: database storage upgrades</para>
+        /// </description></item>
+        /// <item><description><para><b>DatabaseProxyUpgrading</b>: minor version upgrades of the proxy</para>
+        /// </description></item>
+        /// <item><description><para><b>all</b>: returns pending events of all preceding types.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>If the <c>Region</c> parameter is set to <b>all</b>, the <c>TaskType</c> parameter must be set to <b>all</b>.</para>

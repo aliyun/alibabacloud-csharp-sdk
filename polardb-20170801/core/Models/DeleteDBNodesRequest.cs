@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDBNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. The client generates this value, which must be unique for each request. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a42***********</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The service provider of the node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENS</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CloudProvider { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,9 +41,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the nodes.</para>
+        /// <para>The IDs of the nodes to be deleted.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your Alibaba Cloud account, such as the cluster ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including node IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -55,15 +57,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RO</description></item>
-        /// <item><description>STANDBY</description></item>
-        /// <item><description>DLNode</description></item>
-        /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>DLNode: AI node</description></item>
-        /// <item><description>STANDBY: standby node</description></item>
-        /// <item><description>RO: read-only node</description></item>
+        /// <item><description><para>RO</para>
+        /// </description></item>
+        /// <item><description><para>STANDBY</para>
+        /// </description></item>
+        /// <item><description><para>DLNode</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

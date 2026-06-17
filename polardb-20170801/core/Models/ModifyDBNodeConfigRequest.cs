@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBNodeConfigRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the node configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConfigName { get; set; }
 
         /// <summary>
+        /// <para>The configuration of the node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConfigValue { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including the cluster ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +46,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cluster node.</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/185342.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including the node ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

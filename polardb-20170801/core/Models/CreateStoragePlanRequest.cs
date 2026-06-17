@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can only contain ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate this token on your client. The token must be unique across different requests. It is case-sensitive and can contain up to 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
@@ -34,8 +34,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The unit of the subscription duration for the storage plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b></description></item>
-        /// <item><description><b>Year</b></description></item>
+        /// <item><description><para><b>Month</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Year</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The capacity of the storage plan. Unit: GB. Valid values: 50, 100, 200, 300, 500, 1000, 2000, 3000, 5000, 10000, 15000, 20000, 25000, 30000, 50000, 100000, and 200000</para>
+        /// <para>The capacity of the storage plan, in GB. Valid values: 50, 100, 200, 300, 500, 1,000, 2,000, 3,000, 5,000, 10,000, 15,000, 20,000, 25,000, 30,000, 50,000, 100,000, and 200,000.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,8 +78,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The type of the storage plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Mainland</b>: The storage plan is used inside the Chinese mainland.</description></item>
-        /// <item><description><b>Overseas</b>: The storage plan is used outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>Mainland</b>: For use in the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>Overseas</b>: For use in China (Hong Kong) and regions outside China.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -91,8 +95,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The subscription duration of the storage plan.</para>
         /// <list type="bullet">
-        /// <item><description>If <b>Period</b> is set to <b>Month</b>, the value ranges from 1 to 9.</description></item>
-        /// <item><description>If <b>Period</b> is set to <b>Year</b>, the value can be 1, 2, 3, or 5.</description></item>
+        /// <item><description><para>If <b>Period</b> is set to <b>Month</b>, the value ranges from 1 to 9.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>Period</b> is set to <b>Year</b>, the valid values are 1, 2, 3, and 5.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

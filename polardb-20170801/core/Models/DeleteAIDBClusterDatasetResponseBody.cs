@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAIDBClusterDatasetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the Data Service instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pcs-2zeei***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DataServiceId { get; set; }
 
         /// <summary>
+        /// <para>The dataset ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pds-xxxxxxxxxxxxxxxx</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD35F3-F3-44CA-AFFF-BAF869******</para>

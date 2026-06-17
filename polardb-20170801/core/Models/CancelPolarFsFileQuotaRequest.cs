@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CancelPolarFsFileQuotaRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the PolarDB cluster that the application depends on.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The file paths. Separate multiple paths with a comma (<c>,</c>).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FilePathIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Polarlakebase instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

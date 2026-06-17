@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeUpgradeReportRequest : TeaModel {
         /// <summary>
+        /// <para>The product series. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>Normal</b>: Cluster Edition (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>SENormal</b>: Standard Edition</para>
+        /// </description></item>
+        /// </list>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/183258.html">Product series</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
         /// </summary>
@@ -18,6 +27,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreationCategory { get; set; }
 
         /// <summary>
+        /// <para>The database type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
         /// </summary>
@@ -26,6 +43,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
+        /// <para>The compatible database version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8.0</para>
         /// </summary>
@@ -42,6 +61,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -50,6 +71,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -58,6 +81,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -74,6 +102,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the source instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-2zen5pe5vi56447d0</para>
         /// </summary>
@@ -82,6 +112,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceDBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The task status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Running</para>
         /// </summary>
@@ -90,6 +122,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2321321</para>
         /// </summary>
@@ -98,6 +132,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>A special metric. This parameter is supported only for instances that use the Tair architecture.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>orca</para>
         /// </summary>

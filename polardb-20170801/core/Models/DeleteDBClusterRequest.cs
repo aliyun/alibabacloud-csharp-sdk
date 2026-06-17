@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The retention policy applied to the backup sets when the cluster is released. Valid values:</para>
+        /// <para>The retention policy for backup sets when the cluster is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b>: permanently retains all backup sets.</description></item>
-        /// <item><description><b>LATEST</b>: permanently retains the most recent backup set that is automatically created before the cluster is released.</description></item>
-        /// <item><description><b>NONE</b>: does not retain backup sets.</description></item>
+        /// <item><description><para><b>ALL</b>: permanently retains all backup sets.</para>
+        /// </description></item>
+        /// <item><description><para><b>LATEST</b>: permanently retains the last backup set. The system automatically creates a new backup before the cluster is deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>NONE</b>: does not retain any backup sets after the cluster is deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,6 +27,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string BackupRetentionPolicyOnClusterDeletion { get; set; }
 
+        /// <summary>
+        /// <para>The cloud service provider of the instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ENS</para>
+        /// </summary>
         [NameInMap("CloudProvider")]
         [Validation(Required=false)]
         public string CloudProvider { get; set; }

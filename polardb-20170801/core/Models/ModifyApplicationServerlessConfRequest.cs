@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyApplicationServerlessConfRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The list of Serverless configurations.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ServerlessConfList")]
@@ -27,6 +29,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<ModifyApplicationServerlessConfRequestServerlessConfList> ServerlessConfList { get; set; }
         public class ModifyApplicationServerlessConfRequestServerlessConfList : TeaModel {
             /// <summary>
+            /// <para>The type of the application sub-component.</para>
+            /// <para>For Supabase, valid values are:</para>
+            /// <list type="bullet">
+            /// <item><description><para>gateway</para>
+            /// </description></item>
+            /// <item><description><para>backend</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>gateway</para>
             /// </summary>
@@ -35,6 +46,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ComponentType { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of PCUs for a single node. Valid values: 0 to 16.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16</para>
             /// </summary>
@@ -43,6 +56,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ScaleMax { get; set; }
 
             /// <summary>
+            /// <para>The minimum number of PolarDB Capacity Units (PCUs) for a single node. Valid values: 0 to 16.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>

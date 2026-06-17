@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The ID of the parameter template.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the list of parameter templates in a region, including their IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>514D1D87-E243-4A5F-A87D-2785C3******</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ListPolarClawBindingsRequest : TeaModel {
         /// <summary>
+        /// <para>A list of agent IDs to filter the bindings.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>work,research</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<string> AgentList { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

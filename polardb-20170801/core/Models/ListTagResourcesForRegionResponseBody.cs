@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ListTagResourcesForRegionResponseBody : TeaModel {
         /// <summary>
+        /// <para>If the response does not return all results, this parameter is returned. You can use this token in the next request to continue the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>688C04E4-23F8-409F-8A38-B954D5******</para>
         /// </summary>

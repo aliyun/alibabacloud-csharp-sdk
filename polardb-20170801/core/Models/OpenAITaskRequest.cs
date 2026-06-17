@@ -23,8 +23,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>DLNode</b>: This node is an AI node.</description></item>
-        /// <item><description><b>SearchNode</b>: This node is a node for which the PolarDB for AI feature is enabled.</description></item>
+        /// <item><description><para><b>DLNode</b>: AI node.</para>
+        /// </description></item>
+        /// <item><description><para><b>SearchNode</b>: search AI node.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The password used to access the database for which you want to enable the PolarDB for AI feature.</para>
+        /// <para>The password of the database account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testPassword</para>
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
@@ -82,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The username used to access the database for which you want to enable the PolarDB for AI feature.</para>
+        /// <para>The database account on which to enable the PolarDB for AI feature.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testAccountName</para>

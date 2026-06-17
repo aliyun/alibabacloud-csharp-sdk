@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ContinueDBClusterMigrationRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster.</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to skip the current error. Valid values:</para>
+        /// <para><b>true</b>: Skips the error.</para>
+        /// <para><b>false</b>: Does not skip the error.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -36,6 +44,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
+        /// <remarks>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -44,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
         /// </summary>

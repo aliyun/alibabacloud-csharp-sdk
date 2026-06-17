@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationParametersRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <para>A list of subcomponent IDs. If you specify this parameter, the operation returns the parameters and parameter templates for only these components.</para>
+        /// </summary>
         [NameInMap("ComponentIdList")]
         [Validation(Required=false)]
         public List<string> ComponentIdList { get; set; }

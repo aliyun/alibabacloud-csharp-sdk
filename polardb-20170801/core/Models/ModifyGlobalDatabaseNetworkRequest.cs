@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyGlobalDatabaseNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>Create a global domain</para>
+        /// <para>Specifies whether to create a global domain name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,12 +20,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? EnableGlobalDomainName { get; set; }
 
         /// <summary>
-        /// <para>The description of the GDN. The description must meet the following requirements:</para>
+        /// <para>The description of the GDN. It must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The description cannot start with http:// or https://.</description></item>
-        /// <item><description>The description must start with a letter.</description></item>
-        /// <item><description>The description can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>The description must be 2 to 126 characters in length.</description></item>
+        /// <item><description><para>Cannot start with http\:// or https\://.</para>
+        /// </description></item>
+        /// <item><description><para>Must start with a letter or a Chinese character.</para>
+        /// </description></item>
+        /// <item><description><para>Can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>Must be 2 to 126 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GDNDescription { get; set; }
 
         /// <summary>
-        /// <para>The GDN ID.</para>
+        /// <para>The ID of the GDN.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>

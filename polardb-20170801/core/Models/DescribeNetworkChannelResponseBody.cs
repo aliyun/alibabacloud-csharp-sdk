@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeNetworkChannelResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of network channels.</para>
+        /// </summary>
         [NameInMap("ChannelInfos")]
         [Validation(Required=false)]
         public List<DescribeNetworkChannelResponseBodyChannelInfos> ChannelInfos { get; set; }
         public class DescribeNetworkChannelResponseBodyChannelInfos : TeaModel {
             /// <summary>
+            /// <para>The channel name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ch4</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ChannelName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the source cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pc-*************</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBClusterId { get; set; }
 
             /// <summary>
+            /// <para>The notes about the channel.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test update</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Notes { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the target cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pc-*************</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetDBClusterId { get; set; }
 
             /// <summary>
+            /// <para>The IP address of the target cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>33.<em>.</em>.240</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetIp { get; set; }
 
             /// <summary>
+            /// <para>The port of the target cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3389</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetPort { get; set; }
 
             /// <summary>
+            /// <para>The type of the target cluster.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>polardb_for_postgresql</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetType { get; set; }
 
             /// <summary>
+            /// <para>The ID of the VPC that contains the endpoint.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>vpc-2ze13g2c6j7j2jl*******</para>
             /// </summary>
@@ -88,7 +109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>925B84D9-CA72-432C-95CF-738C22******</para>

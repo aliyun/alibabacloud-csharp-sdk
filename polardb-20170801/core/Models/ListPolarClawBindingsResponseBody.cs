@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ListPolarClawBindingsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
         /// </summary>
@@ -17,12 +19,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <para>The list of bindings.</para>
+        /// </summary>
         [NameInMap("Bindings")]
         [Validation(Required=false)]
         public List<ListPolarClawBindingsResponseBodyBindings> Bindings { get; set; }
         public class ListPolarClawBindingsResponseBodyBindings : TeaModel {
             /// <summary>
-            /// <para>Agent ID</para>
+            /// <para>The agent ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>work</para>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AgentId { get; set; }
 
             /// <summary>
-            /// <para>Channel ID</para>
+            /// <para>The channel ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>feishu</para>
@@ -42,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>Account ID</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -54,6 +59,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -62,6 +69,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -70,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F2007D3-7E74-4ECB-89A8-BF130D******</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeScheduleTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result data.</para>
+        /// <para>The result set.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeScheduleTasksResponseBodyData Data { get; set; }
         public class DescribeScheduleTasksResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The page number of the page returned.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -37,14 +37,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The details of the scheduled tasks.</para>
+            /// <para>Details of scheduled tasks.</para>
             /// </summary>
             [NameInMap("TimerInfos")]
             [Validation(Required=false)]
             public List<DescribeScheduleTasksResponseBodyDataTimerInfos> TimerInfos { get; set; }
             public class DescribeScheduleTasksResponseBodyDataTimerInfos : TeaModel {
                 /// <summary>
-                /// <para>The type of the scheduled tasks.</para>
+                /// <para>The task type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CreateDBNodes</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the scheduled task.</para>
+                /// <para>The ID of the scheduled O\&amp;M task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>86293c29-a03d-4872-b625-***********</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The description of the cluster.</para>
+                /// <para>The cluster description.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test_cluster</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DbClusterDescription { get; set; }
 
                 /// <summary>
-                /// <para>The state of the cluster.</para>
+                /// <para>The cluster status.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Running</para>
@@ -94,9 +94,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DbClusterStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the order.</para>
+                /// <para>The order ID.</para>
                 /// <remarks>
-                /// <para> This parameter is returned only when you set the <c>Action</c> parameter to <b>CreateDBNodes</b> or <b>ModifyDBNodeClass</b>.</para>
+                /// <para>This parameter is returned only if <c>Action</c> is <b>CreateDBNodes</b> or <b>ModifyDBNodeClass</b>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string OrderId { get; set; }
 
                 /// <summary>
-                /// <para>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</para>
+                /// <para>The latest start time of the task. The time is in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-28T12:30Z</para>
@@ -116,12 +116,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string PlannedEndTime { get; set; }
 
+                /// <summary>
+                /// <para>The scheduled time for the transient switchover.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2021-01-28T12:30Z</para>
+                /// </summary>
                 [NameInMap("PlannedFlashingOffTime")]
                 [Validation(Required=false)]
                 public string PlannedFlashingOffTime { get; set; }
 
                 /// <summary>
-                /// <para>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</para>
+                /// <para>The scheduled start time of the task. The time is in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-28T12:00Z</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string PlannedStartTime { get; set; }
 
                 /// <summary>
-                /// <para>The expected start time of the task. The time is displayed in UTC.</para>
+                /// <para>The estimated start time of the task. The time is in UTC.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2021-01-28T12:16Z</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string PlannedTime { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the region in which the scheduled task runs.</para>
+                /// <para>The region ID of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The state of the scheduled task.</para>
+                /// <para>The status of the task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>finish</para>
@@ -163,8 +169,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>Indicates whether the scheduled task can be canceled. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b></description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b></para>
+                /// </description></item>
+                /// <item><description><para><b>false</b></para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -175,7 +183,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public bool? TaskCancel { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the task.</para>
+                /// <para>The task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>53879cdb-9a00-428e-acaf-ff4cff******</para>
@@ -187,7 +195,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -199,9 +207,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The message that is returned for the request.</para>
+        /// <para>The response message.</para>
         /// <remarks>
-        /// <para> If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -222,7 +230,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

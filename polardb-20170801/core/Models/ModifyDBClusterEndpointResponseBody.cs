@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</para>

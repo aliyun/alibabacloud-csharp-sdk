@@ -19,11 +19,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Content { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether FunctionCall is supported.</para>
+        /// </summary>
         [NameInMap("FunctionCall")]
         [Validation(Required=false)]
         public List<GetPolarAgentResponseBodyFunctionCall> FunctionCall { get; set; }
         public class GetPolarAgentResponseBodyFunctionCall : TeaModel {
             /// <summary>
+            /// <para>The operation-related output result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>---narguments:n  parameters: []n</para>
             /// </summary>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Arguments { get; set; }
 
             /// <summary>
+            /// <para>The quota ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>393</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The rule name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rule04</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The cloud product type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polardb</para>
         /// </summary>
@@ -66,6 +79,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Product { get; set; }
 
         /// <summary>
+        /// <para>The ID of the user query pipeline task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2548026401648157601743560466154</para>
         /// </summary>
@@ -74,6 +89,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string QueryId { get; set; }
 
         /// <summary>
+        /// <para>The model\&quot;s reasoning content.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -82,6 +99,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ReasoningContent { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34458CD3-33E0-4624-BFEF-840C15******</para>
         /// </summary>
@@ -90,6 +109,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The session ID for code execution.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>40315d708f0806903b08813bf4c9db2e</para>
         /// </summary>
@@ -97,6 +118,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string SessionId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether UiFunctionCall is supported.</para>
+        /// </summary>
         [NameInMap("UiFunctionCall")]
         [Validation(Required=false)]
         public List<GetPolarAgentResponseBodyUiFunctionCall> UiFunctionCall { get; set; }
@@ -112,6 +136,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ArgsText { get; set; }
 
             /// <summary>
+            /// <para>The tool command that is invoked.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>

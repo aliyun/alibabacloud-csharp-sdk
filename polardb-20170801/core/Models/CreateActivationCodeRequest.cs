@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateActivationCodeRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud order ID (including the virtual order ID).</para>
+        /// <para>The Alibaba Cloud order ID. This includes virtual orders.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MacAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the activation code. The name can contain only letters, digits, underscores (_), and hyphens (-). The activation code file downloaded from the console is named based on this name.</para>
+        /// <para>The name of the activation code. It can contain only letters, digits, underscores (_), and hyphens (-). This name is used as the filename when you download the activation code from the console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The system identifier of the database. This parameter is required if you set AllowEmptySystemIdentifier to false.</para>
+        /// <para>The unique identifier of the database. This parameter is required if \<c>AllowEmptySystemIdentifier\\</c> for the order is set to \<c>false\\</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>

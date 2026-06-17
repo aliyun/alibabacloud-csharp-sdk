@@ -9,6 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeParameterGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>The database engine type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>MySQL</para>
+        /// </summary>
         [NameInMap("DBType")]
         [Validation(Required=false)]
         public string DBType { get; set; }
@@ -22,9 +36,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parameter template.</para>
+        /// <para>The ID of the parameter group.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter templates of a specified region, such as the ID of a parameter template.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the details of all parameter groups in the specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available within your account, such as the region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all available regions and their IDs in your account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

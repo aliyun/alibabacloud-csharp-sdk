@@ -56,9 +56,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Indicates whether the log backup feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: The log backup feature is disabled.</description></item>
-        /// <item><description>1: The log backup feature is enabled. By default, the log backup feature is enabled and cannot be disabled.</description></item>
+        /// <item><description><para>0: The feature is disabled.</para>
+        /// </description></item>
+        /// <item><description><para>1: The feature is enabled. By default, the log backup feature is enabled and cannot be disabled.</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>If the advanced backup feature is enabled, this parameter is not recommended. Use the AdvancedLogPolicies parameter instead.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -68,7 +73,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? EnableBackupLog { get; set; }
 
         /// <summary>
-        /// <para>The region in which you want to store cross-region log backups. For more information about regions that support the cross-region backup feature, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</para>
+        /// <para>The region in which the cross-region log backup is stored. For information about the regions that support cross-region backup, see <a href="https://help.aliyun.com/document_detail/72672.html">Overview</a>.</para>
+        /// <remarks>
+        /// <para>If the advanced backup feature is enabled, this parameter is not recommended. Use the AdvancedLogPolicies parameter instead.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -78,14 +86,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LogBackupAnotherRegionRegion { get; set; }
 
         /// <summary>
-        /// <para>The retention period of cross-region log backups. Valid values:</para>
+        /// <para>The retention period of the cross-region log backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: The cross-region backup feature is disabled.</description></item>
-        /// <item><description><b>30 to 7300</b>: Cross-region log backups are retained for 30 to 7,300 days.</description></item>
-        /// <item><description><b>-1</b>: The log backups are permanently retained.</description></item>
+        /// <item><description><para><b>0</b>: The cross-region log backup feature is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>30 to 7300</b>: The cross-region log backup is retained for 30 to 7300 days.</para>
+        /// </description></item>
+        /// <item><description><para><b>-1</b>: The cross-region log backups are retained permanently.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> When you create a cluster, the default value of this parameter is <b>0</b>.</para>
+        /// <list type="bullet">
+        /// <item><description><list type="bullet">
+        /// <item><description>When you create a cluster, the default value is <b>0</b>. This value indicates that the cross-region log backup feature is disabled.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><list type="bullet">
+        /// <item><description>If the advanced backup feature is enabled, this parameter is not recommended. Use the AdvancedLogPolicies parameter instead.</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,11 +116,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LogBackupAnotherRegionRetentionPeriod { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the log backups. Valid values:</para>
+        /// <para>The retention period of the log backup. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>3 to 7300: The log backups are retained for 3 to 7,300 days.</description></item>
-        /// <item><description>\-1: The log backups are permanently retained.</description></item>
+        /// <item><description><para>3 to 7300: The log backup is retained for 3 to 7300 days.</para>
+        /// </description></item>
+        /// <item><description><para>-1: The log backups are retained permanently.</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>If the advanced backup feature is enabled, this parameter is not recommended. Use the AdvancedLogPolicies parameter instead.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>7</para>

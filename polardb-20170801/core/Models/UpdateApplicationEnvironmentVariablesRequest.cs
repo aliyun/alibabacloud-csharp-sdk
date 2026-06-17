@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdateApplicationEnvironmentVariablesRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway after the update. The default value is true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
+        /// <para>A mapping from environment variable names to values.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;ENV_TEST&quot;: &quot;test-value&quot;

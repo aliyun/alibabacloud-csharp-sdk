@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarAgentSessionStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the session. This ID is used to identify a visitor\&quot;s session and maintain context information.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The source of the product. Set the value to polardb-console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polardb-console</para>
         /// </summary>

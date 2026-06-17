@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteGatewayRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the gateway instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

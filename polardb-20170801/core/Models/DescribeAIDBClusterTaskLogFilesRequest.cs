@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTaskLogFilesRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the model operator instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The log type. Set the value to:</para>
+        /// <list type="bullet">
+        /// <item><description><b>sls</b></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +46,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LogType { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -48,6 +56,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>The default value is <b>100</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PolarDB cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-bp10ze***</para>
         /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RelativeDBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return the results in reverse order. The default value is <em>false</em>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -72,6 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
+        /// <para>The start of the time range to query. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the task for disabling the PolarDB for AI feature.</para>
+        /// <para>The ID of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>53879cdb-9a00-428e-acaf-ff4cff******</para>

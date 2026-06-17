@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyApplicationDescriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The description of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

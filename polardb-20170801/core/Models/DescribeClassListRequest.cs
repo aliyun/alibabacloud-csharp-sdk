@@ -10,23 +10,35 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeClassListRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the commodity. Valid values:</para>
+        /// <para>The commodity code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>polardb_sub: the subscription cluster in regions in the Chinese mainland</description></item>
-        /// <item><description>polardb_sub _intl: the subscription cluster in regions outside the Chinese mainland</description></item>
-        /// <item><description>polardb_payg: the pay-as-you-go cluster in regions in the Chinese mainland</description></item>
-        /// <item><description>polardb_payg_intl: the pay-as-you-go cluster in regions outside the Chinese mainland</description></item>
-        /// <item><description>polardb_sub_jushita: the subscription cluster for CloudTmall</description></item>
-        /// <item><description>polardb_payg_jushita: the pay-as-you-go cluster for CloudTmall</description></item>
-        /// <item><description>polardb_sub_cainiao: the subscription cluster for Cainiao</description></item>
-        /// <item><description>polardb_payg_cainiao: the pay-as-you-go cluster for Cainiao</description></item>
+        /// <item><description><para>polardb_sub: subscription for the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para>polardb_sub_intl: subscription for regions in Hong Kong (China) and outside the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para>polardb_payg: pay-as-you-go for the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para>polardb_payg_intl: pay-as-you-go for regions in Hong Kong (China) and outside the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para>polardb_sub_jushita: Jushita subscription.</para>
+        /// </description></item>
+        /// <item><description><para>polardb_payg_jushita: Jushita pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para>polardb_sub_cainiao: Cainiao subscription.</para>
+        /// </description></item>
+        /// <item><description><para>polardb_payg_cainiao: Cainiao pay-as-you-go.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you use an Alibaba Cloud account on the China site, you can view only the codes of the commodities that are available in the Chinese mainland.</description></item>
-        /// <item><description>If you are using an Alibaba Cloud international account, you can view only the codes of the commodities that are available outside the Chinese mainland.</description></item>
-        /// <item><description>If you use a CloudTmall account, you can view only the codes of the commodities that are available in CloudTmall.</description></item>
-        /// <item><description>If you use a Cainiao account, you can view only the codes of the commodities that are available in Cainiao.</description></item>
+        /// <item><description><para>If you use an Alibaba Cloud China site account, you can view only the commodity codes for the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para>If you use an Alibaba Cloud international site account, you can view only the commodity codes for regions outside the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para>If you use a Jushita account, you can view only the commodity codes for Jushita.</para>
+        /// </description></item>
+        /// <item><description><para>If you use a Cainiao account, you can view only the commodity codes for Cainiao.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
@@ -41,9 +53,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The number of nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>single: Standalone Edition.</description></item>
-        /// <item><description>cluster: Cluster Edition.</description></item>
-        /// <item><description>all: both Standalone Edition and Cluster Edition.</description></item>
+        /// <item><description><para>single: single node.</para>
+        /// </description></item>
+        /// <item><description><para>cluster: cluster.</para>
+        /// </description></item>
+        /// <item><description><para>all: single node and cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,12 +69,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MasterHa { get; set; }
 
         /// <summary>
-        /// <para>The type of the order. Valid values:</para>
+        /// <para>The order type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>BUY: The order is used to purchase a cluster.</description></item>
-        /// <item><description>UPGRADE: The order is used to change the specifications of a cluster.</description></item>
-        /// <item><description>RENEW: The order is used to renew a cluster.</description></item>
-        /// <item><description>CONVERT: The order is used to change the billing method of a cluster.</description></item>
+        /// <item><description><para>BUY: new purchase.</para>
+        /// </description></item>
+        /// <item><description><para>UPGRADE: changes the configuration.</para>
+        /// </description></item>
+        /// <item><description><para>RENEW: renews the instance.</para>
+        /// </description></item>
+        /// <item><description><para>CONVERT: changes the billing method.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,7 +97,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
+        /// <remarks>
+        /// <para>This parameter is required if you use an Alibaba Cloud international site account.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

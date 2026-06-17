@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAutoRenewAttributeRequest : TeaModel {
         /// <summary>
+        /// <para>The cloud provider of the cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENS</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CloudProvider { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</para>
+        /// <para>The ID of the database cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,10 +31,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The automatic renewal period.</para>
+        /// <para>The auto-renewal period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values when you set the <b>PeriodUnit</b> parameter to <b>Month</b>: <c>1, 2, 3, 6, and 12</c>.</description></item>
-        /// <item><description>Valid values when you set the <b>PeriodUnit</b> parameter to <b>Year</b>: <c>1, 2, and 3</c>.</description></item>
+        /// <item><description><para>When <b>PeriodUnit</b> is <b>Month</b>, the valid values are <c>[1,2,3,6,12]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>When <b>PeriodUnit</b> is <b>Year</b>, the valid values are <c>[1-3]</c>.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>1</b>.</para>
         /// 
@@ -52,10 +56,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal period. Valid values:</para>
+        /// <para>The unit of the auto-renewal period. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><para><b>Year</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Month</b></para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>Month</b>.</para>
         /// 
@@ -67,10 +73,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. The region ID can be up to 50 characters in length.
-        /// cn-hangzhou</para>
+        /// <para>The region ID. The ID can be up to 50 characters in length.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2319134.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,15 +87,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The auto-renewal status of the cluster. Valid values:</para>
+        /// <para>The auto-renewal status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AutoRenewal:</b> The cluster is automatically renewed.</description></item>
-        /// <item><description><b>Normal</b>: The cluster is manually renewed.</description></item>
-        /// <item><description><b>NotRenewal:</b> The cluster is not renewed after expiration.</description></item>
+        /// <item><description><para><b>AutoRenewal</b>: Enables auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>Normal</b>: Enables manual renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>NotRenewal</b>: Disables renewal.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>AutoRenewal</b>.</para>
         /// <remarks>
-        /// <para> If you set this parameter to <b>NotRenewal</b>, the system sends a notification that indicates the cluster is not renewed three days before the cluster expires. After the cluster expires, the system no longer sends a notification.</para>
+        /// <para>When you set this parameter to <b>NotRenewal</b>, the system stops sending expiration reminders and sends only a non-renewal notification three days before the expiration date.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -101,7 +109,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RenewalStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>

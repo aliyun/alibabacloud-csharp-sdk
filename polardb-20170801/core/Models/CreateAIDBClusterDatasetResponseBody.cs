@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAIDBClusterDatasetResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the PolarDB database cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The dataset management service ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pcs-2zeei***</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DataServiceId { get; set; }
 
         /// <summary>
+        /// <para>The dataset ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pds-2ze88***</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetId { get; set; }
 
         /// <summary>
+        /// <para>The dataset name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dataset01</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetName { get; set; }
 
         /// <summary>
+        /// <para>The path to the dataset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polardb_ai/datasets/train/sft/dataset01</para>
         /// </summary>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD35F3-F3-44CA-AFFF-BAF869******</para>

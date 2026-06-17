@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeCostRulesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of cost rules.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeCostRulesResponseBodyItems> Items { get; set; }
         public class DescribeCostRulesResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The cost in points per one million cached tokens.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CacheCostPointsPerMillion { get; set; }
 
             /// <summary>
+            /// <para>The cost rule ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>924d450014e64e88ac6e8486f8e990**</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CostRuleId { get; set; }
 
             /// <summary>
+            /// <para>The time when the cost rule was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-01-04T16:09:29+08:00</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
+            /// <para>The time when the cost rule was last updated.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-16 16:46:20</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
+            /// <para>The gateway instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pg-xxxxxxxxxx</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GwClusterId { get; set; }
 
             /// <summary>
+            /// <para>The cost in points per one million input tokens.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string InputCostPointsPerMillion { get; set; }
 
             /// <summary>
+            /// <para>The model name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>gpt-4</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Model { get; set; }
 
             /// <summary>
+            /// <para>The model service ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ms-xxxxxxxxx</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelServiceId { get; set; }
 
             /// <summary>
+            /// <para>The cost in points per one million output tokens.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -88,6 +109,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -96,6 +119,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -112,7 +139,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>
@@ -122,6 +149,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

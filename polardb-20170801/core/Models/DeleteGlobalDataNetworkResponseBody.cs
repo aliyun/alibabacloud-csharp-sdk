@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteGlobalDataNetworkResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EBEAA83D-1734-42E3-85E3-E25F6E******</para>
         /// </summary>

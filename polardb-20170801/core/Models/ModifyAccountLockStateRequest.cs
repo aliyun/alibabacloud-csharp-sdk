@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyAccountLockStateRequest : TeaModel {
         /// <summary>
+        /// <para>The lock status of the account. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>UnLock</b>: The account is not locked.</para>
+        /// </description></item>
+        /// <item><description><para><b>Lock</b>: The account is locked.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountLockState { get; set; }
 
         /// <summary>
+        /// <para>The name of the database account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,14 +38,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The expiration time of the account. The time must be in the \<c>YYYY-MM-DDThh:mm:ssZ\\</c> format.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>2026-09-17 10:00:00</para>
+        /// <para>2026-09-17T10:00:00Z</para>
         /// </summary>
         [NameInMap("AccountPasswordValidTime")]
         [Validation(Required=false)]
         public string AccountPasswordValidTime { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cluster.</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the details of all clusters in a region, including cluster IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

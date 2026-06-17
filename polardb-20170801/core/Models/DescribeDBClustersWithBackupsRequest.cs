@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClustersWithBackupsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the cluster. The name must meet the following requirements:</para>
+        /// <para>The cluster name. The cluster name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>It must be 2 to 256 characters in length.</description></item>
+        /// <item><description><para>It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 256 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster. If you need to specify multiple cluster IDs, separate the cluster IDs with commas (,).</para>
+        /// <para>The ID of the cluster. You can specify multiple cluster IDs. Separate the IDs with a comma (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
@@ -34,11 +36,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterIds { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine. Valid values:</para>
+        /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,22 +54,33 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The database engine version.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for the MySQL database engine:</para>
+        /// <item><description><para>Valid values for MySQL:</para>
         /// <list type="bullet">
-        /// <item><description><b>5.6</b></description></item>
-        /// <item><description><b>5.7</b></description></item>
-        /// <item><description><b>8.0</b></description></item>
+        /// <item><description><para><b>5.6</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.7</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for the PostgreSQL database engine:</para>
+        /// <item><description><para>Valid values for PostgreSQL:</para>
         /// <list type="bullet">
-        /// <item><description><b>11</b></description></item>
-        /// <item><description><b>14</b></description></item>
+        /// <item><description><para><b>11</b></para>
+        /// </description></item>
+        /// <item><description><para><b>14</b></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid value for the Oracle database engine: <b>11</b></para>
+        /// <item><description><para>Valid values for Oracle:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>11</b></para>
+        /// </description></item>
+        /// <item><description><para><b>14</b></para>
+        /// </description></item>
+        /// </list>
         /// </description></item>
         /// </list>
         /// 
@@ -78,8 +94,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether the cluster is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: not deleted</description></item>
-        /// <item><description><b>1</b>: deleted</description></item>
+        /// <item><description><para><b>0</b>: The cluster is not deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: The cluster is deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return. The value must be a positive integer that does not exceed the maximum value of the INTEGER data type. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,11 +126,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of records on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: 30.</para>
         /// 
@@ -124,9 +145,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view details about regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -138,7 +159,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>

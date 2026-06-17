@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBNodesClassResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The database cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-*************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2035629******</para>

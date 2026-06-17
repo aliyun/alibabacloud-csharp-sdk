@@ -9,12 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBNodesRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to automatically use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true (Default): An available coupon is automatically used.</para>
+        /// </description></item>
+        /// <item><description><para>false: A coupon is not automatically used.</para>
+        /// </description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</para>
+        /// <para>A unique, client-generated token to ensure the idempotence of the request. This token is case-sensitive and cannot exceed 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
@@ -24,6 +33,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The cloud provider of the node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENS</para>
         /// </summary>
@@ -43,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The details of the read-only node.</para>
+        /// <para>Details of the nodes to add.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DBNode")]
@@ -51,17 +62,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<CreateDBNodesRequestDBNode> DBNode { get; set; }
         public class CreateDBNodesRequestDBNode : TeaModel {
             /// <summary>
-            /// <para>The specifications of the read-only node that you want to add, which must be the same as the specifications of the existing nodes. For more information, see the following topics:</para>
+            /// <para>The specifications of the new node. The specifications must be the same as those of the existing nodes in the cluster. For more information, see the following topics:</para>
             /// <list type="bullet">
-            /// <item><description>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></description></item>
-            /// <item><description>PolarDB for PostgreSQL (Compatible with Oracle): <a href="https://help.aliyun.com/document_detail/207921.html">Specifications of compute nodes</a></description></item>
-            /// <item><description>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Specifications of compute nodes</a></description></item>
+            /// <item><description><para>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">compute node specifications</a>.</para>
+            /// </description></item>
+            /// <item><description><para>PolarDB for PostgreSQL (Oracle Compatible): <a href="https://help.aliyun.com/document_detail/207921.html">compute node specifications</a>.</para>
+            /// </description></item>
+            /// <item><description><para>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">compute node specifications</a>.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>You need to specify either DBNode.N.ZoneId or DBNode.N.TargetClass. N is an integer that starts from 1. The maximum value of N is equal to 16 minus the number of existing nodes.</description></item>
-            /// <item><description>You can add multiple read-only nodes at the same time only to PolarDB for MySQL clusters, which can contain up to of 15 read-only nodes.</description></item>
-            /// <item><description>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</description></item>
+            /// <item><description><para>You must specify either <c>DBNode.N.ZoneId</c> or <c>DBNode.N.TargetClass</c>. <c>N</c> is an integer that starts from 1. The maximum value of <c>N</c> is 16 minus the number of existing nodes.</para>
+            /// </description></item>
+            /// <item><description><para>For PolarDB for MySQL clusters, you can add multiple read-only nodes in a single request, up to a total of 15 read-only nodes.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter is required for PolarDB for PostgreSQL (Oracle Compatible) and PolarDB for PostgreSQL clusters, but optional for PolarDB for MySQL clusters.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -73,12 +90,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string TargetClass { get; set; }
 
             /// <summary>
-            /// <para>The zone ID of the node that you want to add, which must be the same as the zone ID of existing nodes. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the IDs of zones.</para>
+            /// <para>The ID of the zone for the new node. This zone must be the same as the zone of the existing nodes. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query zone IDs.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>You need to specify either DBNode.N.ZoneId or DBNode.N.TargetClass. N is an integer that starts from 1. The maximum value of N is equal to 16 minus the number of existing nodes.</description></item>
-            /// <item><description>You can add multiple read-only nodes at the same time only to PolarDB for MySQL clusters, which can contain up to of 15 read-only nodes.</description></item>
-            /// <item><description>This parameter is required for PolarDB for PostgreSQL (Compatible with Oracle) clusters or PolarDB for PostgreSQL clusters. This parameter is optional for PolarDB for MySQL clusters.</description></item>
+            /// <item><description><para>You must specify either <c>DBNode.N.ZoneId</c> or <c>DBNode.N.TargetClass</c>. <c>N</c> is an integer that starts from 1. The maximum value of <c>N</c> is 16 minus the number of existing nodes.</para>
+            /// </description></item>
+            /// <item><description><para>For PolarDB for MySQL clusters, you can add multiple read-only nodes in a single request, up to a total of 15 read-only nodes.</para>
+            /// </description></item>
+            /// <item><description><para>This parameter is required for PolarDB for PostgreSQL (Oracle Compatible) and PolarDB for PostgreSQL clusters, but optional for PolarDB for MySQL clusters.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// 
@@ -94,15 +114,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The node type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RO</description></item>
-        /// <item><description>STANDBY</description></item>
-        /// <item><description>DLNode</description></item>
-        /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>DLNode: AI node</description></item>
-        /// <item><description>STANDBY: standby node</description></item>
-        /// <item><description>RO: read-only node</description></item>
+        /// <item><description><para>RO</para>
+        /// </description></item>
+        /// <item><description><para>STANDBY</para>
+        /// </description></item>
+        /// <item><description><para>DLNode</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,12 +130,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster endpoint to which the read-only node is added. If you want to add the read-only node to multiple endpoints at the same time, separate the endpoint IDs with commas (,).</para>
+        /// <para>The ID of the cluster endpoint to which you want to add the new nodes. If you want to add the nodes to multiple cluster endpoints, separate the endpoint IDs with a comma (,).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the details of cluster endpoints, including endpoint IDs.</description></item>
-        /// <item><description>You can enter the ID of the default cluster endpoint or a custom cluster endpoint.</description></item>
-        /// <item><description>If you leave this parameter empty, the read-only node is added to all cluster endpoints for which the <b>Automatically Associate New Nodes</b> feature is enabled. If you set <c>AutoAddNewNodes</c> to <c>Enable</c>, the Automatically Associate New Nodes feature is enabled.</description></item>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the details of cluster endpoints, including their IDs.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify the IDs of the default cluster endpoint and custom cluster endpoints.</para>
+        /// </description></item>
+        /// <item><description><para>If you leave this parameter empty, the new nodes are automatically added to all cluster endpoints where the <b>Auto Add New Nodes</b> feature is enabled (the <c>AutoAddNewNodes</c> parameter is set to <c>Enable</c>).</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -130,13 +150,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndpointBindList { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the In-Memory Column Index (IMCI) feature. Default value: OFF. Valid values:</para>
+        /// <para>Specifies whether to enable In-Memory Column Index (IMCI). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b></description></item>
-        /// <item><description><b>OFF</b></description></item>
+        /// <item><description><para><b>ON</b>: The feature is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>OFF</b> (Default): The feature is disabled.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is invalid for a PolarDB for Oracle or PolarDB for PostgreSQL cluster.</para>
+        /// <para>This parameter is not supported for PolarDB for PostgreSQL (Oracle Compatible) and PolarDB for PostgreSQL clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -155,11 +177,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The latest time to start the scheduled task. The time is specified in the <c>YYYY-MM-DDThh:mm:ssZ</c> format and is in UTC.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</description></item>
-        /// <item><description>If you specify <c>PlannedStartTime</c> but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: <c>PlannedEndTime value + 30 minutes</c>. For example, if you set <c>PlannedStartTime</c> to <c>2021-01-14T09:00:00Z</c> and you do not specify PlannedEndTime, the latest start time of the task is set to <c>2021-01-14T09:30:00Z</c>.</description></item>
+        /// <item><description><para>This time must be at least 30 minutes later than the value of <c>PlannedStartTime</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify <c>PlannedStartTime</c> but not this parameter, the latest start time defaults to 30 minutes after the <c>PlannedStartTime</c>. For example, if you set <c>PlannedStartTime</c> to <c>2021-01-14T09:00:00Z</c> and leave this parameter empty, the task starts no later than <c>2021-01-14T09:30:00Z</c>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -171,11 +195,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The earliest time to start the scheduled task to add the nodes. The time must be in UTC and in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in time between <c>2021-01-14T09:00:00Z</c> and <c>2021-01-15T09:00:00Z</c>.</description></item>
-        /// <item><description>If you leave this parameter empty, the task for adding the read-only node is immediately run by default.</description></item>
+        /// <item><description><para>The start time must be within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can set this parameter to a value between <c>2021-01-14T09:00:00Z</c> and <c>2021-01-15T09:00:00Z</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you omit this parameter, the nodes are added immediately.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -187,6 +213,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedStartTime { get; set; }
 
         /// <summary>
+        /// <para>The promotion code. If you omit this parameter, an applicable coupon is used by default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>727xxxxxx934</para>
         /// </summary>

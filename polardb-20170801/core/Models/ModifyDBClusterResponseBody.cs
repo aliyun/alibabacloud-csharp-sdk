@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-*************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The order ID.</para>
+        /// <para>The generated order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2148126708*****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CD3FA5F3-FAF3-44CA-AFFF-BAF869******</para>

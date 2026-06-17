@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarClawCronJobRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cron job to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway after the cron job is deleted. The default value is true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

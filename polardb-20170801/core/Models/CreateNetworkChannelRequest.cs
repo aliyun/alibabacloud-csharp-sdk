@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateNetworkChannelRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the network channel. The name must consist of lowercase letters, digits, and underscores (_). It must start and end with a letter or a digit. The name can be up to 64 characters long.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChannelName { get; set; }
 
         /// <summary>
+        /// <para>A client token that ensures the request is idempotent. The client generates this token. The token must be unique for each request. It is case-sensitive and can be up to 64 ASCII characters long.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The name of the source instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The notes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>
@@ -54,6 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-re*********</para>
         /// </summary>
@@ -78,6 +88,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the destination instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-*****************</para>
         /// </summary>
@@ -86,6 +98,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetDBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The IP address of the destination instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>192.<b>.</b>.46</para>
         /// </summary>
@@ -94,6 +108,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetIp { get; set; }
 
         /// <summary>
+        /// <para>The port of the destination instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>9032</para>
         /// </summary>
@@ -102,6 +118,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TargetPort { get; set; }
 
         /// <summary>
+        /// <para>The ID of the virtual private cloud (VPC) where the endpoint is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-25cdvfeq58pl****</para>
         /// </summary>

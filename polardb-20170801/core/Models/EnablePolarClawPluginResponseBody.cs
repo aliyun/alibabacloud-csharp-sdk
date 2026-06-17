@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class EnablePolarClawPluginResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the application.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Ok { get; set; }
 
         /// <summary>
+        /// <para>The ID of the plugin that was enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>openclaw-lark</para>
         /// </summary>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7F2007D3-7E74-4ECB-89A8-BF130D******</para>
@@ -60,6 +70,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the gateway was restarted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

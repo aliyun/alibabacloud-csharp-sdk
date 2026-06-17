@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeEncryptionDBSecretRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-wz9fb5nn44u1d****</para>
         /// </summary>

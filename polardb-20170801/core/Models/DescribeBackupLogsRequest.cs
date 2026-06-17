@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupLogsRequest : TeaModel {
         /// <summary>
-        /// <para>The region for the backup data.</para>
+        /// <para>The backup region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. The end time must be later than the start time. The time is in the <c>YYYY-MM-DDThh:mmZ</c> format. The time is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. The value must be an integer that is larger than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,11 +62,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>30</b>.</para>
+        /// <para>The default value is <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. The time is in the <c>YYYY-MM-DDThh:mmZ</c> format. The time is displayed in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

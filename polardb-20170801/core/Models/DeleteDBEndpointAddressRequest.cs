@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The ID of the cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your account, such as the cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters that belong to your account, such as the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The ID of the endpoint.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the endpoints of a specified PolarDB cluster.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the endpoints of a specified PolarDB cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

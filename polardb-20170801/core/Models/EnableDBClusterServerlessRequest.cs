@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
+        [NameInMap("FromTimeService")]
+        [Validation(Required=false)]
+        public bool? FromTimeService { get; set; }
+
         [NameInMap("OwnerAccount")]
         [Validation(Required=false)]
         public string OwnerAccount { get; set; }
@@ -27,6 +35,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2022-04-28T14:30:00Z</para>
+        /// </summary>
+        [NameInMap("PlannedEndTime")]
+        [Validation(Required=false)]
+        public string PlannedEndTime { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>2022-04-28T14:00:00Z</para>
+        /// </summary>
+        [NameInMap("PlannedStartTime")]
+        [Validation(Required=false)]
+        public string PlannedStartTime { get; set; }
 
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
@@ -37,7 +61,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of stable AP read-only nodes. Valid values: 0 to 7.</para>
+        /// <para>The maximum number of steady-state AP read-only nodes. Valid values: 0 to 7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleApRoNumMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of stable AP read-only nodes. Valid values: 0 to 7.</para>
+        /// <para>The minimum number of steady-state AP read-only nodes. Valid values: 0 to 7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleApRoNumMin { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of PCUs per node for scaling. Valid values: 1 to 8 PCUs.</para>
+        /// <para>The maximum scaling limit per node. Valid values: 0 PCU to 16 PCU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -67,7 +91,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of PolarDB capacity units (PCUs) per node for scaling. Valid values: 1 to 8 PCUs.</para>
+        /// <para>The minimum scaling limit per node. Valid values: 0 PCU to 16 PCU.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -77,7 +101,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of read-only nodes for scaling. Valid values: 0 to 7.</para>
+        /// <para>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -87,7 +111,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleRoNumMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of read-only nodes for scaling. Valid values: 0 to 7.</para>
+        /// <para>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

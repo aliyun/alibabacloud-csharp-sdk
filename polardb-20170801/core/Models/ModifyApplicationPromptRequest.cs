@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyApplicationPromptRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>papt-xx</para>
+        /// <para>The ID of the prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptId { get; set; }
 
         /// <summary>
+        /// <para>The name of the prompt.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prompt name</para>
         /// </summary>
@@ -39,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptName { get; set; }
 
         /// <summary>
+        /// <para>The content of the prompt.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>prompt value</para>
         /// </summary>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSlowLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface to view all cluster information in the target region, including the Cluster ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query all clusters in the target region and their cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Database name.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>End time of the query, which must be later than the start time, and the time interval between the start and end times must not exceed 24 hours. The format is <c>YYYY-MM-DDThh:mmZ</c> (UTC time).</para>
+        /// <para>The end of the query time range. The end time must be later than the start time. The time range cannot exceed 24 hours. Specify the time in UTC in the <c>YYYY-MM-DDThh:mmZ</c> format.</para>
         /// <remarks>
-        /// <para>The input is UTC time (i.e., 0 timezone). If your service is currently in a different timezone, please perform a time conversion. For example, if the current timezone of your service is Beijing Time (UTC+8) at 12:00, and you need to query the slow logs between 08:00-12:00 Beijing Time, you should input 00:00-04:00.</para>
+        /// <para>The time must be in UTC. If your service is in a different time zone, you must convert the time. For example, to query data from 08:00 to 12:00 in the UTC+8 time zone, you must set the time range from 00:00 UTC to 04:00 UTC.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Node ID</para>
+        /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pi-**********</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be an integer that is greater than 0.</para>
+        /// <para>The page number. The value must be an integer greater than 0.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -77,11 +77,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of records per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>30</b>.</para>
         /// 
@@ -93,9 +96,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface to view the available regions under the target account, including the Region ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions and their region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -115,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Unique identifier of the SQL statement in the slow log statistics, which can be used to obtain the detailed slow logs for that SQL statement.</para>
+        /// <para>The SQL hash of a slow query. Obtain this hash from slow query log statistics to retrieve the details of a specific slow query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>U2FsdGVk****</para>
@@ -125,11 +128,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SQLHASH { get; set; }
 
         /// <summary>
-        /// <para>Start time of the query. The format is <c>YYYY-MM-DDThh:mmZ</c> (UTC time).</para>
+        /// <para>The start of the query time range. Specify the time in UTC in the <c>YYYY-MM-DDThh:mmZ</c> format.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Supports viewing slow log information up to 30 days.</description></item>
-        /// <item><description>The input is UTC time (i.e., 0 timezone). If your service is currently in a different timezone, please perform a time conversion. For example, if the current timezone of your service is Beijing Time (UTC+8) at 12:00, and you need to query the slow logs between 08:00-12:00 Beijing Time, you should input 00:00-04:00.</description></item>
+        /// <item><description><para>You can query slow query logs from the past 30 days.</para>
+        /// </description></item>
+        /// <item><description><para>The time must be in UTC. If your service is in a different time zone, you must convert the time. For example, to query data from 08:00 to 12:00 in the UTC+8 time zone, you must set the time range from 00:00 UTC to 04:00 UTC.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterParametersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp1s826a1up******</para>
@@ -20,11 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The database engine that the clusters runs. Valid values:</para>
+        /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,20 +38,29 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine. </para>
+        /// <para>The database engine version.
+        /// Valid values for MySQL:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values for the MySQL database engine:   <list type="bullet">
-        /// <item><description><b>5.6</b></description></item>
-        /// <item><description><b>5.7</b></description></item>
-        /// <item><description><b>8.0</b></description></item>
-        /// </list>
+        /// <item><description><para><b>5.6</b></para>
         /// </description></item>
-        /// <item><description>Valid value for the PostgreSQL database engine:    <list type="bullet">
-        /// <item><description><b>11</b></description></item>
-        /// <item><description><b>14</b></description></item>
-        /// </list>
+        /// <item><description><para><b>5.7</b></para>
         /// </description></item>
-        /// <item><description>Valid value for the Oracle database engine:  <b>11</b></description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid values for PostgreSQL:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>11</b></para>
+        /// </description></item>
+        /// <item><description><para><b>14</b></para>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid values for Oracle:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>11</b></para>
+        /// </description></item>
+        /// <item><description><para><b>14</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The cluster engine.</para>
+        /// <para>The engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POLARDB</para>
@@ -143,7 +155,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EBEAA83D-1734-42E3-85E3-E25F6E******</para>

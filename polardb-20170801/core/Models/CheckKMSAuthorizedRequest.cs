@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all clusters that are deployed in a specific region, such as the cluster IDs.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2319131.html">DescribeDBClusters</a> operation to query information about all clusters in the destination region, including cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available for your account, such as the region IDs.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2319134.html">DescribeRegions</a> operation to query information about the available regions of the destination account, including region IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the TDE key resides.</para>
+        /// <para>The region where the transparent data encryption (TDE) key is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

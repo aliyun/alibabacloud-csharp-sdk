@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class TransformDBClusterPayTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The billing method of the cluster. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
+        /// </description></item>
+        /// <item><description><para><b>Prepaid</b>: subscription</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the PolarDB cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp10gr51qasnl****</para>
@@ -34,9 +36,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The time when the cluster expires.</para>
+        /// <para>The expiration time of the instance.</para>
         /// <remarks>
-        /// <para> This parameter is returned if you set the <b>PayType</b> parameter to <b>Prepaid</b>.</para>
+        /// <para>This parameter is returned only when <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20515760028****</para>

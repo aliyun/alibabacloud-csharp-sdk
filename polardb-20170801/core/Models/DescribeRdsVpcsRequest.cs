@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the resource group.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
         /// </summary>
@@ -48,6 +51,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the zone.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-k</para>
         /// </summary>

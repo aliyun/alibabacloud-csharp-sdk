@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarClawPluginsRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <para>A list of plugin IDs. If omitted, all plugins are returned.</para>
+        /// </summary>
         [NameInMap("PluginList")]
         [Validation(Required=false)]
         public List<string> PluginList { get; set; }

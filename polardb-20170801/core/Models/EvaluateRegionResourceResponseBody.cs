@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class EvaluateRegionResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether sufficient resources are available. Valid values:</para>
+        /// <para>Indicates whether the resources are sufficient.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The resources are sufficient.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The resources are insufficient.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +26,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceAvailable { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine. Valid values:</para>
+        /// <para>The database engine type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,22 +44,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine</para>
+        /// <para>The version of the database engine.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for the MySQL database engine:</para>
+        /// <item><description><para>Valid values for MySQL:</para>
         /// <list type="bullet">
-        /// <item><description><b>5.6</b></description></item>
-        /// <item><description><b>5.7</b></description></item>
-        /// <item><description><b>8.0</b></description></item>
+        /// <item><description><para><b>5.6</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.7</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for the PostgreSQL database engine:</para>
+        /// <item><description><para>Valid values for PostgreSQL:</para>
         /// <list type="bullet">
-        /// <item><description><b>11</b></description></item>
-        /// <item><description><b>14</b></description></item>
+        /// <item><description><para><b>11</b></para>
+        /// </description></item>
+        /// <item><description><para><b>14</b></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid value for the Oracle database engine: <b>11</b></para>
+        /// <item><description><para>Valid value for Oracle: <b>11</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -66,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69A85BAF-1089-4CDF-A82F-0A140F******</para>

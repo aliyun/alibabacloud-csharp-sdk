@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the new endpoint. The prefix must meet the following requirements:</para>
+        /// <para>The new connection string prefix. The prefix must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It can contain lowercase letters, digits, and hyphens (-).</description></item>
-        /// <item><description>It must start with a letter and end with a digit or a letter.</description></item>
-        /// <item><description>It must be 6 to 30 characters in length.</description></item>
+        /// <item><description><para>It can contain only lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 6 to 30 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,9 +28,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,9 +42,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint.</para>
+        /// <para>The ID of the connection address.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query the ID of a connection address.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,11 +55,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the endpoint. Valid values:</para>
+        /// <para>The network type of the connection address. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Public</b></description></item>
-        /// <item><description><b>Private</b></description></item>
+        /// <item><description><para><b>Public</b>: public network</para>
+        /// </description></item>
+        /// <item><description><para><b>Private</b>: private network</para>
+        /// </description></item>
         /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <list type="bullet">
+        /// <item><description><b>Inner</b>: classic network</description></item>
+        /// </list>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>Only PolarDB for MySQL clusters support the classic network type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,9 +86,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The port number. Valid values: 3000 to 5999.</para>
+        /// <para>The port number. The valid range is 3000 to 5999.</para>
         /// <remarks>
-        /// <para>This parameter is valid only for PolarDB for MySQL clusters. If you leave this parameter empty, the default port 3306 is used.</para>
+        /// <list type="bullet">
+        /// <item><description>This parameter is supported only for PolarDB for MySQL clusters. If you do not specify this parameter, the port defaults to 3306.</description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -90,14 +103,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The prefix of the private domain name. The prefix must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The prefix can contain lowercase letters, digits, and hyphens (-).</description></item>
-        /// <item><description>The prefix must start with a letter and end with a digit or a letter.</description></item>
-        /// <item><description>The prefix must be 6 to 30 characters in length.</description></item>
+        /// <item><description><para>It can contain only lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 6 to 30 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can bind each internal endpoint of PolarDB to a private domain name. The private domain name takes effect only in the specified virtual private clouds (VPCs) in the current region. Private domain names are managed by using PrivateZone. You can use the CNAME record of PrivateZone to map domain names to PolarDB. You are charged a small fee for this feature. For more information, see <a href="https://help.aliyun.com/document_detail/71338.html">Pricing</a>.</description></item>
-        /// <item><description>This parameter takes effect only if you set <b>NetType</b> to Private.</description></item>
+        /// <item><description><para>You can bind a private domain name to each private endpoint of a PolarDB cluster. This domain name is effective only in the specified VPC within the current region. The private domain name is managed by PrivateZone and is mapped to the built-in private endpoint of the cluster through a CNAME record. This feature incurs a small fee. For more information, see <a href="https://help.aliyun.com/document_detail/71338.html">Pricing</a>.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter is valid only when <b>NetType is set to Private</b>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -109,9 +127,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PrivateZoneAddressPrefix { get; set; }
 
         /// <summary>
-        /// <para>The name of the private zone.</para>
+        /// <para>The private zone name.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when <b>NetType</b> is set to Private.</para>
+        /// <para>This parameter is valid only when <b>NetType is set to Private</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

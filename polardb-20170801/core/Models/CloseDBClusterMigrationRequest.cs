@@ -12,10 +12,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to continue to enable binary logging. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: continues to enable binary logging.</description></item>
-        /// <item><description><b>false</b>: disables binary logging.</description></item>
+        /// <item><description><para><b>True</b>: continues to enable binary logging.</para>
+        /// </description></item>
+        /// <item><description><para><b>False</b>: disables binary logging.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>true</b>.</para>
+        /// <para>Default value: <b>True</b>.</para>
         /// <remarks>
         /// <para>If binary logging is disabled, your PolarDB cluster is restarted.</para>
         /// </remarks>

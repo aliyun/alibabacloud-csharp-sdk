@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID. Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to view available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the virtual private cloud (VPC) where the endpoint is located.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-*************</para>
         /// </summary>
@@ -48,6 +51,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VpcId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>
         /// </summary>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CheckKMSAuthorizedResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the cluster is authorized to use KMS. Valid values:</para>
+        /// <para>The authorization status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: no.</description></item>
-        /// <item><description><b>1</b>: yes.</description></item>
+        /// <item><description><para><b>0</b>: Unauthorized.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Authorized.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role. A RAM role is a virtual identity that you can create within your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
+        /// <para>The Global Resource Descriptor of the role. It specifies the role. For more information, see <a href="https://help.aliyun.com/document_detail/93689.html">RAM role overview</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::1406926*****:role/aliyunrdsinstanceencryptiondefaultrole</para>

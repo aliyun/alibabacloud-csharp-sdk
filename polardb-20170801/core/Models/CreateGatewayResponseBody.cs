@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateGatewayResponseBody : TeaModel {
         /// <summary>
+        /// <para>The gateway instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pg-2ze2079ueg20****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
+        /// <para>The order ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2035629******</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F9F1CB1A-B1D5-4EF5-A53A-************</para>

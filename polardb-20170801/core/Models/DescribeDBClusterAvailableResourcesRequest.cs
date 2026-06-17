@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The type of the database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,20 +38,32 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine. Valid values for the MySQL database engine:</para>
+        /// <para>The version of the database engine.
+        /// Valid values for MySQL:</para>
         /// <list type="bullet">
-        /// <item><description><b>5.6</b></description></item>
-        /// <item><description><b>5.7</b></description></item>
-        /// <item><description><b>8.0</b></description></item>
+        /// <item><description><para><b>5.6</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.7</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>Valid values for the PostgreSQL database engine:</para>
+        /// <para>Valid values for PostgreSQL:</para>
         /// <list type="bullet">
-        /// <item><description><b>11</b></description></item>
-        /// <item><description><b>14</b></description></item>
+        /// <item><description><para><b>11</b></para>
+        /// </description></item>
+        /// <item><description><para><b>14</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>Valid value for the Oracle database engine: <b>11</b></para>
+        /// <para>Valid values for Oracle:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>11</b></para>
+        /// </description></item>
+        /// <item><description><para><b>14</b></para>
+        /// </description></item>
+        /// </list>
         /// <remarks>
-        /// <para>This parameter is required when you specify the <b>DBType</b> parameter.</para>
+        /// <para>This parameter is required when the <b>DBType</b> parameter is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,10 +82,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cluster. Valid values:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go</description></item>
-        /// <item><description><b>Prepaid</b>: subscription</description></item>
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go (also known as postpaid or hourly billing).</para>
+        /// </description></item>
+        /// <item><description><para><b>Prepaid</b>: subscription (also known as prepaid).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,7 +99,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster. Default value: <b>cn-hangzhou</b>.</para>
+        /// <para>The region ID. The default value is <b>cn-hangzhou</b>.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</para>
         /// </remarks>
@@ -103,7 +120,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID of the cluster.</para>
+        /// <para>The zone ID.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available zones.</para>
         /// </remarks>

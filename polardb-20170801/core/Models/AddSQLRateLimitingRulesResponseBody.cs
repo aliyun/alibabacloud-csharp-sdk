@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AddSQLRateLimitingRulesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response message.</para>
+        /// <remarks>
+        /// <para>If the request is successful, \<c>Successful\\</c> is returned. If the request fails, an error message is returned, such as an error code.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>Message</para>
         /// </summary>
@@ -18,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69A85BAF-1089-4CDF-A82F-0A140F******</para>
@@ -28,6 +33,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

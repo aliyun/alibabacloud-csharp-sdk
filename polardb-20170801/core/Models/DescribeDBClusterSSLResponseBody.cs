@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterSSLResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of SSL connections.</para>
+        /// <para>A list of SSL connection information.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeDBClusterSSLResponseBodyItems> Items { get; set; }
         public class DescribeDBClusterSSLResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The ID of the endpoint.</para>
+            /// <para>The cluster endpoint ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pe-************</para>
@@ -27,6 +27,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBEndpointId { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>Enable</b>: enabled</para>
+            /// </description></item>
+            /// <item><description><para><b>Disable</b>: disabled</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is supported only when the database engine is compatible with PostgreSQL or Oracle syntax.</para>
+            /// </remarks>
+            /// 
             /// <b>Example:</b>
             /// <para>Enable</para>
             /// </summary>
@@ -35,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SSLAutoRotate { get; set; }
 
             /// <summary>
-            /// <para>The SSL connection string.</para>
+            /// <para>The SSL connection endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-************.mysql.polardb.rds.aliyuncs.com</para>
@@ -47,8 +58,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>Indicates whether SSL encryption is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Enabled</b>: SSL is enabled.</description></item>
-            /// <item><description><b>Disable</b>: SSL is disabled.</description></item>
+            /// <item><description><para><b>Enabled</b>: enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>Disabled</b>: disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -59,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SSLEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the server certificate expires. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The certificate validity period. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c> (UTC time).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-13T07:14:22Z</para>
@@ -71,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C890995A-CF06-4F4D-8DB8-DD26C2******</para>
@@ -83,11 +96,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Indicates whether automatic rotation of SSL certificates is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b>: The feature is enabled.</description></item>
-        /// <item><description><b>Disable</b>: The feature is disabled.</description></item>
+        /// <item><description><para><b>Enable</b>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>Disable</b>: disabled</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is valid only for a PolarDB for MySQL cluster.</para>
+        /// <para>This parameter is supported only for PolarDB for MySQL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

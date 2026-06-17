@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RemoveApplicationEnvironmentVariablesRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway after removing the variables. The default is <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
+        /// <para>A list of the environment variable names to remove.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VariableNames")]

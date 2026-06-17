@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdatePolarClawCronJobShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Agent that runs the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>work</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to delete the task after its first execution.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DeleteAfterRun { get; set; }
 
         /// <summary>
+        /// <para>The result delivery configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Mode&quot;:&quot;announce&quot;,&quot;Channel&quot;:&quot;telegram&quot;}</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DeliveryShrink { get; set; }
 
         /// <summary>
+        /// <para>The new description for the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Daily report generation</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the task is enabled.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The configuration for failure alerts. Set this to <c>false</c> to disable alerts.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;After&quot;:3,&quot;Channel&quot;:&quot;telegram&quot;}</para>
         /// </summary>
@@ -68,6 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FailureAlertShrink { get; set; }
 
         /// <summary>
+        /// <para>The ID of the scheduled task to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +92,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string JobId { get; set; }
 
         /// <summary>
+        /// <para>The new name for the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>afternoon-report</para>
         /// </summary>
@@ -86,6 +102,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The new payload configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Kind&quot;:&quot;agentTurn&quot;,&quot;Message&quot;:&quot;Updated: Generate afternoon report.&quot;}</para>
         /// </summary>
@@ -94,6 +112,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayloadShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway after the update. Default value: <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -102,6 +122,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
+        /// <para>The scheduling configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Kind&quot;:&quot;cron&quot;,&quot;Expr&quot;:&quot;0 12 * * *&quot;,&quot;Tz&quot;:&quot;America/New_York&quot;}</para>
         /// </summary>
@@ -110,6 +132,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScheduleShrink { get; set; }
 
         /// <summary>
+        /// <para>The session routing key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent:main:feishu:direct:***</para>
         /// </summary>
@@ -118,6 +142,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionKey { get; set; }
 
         /// <summary>
+        /// <para>The new session target.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>isolated</para>
         /// </summary>
@@ -126,6 +152,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionTarget { get; set; }
 
         /// <summary>
+        /// <para>The new wake mode.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>now</para>
         /// </summary>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all clusters that are deployed in a specified region, such as the cluster IDs.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
@@ -50,11 +50,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled task that you want to cancel.</para>
+        /// <para>The ID of the scheduled task to cancel.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/199648.html">DescribeScheduleTasks</a> operation to query the details of all scheduled tasks that belong to the current account, such as the task IDs.</description></item>
-        /// <item><description>You can cancel only the tasks whose status is <c>pending</c>.``</description></item>
+        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/199648.html">DescribeScheduleTasks</a> operation to view information about all scheduled tasks for your account, including task IDs.</para>
+        /// </description></item>
+        /// <item><description><para>You can cancel only tasks that are in the pending state. The <c>Status</c> parameter for these tasks returns <c>pending</c>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>

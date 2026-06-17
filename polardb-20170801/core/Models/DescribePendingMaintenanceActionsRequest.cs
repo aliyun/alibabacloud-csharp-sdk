@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePendingMaintenanceActionsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the historical tasks. Valid values:</para>
+        /// <para>Specifies whether to return historical tasks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: returns the current task.</description></item>
-        /// <item><description><b>1</b>: returns the historical tasks.</description></item>
+        /// <item><description><para><b>0</b>: returns current tasks.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: returns historical tasks.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>0</b>.</para>
         /// 
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>

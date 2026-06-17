@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterNetInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The type of the endpoint. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>Normal: the primary endpoint</para>
+        /// </description></item>
+        /// <item><description><para>ReadWriteSplitting: the cluster endpoint</para>
+        /// </description></item>
+        /// <item><description><para>MPP: the Massively Parallel Processing (MPP) endpoint</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
         /// </summary>
@@ -18,6 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConnectionStringType { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

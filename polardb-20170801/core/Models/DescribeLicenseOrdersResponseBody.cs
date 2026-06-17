@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeLicenseOrdersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried orders.</para>
+        /// <para>The list of orders.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeLicenseOrdersResponseBodyItems> Items { get; set; }
         public class DescribeLicenseOrdersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The number of generated activation codes.</para>
+            /// <para>The number of activation codes that have been generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? ActivatedCodeCount { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of activation codes that you can apply for.</para>
+            /// <para>The quota for requesting activation codes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? ActivationCodeQuota { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud order. The ID of a virtual order may be returned.</para>
+            /// <para>The Alibaba Cloud order ID or virtual order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>227638319690519</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AliyunOrderId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the SystemIdentifier parameter can be left empty when the system generates an activation code.</para>
+            /// <para>Specifies whether the System Identifier can be left empty when an activation code is generated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? AllowEmptySystemIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The engine of the PolarDB cluster. Valid values: PG, Oracle, and MySQL.</para>
+            /// <para>The database type, such as PG, Oracle, or MySQL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PG</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The time when the order was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-11 03:14:15</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
-            /// <para>The time when the order was updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-11 03:14:15</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the order is a virtual order. Pre-generation of activation codes is allowed for virtual orders.</para>
+            /// <para>Indicates whether the order is a virtual order. Virtual orders allow for pre-generating activation codes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? IsVirtualOrder { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the virtual order is frozen. Generation of activation codes is not allowed for frozen virtual orders.</para>
+            /// <para>Indicates whether the virtual order is frozen. No more activation codes can be generated from a frozen order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -107,13 +107,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? IsVirtualOrderFrozen { get; set; }
 
             /// <summary>
-            /// <para>The type of the package. Valid values:</para>
+            /// <para>The package type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>single_node_subscribe: Single-node Edition (Subscription).</description></item>
-            /// <item><description>single_node_long_term: Single-node Edition (Long-term).</description></item>
-            /// <item><description>primary_backup_subscribe: HA Edition (Subscription).</description></item>
-            /// <item><description>primary_backup_long_term: HA Edition (Long-term).</description></item>
-            /// <item><description>pre_generation_long_term: Pre-generated (Long-term).</description></item>
+            /// <item><description><para>single_node_subscribe: single node (subscription)</para>
+            /// </description></item>
+            /// <item><description><para>single_node_long_term: single node (long-term)</para>
+            /// </description></item>
+            /// <item><description><para>primary_backup_subscribe: primary/standby (subscription)</para>
+            /// </description></item>
+            /// <item><description><para>primary_backup_long_term: primary/standby (long-term)</para>
+            /// </description></item>
+            /// <item><description><para>pre_generation_long_term: pre-generated (long-term)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -124,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PackageType { get; set; }
 
             /// <summary>
-            /// <para>The validity period of the package. Valid values: 1 year and 30 years.</para>
+            /// <para>The validity period of the package. Common options are one year or long-term (30 years).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1 year</para>
@@ -134,7 +139,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PackageValidity { get; set; }
 
             /// <summary>
-            /// <para>The purchase channel. Valid values: aliyun_market and aliyun_public. aliyun_market indicates Alibaba Cloud Marketplace. aliyun_public indicates the PolarDB buy page.</para>
+            /// <para>The purchase channel. Valid values: \<c>aliyun_market\\</c> (Alibaba Cloud Marketplace) and \<c>aliyun_public\\</c> (standard purchase page).</para>
             /// 
             /// <b>Example:</b>
             /// <para>aliyun_public</para>
@@ -144,7 +149,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PurchaseChannel { get; set; }
 
             /// <summary>
-            /// <para>The ID of the virtual order.</para>
+            /// <para>The virtual order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>227638319690519</para>
@@ -156,7 +161,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -166,7 +171,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -186,7 +191,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

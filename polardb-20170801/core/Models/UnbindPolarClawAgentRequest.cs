@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UnbindPolarClawAgentRequest : TeaModel {
         /// <summary>
+        /// <para>The agent ID to unbind.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The channel plugin ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Channel { get; set; }
 
         /// <summary>
+        /// <para>The channel account ID. Omit this parameter to remove all bindings for the specified agent ID and channel plugin ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeParameterGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the database engine. Only <b>MySQL</b> is supported.</para>
+        /// <para>The database engine type. Only <b>MySQL</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The version of the database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>5.6</b></description></item>
-        /// <item><description><b>5.7</b></description></item>
-        /// <item><description><b>8.0</b></description></item>
+        /// <item><description><para><b>5.6</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.7</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,9 +46,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The ID of the region.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query all regions that are available for your account, such as the region ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the information about all available regions of your account, including the region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the virtual node belongs.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class EnablePolarClawChannelRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the channel.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway after the channel is enabled. The default value is <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

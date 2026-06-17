@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The maintenance window of the cluster. Specify the maintenance window in the <c>HH:mmZ-HH:mmZ</c> format. For example, the value <c>16:00Z-17:00Z</c> indicates that the cluster can be maintained from 00:00 to 01:00 (UTC+8).</para>
+        /// <para>The maintenance window of the cluster. The format is <c>HH:mmZ- HH:mmZ</c>. For example, <c>16:00Z-17:00Z</c> indicates that routine maintenance can be performed from 00:00 to 01:00 (UTC+08:00).</para>
         /// <remarks>
-        /// <para> The maintenance window must start on the hour and last for an hour.</para>
+        /// <para>The maintenance window must start on the hour and last for one hour.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

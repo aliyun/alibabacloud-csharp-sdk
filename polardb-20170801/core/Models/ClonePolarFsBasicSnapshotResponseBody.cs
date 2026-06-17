@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ClonePolarFsBasicSnapshotResponseBody : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-bp150t3****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Polarlakebase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-2ze0i7*****</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CED079B7-A408-41A1-BFF1-EC608E******</para>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The source path of the file resource.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/test</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourcePath { get; set; }
 
         /// <summary>
+        /// <para>The destination path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/testclone</para>
         /// </summary>

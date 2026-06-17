@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You must specify <c>DBNodeId</c> or <c>DBClusterId</c>. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as cluster IDs.</para>
+        /// <para>Specify either <c>DBNodeId</c> or <c>DBClusterId</c>. Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including cluster IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para> You must specify <c>DBNodeId</c> or <c>DBClusterId</c>. You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of the clusters that belong to your Alibaba Cloud account, such as node IDs.</para>
+        /// <para>Specify either <c>DBNodeId</c> or <c>DBClusterId</c>. Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including node IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in UTC. The end time must be later than the start time.</para>
+        /// <para>The end of the time range to query. The end time must be later than the start time. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0 and does not exceed the maximum value of the Integer data type.</para>
         /// <para>Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the <c>YYYY-MM-DDThh:mmZ</c> format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,23 +96,29 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The state of the tasks that you want to query. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Waiting</b>: The task is pending.</description></item>
-        /// <item><description><b>Running</b>: The task is running.</description></item>
-        /// <item><description><b>Finished</b>: The task is completed.</description></item>
-        /// <item><description><b>Closed</b>: The task is closed.</description></item>
-        /// <item><description><b>Pause</b>: The task is paused.</description></item>
-        /// <item><description><b>Stop</b>: The task is interrupted.</description></item>
+        /// <item><description><para><b>Waiting</b>: The task is waiting to be executed.</para>
+        /// </description></item>
+        /// <item><description><para><b>Running</b>: The task is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>Finished</b>: The task is complete.</para>
+        /// </description></item>
+        /// <item><description><para><b>Closed</b>: The task is closed.</para>
+        /// </description></item>
+        /// <item><description><para><b>Pause</b>: The task is paused.</para>
+        /// </description></item>
+        /// <item><description><para><b>Stop</b>: The task is interrupted.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, the operation returns the details of only the tasks that are in the <b>Waiting</b> or <b>Running</b> state for the cluster or node.</para>
+        /// <item><description><para>If you leave this parameter empty, the details of all tasks in the <b>Waiting</b> or <b>Running</b> state for the current cluster or node are returned.</para>
         /// </description></item>
-        /// <item><description><para>You can enter multiple task states. Separate multiple task states with commas (,).</para>
+        /// <item><description><para>To query tasks in multiple states, separate the state names with a comma (,).</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>

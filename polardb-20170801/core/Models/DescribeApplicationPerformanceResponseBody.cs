@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationPerformanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The application cluster ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The application type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>supabase</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationType { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query. The time is in UTC and follows the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2025-05-23T02:21:00Z</para>
         /// </summary>
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The performance metrics.</para>
+        /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
         public DescribeApplicationPerformanceResponseBodyPerformanceKeys PerformanceKeys { get; set; }
@@ -82,6 +91,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CDB3258F-B5DE-43C4-8935-CBA0CA******</para>
         /// </summary>
@@ -90,6 +101,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query. The time is in UTC and follows the <c>yyyy-MM-ddTHH:mm:ssZ</c> format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-11-15T16:00Z</para>
         /// </summary>

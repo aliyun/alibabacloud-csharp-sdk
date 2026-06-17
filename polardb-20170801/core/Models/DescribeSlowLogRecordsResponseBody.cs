@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSlowLogRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-*****************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Database engine.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb_mysql</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of records on this page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of SQL statements.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

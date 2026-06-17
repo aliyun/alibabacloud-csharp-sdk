@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class GrantAccountPrivilegeZonalResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CD35F3-F3-44CA-AFFF-BAF869******</para>
         /// </summary>

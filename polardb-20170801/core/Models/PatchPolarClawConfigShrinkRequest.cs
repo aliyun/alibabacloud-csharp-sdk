@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class PatchPolarClawConfigShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>A JSON merge-patch object.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;tools&quot;: {
@@ -36,6 +39,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConfigPatchShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway after applying the patch. The default is <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

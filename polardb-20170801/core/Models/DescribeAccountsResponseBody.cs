@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeAccountsResponseBodyAccounts> Accounts { get; set; }
         public class DescribeAccountsResponseBodyAccounts : TeaModel {
             /// <summary>
-            /// <para>The description of the account.</para>
+            /// <para>The description of the database account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountDescription { get; set; }
 
             /// <summary>
-            /// <para>The locking state of the account. Valid values:</para>
+            /// <para>The lock status of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>UnLock</b></description></item>
-            /// <item><description><b>Lock</b></description></item>
+            /// <item><description><para><b>UnLock</b>: The account is not locked.</para>
+            /// </description></item>
+            /// <item><description><para><b>Lock</b>: The account is locked.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountLockState { get; set; }
 
             /// <summary>
-            /// <para>The name of the account.</para>
+            /// <para>The name of the database account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_acc</para>
@@ -61,11 +63,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AccountPasswordValidTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the account. Valid values:</para>
+            /// <para>The status of the database account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The account is being created.</description></item>
-            /// <item><description><b>Available</b>: The account is available.</description></item>
-            /// <item><description><b>Deleting</b>: The account is being deleted</description></item>
+            /// <item><description><para><b>Creating</b>: The account is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>Available</b>: The account is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>Deleting</b>: The account is being deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -78,9 +83,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The type of the account. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Normal</b>: standard account.</description></item>
-            /// <item><description><b>Super</b>: privileged account.</description></item>
-            /// <item><description><b>ReadOnly</b>: global read-only account.</description></item>
+            /// <item><description><para><b>Normal</b>: standard account.</para>
+            /// </description></item>
+            /// <item><description><para><b>Super</b>: privileged account.</para>
+            /// </description></item>
+            /// <item><description><para><b>ReadOnly</b>: global read-only account.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -98,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public List<DescribeAccountsResponseBodyAccountsDatabasePrivileges> DatabasePrivileges { get; set; }
             public class DescribeAccountsResponseBodyAccountsDatabasePrivileges : TeaModel {
                 /// <summary>
-                /// <para>The permissions that the account is granted on the database. Valid values:</para>
+                /// <para>The permissions of the account.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ReadOnly</para>
@@ -108,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string AccountPrivilege { get; set; }
 
                 /// <summary>
-                /// <para>The name of the database.</para>
+                /// <para>The database name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DBtest</para>
@@ -122,7 +130,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number of the page returned.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

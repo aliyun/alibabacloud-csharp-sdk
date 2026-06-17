@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeScheduleTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the cluster.</para>
+        /// <para>The cluster description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testdb</para>
@@ -22,13 +22,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information of all PolarDB clusters that are deployed in a specific region, such as the cluster IDs.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in a specific region, including cluster IDs.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, all scheduled tasks on your clusters are queried.</para>
+        /// <item><description><para>If this parameter is omitted, scheduled tasks for all clusters in your account are queried.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// <remarks>
-        /// <para> The order ID can contain only digits.</para>
+        /// <para>The order ID can contain only digits.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Set this parameter to an integer that is greater than 0. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>. Default value: 30.</para>
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b> (default), <b>50</b>, and <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The latest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</para>
+        /// <para>The latest start time of the task. The time is in UTC. If the task does not start by this time, it expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-28T12:30Z</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest start time of the task that you specified when you created the scheduled task. The time is displayed in UTC.</para>
+        /// <para>The earliest start time of the task. The time is in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-28T12:00Z</para>
@@ -99,15 +99,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedStartTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters in a specific account.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the available regions.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, scheduled tasks on your clusters that are deployed in all regions are queried.</para>
+        /// <item><description><para>If this parameter is omitted, scheduled tasks in all regions in your account are queried.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
@@ -135,18 +135,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The state of the tasks that you want to query. Valid values:</para>
+        /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pending</b>: The tasks are pending execution.</description></item>
-        /// <item><description><b>executing</b>: The tasks are being executed.</description></item>
-        /// <item><description><b>failure</b>: The tasks failed and need to be run again.</description></item>
-        /// <item><description><b>finish</b>: The tasks are complete.</description></item>
-        /// <item><description><b>cancel</b>: The tasks are canceled.</description></item>
-        /// <item><description><b>expired</b>: The tasks are expired. The tasks are not started within the time periods that are specified to start the tasks.</description></item>
-        /// <item><description><b>rollback</b>: The tasks are being rolled back.</description></item>
+        /// <item><description><para><b>pending</b>: The task is waiting to be executed.</para>
+        /// </description></item>
+        /// <item><description><para><b>executing</b>: The task is being executed.</para>
+        /// </description></item>
+        /// <item><description><para><b>failure</b>: The task failed and is waiting for a retry.</para>
+        /// </description></item>
+        /// <item><description><para><b>finish</b>: The task is complete.</para>
+        /// </description></item>
+        /// <item><description><para><b>cancel</b>: The task is canceled.</para>
+        /// </description></item>
+        /// <item><description><para><b>expired</b>: The task has expired because it did not start within the scheduled time window.</para>
+        /// </description></item>
+        /// <item><description><para><b>rollback</b>: The task is being rolled back.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, all scheduled tasks in all states are queried.</para>
+        /// <para>If this parameter is omitted, scheduled tasks in all states are queried.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -157,21 +164,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The type of scheduled tasks that you want to query. Valid values:</para>
+        /// <para>The action of the scheduled task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateDBNodes</b></description></item>
-        /// <item><description><b>ModifyDBNodeClass</b></description></item>
-        /// <item><description><b>UpgradeDBClusterVersion</b></description></item>
-        /// <item><description><b>ModifyDBClusterPrimaryZone</b></description></item>
+        /// <item><description><para><b>CreateDBNodes</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ModifyDBNodeClass</b></para>
+        /// </description></item>
+        /// <item><description><para><b>UpgradeDBClusterVersion</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ModifyDBClusterPrimaryZone</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you specify the <c>PlannedStartTime</c> parameter when you call the four preceding operations, the details of each task are returned. Otherwise, an empty string is returned for the <c>TimerInfos</c> parameter.</para>
+        /// <item><description><para>Task details are returned only if you specify the <c>PlannedStartTime</c> parameter when you call one of the preceding API operations. Otherwise, the <c>TimerInfos</c> field in the response is empty.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, all types of scheduled tasks on you clusters are queried.</para>
+        /// <item><description><para>If this parameter is omitted, scheduled tasks of all types are queried.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>CreateDBNodes</para>

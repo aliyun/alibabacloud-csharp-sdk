@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSlowLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end date of the query.</para>
+        /// <para>The end time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-30Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>polardb_mysql</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of SQL statements that are returned on the current page.</para>
+        /// <para>The number of SQL statements on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6</para>
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2553A660-E4EB-4AF4-A402-8AFF70A49143</para>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start date of the query.</para>
+        /// <para>The start time of the query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-05-01Z</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

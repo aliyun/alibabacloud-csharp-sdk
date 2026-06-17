@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpgradePolarClawPluginResponseBody : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The name of the newly installed npm package.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NpmPackage { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Ok { get; set; }
 
         /// <summary>
+        /// <para>The ID of the upgraded plugin.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>openclaw-lark</para>
         /// </summary>
@@ -58,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7E2FE3BB-C677-5FF9-9FC5-9CF364BD6BE5</para>
@@ -68,6 +80,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the gateway restarted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ResetConsumerApiKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The complete api key, which is returned only in this response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The user ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c-mqveroemc***</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3AA69096-757C-4647-B36C-29EBC2******</para>

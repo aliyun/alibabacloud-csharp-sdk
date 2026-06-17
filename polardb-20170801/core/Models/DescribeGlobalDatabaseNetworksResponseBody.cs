@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeGlobalDatabaseNetworksResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the GDNs.</para>
+        /// <para>A list of GDNs.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeGlobalDatabaseNetworksResponseBodyItems> Items { get; set; }
         public class DescribeGlobalDatabaseNetworksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>The time when the GDN was created. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The time at which the GDN was created, in UTC. The format is <c>YYYY-MM-DDTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-03-23T05:46:54Z</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Details about clusters in the GDN.</para>
+            /// <para>A list of clusters in the GDN.</para>
             /// </summary>
             [NameInMap("DBClusters")]
             [Validation(Required=false)]
             public List<DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters> DBClusters { get; set; }
             public class DescribeGlobalDatabaseNetworksResponseBodyItemsDBClusters : TeaModel {
                 /// <summary>
-                /// <para>The ID of the cluster.</para>
+                /// <para>The cluster ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pc-****************</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DBClusterId { get; set; }
 
                 /// <summary>
-                /// <para>The region ID of the cluster.</para>
+                /// <para>The region ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -56,11 +56,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>The role of the cluster. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>Primary</b>: the primary cluster</description></item>
-                /// <item><description><b>standby</b>: the secondary cluster</description></item>
+                /// <item><description><para><b>primary</b>: The primary cluster.</para>
+                /// </description></item>
+                /// <item><description><para><b>standby</b>: The standby cluster.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>A GDN consists of one primary cluster and up to four secondary clusters. For more information, see <a href="https://help.aliyun.com/document_detail/160381.html">GDN</a>.</para>
+                /// <para>A GDN consists of one primary cluster and up to four standby clusters. For more information, see <a href="https://help.aliyun.com/document_detail/160381.html">Global Database Network</a>.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The type of the database engine. Only <b>MySQL</b> is supported.</para>
+            /// <para>The database engine type. Only <b>MySQL</b> is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBType { get; set; }
 
             /// <summary>
-            /// <para>The version of the database engine. Only the <b>8.0</b> version is supported.</para>
+            /// <para>The database engine version. Only version <b>8.0</b> is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
@@ -93,12 +95,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBVersion { get; set; }
 
             /// <summary>
-            /// <para>The description of the GDN. The description must meet the following requirements:</para>
+            /// <para>The GDN description. Requirements:</para>
             /// <list type="bullet">
-            /// <item><description>It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-            /// <item><description>It must start with a letter.</description></item>
-            /// <item><description>It can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-            /// <item><description>It must be 2 to 126 characters in length.</description></item>
+            /// <item><description><para>Cannot start with http\:// or https\://.</para>
+            /// </description></item>
+            /// <item><description><para>Must start with a letter or a Chinese character.</para>
+            /// </description></item>
+            /// <item><description><para>Can contain letters, Chinese characters, digits, underscores (_), or hyphens (-).</para>
+            /// </description></item>
+            /// <item><description><para>Must be 2 to 126 characters long.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -109,7 +115,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GDNDescription { get; set; }
 
             /// <summary>
-            /// <para>The ID of the GDN.</para>
+            /// <para>The GDN ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>gdn-****************</para>
@@ -121,11 +127,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The status of the GDN. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Creating</b>: The GDN is being created.</description></item>
-            /// <item><description><b>active</b>: The GDN is running.</description></item>
-            /// <item><description><b>deleting</b>: The GDN is being deleted.</description></item>
-            /// <item><description><b>locked</b>: The GDN is locked. If the GDN is locked, you cannot perform operations on clusters in the GDN.</description></item>
-            /// <item><description><b>removing_member</b>: The secondary cluster is being removed from the GDN.</description></item>
+            /// <item><description><para><b>creating</b>: The GDN is being created.</para>
+            /// </description></item>
+            /// <item><description><para><b>active</b>: The GDN is running.</para>
+            /// </description></item>
+            /// <item><description><para><b>deleting</b>: The GDN is being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>locked</b>: The GDN is locked. This status prevents any operations on clusters in the GDN.</para>
+            /// </description></item>
+            /// <item><description><para><b>removing_member</b>: A standby cluster is being removed from the GDN.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,10 +146,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string GDNStatus { get; set; }
 
+            /// <summary>
+            /// <para>The tags applied to the GDN.</para>
+            /// </summary>
             [NameInMap("Labels")]
             [Validation(Required=false)]
             public DescribeGlobalDatabaseNetworksResponseBodyItemsLabels Labels { get; set; }
             public class DescribeGlobalDatabaseNetworksResponseBodyItemsLabels : TeaModel {
+                /// <summary>
+                /// <para>The GDN version.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2.0</para>
+                /// </summary>
                 [NameInMap("GDNVersion")]
                 [Validation(Required=false)]
                 public string GDNVersion { get; set; }
@@ -168,7 +188,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69A85BAF-1089-4CDF-A82F-0A140F******</para>
@@ -178,7 +198,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

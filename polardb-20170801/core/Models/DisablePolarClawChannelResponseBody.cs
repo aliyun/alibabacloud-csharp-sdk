@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DisablePolarClawChannelResponseBody : TeaModel {
         /// <summary>
+        /// <para><b>The application ID.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the disabled channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>feishu</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Ok { get; set; }
 
         /// <summary>
+        /// <para><b>The request ID.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>2281C6C9-CBAB-1AFD-8400-670750CF6025_2212</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the gateway was restarted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

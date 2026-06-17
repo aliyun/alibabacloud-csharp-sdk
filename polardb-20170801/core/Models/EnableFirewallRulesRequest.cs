@@ -23,11 +23,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable or disable the specified firewall rules. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the specified firewall rules.</description></item>
-        /// <item><description><b>false</b>: disables the specified firewall rules.</description></item>
+        /// <item><description><b>true</b>: Enable.</description></item>
+        /// <item><description><b>false</b>: Disable.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is valid only when you specify the <b>RuleNameList</b> parameter.</para>
+        /// <para>This parameter takes effect only when a value is specified for the <b>RuleNameList</b> parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,9 +54,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The name of the firewall rule that you want to enable for the cluster. You can specify multiple firewall rules at a time. Separate multiple rules with commas (,).</para>
+        /// <para>A comma-separated list of the firewall rule names to enable or disable.</para>
         /// <remarks>
-        /// <para>You can call the <b>DescribeFirewallRules</b> operation to query the details of all firewall rules that are applicable to a cluster, such as rule names.</para>
+        /// <para>You can find rule names under <b>Security Management****SQL Firewall</b> tab of the cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

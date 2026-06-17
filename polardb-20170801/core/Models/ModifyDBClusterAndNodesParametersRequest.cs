@@ -9,39 +9,44 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterAndNodesParametersRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to clear binlog. This parameter is valid only when binlog is disabled.</para>
+        /// </summary>
         [NameInMap("ClearBinlog")]
         [Validation(Required=false)]
         public bool? ClearBinlog { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-****************</para>
+        /// <para>pc-**********</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of nodes. You can specify this parameter, or leave this parameter empty. Separate multiple node IDs with commas (,).</para>
+        /// <para>The IDs of the nodes. By setting this parameter, you can modify the parameters of the cluster and specified nodes. Separate multiple node IDs with commas (,).</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, only the cluster parameters are modified.</para>
+        /// <para>If this parameter is not specified, only the cluster parameters are modified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>pi-****************,pi-**********,</para>
+        /// <para>pi-<b><b><b><b><b>,pi-</b></b></b></b></b></para>
         /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
         public string DBNodeIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to immediately or scheduledly modify parameters and restart the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b>: runs the kernel upgrade task in a scheduled manner.</description></item>
-        /// <item><description><b>true</b>: immediately runs the kernel upgrade task.</description></item>
+        /// <item><description><para><b>false</b> (default): scheduled execution</para>
+        /// </description></item>
+        /// <item><description><para><b>true</b>: immediate execution</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,14 +68,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The ID of the parameter template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pcpg-**************</para>
+        /// <para>pcpg-**********</para>
         /// </summary>
         [NameInMap("ParameterGroupId")]
         [Validation(Required=false)]
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The JSON string for the parameter and its value.</para>
+        /// <para>The JSON string that consists of parameters and their values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</para>
@@ -80,15 +85,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The latest start time to run the task. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The latest time to start the scheduled task. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The value of this parameter must be at least 30 minutes later than the value of the PlannedStartTime parameter.</para>
+        /// <item><description><para>The latest start time must be 30 minutes or more later than the earliest start time.</para>
         /// </description></item>
-        /// <item><description><para>By default, if you specify the <c>PlannedStartTime</c> parameter but do not specify the PlannedEndTime parameter, the latest start time of the task is set to a value that is calculated by using the following formula: <c>Value of the PlannedEndTime parameter + 30 minutes</c>. For example, if you set the <c>PlannedStartTime</c> parameter to <c>2021-01-14T09:00:00Z</c> and you do not specify the PlannedEndTime parameter, the latest start time of the task is set to <c>2021-01-14T09:30:00Z</c>.</para>
+        /// <item><description><para>If you specify <c>PlannedStartTime</c> but not this parameter, the latest start time of the task is <c>the earliest start time + 30 minutes</c> by default. For example, if you set <c>PlannedStartTime</c> to <c>2021-01-14T09:00:00Z</c> and leave this parameter empty, the task will start no later than <c>2021-01-14T09:30:00Z</c>.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-14T09:30:00Z</para>
@@ -98,15 +103,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest time to upgrade the specifications within the scheduled time period. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The earliest time to start the scheduled task. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in the time range from <c>2021-01-14T09:00:00Z</c> to <c>2021-01-15T09:00:00Z</c>.</para>
+        /// <item><description><para>The start time can be any time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a time that ranges from <c>2021-01-14T09:00:00Z</c> to <c>2021-01-15T09:00:00Z</c>.</para>
         /// </description></item>
-        /// <item><description><para>If this parameter is empty, the upgrade task is immediately performed.</para>
+        /// <item><description><para>If you leave this parameter empty, the task is immediately executed.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2021-01-14T09:00:00Z</para>
@@ -124,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The secondary clusters in the GDN to which the parameter settings are synchronized.</para>
+        /// <para>The list of GDN standby clusters to which you want to synchronize the parameter settings.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-<b><b><b><b><b>,gdn-</b></b></b></b></b></para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value. Make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. The client generates the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the PolarDB cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cluster. Valid values:</para>
+        /// <para>The billing method of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go</para>
+        /// </description></item>
+        /// <item><description><para><b>Prepaid</b>: subscription</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,13 +60,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The renewal cycle of the cluster. Valid values:</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b></description></item>
-        /// <item><description><b>Month</b></description></item>
+        /// <item><description><para><b>Year</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Month</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if you set the <b>PayType</b> parameter to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required when you set <b>PayType</b> to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -83,7 +87,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -112,13 +116,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration of the cluster. Valid values:</para>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Year</b>, the <b>UsedTime</b> parameter can be set to 1, 2, or 3.</description></item>
-        /// <item><description>If the <b>Period</b> parameter is set to <b>Month</b>, the <b>UsedTime</b> parameter can be set to 1, 2, 3, 4, 5, 6, 7, 8, or 9.</description></item>
+        /// <item><description><para>If you set <b>Period</b> to <b>Year</b>, the value of <b>UsedTime</b> can be 1, 2, or 3.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <b>Period</b> to <b>Month</b>, the value of <b>UsedTime</b> can be an integer from 1 to 9.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter is required if you set the <b>PayType</b> parameter to <b>Prepaid</b>.</para>
+        /// <para>This parameter is required when you set <b>PayType</b> to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

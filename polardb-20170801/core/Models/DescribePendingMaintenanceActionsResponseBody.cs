@@ -37,12 +37,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The task type of pending events. Valid values:</para>
+            /// <para>The task type of the pending event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>DatabaseSoftwareUpgrading</b>: database software upgrades</description></item>
-            /// <item><description><b>DatabaseHardwareMaintenance</b>: hardware maintenance and upgrades</description></item>
-            /// <item><description><b>DatabaseStorageUpgrading</b>: database storage upgrades</description></item>
-            /// <item><description><b>DatabaseProxyUpgrading</b>: minor version upgrades of the proxy</description></item>
+            /// <item><description><para><b>DatabaseSoftwareUpgrading</b>: database software upgrade</para>
+            /// </description></item>
+            /// <item><description><para><b>DatabaseHardwareMaintenance</b>: hardware maintenance and upgrade</para>
+            /// </description></item>
+            /// <item><description><para><b>DatabaseStorageUpgrading</b>: database storage upgrade</para>
+            /// </description></item>
+            /// <item><description><para><b>DatabaseProxyUpgrading</b>: proxy minor version upgrade</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

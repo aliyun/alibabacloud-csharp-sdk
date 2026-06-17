@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of returned entries.</para>
+        /// <para>The number of entries in the list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The vSwitches.</para>
+        /// <para>The list of vSwitches.</para>
         /// </summary>
         [NameInMap("VSwitchs")]
         [Validation(Required=false)]
@@ -89,8 +89,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>Indicates whether the vSwitch is the default vSwitch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The vSwitch is the default vSwitch.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The vSwitch is not the default vSwitch.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public bool? IsDefault { get; set; }
 
             /// <summary>
-            /// <para>The zone to which the NAT gateway belongs.</para>
+            /// <para>The zone where the NAT Gateway is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-b</para>
@@ -113,8 +115,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The status of the vSwitch. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Pending</b>: The vSwitch is being configured.</description></item>
-            /// <item><description><b>Available</b>: The vSwitch is available.</description></item>
+            /// <item><description><para><b>Pending</b>: The vSwitch is being configured.</para>
+            /// </description></item>
+            /// <item><description><para><b>Available</b>: The vSwitch is active.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -125,7 +129,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The vSwitch ID.</para>
+            /// <para>The ID of the vSwitch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-25bcdxs7pv1****</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeCharacterSetNameRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can only query character sets that PolarDB for MySQL clusters support. If you enter the ID of a PolarDB for PostgreSQL or PolarDB for Oracle cluster, the returned value of the <c>CharacterSetNameItems</c> parameter is an empty string.</para>
+        /// <para>This operation supports only PolarDB for MySQL clusters. If you specify the cluster ID of a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Oracle Compatible) cluster, <c>CharacterSetNameItems</c> will be empty in the response.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeEncryptionDBRolePrivilegeRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +37,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the role permission to query. To query multiple permissions at a time, enter multiple permission names and separate them with commas (,).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeEncryptionDBRolePrivilege</a> operation to view the details of all role access policy rules for the cluster. The details include the permission names.</description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActivationCodesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud order. The value can be the ID of a virtual order.</para>
+        /// <para>The ID of the Alibaba Cloud order (including virtual orders) used to purchase the activation codes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AliyunOrderId { get; set; }
 
         /// <summary>
+        /// <para>Filters the list to return only the activation code matching the specified MAC address.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aa:bb:cc:dd:ee:ff</para>
         /// </summary>
@@ -37,7 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Page number</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Number of records to return per page</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -65,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Filters the list to return only the activation code matching the specified system identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3312548696141831911</para>
         /// </summary>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBClusterEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic association of newly added nodes with the cluster endpoint. Valid values:</para>
+        /// <para>Specifies whether to automatically add new nodes to the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disable</b> (default)</description></item>
+        /// <item><description><para><b>Enable</b>: Automatically adds new nodes to the endpoint.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disable</b> (default): Does not automatically add new nodes to the endpoint.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AutoAddNewNodes { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</para>
+        /// <para>A client-generated token to ensure the idempotence of the request. The token must be unique, case-sensitive, and a maximum of 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f******************</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,42 +57,93 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBEndpointDescription { get; set; }
 
         /// <summary>
-        /// <para>The advanced configurations of the cluster endpoint. You must specify the configurations in the JSON format. You can specify the configurations of the following attributes: consistency level, transaction splitting, connection pool, and offload reads from the primary node.</para>
+        /// <para>The advanced configurations for the custom cluster endpoint, specified as a JSON string. You can configure features such as consistency level, transaction splitting, whether the primary node accepts read requests, connection pool, and load balancing policy.</para>
         /// <list type="bullet">
-        /// <item><description><para>Specify the consistency level in the format of <c>{&quot;ConsistLevel&quot;:&quot;Consistency level&quot;}</c>. Default value: 1. Valid values:</para>
+        /// <item><description><para>Specifies the load balancing policy. The format is {&quot;LoadBalancePolicy&quot;:&quot;policy&quot;}. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: eventual consistency.</description></item>
-        /// <item><description><b>1</b>: session consistency.</description></item>
-        /// <item><description><b>2</b>: global consistency.</description></item>
+        /// <item><description><para><b>0</b>: connections-based load balancing (default).</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: active requests-based load balancing.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Specify the transaction splitting feature in the format of <c>{&quot;DistributedTransaction&quot;:&quot;Transaction splitting&quot;}</c>. Valid values:</para>
+        /// <item><description><para>Specifies the consistency level. The format is <c>{&quot;ConsistLevel&quot;:&quot;level&quot;}</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enables the transaction splitting feature. By default, the feature is enabled.</description></item>
-        /// <item><description><b>off</b>: disables the transaction splitting feature.</description></item>
+        /// <item><description><para><b>0</b>: eventual consistency.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: session consistency (default).</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: global consistency.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Specify the offload reads from the primary node feature in the format of <c>{&quot;MasterAcceptReads&quot;:&quot;Offload reads from the primary node&quot;}</c>. Default value: off. Valid values:</para>
+        /// <item><description><para>Specifies whether to enable transaction splitting. The format is <c>{&quot;DistributedTransaction&quot;:&quot;status&quot;}</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: The primary node accepts read requests.</description></item>
-        /// <item><description><b>off</b>: The primary node does not accept read requests.</description></item>
+        /// <item><description><para><b>on</b>: enables transaction splitting (default).</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: disables transaction splitting.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Specify the connection pool in the format of <c>{&quot;ConnectionPersist&quot;:&quot;Connection pool&quot;}</c>. Default value: off. Valid values:</para>
+        /// <item><description><para>Specifies whether the primary node accepts read requests. The format is <c>{&quot;MasterAcceptReads&quot;:&quot;status&quot;}</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>off</b>: disables the connection pool.</description></item>
-        /// <item><description><b>Session</b>: enables the session-level connection pool.</description></item>
-        /// <item><description><b>Transaction</b>: enables the transaction-level connection pool.</description></item>
+        /// <item><description><para><b>on</b>: The primary node accepts read requests.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: The primary node does not accept read requests (default).</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Specifies whether to enable the connection pool. The format is <c>{&quot;ConnectionPersist&quot;:&quot;status&quot;}</c>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>off</b>: disables the connection pool (default).</para>
+        /// </description></item>
+        /// <item><description><para><b>Session</b>: enables the session-level connection pool.</para>
+        /// </description></item>
+        /// <item><description><para><b>Transaction</b>: enables the transaction-level connection pool.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Specifies the degree of parallelism for a parallel query. The format is {&quot;MaxParallelDegree&quot;:&quot;degree&quot;}. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>A specific integer that specifies the degree of parallelism. For example: &quot;MaxParallelDegree&quot;:&quot;2&quot;.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: disables parallel query (default).</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Specifies whether to enable automatic routing between row store and column store. The format is {&quot;EnableHtapImci&quot;:&quot;status&quot;}. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>on</b>: enables automatic routing.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: disables automatic routing (default).</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>Specifies whether to enable overload protection. The format is {&quot;EnableOverloadThrottle&quot;:&quot;status&quot;}. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>on</b>: enables overload protection.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: disables overload protection (default).</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify the transaction splitting, connection pool, and offload reads from the primary node features for a PolarDB for MySQL cluster only if ReadWriteMode is set to ReadWrite for the cluster endpoint.</description></item>
-        /// <item><description>Only PolarDB for MySQL supports global consistency.</description></item>
-        /// <item><description>If the <b>ReadWriteMode</b> parameter is set to <b>ReadOnly</b>, the consistency level must be <b>0</b>.</description></item>
-        /// <item><description>You can use one record to specify the consistency level, transaction splitting, connection pool, and offload reads from the primary node features, such as <c>{&quot;ConsistLevel&quot;:&quot;1&quot;,&quot;DistributedTransaction&quot;:&quot;on&quot;,&quot;ConnectionPersist&quot;:&quot;Session&quot;,&quot;MasterAcceptReads&quot;:&quot;on&quot;}</c>.</description></item>
-        /// <item><description>The transaction splitting settings are restricted by the consistency level settings. For example, if you set the consistency level to <b>0</b>, transaction splitting cannot be enabled. If you set the consistency level to <b>1</b> or <b>2</b>, transaction splitting can be enabled.</description></item>
+        /// <item><description><para>You can configure transaction splitting, whether the primary node accepts read requests, the connection pool, and overload protection only for a PolarDB for MySQL endpoint in <b>ReadWrite</b> (automatic read/write splitting) mode.</para>
+        /// </description></item>
+        /// <item><description><para>A PolarDB for MySQL cluster endpoint in <b>ReadOnly</b> mode supports both <b>connections-based load balancing</b> and <b>active requests-based load balancing</b>. An endpoint in <b>ReadWrite</b> (automatic read/write splitting) mode supports only <b>active requests-based load balancing</b>.</para>
+        /// </description></item>
+        /// <item><description><para>You can enable automatic routing between row store and column store if the read/write mode of the cluster endpoint for PolarDB for MySQL is <b>ReadWrite</b> (automatic read/write splitting), or if the read/write mode is <b>ReadOnly</b> and the load balancing policy is <b>active requests-based load balancing</b>.</para>
+        /// </description></item>
+        /// <item><description><para>Only PolarDB for MySQL clusters support global consistency.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <b>ReadWriteMode</b> to <b>ReadOnly</b>, the consistency level must be <b>0</b> (eventual consistency).</para>
+        /// </description></item>
+        /// <item><description><para>You can configure the consistency level, transaction splitting, whether the primary node accepts read requests, and the connection pool at the same time. Example: <c>{&quot;ConsistLevel&quot;:&quot;1&quot;,&quot;DistributedTransaction&quot;:&quot;on&quot;,&quot;ConnectionPersist&quot;:&quot;Session&quot;,&quot;MasterAcceptReads&quot;:&quot;on&quot;}</c>.</para>
+        /// </description></item>
+        /// <item><description><para>The setting for transaction splitting depends on the consistency level. For example, if you set the consistency level to <b>0</b> (eventual consistency), you cannot enable transaction splitting. If you set the consistency level to <b>1</b> (session consistency) or <b>2</b> (global consistency), you can enable transaction splitting.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -102,7 +155,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndpointConfig { get; set; }
 
         /// <summary>
-        /// <para>The type of the cluster endpoint. Set the value to <b>Custom</b>.</para>
+        /// <para>The type of the custom cluster endpoint. Set the value to <b>Custom</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,15 +166,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndpointType { get; set; }
 
         /// <summary>
-        /// <para>The reader nodes that you want to associate with the endpoint. If you want to specify multiple reader nodes, separate the reader nodes with commas (,). If you do not specify this parameter, all nodes are used.</para>
+        /// <para>The nodes to associate with the endpoint. Separate multiple node IDs with a comma (,). If you omit this parameter, all nodes in the cluster are added by default.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You need to specify the node IDs for a PolarDB for MySQL cluster.</description></item>
-        /// <item><description>You need to specify the role name of each node for a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster. Example: <c>Writer, Reader1, Reader2</c>.</description></item>
-        /// <item><description>If you set <b>ReadWriteMode</b> to <b>ReadOnly</b>, you can associate only one node with the endpoint. If the only node becomes faulty, the cluster endpoint may be unavailable for up to 1 hour. We recommend that you associate more than one node with the cluster endpoint in production environments. We recommend that you associate at least two nodes with the cluster endpoint to improve service availability.</description></item>
-        /// <item><description>If you set <b>ReadWriteMode</b> to <b>ReadWrite</b>, you need to associate at least two nodes with the cluster endpoint.</description></item>
-        /// <item><description>PolarDB for MySQL does not impose a limit on the types of the two nodes. If the nodes are read-only nodes, write requests are forwarded to the primary node. </description></item>
-        /// <item><description>PolarDB for PostgreSQL and PolarDB for PostgreSQL (compatible with Oracle) require a primary node.</description></item>
+        /// <item><description><para>For a PolarDB for MySQL cluster, specify the node IDs.</para>
+        /// </description></item>
+        /// <item><description><para>For a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (compatible with Oracle) cluster, specify the roles of the nodes, such as <c>Writer,Reader1,Reader2</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <b>ReadWriteMode</b> to <b>ReadOnly</b>, you can associate only one node with the endpoint. If this node fails, the endpoint may be unavailable for up to 1 hour. This configuration is not recommended for a production environment. To improve availability, associate at least two nodes with the endpoint.</para>
+        /// </description></item>
+        /// <item><description><para>If you set <b>ReadWriteMode</b> to <b>ReadWrite</b>, you must associate at least two nodes with the endpoint.
+        /// \* For a PolarDB for MySQL cluster, you can select any two nodes. If both nodes are read-only nodes, write requests are routed to the primary node.
+        /// \* For a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (compatible with Oracle) cluster, the primary node must be included.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -149,10 +206,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Global consistency timeout strategy. The value range is as follows:</para>
+        /// <para>The policy for handling global consistency read timeouts. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Send the request to the primary node</description></item>
-        /// <item><description><b>2</b>: Timeout degradation, when a global consistency read times out, the query operation will automatically degrade to an inconsistent read, and the client will not receive an error message</description></item>
+        /// <item><description><para><b>0</b>: Send the request to the primary node.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Downgrade to a regular request. If a global consistency read times out, the query is automatically downgraded, and the client does not receive an error.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -163,7 +222,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarSccTimeoutAction { get; set; }
 
         /// <summary>
-        /// <para>Global consistency timeout</para>
+        /// <para>The timeout period for global consistency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -175,10 +234,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The read/write mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReadWrite</b>: receives and forwards read and write requests. Automatic read/write splitting is enabled.</description></item>
-        /// <item><description><b>ReadOnly</b>: The account has the read-only permissions on the database.</description></item>
+        /// <item><description><para><b>ReadWrite</b>: read/write (automatic read/write splitting).</para>
+        /// </description></item>
+        /// <item><description><para><b>ReadOnly</b> (default): read-only.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>ReadOnly</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ReadOnly</para>
@@ -196,10 +256,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the global consistency (high-performance mode) feature for the nodes. Valid values:</para>
+        /// <para>Specifies whether to enable global consistency (high-performance mode). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b></description></item>
-        /// <item><description><b>OFF</b></description></item>
+        /// <item><description><para><b>ON</b>: Enables the feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>OFF</b>: Disables the feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

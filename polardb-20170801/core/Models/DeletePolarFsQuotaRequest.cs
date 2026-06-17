@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarFsQuotaRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the details of all clusters under your account, including the cluster ID.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-************</para>
         /// </summary>
@@ -18,6 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Polarlakebase instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +34,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The details of the quota rules.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Quotas")]
@@ -35,6 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DeletePolarFsQuotaRequestQuotas> Quotas { get; set; }
         public class DeletePolarFsQuotaRequestQuotas : TeaModel {
             /// <summary>
+            /// <para>The ID of the quota.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The name of the quota.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

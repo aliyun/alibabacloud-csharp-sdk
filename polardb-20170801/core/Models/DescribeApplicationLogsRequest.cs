@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationLogsRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,15 +20,28 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ApplicationId { get; set; }
 
+        /// <summary>
+        /// <para>The component instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pac-xxx</para>
+        /// </summary>
         [NameInMap("ComponentName")]
         [Validation(Required=false)]
         public string ComponentName { get; set; }
 
+        /// <summary>
+        /// <para>The container name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>analytics</para>
+        /// </summary>
         [NameInMap("ContainerName")]
         [Validation(Required=false)]
         public string ContainerName { get; set; }
 
         /// <summary>
+        /// <para>The end time for the query. Specify the time in <c>YYYY-MM-DDTHH:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +52,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The keyword to search for. This parameter applies only to polarclaw instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Config</para>
         /// </summary>
@@ -46,6 +62,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The log level. This parameter applies only to polarclaw instances.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>WARN</para>
         /// </summary>
@@ -62,6 +80,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number to return. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -70,6 +90,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Default value: <b>30</b>. Valid values: 30 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -78,6 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,6 +115,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
+        /// <para>The start time for the query. Specify the time in <c>YYYY-MM-DDTHH:mmZ</c> format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,6 +126,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StartTime { get; set; }
 
         /// <summary>
+        /// <para>The log type. This parameter applies only to polarclaw instances. Currently, only <c>gateway</c> is supported.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gateway</para>
         /// </summary>

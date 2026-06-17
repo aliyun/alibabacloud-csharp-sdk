@@ -23,9 +23,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The version of the database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>5.6</b></description></item>
-        /// <item><description><b>5.7</b></description></item>
-        /// <item><description><b>8.0</b></description></item>
+        /// <item><description><para><b>5.6</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.7</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -57,8 +60,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The name of the parameter template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It can contain letters, digits, and underscores (_). It must start with a letter and cannot end with an underscore.**</description></item>
-        /// <item><description>It must be 8 to 64 characters in length.</description></item>
+        /// <item><description><para>It must start with a letter and can contain letters, digits, and underscores (<em>). It cannot contain Chinese characters or end with an underscore (</em>).</para>
+        /// </description></item>
+        /// <item><description><para>It must be 8 to 64 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,9 +75,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupName { get; set; }
 
         /// <summary>
-        /// <para>The JSON string that consists of parameters and values. The parameter values are strings. Example: <c>{&quot;wait_timeout&quot;:&quot;86400&quot;,&quot;innodb_old_blocks_time&quot;:&quot;1000&quot;}</c>.</para>
+        /// <para>A JSON string that consists of parameters and their values. The values of the parameters must be strings. For example: <c>{&quot;wait_timeout&quot;:&quot;86400&quot;,&quot;innodb_old_blocks_time&quot;:&quot;1000&quot;}</c>.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207428.html">DescribeParameterTemplates</a> operation to query the details of all parameters in the cluster of a specified engine version, such as the parameter name and valid values.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207428.html">DescribeParameterTemplates</a> operation to view the details of all parameters for a specific database engine version. The details include parameter names and value ranges.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,9 +89,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The ID of the region where the parameter template is located.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

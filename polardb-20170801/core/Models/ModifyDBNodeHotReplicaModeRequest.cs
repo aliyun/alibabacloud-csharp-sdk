@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-2vc327c2a14a3u858</para>
+        /// <para>pc-*****************</para>
         /// </summary>
         [NameInMap("DBClusterId")]
         [Validation(Required=false)]
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pi-2ze28275h9x5r4wt1</para>
+        /// <para>pi-*****************</para>
         /// </summary>
         [NameInMap("DBNodeId")]
         [Validation(Required=false)]

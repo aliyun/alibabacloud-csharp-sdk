@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The model operator type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aitrain</para>
         /// </summary>
@@ -26,6 +28,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PolarDB instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-2ze88***</para>
         /// </summary>

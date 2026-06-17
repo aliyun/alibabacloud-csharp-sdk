@@ -23,11 +23,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The permissions that are granted to the account. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ReadWrite</b>: read and write permissions</description></item>
-        /// <item><description><b>ReadOnly</b>: read-only permissions</description></item>
-        /// <item><description><b>DMLOnly</b>: The account is granted the permissions to execute only DML statements on the database.</description></item>
-        /// <item><description><b>DDLOnly</b>: The account is granted the permissions to execute only DDL statements on the database.</description></item>
-        /// <item><description><b>ReadIndex</b>: The account has the read and index permissions on the database.</description></item>
+        /// <item><description><para><b>ReadWrite</b>: read and write permissions</para>
+        /// </description></item>
+        /// <item><description><para><b>ReadOnly</b>: read-only permissions</para>
+        /// </description></item>
+        /// <item><description><para><b>DMLOnly</b>: The account is granted the permissions to execute only DML statements on the database.</para>
+        /// </description></item>
+        /// <item><description><para><b>DDLOnly</b>: The account is granted the permissions to execute only DDL statements on the database.</para>
+        /// </description></item>
+        /// <item><description><para><b>ReadIndex</b>: The account has the read and index permissions on the database.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>The number of <b>AccountPrivilege</b> values must be the consistent with the number of <b>DBName</b> values. Each account permission must correspond to a database name in sequence. For example, you can set <b>DBName</b> to <c>testdb_1,testdb_2</c> and set <b>AccountPrivilege</b> to <c>ReadWrite,ReadOnly</c>. In this case, the specified standard account is granted the <b>read and write</b> permissions on the <b>testdb_1</b> database and the <b>read</b> permission on the <b>testdb_2</b> database.</para>

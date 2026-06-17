@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBatchTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the batch task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pcb-xxx</para>
         /// </summary>

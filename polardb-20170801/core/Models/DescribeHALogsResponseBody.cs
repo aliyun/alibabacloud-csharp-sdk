@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeHALogsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-a*************</para>
         /// </summary>
@@ -18,6 +20,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The instance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>polardb_mysql_rw</b>: read-write instance.</description></item>
+        /// <item><description><b>polardb_mysql_ro</b>: read-only instance.</description></item>
+        /// <item><description><b>polardb_mysql_standby</b>: standby instance.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>polardb_mysql_rw</para>
         /// </summary>
@@ -26,14 +35,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The failover logs.</para>
+        /// <para>The list of primary/secondary 这里 AI 机翻使用了 failover，但代码里用了 switch，建议保持一致，都改为 swichover logs.</para>
         /// </summary>
         [NameInMap("HaLogItems")]
         [Validation(Required=false)]
         public List<DescribeHALogsResponseBodyHaLogItems> HaLogItems { get; set; }
         public class DescribeHALogsResponseBodyHaLogItems : TeaModel {
             /// <summary>
-            /// <para>The reason code of the failover.</para>
+            /// <para>The cause code of the switchover.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Platform.Ha.AuroraService.ManualOperations</para>
@@ -43,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SwitchCauseCode { get; set; }
 
             /// <summary>
-            /// <para>The reason of the failover.</para>
+            /// <para>The cause of the switchover.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Platform.Ha.ManuallyTriggered</para>
@@ -53,7 +62,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SwitchCauseDetail { get; set; }
 
             /// <summary>
-            /// <para>The time when the failover ended.</para>
+            /// <para>The end time of the switchover.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-20T03:09:56Z</para>
@@ -63,6 +72,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SwitchFinishTime { get; set; }
 
             /// <summary>
+            /// <para>The ID of the primary/secondary switchover log.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e571f897-9b3c-4012-9470-88333832dec4</para>
             /// </summary>
@@ -71,7 +82,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SwitchId { get; set; }
 
             /// <summary>
-            /// <para>The time when the failover started.</para>
+            /// <para>The start time of the switchover.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-20T03:09:45Z</para>
@@ -83,6 +94,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether primary/secondary switchover records exist. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: No</description></item>
+        /// <item><description><b>0</b>: Yes</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -91,6 +108,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? HaStatus { get; set; }
 
         /// <summary>
+        /// <para>The number of items in the log list on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -99,6 +118,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? ItemsNumbers { get; set; }
 
         /// <summary>
+        /// <para>The page number. The value is greater than 0 and does not exceed the maximum value of the Integer data type. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -107,6 +128,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page. Valid values: 30 to 100. Default value: 30.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -115,6 +138,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>
         /// </summary>
@@ -123,6 +148,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>160</para>
         /// </summary>

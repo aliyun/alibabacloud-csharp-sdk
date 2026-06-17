@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the target cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Set the value to <b>cluster</b>.</para>
+        /// <para>The resource type. Set the value to <b>cluster</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click <b>Add</b> to add tag keys.</para>
+            /// <para>The tag key. To add multiple tags to the cluster at once, click <b>Add</b> to specify multiple tag keys.</para>
             /// <remarks>
-            /// <para> You can create up to 20 tags for a cluster at a time. The value of <c>Tag.N.Key</c> is paired with the value of <c>Tag.N.Value</c>.</para>
+            /// <para>You can add a maximum of 20 tag pairs at a time. <c>Tag.n.Key</c> corresponds to <c>Tag.n.Value</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag that you want to create for the cluster. To create multiple tags for a cluster at a time, click <b>Add</b> to add tag values.</para>
+            /// <para>The tag value. To add multiple tags to the cluster at once, click <b>Add</b> to specify multiple tag values.</para>
             /// <remarks>
-            /// <para> You can create up to 20 tags for a cluster at a time. The value of <c>Tag.N.Key</c> is paired with the value of <c>Tag.N.Value</c>.</para>
+            /// <para>You can add a maximum of 20 tag pairs at a time. <c>Tag.n.Value</c> corresponds to <c>Tag.n.Key</c>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

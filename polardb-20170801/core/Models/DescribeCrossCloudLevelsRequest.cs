@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeCrossCloudLevelsRequest : TeaModel {
         /// <summary>
+        /// <para>The database engine type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>MySQL</para>
+        /// </description></item>
+        /// <item><description><para>PostgreSQL</para>
+        /// </description></item>
+        /// <item><description><para>Oracle</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +29,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
+        /// <para>The version number of the database engine.</para>
+        /// <para>Valid values for MySQL:</para>
+        /// <list type="bullet">
+        /// <item><description><para>5.6</para>
+        /// </description></item>
+        /// <item><description><para>5.7</para>
+        /// </description></item>
+        /// <item><description><para>8.0</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Valid values for PostgreSQL:</para>
+        /// <list type="bullet">
+        /// <item><description><para>11</para>
+        /// </description></item>
+        /// <item><description><para>14</para>
+        /// </description></item>
+        /// <item><description><para>15</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>5.6</para>
         /// </summary>
@@ -28,6 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
+        /// <para>The resource pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +68,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The storage class.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

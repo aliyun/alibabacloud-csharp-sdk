@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterEncryptionKeyResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of keys.</para>
+        /// </summary>
         [NameInMap("EncryptionKeyList")]
         [Validation(Required=false)]
         public List<DescribeDBClusterEncryptionKeyResponseBodyEncryptionKeyList> EncryptionKeyList { get; set; }
         public class DescribeDBClusterEncryptionKeyResponseBodyEncryptionKeyList : TeaModel {
             /// <summary>
+            /// <para>The alias of the key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alias/your_default_key</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string AliasName { get; set; }
 
             /// <summary>
+            /// <para>The UID of the Alibaba Cloud account that created the key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1****1</para>
             /// </summary>
@@ -30,6 +37,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Creator { get; set; }
 
             /// <summary>
+            /// <para>The scheduled time to delete the key. The format is yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+            /// <list type="bullet">
+            /// <item><description>This field is empty if the key is not scheduled for deletion.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-05-08T08:14:16Z</para>
             /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DeleteDate { get; set; }
 
             /// <summary>
+            /// <para>The description of the key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Description of the key</para>
             /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The key ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>51858179-afb3-4369-8329-*********</para>
             /// </summary>
@@ -54,6 +70,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EncryptionKey { get; set; }
 
             /// <summary>
+            /// <para>The status of the key. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>Enabled: The key is enabled.</para>
+            /// </description></item>
+            /// <item><description><para>Disabled: The key is not enabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>Enabled</para>
             /// </summary>
@@ -62,6 +86,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EncryptionKeyStatus { get; set; }
 
             /// <summary>
+            /// <para>The type of the key. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>CMK: customer master key</para>
+            /// </description></item>
+            /// <item><description><para>ServiceKey: service key</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ServiceKey</para>
             /// </summary>
@@ -70,6 +102,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string KeyType { get; set; }
 
             /// <summary>
+            /// <para>The purpose of the key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ENCRYPT/DECRYPT</para>
             /// </summary>
@@ -78,6 +112,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string KeyUsage { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the key. The format is yyyy-MM-ddTHH:mm:ssZ (UTC).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-10-18T08:14:16Z</para>
             /// </summary>
@@ -86,6 +122,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MaterialExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The source of the key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Aliyun_KMS</para>
             /// </summary>
@@ -94,6 +132,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Origin { get; set; }
 
             /// <summary>
+            /// <para>The service that uses the key. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>TDE: transparent data encryption (TDE).</para>
+            /// </description></item>
+            /// <item><description><para>DiskEncryption: disk encryption.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>DiskEncryption</para>
             /// </summary>
@@ -104,6 +150,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>137ECCC0-920E-5B3B-9F8E-B81632108BBE</para>
         /// </summary>

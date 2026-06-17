@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable idle pause. Values:</para>
+        /// <para>Specifies whether to enable pause on inactivity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled</para>
+        /// <item><description><para><b>true</b>: enables pause on inactivity.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled (default)</para>
+        /// <item><description><para><b>false</b> (default): disables pause on inactivity.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Only supported by Serverless clusters.</para>
+        /// <para>This parameter is supported only for serverless clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,10 +29,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AllowShutDown { get; set; }
 
         /// <summary>
-        /// <para>CPU architecture. Available values include:</para>
+        /// <para>The CPU architecture. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>X86</description></item>
-        /// <item><description>ARM</description></item>
+        /// <item><description><para>X86</para>
+        /// </description></item>
+        /// <item><description><para>ARM</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,12 +45,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable auto-renewal, with available values as follows:</para>
+        /// <para>Specifies whether to enable auto-renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Auto-renew.</description></item>
-        /// <item><description><b>false</b>: Do not auto-renew.</description></item>
+        /// <item><description><para><b>true</b>: enables auto-renewal.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: disables auto-renewal.</para>
+        /// </description></item>
         /// </list>
-        /// <para>The default is <b>false</b>.</para>
+        /// <para>Default value: <b>false</b>.</para>
         /// <remarks>
         /// <para>This parameter takes effect only when <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
@@ -60,21 +64,40 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to automatically use a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true (default): Automatically uses a coupon.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not use a coupon.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>Backup retention policy upon cluster deletion, with valid values as follows:</para>
+        /// <para>The backup retention policy to apply when the cluster is deleted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL</b>: Permanently retain all backups.</description></item>
-        /// <item><description><b>LATEST</b>: Permanently retain the latest backup (automatically backed up before deletion).</description></item>
-        /// <item><description><b>NONE</b>: Do not retain backup sets upon cluster deletion.</description></item>
+        /// <item><description><para><b>ALL</b>: retains all backup sets.</para>
+        /// </description></item>
+        /// <item><description><para><b>LATEST</b>: retains only the last backup set. An automatic backup is performed before the cluster is deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>NONE</b>: does not retain backup sets.</para>
+        /// </description></item>
         /// </list>
-        /// <para>By default, the value is set to <b>NONE</b>, indicating no backup sets are retained upon cluster deletion.</para>
+        /// <para>Default value: <b>NONE</b>.</para>
         /// <remarks>
-        /// <para>This parameter applies only when <b>DBType</b> is <b>MySQL</b>.
-        /// Serverless clusters do not support this parameter.</para>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is valid only if <b>DBType</b> is set to <b>MySQL</b>.</para>
+        /// </description></item>
+        /// <item><description><para>Serverless clusters do not support this parameter.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,6 +108,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BackupRetentionPolicyOnClusterDeletion { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable the performance burst feature for the ESSD AutoPL cloud disk. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: enables the performance burst feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables the performance burst feature.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is supported only when <b>StorageType</b> is set to ESSDAUTOPL.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -93,7 +127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>Used to ensure idempotency of the request. Generated by the client, ensuring uniqueness across different requests, case-sensitive, and not exceeding 64 ASCII characters.</para>
+        /// <para>A client-generated token that ensures the idempotence of the request. This token must be unique across all requests and is case-sensitive. It can contain up to 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
@@ -103,15 +137,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The point in time to clone data, with the following options:</para>
+        /// <para>The point in time for the clone. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LATEST</b>: Data from the latest time point.</description></item>
-        /// <item><description><b>BackupID</b>: Historical backup set ID, please enter the specific backup set ID.</description></item>
-        /// <item><description><b>Timestamp</b>: Historical time point, please enter the specific time in the format <c>YYYY-MM-DDThh:mm:ssZ</c> (UTC time).</description></item>
+        /// <item><description><para><b>LATEST</b>: The latest point in time.</para>
+        /// </description></item>
+        /// <item><description><para><b>BackupID</b>: The ID of a historical backup set.</para>
+        /// </description></item>
+        /// <item><description><para><b>Timestamp</b>: A specific point in time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// </description></item>
         /// </list>
-        /// <para>The default value is <b>LATEST</b>.</para>
+        /// <para>Default value: <b>LATEST</b>.</para>
         /// <remarks>
-        /// <para>If <b>CreationOption</b> is <b>CloneFromRDS</b>, this parameter can only be set to <b>LATEST</b>.</para>
+        /// <para>If you set <b>CreationOption</b> to <b>CloneFromRDS</b>, you can set this parameter only to <b>LATEST</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -122,6 +159,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CloneDataPoint { get; set; }
 
         /// <summary>
+        /// <para>The cloud service provider of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENS</para>
         /// </summary>
@@ -130,7 +169,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CloudProvider { get; set; }
 
         /// <summary>
-        /// <para>Cluster network type, currently only VPC is supported, with a fixed value of <b>VPC</b>.</para>
+        /// <para>The network type of the cluster. Only <b>VPC</b> is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
@@ -140,22 +179,30 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClusterNetworkType { get; set; }
 
         /// <summary>
-        /// <para>Product series, with valid values as follows:</para>
+        /// <para>The edition of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: Cluster Edition (default)</description></item>
-        /// <item><description><b>Basic</b>: Single-node</description></item>
-        /// <item><description><b>ArchiveNormal</b>: High Compression Engine (X-Engine)</description></item>
-        /// <item><description><b>NormalMultimaster</b>: Multi-master Cluster Edition</description></item>
-        /// <item><description><b>SENormal</b>: Standard Edition</description></item>
+        /// <item><description><para><b>Normal</b>: Cluster Edition (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>Basic</b>: Single-node Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>ArchiveNormal</b>: X-Engine Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>NormalMultimaster</b>: Multi-master Cluster Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>SENormal</b>: Standard Edition</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b> <b>5.6</b>, <b>5.7</b>, <b>8.0</b>, <b>PostgreSQL</b> <b>14</b>, and <b>Oracle Syntax Compatible 2.0</b> support <b>Basic</b>.</description></item>
-        /// <item><description><b>MySQL</b> <b>8.0</b> supports <b>ArchiveNormal</b> and <b>NormalMultimaster</b>.</description></item>
-        /// <item><description><b>MySQL</b> <b>5.6</b>, <b>5.7</b>, <b>8.0</b>, and <b>PostgreSQL</b> <b>14</b> support <b>SENormal</b>.</description></item>
+        /// <item><description><para>The <b>Basic</b> edition is supported for PolarDB for MySQL <b>5.6</b>, <b>5.7</b>, and <b>8.0</b>; PolarDB for PostgreSQL <b>14</b>; and PolarDB for PostgreSQL (compatible with Oracle) <b>2.0</b>.</para>
+        /// </description></item>
+        /// <item><description><para>The <b>ArchiveNormal</b> and <b>NormalMultimaster</b> editions are supported for PolarDB for MySQL <b>8.0</b>.</para>
+        /// </description></item>
+        /// <item><description><para>The <b>SENormal</b> edition is supported for PolarDB for MySQL <b>5.6</b>, <b>5.7</b>, and <b>8.0</b> and PolarDB for PostgreSQL <b>14</b>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
-        /// <para>For more information about product series, see <a href="https://help.aliyun.com/document_detail/183258.html">Product Series</a>.</para>
+        /// <para>For more information about product editions, see <a href="https://help.aliyun.com/document_detail/183258.html">Editions</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Normal</para>
@@ -165,41 +212,50 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreationCategory { get; set; }
 
         /// <summary>
-        /// <para>Creation method, with the following values supported:</para>
+        /// <para>The method to create the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Normal</b>: Creates a brand new PolarDB cluster. For console operations, refer to the following documents:</para>
+        /// <item><description><para><b>Normal</b>: Creates a new PolarDB cluster. For more information, see the following topics:</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/58769.html">Create a PolarDB MySQL Edition Database Cluster</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/118063.html">Create a PolarDB PostgreSQL Edition Database Cluster</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/118182.html">Create a PolarDB PostgreSQL Edition (Oracle Compatible) Database Cluster</a></description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/58769.html">Create a PolarDB for MySQL cluster</a></para>
+        /// </description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/118063.html">Create a PolarDB for PostgreSQL cluster</a></para>
+        /// </description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/118182.html">Create a PolarDB for PostgreSQL (compatible with Oracle) cluster</a></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>CloneFromPolarDB</b>: Clones data from an existing PolarDB cluster to a new PolarDB cluster. For console operations, refer to the following documents:</para>
+        /// <item><description><para><b>CloneFromPolarDB</b>: Clones data from an existing PolarDB cluster. For more information, see the following topics:</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/87966.html">Clone a PolarDB MySQL Edition Cluster</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/118108.html">Clone a PolarDB PostgreSQL Edition Cluster</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/118221.html">Clone a PolarDB PostgreSQL Edition (Oracle Compatible) Cluster</a></description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/87966.html">Clone a PolarDB for MySQL cluster</a></para>
+        /// </description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/118108.html">Clone a PolarDB for PostgreSQL cluster</a></para>
+        /// </description></item>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/118221.html">Clone a PolarDB for PostgreSQL (compatible with Oracle) cluster</a></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>RecoverFromRecyclebin</b>: Recovers data from a released PolarDB cluster to a new PolarDB cluster. For console operations, refer to the following documents:</para>
+        /// <item><description><para><b>RecoverFromRecyclebin</b>: Restores a PolarDB cluster from the recycle bin. For more information, see the following topics:</para>
         /// <list type="bullet">
-        /// <item><description><a href="https://help.aliyun.com/document_detail/164880.html">Restore a Released PolarDB MySQL Edition Cluster</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/432844.html">Restore a Released PolarDB PostgreSQL Edition Cluster</a></description></item>
-        /// <item><description><a href="https://help.aliyun.com/document_detail/424632.html">Restore a Released PolarDB PostgreSQL Edition (Oracle Compatible) Cluster</a></description></item>
-        /// </list>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/164880.html">Restore a released PolarDB for MySQL cluster</a></para>
         /// </description></item>
-        /// <item><description><para><b>CloneFromRDS</b>: Clones data from an existing RDS instance to a new PolarDB cluster. Console operation guide is available at <a href="https://help.aliyun.com/document_detail/121812.html">One-click Clone from RDS MySQL to PolarDB MySQL Edition</a>.</para>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/432844.html">Restore a released PolarDB for PostgreSQL cluster</a></para>
         /// </description></item>
-        /// <item><description><para><b>MigrationFromRDS</b>: Migrates data from an existing RDS instance to a new PolarDB cluster. The created PolarDB cluster operates in read-only mode with Binlog enabled by default. Console operation guide is at <a href="https://help.aliyun.com/document_detail/121582.html">One-click Upgrade from RDS MySQL to PolarDB MySQL Edition</a>.</para>
-        /// </description></item>
-        /// <item><description><para><b>CreateGdnStandby</b>: Creates a standby cluster. Console operation guide can be found at <a href="https://help.aliyun.com/document_detail/160381.html">Add Standby Cluster</a>.</para>
-        /// </description></item>
-        /// <item><description><para><b>UpgradeFromPolarDB</b>: Upgrades and migrates from PolarDB. Console operation guide is detailed in <a href="https://help.aliyun.com/document_detail/459712.html">Major Version Upgrade</a>.</para>
+        /// <item><description><para><a href="https://help.aliyun.com/document_detail/424632.html">Restore a released PolarDB for PostgreSQL (compatible with Oracle) cluster</a></para>
         /// </description></item>
         /// </list>
-        /// <para>The default value is <b>Normal</b>.</para>
+        /// </description></item>
+        /// <item><description><para><b>CloneFromRDS</b>: Clones data from an existing ApsaraDB RDS instance to a new PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/121812.html">One-click cloning from ApsaraDB RDS for MySQL to PolarDB for MySQL</a>.</para>
+        /// </description></item>
+        /// <item><description><para><b>MigrationFromRDS</b>: Migrates data from an existing ApsaraDB RDS instance. The created PolarDB cluster is in read-only mode and has binary logging enabled by default. For more information, see <a href="https://help.aliyun.com/document_detail/121582.html">One-click upgrade from ApsaraDB RDS for MySQL to PolarDB for MySQL</a>.</para>
+        /// </description></item>
+        /// <item><description><para><b>CreateGdnStandby</b>: Creates a secondary cluster in a Global Database Network (GDN). For more information, see <a href="https://help.aliyun.com/document_detail/160381.html">Add a secondary cluster</a>.</para>
+        /// </description></item>
+        /// <item><description><para><b>UpgradeFromPolarDB</b>: Upgrades the major version of a PolarDB cluster. For more information, see <a href="https://help.aliyun.com/document_detail/459712.html">Perform a major version upgrade</a>.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: <b>Normal</b>.</para>
         /// <remarks>
-        /// <para>When <b>DBType</b> is <b>MySQL</b> and <b>DBVersion</b> is <b>8.0</b>, this parameter can also take the value <b>CreateGdnStandby</b>.</para>
+        /// <para>If <b>DBType</b> is set to <b>MySQL</b> and <b>DBVersion</b> is set to <b>8.0</b>, you can set this parameter to <b>CreateGdnStandby</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -210,10 +266,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreationOption { get; set; }
 
         /// <summary>
-        /// <para>Cluster name, which must meet the following requirements:</para>
+        /// <para>The description of the cluster. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>Cannot start with <c>http://</c> or <c>https://</c>.</description></item>
-        /// <item><description>Length should be between 2 and 256 characters.</description></item>
+        /// <item><description><para>It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 256 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -224,13 +282,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterDescription { get; set; }
 
         /// <summary>
-        /// <para>Database engine minor version number. Valid values include:</para>
+        /// <para>The minor version of the database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>8.0.2</b></description></item>
-        /// <item><description><b>8.0.1</b></description></item>
+        /// <item><description><para><b>8.0.2</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8.0.1</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only when <b>DBType</b> is <b>MySQL</b> and <b>DBVersion</b> is <b>8.0</b>.</para>
+        /// <para>This parameter is valid only if <b>DBType</b> is set to <b>MySQL</b> and <b>DBVersion</b> is set to <b>8.0</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -241,16 +301,27 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>Node specifications. For details, refer to the following documents:</para>
+        /// <para>The node specification. For more information, see the following topics:</para>
         /// <list type="bullet">
-        /// <item><description>PolarDB MySQL Edition: <a href="https://help.aliyun.com/document_detail/102542.html">Compute Node Specifications</a>.</description></item>
-        /// <item><description>PolarDB PostgreSQL Edition (Oracle Compatible): <a href="https://help.aliyun.com/document_detail/207921.html">Compute Node Specifications</a>.</description></item>
-        /// <item><description>PolarDB PostgreSQL Edition: <a href="https://help.aliyun.com/document_detail/209380.html">Compute Node Specifications</a>.</description></item>
+        /// <item><description><para>PolarDB for MySQL: <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a></para>
+        /// </description></item>
+        /// <item><description><para>PolarDB for PostgreSQL (compatible with Oracle): <a href="https://help.aliyun.com/document_detail/207921.html">Compute node specifications</a></para>
+        /// </description></item>
+        /// <item><description><para>PolarDB for PostgreSQL: <a href="https://help.aliyun.com/document_detail/209380.html">Compute node specifications</a></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For a Serverless cluster in PolarDB MySQL, enter <b>polar.mysql.sl.small</b>.
-        /// &lt;props=&quot;china&quot;&gt;&gt; - For a Serverless cluster in both PolarDB PostgreSQL (Oracle Compatible) and PolarDB PostgreSQL, enter <b>polar.pg.sl.small.c</b>.</description></item>
+        /// <item><description><para>To create a PolarDB for MySQL Cluster Edition serverless cluster, set this parameter to <b>polar.mysql.sl.small</b>.</para>
+        /// </description></item>
+        /// <item><description><para>To create a PolarDB for MySQL Standard Edition serverless cluster, set this parameter to <b>polar.mysql.sl.small.c</b>.</para>
+        /// </description></item>
+        /// <item><description><para>To create a PolarDB for PostgreSQL Cluster Edition serverless cluster, set this parameter to <b>polar.pg.sl.small</b>.</para>
+        /// </description></item>
+        /// <item><description><para>To create a PolarDB for PostgreSQL Standard Edition serverless cluster, set this parameter to <b>polar.pg.sl.small.c</b>.</para>
+        /// </description></item>
+        /// <item><description><para>To create a PolarDB for PostgreSQL (compatible with Oracle) serverless cluster, set this parameter to <b>polar.o.sl.small</b>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -262,19 +333,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeClass { get; set; }
 
         /// <summary>
-        /// <para>The number of nodes. This parameter is supported for Standard Edition clusters. Valid values:</para>
+        /// <para>The number of nodes for a Standard Edition or Enterprise Edition cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b> (default): only one primary node.</description></item>
-        /// <item><description><b>2</b>: one read-only node and one primary node.</description></item>
+        /// <item><description><para>Standard Edition: 1 to 8. A cluster of this edition includes one read/write node and up to seven read-only nodes.</para>
+        /// </description></item>
+        /// <item><description><para>Enterprise Edition: 1 to 16. A cluster of this edition includes one read/write node and up to 15 read-only nodes.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
         /// <item><description><para>By default, an Enterprise Edition cluster has two nodes and a Standard Edition cluster has one node.</para>
         /// </description></item>
-        /// <item><description><para>This parameter is supported only for PolarDB for MySQL clusters.</para>
+        /// <item><description><para>This parameter is supported only for PolarDB for MySQL.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot change the number of nodes in a Multi-master Cluster Edition cluster.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -284,11 +359,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? DBNodeNum { get; set; }
 
         /// <summary>
-        /// <para>Database engine type, with available values as follows:</para>
+        /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>MySQL</b></description></item>
-        /// <item><description><b>PostgreSQL</b></description></item>
-        /// <item><description><b>Oracle</b></description></item>
+        /// <item><description><para><b>MySQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PostgreSQL</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Oracle</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -300,36 +378,35 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>Database engine version number.</para>
+        /// <para>The version of the database engine.</para>
         /// <list type="bullet">
-        /// <item><description><para>For MySQL, the version numbers are as follows:</para>
+        /// <item><description><para>Valid values for MySQL:</para>
         /// <list type="bullet">
-        /// <item><description><b>5.6</b></description></item>
-        /// <item><description><b>5.7</b></description></item>
-        /// <item><description><b>8.0</b></description></item>
+        /// <item><description><para><b>5.6</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.7</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>For PostgreSQL, the version numbers are as follows:</para>
+        /// <item><description><para>Valid values for PostgreSQL:</para>
         /// <list type="bullet">
         /// <item><description><para><b>11</b></para>
         /// </description></item>
         /// <item><description><para><b>14</b></para>
         /// </description></item>
-        /// <item><description><para><b>15</b>
-        ///   &lt;props=&quot;china&quot;&gt;</para>
+        /// <item><description><para><b>15</b>&lt;props=&quot;china&quot;&gt;</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
         /// <remarks>
-        /// <para>When creating a Serverless cluster in PolarDB PostgreSQL, only version <b>14</b> is supported.</para>
+        /// <para>If you create a serverless cluster for PolarDB for PostgreSQL, you must set this parameter to <c>14</c>.</para>
         /// </remarks>
-        /// </description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><para>For Oracle, the version numbers are as follows:</para>
-        /// <list type="bullet">
-        /// <item><description><b>11</b></description></item>
-        /// <item><description><b>14</b></description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>\* Valid values for Oracle:
+        /// \* <b>11</b>
+        /// \* <b>14</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -340,9 +417,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>Cluster timezone (UTC), with selectable values ranging from <b>-12:00</b> to <b>+13:00</b> at whole-hour intervals, e.g., <b>00:00</b>. The default value is <b>SYSTEM</b>, which matches the Region\&quot;s timezone.</para>
+        /// <para>Cluster time zone (UTC). The value can be any full-hour offset from <b>-12:00 to +13:00</b>, such as <b>00:00</b>. The default value is <b>SYSTEM</b>, which uses the region\&quot;s time zone.</para>
         /// <remarks>
-        /// <para>This parameter applies only when <b>DBType</b> is <b>MySQL</b>.</para>
+        /// <para>This parameter takes effect only when <b>DBType</b> is <b>MySQL</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -353,6 +430,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DefaultTimeZone { get; set; }
 
         /// <summary>
+        /// <para>The ID of the Edge Node Service (ENS) node. This parameter is required if you want to create an ENS database instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vn-hanoi-3</para>
         /// </summary>
@@ -361,9 +440,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EnsRegionId { get; set; }
 
         /// <summary>
-        /// <para>Global Database Network (GDN) ID.</para>
+        /// <para>The ID of the Global Database Network (GDN).</para>
         /// <remarks>
-        /// <para>This parameter is required when <b>CreationOption</b> is <b>CreateGdnStandby</b>.</para>
+        /// <para>This parameter is required if <b>CreationOption</b> is set to <b>CreateGdnStandby</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -374,14 +453,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GDNId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the hot standby storage cluster feature. Valid values:</para>
+        /// <para>Specifies whether to enable the hot standby cluster feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b> (default): enables the hot standby storage cluster feature.</description></item>
-        /// <item><description><b>OFF</b>: disables the hot standby storage cluster feature.</description></item>
-        /// <item><description><b>STANDBY</b>: enables the hot standby storage cluster feature for Standard Edition clusters.</description></item>
+        /// <item><description><para><b>ON</b> (default): enables a hot standby storage cluster.</para>
+        /// </description></item>
+        /// <item><description><para><b>OFF</b>: disables the hot standby cluster feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>STANDBY</b>: enables a hot standby cluster.</para>
+        /// </description></item>
+        /// <item><description><para><b>EQUAL</b>: enables hot standby for both storage and computing resources.</para>
+        /// </description></item>
+        /// <item><description><para><b>3AZ</b>: enables multi-AZ strong consistency.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The default value for Standard Edition clusters is <b>STANDBY</b>.</para>
+        /// <para>The value <b>STANDBY</b> is valid only for PolarDB for PostgreSQL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -392,10 +478,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string HotStandbyCluster { get; set; }
 
         /// <summary>
-        /// <para>Enable Binlog feature, valid values are as follows:</para>
+        /// <para>Specifies whether to enable binary logging. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: Cluster enables the Binlog feature. - <b>OFF</b>: Cluster disables the Binlog feature. &gt; This parameter takes effect only when the <b>DBType</b> parameter is set to <b>MySQL</b>.</description></item>
+        /// <item><description><para><b>ON</b>: enables binary logging.</para>
+        /// </description></item>
+        /// <item><description><para><b>OFF</b>: disables binary logging.</para>
+        /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is valid only if <b>DBType</b> is set to <b>MySQL</b>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -405,14 +497,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LoosePolarLogBin { get; set; }
 
         /// <summary>
-        /// <para>Enable the X-Engine storage engine feature, with valid values as follows:</para>
+        /// <para>Specifies whether to enable the X-Engine storage engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: The cluster enables the X-Engine engine.</description></item>
-        /// <item><description><b>OFF</b>: The cluster disables the X-Engine engine.<remarks>
-        /// <para>This parameter is effective only when <b>CreationOption</b> is not <b>CreateGdnStandby</b>, <b>DBType</b> is <b>MySQL</b>, and <b>DBVersion</b> is <b>8.0</b>. The memory specification of nodes that enable the X-Engine engine must be at least 8 GB.</para>
-        /// </remarks>
+        /// <item><description><para><b>ON</b>: enables the X-Engine storage engine.</para>
+        /// </description></item>
+        /// <item><description><para><b>OFF</b>: disables the X-Engine storage engine.</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>This parameter is valid only if the <b>CreationOption</b> parameter is not set to <b>CreateGdnStandby</b>, <b>DBType</b> is set to <b>MySQL</b>, and <b>DBVersion</b> is set to <b>8.0</b>. To enable the X-Engine storage engine, the node must have at least 8 GB of memory.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -422,9 +516,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LooseXEngine { get; set; }
 
         /// <summary>
-        /// <para>Set the ratio for enabling the X-Engine storage engine, with a range of integers from 10 to 90.</para>
+        /// <para>The percentage of memory allocated to the X-Engine storage engine. Valid values: integers from 10 to 90.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when <b>LooseXEngine</b> is <b>ON</b>.</para>
+        /// <para>This parameter is valid only if <b>LooseXEngine</b> is set to <b>ON</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -435,14 +529,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LooseXEngineUseMemoryPct { get; set; }
 
         /// <summary>
-        /// <para>Whether table names are case-sensitive, with valid values as follows:</para>
+        /// <para>The time zone of the cluster. The value must be a UTC offset in the <c>±HH:mm</c> format. Valid values: from <b>-12:00</b> to <b>+13:00</b> on the hour. For example, <b>00:00</b>. The default value <b>SYSTEM</b> indicates that the cluster uses the time zone of its region.</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Case-insensitive</description></item>
-        /// <item><description><b>0</b>: Case-sensitive</description></item>
+        /// <item><description><para><b>1</b>: Case-insensitive</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: Case-sensitive</para>
+        /// </description></item>
         /// </list>
         /// <para>The default value is <b>1</b>.</para>
         /// <remarks>
-        /// <para>This parameter applies only when <b>DBType</b> is <b>MySQL</b>.</para>
+        /// <para>This parameter is valid only if <b>DBType</b> is set to <b>MySQL</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -461,9 +557,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Parameter template ID.</para>
+        /// <para>The ID of the parameter template.</para>
         /// <remarks>
-        /// <para>You can view the list of parameter templates in the target region, including the parameter template ID, by calling the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> interface.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter templates in a specific region, including the IDs of the parameter templates.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -474,10 +570,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>Payment type, with available values as follows:</para>
+        /// <para>The billing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: Pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: Subscription (monthly or yearly).</description></item>
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para><b>Prepaid</b>: subscription.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -489,10 +587,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>If the payment type is <b>Prepaid</b>, this parameter is required. It specifies whether the prepaid cluster is on a monthly or yearly basis.</para>
+        /// <para>The unit of the subscription duration. This parameter is required if you set the <b>PayType</b> parameter to <b>Prepaid</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Year</b>: Yearly subscription.</description></item>
-        /// <item><description><b>Month</b>: Monthly subscription.</description></item>
+        /// <item><description><para><b>Year</b>: The subscription duration is measured in years.</para>
+        /// </description></item>
+        /// <item><description><para><b>Month</b>: The subscription duration is measured in months.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -503,6 +603,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Period { get; set; }
 
         /// <summary>
+        /// <para>The promotion code. If you do not specify this parameter, the default coupon is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>727xxxxxx934</para>
         /// </summary>
@@ -511,9 +613,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <p id="p_wyg_t4a_glm">The provisioned read and write IOPS for ESSD AutoPL cloud disks. Possible values: 0 to min{50,000, 1000*capacity-Baseline Performance}.</para>
-        /// <p id="p_6de_jxy_k2g">Baseline Performance = min{1,800+50*capacity, 50000}.</para>
-        /// <note id="note_7kj_j0o_rgs">This parameter is supported only when StorageType is ESSDAUTOPL.</note>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <para>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;</para>
+        /// <remarks>
+        /// <para>This parameter is supported only when <b>StorageType</b> is set to ESSDAUTOPL.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -523,15 +630,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ProvisionedIops { get; set; }
 
         /// <summary>
-        /// <para>Standard edition database proxy specifications. Values are as follows:</para>
+        /// <para>The specification of the database proxy for a Standard Edition cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>polar.maxscale.g2.medium.c</b>: 2 cores.</description></item>
-        /// <item><description><b>polar.maxscale.g2.large.c</b>: 4 cores.</description></item>
-        /// <item><description><b>polar.maxscale.g2.xlarge.c</b>: 8 cores.</description></item>
-        /// <item><description><b>polar.maxscale.g2.2xlarge.c</b>: 16 cores.</description></item>
-        /// <item><description><b>polar.maxscale.g2.3xlarge.c</b>: 24 cores.</description></item>
-        /// <item><description><b>polar.maxscale.g2.4xlarge.c</b>: 32 cores.</description></item>
-        /// <item><description><b>polar.maxscale.g2.8xlarge.c</b>: 64 cores.</description></item>
+        /// <item><description><para><b>polar.maxscale.g2.medium.c</b>: 2 cores</para>
+        /// </description></item>
+        /// <item><description><para><b>polar.maxscale.g2.large.c</b>: 4 cores</para>
+        /// </description></item>
+        /// <item><description><para><b>polar.maxscale.g2.xlarge.c</b>: 8 cores</para>
+        /// </description></item>
+        /// <item><description><para><b>polar.maxscale.g2.2xlarge.c</b>: 16 cores</para>
+        /// </description></item>
+        /// <item><description><para><b>polar.maxscale.g2.3xlarge.c</b>: 24 cores</para>
+        /// </description></item>
+        /// <item><description><para><b>polar.maxscale.g2.4xlarge.c</b>: 32 cores</para>
+        /// </description></item>
+        /// <item><description><para><b>polar.maxscale.g2.8xlarge.c</b>: 64 cores</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -542,18 +656,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProxyClass { get; set; }
 
         /// <summary>
-        /// <para>Database proxy type, with values including:</para>
+        /// <para>The type of the database proxy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>EXCLUSIVE</b>: Enterprise Exclusive Edition</description></item>
-        /// <item><description><b>GENERAL</b>: Enterprise General Purpose Edition<remarks>
-        /// <para>The proxy type must match the type of the cluster\&quot;s node specifications, i.e.,</para>
-        /// <list type="bullet">
-        /// <item><description>If the node specification is general, the proxy type should be Enterprise General Purpose Edition;</description></item>
-        /// <item><description>If the node specification is dedicated, the proxy type should be Enterprise Exclusive Edition.</description></item>
-        /// </list>
-        /// </remarks>
+        /// <item><description><para><b>EXCLUSIVE</b>: Enterprise Dedicated</para>
+        /// </description></item>
+        /// <item><description><para><b>GENERAL</b>: Enterprise General-purpose</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>The proxy type must be consistent with the type that corresponds to the node specification of the cluster:</para>
+        /// <list type="bullet">
+        /// <item><description><para>If the node specification is general-purpose, the proxy type must be Enterprise General-purpose.</para>
+        /// </description></item>
+        /// <item><description><para>If the node specification is dedicated, the proxy type must be Enterprise Dedicated.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Exclusive</para>
@@ -563,9 +681,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProxyType { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can view available regions through the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -577,7 +695,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-************</para>
@@ -595,9 +713,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Maximum scaling limit for a single node. The value range is: 1 PCU~32 PCU.</para>
+        /// <para>The maximum number of PCUs for a single-node serverless cluster to scale up to. Valid values: 1 to 32.</para>
         /// <remarks>
-        /// <para>Only supported by Serverless clusters.</para>
+        /// <para>This parameter is supported only for serverless clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -608,9 +726,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMax { get; set; }
 
         /// <summary>
-        /// <para>Minimum scaling limit for a single node. The value range is: 1 PCU~31 PCU.</para>
+        /// <para>The minimum number of PolarDB compute units (PCUs) for a single-node serverless cluster to scale down to. Valid values: 1 to 31.</para>
         /// <remarks>
-        /// <para>Only supported by Serverless clusters.</para>
+        /// <para>This parameter is supported only for serverless clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -621,9 +739,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>Maximum scaling limit for the number of read-only nodes. The value range is: 0~15.</para>
+        /// <para>The maximum number of read-only nodes that the serverless cluster scales up to. Valid values: 0 to 15.</para>
         /// <remarks>
-        /// <para>Only supported by Serverless clusters.</para>
+        /// <para>This parameter is supported only for serverless clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -634,9 +752,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleRoNumMax { get; set; }
 
         /// <summary>
-        /// <para>Minimum scaling limit for the number of read-only nodes. The value range is: 0~15.</para>
+        /// <para>The minimum number of read-only nodes that the serverless cluster scales down to. Valid values: 0 to 15.</para>
         /// <remarks>
-        /// <para>Only supported by Serverless clusters.</para>
+        /// <para>This parameter is supported only for serverless clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -647,9 +765,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleRoNumMin { get; set; }
 
         /// <summary>
-        /// <para>PolarDB cluster whitelist IP address.</para>
+        /// <para>The IP whitelist of the PolarDB cluster.</para>
         /// <remarks>
-        /// <para>Supports configuring multiple whitelist IP addresses, with English commas separating multiple IP addresses.</para>
+        /// <para>You can specify multiple IP addresses in the IP whitelist. Separate the IP addresses with commas (,).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -660,9 +778,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>Serverless type. The current value is fixed to <b>AgileServerless</b> (sensitive mode).</para>
+        /// <para>The type of the serverless cluster. Set the value to <b>AgileServerless</b>.</para>
         /// <remarks>
-        /// <para>This parameter is only supported by Serverless clusters.</para>
+        /// <para>This parameter is supported only for serverless clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -673,13 +791,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessType { get; set; }
 
         /// <summary>
-        /// <para>Source RDS instance ID or source PolarDB cluster ID. This parameter is mandatory only when <b>CreationOption</b> is set to <b>MigrationFromRDS</b>, <b>CloneFromRDS</b>, <b>CloneFromPolarDB</b>, or <b>RecoverFromRecyclebin</b>.</para>
+        /// <para>The ID of the source ApsaraDB RDS instance or source PolarDB cluster. This parameter is required only if <b>CreationOption</b> is set to <b>MigrationFromRDS</b>, <b>CloneFromRDS</b>, <b>CloneFromPolarDB</b>, or <b>RecoverFromRecyclebin</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <b>CreationOption</b> is <b>MigrationFromRDS</b> or <b>CloneFromRDS</b>, you need to input the source RDS instance ID. The source RDS instance version must be RDS MySQL 5.6, 5.7, or 8.0 High Availability edition.</para>
+        /// <item><description><para>If <b>CreationOption</b> is set to <b>MigrationFromRDS</b> or <b>CloneFromRDS</b>, specify the ID of the source ApsaraDB RDS instance. The source ApsaraDB RDS instance must be ApsaraDB RDS for MySQL 5.6, 5.7, or 8.0 High-availability Edition.</para>
         /// </description></item>
-        /// <item><description><para>If <b>CreationOption</b> is <b>CloneFromPolarDB</b>, you need to input the source PolarDB cluster ID. The DBType of the cloned cluster will default to match the source cluster. For example, if the source cluster is MySQL 8.0, the cloned cluster must also have <b>DBType</b> set to <b>MySQL</b> and <b>DBVersion</b> to <b>8.0</b>.</para>
+        /// <item><description><para>If <b>CreationOption</b> is set to <b>CloneFromPolarDB</b>, specify the ID of the source PolarDB cluster. The new cluster must use the same database engine as the source cluster. For example, if the source cluster runs MySQL 8.0, you must set <b>DBType</b> to <b>MySQL</b> and <b>DBVersion</b> to <b>8.0</b> for the new cluster.</para>
         /// </description></item>
-        /// <item><description><para>If <b>CreationOption</b> is <b>RecoverFromRecyclebin</b>, you need to input the released source PolarDB cluster ID. The DBType of the cluster being recovered from the recycle bin must match the source cluster. For example, if the source cluster was MySQL 8.0, the recovered cluster must also have <b>DBType</b> set to <b>MySQL</b> and <b>DBVersion</b> to <b>8.0</b>.</para>
+        /// <item><description><para>If <b>CreationOption</b> is set to <b>RecoverFromRecyclebin</b>, specify the ID of the released source PolarDB cluster. The restored cluster must use the same database engine as the source cluster. For example, if the source cluster runs MySQL 8.0, you must set <b>DBType</b> to <b>MySQL</b> and <b>DBVersion</b> to <b>8.0</b> for the restored cluster.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -691,6 +809,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceResourceId { get; set; }
 
         /// <summary>
+        /// <para>The UID of the source backup set owner in cross-account backup and restoration scenarios.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1022xxxxxxxx</para>
         /// </summary>
@@ -699,9 +819,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? SourceUid { get; set; }
 
         /// <summary>
-        /// <para>The availability zone where the hot standby cluster is stored. Applicable to the standard edition 3AZ scenario.</para>
+        /// <para>The zone for the hot standby cluster.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only when multi-zone data strong consistency is enabled.</para>
+        /// <para>This parameter is valid only when the hot standby cluster feature or multi-AZ strong consistency is enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -712,10 +832,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StandbyAZ { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable automatic storage expansion for standard edition clusters, with valid values as follows:</para>
+        /// <para>Specifies whether to enable automatic storage scaling for a Standard Edition cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enable: Enables automatic storage expansion.</description></item>
-        /// <item><description>Disable: Disables automatic storage expansion.</description></item>
+        /// <item><description><para>Enable: enables automatic storage scaling.</para>
+        /// </description></item>
+        /// <item><description><para>Disable: disables automatic storage scaling.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -726,16 +848,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable disk encryption. Valid values:</para>
+        /// <para>Specifies whether to enable cloud disk encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: enables cloud disk encryption.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables cloud disk encryption.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> This parameter takes effect only when <b>DBType</b> is set to <b>MySQL</b>.</para>
+        /// <para>This parameter is valid only if <b>DBType</b> is set to <b>MySQL</b>.</para>
         /// </remarks>
         /// <remarks>
-        /// <para> This parameter takes effect only when <b>StorageType</b> is set to one of the Standard Edition storage types.</para>
+        /// <para>This parameter is valid only if <b>StorageType</b> is set to a Standard Edition storage type.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("StorageEncryption")]
@@ -743,24 +867,29 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? StorageEncryption { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom key that is used for disk encryption in the region in which the instance resides. If this parameter is specified, disk encryption is automatically enabled and cannot be disabled afterwards. If you want to use the default service key for disk encryption, leave this parameter empty.</para>
-        /// <para>You can obtain the ID of the key in the KMS console or create a key.</para>
+        /// <para>The ID of a custom key from Key Management Service (KMS) for cloud disk encryption. The key must be in the same region as the cluster. If you specify this parameter, cloud disk encryption is automatically enabled and cannot be disabled. If this parameter is empty, the default service key is used.</para>
+        /// <para>You can view the key ID or create a new key in the Key Management Service (KMS) console.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when <b>DBType</b> is set to <b>MySQL</b>.</para>
+        /// <para>This parameter is valid only if <b>DBType</b> is set to <b>MySQL</b>.</para>
         /// </remarks>
         /// <remarks>
-        /// <para> This parameter takes effect only when <b>StorageType</b> is set to one of the Standard Edition storage types.</para>
+        /// <para>This parameter is valid only if <b>StorageType</b> is set to a Standard Edition storage type.</para>
         /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1022xxxxxxxx</para>
         /// </summary>
         [NameInMap("StorageEncryptionKey")]
         [Validation(Required=false)]
         public string StorageEncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>The storage billing type, with valid values as follows:</para>
+        /// <para>The billing method for storage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Postpaid: Pay-as-you-go (hourly).</description></item>
-        /// <item><description>Prepaid: Pay-per-use based on space (subscription).</description></item>
+        /// <item><description><para>Postpaid: pay-by-capacity (a pay-as-you-go method).</para>
+        /// </description></item>
+        /// <item><description><para>Prepaid: pay-by-space (a subscription method).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -771,15 +900,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StoragePayType { get; set; }
 
         /// <summary>
-        /// <para>The storage that is billed based on the subscription billing method. Unit: GB.</para>
+        /// <para>The storage space for a pay-by-space (subscription) cluster. Unit: GB.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for the subscription storage capacity of a PolarDB for MySQL Standard Edition cluster: 20 to 32000.</para>
+        /// <item><description><para>Valid values for a PolarDB for MySQL Enterprise Edition cluster: 10 to 50000.</para>
         /// </description></item>
-        /// <item><description><para>Valid values for the subscription storage capacity of a Standard Edition cluster that uses the ESSD AUTOPL storage type: 40 to 64000, in increments of 10.</para>
+        /// <item><description><para>Valid values for a PolarDB for MySQL Standard Edition cluster: 20 to 64000.</para>
+        /// </description></item>
+        /// <item><description><para>If the storage type of a Standard Edition cluster is ESSD AutoPL, the storage space must be a multiple of 10 between 40 and 64000.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -789,18 +920,25 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageSpace { get; set; }
 
         /// <summary>
-        /// <para>Enterprise edition storage types include:</para>
+        /// <para>Valid values for Enterprise Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>PSL5</b></description></item>
-        /// <item><description><b>PSL4</b></description></item>
+        /// <item><description><para><b>PSL5</b></para>
+        /// </description></item>
+        /// <item><description><para><b>PSL4</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>Standard edition storage types include:</para>
+        /// <para>Valid values for Standard Edition:</para>
         /// <list type="bullet">
-        /// <item><description><b>ESSDPL0</b></description></item>
-        /// <item><description><b>ESSDPL1</b></description></item>
-        /// <item><description><b>ESSDPL2</b></description></item>
-        /// <item><description><b>ESSDPL3</b></description></item>
-        /// <item><description><b>ESSDAUTOPL</b></description></item>
+        /// <item><description><para><b>ESSDPL0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ESSDPL1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ESSDPL2</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ESSDPL3</b></para>
+        /// </description></item>
+        /// <item><description><para><b>ESSDAUTOPL</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -811,7 +949,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>Set the upper limit for automatic storage expansion of standard edition clusters, in GB.</para>
+        /// <para>The maximum storage capacity for a Standard Edition cluster when automatic storage scaling is enabled. Unit: GB.</para>
         /// <remarks>
         /// <para>The maximum value is 32000.</para>
         /// </remarks>
@@ -824,11 +962,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageUpperBound { get; set; }
 
         /// <summary>
-        /// <para>Whether the cluster has enabled strong data consistency across multiple zones. Values are as follows:</para>
+        /// <para>Specifies whether to enable multi-AZ strong consistency for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ON</b>: Indicates strong data consistency across multiple zones is enabled, applicable to the standard edition 3AZ scenario.</para>
+        /// <item><description><para><b>ON</b>: enables multi-AZ strong consistency. This feature is applicable to Standard Edition clusters that are deployed across three zones.</para>
         /// </description></item>
-        /// <item><description><para><b>OFF</b>: Indicates strong data consistency across multiple zones is not enabled.</para>
+        /// <item><description><para><b>OFF</b>: disables multi-AZ strong consistency.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -840,16 +978,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StrictConsistency { get; set; }
 
         /// <summary>
-        /// <para>Enables TDE encryption. Valid values are as follows:</para>
+        /// <para>Specifies whether to enable transparent data encryption (TDE). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled (default).</description></item>
+        /// <item><description><para><b>true</b>: enables TDE.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): disables TDE.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when <b>DBType</b> is <b>PostgreSQL</b> or <b>Oracle</b>.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/167982.html">ModifyDBClusterTDE</a> interface to enable TDE encryption for a PolarDB MySQL cluster.</description></item>
-        /// <item><description>Once the TDE feature is enabled, it cannot be disabled.</description></item>
+        /// <item><description><para>This parameter is valid only when <b>DBType</b> is set to <b>PostgreSQL</b> or <b>Oracle</b>.</para>
+        /// </description></item>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/167982.html">ModifyDBClusterTDE</a> operation to enable TDE for a PolarDB for MySQL cluster.</para>
+        /// </description></item>
+        /// <item><description><para>TDE cannot be disabled after it is enabled.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -861,16 +1004,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? TDEStatus { get; set; }
 
         /// <summary>
-        /// <para>List of tags.</para>
+        /// <para>The tags to add to the cluster.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDBClusterRequestTag> Tag { get; set; }
         public class CreateDBClusterRequestTag : TeaModel {
             /// <summary>
-            /// <para>Tag key. If you need to add multiple tags to the target cluster at once, click <b>Add</b> to add a tag key.</para>
+            /// <para>The key of the tag.</para>
             /// <remarks>
-            /// <para>Up to 20 pairs of tags can be added each time, where <c>Tag.N.Key</c> corresponds to <c>Tag.N.Value</c>.</para>
+            /// <para>You can add up to 20 tags at a time. The Nth tag is a key-value pair, where <c>Tag.N.Key</c> is the key and <c>Tag.N.Value</c> is the value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -881,9 +1024,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag value. If you need to add multiple tags to the target cluster at once, click <b>Add</b> to add tag values.</para>
+            /// <para>The value of the tag.</para>
             /// <remarks>
-            /// <para>Up to 20 pairs of tags can be added each time, where <c>Tag.N.Value</c> corresponds to <c>Tag.N.Key</c>.</para>
+            /// <para>You can add up to 20 tags at a time. The Nth tag is a key-value pair, where <c>Tag.N.Key</c> is the key and <c>Tag.N.Value</c> is the value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -895,15 +1038,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         }
 
+        /// <summary>
+        /// <para>The target minor engine version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8.0.1.1.54</para>
+        /// </summary>
         [NameInMap("TargetMinorVersion")]
         [Validation(Required=false)]
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>If the payment type is <b>Prepaid</b>, this parameter is required.</para>
+        /// <para>The subscription duration. This parameter is required if you set the <b>PayType</b> parameter to <b>Prepaid</b>.</para>
         /// <list type="bullet">
-        /// <item><description>When <b>Period</b> is <b>Month</b>, <b>UsedTime</b> should be an integer within <c>[1-9]</c>.</description></item>
-        /// <item><description>When <b>Period</b> is <b>Year</b>, <b>UsedTime</b> should be an integer within <c>[1-3]</c>.</description></item>
+        /// <item><description><para>If <b>Period</b> is set to <b>Month</b>, <b>UsedTime</b> must be an integer from <c>[1-9]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>Period</b> is set to <b>Year</b>, <b>UsedTime</b> must be an integer from <c>[1-3]</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -914,7 +1065,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>VPC ID.</para>
+        /// <para>The ID of the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-**********</para>
@@ -924,9 +1075,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>Virtual switch ID.</para>
+        /// <para>The ID of the VSwitch.</para>
         /// <remarks>
-        /// <para>If VPCId has been selected, VSwitchId is mandatory.</para>
+        /// <para>If you specify the VPCId parameter, you must also specify this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -937,9 +1088,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>Availability Zone ID.</para>
+        /// <para>The zone ID.</para>
         /// <remarks>
-        /// <para>You can view the available zones through the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> interface.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available zones.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

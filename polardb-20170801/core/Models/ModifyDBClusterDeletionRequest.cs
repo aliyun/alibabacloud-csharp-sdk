@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterDeletionRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The ID of the target cluster.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to.obtain the cluster ID.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to find the cluster ID.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the cluster lock feature. Default value: false. Valid values:</para>
+        /// <para>Specifies whether to enable or disable the cluster lock. The default value is false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: enables the cluster lock feature. If you enable the cluster lock feature, you cannot directly release the cluster. You must disable the cluster lock feature before you can release the cluster.</description></item>
-        /// <item><description><b>false</b>: disables the cluster lock feature.</description></item>
+        /// <item><description><para><b>true</b>: Enables the cluster lock. When this feature is enabled, the cluster cannot be released. To release the cluster, first disable the cluster lock.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disables the cluster lock.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

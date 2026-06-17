@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAIDBClusterTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The instance type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polar.pg.g6.4xlarge.guh</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
+        /// <para>The ID of the training dataset. This parameter is required for fine-tuning.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pds-2zetrain***</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetPath { get; set; }
 
         /// <summary>
+        /// <para>The ID of the validation dataset. This parameter is required for evaluation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pds-2zetrain***</para>
         /// </summary>
@@ -44,6 +51,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EvalDatasetPath { get; set; }
 
         /// <summary>
+        /// <para>The type of model service. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>aitrain</b>: For model operator tuning.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +65,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KubeType { get; set; }
 
         /// <summary>
+        /// <para>The model name.</para>
+        /// <list type="bullet">
+        /// <item><description><para>For a <b>preset model</b>, specify the model name.</para>
+        /// </description></item>
+        /// <item><description><para>For a <b>custom model</b>, specify the path to the model. This option is for models trained in a cold storage edition instance.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,6 +82,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelName { get; set; }
 
         /// <summary>
+        /// <para>The model source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>public</b>: A preset model.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom</b>: A custom model.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +99,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelSource { get; set; }
 
         /// <summary>
+        /// <para>The type of the custom model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>qwen3</para>
         /// </summary>
@@ -90,6 +117,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -106,6 +135,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The runtime parameters, specified as a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,6 +146,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RunningParameter { get; set; }
 
         /// <summary>
+        /// <para>The security group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sg-bp**************</para>
         /// </summary>
@@ -124,6 +156,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
+        /// <para>The name of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -132,6 +166,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TaskName { get; set; }
 
         /// <summary>
+        /// <para>The VPC ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>
         /// </summary>
@@ -140,6 +176,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VPCId { get; set; }
 
         /// <summary>
+        /// <para>The vSwitch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vsw-*********************</para>
         /// </summary>
@@ -148,6 +186,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
+        /// <para>The zone ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-k</para>
         /// </summary>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterConnectivityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code for connection diagnosis. Valid values:</para>
+        /// <para>The connection check error code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>SRC_IP_NOT_IN_USER_WHITELIST</b>: The source IP address is not added to the whitelist.</description></item>
-        /// <item><description><b>CONNECTION_ABNORMAL</b>: The connection to the cluster is normal.</description></item>
+        /// <item><description><para><b>SRC_IP_NOT_IN_USER_WHITELIST</b>: The source IP address is not in the whitelist.</para>
+        /// </description></item>
+        /// <item><description><para><b>CONNECTION_ABNORMAL</b>: The connection is abnormal.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConnCheckErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message for connection diagnosis.</para>
+        /// <para>The connection check error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Src ip:192.<em><b>.</b></em>.1 not in user whitelist</para>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConnCheckErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The connection diagnosis result. Valid values:</para>
+        /// <para>The connection check result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Success</b></description></item>
-        /// <item><description><b>Failed</b></description></item>
+        /// <item><description><para><b>Success</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Failed</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

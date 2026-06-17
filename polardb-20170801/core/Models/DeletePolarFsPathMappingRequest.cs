@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarFsPathMappingRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of bucket-path mappings to delete.</para>
+        /// </summary>
         [NameInMap("CustomBucketPathList")]
         [Validation(Required=false)]
         public List<DeletePolarFsPathMappingRequestCustomBucketPathList> CustomBucketPathList { get; set; }
         public class DeletePolarFsPathMappingRequestCustomBucketPathList : TeaModel {
             /// <summary>
+            /// <para>The name of the bucket.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Bucket</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Bucket { get; set; }
 
             /// <summary>
+            /// <para>The path in the bucket.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/data</para>
             /// </summary>
@@ -32,6 +39,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PolarFS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeActivationCodeDetailsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the activation code takes effect.</para>
+        /// <para>The effective time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ActivateAt { get; set; }
 
         /// <summary>
-        /// <para>The activation code in the base64 format. The activation code is decoded and stored into a file named license.lic. PolarDB can access and read the license.lic file upon startup to validate the license or perform related operations.</para>
+        /// <para>The content of the activation code. Decode the Base64 content and save it to the license.lic file for PolarDB to read during startup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAEAA******AAA=</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code expires.</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2054-10-09 16:46:20</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F2A9EFA7-915F-4572-8299-85A307******</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The system identifier of the database.</para>
+        /// <para>The unique identifier of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>

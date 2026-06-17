@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterMigrationEndpointRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster.</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including the cluster ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The parameters for modifying the DTS task.</para>
+        /// <para><b>dtsJobId</b>: The ID of the DTS task.</para>
+        /// <para>endpoint: The endpoint to switch. Set the value to src for the source endpoint or <b>dst</b> for the destination endpoint.</para>
+        /// <para><b>endpointInstanceId</b>: The ID of the cloud instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

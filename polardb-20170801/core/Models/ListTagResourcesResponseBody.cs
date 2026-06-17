@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token required to obtain more results. If not all results are returned in this query, the token is returned. You can use this token in the next query to obtain more results.</para>
+        /// <para>A token to retrieve more results. This parameter is returned if a query does not return all results. You can use the token in a subsequent query to continue retrieving results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>

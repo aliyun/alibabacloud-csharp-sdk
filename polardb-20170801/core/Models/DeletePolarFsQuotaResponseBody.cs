@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarFsQuotaResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the Polarlakebase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-2ze0i74ka607*****</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarAgentUserSessionsRequest : TeaModel {
         /// <summary>
+        /// <para>The source of the product. The value is \<c>polardb-console\\</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polardb-console</para>
         /// </summary>

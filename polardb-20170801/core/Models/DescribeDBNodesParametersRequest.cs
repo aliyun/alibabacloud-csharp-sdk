@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The node ID. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</para>
+        /// <para>The ID of the node. You can specify multiple node IDs. Separate the IDs with a comma (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

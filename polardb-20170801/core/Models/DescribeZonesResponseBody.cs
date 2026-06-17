@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>E2FDB684-751D-424D-98B9-704BEA******</para>
         /// </summary>
@@ -17,11 +19,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>A list of zones.</para>
+        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public List<DescribeZonesResponseBodyZones> Zones { get; set; }
         public class DescribeZonesResponseBodyZones : TeaModel {
             /// <summary>
+            /// <para>The enumeration of statuses. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>UnSet</b>: The zone is not open for use.</para>
+            /// </description></item>
+            /// <item><description><para><b>SoldOut</b>: The resources in the zone are sold out.</para>
+            /// </description></item>
+            /// <item><description><para><b>WithStock</b>: The zone has available resources.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>UnSet</para>
             /// </summary>
@@ -30,6 +45,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModeCode { get; set; }
 
             /// <summary>
+            /// <para>The priority.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50</para>
             /// </summary>
@@ -38,6 +55,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Priority { get; set; }
 
             /// <summary>
+            /// <para>The status of the zone. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>ON</b>: The zone is available.</para>
+            /// </description></item>
+            /// <item><description><para><b>OFF</b>: The zone is unavailable.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ON</para>
             /// </summary>
@@ -46,6 +71,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Status { get; set; }
 
             /// <summary>
+            /// <para>The ID of the zone.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing-h</para>
             /// </summary>

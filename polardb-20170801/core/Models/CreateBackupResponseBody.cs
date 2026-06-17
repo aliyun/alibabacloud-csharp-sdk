@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateBackupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup set.</para>
+        /// <para>The backup job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11111111</para>

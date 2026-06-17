@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAvailableModelsRequest : TeaModel {
         /// <summary>
-        /// <para>aideploy</para>
+        /// <para>The service type. The value must be set to <c>aideploy</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aideploy</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KubeType { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

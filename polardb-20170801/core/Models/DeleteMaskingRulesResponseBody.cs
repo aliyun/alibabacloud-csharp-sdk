@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteMaskingRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The message that is returned for the request.</para>
+        /// <para>The response message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <c>Successful</c> is returned. If the request fails, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <c>Successful</c> is returned. If the request fails, an error message is returned, such as an error code.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2BCEE25B-797C-426B-BA7B-D28CCF******</para>
@@ -33,10 +33,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid value:</para>
+        /// <para>The result of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

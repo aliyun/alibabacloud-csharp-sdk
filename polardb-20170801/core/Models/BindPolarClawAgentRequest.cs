@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class BindPolarClawAgentRequest : TeaModel {
         /// <summary>
+        /// <para>The agent ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The channel ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Channel { get; set; }
 
         /// <summary>
+        /// <para>The account ID for the channel. If omitted, the default value is \&quot;default\&quot;.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>

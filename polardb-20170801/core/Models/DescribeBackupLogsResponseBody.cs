@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

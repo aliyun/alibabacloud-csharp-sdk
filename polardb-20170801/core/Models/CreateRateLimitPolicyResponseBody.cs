@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateRateLimitPolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The gateway instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pg-xxxxxxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
+        /// <para>The policy ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>02eccf7c61cf4d05a543075ee907f3**</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDB3258F-B5DE-43C4-8935-CBA0CA******</para>

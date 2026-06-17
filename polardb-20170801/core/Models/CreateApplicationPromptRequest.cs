@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationPromptRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the Application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The name of the Prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptName { get; set; }
 
         /// <summary>
+        /// <para>The type of the Prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,6 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptType { get; set; }
 
         /// <summary>
+        /// <para>The content of the Prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

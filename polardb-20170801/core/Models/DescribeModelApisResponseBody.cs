@@ -9,11 +9,24 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeModelApisResponseBody : TeaModel {
+        /// <summary>
+        /// <para>A list of Model API objects.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeModelApisResponseBodyItems> Items { get; set; }
         public class DescribeModelApisResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The model category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>text</b></para>
+            /// </description></item>
+            /// <item><description><para><b>embedding</b></para>
+            /// </description></item>
+            /// <item><description><para><b>rerank</b></para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>text</para>
             /// </summary>
@@ -22,6 +35,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Category { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-10-16 16:46:20</para>
             /// </summary>
@@ -30,6 +45,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GmtCreated { get; set; }
 
             /// <summary>
+            /// <para>The Model API ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mi-xxxx</para>
             /// </summary>
@@ -38,6 +55,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ModelApiId { get; set; }
 
             /// <summary>
+            /// <para>The Model API name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testName</para>
             /// </summary>
@@ -46,6 +65,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The API path prefix.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tests/models/</para>
             /// </summary>
@@ -54,6 +75,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string PathPrefix { get; set; }
 
             /// <summary>
+            /// <para>The protocol. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>openai</b></para>
+            /// </description></item>
+            /// <item><description><para><b>anthropic</b></para>
+            /// </description></item>
+            /// <item><description><para><b>bailian</b></para>
+            /// </description></item>
+            /// <item><description><para><b>vllm</b></para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>openai</para>
             /// </summary>
@@ -62,6 +95,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>The number of input records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -70,6 +105,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RecordInput { get; set; }
 
             /// <summary>
+            /// <para>The number of output records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -78,6 +115,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RecordOutput { get; set; }
 
             /// <summary>
+            /// <para>A JSON array of routing rules, formatted as a string.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>[
             ///   {
@@ -109,6 +148,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RouteRules { get; set; }
 
             /// <summary>
+            /// <para>The Model API status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Enable</para>
             /// </summary>
@@ -119,6 +160,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -127,6 +170,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records returned on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -135,6 +180,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
+        /// <para>The number of records to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -143,7 +191,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C61892A4-0850-4516-9E26-44D96C1782DE</para>
@@ -153,6 +201,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records that match the query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

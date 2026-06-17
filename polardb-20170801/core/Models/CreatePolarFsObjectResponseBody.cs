@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarFsObjectResponseBody : TeaModel {
         /// <summary>
+        /// <para>The absolute path of the created directory.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>/test</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>The PolarFS instance id.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-test****</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFsInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C890995A-CF06-4F4D-8DB8-DD26C2******</para>

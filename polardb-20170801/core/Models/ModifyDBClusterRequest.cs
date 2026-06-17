@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable storage compression. Set the value to <b>ON</b>.</para>
+        /// <para>Enables storage compression. Set the value to <b>ON</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para> You can call the DescribeDBClusters operation to query information about all PolarDB clusters that are deployed in a specified region, such as cluster IDs.</para>
+        /// <para>You can call the DescribeDBClusters operation to query the details of all clusters in a specific region, including their cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes for the drill.</para>
+        /// <para>The names of the nodes to target in the fault simulation.</para>
         /// <remarks>
-        /// <para> You can specify only one node for a node-level disaster recovery drill. For a primary zone-level disaster recovery drill, you can either choose not to specify this parameter or specify all nodes.</para>
+        /// <para>For a node-level simulation, you can specify only a single node. For a zone-level simulation, you can leave this parameter empty or specify all nodes.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeCrashList { get; set; }
 
         /// <summary>
-        /// <para>The method used to replicate data across zones. Valid values:</para>
+        /// <para>The cross-zone data replication method for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AsyncSync</b>: the asynchronous mode.</description></item>
-        /// <item><description><b>SemiSync</b>: the semi-synchronous mode.</description></item>
+        /// <item><description><para><b>AsyncSync</b>: asynchronous.</para>
+        /// </description></item>
+        /// <item><description><para><b>SemiSync</b>: semi-synchronous.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,11 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The fault injection method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: <c>Crash SQL</c>-based fault injection.</description></item>
-        /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>CrashSQLInjection: CrashSQLInjection.</description></item>
+        /// <item><description><c>0</c>: instance-level fault injection based on Crash SQL.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,27 +76,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FaultInjectionType { get; set; }
 
         /// <summary>
-        /// <para>The level of the disaster recovery drill. Valid values:</para>
+        /// <para>The fault simulation scope for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>0</c> or <c>FaultInjection</c>: The primary zone level.</description></item>
-        /// <item><description><c>1</c>: The node level.</description></item>
+        /// <item><description><para><c>0</c> or <c>FaultInjection</c>: primary zone-level fault simulation.</para>
+        /// </description></item>
+        /// <item><description><para><c>1</c>: node-level fault simulation.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>In a <b>primary zone-level fault simulation</b>, all compute nodes in the primary zone become unavailable. The disaster recovery failover in this scenario is lossy.</para>
+        /// </description></item>
+        /// <item><description><para>In a <b>node-level fault simulation</b>, you can simulate a fault on only a single compute node. You must specify the target compute node by using the <c>DBNodeCrashList</c> parameter.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>In <b>primary zone-level disaster recovery drill</b> scenarios, all compute nodes in the primary zone are unavailable. Data loss occurs during failovers in the scenarios.</para>
-        /// </description></item>
-        /// <item><description><para>In <b>node-level disaster recovery drill</b> scenarios, you can specify only one compute node for the disaster recovery drill. You can use the <c>DBNodeCrashList</c> parameter to specify the name of the compute node that you want to use for the drill.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>FaultInjectToPrimaryAz</description></item>
-        /// <item><description>FaultInjectToDbNode</description></item>
-        /// <item><description>FaultInjection</description></item>
-        /// <item><description>0</description></item>
-        /// <item><description>1</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -108,19 +100,21 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FaultSimulateMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic IMCI-based query acceleration. IMCI is short for In-Memory Column Index. Valid values:</para>
+        /// <para>Controls the automatic columnar index feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>ON</c>: enables automatic IMCI-based query acceleration.</description></item>
-        /// <item><description><c>OFF</c>: disables automatic IMCI-based query acceleration.</description></item>
+        /// <item><description><para><c>ON</c>: enables the feature.</para>
+        /// </description></item>
+        /// <item><description><para><c>OFF</c>: disables the feature.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is supported only for PolarDB for MySQL clusters.</para>
+        /// <item><description><para>This feature is available only for PolarDB for MySQL clusters.</para>
         /// </description></item>
-        /// <item><description><para>For information about the cluster version limits, see <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic IMCI-based query acceleration</a>.</para>
+        /// <item><description><para>For cluster version limits, see <a href="https://help.aliyun.com/document_detail/2854119.html">Automatic indexing (AutoIndex)</a>.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>OFF</para>
@@ -129,6 +123,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ImciAutoIndex { get; set; }
 
+        /// <summary>
+        /// <para>Enables or disables row-level compression.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OFF</para>
+        /// </summary>
         [NameInMap("ModifyRowCompression")]
         [Validation(Required=false)]
         public string ModifyRowCompression { get; set; }
@@ -150,10 +150,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable cross-zone automatic switchover. Valid values:</para>
+        /// <para>The automatic cross-zone failover mode for the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: enables cross-zone automatic switchover.</description></item>
-        /// <item><description><b>OFF</b>: disables cross-zone automatic switchover.</description></item>
+        /// <item><description><para><b>ON</b>: enables automatic cross-zone failover.</para>
+        /// </description></item>
+        /// <item><description><para><b>OFF</b>: disables automatic cross-zone failover.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,10 +166,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StandbyHAMode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic storage scaling for the Standard Edition cluster. Valid values:</para>
+        /// <para>Enables or disables automatic storage scaling for a standard cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enable</description></item>
-        /// <item><description>Disable</description></item>
+        /// <item><description><para>Enable: enables automatic storage scaling.</para>
+        /// </description></item>
+        /// <item><description><para>Disable: disables automatic storage scaling.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -178,9 +182,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage capacity of the cluster of Standard Edition in automatic scaling. Unit: GB.</para>
+        /// <para>The upper limit for automatic storage scaling on a standard cluster. Unit: GB.</para>
         /// <remarks>
-        /// <para> The maximum value of this parameter is 32000.</para>
+        /// <para>The maximum value is 32000.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -190,6 +194,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? StorageUpperBound { get; set; }
 
+        /// <summary>
+        /// <para>A JSON string that specifies information about the destination databases and tables to be restored. All values in the database and table information must be strings.
+        /// Example: <c>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</c>.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/194770.html">DescribeMetaList</a> operation to query for restorable databases and tables. Use the returned information to populate the fields in the example JSON.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[ { &quot;tables&quot;:[ { &quot;name&quot;:&quot;testtb&quot;, &quot;type&quot;:&quot;table&quot;, &quot;newname&quot;:&quot;testtb_restore&quot; } ], &quot;name&quot;:&quot;testdb&quot;, &quot;type&quot;:&quot;db&quot;, &quot;newname&quot;:&quot;testdb_restore&quot; } ]</para>
+        /// </summary>
         [NameInMap("TableMeta")]
         [Validation(Required=false)]
         public string TableMeta { get; set; }

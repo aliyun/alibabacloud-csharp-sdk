@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ActivateAt { get; set; }
 
         /// <summary>
-        /// <para>The activation code in the base64 format. The activation code is decoded and stored into a file named license.lic. PolarDB can access and read the license.lic file upon startup to validate the license or perform related operations.</para>
+        /// <para>The content of the activation code. Decode this Base64-encoded content and save it to the \<c>license.lic\\</c> file. PolarDB reads this file on startup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAEAA******AAA=</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code expires.</para>
+        /// <para>The expiration time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2054-10-09 16:46:20</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireAt { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The time when the activation code was last updated.</para>
+        /// <para>The update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-10-16 16:46:20</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>The activation code ID.</para>
+        /// <para>The ID of the activation code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4CE6DF97-AEA4-484F-906F-C407EE******</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The system identifier of the database.</para>
+        /// <para>The unique system identifier of the database.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123456</para>

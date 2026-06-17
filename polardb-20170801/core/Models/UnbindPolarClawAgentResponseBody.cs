@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UnbindPolarClawAgentResponseBody : TeaModel {
         /// <summary>
-        /// <para>Agent ID</para>
+        /// <para>The agent ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>work</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-********************</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The status code of the response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -44,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The number of removed bindings.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? RemovedCount { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>
@@ -62,6 +70,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of bindings after the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

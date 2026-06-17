@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>The cluster engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POLARDB</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>34458CD3-33E0-4624-BFEF-840C15******</para>

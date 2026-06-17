@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeParameterGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of parameter templates.</para>
+        /// <para>The list of parameter templates.</para>
         /// </summary>
         [NameInMap("ParameterGroups")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The type of the engine.</para>
+            /// <para>The type of the database engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MySQL</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBType { get; set; }
 
             /// <summary>
-            /// <para>The version of the database engine</para>
+            /// <para>The version of the database engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.0</para>
@@ -47,10 +47,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBVersion { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether to restart the cluster when this parameter template is applied. Valid values:</para>
+            /// <para>Indicates whether a cluster restart is required for the parameter template to take effect. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: A restart is not required.</description></item>
-            /// <item><description><b>1</b>: A restart is required.</description></item>
+            /// <item><description><para><b>0</b>: A restart is not required.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: A restart is required.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,9 +105,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The type of the parameter template. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: the default parameter template.</description></item>
-            /// <item><description><b>1</b>: a custom parameter template.</description></item>
-            /// <item><description><b>2</b>: an automatic backup parameter template. After you apply this type of template, the system automatically backs up the original parameter settings and saves the backup as a template.</description></item>
+            /// <item><description><para><b>0</b>: system default template</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: user-defined template</para>
+            /// </description></item>
+            /// <item><description><para><b>2</b>: automatic backup template (The system automatically backs up the previous parameter settings as a template after you apply a new template.)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -118,7 +123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>944CED46-A6F7-40C6-B6DC-C6E5CC******</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreatePolarClawCronJobShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the agent that executes the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>main</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to automatically delete the job after its first execution. This is useful for one-time tasks. Default: <c>false</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? DeleteAfterRun { get; set; }
 
         /// <summary>
+        /// <para>The configuration for delivering task execution results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Mode&quot;:&quot;announce&quot;,&quot;Channel&quot;:&quot;telegram&quot;}</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DeliveryShrink { get; set; }
 
         /// <summary>
+        /// <para>A description of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Daily report generation</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the cron job is enabled. Default: <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -60,6 +71,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
+        /// <para>The failure alert configuration.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;After&quot;:3,&quot;Channel&quot;:&quot;telegram&quot;}</para>
         /// </summary>
@@ -68,6 +81,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FailureAlertShrink { get; set; }
 
         /// <summary>
+        /// <para>The unique name of the task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +92,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The execution payload configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,6 +103,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayloadShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway upon job creation. Default: <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -96,6 +113,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to run the job once immediately upon creation. Default: <c>false</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -104,6 +123,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? RunImmediately { get; set; }
 
         /// <summary>
+        /// <para>The schedule configuration.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,6 +134,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScheduleShrink { get; set; }
 
         /// <summary>
+        /// <para>The session routing key, which determines the conversation session for the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>agent:main:feishu:direct:***</para>
         /// </summary>
@@ -122,6 +144,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionKey { get; set; }
 
         /// <summary>
+        /// <para>The session target. Valid values are <c>main</c>, <c>isolated</c>, and <c>current</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -132,6 +155,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionTarget { get; set; }
 
         /// <summary>
+        /// <para>The wake mode for the agent. Valid values are <c>now</c> and <c>next-heartbeat</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

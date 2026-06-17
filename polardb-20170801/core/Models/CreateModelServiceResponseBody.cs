@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateModelServiceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The model service ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ms-xxxxxx</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelServiceId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69A85BAF-1089-4CDF-A82F-0A140F******</para>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status of the model service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Enable</para>
         /// </summary>

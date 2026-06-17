@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyCronJobPolicyServerlessResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>D1401250-910B-57A6-8A6A-D9988A62B1CD</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

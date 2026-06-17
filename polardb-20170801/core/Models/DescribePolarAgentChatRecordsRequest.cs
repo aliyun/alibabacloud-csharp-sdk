@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarAgentChatRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The product source. Valid value: polardb-console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polardb-console</para>
         /// </summary>

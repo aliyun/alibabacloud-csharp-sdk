@@ -26,9 +26,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The password of the account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
-        /// <item><description>Special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></description></item>
+        /// <item><description><para>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// </description></item>
+        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
+        /// </description></item>
+        /// <item><description><para>Special characters include <c>! @ # $ % ^ &amp; * ( ) _ + - =</c></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

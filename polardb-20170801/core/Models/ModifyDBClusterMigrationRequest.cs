@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterMigrationRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoints to be switched. The endpoints are in the JSON format.</para>
+        /// <para>The specific endpoints to be switched. The value is a JSON string that specifies the endpoints to be swapped.</para>
         /// <remarks>
-        /// <para>This parameter is valid when the SwapConnectionString parameter is set to true.</para>
+        /// <para>This parameter is valid only when SwapConnectionString is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConnectionStrings { get; set; }
 
         /// <summary>
-        /// <para>The ID of cluster.</para>
+        /// <para>The ID of the PolarDB cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the new instance or new cluster. Valid values:</para>
+        /// <para>The ID of the new instance or cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>To perform a data migration, enter the ID of the PolarDB cluster.</description></item>
-        /// <item><description>To perform a migration rollback, enter the ID of the ApsaraDB for RDS instance.</description></item>
+        /// <item><description><para>Before the switch, enter the PolarDB cluster ID to perform a switch.</para>
+        /// </description></item>
+        /// <item><description><para>After the switch, enter the RDS instance ID to perform a rollback.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,7 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source ApsaraDB RDS instance.</para>
+        /// <para>The ID of the source RDS instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,10 +82,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceRDSDBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to switch the endpoints. Valid values:</para>
+        /// <para>Specifies whether to switch the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: switches the endpoints. If you select this option, you do not need the change the endpoint in your applications.</description></item>
-        /// <item><description><b>false</b>: does not switch the endpoints. If you select this option, you must specify the endpoint of the PolarDB cluster in your applications.</description></item>
+        /// <item><description><para><b>true</b>: Switches the endpoint. The application can connect to the database without changing its connection configuration.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Does not switch the endpoint. The application must be changed to use the new PolarDB endpoint.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>false</b>.</para>
         /// 

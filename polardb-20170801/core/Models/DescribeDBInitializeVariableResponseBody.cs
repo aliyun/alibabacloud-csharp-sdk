@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The database type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Oracle</description></item>
-        /// <item><description>PostgreSQL</description></item>
-        /// <item><description>MySQL</description></item>
+        /// <item><description><para>Oracle</para>
+        /// </description></item>
+        /// <item><description><para>PostgreSQL</para>
+        /// </description></item>
+        /// <item><description><para>MySQL</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The database version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11</para>
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>475F58B7-F394-4394-AA6E-4F1CBA******</para>

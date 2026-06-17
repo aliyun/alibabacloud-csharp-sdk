@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarAgentChatRecordsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The result set.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribePolarAgentChatRecordsResponseBodyData> Data { get; set; }
         public class DescribePolarAgentChatRecordsResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The answer.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Answer { get; set; }
 
             /// <summary>
+            /// <para>The feedback type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string FeedbackType { get; set; }
 
             /// <summary>
+            /// <para>The session query. Obtain this value from the response of the API call to start a digital human.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -38,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Query { get; set; }
 
             /// <summary>
-            /// <para>Query ID。</para>
+            /// <para>The query ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sq202506261002hz8b24fe80067683</para>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string QueryId { get; set; }
 
             /// <summary>
+            /// <para>The session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>44dcdf31-04cd-4a44-9bae-834dd6657e29</para>
             /// </summary>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A7E6A8FD-C50B-46B2-BA85-D8B8D3******</para>
         /// </summary>

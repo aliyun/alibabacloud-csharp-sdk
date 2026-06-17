@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the node. You can specify multiple node IDs. Separate multiple node IDs with commas (,).</para>
+        /// <para>The IDs of the nodes. To specify multiple node IDs, separate the IDs with a comma (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBNodeIds { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately run the task to modify parameters and restart the cluster. Valid values: false: runs the task on schedule. true: runs the task immediately. Default value: false.</para>
+        /// <para>Specifies whether to apply the parameter modifications and restart the node. Valid values: \<c>false\\</c> (default): Schedules the task. \<c>true\\</c>: Executes the task immediately.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parameter template that is used for the cluster.</para>
+        /// <para>The ID of the parameter template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pcpg-**************</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>The JSON string that specifies the parameter and its value.</para>
+        /// <para>A JSON string that contains the parameters and their values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The latest start time to run the task. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The latest time to start the scheduled task. The time must be in the \<c>YYYY-MM-DDThh:mm:ssZ\\</c> format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:30:00Z</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest start time to run the task to upgrade the kernel version of the cluster. The task runs within a specified period of time. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The earliest time to start the scheduled task. The time must be in the \<c>YYYY-MM-DDThh:mm:ssZ\\</c> format and in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:00:00Z</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAIDBClusterDatasetsRequest : TeaModel {
         /// <summary>
+        /// <para>The token used to retrieve the next page of results. This value is obtained from the response of a previous request. For the first request, leave this parameter empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EFSDF-DF-***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ContinuationToken { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PolarDB cluster for AI model services.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-2ze88***</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The dataset ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pds-2ze88***</para>
         /// </summary>
@@ -34,6 +40,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DatasetId { get; set; }
 
         /// <summary>
+        /// <para>The type of the dataset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>train</b>: The training set.</para>
+        /// </description></item>
+        /// <item><description><para><b>eval</b>: The evaluation set.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>train</para>
         /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number to return. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -58,6 +74,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Valid values: <b>30</b>, <b>50</b>, and <b>100</b>.</para>
+        /// <para>Default value: <b>30</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -66,6 +85,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>
@@ -82,6 +103,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The training mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>sft</b>: supervised fine-tuning.</para>
+        /// </description></item>
+        /// <item><description><para><b>grpo</b>: reinforcement learning.</para>
+        /// </description></item>
+        /// <item><description><para><b>text</b>: text generation.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>grpo</para>
         /// </summary>

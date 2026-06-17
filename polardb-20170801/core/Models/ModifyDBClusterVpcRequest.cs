@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterVpcRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to switch existing endpoints. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>NONE</b>: Does not switch existing endpoints.</para>
+        /// </description></item>
+        /// <item><description><para><b>ALL</b>: Switches all existing endpoints.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +54,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-*******************</para>
         /// </summary>
@@ -54,6 +64,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VPCId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the virtual switch.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

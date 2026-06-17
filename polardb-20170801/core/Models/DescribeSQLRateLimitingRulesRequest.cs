@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeSQLRateLimitingRulesRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -28,6 +33,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page of results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAARbaCuN6hiD08qrLdwJ9Fh3QbdIPYBaCDXsvvjLHCQfi</para>
         /// </summary>
@@ -52,6 +59,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the SQL throttling rule that you want to query. You can specify multiple rule names for a batch query. Separate the rule names with commas (,).</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/212573.html">DescribeSQLRateLimitingRules</a> operation to query the details of all SQL throttling rules for the cluster, including the rule names.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>testrule</para>
         /// </summary>

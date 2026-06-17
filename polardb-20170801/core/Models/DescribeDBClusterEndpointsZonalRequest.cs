@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterEndpointsZonalRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The cluster endpoint ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pe-*************</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBEndpointId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to return information about AI nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AI</para>
         /// </summary>

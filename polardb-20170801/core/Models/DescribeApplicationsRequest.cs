@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeApplicationsRequest : TeaModel {
         /// <summary>
+        /// <para>A list of application IDs. If specified, this operation returns information only about the specified applications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pa-**************</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationTypes { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PolarDB instance. If specified, this operation returns information only about applications associated with this instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-**************</para>
         /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +44,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: <b>30</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -46,6 +63,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,11 +73,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>A list of tags. A tag is a key-value pair.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeApplicationsRequestTag> Tag { get; set; }
         public class DescribeApplicationsRequestTag : TeaModel {
             /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testKey</para>
             /// </summary>
@@ -68,6 +91,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testValue</para>
             /// </summary>

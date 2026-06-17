@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CheckDBNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the database.</para>
+        /// <para>The database name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_db</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDB3258F-B5DE-43C4-8935-CBA0CA******</para>

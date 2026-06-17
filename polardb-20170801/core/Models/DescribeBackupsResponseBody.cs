@@ -73,6 +73,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 [Validation(Required=false)]
                 public string IsAvail { get; set; }
 
+                [NameInMap("TableRestoreMetaStatus")]
+                [Validation(Required=false)]
+                public string TableRestoreMetaStatus { get; set; }
+
             }
 
         }
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -98,7 +102,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>24A1990B-4F6E-482B-B8CB-75C612******</para>
@@ -108,6 +112,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total size of level-2 backups in the specified region, in bytes.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>Supported only for storage classes PSL4 and PSL5.</para>
+        /// </description></item>
+        /// <item><description><para>Supported only for clusters with the level-2 backup feature enabled.</para>
+        /// </description></item>
+        /// <item><description><para>If this field is not returned, the level-2 backup size is 0.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>4639948800</para>
         /// </summary>
@@ -116,7 +132,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TotalLevel2BackupSize { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

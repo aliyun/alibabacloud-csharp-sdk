@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteEncryptionDBRolePrivilegeRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, such as the cluster ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The name of the role permission.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

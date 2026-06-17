@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarFsObjectsRequest : TeaModel {
         /// <summary>
+        /// <para>The absolute path of the directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Path { get; set; }
 
         /// <summary>
+        /// <para>The PolarFs instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAccountsZonalRequest : TeaModel {
         /// <summary>
+        /// <para>The account name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test_acc</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of entries to return in a single request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results. You do not need to specify this parameter for the first request. In a subsequent request, set this parameter to the NextToken value returned in the previous response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>212db86sca4384811e0b5e8707e******</para>
         /// </summary>
@@ -44,6 +51,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The node type. This parameter is required when you query the accounts of a PolarDB Search node.</para>
+        /// <list type="bullet">
+        /// <item><description>Search</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Search</para>
         /// </summary>
@@ -60,6 +72,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. The value must be an integer that is greater than 0. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -68,6 +82,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>30</para>
+        /// </description></item>
+        /// <item><description><para>50</para>
+        /// </description></item>
+        /// <item><description><para>100</para>
+        /// </description></item>
+        /// </list>
+        /// <para>The default value is 30.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>

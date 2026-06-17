@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>You can view detailed information about all clusters under your account, including the cluster ID, through the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> interface.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters in your account, including the cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Whether to obtain information about AI-related nodes.</para>
+        /// <para>Specifies whether to query information about AI nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AI</para>

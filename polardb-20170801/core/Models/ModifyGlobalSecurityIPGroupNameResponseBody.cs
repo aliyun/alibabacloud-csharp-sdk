@@ -10,16 +10,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyGlobalSecurityIPGroupNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the global IP whitelist template.</para>
+        /// <para>The details of the global IP address whitelist template.</para>
         /// </summary>
         [NameInMap("GlobalSecurityIPGroup")]
         [Validation(Required=false)]
         public List<ModifyGlobalSecurityIPGroupNameResponseBodyGlobalSecurityIPGroup> GlobalSecurityIPGroup { get; set; }
         public class ModifyGlobalSecurityIPGroupNameResponseBodyGlobalSecurityIPGroup : TeaModel {
             /// <summary>
-            /// <para>The IP address in the whitelist template.</para>
+            /// <para>The IP addresses in the whitelist template.</para>
             /// <remarks>
-            /// <para> Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks to all IP whitelists.</para>
+            /// <para>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP address whitelists.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -30,11 +30,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GIpList { get; set; }
 
             /// <summary>
-            /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
+            /// <para>The name of the IP address whitelist template. The name must meet the following requirements:</para>
             /// <list type="bullet">
-            /// <item><description>The name can contain lowercase letters, digits, and underscores (_).</description></item>
-            /// <item><description>The name must start with a letter and end with a letter or a digit.</description></item>
-            /// <item><description>The name must be 2 to 120 characters in length.</description></item>
+            /// <item><description><para>It must consist of lowercase letters, digits, and underscores (_).</para>
+            /// </description></item>
+            /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
+            /// </description></item>
+            /// <item><description><para>It must be 2 to 120 characters in length.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GlobalIgName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the IP whitelist template.</para>
+            /// <para>The ID of the IP address whitelist template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>g-zsldxfiwjmti0kcm****</para>
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string GlobalSecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B7BFB11-C077-4FE3-B051-F69CEB******</para>

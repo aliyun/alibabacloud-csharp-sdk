@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateBudgetPolicyRequest : TeaModel {
         /// <summary>
+        /// <para>The alert threshold, as a percentage. Valid values: 0 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AlertThresholdPct { get; set; }
 
         /// <summary>
+        /// <para>The ID of the dimension object. This parameter is required if <c>BudgetType</c> is set to <c>ConsumerTotal</c> or <c>ConsumerGroupTotal</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mi-xxxxx</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BudgetDimensionRefId { get; set; }
 
         /// <summary>
+        /// <para>The number of budget points.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BudgetPoints { get; set; }
 
         /// <summary>
+        /// <para>The budget type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>GlobalTotal</c>: global total budget</para>
+        /// </description></item>
+        /// <item><description><para><c>ConsumerTotal</c>: consumer total budget</para>
+        /// </description></item>
+        /// <item><description><para><c>ConsumerGroupTotal</c>: consumer group total budget</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BudgetType { get; set; }
 
         /// <summary>
+        /// <para>The gateway cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,11 +70,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string GwClusterId { get; set; }
 
+        /// <summary>
+        /// <para>The region ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The day of the month on which the budget resets. Valid values: 1 to 28.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

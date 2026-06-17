@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class GrantAccountPrivilegeZonalRequest : TeaModel {
         /// <summary>
+        /// <para>The account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The account permissions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ReadWrite: Read and write permissions.</para>
+        /// </description></item>
+        /// <item><description><para>ReadOnly: Read-only permissions.</para>
+        /// </description></item>
+        /// <item><description><para>DMLOnly: DML-only permissions.</para>
+        /// </description></item>
+        /// <item><description><para>DDLOnly: DDL-only permissions.</para>
+        /// </description></item>
+        /// <item><description><para>ReadIndex: Read-only and index permissions.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +44,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
+        /// <para>A client-generated token that ensures the idempotence of the request. Make sure that the token is unique among different requests. The token is case-sensitive and can be up to 64 ASCII characters in length.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f5********************</para>
         /// </summary>
@@ -38,6 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +65,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the database for which to grant permissions. To grant permissions for multiple databases, separate the database names with a comma (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

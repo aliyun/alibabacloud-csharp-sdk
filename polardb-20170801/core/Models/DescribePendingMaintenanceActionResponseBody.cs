@@ -39,9 +39,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The type of the database engine. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>MySQL</b></description></item>
-            /// <item><description><b>PostgreSQL</b></description></item>
-            /// <item><description><b>Oracle</b></description></item>
+            /// <item><description><para><b>MySQL</b></para>
+            /// </description></item>
+            /// <item><description><para><b>PostgreSQL</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Oracle</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -56,15 +59,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <list type="bullet">
             /// <item><description><para>Valid values for the MySQL database engine:</para>
             /// <list type="bullet">
-            /// <item><description><b>5.6</b></description></item>
-            /// <item><description><b>5.7</b></description></item>
-            /// <item><description><b>8.0</b></description></item>
+            /// <item><description><para><b>5.6</b></para>
+            /// </description></item>
+            /// <item><description><para><b>5.7</b></para>
+            /// </description></item>
+            /// <item><description><para><b>8.0</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>Valid values for the PostgreSQL database engine:</para>
             /// <list type="bullet">
-            /// <item><description><b>11</b></description></item>
-            /// <item><description><b>14</b></description></item>
+            /// <item><description><para><b>11</b></para>
+            /// </description></item>
+            /// <item><description><para><b>14</b></para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>Valid value for the Oracle database engine: <b>11</b></para>
@@ -131,8 +139,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The execution result of the task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>manualCancel</b>: The task is manually canceled.</description></item>
-            /// <item><description><b>paramCheckNotPass</b>: The task fails to pass the parameter check.</description></item>
+            /// <item><description><para><b>manualCancel</b>: The task is manually canceled.</para>
+            /// </description></item>
+            /// <item><description><para><b>paramCheckNotPass</b>: The task fails to pass the parameter check.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is returned only when the value of the <c>Status</c> parameter is <b>6</b> or <b>7</b>. The value 6 indicates that the task is completed but fails to be executed. The value 7 indicates that the task is canceled.</para>
@@ -160,16 +170,22 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <list type="bullet">
             /// <item><description><para>If you set the <c>IsHistory</c> parameter to <b>0</b>, the status of the pending task is returned. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>2</b>: The start time of the task is to be specified.</description></item>
-            /// <item><description><b>3</b>: The task is pending.</description></item>
-            /// <item><description><b>4</b>: The task is running. In this case, you cannot modify the execution time.</description></item>
+            /// <item><description><para><b>2</b>: The start time of the task is to be specified.</para>
+            /// </description></item>
+            /// <item><description><para><b>3</b>: The task is pending.</para>
+            /// </description></item>
+            /// <item><description><para><b>4</b>: The task is running. In this case, you cannot modify the execution time.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// <item><description><para>If you set the <c>IsHistory</c> parameter to <b>1</b>, the details of the historical tasks are returned. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>5</b>: The task is completed and executed.</description></item>
-            /// <item><description><b>6</b>: The task is completed but fails to be executed.</description></item>
-            /// <item><description><b>7</b>: The task is canceled.</description></item>
+            /// <item><description><para><b>5</b>: The task is completed and executed.</para>
+            /// </description></item>
+            /// <item><description><para><b>6</b>: The task is completed but fails to be executed.</para>
+            /// </description></item>
+            /// <item><description><para><b>7</b>: The task is canceled.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>

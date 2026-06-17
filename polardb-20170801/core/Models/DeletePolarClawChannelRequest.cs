@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarClawChannelRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The channel ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChannelId { get; set; }
 
         /// <summary>
+        /// <para>The plugin ID. This parameter is required if <c>UninstallPlugin</c> is set to <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>openclaw-lark</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restart the gateway after the channel is deleted. Default value: <c>true</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Restart { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to uninstall the channel plugin. Default value: <c>false</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

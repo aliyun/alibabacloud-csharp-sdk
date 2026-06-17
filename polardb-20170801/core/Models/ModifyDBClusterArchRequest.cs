@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the hot standby storage cluster feature. Valid values:</para>
+        /// <para>Specifies whether to enable a hot standby cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>on</b>: enables hot standby storage cluster.</description></item>
-        /// <item><description><b>equal</b>: Enable a peer-to-peer cluster.</description></item>
+        /// <item><description><para><b>on</b>: Enables a hot standby cluster.</para>
+        /// </description></item>
+        /// <item><description><para><b>equal</b>: Enables a peer cluster.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query information about regions.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,12 +61,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The zone of the hot standby storage cluster. Valid values:</para>
+        /// <para>The zone for the hot standby storage cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>auto</b> (default): The zone is automatically selected.</description></item>
+        /// <item><description><b>auto</b> (default): The system automatically selects a zone.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can use the default value when HotStandbyCluster is set to on. If HotStandbyCluster is set to equal, specify the zone of the hot standby storage cluster. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a> operation to query information about zones.</para>
+        /// <para>The default value is valid only when \<c>HotStandbyCluster\\</c> is set to \<c>on\\</c>. A specific zone is required when \<c>HotStandbyCluster\\</c> is set to \<c>equal\\</c>. For more information about zones, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

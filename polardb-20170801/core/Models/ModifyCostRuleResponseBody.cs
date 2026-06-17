@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyCostRuleResponseBody : TeaModel {
         /// <summary>
+        /// <para>The cost rule ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>924d450014e64e88ac6e8486f8e990**</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CostRuleId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>

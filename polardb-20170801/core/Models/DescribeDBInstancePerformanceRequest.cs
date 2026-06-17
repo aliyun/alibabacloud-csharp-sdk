@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBInstancePerformanceRequest : TeaModel {
         /// <summary>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the query. The time is in the yyyy-MM-ddTHH:mmZ format in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The performance metrics. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance parameters</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>PolarDBCPUForPCU,PolarDBPCU,PolarDBMemoryForPCU,PolarDBQPSTPS,PolarDBConnections</para>
         /// </summary>
@@ -54,6 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query. The time is in the yyyy-MM-ddTHH:mmZ format in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

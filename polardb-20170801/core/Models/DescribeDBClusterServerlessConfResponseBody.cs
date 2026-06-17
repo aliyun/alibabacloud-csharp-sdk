@@ -9,16 +9,22 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterServerlessConfResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The maximum capacity, in PCUs, for a cluster in agile mode. In agile mode, the cluster consists of only serverless nodes.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>32</para>
+        /// </summary>
         [NameInMap("AgileScaleMax")]
         [Validation(Required=false)]
         public string AgileScaleMax { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable idle shutdown. Values:</para>
+        /// <para>Indicates whether the no-activity suspension feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enable</para>
+        /// <item><description><para><b>true</b>: Enabled</para>
         /// </description></item>
-        /// <item><description><para><b>false</b>: Disable (default)</para>
+        /// <item><description><para><b>false</b>: Disabled (Default)</para>
         /// </description></item>
         /// </list>
         /// 
@@ -30,7 +36,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AllowShutDown { get; set; }
 
         /// <summary>
-        /// <para>Serverless cluster ID.</para>
+        /// <para>The ID of the serverless cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp10gr51qasnl****</para>
@@ -40,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5E71541A-6007-4DCC-A38A-F872C31FEB45</para>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleApRoNumMin { get; set; }
 
         /// <summary>
-        /// <para>Maximum scaling limit for a single node. Range: 1 PCU~32 PCU.</para>
+        /// <para>The maximum compute capacity of a single node in PCUs. Valid values: 1 to 32.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -80,7 +86,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMax { get; set; }
 
         /// <summary>
-        /// <para>Minimum scaling limit for a single node. Range: 1 PCU~31 PCU.</para>
+        /// <para>The minimum compute capacity of a single node in PolarDB Capacity Units (PCUs). Valid values: 1 to 31.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -90,7 +96,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMin { get; set; }
 
         /// <summary>
-        /// <para>Maximum scaling limit for the number of read-only nodes. Range: 0~15.</para>
+        /// <para>The maximum number of read-only nodes for scaling. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -100,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleRoNumMax { get; set; }
 
         /// <summary>
-        /// <para>Minimum scaling limit for the number of read-only nodes. Range: 0~15.</para>
+        /// <para>The minimum number of read-only nodes for scaling. Valid values: 0 to 15.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -110,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleRoNumMin { get; set; }
 
         /// <summary>
-        /// <para>Detection duration for idle shutdown. Range: 300~86,400. Unit: seconds. The detection duration must be a multiple of 300 seconds.</para>
+        /// <para>The detection period for no-activity suspension, in seconds. The value must be an integer from 300 to 86,400 and must be a multiple of 300.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -120,7 +126,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecondsUntilAutoPause { get; set; }
 
         /// <summary>
-        /// <para>CPU upscale threshold.</para>
+        /// <para>The CPU scale-up threshold.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -130,7 +136,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessRuleCpuEnlargeThreshold { get; set; }
 
         /// <summary>
-        /// <para>CPU downscale threshold.</para>
+        /// <para>The CPU scale-down threshold.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -140,11 +146,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessRuleCpuShrinkThreshold { get; set; }
 
         /// <summary>
-        /// <para>Elasticity sensitivity. Values:</para>
+        /// <para>The elasticity sensitivity. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>normal: Standard</para>
         /// </description></item>
-        /// <item><description><para>flexible: Sensitive</para>
+        /// <item><description><para>flexible: Flexible</para>
         /// </description></item>
         /// </list>
         /// 
@@ -156,7 +162,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessRuleMode { get; set; }
 
         /// <summary>
-        /// <para>Whether steady state is enabled. Values:</para>
+        /// <para>Indicates whether the steady-state mode is enabled. Valid values:</para>
         /// <para>1: Enabled</para>
         /// <para>0: Disabled</para>
         /// 
@@ -167,6 +173,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Switchs { get; set; }
 
+        /// <summary>
+        /// <para>The maximum capacity, in PCUs, for a cluster in steady-state mode. Steady-state mode adds serverless capabilities to nodes that have fixed specifications.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
+        /// </summary>
         [NameInMap("TraditionalScaleMaxThreshold")]
         [Validation(Required=false)]
         public string TraditionalScaleMaxThreshold { get; set; }

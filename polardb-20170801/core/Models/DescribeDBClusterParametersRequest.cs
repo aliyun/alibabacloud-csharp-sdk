@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterParametersRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the parameter information to query. Valid values:</para>
+        /// <para>The kernel parameters. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Normal</b>: the information about the cluster parameters</description></item>
-        /// <item><description><b>MigrationFromRDS</b>: a comparison of parameters between the source RDS instance and the destination PolarDB cluster</description></item>
+        /// <item><description><para><b>Normal</b>: The list of kernel parameters.</para>
+        /// </description></item>
+        /// <item><description><para><b>MigrationFromRDS</b>: Compares parameters with those of an ApsaraDB RDS instance.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

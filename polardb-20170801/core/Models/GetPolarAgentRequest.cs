@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class GetPolarAgentRequest : TeaModel {
         /// <summary>
+        /// <para>Additional information, as a JSON string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{}</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExtraInfo { get; set; }
 
         /// <summary>
+        /// <para>The session query. Get this value from the return value of the &quot;Start a digital human&quot; API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>The session ID. Get this value from the return value of the &quot;Start a digital human&quot; API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c4d242f3-c909-4846-91d9-f84c238a9820</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SessionId { get; set; }
 
         /// <summary>
+        /// <para>The product type source. Valid value: polardb-console.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polardb-console</para>
         /// </summary>

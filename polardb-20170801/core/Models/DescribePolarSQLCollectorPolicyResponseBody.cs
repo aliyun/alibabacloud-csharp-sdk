@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribePolarSQLCollectorPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the clusters.</para>
+        /// <para>The ID of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp1s826a1up******</para>
@@ -32,8 +32,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Indicates whether the SQL Explorer feature is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Enable</b></description></item>
-        /// <item><description><b>Disabled</b></description></item>
+        /// <item><description><para><b>Enable</b>: The feature is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>Disabled</b>: The feature is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

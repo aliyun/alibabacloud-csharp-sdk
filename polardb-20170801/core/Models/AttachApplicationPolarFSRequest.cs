@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AttachApplicationPolarFSRequest : TeaModel {
         /// <summary>
+        /// <para>Application ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>AccessKey ID of the Alibaba Cloud account or RAM user. Ensure that you granted permissions to this account or user when you created the PolarLakeBase instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>LT**********************</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFSAccessKeyId { get; set; }
 
         /// <summary>
+        /// <para>AccessKey secret of the Alibaba Cloud account or RAM user</para>
+        /// 
         /// <b>Example:</b>
         /// <para>H3****************************</para>
         /// </summary>
@@ -36,6 +41,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PolarFSAccessKeySecret { get; set; }
 
         /// <summary>
+        /// <para>PolarLakeBase cold-storage instance ID</para>
+        /// <para>Only the following applications support cold-storage instances:</para>
+        /// <list type="bullet">
+        /// <item><description>Supabase</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

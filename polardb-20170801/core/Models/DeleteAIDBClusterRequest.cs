@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAIDBClusterRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AI cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAITaskStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The name of the database account that is used to connect to the AI nodes in the cluster.</para>
+        /// <para>The most recently configured account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testacc</para>
@@ -42,8 +42,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The status of the PolarDB for AI feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: enabled.</description></item>
-        /// <item><description><b>2</b>: disabled.</description></item>
+        /// <item><description><para><b>1</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +56,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The description of the status of the PolarDB for AI feature.</para>
+        /// <para>A description of the feature status.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Closed State</para>
+        /// <para>关闭状态</para>
         /// </summary>
         [NameInMap("StatusName")]
         [Validation(Required=false)]

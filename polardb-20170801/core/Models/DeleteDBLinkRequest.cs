@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDBLinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the source cluster where a database link is to be deleted.</para>
+        /// <para>The ID of the source cluster that contains the DBLink you want to delete.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to query PolarDB clusters.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/173433.html">DescribeDBClusters</a> operation to view the list of PolarDB clusters.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The name of the database link to be deleted.</para>
+        /// <para>The name of the DBLink to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

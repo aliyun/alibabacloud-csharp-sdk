@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyResourcePackageRequest : TeaModel {
         /// <summary>
+        /// <para>Indicates whether to enable automatic quotas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? AutoQuota { get; set; }
 
         /// <summary>
+        /// <para>The ID of the cross-cloud resource plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

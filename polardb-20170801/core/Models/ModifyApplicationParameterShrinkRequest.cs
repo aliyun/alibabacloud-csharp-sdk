@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyApplicationParameterShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
+        /// <para>The parameter name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>name</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterName { get; set; }
 
         /// <summary>
+        /// <para>The parameter value.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>value</para>
         /// </summary>
@@ -35,6 +40,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string ParameterValue { get; set; }
 
+        /// <summary>
+        /// <para>The list of parameter names and values for modifying multiple parameters.</para>
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public string ParametersShrink { get; set; }

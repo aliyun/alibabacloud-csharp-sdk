@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyBudgetPolicyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the gateway instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pg-xxxxxxxx</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>925B84D9-CA72-432C-95CF-738C22******</para>

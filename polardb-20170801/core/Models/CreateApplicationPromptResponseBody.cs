@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationPromptResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the Prompt.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>papt-f9lajgw765f4fnrzn1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromptId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DisableDBClusterServerlessResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the serverless cluster.</para>
+        /// <para>The serverless cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-****************</para>

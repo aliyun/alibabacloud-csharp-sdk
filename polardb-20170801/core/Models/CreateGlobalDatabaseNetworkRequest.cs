@@ -33,10 +33,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The description of the GDN. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>It cannot start with <a href="http://https://%E3%80%82">http:// or https://.</a></description></item>
-        /// <item><description>It must start with a letter.</description></item>
-        /// <item><description>It can contain letters, digits, underscores (_), and hyphens (-).</description></item>
-        /// <item><description>It must be 2 to 126 characters in length.</description></item>
+        /// <item><description><para>It cannot start with http\:// or https\://.</para>
+        /// </description></item>
+        /// <item><description><para>It must start with a letter or a Chinese character.</para>
+        /// </description></item>
+        /// <item><description><para>It can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>It must be 2 to 126 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,6 +50,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string GDNDescription { get; set; }
 
+        /// <summary>
+        /// <para>The GDN version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2.0</para>
+        /// </summary>
         [NameInMap("GDNVersion")]
         [Validation(Required=false)]
         public string GDNVersion { get; set; }

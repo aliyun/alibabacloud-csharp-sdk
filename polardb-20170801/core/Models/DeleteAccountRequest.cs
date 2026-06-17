@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The username of the account.</para>
+        /// <para>The account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

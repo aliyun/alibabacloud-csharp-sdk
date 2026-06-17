@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterPerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The database cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-*****************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>The compatible database type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The compatible database version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+        /// <para>The end of the time range. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-09-23T01:01:00Z</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+        /// <para>The beginning of the time range. The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is displayed in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-09-23T01:00:00Z</para>

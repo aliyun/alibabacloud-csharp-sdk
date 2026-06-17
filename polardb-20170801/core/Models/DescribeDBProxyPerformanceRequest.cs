@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The ID of the node in the cluster. This parameter can be used to query the performance metrics of PolarProxy on different nodes. The following metrics are supported: PolarProxy_DBConns, PolarProxy_DBQps, and PolarProxy_DBActionOps.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pi-******************</para>
+        /// <para>pi-****************</para>
         /// </summary>
         [NameInMap("DBNodeId")]
         [Validation(Required=false)]

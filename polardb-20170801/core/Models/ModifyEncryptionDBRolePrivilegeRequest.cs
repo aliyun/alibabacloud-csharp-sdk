@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyEncryptionDBRolePrivilegeRequest : TeaModel {
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The role access policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;notEncryption&quot;:[&quot;alton&quot;],&quot;encryption&quot;:[&quot;alton01&quot;]}</para>
         /// </summary>
@@ -44,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RolePrivilegeConfig { get; set; }
 
         /// <summary>
+        /// <para>The role permission name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

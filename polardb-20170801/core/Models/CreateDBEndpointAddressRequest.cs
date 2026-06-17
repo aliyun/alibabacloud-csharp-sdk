@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateDBEndpointAddressRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix of the new endpoint. The prefix of the endpoint must meet the following requirements:</para>
+        /// <para>The prefix of the new endpoint. The prefix must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The prefix can contain lowercase letters, digits, and hyphens (-).</description></item>
-        /// <item><description>The prefix must start with a letter and end with a digit or a letter.</description></item>
-        /// <item><description>The prefix must be 6 to 40 characters in length.</description></item>
+        /// <item><description><para>Consist of lowercase letters, digits, and hyphens (-).</para>
+        /// </description></item>
+        /// <item><description><para>Start with a letter and end with a digit or a letter.</para>
+        /// </description></item>
+        /// <item><description><para>Be 6 to 40 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +28,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,9 +39,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the endpoint.</para>
+        /// <para>The endpoint ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a> operation to query endpoint details.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/98205.html">DescribeDBClusterEndpoints</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the endpoint. Set the value to <b>Public</b>.</para>
+        /// <para>The network type of the new endpoint. Set the value to <b>Public</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,14 +99,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>The details of the zones.</para>
+        /// <para>The zone information.</para>
         /// </summary>
         [NameInMap("ZoneInfo")]
         [Validation(Required=false)]
         public List<CreateDBEndpointAddressRequestZoneInfo> ZoneInfo { get; set; }
         public class CreateDBEndpointAddressRequestZoneInfo : TeaModel {
             /// <summary>
-            /// <para>The ID of the vSwitch.</para>
+            /// <para>The virtual switch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-**********</para>
@@ -113,7 +116,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-b</para>

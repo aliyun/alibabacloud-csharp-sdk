@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBNodesParametersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the nodes.</para>
+        /// <para>The list of node IDs.</para>
         /// </summary>
         [NameInMap("DBNodeIds")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeId { get; set; }
 
             /// <summary>
-            /// <para>The parameters of the current node.</para>
+            /// <para>The list of parameters that are running on the node.</para>
             /// </summary>
             [NameInMap("RunningParameters")]
             [Validation(Required=false)]
@@ -44,11 +44,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string CheckingCode { get; set; }
 
                 /// <summary>
-                /// <para>The data type of the parameter value. Valid values:</para>
+                /// <para>The data type of the parameter. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>INT</b></description></item>
-                /// <item><description><b>STRING</b></description></item>
-                /// <item><description><b>B</b></description></item>
+                /// <item><description><para><b>INT</b>: Integer</para>
+                /// </description></item>
+                /// <item><description><para><b>STRING</b>: String</para>
+                /// </description></item>
+                /// <item><description><para><b>B</b>: Byte</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -69,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string DefaultParameterValue { get; set; }
 
                 /// <summary>
-                /// <para>A divisor of the parameter. For a parameter of the integer or byte type, the valid values must be a multiple of Factor unless you set Factor to 0.</para>
+                /// <para>The divisor. For integer and byte type parameters, the parameter value must be a multiple of this factor. The factor cannot be 0.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
@@ -79,10 +82,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Factor { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a cluster restart is required to allow the parameter modification to take effect. Valid values:</para>
+                /// <para>Indicates whether a restart is required for the parameter modification to take effect. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>false</b></description></item>
-                /// <item><description><b>true</b></description></item>
+                /// <item><description><para><b>false</b>: No</para>
+                /// </description></item>
+                /// <item><description><para><b>true</b>: Yes</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,8 +100,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>Indicates whether the parameter can be modified. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>false</b></description></item>
-                /// <item><description><b>true</b></description></item>
+                /// <item><description><para><b>false</b>: No</para>
+                /// </description></item>
+                /// <item><description><para><b>true</b>: Yes</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -109,8 +116,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>Indicates whether the parameter is a global parameter. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>0</b>: yes. The modified parameter value is synchronized to other nodes.</description></item>
-                /// <item><description><b>1</b>: no. You can customize the nodes to which the modified parameter value can be synchronized to.</description></item>
+                /// <item><description><para><b>0</b>: The parameter is a global parameter. Modifications to the parameter are applied to other nodes by default and cannot be canceled.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: The parameter is not a global parameter. You can specify the nodes to which you want to apply the parameter modifications.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +130,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string IsNodeAvailable { get; set; }
 
                 /// <summary>
-                /// <para>The dependencies of the parameter.</para>
+                /// <para>The dependency of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>utf8</para>
@@ -153,8 +162,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 /// <summary>
                 /// <para>The status of the parameter. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>normal</b></description></item>
-                /// <item><description><b>modifying</b></description></item>
+                /// <item><description><para><b>normal</b>: Normal</para>
+                /// </description></item>
+                /// <item><description><para><b>modifying</b>: Modifying</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -179,7 +190,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The type of the database engine. Set the value to <b>MySQL</b>.</para>
+        /// <para>The type of the database. The value is fixed as <b>MySQL</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -189,11 +200,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the MySQL database engine. Valid values:</para>
+        /// <para>The version of the MySQL database. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>5.6</b></description></item>
-        /// <item><description><b>5.7</b></description></item>
-        /// <item><description><b>8.0</b></description></item>
+        /// <item><description><para><b>5.6</b></para>
+        /// </description></item>
+        /// <item><description><para><b>5.7</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8.0</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -204,7 +218,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The cluster engine.</para>
+        /// <para>The database engine of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POLARDB</para>
@@ -214,7 +228,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9B7BFB11-C077-4FE3-B051-F69CEB******</para>

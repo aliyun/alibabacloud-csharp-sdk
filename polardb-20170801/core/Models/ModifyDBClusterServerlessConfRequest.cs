@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable No-activity Suspension. Default value: false. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,8 +49,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies an immediate or scheduled task to modify parameters and restart the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false: scheduled task</description></item>
-        /// <item><description>true: immediate task</description></item>
+        /// <item><description><para>false: scheduled task</para>
+        /// </description></item>
+        /// <item><description><para>true: immediate task</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,8 +74,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The latest start time for upgrading the specifications within the scheduled time period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</description></item>
-        /// <item><description>If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: <c>PlannedEndTime value + 30 minutes</c>. For example, if you set PlannedStartTime to <c>2021-01-14T09:00:00Z</c> and you do not specify PlannedEndTime, the latest start time of the task is set to <c>2021-01-14T09:30:00Z</c>.</description></item>
+        /// <item><description><para>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify PlannedStartTime but do not specify PlannedEndTime, the latest start time of the task is set to a value that is calculated by using the following formula: <c>PlannedEndTime value + 30 minutes</c>. For example, if you set PlannedStartTime to <c>2021-01-14T09:00:00Z</c> and you do not specify PlannedEndTime, the latest start time of the task is set to <c>2021-01-14T09:30:00Z</c>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -86,8 +92,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The earliest start time of the scheduled task for adding the read-only node. The scheduled task specifies that the task is run in the required period. Specify the time in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in time between <c>2021-01-14T09:00:00Z</c> and <c>2021-01-15T09:00:00Z</c>.</description></item>
-        /// <item><description>If you leave this parameter empty, the task for adding the read-only node is immediately run by default.</description></item>
+        /// <item><description><para>The earliest start time of the scheduled task can be a point in time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in time between <c>2021-01-14T09:00:00Z</c> and <c>2021-01-15T09:00:00Z</c>.</para>
+        /// </description></item>
+        /// <item><description><para>If you leave this parameter empty, the task for adding the read-only node is immediately run by default.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 

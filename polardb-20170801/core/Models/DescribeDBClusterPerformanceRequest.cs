@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,23 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The interval at which performance data is collected. Valid values: 5, 30, 60, 600, 1800, 3600, 86400, in seconds.</para>
+        /// <para>The granularity of the performance data. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>5</para>
+        /// </description></item>
+        /// <item><description><para>30</para>
+        /// </description></item>
+        /// <item><description><para>60</para>
+        /// </description></item>
+        /// <item><description><para>600</para>
+        /// </description></item>
+        /// <item><description><para>1800</para>
+        /// </description></item>
+        /// <item><description><para>3600</para>
+        /// </description></item>
+        /// <item><description><para>86400</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -44,7 +60,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The performance metrics that you want to query. Separate multiple metrics with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/141787.html">Performance parameters</a>.</para>
         /// <remarks>
-        /// <para> You can specify a maximum of five performance metrics.</para>
+        /// <para>Specify up to five performance metrics.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -56,7 +72,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range to query. Specify the time in the <c>yyyy-MM-ddTHH:mmZ</c> format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

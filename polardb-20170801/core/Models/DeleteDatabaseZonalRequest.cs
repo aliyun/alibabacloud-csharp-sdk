@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteDatabaseZonalRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The name of the database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

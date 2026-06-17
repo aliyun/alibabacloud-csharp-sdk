@@ -9,12 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBNodesClassRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to automatically apply a coupon. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true (Default): A coupon is automatically applied.</para>
+        /// </description></item>
+        /// <item><description><para>false: A coupon is not applied.</para>
+        /// </description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. The token is case-sensitive.</para>
+        /// <para>A client-generated token to ensure request idempotence. This token must be unique for each request and must be a case-sensitive string of up to 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f54a343f1a4233c1e7d1c5c******</para>
@@ -24,6 +33,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The cloud provider of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENS</para>
         /// </summary>
@@ -43,7 +54,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The details of the nodes.</para>
+        /// <para>The list of cluster nodes.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DBNode")]
@@ -51,9 +62,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<ModifyDBNodesClassRequestDBNode> DBNode { get; set; }
         public class ModifyDBNodesClassRequestDBNode : TeaModel {
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The ID of the cluster node.</para>
             /// <remarks>
-            /// <para> If you specify this parameter, DBNode.N.TargetClass is required. N is an integer that starts from 1. The maximum value of N is calculated by using the following formula:16 - The number of current nodes.</para>
+            /// <para>If you specify this parameter, you must also specify DBNode.N.TargetClass. N represents the index of the node in the request, starting from 1.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -64,9 +75,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeId { get; set; }
 
             /// <summary>
-            /// <para>The specifications of the node that you want to change. For more information, see <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a>.</para>
+            /// <para>The target specifications of the node. For more information about node specifications, see <a href="https://help.aliyun.com/document_detail/102542.html">compute node specifications</a>.</para>
             /// <remarks>
-            /// <para> If you specify this parameter, DBNode.N.DBNodeId is required. N is an integer that starts from 1. The maximum value of N is calculated by using the following formula:16 - The number of current nodes.</para>
+            /// <para>If you specify this parameter, you must also specify DBNode.N.DBNodeId. N represents the index of the node in the request, starting from 1.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,10 +90,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The type of the configuration change. Valid values:</para>
+        /// <para>The modification type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Upgrade</b></description></item>
-        /// <item><description><b>Downgrade</b></description></item>
+        /// <item><description><para><b>Upgrade</b>: Upgrades the specifications.</para>
+        /// </description></item>
+        /// <item><description><para><b>Downgrade</b>: Downgrades the specifications.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -102,11 +115,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The latest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The latest time to begin the scheduled task. Specify the time in UTC using the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The value of this parameter must be at least 30 minutes later than the value of PlannedStartTime.</description></item>
-        /// <item><description>By default, if you specify <c>PlannedStartTime</c> but do not specify PlannedEndTime, the latest start time of the task is set to <c>Value of PlannedEndTime + 30 minutes</c>. For example, if you set <c>PlannedStartTime</c> to <c>2021-01-14T09:00:00Z</c> and you do not specify PlannedEndTime, the latest start time of the task is <c>2021-01-14T09:30:00Z</c>.</description></item>
+        /// <item><description><para>The latest start time must be at least 30 minutes later than the earliest start time.</para>
+        /// </description></item>
+        /// <item><description><para>If you specify <c>PlannedStartTime</c> but not this parameter, the task starts within 30 minutes of the <c>PlannedStartTime</c>. For example, if you set <c>PlannedStartTime</c> to <c>2021-01-14T09:00:00Z</c> and leave this parameter empty, the task will start by <c>2021-01-14T09:30:00Z</c>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -117,17 +132,26 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string PlannedEndTime { get; set; }
 
+        /// <summary>
+        /// <para>The planned time for the transient disconnection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2021-01-14T09:30:00Z</para>
+        /// </summary>
         [NameInMap("PlannedFlashingOffTime")]
         [Validation(Required=false)]
         public string PlannedFlashingOffTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest start time to upgrade the specifications within the scheduled time period. Specify the time in the ISO 8601 standard in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The earliest time to begin the scheduled upgrade of the node specifications. Specify the time in UTC using the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when <c>ModifyType</c> is set to <c>Upgrade</c>.</description></item>
-        /// <item><description>The earliest start time of the task can be a point in time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can specify a point in the time that ranges from <c>2021-01-14T09:00:00Z</c> to <c>2021-01-15T09:00:00Z</c>.</description></item>
-        /// <item><description>If this parameter is left empty, the upgrade task is immediately performed.</description></item>
+        /// <item><description><para>This parameter takes effect only when <c>ModifyType</c> is set to <c>Upgrade</c>.</para>
+        /// </description></item>
+        /// <item><description><para>The specified time must be within the next 24 hours.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is not specified, the upgrade task runs immediately.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -139,6 +163,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedStartTime { get; set; }
 
         /// <summary>
+        /// <para>The coupon code. If you do not specify this parameter, a default coupon is applied.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>727xxxxxx934</para>
         /// </summary>
@@ -155,10 +181,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The category of the cluster. Valid values:</para>
+        /// <para>The sub-category of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>normal_exclusive</b>: dedicated</description></item>
-        /// <item><description><b>normal_general</b>: genera-purpose</description></item>
+        /// <item><description><para><b>normal_exclusive</b>: dedicated specifications</para>
+        /// </description></item>
+        /// <item><description><para><b>normal_general</b>: general-purpose specifications</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

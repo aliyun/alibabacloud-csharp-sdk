@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the account.</para>
+        /// <para>The account name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_acc</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The node type. This parameter is required when you query the PolarDB search node account.</para>
+        /// <para>The node type. Required when you query the PolarDB search node account</para>
         /// <list type="bullet">
         /// <item><description>Search</description></item>
         /// </list>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Set this parameter to an integer that is larger than 0. Default value: <b>1</b>.</para>
+        /// <para>The page number of the returned page. The value must be an integer that is larger than 0. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,13 +62,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values:</para>
+        /// <para>The number of entries returned per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>30</b>.</para>
+        /// <para>The default value is <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>

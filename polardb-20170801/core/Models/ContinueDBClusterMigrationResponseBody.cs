@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ContinueDBClusterMigrationResponseBody : TeaModel {
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D2056BBE-FF76-5825-AB63-5CB1ABB46218</para>
         /// </summary>

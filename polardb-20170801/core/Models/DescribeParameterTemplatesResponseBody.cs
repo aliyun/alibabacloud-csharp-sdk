@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeParameterTemplatesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>The database engine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MySQL</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBType { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5.7</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The database engine of the cluster.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POLARDB</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterNetInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The network type of the cluster. The value is fixed as <b>VPC</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>VPC</para>
         /// </summary>
@@ -114,6 +116,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>72D99256-ACF1-5F86-831F-8CB53E9C23ED</para>
         /// </summary>

@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateCronJobPolicyServerlessRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to enable no-activity suspension. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: Enables the feature.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): Disables the feature.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AllowShutDown { get; set; }
 
         /// <summary>
+        /// <para>The Cron expression.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +37,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CronExpression { get; set; }
 
         /// <summary>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +48,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The end time of the task. Use the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,6 +86,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of read-only column store nodes. Valid values: 0 to 15.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -82,6 +96,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleApRoNumMax { get; set; }
 
         /// <summary>
+        /// <para>The minimum number of read-only column store nodes. Valid values: 0 to 15.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -90,6 +106,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleApRoNumMin { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of PCUs. The value must be from 1 to 32.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -98,6 +116,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMax { get; set; }
 
         /// <summary>
+        /// <para>The minimum number of PolarDB Capacity Units (PCUs). The value must be from 0.25 to 32 and must be less than or equal to the value of ScaleMax.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -106,6 +126,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleMin { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of read-only nodes. Valid values: 0 to 15. The value must be greater than or equal to the value of ScaleRoNumMin.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>
@@ -114,6 +136,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleRoNumMax { get; set; }
 
         /// <summary>
+        /// <para>The minimum number of read-only nodes. Valid values: 0 to 15.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -122,6 +146,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ScaleRoNumMin { get; set; }
 
         /// <summary>
+        /// <para>The period of inactivity in minutes before the cluster is automatically paused. The value must be a multiple of 5 and range from 5 to 1440.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -130,6 +156,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecondsUntilAutoPause { get; set; }
 
         /// <summary>
+        /// <para>The CPU utilization percentage that triggers a scale-up. Valid values: 40 to 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>60</para>
         /// </summary>
@@ -138,6 +166,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessRuleCpuEnlargeThreshold { get; set; }
 
         /// <summary>
+        /// <para>The CPU utilization percentage that triggers a scale-down. Valid values: 10 to 100. The value of ServerlessRuleCpuEnlargeThreshold minus the value of this parameter must be 30 or greater.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -146,6 +176,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessRuleCpuShrinkThreshold { get; set; }
 
         /// <summary>
+        /// <para>The scaling sensitivity. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>normal: standard</para>
+        /// </description></item>
+        /// <item><description><para>flexible: flexible</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>normal</para>
         /// </summary>
@@ -154,6 +192,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessRuleMode { get; set; }
 
         /// <summary>
+        /// <para>The start time of the task. Use the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in Coordinated Universal Time (UTC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2020-11-14T00:00Z</para>
         /// </summary>

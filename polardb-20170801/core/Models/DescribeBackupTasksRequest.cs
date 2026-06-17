@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the backup task.</para>
+        /// <para>The backup job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11111111</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The backup mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Automated</b></description></item>
-        /// <item><description><b>Manual</b></description></item>
+        /// <item><description><para><b>Automated</b>: An automatic backup.</para>
+        /// </description></item>
+        /// <item><description><para><b>Manual</b>: A manual backup.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

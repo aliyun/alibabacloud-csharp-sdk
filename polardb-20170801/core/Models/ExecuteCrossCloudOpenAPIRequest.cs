@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ExecuteCrossCloudOpenAPIRequest : TeaModel {
         /// <summary>
+        /// <para>The information required to call the cross-cloud OpenAPI.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;Action&quot;:&quot;DescribeDBClusters&quot;}</para>
         /// </summary>

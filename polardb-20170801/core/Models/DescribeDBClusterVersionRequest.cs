@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view details of all clusters in your account, such as cluster IDs.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +24,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query the information about the latest versions or the versions to which the cluster can be updated. Valid values:</para>
+        /// <para>Specifies whether to return information about the latest version or a list of upgradable versions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LATEST_VERSION: the information about the latest versions.</description></item>
-        /// <item><description>AVAILABLE_VERSION: the information about the versions to which the cluster can be updated.</description></item>
+        /// <item><description><para>LATEST_VERSION: Queries information about the latest version.</para>
+        /// </description></item>
+        /// <item><description><para>AVAILABLE_VERSION: Queries a list of upgradable versions.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

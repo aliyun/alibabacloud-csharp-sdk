@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeBackupRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of regions where the backup sets are stored.</para>
+        /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<string> Regions { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</para>
         /// </summary>
