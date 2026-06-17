@@ -10,6 +10,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseProjectResponseBody : TeaModel {
         /// <summary>
+        /// <para>Indicates whether the <b>auto pause and resume</b> feature is enabled.
+        /// Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: The feature is enabled. The project automatically pauses and resumes based on traffic.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The feature is disabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string AutoScale { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The creation time of the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2019-09-08T16:00:00Z</para>
@@ -28,6 +37,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The database IP address whitelist, specified as a comma-separated string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1,100.64.XX.XX/10</para>
         /// </summary>
@@ -36,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBSecurityIpList { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard password (Not Used)</para>
+        /// <para>The password for the Supabase Dashboard. This parameter is not used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxpassword</para>
@@ -46,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DashboardPassword { get; set; }
 
         /// <summary>
-        /// <para>The Supabase Dashboard user name (Not Used)</para>
+        /// <para>The username for the Supabase Dashboard. This parameter is not used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>username</para>
@@ -56,10 +67,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DashboardUserName { get; set; }
 
         /// <summary>
-        /// <para>The Enterprise SSD (ESSD) performance level of the cluster. Valid values:</para>
+        /// <para>The performance level (PL) of the cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PL0</description></item>
-        /// <item><description>PL1</description></item>
+        /// <item><description><para>PL0</para>
+        /// </description></item>
+        /// <item><description><para>PL1</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,7 +83,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The type of the database engine.</para>
+        /// <para>The database engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>postgres</para>
@@ -80,7 +93,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>The version of the database engine.</para>
+        /// <para>The engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -90,6 +103,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
+        /// <para>The elastic network interface (ENI) ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>eni-xxxxxx</para>
         /// </summary>
@@ -98,6 +113,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Eni { get; set; }
 
         /// <summary>
+        /// <para>The current instance version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>v1.0.3</para>
         /// </summary>
@@ -106,6 +123,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InstanceVersion { get; set; }
 
         /// <summary>
+        /// <para>The billing method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>POSTPAY</c>: pay-as-you-go</para>
+        /// </description></item>
+        /// <item><description><para><c>PREPAY</c>: subscription</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
         /// </summary>
@@ -114,7 +139,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The private (VPC) connection URL for the Supabase Dashboard.</para>
+        /// <para>The private connection URL for the Supabase Dashboard.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.0.11</para>
@@ -124,6 +149,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PrivateConnectUrl { get; set; }
 
         /// <summary>
+        /// <para>The description of the Supabase project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>for-test-project</para>
         /// </summary>
@@ -132,7 +159,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectDescription { get; set; }
 
         /// <summary>
-        /// <para>The Supabase instance ID.</para>
+        /// <para>The Supabase project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sbp-545434</para>
@@ -142,7 +169,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Supabase project.</para>
+        /// <para>The Supabase project name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>supabase_project</para>
@@ -152,7 +179,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the Supabase instance.</para>
+        /// <para>The Supabase instance specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1C1G</para>
@@ -172,9 +199,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PublicConnectUrl { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the cluster.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available regions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,7 +212,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D****</para>
@@ -195,7 +222,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of IP addresses and CIDR blocks allowed to connect.</para>
+        /// <para>The IP address whitelist, specified as a comma-separated string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -205,7 +232,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityIpList { get; set; }
 
         /// <summary>
-        /// <para>The status of the Supabase instance.</para>
+        /// <para>The Supabase instance status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>
@@ -215,7 +242,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of the instance. Unit: GB.</para>
+        /// <para>The storage space, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -225,6 +252,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? StorageSize { get; set; }
 
         /// <summary>
+        /// <para>The storage type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>cloud_essd_pl0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd_pl1</b></para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd_pl2</b></para>
+        /// </description></item>
+        /// <item><description><para><b>cloud_essd_pl3</b></para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>cloud_essd_pl0</para>
         /// </summary>
@@ -233,7 +272,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch ID of the instance. This parameter must be specified when VPCId is specified.</para>
+        /// <para>The vSwitch ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsw-bp1cpq8mr64paltkb****</para>
@@ -245,13 +284,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The VPC ID.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query the available VPC IDs.</para>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/208327.html">DescribeRdsVpcs</a> operation to query the available VPCs.</para>
         /// </description></item>
         /// <item><description><para>This parameter is required.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp*******************</para>
@@ -263,7 +302,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The zone ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list and zone list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available zones.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

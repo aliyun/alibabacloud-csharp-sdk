@@ -84,6 +84,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string Table { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the workspace composed of multiple database instances. This parameter and the DBInstanceId parameter cannot both be empty. If both parameters are specified, this parameter takes precedence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-ws-*****</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

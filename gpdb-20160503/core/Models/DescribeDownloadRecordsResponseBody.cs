@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDownloadRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The URL that is used to download the file.</para>
+        /// <para>An array of download records.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? DownloadId { get; set; }
 
             /// <summary>
-            /// <para>The URL that can be used to download the file.</para>
+            /// <para>The download URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://perth-download-task.oss-cn-beijing.aliyuncs.com/">https://perth-download-task.oss-cn-beijing.aliyuncs.com/</a>*****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The error message returned.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Error message</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ExceptionMsg { get; set; }
 
             /// <summary>
-            /// <para>The name of the file.</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20220509113448-20220509173448.csv</para>
@@ -57,11 +57,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The state of the upload task. After you call the DownloadDiagnosisRecords operation, query diagnostic information is first uploaded to Object Storage Service (OSS). After the upload task is complete, the query diagnostic information can be downloaded. Valid values:</para>
+            /// <para>The status of the task that uploads the query diagnostic information file to Object Storage Service (OSS). You can download the file after the upload is complete. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>running</b>: uploading</description></item>
-            /// <item><description><b>finished</b>: uploaded</description></item>
-            /// <item><description><b>failed</b>: failed</description></item>
+            /// <item><description><para><b>running</b>: The file is being uploaded.</para>
+            /// </description></item>
+            /// <item><description><para><b>finished</b>: The file upload is complete.</para>
+            /// </description></item>
+            /// <item><description><para><b>failed</b>: The file upload failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

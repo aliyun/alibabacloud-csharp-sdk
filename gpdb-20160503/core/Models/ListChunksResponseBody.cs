@@ -56,6 +56,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -64,6 +66,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -72,6 +76,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? PageRecordCount { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34b32a0a-08ef-4a87-b6be-cdd9f56fc3ad</para>
         /// </summary>
@@ -80,6 +86,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>

@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in a specific region, including instance IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -23,6 +23,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string DBInstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The download task type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>SQL_DIAGNOSE</c>: SQL diagnosis.</para>
+        /// </description></item>
+        /// <item><description><para><c>SLOW_SQL</c>: slow SQL query.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SLOW_SQL</para>
+        /// </summary>
         [NameInMap("DownloadTaskType")]
         [Validation(Required=false)]
         public string DownloadTaskType { get; set; }

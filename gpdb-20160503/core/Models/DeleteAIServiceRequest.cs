@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DeleteAIServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to view the details of all AnalyticDB PostgreSQL instances in the destination region, including the instance ID.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The service ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceId { get; set; }
 
         /// <summary>
+        /// <para>The service type. Only drama is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

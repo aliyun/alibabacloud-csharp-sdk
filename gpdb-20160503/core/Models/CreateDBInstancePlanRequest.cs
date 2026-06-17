@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-04-17T23:00Z</para>
+        /// <para>2023-04-17T23:00:00Z</para>
         /// </summary>
         [NameInMap("PlanEndDate")]
         [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>2022-04-17T23:00Z</para>
+        /// <para>2022-04-17T23:00:00Z</para>
         /// </summary>
         [NameInMap("PlanStartDate")]
         [Validation(Required=false)]

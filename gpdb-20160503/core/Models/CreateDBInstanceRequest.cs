@@ -9,14 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceRequest : TeaModel {
+        /// <summary>
+        /// <para>The AI node specifications.</para>
+        /// </summary>
         [NameInMap("AINodeSpecInfos")]
         [Validation(Required=false)]
         public List<CreateDBInstanceRequestAINodeSpecInfos> AINodeSpecInfos { get; set; }
         public class CreateDBInstanceRequestAINodeSpecInfos : TeaModel {
+            /// <summary>
+            /// <para>The number of AI nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("AINodeNum")]
             [Validation(Required=false)]
             public string AINodeNum { get; set; }
 
+            /// <summary>
+            /// <para>The specifications of the AI nodes.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ADB.AIMedium.2</para>
+            /// </summary>
             [NameInMap("AINodeSpec")]
             [Validation(Required=false)]
             public string AINodeSpec { get; set; }
@@ -24,9 +39,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Backup set ID.</para>
+        /// <para>The ID of the backup set.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> interface to view the backup set IDs of all backup sets under the target instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/210093.html">DescribeDataBackups</a> operation to query the backup set IDs for the source instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,12 +51,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string BackupId { get; set; }
 
+        /// <summary>
+        /// <para>The cache size for a serverless instance, in GB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>800</para>
+        /// </summary>
         [NameInMap("CacheStorageSize")]
         [Validation(Required=false)]
         public string CacheStorageSize { get; set; }
 
         /// <summary>
-        /// <para>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</para>
+        /// <para>A client token used to ensure the idempotence of the request. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88**********</para>
@@ -51,13 +72,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Whether to load sample datasets after the instance is created. The values are as follows:</para>
+        /// <para>Specifies whether to load a sample dataset after the instance is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: Load sample datasets.</description></item>
-        /// <item><description><b>false</b>: Do not load sample datasets.</description></item>
+        /// <item><description><para><b>true</b>: A sample dataset is loaded.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: A sample dataset is not loaded.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is not specified, it defaults to not loading sample datasets.</para>
+        /// <para>If this parameter is not specified, a sample dataset is not loaded.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -68,13 +91,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? CreateSampleData { get; set; }
 
         /// <summary>
-        /// <para>Instance series. The value description is as follows:</para>
+        /// <para>The instance edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>HighAvailability</b>: High availability version.</description></item>
-        /// <item><description><b>Basic</b>: Basic version.</description></item>
+        /// <item><description><para><b>HighAvailability</b>: High-availability Edition</para>
+        /// </description></item>
+        /// <item><description><para><b>Basic</b>: Basic Edition</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when creating an instance in the storage elastic mode.</para>
+        /// <para>This parameter is required for instances in elastic storage mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -85,9 +110,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceCategory { get; set; }
 
         /// <summary>
-        /// <para>Instance type. For more details, see the supplementary description of the DBInstanceClass parameter.</para>
+        /// <para>The instance type. For more information, see the description of the <c>DBInstanceClass</c> parameter.</para>
         /// <remarks>
-        /// <para>This parameter is required when creating a reserved storage mode instance.</para>
+        /// <para>This parameter is required for instances in reserved storage mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +123,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>Instance description.</para>
+        /// <para>The instance description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -108,9 +133,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>Number of compute groups. The values are: 2, 4, 8, 12, 16, 24, 32, 64, 96, 128.</para>
+        /// <para>The number of compute groups. Valid values: 2, 4, 8, 12, 16, 24, 32, 64, 96, and 128.</para>
         /// <remarks>
-        /// <para>This parameter is required when creating a reserved storage mode instance.</para>
+        /// <para>This parameter is required for instances in reserved storage mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -121,11 +146,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceGroupCount { get; set; }
 
         /// <summary>
-        /// <para>Instance resource type. The value description is as follows:</para>
+        /// <para>The instance resource mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>StorageElastic</b>: Storage elastic mode.</description></item>
-        /// <item><description><b>Serverless</b>: Serverless mode.</description></item>
-        /// <item><description><b>Classic</b>: Storage reserved mode.</description></item>
+        /// <item><description><para><b>StorageElastic</b>: elastic storage mode</para>
+        /// </description></item>
+        /// <item><description><para><b>Serverless</b>: serverless mode</para>
+        /// </description></item>
+        /// <item><description><para><b>Classic</b>: reserved storage mode</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is required.</para>
@@ -140,15 +168,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceMode { get; set; }
 
         /// <summary>
-        /// <para>Deployment mode. The values are as follows:</para>
+        /// <para>The deployment mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>multiple: Multi-zone deployment.</description></item>
-        /// <item><description>single: Single-zone deployment.</description></item>
+        /// <item><description><para>multiple: multi-AZ deployment.</para>
+        /// </description></item>
+        /// <item><description><para>single: single-AZ deployment.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If this parameter is not specified, the default value is single-zone deployment.</description></item>
-        /// <item><description>Currently, only single-zone deployment is supported.</description></item>
+        /// <item><description><para>If this parameter is not specified, the default value is single.</para>
+        /// </description></item>
+        /// <item><description><para>Defaults to <c>single</c> (single-AZ deployment), which is the only mode currently supported.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -162,8 +194,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>Specifies whether to enable SSL encryption. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b> (default)</description></item>
+        /// <item><description><para><b>true</b>: SSL encryption is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b> (default): SSL encryption is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -174,9 +208,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? EnableSSL { get; set; }
 
         /// <summary>
-        /// <para>Key ID.</para>
+        /// <para>The ID of the encryption key.</para>
         /// <remarks>
-        /// <para>If the value of the <b>EncryptionType</b> parameter is <b>CloudDisk</b>, you need to specify the encryption key ID within the same region through this parameter; otherwise, it should be empty.</para>
+        /// <para>If <c>EncryptionType</c> is set to <c>CloudDisk</c>, you must specify the ID of an encryption key in the same region. Otherwise, leave this parameter empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -187,13 +221,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EncryptionKey { get; set; }
 
         /// <summary>
-        /// <para>Encryption type. The value description is as follows:</para>
+        /// <para>The encryption type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NULL</b>: No encryption (default).</description></item>
-        /// <item><description><b>CloudDisk</b>: Enable cloud disk encryption and specify the key through the <b>EncryptionKey</b> parameter.</description></item>
+        /// <item><description><para><b>NULL</b>: disables encryption. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>CloudDisk</b>: Enables cloud disk encryption. If you select this option, you must also specify a value for <c>EncryptionKey</c>.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Once cloud disk encryption is enabled, it cannot be disabled.</para>
+        /// <para>After cloud disk encryption is enabled, it cannot be disabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -204,7 +240,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EncryptionType { get; set; }
 
         /// <summary>
-        /// <para>Database engine, with the value <b>gpdb</b>.</para>
+        /// <para>The database engine. Set the value to <b>gpdb</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -215,10 +251,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Engine { get; set; }
 
         /// <summary>
-        /// <para>Engine version. The values are as follows:</para>
+        /// <para>The database engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>6.0</b>: Version 6.0.</description></item>
-        /// <item><description><b>7.0</b>: Version 7.0.</description></item>
+        /// <item><description><para><b>6.0</b></para>
+        /// </description></item>
+        /// <item><description><para><b>7.0</b></para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -230,9 +268,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The idle release wait time. When the duration without business traffic reaches the specified time, the instance will enter the idle state. The unit is seconds, with a minimum value of 60, and the default value is 600.</para>
+        /// <para>The period of inactivity, in seconds, after which the instance is considered idle. Minimum value: 60. Default value: 600.</para>
         /// <remarks>
-        /// <para>This parameter is required only for Serverless auto-scheduling mode instances.</para>
+        /// <para>This parameter is required only for serverless instances that use auto-scheduling.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -243,11 +281,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? IdleTime { get; set; }
 
         /// <summary>
-        /// <para>Instance network type, with the value <b>VPC</b>.</para>
+        /// <para>The instance network type. Set the value to <b>VPC</b>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Only VPC networks are supported in public cloud.</description></item>
-        /// <item><description>If not specified, it defaults to VPC type.</description></item>
+        /// <item><description><para>Only VPCs are supported.</para>
+        /// </description></item>
+        /// <item><description><para>If this parameter is not specified, VPC is used by default.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -259,27 +299,36 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InstanceNetworkType { get; set; }
 
         /// <summary>
-        /// <para>Compute node specifications.</para>
-        /// <para>For high-availability versions of the elastic storage mode, the values are as follows:</para>
+        /// <para>The instance type for the compute nodes.</para>
+        /// <para>Valid values for a High-availability Edition instance in elastic storage mode:</para>
         /// <list type="bullet">
-        /// <item><description><b>2C16G</b></description></item>
-        /// <item><description><b>4C32G</b></description></item>
-        /// <item><description><b>16C128G</b></description></item>
+        /// <item><description><para><b>2C16G</b></para>
+        /// </description></item>
+        /// <item><description><para><b>4C32G</b></para>
+        /// </description></item>
+        /// <item><description><para><b>16C128G</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>For basic versions of the elastic storage mode, the values are as follows:</para>
+        /// <para>Valid values for a Basic Edition instance in elastic storage mode:</para>
         /// <list type="bullet">
-        /// <item><description><b>2C8G</b></description></item>
-        /// <item><description><b>4C16G</b></description></item>
-        /// <item><description><b>8C32G</b></description></item>
-        /// <item><description><b>16C64G</b></description></item>
+        /// <item><description><para><b>2C8G</b></para>
+        /// </description></item>
+        /// <item><description><para><b>4C16G</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8C32G</b></para>
+        /// </description></item>
+        /// <item><description><para><b>16C64G</b></para>
+        /// </description></item>
         /// </list>
-        /// <para>For Serverless mode, the values are as follows:</para>
+        /// <para>Valid values for a serverless instance:</para>
         /// <list type="bullet">
-        /// <item><description><b>4C16G</b></description></item>
-        /// <item><description><b>8C32G</b></description></item>
+        /// <item><description><para><b>4C16G</b></para>
+        /// </description></item>
+        /// <item><description><para><b>8C32G</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when creating an elastic storage mode instance or a Serverless mode instance.</para>
+        /// <para>This parameter is required for instances in elastic storage mode or serverless mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -290,13 +339,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// <para>This parameter must be specified if you want to change coordinator nodes to AI coordinator nodes.</para>
+        /// <para>Use this parameter to configure the coordinator node as a MasterAI node.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You cannot specify the MasterAISpec and MasterCU parameters at the same time.</description></item>
-        /// <item><description>You can change coordinator nodes to AI coordinator nodes only in specific regions and zones.</description></item>
-        /// <item><description>Only AnalyticDB for PostgreSQL V7.0 instances of Basic Edition support AI coordinator nodes.</description></item>
-        /// <item><description>You can view the valid values of this parameter on the configuration change page of coordinator nodes.</description></item>
+        /// <item><description><para>This parameter and <c>MasterCU</c> are mutually exclusive.</para>
+        /// </description></item>
+        /// <item><description><para>This feature is available only in some regions and zones.</para>
+        /// </description></item>
+        /// <item><description><para>MasterAI nodes are supported only for AnalyticDB for PostgreSQL V7.0 Basic Edition instances.</para>
+        /// </description></item>
+        /// <item><description><para>For a list of all possible values, see the coordinator node specification change page in the console.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -308,17 +361,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string MasterAISpec { get; set; }
 
         /// <summary>
-        /// <para>Master resources, with the following values: </para>
+        /// <para>The resources for the coordinator node. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>2 CU </description></item>
-        /// <item><description>4 CU </description></item>
-        /// <item><description>8 CU </description></item>
-        /// <item><description>16 CU </description></item>
-        /// <item><description>32 CU <remarks>
-        /// <para>Master resources above 8 CU will incur charges.</para>
-        /// </remarks>
+        /// <item><description><para>2 CU</para>
+        /// </description></item>
+        /// <item><description><para>4 CU</para>
+        /// </description></item>
+        /// <item><description><para>8 CU</para>
+        /// </description></item>
+        /// <item><description><para>16 CU</para>
+        /// </description></item>
+        /// <item><description><para>32 CU</para>
         /// </description></item>
         /// </list>
+        /// <remarks>
+        /// <para>You are charged for coordinator node resources of 8 CUs or more.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8 CU</para>
@@ -328,7 +386,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? MasterCU { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and should not be passed.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -342,19 +400,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The billing method for the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
+        /// <item><description><para><b>Postpaid</b>: pay-as-you-go.</para>
+        /// </description></item>
+        /// <item><description><para><b>Prepaid</b>: subscription.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify this parameter, Postpaid is used.</para>
+        /// <item><description><para>If this parameter is not specified, the default billing method is pay-as-you-go.</para>
         /// </description></item>
-        /// <item><description><para>You can obtain more cost savings if you create a subscription instance for one year or longer. We recommend that you select the billing method that best suits your needs.</para>
+        /// <item><description><para>Discounts are available for subscriptions of one year or longer. Select a billing method based on your business needs.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Prepaid</para>
@@ -364,13 +424,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>Unit of the duration for which resources are purchased. The values are as follows:</para>
+        /// <para>The unit of the subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Month</b>: Month</description></item>
-        /// <item><description><b>Year</b>: Year</description></item>
+        /// <item><description><para><b>Month</b></para>
+        /// </description></item>
+        /// <item><description><para><b>Year</b></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when creating a subscription-billed instance.</para>
+        /// <para>This parameter is required for subscription instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -381,7 +443,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Period { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and should not be passed.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -391,13 +453,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PrivateIpAddress { get; set; }
 
         /// <summary>
-        /// <para>Product type. The values are as follows:</para>
+        /// <para>The product type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>standard</b>: Standard Edition.</description></item>
-        /// <item><description><b>cost-effective</b>: Cost-Effective Edition.</description></item>
+        /// <item><description><para><b>standard</b>: Standard Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>cost-effective</b>: Cost-effective Edition.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If this parameter is not specified, the default value is Standard Edition.</para>
+        /// <para>If this parameter is not specified, the default value is standard.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -408,9 +472,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProdType { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The ID of the region for the instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available region IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the IDs of available regions.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -422,7 +486,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the enterprise resource group where the instance is located.</para>
+        /// <para>The ID of the resource group for the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -432,8 +496,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IP address whitelist of the instance.</para>
-        /// <para>A value of 127.0.0.1 denies access from any external IP address. You can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist after you create an instance.</para>
+        /// <para>The IP address whitelist for the instance.</para>
+        /// <para>A value of 127.0.0.1 blocks all external access. After you create the instance, you can call the <a href="https://help.aliyun.com/document_detail/86928.html">ModifySecurityIps</a> operation to modify the IP address whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -443,20 +507,23 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The performance level of ESSDs. Valid values:</para>
+        /// <para>The performance level of the ESSDs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pl0</b></description></item>
-        /// <item><description><b>pl1</b></description></item>
-        /// <item><description><b>pl2</b></description></item>
+        /// <item><description><para><b>pl0</b>: PL0</para>
+        /// </description></item>
+        /// <item><description><para><b>pl1</b>: PL1</para>
+        /// </description></item>
+        /// <item><description><para><b>pl2</b>: PL2</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>This parameter takes effect only when SegStorageType is set to cloud_essd.</para>
+        /// <item><description><para>This parameter applies only if the segment node storage type is ESSD.</para>
         /// </description></item>
-        /// <item><description><para>If you do not specify this parameter, pl1 is used.</para>
+        /// <item><description><para>If this parameter is not specified, pl1 is used by default.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>pl1</para>
@@ -466,14 +533,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SegDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The number of compute nodes. The value description is as follows:</para>
+        /// <para>The number of compute nodes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>For the high-availability version of the storage elastic mode, the value range is 4 to 512, and the value must be a multiple of 4.</description></item>
-        /// <item><description>For the basic version of the storage elastic mode, the value range is 2 to 512, and the value must be a multiple of 2.</description></item>
-        /// <item><description>For the Serverless mode, the value range is 2 to 512, and the value must be a multiple of 2.</description></item>
+        /// <item><description><para>For a High-availability Edition instance in elastic storage mode, the value must be a multiple of 4, from 4 to 512.</para>
+        /// </description></item>
+        /// <item><description><para>For a Basic Edition instance in elastic storage mode, the value must be a multiple of 2, from 2 to 512.</para>
+        /// </description></item>
+        /// <item><description><para>For a serverless instance, the value must be a multiple of 2, from 2 to 512.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when creating instances in the storage elastic mode or Serverless mode.</para>
+        /// <para>This parameter is required for instances in elastic storage mode or serverless mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -484,9 +554,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SegNodeNum { get; set; }
 
         /// <summary>
-        /// <para>Disk storage type, currently only ESSD cloud disks are supported, with the value <b>cloud_essd</b>.</para>
+        /// <para>The storage type for the segment nodes. Only ESSDs are supported. Set the value to <b>cloud_essd</b>.</para>
         /// <remarks>
-        /// <para>This parameter is required when creating an elastic storage mode instance.</para>
+        /// <para>This parameter is required for instances in elastic storage mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -497,13 +567,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SegStorageType { get; set; }
 
         /// <summary>
-        /// <para>The mode of the Serverless instance. The values are as follows:</para>
+        /// <para>The mode of the serverless instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Manual</b>: Manual scheduling (default).</description></item>
-        /// <item><description><b>Auto</b>: Auto scheduling.</description></item>
+        /// <item><description><para><b>Manual</b>: manual scheduling. This is the default value.</para>
+        /// </description></item>
+        /// <item><description><para><b>Auto</b>: auto-scheduling.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required only for Serverless mode instances.</para>
+        /// <list type="bullet">
+        /// <item><description><para>This parameter is required only for instances in serverless mode.</para>
+        /// </description></item>
+        /// <item><description><para>Auto-scheduling for AnalyticDB for PostgreSQL instances in serverless mode is in preview. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket?product=rds">submit a ticket</a> to be added to the whitelist.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -514,9 +591,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServerlessMode { get; set; }
 
         /// <summary>
-        /// <para>The threshold for computing resources. The value range is 8 to 32, with a step of 8, and the unit is ACU. The default value is 32.</para>
+        /// <para>The threshold for computing resources, in AnalyticDB Compute Units (ACUs). The value must be a multiple of 8, ranging from 8 to 32. The default value is 32.</para>
         /// <remarks>
-        /// <para>This parameter is required only for Serverless auto-scheduling mode instances.</para>
+        /// <para>This parameter is required only for serverless instances that use auto-scheduling.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -527,9 +604,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? ServerlessResource { get; set; }
 
         /// <summary>
-        /// <para>ID of the source instance to be cloned.</para>
+        /// <para>The ID of the source instance to be cloned.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> interface to view details of all AnalyticDB for PostgreSQL instances in the target region, including the instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the details of all AnalyticDB for PostgreSQL instances in the destination region, including instance IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -540,11 +617,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SrcDbInstanceName { get; set; }
 
         /// <summary>
-        /// <para>VSwitch ID of the standby zone.</para>
+        /// <para>The ID of the vSwitch in the standby zone.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required for multi-zone deployment.</description></item>
-        /// <item><description>The VSwitch ID of the standby zone must be in the same zone as the StandbyZoneId.</description></item>
+        /// <item><description><para>This parameter is required only for a multi-AZ deployment.</para>
+        /// </description></item>
+        /// <item><description><para>The vSwitch must be in the standby zone specified in <c>StandbyZoneId</c>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -556,12 +635,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StandbyVSwitchId { get; set; }
 
         /// <summary>
-        /// <para>ID of the standby zone.</para>
+        /// <para>The ID of the standby zone.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter is required for multi-zone deployment.</description></item>
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available zone IDs.</description></item>
-        /// <item><description>The ID of the standby zone must be different from the ID of the primary zone.</description></item>
+        /// <item><description><para>This parameter is required only for a multi-AZ deployment.</para>
+        /// </description></item>
+        /// <item><description><para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the IDs of available zones.</para>
+        /// </description></item>
+        /// <item><description><para>The standby zone must be different from the primary zone.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -573,9 +655,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StandbyZoneId { get; set; }
 
         /// <summary>
-        /// <para>The size of the storage space, in GB, with a value range of &lt;props=&quot;china&quot;&gt;50<del>8000&lt;props=&quot;intl&quot;&gt;50</del>6000.</para>
+        /// <para>The storage capacity for the instance, in GB. Valid values: &lt;props=&quot;china&quot;&gt;50 to 8000&lt;props=&quot;intl&quot;&gt;50 to 6000.</para>
         /// <remarks>
-        /// <para>This parameter is required when creating an instance in the storage elastic mode.</para>
+        /// <para>This parameter is required for instances in elastic storage mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -586,7 +668,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? StorageSize { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and should not be passed.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -596,18 +678,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The Nth tag. The value of N ranges from 1 to 20.</para>
+        /// <para>The tags to add to the instance. You can add up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateDBInstanceRequestTag> Tag { get; set; }
         public class CreateDBInstanceRequestTag : TeaModel {
             /// <summary>
-            /// <para>Tag key. The restrictions are as follows:</para>
+            /// <para>The tag key. The following limits apply:</para>
             /// <list type="bullet">
-            /// <item><description>It cannot be an empty string.</description></item>
-            /// <item><description>It supports up to 128 characters.</description></item>
-            /// <item><description>It cannot start with <c>aliyun</c> or <c>acs:</c>, and it cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description><para>The tag key cannot be empty.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key can be up to 128 characters in length.</para>
+            /// </description></item>
+            /// <item><description><para>The tag key cannot start with <c>aliyun</c> or <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -618,11 +703,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>Tag value. The restrictions are as follows:</para>
+            /// <para>The tag value. The following limits apply:</para>
             /// <list type="bullet">
-            /// <item><description>It can be an empty string.</description></item>
-            /// <item><description>It supports up to 128 characters.</description></item>
-            /// <item><description>It cannot start with <c>acs:</c>, and it cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// <item><description><para>The tag value can be empty.</para>
+            /// </description></item>
+            /// <item><description><para>The tag value can be up to 128 characters in length.</para>
+            /// </description></item>
+            /// <item><description><para>The tag value cannot start with <c>acs:</c> and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -635,13 +723,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Duration for which resources are purchased. The values are as follows:</para>
+        /// <para>The subscription duration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>When <b>Period</b> is <b>Month</b>, the value ranges from 1 to 9.</description></item>
-        /// <item><description>When <b>Period</b> is <b>Year</b>, the value ranges from 1 to 3.</description></item>
+        /// <item><description><para>If <b>Period</b> is <b>Month</b>, the value can be an integer from 1 to 9.</para>
+        /// </description></item>
+        /// <item><description><para>If <b>Period</b> is <b>Year</b>, the value can be an integer from 1 to 3.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is required when creating a subscription-billed instance.</para>
+        /// <para>This parameter is required for subscription instances.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -652,11 +742,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string UsedTime { get; set; }
 
         /// <summary>
-        /// <para>VPC ID.</para>
+        /// <para>The VPC ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><b>VPCId</b> is required.</description></item>
-        /// <item><description>The region of the <b>VPC</b> must be consistent with <b>RegionId</b>.</description></item>
+        /// <item><description><para>This parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para>The VPC must be in the region specified by <c>RegionId</c>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -668,11 +760,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string VPCId { get; set; }
 
         /// <summary>
-        /// <para>vSwitch ID.</para>
+        /// <para>The vSwitch ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><b>vSwitchId</b> is required.</description></item>
-        /// <item><description>The availability zone of the <b>vSwitch</b> must be consistent with <b>ZoneId</b>.</description></item>
+        /// <item><description><para>This parameter is required.</para>
+        /// </description></item>
+        /// <item><description><para>The vSwitch must be in the zone specified by <c>ZoneId</c>.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -684,15 +778,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable vector engine optimization. The value description is as follows:</para>
+        /// <para>Specifies whether to enable vector engine optimization. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>enabled</b>: Enable vector engine optimization.</description></item>
-        /// <item><description><b>disabled</b> (default): Do not enable vector engine optimization.</description></item>
+        /// <item><description><para><b>enabled</b>: enables vector engine optimization.</para>
+        /// </description></item>
+        /// <item><description><para><b>disabled</b> (default): disables vector engine optimization.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For mainstream analysis scenarios, data warehouse scenarios, and real-time data warehouse scenarios, it is recommended to <b>not enable</b> vector engine optimization.</description></item>
-        /// <item><description>For users using the vector analysis engine for AIGC, vector retrieval, and other scenarios, it is recommended to <b>enable</b> vector engine optimization.</description></item>
+        /// <item><description><para>For mainstream analytics, data warehousing, and real-time data warehousing scenarios, we recommend that you <b>disable</b> vector engine optimization.</para>
+        /// </description></item>
+        /// <item><description><para>For AIGC and vector search scenarios, we recommend that you <b>enable</b> vector engine optimization.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -704,9 +802,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string VectorConfigurationStatus { get; set; }
 
         /// <summary>
-        /// <para>Zone ID.</para>
+        /// <para>The ID of the zone for the instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> interface to view available zone IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the IDs of available zones.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateDBInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>This parameter is deprecated and will not return a value.</para>
-        /// <para>You can use the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> interface to view the connection address of the instance.</para>
+        /// <para>This parameter is deprecated and is no longer returned.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the connection string of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****.gpdb.rds.aliyuncs.com</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ConnectionString { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Order ID.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>111111111111</para>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated and will not return a value.</para>
-        /// <para>You can use the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> interface to view the port number of the instance.</para>
+        /// <para>This parameter is deprecated and is no longer returned.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86910.html">DescribeDBInstanceAttribute</a> operation to query the port number of the instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3432</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5414A4E5-4C36-4461-95FC-************</para>

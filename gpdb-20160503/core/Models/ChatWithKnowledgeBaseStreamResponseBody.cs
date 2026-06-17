@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ChatWithKnowledgeBaseStreamResponseBody : TeaModel {
         /// <summary>
-        /// <para>model response.</para>
+        /// <para>The model response.</para>
         /// </summary>
         [NameInMap("ChatCompletion")]
         [Validation(Required=false)]
         public ChatWithKnowledgeBaseStreamResponseBodyChatCompletion ChatCompletion { get; set; }
         public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletion : TeaModel {
             /// <summary>
-            /// <para>Text content generated in real time.</para>
+            /// <para>The streaming output content.</para>
             /// </summary>
             [NameInMap("Choices")]
             [Validation(Required=false)]
             public List<ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoices> Choices { get; set; }
             public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoices : TeaModel {
                 /// <summary>
-                /// <para>Finish reason.</para>
+                /// <para>The reason the model stopped generating output.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>finish</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FinishReason { get; set; }
 
                 /// <summary>
-                /// <para>The sequence number of the reply.</para>
+                /// <para>The index of the choice.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,21 +44,24 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? Index { get; set; }
 
                 /// <summary>
-                /// <para>LLM response.</para>
+                /// <para>The response from the large language model (LLM).</para>
                 /// </summary>
                 [NameInMap("Message")]
                 [Validation(Required=false)]
                 public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessage Message { get; set; }
                 public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessage : TeaModel {
                     /// <summary>
-                    /// <para>The content of the document.</para>
+                    /// <para>The message content.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>The weather in Hangzhou is sunny.</para>
                     /// </summary>
                     [NameInMap("Content")]
                     [Validation(Required=false)]
                     public string Content { get; set; }
 
                     /// <summary>
-                    /// <para>Model reasoning chain content.</para>
+                    /// <para>The model\&quot;s chain of thought (CoT) content.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Logical reasoning process</para>
@@ -68,11 +71,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string ReasoningContent { get; set; }
 
                     /// <summary>
-                    /// <para>Message role:</para>
+                    /// <para>The role of the message author. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>system</description></item>
-                    /// <item><description>user</description></item>
-                    /// <item><description>assistant</description></item>
+                    /// <item><description><para><c>system</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>user</c></para>
+                    /// </description></item>
+                    /// <item><description><para><c>assistant</c></para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -83,21 +89,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string Role { get; set; }
 
                     /// <summary>
-                    /// <para>Tool call response.</para>
+                    /// <para>The tool call responses.</para>
                     /// </summary>
                     [NameInMap("ToolCalls")]
                     [Validation(Required=false)]
                     public List<ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessageToolCalls> ToolCalls { get; set; }
                     public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessageToolCalls : TeaModel {
                         /// <summary>
-                        /// <para>Function call information.</para>
+                        /// <para>Details of the function that the model wants to call.</para>
                         /// </summary>
                         [NameInMap("Function")]
                         [Validation(Required=false)]
                         public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessageToolCallsFunction Function { get; set; }
                         public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionChoicesMessageToolCallsFunction : TeaModel {
                             /// <summary>
-                            /// <para>Arguments of the called function.</para>
+                            /// <para>The arguments for the function call, generated by the model in JSON format.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>{&quot;city&quot;:&quot;hangzhou&quot;}</para>
@@ -107,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                             public string Arguments { get; set; }
 
                             /// <summary>
-                            /// <para>The name of the called function.</para>
+                            /// <para>The name of the function to call.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>&quot;get_weather&quot;</para>
@@ -119,7 +125,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         }
 
                         /// <summary>
-                        /// <para>The ID.</para>
+                        /// <para>The ID of the tool call.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>&quot;chatcmpl-c1bebafa-cc48-44e2-88c6-1a3572952f8e&quot;</para>
@@ -129,7 +135,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public string Id { get; set; }
 
                         /// <summary>
-                        /// <para>The position of this tool in the \&quot;input\&quot; request parameter, which starts from 0.</para>
+                        /// <para>The index of the tool in the <c>Input</c> parameter of the request, starting from 0.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -145,7 +151,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time, in Unix timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1758529748</para>
@@ -155,7 +161,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? Created { get; set; }
 
             /// <summary>
-            /// <para>The ID of the response.</para>
+            /// <para>The response ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>273e3fc7-8f56-4167-a1bb-d35d2f3b9043</para>
@@ -165,7 +171,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the model.</para>
+            /// <para>The name of the model used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-plus</para>
@@ -175,14 +181,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens used in LLM output.</para>
+            /// <para>The token usage statistics for the completion.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsage Usage { get; set; }
             public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsage : TeaModel {
                 /// <summary>
-                /// <para>The number of tokens consumed by the generated content.</para>
+                /// <para>The number of tokens in the generated response.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>42</para>
@@ -192,7 +198,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? CompletionTokens { get; set; }
 
                 /// <summary>
-                /// <para>The number of tokens consumed by the prompt.</para>
+                /// <para>The number of tokens in the input prompt.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>42</para>
@@ -202,14 +208,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? PromptTokens { get; set; }
 
                 /// <summary>
-                /// <para>The details about the prompt token.</para>
+                /// <para>Details about the prompt token usage.</para>
                 /// </summary>
                 [NameInMap("PromptTokensDetails")]
                 [Validation(Required=false)]
                 public ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsagePromptTokensDetails PromptTokensDetails { get; set; }
                 public class ChatWithKnowledgeBaseStreamResponseBodyChatCompletionUsagePromptTokensDetails : TeaModel {
                     /// <summary>
-                    /// <para>The number of tokens from cache hits.</para>
+                    /// <para>The number of prompt tokens served from the cache.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>24</para>
@@ -235,7 +241,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The returned information.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -245,28 +251,31 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Retrieve information from multiple knowledge bases.</para>
+        /// <para>The retrieval results from multiple knowledge bases.</para>
         /// </summary>
         [NameInMap("MultiCollectionRecallResult")]
         [Validation(Required=false)]
         public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResult MultiCollectionRecallResult { get; set; }
         public class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResult : TeaModel {
             /// <summary>
-            /// <para>The details of the entity.</para>
+            /// <para>A list of retrieved entities.</para>
             /// </summary>
             [NameInMap("Entities")]
             [Validation(Required=false)]
             public List<string> Entities { get; set; }
 
             /// <summary>
-            /// <para>The retrieved item.</para>
+            /// <para>A list of retrieved matches.</para>
             /// </summary>
             [NameInMap("Matches")]
             [Validation(Required=false)]
             public List<ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatches> Matches { get; set; }
             public class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultMatches : TeaModel {
                 /// <summary>
-                /// <para>The content of the document.</para>
+                /// <para>The document content.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>AnalyticDB PostgreSQL vector database.</para>
                 /// </summary>
                 [NameInMap("Content")]
                 [Validation(Required=false)]
@@ -283,8 +292,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FileName { get; set; }
 
                 /// <summary>
-                /// <para>The URL of the image result. By default, the URL is valid for 2 hours.</para>
-                /// <para>You can use the UrlExpiration parameter to specify a validity period.</para>
+                /// <para>The public URL of the retrieved image. By default, the URL is valid for 2 hours.</para>
+                /// <para>You can use the <c>UrlExpiration</c> parameter to specify a custom validity period.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dailyshort-sh.oss-cn-shanghai.aliyuncs.com/vod-8efba5/f06147795c6c71f080605420848d0302/0ca34d5743a84bf7c68f489a60715dac-ld.mp4">http://dailyshort-sh.oss-cn-shanghai.aliyuncs.com/vod-8efba5/f06147795c6c71f080605420848d0302/0ca34d5743a84bf7c68f489a60715dac-ld.mp4</a></para>
@@ -294,9 +303,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string FileURL { get; set; }
 
                 /// <summary>
-                /// <para>The unique ID of the vector data.</para>
+                /// <para>The unique ID of the vector record.</para>
                 /// <remarks>
-                /// <para> If you leave this parameter empty, a unique ID is automatically generated by using uuidgen. If it is not empty and conflicts with an existing ID in the database, the value in the database will be updated with the data from the API.</para>
+                /// <para>If this parameter is left empty, the database automatically generates a UUID. If you provide an ID that conflicts with an existing one, the existing record is updated with the data from the request.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -307,7 +316,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Document loader metadata.</para>
+                /// <para>Metadata from the document loader, captured during document ingestion.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;page&quot;:1}</para>
@@ -317,7 +326,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public object LoaderMetadata { get; set; }
 
                 /// <summary>
-                /// <para>Metadata.</para>
+                /// <para>The user-defined metadata.</para>
                 /// </summary>
                 [NameInMap("Metadata")]
                 [Validation(Required=false)]
@@ -334,7 +343,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public double? RerankScore { get; set; }
 
                 /// <summary>
-                /// <para>The source of the retrieved results. 1 indicates vector retrieval, 2 indicates full-text retrieval, and 3 indicates dual-path retrieval.</para>
+                /// <para>The source of the match. <c>1</c> indicates vector search, <c>2</c> indicates full-text search, and <c>3</c> indicates hybrid recall.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.12</para>
@@ -344,7 +353,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public long? RetrievalSource { get; set; }
 
                 /// <summary>
-                /// <para>The similarity score of the data. It is related to the <c>l2, ip, or cosine</c> algorithm that is specified when you create an index.</para>
+                /// <para>The similarity score. The score is calculated based on the distance metric specified when the index was created (<c>l2/ip/cosine</c>).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -363,14 +372,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The relationship name.</para>
+            /// <para>A list of relationship edges.</para>
             /// </summary>
             [NameInMap("Relations")]
             [Validation(Required=false)]
             public List<string> Relations { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the request.</para>
+            /// <para>The request ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -380,10 +389,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The status of the operation. Valid values:</para>
+            /// <para>The status of the API call. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>success</b>.</description></item>
-            /// <item><description><b>fail</b>.</description></item>
+            /// <item><description><para><b>success</b>: The call succeeded.</para>
+            /// </description></item>
+            /// <item><description><para><b>fail</b>: The call failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -394,7 +405,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens that are consumed.</para>
+            /// <para>The number of tokens consumed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42</para>
@@ -404,16 +415,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public long? Tokens { get; set; }
 
             /// <summary>
-            /// <para>The number of tokens that are consumed during document understanding or embedding.</para>
+            /// <para>The number of tokens consumed for embedding.</para>
             /// </summary>
             [NameInMap("Usage")]
             [Validation(Required=false)]
             public ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultUsage Usage { get; set; }
             public class ChatWithKnowledgeBaseStreamResponseBodyMultiCollectionRecallResultUsage : TeaModel {
                 /// <summary>
-                /// <para>The number of tokens that are used during vectorization.</para>
+                /// <para>The number of tokens used for embedding.</para>
                 /// <remarks>
-                /// <para> A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.</para>
+                /// <para>A token is the smallest unit created by splitting the input text. A token can be a unit such as a word, a phrase, a punctuation mark, or a character.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -428,7 +439,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -438,10 +449,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the operation. Valid values:</para>
+        /// <para>The status of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>.</description></item>
-        /// <item><description><b>fail</b>.</description></item>
+        /// <item><description><para><b>success</b>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>fail</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

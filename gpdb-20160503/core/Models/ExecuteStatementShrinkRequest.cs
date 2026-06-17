@@ -44,6 +44,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string ParametersShrink { get; set; }
 
+        /// <summary>
+        /// <para>Parameters for the vector dataset.  </para>
+        /// <remarks>
+        /// <para>When WorkspaceId is not empty, you must also pass this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("RagWorkspaceCollection")]
         [Validation(Required=false)]
         public string RagWorkspaceCollectionShrink { get; set; }
@@ -114,6 +120,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string StatementName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of a workspace composed of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both are specified, this parameter takes precedence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-ws-*****</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

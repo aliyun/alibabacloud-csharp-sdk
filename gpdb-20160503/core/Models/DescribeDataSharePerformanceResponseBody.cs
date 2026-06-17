@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataSharePerformanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query.</para>
+        /// <para>The end of the queried time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-03T15:10Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>Details of data sharing performance metrics.</para>
+        /// <para>The list of performance metrics.</para>
         /// </summary>
         [NameInMap("PerformanceKeys")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Details of the performance metric.</para>
+            /// <para>The details of the time series data for the metric.</para>
             /// </summary>
             [NameInMap("Series")]
             [Validation(Required=false)]
@@ -64,14 +64,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>One or more values of the performance metric.</para>
+                /// <para>The data points of the time series.</para>
                 /// </summary>
                 [NameInMap("Values")]
                 [Validation(Required=false)]
                 public List<DescribeDataSharePerformanceResponseBodyPerformanceKeysSeriesValues> Values { get; set; }
                 public class DescribeDataSharePerformanceResponseBodyPerformanceKeysSeriesValues : TeaModel {
                     /// <summary>
-                    /// <para>The value of the performance metric at a point in time.</para>
+                    /// <para>An array that contains the timestamp and the corresponding metric value.</para>
                     /// </summary>
                     [NameInMap("Point")]
                     [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBE00C04-A3E8-4114-881D-0480A72CB92E</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
+        /// <para>The start of the queried time range.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-03T15:00Z</para>

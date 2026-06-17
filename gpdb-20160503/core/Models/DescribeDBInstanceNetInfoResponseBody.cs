@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Classic</para>
+        /// <para>VPC</para>
         /// </summary>
         [NameInMap("InstanceNetworkType")]
         [Validation(Required=false)]

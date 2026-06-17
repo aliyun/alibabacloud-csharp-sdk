@@ -34,6 +34,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503
                 {"cn-shenzhen-finance-1", "gpdb.aliyuncs.com"},
                 {"cn-qingdao", "gpdb.aliyuncs.com"},
                 {"cn-north-2-gov-1", "gpdb.aliyuncs.com"},
+                {"me-east-1", "gpdb.me-east-1.aliyuncs.com"},
+                {"me-central-1", "gpdb.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "gpdb.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "gpdb.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "gpdb.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-huhehaote", "gpdb.cn-huhehaote.aliyuncs.com"},
+                {"cn-chengdu", "gpdb.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing-finance-1", "gpdb.aliyuncs.com"},
+                {"ap-southeast-7", "gpdb.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-5", "gpdb.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "gpdb.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-2", "gpdb.ap-southeast-2.aliyuncs.com"},
+                {"ap-south-1", "gpdb.ap-south-1.aliyuncs.com"},
+                {"ap-northeast-2", "gpdb.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "gpdb.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("gpdb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1374,17 +1389,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model.</para>
+        /// <para>Combines a knowledge base with a large language model for intelligent Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <para>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: Required. This parameter specifies the ID of the database instance.</description></item>
-        /// <item><description><b>KnowledgeParams</b>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
-        /// <item><description><b>ModelParams</b>: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
-        /// <item><description><b>PromptTemplate</b>: optional. It is used to customize the system prompt template.</description></item>
+        /// <item><description><b>DBInstanceId</b>: Required. Specifies the ID of the database instance.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</description></item>
+        /// <item><description><b>ModelParams</b>: Required. Contains parameters for model inference, such as the message list and the model name.</description></item>
+        /// <item><description><b>PromptTemplate</b>: Optional. Specifies a custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1461,17 +1476,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model.</para>
+        /// <para>Combines a knowledge base with a large language model for intelligent Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <para>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: Required. This parameter specifies the ID of the database instance.</description></item>
-        /// <item><description><b>KnowledgeParams</b>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
-        /// <item><description><b>ModelParams</b>: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
-        /// <item><description><b>PromptTemplate</b>: optional. It is used to customize the system prompt template.</description></item>
+        /// <item><description><b>DBInstanceId</b>: Required. Specifies the ID of the database instance.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</description></item>
+        /// <item><description><b>ModelParams</b>: Required. Contains parameters for model inference, such as the message list and the model name.</description></item>
+        /// <item><description><b>PromptTemplate</b>: Optional. Specifies a custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1548,17 +1563,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model.</para>
+        /// <para>Combines a knowledge base with a large language model for intelligent Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <para>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: Required. This parameter specifies the ID of the database instance.</description></item>
-        /// <item><description><b>KnowledgeParams</b>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
-        /// <item><description><b>ModelParams</b>: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
-        /// <item><description><b>PromptTemplate</b>: optional. It is used to customize the system prompt template.</description></item>
+        /// <item><description><b>DBInstanceId</b>: Required. Specifies the ID of the database instance.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</description></item>
+        /// <item><description><b>ModelParams</b>: Required. Contains parameters for model inference, such as the message list and the model name.</description></item>
+        /// <item><description><b>PromptTemplate</b>: Optional. Specifies a custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1577,17 +1592,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model.</para>
+        /// <para>Combines a knowledge base with a large language model for intelligent Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <para>This API lets you interact with a large language model using specific knowledge base collections to ensure responses are grounded in their content. You can customize requests by configuring parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API provides a default system prompt template and supports custom system prompts.</para>
         /// <list type="bullet">
-        /// <item><description><b>DBInstanceId</b>: Required. This parameter specifies the ID of the database instance.</description></item>
-        /// <item><description><b>KnowledgeParams</b>: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
-        /// <item><description><b>ModelParams</b>: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
-        /// <item><description><b>PromptTemplate</b>: optional. It is used to customize the system prompt template.</description></item>
+        /// <item><description><b>DBInstanceId</b>: Required. Specifies the ID of the database instance.</description></item>
+        /// <item><description><b>KnowledgeParams</b>: Optional. Contains parameters for knowledge retrieval, such as retrieval content and merge policies.</description></item>
+        /// <item><description><b>ModelParams</b>: Required. Contains parameters for model inference, such as the message list and the model name.</description></item>
+        /// <item><description><b>PromptTemplate</b>: Optional. Specifies a custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1606,17 +1621,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model. A streaming API, which is called by using the SSE or the Java asynchronous SDK.</para>
+        /// <para>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <para>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceId: required. This parameter specifies the ID of the database instance.</description></item>
-        /// <item><description>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
-        /// <item><description>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
-        /// <item><description>PromptTemplate: optional. It is used to customize a system prompt template.</description></item>
+        /// <item><description>DBInstanceId: Required. The ID of the database instance.</description></item>
+        /// <item><description>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</description></item>
+        /// <item><description>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</description></item>
+        /// <item><description>PromptTemplate: Optional. A custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1693,17 +1708,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model. A streaming API, which is called by using the SSE or the Java asynchronous SDK.</para>
+        /// <para>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <para>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceId: required. This parameter specifies the ID of the database instance.</description></item>
-        /// <item><description>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
-        /// <item><description>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
-        /// <item><description>PromptTemplate: optional. It is used to customize a system prompt template.</description></item>
+        /// <item><description>DBInstanceId: Required. The ID of the database instance.</description></item>
+        /// <item><description>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</description></item>
+        /// <item><description>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</description></item>
+        /// <item><description>PromptTemplate: Optional. A custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1780,17 +1795,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model. A streaming API, which is called by using the SSE or the Java asynchronous SDK.</para>
+        /// <para>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <para>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceId: required. This parameter specifies the ID of the database instance.</description></item>
-        /// <item><description>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
-        /// <item><description>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
-        /// <item><description>PromptTemplate: optional. It is used to customize a system prompt template.</description></item>
+        /// <item><description>DBInstanceId: Required. The ID of the database instance.</description></item>
+        /// <item><description>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</description></item>
+        /// <item><description>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</description></item>
+        /// <item><description>PromptTemplate: Optional. A custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1809,17 +1824,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Provides intelligent question-and-answer services by combining a knowledge base with a large language model. A streaming API, which is called by using the SSE or the Java asynchronous SDK.</para>
+        /// <para>This service combines a knowledge base with a large model to provide intelligent Q&amp;A. You can access the streaming interface using Server-Sent Events (SSE) or the Java asynchronous SDK.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API enables users to query a large language model with answers grounded in a specified knowledge base collection. You can configure multiple parameters to customize requests, including but not limited to database instance IDs, knowledge retrieval parameters, and model inference parameters. In addition, a default system prompt template is provided and users are allowed to customize the system prompt.</para>
+        /// <para>Use this API to retrieve answers from a large language model based on content from a specified knowledge base. You can customize the request by configuring various parameters, including the database instance ID, knowledge retrieval parameters, and model inference parameters. The API includes a default system prompt template, and you can also specify a custom one.</para>
         /// <list type="bullet">
-        /// <item><description>DBInstanceId: required. This parameter specifies the ID of the database instance.</description></item>
-        /// <item><description>KnowledgeParams: optional. It contains parameters related to knowledge retrieval, such as retrieval content and merge policy.</description></item>
-        /// <item><description>ModelParams: required. It contains parameters related to model inference, such as the message list and the name of the model.</description></item>
-        /// <item><description>PromptTemplate: optional. It is used to customize a system prompt template.</description></item>
+        /// <item><description>DBInstanceId: Required. The ID of the database instance.</description></item>
+        /// <item><description>KnowledgeParams: Optional. Parameters for knowledge retrieval, such as retrieval content and the merge policy.</description></item>
+        /// <item><description>ModelParams: Required. Parameters for model inference, such as the message list and the model name.</description></item>
+        /// <item><description>PromptTemplate: Optional. A custom system prompt template.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2526,7 +2541,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AI 服务</para>
+        /// <para>Creates an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2588,7 +2603,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AI 服务</para>
+        /// <para>Creates an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2650,7 +2665,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AI 服务</para>
+        /// <para>Creates an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2668,7 +2683,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AI 服务</para>
+        /// <para>Creates an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3014,7 +3029,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a vector collection.</para>
+        /// <para>Create a vector dataset.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3150,7 +3165,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a vector collection.</para>
+        /// <para>Create a vector dataset.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -3286,7 +3301,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a vector collection.</para>
+        /// <para>Create a vector dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3304,7 +3319,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a vector collection.</para>
+        /// <para>Create a vector dataset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3322,12 +3337,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Instance</para>
+        /// <para>Create an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, please make sure you have fully understood the <a href="https://help.aliyun.com/document_detail/35406.html">billing method</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of the AnalyticDB for PostgreSQL product.</para>
+        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3549,12 +3564,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Instance</para>
+        /// <para>Create an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, please make sure you have fully understood the <a href="https://help.aliyun.com/document_detail/35406.html">billing method</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of the AnalyticDB for PostgreSQL product.</para>
+        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3776,12 +3791,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Instance</para>
+        /// <para>Create an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, please make sure you have fully understood the <a href="https://help.aliyun.com/document_detail/35406.html">billing method</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of the AnalyticDB for PostgreSQL product.</para>
+        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3799,12 +3814,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Instance</para>
+        /// <para>Create an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, please make sure you have fully understood the <a href="https://help.aliyun.com/document_detail/35406.html">billing method</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of the AnalyticDB for PostgreSQL product.</para>
+        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> for AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4510,7 +4525,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a document collection.</para>
+        /// <para>Create a knowledge base</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4678,7 +4693,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a document collection.</para>
+        /// <para>Create a knowledge base</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -4846,7 +4861,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a document collection.</para>
+        /// <para>Create a knowledge base</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4864,7 +4879,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a document collection.</para>
+        /// <para>Create a knowledge base</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5767,7 +5782,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5866,7 +5881,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5965,7 +5980,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5988,7 +6003,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// <para>Before you call this operation, review the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6370,6 +6385,202 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRemoteADBDataSourceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SaaS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaasServiceResponse
+        /// </returns>
+        public CreateSaasServiceResponse CreateSaasServiceWithOptions(CreateSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cu))
+            {
+                query["Cu"] = request.Cu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plan))
+            {
+                query["Plan"] = request.Plan;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSaasServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SaaS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaasServiceResponse
+        /// </returns>
+        public async Task<CreateSaasServiceResponse> CreateSaasServiceWithOptionsAsync(CreateSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cu))
+            {
+                query["Cu"] = request.Cu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
+            {
+                query["PayType"] = request.PayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Period))
+            {
+                query["Period"] = request.Period;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Plan))
+            {
+                query["Plan"] = request.Plan;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsedTime))
+            {
+                query["UsedTime"] = request.UsedTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSaasServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SaaS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaasServiceResponse
+        /// </returns>
+        public CreateSaasServiceResponse CreateSaasService(CreateSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSaasServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SaaS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaasServiceResponse
+        /// </returns>
+        public async Task<CreateSaasServiceResponse> CreateSaasServiceAsync(CreateSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSaasServiceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7499,7 +7710,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to create a Supabase project.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to create a Supabase instance.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7531,6 +7744,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskPerformanceLevel))
             {
                 query["DiskPerformanceLevel"] = request.DiskPerformanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
@@ -7602,7 +7819,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to create a Supabase project.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to create a Supabase instance.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7634,6 +7853,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DiskPerformanceLevel))
             {
                 query["DiskPerformanceLevel"] = request.DiskPerformanceLevel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineVersion))
+            {
+                query["EngineVersion"] = request.EngineVersion;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
@@ -7705,7 +7928,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to create a Supabase project.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to create a Supabase instance.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7728,7 +7953,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to create a Supabase project.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to create a Supabase instance.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -7746,7 +7973,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Vector Index</para>
+        /// <para>Creates an index for a vector collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7852,7 +8079,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Vector Index</para>
+        /// <para>Creates an index for a vector collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7958,7 +8185,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Vector Index</para>
+        /// <para>Creates an index for a vector collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7976,7 +8203,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Vector Index</para>
+        /// <para>Creates an index for a vector collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7990,6 +8217,154 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateVectorIndexWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SaaS workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a context service workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public CreateWorkspaceResponse CreateWorkspaceWithOptions(CreateWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspace",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SaaS workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a context service workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceWithOptionsAsync(CreateWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceName))
+            {
+                query["WorkspaceName"] = request.WorkspaceName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateWorkspace",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SaaS workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a context service workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public CreateWorkspaceResponse CreateWorkspace(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a SaaS workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a context service workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateWorkspaceResponse
+        /// </returns>
+        public async Task<CreateWorkspaceResponse> CreateWorkspaceAsync(CreateWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateWorkspaceWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8170,7 +8545,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 AI 服务</para>
+        /// <para>Deletes an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8220,7 +8595,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 AI 服务</para>
+        /// <para>Deletes an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8270,7 +8645,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 AI 服务</para>
+        /// <para>Deletes an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8288,7 +8663,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除 AI 服务</para>
+        /// <para>Deletes an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8562,7 +8937,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文本块</para>
+        /// <para>Deletes chunks from a document collection.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8630,7 +9005,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文本块</para>
+        /// <para>Deletes chunks from a document collection.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -8698,7 +9073,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文本块</para>
+        /// <para>Deletes chunks from a document collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8716,7 +9091,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除文本块</para>
+        /// <para>Deletes chunks from a document collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10434,7 +10809,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Hadoop external data source.</para>
+        /// <para>Delete a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10484,7 +10859,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Hadoop external data source.</para>
+        /// <para>Delete a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10534,7 +10909,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Hadoop external data source.</para>
+        /// <para>Delete a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10552,7 +10927,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Hadoop external data source.</para>
+        /// <para>Delete a Hadoop external data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11454,6 +11829,154 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a SaaS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a SaaS service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaasServiceResponse
+        /// </returns>
+        public DeleteSaasServiceResponse DeleteSaasServiceWithOptions(DeleteSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSaasServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a SaaS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a SaaS service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaasServiceResponse
+        /// </returns>
+        public async Task<DeleteSaasServiceResponse> DeleteSaasServiceWithOptionsAsync(DeleteSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSaasServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a SaaS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a SaaS service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaasServiceResponse
+        /// </returns>
+        public DeleteSaasServiceResponse DeleteSaasService(DeleteSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSaasServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a SaaS service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a SaaS service.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaasServiceResponse
+        /// </returns>
+        public async Task<DeleteSaasServiceResponse> DeleteSaasServiceAsync(DeleteSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSaasServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes the access credentials of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
@@ -11614,7 +12137,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the configurations of an external data source.</para>
+        /// <para>Delete a real-time data service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11664,7 +12187,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the configurations of an external data source.</para>
+        /// <para>Delete a real-time data service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11714,7 +12237,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the configurations of an external data source.</para>
+        /// <para>Delete a real-time data service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11732,7 +12255,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the configurations of an external data source.</para>
+        /// <para>Delete a real-time data service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11750,7 +12273,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data source.</para>
+        /// <para>Delete a real-time data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11800,7 +12323,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data source.</para>
+        /// <para>Delete a real-time data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11850,7 +12373,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data source.</para>
+        /// <para>Delete a real-time data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11868,7 +12391,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data source.</para>
+        /// <para>Delete a real-time data source.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11886,7 +12409,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data synchronization job.</para>
+        /// <para>Delete a real-time data synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11936,7 +12459,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data synchronization job.</para>
+        /// <para>Delete a real-time data synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11986,7 +12509,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data synchronization job.</para>
+        /// <para>Delete a real-time data synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12004,7 +12527,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a real-time data synchronization job.</para>
+        /// <para>Delete a real-time data synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12346,14 +12869,162 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>删除SaaS工作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>此接口为删除上下文服务工作空间</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkspaceResponse
+        /// </returns>
+        public DeleteWorkspaceResponse DeleteWorkspaceWithOptions(DeleteWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkspace",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除SaaS工作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>此接口为删除上下文服务工作空间</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkspaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkspaceResponse
+        /// </returns>
+        public async Task<DeleteWorkspaceResponse> DeleteWorkspaceWithOptionsAsync(DeleteWorkspaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteWorkspace",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除SaaS工作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>此接口为删除上下文服务工作空间</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkspaceResponse
+        /// </returns>
+        public DeleteWorkspaceResponse DeleteWorkspace(DeleteWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteWorkspaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除SaaS工作空间</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>此接口为删除上下文服务工作空间</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteWorkspaceResponse
+        /// </returns>
+        public async Task<DeleteWorkspaceResponse> DeleteWorkspaceAsync(DeleteWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteWorkspaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deploy a private RAG service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Before you deploy the private RAG service, create an initial account.</description></item>
-        /// <item><description>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</description></item>
+        /// <item><description>部署私有RAG服务前，请先创建初始账号。</description></item>
+        /// <item><description>私有RAG服务支持向量接口，调用时请配置CA证书。</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12410,8 +13081,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Before you deploy the private RAG service, create an initial account.</description></item>
-        /// <item><description>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</description></item>
+        /// <item><description>部署私有RAG服务前，请先创建初始账号。</description></item>
+        /// <item><description>私有RAG服务支持向量接口，调用时请配置CA证书。</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12468,8 +13139,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Before you deploy the private RAG service, create an initial account.</description></item>
-        /// <item><description>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</description></item>
+        /// <item><description>部署私有RAG服务前，请先创建初始账号。</description></item>
+        /// <item><description>私有RAG服务支持向量接口，调用时请配置CA证书。</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12494,8 +13165,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <term><b>Description:</b></term>
         /// <description>
         /// <ol>
-        /// <item><description>Before you deploy the private RAG service, create an initial account.</description></item>
-        /// <item><description>The private RAG service supports vector interfaces. When you call this operation, you must configure a CA certificate.</description></item>
+        /// <item><description>部署私有RAG服务前，请先创建初始账号。</description></item>
+        /// <item><description>私有RAG服务支持向量接口，调用时请配置CA证书。</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -12514,7 +13185,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 AI 服务详情</para>
+        /// <para>Retrieves the details of an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12564,7 +13235,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 AI 服务详情</para>
+        /// <para>Retrieves the details of an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12614,7 +13285,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 AI 服务详情</para>
+        /// <para>Retrieves the details of an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12632,7 +13303,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 AI 服务详情</para>
+        /// <para>Retrieves the details of an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12998,12 +13669,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about available resources of AnalyticDB for PostgreSQL.</para>
+        /// <para>Gets the purchasable resources for AnalyticDB for PostgreSQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.</para>
+        /// <para>Before creating an AnalyticDB for PostgreSQL instance, you can use this operation to query the available instance offerings in a specified availability zone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13053,12 +13724,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about available resources of AnalyticDB for PostgreSQL.</para>
+        /// <para>Gets the purchasable resources for AnalyticDB for PostgreSQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.</para>
+        /// <para>Before creating an AnalyticDB for PostgreSQL instance, you can use this operation to query the available instance offerings in a specified availability zone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13108,12 +13779,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about available resources of AnalyticDB for PostgreSQL.</para>
+        /// <para>Gets the purchasable resources for AnalyticDB for PostgreSQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.</para>
+        /// <para>Before creating an AnalyticDB for PostgreSQL instance, you can use this operation to query the available instance offerings in a specified availability zone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13131,12 +13802,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about available resources of AnalyticDB for PostgreSQL.</para>
+        /// <para>Gets the purchasable resources for AnalyticDB for PostgreSQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create an AnalyticDB for PostgreSQL instance, you can call this operation to query the available resources within a zone.</para>
+        /// <para>Before creating an AnalyticDB for PostgreSQL instance, you can use this operation to query the available instance offerings in a specified availability zone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13934,12 +14605,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.</para>
+        /// <para>View the Performance Monitoring of an AnalyticDB for PostgreSQL instance over a specified time period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query monitoring information only within the last 30 days.</para>
+        /// <para>Monitoring information can only be queried for the last 30 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14005,12 +14676,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.</para>
+        /// <para>View the Performance Monitoring of an AnalyticDB for PostgreSQL instance over a specified time period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query monitoring information only within the last 30 days.</para>
+        /// <para>Monitoring information can only be queried for the last 30 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14076,12 +14747,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.</para>
+        /// <para>View the Performance Monitoring of an AnalyticDB for PostgreSQL instance over a specified time period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query monitoring information only within the last 30 days.</para>
+        /// <para>Monitoring information can only be queried for the last 30 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14099,12 +14770,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about performance metrics of an AnalyticDB for PostgreSQL instance within a time range.</para>
+        /// <para>View the Performance Monitoring of an AnalyticDB for PostgreSQL instance over a specified time period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can query monitoring information only within the last 30 days.</para>
+        /// <para>Monitoring information can only be queried for the last 30 days.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14122,16 +14793,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query detailed information about the instance.</para>
+        /// <para>Query the details of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage Instructions</h2>
-        /// <para>This interface is generally used to view information such as the specifications, network type, and instance status of AnalyticDB for PostgreSQL instances.</para>
-        /// <h2>QPS Limitation</h2>
-        /// <para>The default single-user QPS limit for this interface is 1000 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please use it reasonably.
-        /// &lt;props=&quot;china&quot;&gt;The QPS in this document is only a default reference value. For accurate information, please refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API Rate Quota List</a>.</para>
+        /// <h2>How-To</h2>
+        /// <para>This API is typically used to view information such as the specifications, network type, and instance status of an AnalyticDB for PostgreSQL instance.  </para>
+        /// <h2>Queries per second (QPS) limit</h2>
+        /// <para>The default QPS limit for this API is 1000 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may affect your business operations. Please invoke the API appropriately.<br>&lt;props=&quot;china&quot;&gt;The QPS value provided in this document is for reference only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14181,16 +14851,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query detailed information about the instance.</para>
+        /// <para>Query the details of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage Instructions</h2>
-        /// <para>This interface is generally used to view information such as the specifications, network type, and instance status of AnalyticDB for PostgreSQL instances.</para>
-        /// <h2>QPS Limitation</h2>
-        /// <para>The default single-user QPS limit for this interface is 1000 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please use it reasonably.
-        /// &lt;props=&quot;china&quot;&gt;The QPS in this document is only a default reference value. For accurate information, please refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API Rate Quota List</a>.</para>
+        /// <h2>How-To</h2>
+        /// <para>This API is typically used to view information such as the specifications, network type, and instance status of an AnalyticDB for PostgreSQL instance.  </para>
+        /// <h2>Queries per second (QPS) limit</h2>
+        /// <para>The default QPS limit for this API is 1000 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may affect your business operations. Please invoke the API appropriately.<br>&lt;props=&quot;china&quot;&gt;The QPS value provided in this document is for reference only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14240,16 +14909,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query detailed information about the instance.</para>
+        /// <para>Query the details of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage Instructions</h2>
-        /// <para>This interface is generally used to view information such as the specifications, network type, and instance status of AnalyticDB for PostgreSQL instances.</para>
-        /// <h2>QPS Limitation</h2>
-        /// <para>The default single-user QPS limit for this interface is 1000 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please use it reasonably.
-        /// &lt;props=&quot;china&quot;&gt;The QPS in this document is only a default reference value. For accurate information, please refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API Rate Quota List</a>.</para>
+        /// <h2>How-To</h2>
+        /// <para>This API is typically used to view information such as the specifications, network type, and instance status of an AnalyticDB for PostgreSQL instance.  </para>
+        /// <h2>Queries per second (QPS) limit</h2>
+        /// <para>The default QPS limit for this API is 1000 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may affect your business operations. Please invoke the API appropriately.<br>&lt;props=&quot;china&quot;&gt;The QPS value provided in this document is for reference only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14267,16 +14935,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query detailed information about the instance.</para>
+        /// <para>Query the details of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Usage Instructions</h2>
-        /// <para>This interface is generally used to view information such as the specifications, network type, and instance status of AnalyticDB for PostgreSQL instances.</para>
-        /// <h2>QPS Limitation</h2>
-        /// <para>The default single-user QPS limit for this interface is 1000 times/second. If the limit is exceeded, API calls will be throttled, which may affect your business. Please use it reasonably.
-        /// &lt;props=&quot;china&quot;&gt;The QPS in this document is only a default reference value. For accurate information, please refer to the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API Rate Quota List</a>.</para>
+        /// <h2>How-To</h2>
+        /// <para>This API is typically used to view information such as the specifications, network type, and instance status of an AnalyticDB for PostgreSQL instance.  </para>
+        /// <h2>Queries per second (QPS) limit</h2>
+        /// <para>The default QPS limit for this API is 1000 queries per second per user. If this limit is exceeded, API calls will be rate-limited, which may affect your business operations. Please invoke the API appropriately.<br>&lt;props=&quot;china&quot;&gt;The QPS value provided in this document is for reference only. For accurate information, see <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate limit list</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16118,15 +16785,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Lists AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para>You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h2>Usage</h2>
+        /// <para>This API retrieves details for AnalyticDB for PostgreSQL instances in a specified region, such as instance type, network type, and instance status.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default QPS limit for this API is 1,000 requests per second per user. Calls exceeding this limit are throttled, which can impact your business. Plan your API calls accordingly.
+        /// &lt;props=&quot;china&quot;&gt;
+        /// The QPS limit specified in this document is for reference only. For the latest rate limits, see the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate quota list</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16238,15 +16907,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Lists AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para>You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h2>Usage</h2>
+        /// <para>This API retrieves details for AnalyticDB for PostgreSQL instances in a specified region, such as instance type, network type, and instance status.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default QPS limit for this API is 1,000 requests per second per user. Calls exceeding this limit are throttled, which can impact your business. Plan your API calls accordingly.
+        /// &lt;props=&quot;china&quot;&gt;
+        /// The QPS limit specified in this document is for reference only. For the latest rate limits, see the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate quota list</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16358,15 +17029,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Lists AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para>You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h2>Usage</h2>
+        /// <para>This API retrieves details for AnalyticDB for PostgreSQL instances in a specified region, such as instance type, network type, and instance status.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default QPS limit for this API is 1,000 requests per second per user. Calls exceeding this limit are throttled, which can impact your business. Plan your API calls accordingly.
+        /// &lt;props=&quot;china&quot;&gt;
+        /// The QPS limit specified in this document is for reference only. For the latest rate limits, see the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate quota list</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16384,15 +17057,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Lists AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2></h2>
-        /// <para>You can call this operation to query the instance types, network types, and states of AnalyticDB for PostgreSQL instances within a region.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <h2>Usage</h2>
+        /// <para>This API retrieves details for AnalyticDB for PostgreSQL instances in a specified region, such as instance type, network type, and instance status.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The default QPS limit for this API is 1,000 requests per second per user. Calls exceeding this limit are throttled, which can impact your business. Plan your API calls accordingly.
+        /// &lt;props=&quot;china&quot;&gt;
+        /// The QPS limit specified in this document is for reference only. For the latest rate limits, see the <a href="https://quotas.console.aliyun.com/flow-control-products/gpdb/quotas">API rate quota list</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16410,7 +17085,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about resource groups.</para>
+        /// <para>Retrieves the details of one or more resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16460,7 +17135,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about resource groups.</para>
+        /// <para>Retrieves the details of one or more resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16510,7 +17185,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about resource groups.</para>
+        /// <para>Retrieves the details of one or more resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16528,7 +17203,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about resource groups.</para>
+        /// <para>Retrieves the details of one or more resource groups.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17338,14 +18013,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about data sharing performance metrics.</para>
+        /// <para>Queries the performance metrics of data sharing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Only serverless instances support the data sharing feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17403,14 +18076,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about data sharing performance metrics.</para>
+        /// <para>Queries the performance metrics of data sharing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Only serverless instances support the data sharing feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17468,14 +18139,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about data sharing performance metrics.</para>
+        /// <para>Queries the performance metrics of data sharing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Only serverless instances support the data sharing feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17493,14 +18162,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about data sharing performance metrics.</para>
+        /// <para>Queries the performance metrics of data sharing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query the details of data sharing performance metrics for an AnalyticDB for PostgreSQL instance in Serverless mode, such as the number of shared topics and the amount of data shared.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Only serverless instances support the data sharing feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18530,13 +19197,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download records of query diagnostic information for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Queries the download records for query diagnostic information for AnalyticDB for PostgreSQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-        /// This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</para>
+        /// <para>To view download records, you must first call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information.
+        /// This feature is available only for storage-elastic instances that run kernel minor version V6.3.10.1 or later. For more information about how to view and update the kernel minor version, see <a href="https://help.aliyun.com/document_detail/277424.html">View the kernel minor version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Upgrade the kernel version</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18582,13 +19249,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download records of query diagnostic information for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Queries the download records for query diagnostic information for AnalyticDB for PostgreSQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-        /// This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</para>
+        /// <para>To view download records, you must first call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information.
+        /// This feature is available only for storage-elastic instances that run kernel minor version V6.3.10.1 or later. For more information about how to view and update the kernel minor version, see <a href="https://help.aliyun.com/document_detail/277424.html">View the kernel minor version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Upgrade the kernel version</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18634,13 +19301,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download records of query diagnostic information for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Queries the download records for query diagnostic information for AnalyticDB for PostgreSQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-        /// This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</para>
+        /// <para>To view download records, you must first call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information.
+        /// This feature is available only for storage-elastic instances that run kernel minor version V6.3.10.1 or later. For more information about how to view and update the kernel minor version, see <a href="https://help.aliyun.com/document_detail/277424.html">View the kernel minor version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Upgrade the kernel version</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18658,13 +19325,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the download records of query diagnostic information for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Queries the download records for query diagnostic information for AnalyticDB for PostgreSQL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information before you can call this operation to query the download records and download URLs.
-        /// This operation is available only for instances of V6.3.10.1 or later in elastic storage mode. For information about how to view and update the minor version of an instance, see <a href="https://help.aliyun.com/document_detail/277424.html">View the minor engine version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Update the minor engine version</a>.</para>
+        /// <para>To view download records, you must first call the <a href="https://help.aliyun.com/document_detail/447700.html">DownloadDiagnosisRecords</a> operation to download the query diagnostic information.
+        /// This feature is available only for storage-elastic instances that run kernel minor version V6.3.10.1 or later. For more information about how to view and update the kernel minor version, see <a href="https://help.aliyun.com/document_detail/277424.html">View the kernel minor version</a> and <a href="https://help.aliyun.com/document_detail/139271.html">Upgrade the kernel version</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19074,7 +19741,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</para>
+        /// <para>Retrieves E-MapReduce (EMR) clusters in the same Virtual Private Cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19120,7 +19787,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</para>
+        /// <para>Retrieves E-MapReduce (EMR) clusters in the same Virtual Private Cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19166,7 +19833,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</para>
+        /// <para>Retrieves E-MapReduce (EMR) clusters in the same Virtual Private Cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19184,7 +19851,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of E-MapReduce (EMR) clusters in a virtual private cloud (VPC).</para>
+        /// <para>Retrieves E-MapReduce (EMR) clusters in the same Virtual Private Cloud (VPC).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21498,14 +22165,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions and zones where AnalyticDB for PostgreSQL is available.</para>
+        /// <para>Queries the regions and zones where you can create AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.</para>
-        /// <h2>Limit</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you create an AnalyticDB for PostgreSQL instance, call this operation to query the available regions and zones.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21547,14 +22212,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions and zones where AnalyticDB for PostgreSQL is available.</para>
+        /// <para>Queries the regions and zones where you can create AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.</para>
-        /// <h2>Limit</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you create an AnalyticDB for PostgreSQL instance, call this operation to query the available regions and zones.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21596,14 +22259,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions and zones where AnalyticDB for PostgreSQL is available.</para>
+        /// <para>Queries the regions and zones where you can create AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.</para>
-        /// <h2>Limit</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you create an AnalyticDB for PostgreSQL instance, call this operation to query the available regions and zones.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21621,14 +22282,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions and zones where AnalyticDB for PostgreSQL is available.</para>
+        /// <para>Queries the regions and zones where you can create AnalyticDB for PostgreSQL instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create an AnalyticDB for PostgreSQL instance, you must call this operation to query available regions and zones.</para>
-        /// <h2>Limit</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered and may affect your business. We recommend that you take note of the limit when you call this operation.</para>
+        /// <para>Before you create an AnalyticDB for PostgreSQL instance, call this operation to query the available regions and zones.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21774,12 +22433,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of audit logs for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Obtain the quantity of audit logs for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.</para>
+        /// <para>This API does not support instances of the storage-reserved type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21869,12 +22528,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of audit logs for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Obtain the quantity of audit logs for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.</para>
+        /// <para>This API does not support instances of the storage-reserved type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21964,12 +22623,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of audit logs for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Obtain the quantity of audit logs for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.</para>
+        /// <para>This API does not support instances of the storage-reserved type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21987,12 +22646,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the number of audit logs for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Obtain the quantity of audit logs for an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.</para>
+        /// <para>This API does not support instances of the storage-reserved type.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -23230,7 +23889,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a table.</para>
+        /// <para>View table details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23300,7 +23959,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a table.</para>
+        /// <para>View table details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23370,7 +24029,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a table.</para>
+        /// <para>View table details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23388,7 +24047,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a table.</para>
+        /// <para>View table details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25418,7 +26077,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes SQL statements.</para>
+        /// <para>Execute an SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25520,7 +26179,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes SQL statements.</para>
+        /// <para>Execute an SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25622,7 +26281,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes SQL statements.</para>
+        /// <para>Execute an SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25640,7 +26299,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes SQL statements.</para>
+        /// <para>Execute an SQL statement.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25954,6 +26613,154 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取SaaS服务信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSaasServiceResponse
+        /// </returns>
+        public GetSaasServiceResponse GetSaasServiceWithOptions(GetSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSaasServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SaaS服务信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSaasServiceResponse
+        /// </returns>
+        public async Task<GetSaasServiceResponse> GetSaasServiceWithOptionsAsync(GetSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSaasServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SaaS服务信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSaasServiceResponse
+        /// </returns>
+        public GetSaasServiceResponse GetSaasService(GetSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSaasServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SaaS服务信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>删除模型服务。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSaasServiceResponse
+        /// </returns>
+        public async Task<GetSaasServiceResponse> GetSaasServiceAsync(GetSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSaasServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the information about an access credential.</para>
         /// </summary>
         /// 
@@ -26110,6 +26917,166 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetSecretValueWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SaaS服务访问信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用说明</h2>
+        /// <para>本接口用于查看所有模型服务信息。</para>
+        /// <h2>QPS限制</h2>
+        /// <para>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceAccessInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceAccessInfoResponse
+        /// </returns>
+        public GetServiceAccessInfoResponse GetServiceAccessInfoWithOptions(GetServiceAccessInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceAccessInfo",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceAccessInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SaaS服务访问信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用说明</h2>
+        /// <para>本接口用于查看所有模型服务信息。</para>
+        /// <h2>QPS限制</h2>
+        /// <para>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceAccessInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceAccessInfoResponse
+        /// </returns>
+        public async Task<GetServiceAccessInfoResponse> GetServiceAccessInfoWithOptionsAsync(GetServiceAccessInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceId))
+            {
+                query["ServiceId"] = request.ServiceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceAccessInfo",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceAccessInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SaaS服务访问信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用说明</h2>
+        /// <para>本接口用于查看所有模型服务信息。</para>
+        /// <h2>QPS限制</h2>
+        /// <para>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceAccessInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceAccessInfoResponse
+        /// </returns>
+        public GetServiceAccessInfoResponse GetServiceAccessInfo(GetServiceAccessInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetServiceAccessInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取SaaS服务访问信息</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>使用说明</h2>
+        /// <para>本接口用于查看所有模型服务信息。</para>
+        /// <h2>QPS限制</h2>
+        /// <para>本接口的单用户QPS限制默认为1000次/秒。超过限制，API调用会被限流，这可能会影响您的业务，请合理调用。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceAccessInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceAccessInfoResponse
+        /// </returns>
+        public async Task<GetServiceAccessInfoResponse> GetServiceAccessInfoAsync(GetServiceAccessInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetServiceAccessInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -26274,12 +27241,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and status information for a specific Supabase instance.</para>
+        /// <para>Retrieves details of a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is used to query the details of a Supabase instance.</para>
+        /// <para>Gets the details of a Supabase instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26325,12 +27292,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and status information for a specific Supabase instance.</para>
+        /// <para>Retrieves details of a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is used to query the details of a Supabase instance.</para>
+        /// <para>Gets the details of a Supabase instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26376,12 +27343,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and status information for a specific Supabase instance.</para>
+        /// <para>Retrieves details of a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is used to query the details of a Supabase instance.</para>
+        /// <para>Gets the details of a Supabase instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26399,12 +27366,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed configuration and status information for a specific Supabase instance.</para>
+        /// <para>Retrieves details of a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This interface is used to query the details of a Supabase instance.</para>
+        /// <para>Gets the details of a Supabase instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26422,12 +27389,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API keys and JWT secrets of a Supabase instance.</para>
+        /// <para>Queries the API keys and JWT secrets for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query a list of API keys for a Supabase project.</para>
+        /// <para>This operation queries the API keys and JWT secrets for a Supabase instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26473,12 +27440,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API keys and JWT secrets of a Supabase instance.</para>
+        /// <para>Queries the API keys and JWT secrets for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query a list of API keys for a Supabase project.</para>
+        /// <para>This operation queries the API keys and JWT secrets for a Supabase instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26524,12 +27491,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API keys and JWT secrets of a Supabase instance.</para>
+        /// <para>Queries the API keys and JWT secrets for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query a list of API keys for a Supabase project.</para>
+        /// <para>This operation queries the API keys and JWT secrets for a Supabase instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -26547,12 +27514,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API keys and JWT secrets of a Supabase instance.</para>
+        /// <para>Queries the API keys and JWT secrets for a Supabase instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can call this operation to query a list of API keys for a Supabase project.</para>
+        /// <para>This operation queries the API keys and JWT secrets for a Supabase instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -27626,12 +28593,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AI nodes.</para>
+        /// <para>Queries a list of AINode resource pools.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation queries a list of AI nodes.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation lists the AINode resource pools for the specified instance.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -27677,12 +28646,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AI nodes.</para>
+        /// <para>Queries a list of AINode resource pools.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation queries a list of AI nodes.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation lists the AINode resource pools for the specified instance.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -27728,12 +28699,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AI nodes.</para>
+        /// <para>Queries a list of AINode resource pools.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation queries a list of AI nodes.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation lists the AINode resource pools for the specified instance.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -27751,12 +28724,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AI nodes.</para>
+        /// <para>Queries a list of AINode resource pools.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  This operation queries a list of AI nodes.</para>
+        /// <list type="bullet">
+        /// <item><description>This operation lists the AINode resource pools for the specified instance.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -27774,7 +28749,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 AI 服务列表</para>
+        /// <para>Lists AI services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27828,7 +28803,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 AI 服务列表</para>
+        /// <para>Lists AI services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27882,7 +28857,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 AI 服务列表</para>
+        /// <para>Lists AI services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27900,7 +28875,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取 AI 服务列表</para>
+        /// <para>Lists AI services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28046,7 +29021,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文本块详情</para>
+        /// <para>Get document chunk details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28124,7 +29099,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文本块详情</para>
+        /// <para>Get document chunk details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28202,7 +29177,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文本块详情</para>
+        /// <para>Get document chunk details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28220,7 +29195,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取文本块详情</para>
+        /// <para>Get document chunk details</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28694,7 +29669,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of document collections.</para>
+        /// <para>Lists document collections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28752,7 +29727,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of document collections.</para>
+        /// <para>Lists document collections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28810,7 +29785,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of document collections.</para>
+        /// <para>Lists document collections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28828,7 +29803,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of document collections.</para>
+        /// <para>Lists document collections.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30246,6 +31221,182 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Query SaaS Service List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage Notes</h2>
+        /// <para>This API operation is used to view information about all SaaS services.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasServiceResponse
+        /// </returns>
+        public ListSaasServiceResponse ListSaasServiceWithOptions(ListSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSaasServiceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query SaaS Service List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage Notes</h2>
+        /// <para>This API operation is used to view information about all SaaS services.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSaasServiceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasServiceResponse
+        /// </returns>
+        public async Task<ListSaasServiceResponse> ListSaasServiceWithOptionsAsync(ListSaasServiceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceType))
+            {
+                query["ServiceType"] = request.ServiceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSaasService",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSaasServiceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query SaaS Service List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage Notes</h2>
+        /// <para>This API operation is used to view information about all SaaS services.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasServiceResponse
+        /// </returns>
+        public ListSaasServiceResponse ListSaasService(ListSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSaasServiceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query SaaS Service List</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage Notes</h2>
+        /// <para>This API operation is used to view information about all SaaS services.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSaasServiceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSaasServiceResponse
+        /// </returns>
+        public async Task<ListSaasServiceResponse> ListSaasServiceAsync(ListSaasServiceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSaasServiceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries a list of schemas.</para>
         /// </summary>
         /// 
@@ -30422,7 +31573,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access credentials.</para>
+        /// <para>View the access credential list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30476,7 +31627,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access credentials.</para>
+        /// <para>View the access credential list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30530,7 +31681,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access credentials.</para>
+        /// <para>View the access credential list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30548,7 +31699,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access credentials.</para>
+        /// <para>View the access credential list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31206,8 +32357,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the label List of Supabase instances</para>
+        /// <para>Lists the tags of Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the tags of Supabase instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupabaseProjectTagsRequest
@@ -31264,8 +32422,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the label List of Supabase instances</para>
+        /// <para>Lists the tags of Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the tags of Supabase instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupabaseProjectTagsRequest
@@ -31322,8 +32487,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the label List of Supabase instances</para>
+        /// <para>Lists the tags of Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the tags of Supabase instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupabaseProjectTagsRequest
@@ -31340,8 +32512,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the label List of Supabase instances</para>
+        /// <para>Lists the tags of Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation queries the tags of Supabase instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListSupabaseProjectTagsRequest
@@ -31358,12 +32537,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of Supabase instances in your account. You can filter the list by region.</para>
+        /// <para>Returns a list of Supabase instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query Supabase instances.</para>
+        /// <list type="bullet">
+        /// <item><description>Lists Supabase instances.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -31437,12 +32618,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of Supabase instances in your account. You can filter the list by region.</para>
+        /// <para>Returns a list of Supabase instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query Supabase instances.</para>
+        /// <list type="bullet">
+        /// <item><description>Lists Supabase instances.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -31516,12 +32699,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of Supabase instances in your account. You can filter the list by region.</para>
+        /// <para>Returns a list of Supabase instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query Supabase instances.</para>
+        /// <list type="bullet">
+        /// <item><description>Lists Supabase instances.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -31539,12 +32724,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a paginated list of Supabase instances in your account. You can filter the list by region.</para>
+        /// <para>Returns a list of Supabase instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>  You can call this operation to query Supabase instances.</para>
+        /// <list type="bullet">
+        /// <item><description>Lists Supabase instances.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -31886,7 +33073,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</para>
+        /// <para>List all tag resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31960,7 +33147,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</para>
+        /// <para>List all tag resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32034,7 +33221,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</para>
+        /// <para>List all tag resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32052,7 +33239,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of AnalyticDB for PostgreSQL instances that have specific tags added.</para>
+        /// <para>List all tag resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32070,7 +33257,183 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改 AI 服务白名单</para>
+        /// <para>Queries the list of SaaS workspaces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about all workspaces.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
+        public ListWorkspacesResponse ListWorkspacesWithOptions(ListWorkspacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkspaces",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkspacesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of SaaS workspaces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about all workspaces.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
+        public async Task<ListWorkspacesResponse> ListWorkspacesWithOptionsAsync(ListWorkspacesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListWorkspaces",
+                Version = "2016-05-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListWorkspacesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of SaaS workspaces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about all workspaces.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
+        public ListWorkspacesResponse ListWorkspaces(ListWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListWorkspacesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of SaaS workspaces.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>This operation is used to query information about all workspaces.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListWorkspacesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListWorkspacesResponse
+        /// </returns>
+        public async Task<ListWorkspacesResponse> ListWorkspacesAsync(ListWorkspacesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListWorkspacesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the IP address whitelist for an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32124,7 +33487,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改 AI 服务白名单</para>
+        /// <para>Modifies the IP address whitelist for an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32178,7 +33541,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改 AI 服务白名单</para>
+        /// <para>Modifies the IP address whitelist for an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32196,7 +33559,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改 AI 服务白名单</para>
+        /// <para>Modifies the IP address whitelist for an AI service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32518,7 +33881,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a collection.</para>
+        /// <para>Updates a vector collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32588,7 +33951,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a collection.</para>
+        /// <para>Updates a vector collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32658,7 +34021,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a collection.</para>
+        /// <para>Updates a vector collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32676,7 +34039,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a collection.</para>
+        /// <para>Updates a vector collection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35670,7 +37033,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an external data source.</para>
+        /// <para>Modify a real-time data service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35728,7 +37091,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an external data source.</para>
+        /// <para>Modify a real-time data service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35786,7 +37149,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an external data source.</para>
+        /// <para>Modify a real-time data service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35804,7 +37167,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configurations of an external data source.</para>
+        /// <para>Modify a real-time data service.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36282,8 +37645,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the auto pause/resume policy of Supabase.</para>
+        /// <para>Modifies the auto-scaling policy of an ADBPG Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation applies only to ADBPG Supabase instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseAutoScalePolicyRequest
@@ -36332,8 +37702,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the auto pause/resume policy of Supabase.</para>
+        /// <para>Modifies the auto-scaling policy of an ADBPG Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation applies only to ADBPG Supabase instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseAutoScalePolicyRequest
@@ -36382,8 +37759,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the auto pause/resume policy of Supabase.</para>
+        /// <para>Modifies the auto-scaling policy of an ADBPG Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation applies only to ADBPG Supabase instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseAutoScalePolicyRequest
@@ -36400,8 +37784,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the auto pause/resume policy of Supabase.</para>
+        /// <para>Modifies the auto-scaling policy of an ADBPG Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation applies only to ADBPG Supabase instances.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseAutoScalePolicyRequest
@@ -36418,8 +37809,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the Supabase project description</para>
+        /// <para>Change the Supabase project description</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*Before you use this operation, make sure you fully understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL (Supabase)**.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectDescriptionRequest
@@ -36468,8 +37864,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the Supabase project description</para>
+        /// <para>Change the Supabase project description</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*Before you use this operation, make sure you fully understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL (Supabase)**.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectDescriptionRequest
@@ -36518,8 +37919,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the Supabase project description</para>
+        /// <para>Change the Supabase project description</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*Before you use this operation, make sure you fully understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL (Supabase)**.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectDescriptionRequest
@@ -36536,8 +37942,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the Supabase project description</para>
+        /// <para>Change the Supabase project description</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>*Before you use this operation, make sure you fully understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> of AnalyticDB for PostgreSQL (Supabase)**.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectDescriptionRequest
@@ -36554,8 +37965,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</para>
+        /// <para>Scales the compute resource or expands the storage resource (cloud disk size) for a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> for AnalyticDB PostgreSQL Supabase.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectResourceRequest
@@ -36612,8 +38028,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</para>
+        /// <para>Scales the compute resource or expands the storage resource (cloud disk size) for a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> for AnalyticDB PostgreSQL Supabase.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectResourceRequest
@@ -36670,8 +38091,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</para>
+        /// <para>Scales the compute resource or expands the storage resource (cloud disk size) for a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> for AnalyticDB PostgreSQL Supabase.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectResourceRequest
@@ -36688,8 +38114,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the resources of a Supabase instance. You can upgrade or decrease the quota of compute resources and scale out storage resources (disk size).</para>
+        /// <para>Scales the compute resource or expands the storage resource (cloud disk size) for a Supabase project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Before calling this operation, ensure you understand the billing methods and <a href="https://help.aliyun.com/zh/analyticdb/analyticdb-for-postgresql/product-overview/pricing-1?spm=a2c4g.11186623.help-menu-92664.d_0_1_2.45b3601145cikn%5C&scm=20140722.H_88098._.OR_help-T_cn~zh-V_1#9eefcc7b5acz1">pricing</a> for AnalyticDB PostgreSQL Supabase.</em>*</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifySupabaseProjectResourceRequest
@@ -36706,12 +38137,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
+        /// <para>Modifies the IP address whitelist for a Supabase project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</para>
+        /// <para>Before you use a Supabase instance, you must add the client\&quot;s IP address or IP address segment to the instance\&quot;s whitelist.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36769,12 +38200,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
+        /// <para>Modifies the IP address whitelist for a Supabase project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</para>
+        /// <para>Before you use a Supabase instance, you must add the client\&quot;s IP address or IP address segment to the instance\&quot;s whitelist.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36832,12 +38263,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
+        /// <para>Modifies the IP address whitelist for a Supabase project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</para>
+        /// <para>Before you use a Supabase instance, you must add the client\&quot;s IP address or IP address segment to the instance\&quot;s whitelist.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36855,12 +38286,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets or replaces the IP address whitelist for a specified Supabase project.</para>
+        /// <para>Modifies the IP address whitelist for a Supabase project.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you can connect to a Supabase project, you must add your client\&quot;s IP address or CIDR block to the project\&quot;s whitelist.</para>
+        /// <para>Before you use a Supabase instance, you must add the client\&quot;s IP address or IP address segment to the instance\&quot;s whitelist.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37314,8 +38745,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停Supabase实例</para>
+        /// <para>Pauses a Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation pauses a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseSupabaseProjectRequest
@@ -37360,8 +38796,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停Supabase实例</para>
+        /// <para>Pauses a Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation pauses a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseSupabaseProjectRequest
@@ -37406,8 +38847,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停Supabase实例</para>
+        /// <para>Pauses a Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation pauses a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseSupabaseProjectRequest
@@ -37424,8 +38870,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停Supabase实例</para>
+        /// <para>Pauses a Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation pauses a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseSupabaseProjectRequest
@@ -37442,7 +38893,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Vector Data</para>
+        /// <para>Retrieving vector data.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37584,7 +39035,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Vector Data</para>
+        /// <para>Retrieving vector data.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37726,7 +39177,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Vector Data</para>
+        /// <para>Retrieving vector data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37744,7 +39195,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Vector Data</para>
+        /// <para>Retrieving vector data.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37762,7 +39213,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves vector data and metadata from a document collection by using natural statements.</para>
+        /// <para>Query a document collection with natural language to retrieve vectors and metadata.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -37924,7 +39375,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves vector data and metadata from a document collection by using natural statements.</para>
+        /// <para>Query a document collection with natural language to retrieve vectors and metadata.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38086,7 +39537,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves vector data and metadata from a document collection by using natural statements.</para>
+        /// <para>Query a document collection with natural language to retrieve vectors and metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38104,7 +39555,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves vector data and metadata from a document collection by using natural statements.</para>
+        /// <para>Query a document collection with natural language to retrieve vectors and metadata.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38314,7 +39765,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves vectors and metadata from multiple specified document collections using natural language queries, then merge and return the results from all retrieval paths.</para>
+        /// <para>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38406,7 +39857,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves vectors and metadata from multiple specified document collections using natural language queries, then merge and return the results from all retrieval paths.</para>
+        /// <para>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -38498,7 +39949,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves vectors and metadata from multiple specified document collections using natural language queries, then merge and return the results from all retrieval paths.</para>
+        /// <para>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38516,7 +39967,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves vectors and metadata from multiple specified document collections using natural language queries, then merge and return the results from all retrieval paths.</para>
+        /// <para>Retrieve vectors and metadata from specified knowledge bases using a natural-language query, returning the merged results from a multi-channel recall.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39882,8 +41333,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复Supabase实例</para>
+        /// <para>Resumes a Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves details about a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeSupabaseProjectRequest
@@ -39928,8 +41384,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复Supabase实例</para>
+        /// <para>Resumes a Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves details about a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeSupabaseProjectRequest
@@ -39974,8 +41435,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复Supabase实例</para>
+        /// <para>Resumes a Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves details about a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeSupabaseProjectRequest
@@ -39992,8 +41458,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复Supabase实例</para>
+        /// <para>Resumes a Supabase instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation retrieves details about a Supabase instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeSupabaseProjectRequest
@@ -40182,14 +41653,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables data sharing for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Add or remove an AnalyticDB for PostgreSQL instance from data sharing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>Only Serverless instances support the data sharing feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -40249,14 +41718,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables data sharing for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Add or remove an AnalyticDB for PostgreSQL instance from data sharing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>Only Serverless instances support the data sharing feature.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -40316,14 +41783,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables data sharing for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Add or remove an AnalyticDB for PostgreSQL instance from data sharing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>Only Serverless instances support the data sharing feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40341,14 +41806,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables data sharing for an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Add or remove an AnalyticDB for PostgreSQL instance from data sharing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is called to enable or disable data sharing for an AnalyticDB for PostgreSQL instance in Serverless mode.</para>
-        /// <h2>Limits</h2>
-        /// <para>You can call this operation up to 1,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</para>
+        /// <para>Only Serverless instances support the data sharing feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -40522,7 +41985,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and adds tags to AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Create and attach tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40592,7 +42055,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and adds tags to AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Create and attach tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40662,7 +42125,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and adds tags to AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Create and attach tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40680,7 +42143,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates and adds tags to AnalyticDB for PostgreSQL instances.</para>
+        /// <para>Create and attach tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40698,8 +42161,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supabase project labeling</para>
+        /// <para>Adds tags to Supabase project instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds or overwrites tags on one or more Supabase instances. If a specified tag key already exists, its value is overwritten with the new value.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagSupabaseProjectRequest
@@ -40752,8 +42220,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supabase project labeling</para>
+        /// <para>Adds tags to Supabase project instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds or overwrites tags on one or more Supabase instances. If a specified tag key already exists, its value is overwritten with the new value.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagSupabaseProjectRequest
@@ -40806,8 +42279,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supabase project labeling</para>
+        /// <para>Adds tags to Supabase project instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds or overwrites tags on one or more Supabase instances. If a specified tag key already exists, its value is overwritten with the new value.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagSupabaseProjectRequest
@@ -40824,8 +42302,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Supabase project labeling</para>
+        /// <para>Adds tags to Supabase project instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Adds or overwrites tags on one or more Supabase instances. If a specified tag key already exists, its value is overwritten with the new value.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// TagSupabaseProjectRequest
@@ -41514,8 +42997,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detach labels from a Supabase instance</para>
+        /// <para>Removes tags from one or more Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation removes one or more specified tags from Supabase instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UntagSupabaseProjectRequest
@@ -41572,8 +43060,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detach labels from a Supabase instance</para>
+        /// <para>Removes tags from one or more Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation removes one or more specified tags from Supabase instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UntagSupabaseProjectRequest
@@ -41630,8 +43123,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detach labels from a Supabase instance</para>
+        /// <para>Removes tags from one or more Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation removes one or more specified tags from Supabase instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UntagSupabaseProjectRequest
@@ -41648,8 +43146,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Detach labels from a Supabase instance</para>
+        /// <para>Removes tags from one or more Supabase instances.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation removes one or more specified tags from Supabase instances.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UntagSupabaseProjectRequest
@@ -42082,13 +43585,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Changes the specifications of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.
-        /// Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</para>
+        /// <para>This operation does not support modifying instances in storage-reserved mode.
+        /// Before you call this operation, ensure you understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42190,13 +43693,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Changes the specifications of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.
-        /// Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</para>
+        /// <para>This operation does not support modifying instances in storage-reserved mode.
+        /// Before you call this operation, ensure you understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42298,13 +43801,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Changes the specifications of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.
-        /// Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</para>
+        /// <para>This operation does not support modifying instances in storage-reserved mode.
+        /// Before you call this operation, ensure you understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42322,13 +43825,13 @@ namespace AlibabaCloud.SDK.Gpdb20160503
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the configurations of an AnalyticDB for PostgreSQL instance.</para>
+        /// <para>Changes the specifications of an AnalyticDB for PostgreSQL instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is not available for instances in reserved storage mode.
-        /// Before you call this operation, make sure that you are familiar with the billing of AnalyticDB for PostgreSQL. For more information, see <a href="https://help.aliyun.com/document_detail/35406.html">Billing methods</a> and <a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">AnalyticDB for PostgreSQL pricing</a>.</para>
+        /// <para>This operation does not support modifying instances in storage-reserved mode.
+        /// Before you call this operation, ensure you understand the <a href="https://help.aliyun.com/document_detail/35406.html">billing methods</a> and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/gpdb/detail/GreenplumPost">pricing</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/product/hybriddb-postgresql/pricing">pricing</a> of AnalyticDB for PostgreSQL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -43421,6 +44924,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <para>Uploads vector data to a vector collection.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// <b>SDK于2023-11-8日升级，从最大512KB数据请求量升级到10MB。</b>
+        /// 请使用最新版SDK或不低于此版本：</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Java：1.2.1 </description></item>
+        /// <item><description>Go：v3.3.1 </description></item>
+        /// <item><description>Python：3.3.1</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="tmpReq">
         /// UpsertCollectionDataRequest
         /// </param>
@@ -43498,6 +45015,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <summary>
         /// <para>Uploads vector data to a vector collection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// <b>SDK于2023-11-8日升级，从最大512KB数据请求量升级到10MB。</b>
+        /// 请使用最新版SDK或不低于此版本：</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Java：1.2.1 </description></item>
+        /// <item><description>Go：v3.3.1 </description></item>
+        /// <item><description>Python：3.3.1</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpsertCollectionDataRequest
@@ -43577,6 +45108,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <para>Uploads vector data to a vector collection.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// <b>SDK于2023-11-8日升级，从最大512KB数据请求量升级到10MB。</b>
+        /// 请使用最新版SDK或不低于此版本：</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Java：1.2.1 </description></item>
+        /// <item><description>Go：v3.3.1 </description></item>
+        /// <item><description>Python：3.3.1</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpsertCollectionDataRequest
         /// </param>
@@ -43594,6 +45139,20 @@ namespace AlibabaCloud.SDK.Gpdb20160503
         /// <summary>
         /// <para>Uploads vector data to a vector collection.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// <b>SDK于2023-11-8日升级，从最大512KB数据请求量升级到10MB。</b>
+        /// 请使用最新版SDK或不低于此版本：</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Java：1.2.1 </description></item>
+        /// <item><description>Go：v3.3.1 </description></item>
+        /// <item><description>Python：3.3.1</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpsertCollectionDataRequest

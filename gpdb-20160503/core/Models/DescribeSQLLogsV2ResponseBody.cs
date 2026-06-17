@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The ID of the session.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>efc33bd7-f1dc-4b24-b4fb-ab0d5329b7bb</para>
+            /// <para>3a74656836ec5255a4793def0a447b02</para>
             /// </summary>
             [NameInMap("SessionId")]
             [Validation(Required=false)]

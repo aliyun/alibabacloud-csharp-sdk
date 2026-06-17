@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDataSharePerformanceRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The end of the time range to query. The time must be later than the start time, in UTC, and in the <em>&#x79;**\</em>\<em>\</em>\***&#x64;*&#x54;<em>HH:mm</em>Z format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-03T15:10Z</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the performance metric. Separate multiple values with commas (,). Valid values:</para>
+        /// <para>The name of the performance metric. To specify multiple metrics, separate the metric names with a comma (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>adbpg_datashare_topic_count</b>: the number of shared topics.</description></item>
-        /// <item><description><b>adbpg_datashare_data_size_mb</b>: the amount of data shared.</description></item>
+        /// <item><description><para><b>adbpg_datashare_topic_count</b>: the number of shared topics.</para>
+        /// </description></item>
+        /// <item><description><para><b>adbpg_datashare_data_size_mb</b>: the size of shared data in MB.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,9 +37,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,17 +51,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-bp67acfmxazb4p****</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format. The time must be in UTC.</para>
+        /// <para>The start of the time range to query. The time must be in UTC and in the <em>yyyy-MM-dd</em>T<em>HH:mm</em>Z format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-03T15:00Z</para>

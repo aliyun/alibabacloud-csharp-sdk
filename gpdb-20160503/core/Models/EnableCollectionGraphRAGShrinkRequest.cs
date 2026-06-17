@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>If the knowledge graph construction is enabled, this parameter is required.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Location</para>
         /// </summary>
         [NameInMap("EntityTypes")]
         [Validation(Required=false)]
@@ -163,6 +166,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>If the knowledge graph construction is enabled, this parameter is required.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Occurred</para>
         /// </summary>
         [NameInMap("RelationshipTypes")]
         [Validation(Required=false)]

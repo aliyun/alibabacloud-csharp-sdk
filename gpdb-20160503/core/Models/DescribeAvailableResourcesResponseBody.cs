@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID.</para>
+        /// <para>The available resources.</para>
         /// </summary>
         [NameInMap("Resources")]
         [Validation(Required=false)]
         public List<DescribeAvailableResourcesResponseBodyResources> Resources { get; set; }
         public class DescribeAvailableResourcesResponseBodyResources : TeaModel {
             /// <summary>
-            /// <para>The available engine version and specifications.</para>
+            /// <para>Details of the supported engines and instance types.</para>
             /// </summary>
             [NameInMap("SupportedEngines")]
             [Validation(Required=false)]
@@ -46,8 +46,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 /// <summary>
                 /// <para>The instance resource type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>ecs</b>: elastic storage mode</description></item>
-                /// <item><description><b>serverless</b>: Serverless mode</description></item>
+                /// <item><description><para><b>ecs</b>: Elastic storage mode.</para>
+                /// </description></item>
+                /// <item><description><para><b>serverless</b>: Serverless mode.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Mode { get; set; }
 
                 /// <summary>
-                /// <para>The available engine version.</para>
+                /// <para>The supported engine version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6.0</para>
@@ -68,17 +70,19 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string SupportedEngineVersion { get; set; }
 
                 /// <summary>
-                /// <para>The available specifications.</para>
+                /// <para>The supported instance types.</para>
                 /// </summary>
                 [NameInMap("SupportedInstanceClasses")]
                 [Validation(Required=false)]
                 public List<DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses> SupportedInstanceClasses { get; set; }
                 public class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClasses : TeaModel {
                     /// <summary>
-                    /// <para>The instance edition. Valid values:</para>
+                    /// <para>The instance series. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>HighAvailability</b>: High-availability Edition</description></item>
-                    /// <item><description><b>Basic</b>: Basic Edition</description></item>
+                    /// <item><description><para><b>HighAvailability</b>: High-availability edition.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>Basic</b>: Basic edition</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -89,17 +93,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string Category { get; set; }
 
                     /// <summary>
-                    /// <para>The description of compute node specifications.</para>
+                    /// <para>The description of the segment node instance type.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>2C16G</para>
+                    /// <para>Single-segment node with 2 cores and 16 GB of memory.</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>The specifications of each compute node.</para>
+                    /// <para>The display name of the segment node instance type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2C16G</para>
@@ -109,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string DisplayClass { get; set; }
 
                     /// <summary>
-                    /// <para>The specifications of each compute node.</para>
+                    /// <para>The instance type of the segment node.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2C16G</para>
@@ -119,14 +123,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     public string InstanceClass { get; set; }
 
                     /// <summary>
-                    /// <para>Details about the compute nodes.</para>
+                    /// <para>Details of the segment nodes.</para>
                     /// </summary>
                     [NameInMap("NodeCount")]
                     [Validation(Required=false)]
                     public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount NodeCount { get; set; }
                     public class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesNodeCount : TeaModel {
                         /// <summary>
-                        /// <para>The maximum number of compute nodes.</para>
+                        /// <para>The maximum number of Segment nodes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>256</para>
@@ -136,7 +140,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public string MaxCount { get; set; }
 
                         /// <summary>
-                        /// <para>The minimum number of compute nodes.</para>
+                        /// <para>The minimum number of Segment nodes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>4</para>
@@ -146,8 +150,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public string MinCount { get; set; }
 
                         /// <summary>
-                        /// <para>The step size for adding compute nodes.</para>
-                        /// <para>For example, if the value of this parameter is 4, compute nodes must be added by multiples of 4.</para>
+                        /// <para>The step size for adding nodes.</para>
+                        /// <para>For example, if this parameter is set to 4, the number of nodes added must be a multiple of 4 when adding Segment nodes.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>4</para>
@@ -159,14 +163,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     }
 
                     /// <summary>
-                    /// <para>Details about the storage capacity of compute nodes.</para>
+                    /// <para>The Segment storage capacity.</para>
                     /// </summary>
                     [NameInMap("StorageSize")]
                     [Validation(Required=false)]
                     public DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize StorageSize { get; set; }
                     public class DescribeAvailableResourcesResponseBodyResourcesSupportedEnginesSupportedInstanceClassesStorageSize : TeaModel {
                         /// <summary>
-                        /// <para>The maximum storage capacity of each compute node.</para>
+                        /// <para>The maximum Segment storage capacity.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1000</para>
@@ -176,7 +180,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public string MaxCount { get; set; }
 
                         /// <summary>
-                        /// <para>The minimum storage capacity of each compute node.</para>
+                        /// <para>The minimum Segment storage capacity.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>50</para>
@@ -186,7 +190,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                         public string MinCount { get; set; }
 
                         /// <summary>
-                        /// <para>The step size for adding storage capacity for compute nodes.</para>
+                        /// <para>The Segment storage expansion step size.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>50</para>
@@ -200,9 +204,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                     /// <summary>
                     /// <para>The storage type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>cloud_essd</b>: enhanced SSD (ESSD)</description></item>
-                    /// <item><description><b>cloud_efficiency</b>: ultra disk</description></item>
-                    /// <item><description><b>oss</b>: Object Storage Service (OSS)</description></item>
+                    /// <item><description><para><b>cloud_essd</b>: ESSD cloud disk.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>cloud_efficiency</b>: Standard cloud disk.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>oss</b>:OSS.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -217,7 +224,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The ID of the zone.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-h</para>

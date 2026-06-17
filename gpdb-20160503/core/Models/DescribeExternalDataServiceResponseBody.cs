@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The description of the service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-adbpgss</para>
+        /// <para>pxf test</para>
         /// </summary>
         [NameInMap("ServiceDescription")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The name of the service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test-adbpgss</para>
+        /// <para>test-pxf</para>
         /// </summary>
         [NameInMap("ServiceName")]
         [Validation(Required=false)]
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The specifications of the service. Unit: compute units (CUs).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("ServiceSpec")]
         [Validation(Required=false)]

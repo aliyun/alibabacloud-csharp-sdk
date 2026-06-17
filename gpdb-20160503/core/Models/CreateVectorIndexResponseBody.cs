@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateVectorIndexResponseBody : TeaModel {
         /// <summary>
-        /// <para>Detailed information returned by the API.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -30,10 +30,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>API execution status. Value description:</para>
+        /// <para>The status of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: Execution succeeded.</description></item>
-        /// <item><description><b>fail</b>: Execution failed.</description></item>
+        /// <item><description><para><b>success</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>fail</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

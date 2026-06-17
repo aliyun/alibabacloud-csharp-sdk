@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The description of the configuration parameter.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Sets the maximum allowed duration of any statement, A value of 0 turns off the timeout.</para>
+            /// <para>Sets the maximum allowed duration of any statement，A value of 0 turns off the timeout.</para>
             /// </summary>
             [NameInMap("ParameterDescription")]
             [Validation(Required=false)]

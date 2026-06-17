@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySupabaseProjectResourceRequest : TeaModel {
         /// <summary>
+        /// <para>The modification type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ModifyType { get; set; }
 
         /// <summary>
+        /// <para>The Supabase project ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The new project specifications.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2C4G</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectSpec { get; set; }
 
         /// <summary>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The storage size, in GB.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

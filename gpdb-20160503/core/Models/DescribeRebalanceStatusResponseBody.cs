@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7F5B5023-94EA-5D5D-AB72-B7B356BA****</para>
+        /// <para>9C6122AD-2FCC-50B3-873A-37B68775****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The rebalance status of the instance. Valid values: Balanced and Imbalanced.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Init</para>
+        /// <para>Balanced</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

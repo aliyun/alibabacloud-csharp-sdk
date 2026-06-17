@@ -44,14 +44,38 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public List<object> Parameters { get; set; }
 
+        /// <summary>
+        /// <para>Parameters for the vector dataset.  </para>
+        /// <remarks>
+        /// <para>When WorkspaceId is not empty, you must also pass this parameter.</para>
+        /// </remarks>
+        /// </summary>
         [NameInMap("RagWorkspaceCollection")]
         [Validation(Required=false)]
         public ExecuteStatementRequestRagWorkspaceCollection RagWorkspaceCollection { get; set; }
         public class ExecuteStatementRequestRagWorkspaceCollection : TeaModel {
+            /// <summary>
+            /// <para>Collection name.  </para>
+            /// <remarks>
+            /// <para>You can view the list by using the <a href="https://help.aliyun.com/document_detail/2401503.html">ListCollections</a> API.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mycollection</para>
+            /// </summary>
             [NameInMap("Collection")]
             [Validation(Required=false)]
             public string Collection { get; set; }
 
+            /// <summary>
+            /// <para>Namespace.  </para>
+            /// <remarks>
+            /// <para>You can view the list by using the <a href="https://help.aliyun.com/document_detail/2401502.html">ListNamespaces</a> API.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mynamespace</para>
+            /// </summary>
             [NameInMap("Namespace")]
             [Validation(Required=false)]
             public string Namespace { get; set; }
@@ -124,6 +148,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string StatementName { get; set; }
 
+        /// <summary>
+        /// <para>The ID of a workspace composed of multiple database instances. This parameter and DBInstanceId cannot both be empty. If both are specified, this parameter takes precedence.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>gp-ws-*****</para>
+        /// </summary>
         [NameInMap("WorkspaceId")]
         [Validation(Required=false)]
         public string WorkspaceId { get; set; }

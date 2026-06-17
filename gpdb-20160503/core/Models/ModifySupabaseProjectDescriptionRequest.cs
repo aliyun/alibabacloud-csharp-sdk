@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifySupabaseProjectDescriptionRequest : TeaModel {
         /// <summary>
+        /// <para>The detailed description of the Supabase project.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>for-test-project</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectDescription { get; set; }
 
         /// <summary>
+        /// <para>The Supabase instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sbp-twmoe9bakow</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

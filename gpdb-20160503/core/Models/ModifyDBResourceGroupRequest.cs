@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;CpuRateLimit&quot;:&quot;10&quot;,&quot;MemoryLimit&quot;:&quot;12&quot;,&quot;MemorySharedQuota&quot;:&quot;20&quot;,&quot;MemorySpillRatio&quot;:&quot;75&quot;,&quot;Concurrency&quot;:&quot;3&quot;}</para>
+            /// <para>{&quot;CpuRateLimit&quot;:10,&quot;MemoryLimit&quot;:12,&quot;MemorySharedQuota&quot;:20,&quot;MemorySpillRatio&quot;:75,&quot;Concurrency&quot;:3}</para>
             /// </summary>
             [NameInMap("ResourceGroupConfig")]
             [Validation(Required=false)]

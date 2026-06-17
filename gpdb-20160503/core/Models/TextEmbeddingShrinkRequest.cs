@@ -37,6 +37,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>A list of text content to be embedded. The list length must not exceed 100.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>What is ADBPG?</para>
         /// </summary>
         [NameInMap("Input")]
         [Validation(Required=false)]
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>text-embedding-v2</para>
+        /// <para>text-embedding-v3</para>
         /// </summary>
         [NameInMap("Model")]
         [Validation(Required=false)]

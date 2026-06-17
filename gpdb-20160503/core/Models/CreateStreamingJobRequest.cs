@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>Kafka group name</para>
         /// 
         /// <b>Example:</b>
-        /// <para>group_name.</para>
+        /// <para>group_name。</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

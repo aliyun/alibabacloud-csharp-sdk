@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ModifyCollectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Successful</para>
@@ -20,15 +20,15 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.</para>
+        /// <para>The metadata schema of the collection, returned as a JSON string. This string represents a map where keys are field names and values are their data types.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>For information about the supported data types, see <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a>.</para>
+        /// <item><description><para>See <a href="https://help.aliyun.com/document_detail/424383.html">Data types</a> for the list of supported data types.</para>
         /// </description></item>
-        /// <item><description><para>The money data type is not supported.</para>
+        /// <item><description><para>The \&quot;money\&quot; data type is not supported.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;title&quot;:&quot;text&quot;,&quot;content&quot;:&quot;text&quot;,&quot;response&quot;:&quot;int&quot;}</para>
@@ -48,10 +48,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>The status of the API request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>false</b></description></item>
-        /// <item><description><b>true</b></description></item>
+        /// <item><description><para><b>Other values</b>: The request failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>success</b>: The request was successful.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

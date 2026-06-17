@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>50578361067****</para>
+        /// <para>22719089834****</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

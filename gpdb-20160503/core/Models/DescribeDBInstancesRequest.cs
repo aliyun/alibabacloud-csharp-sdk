@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeDBInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The edition of the instance. Separate multiple values with commas (,).</para>
+        /// <para>The instance edition. You can specify multiple editions. Separate multiple editions with a comma (,).</para>
         /// </summary>
         [NameInMap("DBInstanceCategories")]
         [Validation(Required=false)]
         public List<string> DBInstanceCategories { get; set; }
 
         /// <summary>
-        /// <para>The description of the instance.</para>
+        /// <para>The instance description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceDescription { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. Separate multiple values with commas (,).</para>
+        /// <para>The instance IDs. Separate multiple IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp-bp12ga6v69h86****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The resource type of the instance. Separate multiple values with commas (,).</para>
+        /// <para>The resource type of the instance. You can specify multiple resource types. Separate multiple resource types with a comma (,).</para>
         /// </summary>
         [NameInMap("DBInstanceModes")]
         [Validation(Required=false)]
@@ -51,20 +51,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public List<string> DBInstanceStatuses { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <para>This parameter is deprecated. Do not specify this parameter.</para>
         /// </summary>
         [NameInMap("InstanceDeployTypes")]
         [Validation(Required=false)]
         public List<string> InstanceDeployTypes { get; set; }
 
         /// <summary>
-        /// <para>The network type of the instance. Valid values:</para>
+        /// <para>The instance network type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC).</description></item>
-        /// <item><description><b>Classic</b>: classic network.</description></item>
+        /// <item><description><para><b>VPC</b>: VPC</para>
+        /// </description></item>
+        /// <item><description><para><b>Classic</b>: classic network</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you do not specify this parameter, instances of all network types are returned.</para>
+        /// <para>If you omit this parameter, the operation returns instances of all network types.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -79,7 +81,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: <b>1</b>.</para>
+        /// <para>The page number. The value must be an integer that is greater than 0. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,11 +91,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values:</para>
+        /// <para>The number of entries to return on each page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>30</b></description></item>
-        /// <item><description><b>50</b></description></item>
-        /// <item><description><b>100</b></description></item>
+        /// <item><description><para><b>30</b></para>
+        /// </description></item>
+        /// <item><description><para><b>50</b></para>
+        /// </description></item>
+        /// <item><description><para><b>100</b></para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>30</b>.</para>
         /// 
@@ -105,9 +110,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID of the instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the available region IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -129,14 +134,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags of the instance.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDBInstancesRequestTag> Tag { get; set; }
         public class DescribeDBInstancesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-key</para>
@@ -146,7 +151,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-value</para>
@@ -158,7 +163,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>The VPC ID. You can use this parameter to filter instances that reside in the specified VPC.</para>
+        /// <para>The VPC ID. You can specify this parameter to query instances in a VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-t4nqyp3tc5mx7vy6****</para>

@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

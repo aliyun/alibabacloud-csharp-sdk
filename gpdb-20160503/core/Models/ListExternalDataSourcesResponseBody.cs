@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The type of the data source.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>HDFS</para>
+            /// <para>hdfs</para>
             /// </summary>
             [NameInMap("DataSourceType")]
             [Validation(Required=false)]

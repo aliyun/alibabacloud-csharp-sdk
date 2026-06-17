@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Intranet</para>
+        /// <para>primary</para>
         /// </summary>
         [NameInMap("AddressType")]
         [Validation(Required=false)]

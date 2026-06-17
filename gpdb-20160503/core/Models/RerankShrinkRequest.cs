@@ -25,6 +25,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 
         /// <summary>
         /// <para>List of documents to be re-ordered.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ADBPG is an Alibaba Cloud OLAP database.</para>
         /// </summary>
         [NameInMap("Documents")]
         [Validation(Required=false)]

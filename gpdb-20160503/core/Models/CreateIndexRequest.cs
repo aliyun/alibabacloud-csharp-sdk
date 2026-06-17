@@ -46,6 +46,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <item><description><para>gin: To create a GIN index, set the fastUpdate parameter to true or false. Default value: true.</para>
         /// </description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;b-tree&quot;:{&quot;fillFactor&quot;:90}} or {&quot;gin&quot;:{&quot;fastUpdate&quot;:false}}</para>
         /// </summary>
         [NameInMap("IndexConfig")]
         [Validation(Required=false)]

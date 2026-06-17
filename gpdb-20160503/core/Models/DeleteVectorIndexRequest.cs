@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gp-xxxxxxxxx</para>
+        /// <para>gp-bp152460513z****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]

@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListAINodePoolsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the AI node resource pool.</para>
+        /// <para>The details of the AINode resource pools.</para>
         /// </summary>
         [NameInMap("AINodePoolInfos")]
         [Validation(Required=false)]
         public List<ListAINodePoolsResponseBodyAINodePoolInfos> AINodePoolInfos { get; set; }
         public class ListAINodePoolsResponseBodyAINodePoolInfos : TeaModel {
             /// <summary>
-            /// <para>AI node details.</para>
+            /// <para>The details of AINodes.</para>
             /// </summary>
             [NameInMap("AINodeInfos")]
             [Validation(Required=false)]
             public List<ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos> AINodeInfos { get; set; }
             public class ListAINodePoolsResponseBodyAINodePoolInfosAINodeInfos : TeaModel {
                 /// <summary>
-                /// <para>The binding type of the AI node.</para>
+                /// <para>The type of the bound object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>model_serving</para>
@@ -34,11 +34,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string BindObject { get; set; }
 
                 /// <summary>
-                /// <para>The status of the AI node.</para>
+                /// <para>The binding status.</para>
                 /// <list type="bullet">
-                /// <item><description>unbound: The node is not bound.</description></item>
-                /// <item><description>bound: The node is bound.</description></item>
+                /// <item><description><para><c>unbound</c>: The node is not bound.</para>
+                /// </description></item>
+                /// <item><description><para><c>bound</c>: The node is bound.</para>
+                /// </description></item>
                 /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>bound</para>
                 /// </summary>
                 [NameInMap("BindStatus")]
                 [Validation(Required=false)]
@@ -65,7 +70,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string Namespace { get; set; }
 
                 /// <summary>
-                /// <para>The name of the AI node.</para>
+                /// <para>The name of the AINode.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ai-xxxxxxxxx</para>
@@ -75,7 +80,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The AI node specifications. The list of supported specifications is shown below.</para>
+                /// <para>The AINode specification. The following specifications are supported:</para>
                 /// <pre><c>ADB.AIMedium.1
                 /// ADB.AILarge.1
                 /// ADB.AIStandard.2
@@ -122,6 +127,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
                 [Validation(Required=false)]
                 public string UpdateTime { get; set; }
 
+                /// <summary>
+                /// <para>The zone ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cn-hangzhou-j</para>
+                /// </summary>
                 [NameInMap("ZoneId")]
                 [Validation(Required=false)]
                 public string ZoneId { get; set; }
@@ -129,7 +140,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             }
 
             /// <summary>
-            /// <para>The ID of the resource pool to which the AI node belongs.</para>
+            /// <para>The ID of the AINode resource pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aipool-xxxxxxxxx</para>

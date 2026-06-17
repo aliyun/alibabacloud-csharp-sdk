@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class GetSupabaseProjectApiKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried API keys.</para>
+        /// <para>A list of API keys.</para>
         /// </summary>
         [NameInMap("ApiKeys")]
         [Validation(Required=false)]
         public List<GetSupabaseProjectApiKeysResponseBodyApiKeys> ApiKeys { get; set; }
         public class GetSupabaseProjectApiKeysResponseBodyApiKeys : TeaModel {
             /// <summary>
-            /// <para>The queried API key.</para>
+            /// <para>The value of the API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Tmz2Z59caMDeq/Xi9vuc****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ApiKey { get; set; }
 
             /// <summary>
-            /// <para>The name of the API key, including the Anon key and the service role key.</para>
+            /// <para>The name of the API key, such as anon key, service role key, or JWT secret.</para>
             /// 
             /// <b>Example:</b>
             /// <para>anon key</para>

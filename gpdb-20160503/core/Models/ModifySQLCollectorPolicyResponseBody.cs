@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>4FA1F1D1-50A6-4F60-9A78-5752F2076A53</para>
+        /// <para>API-48109b5c-a157-44e3-9f54-eb27f02bdd15</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

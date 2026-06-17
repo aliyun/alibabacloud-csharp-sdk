@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The ID of the external data service.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2988</para>
+        /// <para>2952</para>
         /// </summary>
         [NameInMap("ExternalDataServiceId")]
         [Validation(Required=false)]
@@ -108,7 +108,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The content of the Hadoop hdfs-site.xml file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <?xml version="1.0" ?>
+        /// <!-- Created at 2023-08-15 13:52:43.945 -->
+        /// <configuration>
+        ///     <property>
+        ///         <name>dfs.datanode.cache.revocation.timeout.ms</name>
+        ///         <value>900000</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>dfs.namenode.resource.check.interval</name>
+        ///         <value>5000</value>
+        ///     </property>
+        /// </configuration>
         /// </summary>
         [NameInMap("HDFSConf")]
         [Validation(Required=false)]
@@ -118,7 +129,22 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The content of the Hadoop core-site.xml file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <?xml version="1.0" ?>
+        /// <!-- Created at 2023-08-15 13:52:39.527 -->
+        /// <configuration>
+        ///     <property>
+        ///         <name>hadoop.http.authentication.kerberos.keytab</name>
+        ///         <value>/etc/emr/hadoop-conf/http.keytab</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>fs.oss.idle.timeout.millisecond</name>
+        ///         <value>30000</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>fs.oss.download.thread.concurrency</name>
+        ///         <value>32</value>
+        ///     </property>
+        /// </configuration>
         /// </summary>
         [NameInMap("HadoopCoreConf")]
         [Validation(Required=false)]
@@ -132,7 +158,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>HDFS</para>
+        /// <para>emr</para>
         /// </summary>
         [NameInMap("HadoopCreateType")]
         [Validation(Required=false)]
@@ -152,7 +178,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The content of the Hadoop hive-site.xml file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <?xml version="1.0" ?>
+        /// <!-- Created at 2023-08-15 13:52:50.646 -->
+        /// <configuration>
+        ///     <property>
+        ///         <name>hive.exec.reducers.bytes.per.reducer</name>
+        ///         <value>256000000</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>hive.stats.column.autogather</name>
+        ///         <value>false</value>
+        ///     </property>
+        /// </configuration>
         /// </summary>
         [NameInMap("HiveConf")]
         [Validation(Required=false)]
@@ -162,7 +199,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The content of the Hadoop mapred-site.xml file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <?xml version="1.0" ?>
+        /// <!-- Created at 2023-08-15 13:53:28.962 -->
+        /// <configuration>
+        ///     <property>
+        ///         <name>mapreduce.map.speculative</name>
+        ///         <value>true</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>mapreduce.jobhistory.keytab</name>
+        ///         <value></value>
+        ///     </property>
+        /// </configuration>
         /// </summary>
         [NameInMap("MapReduceConf")]
         [Validation(Required=false)]
@@ -172,7 +220,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The time when the data source was last modified.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2024-08-23T02:11:47Z</para>
+        /// <para>2024-09-28T02:18:39Z</para>
         /// </summary>
         [NameInMap("ModifyTime")]
         [Validation(Required=false)]
@@ -202,7 +250,18 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The content of the Hadoop yarn-site.xml file.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xxxxxx</para>
+        /// <?xml version="1.0" ?>
+        /// <!-- Created at 2023-08-15 13:53:29.021 -->
+        /// <configuration>
+        ///     <property>
+        ///         <name>yarn.nodemanager.linux-container-executor.nonsecure-mode.local-user</name>
+        ///         <value>hadoop</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>yarn.scheduler.fair.dynamic.max.assign</name>
+        ///         <value>true</value>
+        ///     </property>
+        /// </configuration>
         /// </summary>
         [NameInMap("YarnConf")]
         [Validation(Required=false)]

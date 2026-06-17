@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class QueryCollectionDataResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The matched results.</para>
+        /// </summary>
         [NameInMap("Matches")]
         [Validation(Required=false)]
         public QueryCollectionDataResponseBodyMatches Matches { get; set; }
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
-        /// <para>Detailed information when the request fails.</para>
+        /// <para>Details about the error, returned if the request fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1234</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
@@ -94,10 +97,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Status, with the following values:</para>
+        /// <para>The status of the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: Success.</description></item>
-        /// <item><description><b>fail</b>: Failure.</description></item>
+        /// <item><description><para><b>success</b>: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>fail</b>: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -108,7 +113,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Only returned when the Offset is not 0, this value represents the total number of hits for the search criteria.</para>
+        /// <para>The total number of hits for the search. This parameter is returned only when the Offset parameter in the request is not 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The minor version number that does not include the prefix.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6.3.10.20</para>
+        /// <para>6.3.10.20。</para>
         /// </summary>
         [NameInMap("DBVersion")]
         [Validation(Required=false)]

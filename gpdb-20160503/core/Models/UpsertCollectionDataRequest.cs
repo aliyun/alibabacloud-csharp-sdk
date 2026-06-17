@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>gp-xxxxxxxxx</para>
+        /// <para>gp-bp152460513z****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>doca-1234</para>
+            /// <para>854c6949-411c-4b47-aec4-e324735f9574</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]

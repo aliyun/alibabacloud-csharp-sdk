@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ListAIServicesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number of the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PageRecordCount { get; set; }
 
         /// <summary>
+        /// <para>The ID of the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of AI services.</para>
+        /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
         public List<ListAIServicesResponseBodyServices> Services { get; set; }
         public class ListAIServicesResponseBodyServices : TeaModel {
             /// <summary>
+            /// <para>The time when the AI service was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-03-01T00:00:00Z</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the AI service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dramatest</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The private endpoint for API debugging.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.0.1/api-docs</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string PrivateApiDevUrl { get; set; }
 
             /// <summary>
+            /// <para>The private endpoint of the Workbench.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>192.168.0.1</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string PrivateWorkbenchUrl { get; set; }
 
             /// <summary>
+            /// <para>The public endpoint for API debugging.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8.8.8.8/api-docs</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string PublicApiDevUrl { get; set; }
 
             /// <summary>
+            /// <para>The public endpoint of the Workbench.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8.8.8.8</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string PublicWorkbenchUrl { get; set; }
 
             /// <summary>
+            /// <para>The list of IP addresses in the IP address whitelist group. Separate multiple IP addresses with commas.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string SecurityIpList { get; set; }
 
             /// <summary>
+            /// <para>The service account.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dramauser</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ServiceAccount { get; set; }
 
             /// <summary>
+            /// <para>The ID of the AI service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>drama-123456</para>
             /// </summary>
@@ -110,6 +137,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             public string ServiceId { get; set; }
 
             /// <summary>
+            /// <para>The status of the AI service. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>deploying</para>
+            /// </description></item>
+            /// <item><description><para>active</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>active</para>
             /// </summary>
@@ -120,6 +155,8 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

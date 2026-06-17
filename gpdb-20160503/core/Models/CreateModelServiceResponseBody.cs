@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class CreateModelServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The model service ID.</para>
+        /// <para>The ID of the model service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ms-xxxxxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ModelServiceId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ABB39CC3-4488-4857-905D-2E4A051D0521</para>

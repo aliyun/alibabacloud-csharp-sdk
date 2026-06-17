@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The ID of the KMS key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>0b8b1825-fd99-418f-875e-e4dec1dd8715</para>
+            /// <para>0b8b1825-fd99-418f-875e-e4dec1dd****</para>
             /// </summary>
             [NameInMap("KeyId")]
             [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The effective time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2020-05-05T11:22:22Z</para>
+            /// <para>2023-01-03T17:00:00Z</para>
             /// </summary>
             [NameInMap("EffectTime")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7565770E-7C45-462D-BA4A-8A5396F2CAD1</para>
+        /// <para>4FA1F1D1-50A6-4F60-9A78-5752F2076A53</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

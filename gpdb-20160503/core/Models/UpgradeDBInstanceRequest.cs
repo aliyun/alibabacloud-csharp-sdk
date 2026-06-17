@@ -9,12 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class UpgradeDBInstanceRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies the cache storage for Serverless Pro instances. Unit: GB.</para>
+        /// <remarks>
+        /// <para>This parameter is required only for Serverless Pro instances.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>800</para>
+        /// </summary>
         [NameInMap("CacheStorageSize")]
         [Validation(Required=false)]
         public string CacheStorageSize { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -24,7 +33,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceClass { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -36,7 +45,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances within a region.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in the specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -48,9 +57,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The specifications of each compute node. For information about the supported specifications, see <a href="https://help.aliyun.com/document_detail/35406.html">Instance specifications</a>.</para>
+        /// <para>The specifications of segment nodes. For supported node specifications, see <a href="https://help.aliyun.com/document_detail/35406.html">Instance types</a>.</para>
         /// <remarks>
-        /// <para>This parameter is available only for instances in elastic storage mode.</para>
+        /// <para>This parameter is available only for instances in storage-elastic mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,10 +70,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <para>The number of master nodes.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>null</para>
         /// </summary>
         [NameInMap("MasterNodeNum")]
         [Validation(Required=false)]
@@ -75,7 +84,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is no longer used.</para>
+        /// <para>This parameter is deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -85,9 +94,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86912.html">DescribeRegions</a> operation to query available region IDs.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -98,7 +107,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
+        /// <para>The ID of the resource group to which the instance belongs. To obtain the resource group ID, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -108,11 +117,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The performance level of Enterprise SSDs (ESSDs). Valid values:</para>
+        /// <para>The performance level (PL) of the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>pl0</b></description></item>
-        /// <item><description><b>pl1</b></description></item>
-        /// <item><description><b>pl2</b></description></item>
+        /// <item><description><para><b>pl0</b>: PL0.</para>
+        /// </description></item>
+        /// <item><description><para><b>pl1</b>: PL1.</para>
+        /// </description></item>
+        /// <item><description><para><b>pl2</b>: PL2.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -123,11 +135,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SegDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The number of compute nodes. The number of compute nodes varies based on the instance resource type and edition.</para>
+        /// <para>The number of segment nodes. The supported number of nodes varies based on the instance resource type and edition:</para>
         /// <list type="bullet">
-        /// <item><description>Valid values for High-availability Edition instances in elastic storage mode: 4 to 512, in 4 increments.</description></item>
-        /// <item><description>Valid values for High-performance Edition instances in elastic storage mode: 2 to 512, in 2 increments.</description></item>
-        /// <item><description>Valid values for instances in manual Serverless mode: 2 to 512, in 2 increments.</description></item>
+        /// <item><description><para>Instances in storage-elastic mode (High-availability Edition): 4 to 512, in increments of 4.</para>
+        /// </description></item>
+        /// <item><description><para>Instances in storage-elastic mode (High-performance Edition): 2 to 512, in increments of 2.</para>
+        /// </description></item>
+        /// <item><description><para>Instances in Serverless manual-scheduling mode: 2 to 512, in increments of 2.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -138,7 +153,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SegNodeNum { get; set; }
 
         /// <summary>
-        /// <para>The disk storage type of the instance after the change. The disk storage type can be changed only to ESSD. Set the value to <b>cloud_essd</b>.</para>
+        /// <para>The new disk storage type. You can only upgrade to an ESSD cloud disk. To do so, set this parameter to <b>cloud_essd</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cloud_essd</para>
@@ -147,14 +162,40 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         [Validation(Required=false)]
         public string SegStorageType { get; set; }
 
+        /// <summary>
+        /// <list type="bullet">
+        /// <item><description><para>For an instance in Serverless automatic-scheduling mode, this parameter specifies the computing resource threshold. The value must be a multiple of 8 in the range of 8 to 32. Unit: ACU. Default value: 32.</para>
+        /// </description></item>
+        /// <item><description><para>For a Serverless Pro instance, this parameter specifies the reserved computing resources. Valid values range from 16 to 1,024. Unit: ACU. Default value: 16. Increment rules:</para>
+        /// <list type="bullet">
+        /// <item><description><para>16 to 32: in increments of 4.</para>
+        /// </description></item>
+        /// <item><description><para>32 to 64: in increments of 8.</para>
+        /// </description></item>
+        /// <item><description><para>64 to 128: in increments of 16.</para>
+        /// </description></item>
+        /// <item><description><para>128 to 256: in increments of 32.</para>
+        /// </description></item>
+        /// <item><description><para>Greater than 256: in increments of 64.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter is required only for instances in Serverless automatic-scheduling mode and Serverless Pro instances.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>16</para>
+        /// </summary>
         [NameInMap("ServerlessResource")]
         [Validation(Required=false)]
         public string ServerlessResource { get; set; }
 
         /// <summary>
-        /// <para>The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.</para>
+        /// <para>The storage capacity of each segment node. Unit: GB. The value must be a multiple of 50 in the range of 50 to &lt;props=&quot;china&quot;&gt;8,000&lt;props=&quot;intl&quot;&gt;6,000.</para>
         /// <remarks>
-        /// <para> This parameter is available only for instances in elastic storage mode.</para>
+        /// <para>This parameter is available only for instances in storage-elastic mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -165,23 +206,28 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string StorageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the instance configuration change. Valid values:</para>
+        /// <para>The type of specification change. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b> (default): changes the number of compute nodes.</description></item>
-        /// <item><description><b>1</b>: changes the specifications and storage capacity of each compute node.</description></item>
-        /// <item><description><b>2</b>: changes the number of coordinator nodes.</description></item>
-        /// <item><description><b>3</b>: changes the disk storage type and ESSD performance level of the instance.</description></item>
+        /// <item><description><para><b>0</b> (default): Changes the number of segment nodes. The SegNodeNum parameter is required, and other parameters are ignored.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: Changes the specifications and storage capacity of segment nodes. The InstanceSpec parameter is required. The StorageSize parameter is optional. If specified, its value must be greater than or equal to the current storage capacity of the instance.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: Changes the number of master nodes. The MasterNodeNum parameter is required, and other parameters are ignored.</para>
+        /// </description></item>
+        /// <item><description><para><b>3</b>: Changes the disk storage type and performance level. The SegDiskPerformanceLevel and SegStorageType parameters are required, and other parameters are ignored.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Support for scaling computing resources varies by instance resource type. For more information, see <a href="https://help.aliyun.com/document_detail/50956.html">Usage notes</a>.</description></item>
+        /// </list>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The supported changes to compute node configurations vary based on the instance resource type. For more information, see the &quot;Usage notes&quot; section of the <a href="https://help.aliyun.com/document_detail/50956.html">Change compute node configurations</a> topic.</para>
+        /// <item><description><para>If you select a change type, only the parameters associated with that type take effect; other parameters are ignored. For example, if you set <b>UpgradeType</b> to 0 and specify parameters to change both the number of segment nodes and the number of master nodes, only the parameters for changing the number of segment nodes take effect.</para>
         /// </description></item>
-        /// <item><description><para>After you specify a change type, only the corresponding parameters take effect. For example, if you set <b>UpgradeType</b> to 0, the parameter that is used to change the number of compute nodes takes effect, but the parameter that is used to change the number of coordinator nodes does not.</para>
+        /// <item><description><para>You can change the number of master nodes only on the Alibaba Cloud China site.</para>
         /// </description></item>
-        /// <item><description><para>The number of coordinator nodes can be changed only on the China site (aliyun.com).</para>
-        /// </description></item>
-        /// <item><description><para>The disk storage type can be changed only from ultra disks to ESSDs.</para>
+        /// <item><description><para>You can change the disk storage type only from ultra disk to ESSD cloud disk.</para>
         /// </description></item>
         /// </list>
         /// 

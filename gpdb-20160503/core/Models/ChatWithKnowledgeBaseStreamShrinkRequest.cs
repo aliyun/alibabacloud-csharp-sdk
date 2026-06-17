@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class ChatWithKnowledgeBaseStreamShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster ID.</para>
+        /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/86911.html">DescribeDBInstances</a> operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specified region.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Whether to return the retrieved result. Default value: false.</para>
+        /// <para>Specifies whether to include the retrieved knowledge base results in the response. Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? IncludeKnowledgeBaseResults { get; set; }
 
         /// <summary>
-        /// <para>The knowledge retrieval parameter object. If you do not specify this parameter, only chat mode is enabled.</para>
+        /// <para>Parameters for knowledge retrieval. If omitted, the API performs a chat-only operation.</para>
         /// </summary>
         [NameInMap("KnowledgeParams")]
         [Validation(Required=false)]
         public string KnowledgeParamsShrink { get; set; }
 
         /// <summary>
-        /// <para>The Large Language Model (LLM) invocation parameter object.</para>
+        /// <para>An object that contains parameters for the Large Language Model (LLM) call.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ModelParams")]
@@ -53,14 +53,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The system prompt template, which should include {{ text_chunks }},{{ user_system_prompt }},{{ graph_entities },{{ graph_relations }}. If any of these placeholders are not specified, the corresponding section should have no effect.</para>
+        /// <para>A template for the system prompt. It must include placeholders such as <c>{{text_chunks}}</c>, <c>{{user_system_prompt}}</c>, <c>{{graph_entities}}</c>, and <c>{{graph_relations}}</c>. If omitted, no custom prompt template is applied.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;参考以下知识回答问题:{{ text_chunks }}&quot;</para>
         /// </summary>
         [NameInMap("PromptParams")]
         [Validation(Required=false)]
         public string PromptParams { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance.</para>
+        /// <para>The instance\&quot;s region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

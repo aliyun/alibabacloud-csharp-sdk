@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
     public class DescribeAIServiceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the instance.</para>
+        /// <remarks>
+        /// <para>To view details of all instances in a region, including their IDs, call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +24,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +35,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ServiceId { get; set; }
 
         /// <summary>
+        /// <para>The type of service. Only drama is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

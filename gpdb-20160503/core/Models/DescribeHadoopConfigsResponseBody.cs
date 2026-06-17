@@ -30,9 +30,17 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The configuration value.</para>
         /// 
         /// <b>Example:</b>
-        /// <?xml version="1.0"?>
+        /// <?xml version="1.0" ?>
         /// <configuration>
         ///     <property>
+        ///         <name>hive.exec.reducers.bytes.per.reducer</name>
+        ///         <value>256000000</value>
+        ///     </property>
+        ///     <property>
+        ///         <name>hive.stats.column.autogather</name>
+        ///         <value>false</value>
+        ///     </property>
+        /// </configuration>
         /// </summary>
         [NameInMap("ConfigValue")]
         [Validation(Required=false)]

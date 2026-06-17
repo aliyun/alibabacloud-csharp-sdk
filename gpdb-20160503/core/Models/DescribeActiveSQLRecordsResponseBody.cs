@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>gp-bp***************</para>
+        /// <para>gp-bp12ga6v69h86****</para>
         /// </summary>
         [NameInMap("DBInstanceId")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>The execution duration of the query. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>60s</para>
+            /// <para>60</para>
             /// </summary>
             [NameInMap("QueryDuration")]
             [Validation(Required=false)]

@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Cloud-native data warehouse AnalyticDB PostgreSQL Edition provides a simple, fast, and cost-effective PB-level cloud data warehouse solution.</para>
+            /// <para>AnalyticDB for PostgreSQL provides a simple, fast, and cost-effective PB-level cloud data warehousing solution.</para>
             /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]

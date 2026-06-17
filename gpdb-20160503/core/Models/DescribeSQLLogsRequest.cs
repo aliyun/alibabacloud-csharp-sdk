@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ExecuteState")]
         [Validation(Required=false)]

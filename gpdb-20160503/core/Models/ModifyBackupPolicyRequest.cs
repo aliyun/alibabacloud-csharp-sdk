@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Tuesday, Thursday, Saturday</para>
+        /// <para>Tuesday,Thursday,Saturday</para>
         /// </summary>
         [NameInMap("PreferredBackupPeriod")]
         [Validation(Required=false)]

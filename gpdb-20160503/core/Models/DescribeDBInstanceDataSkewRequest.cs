@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>order by condition</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{Field: TableSkew, Type: Desc}</para>
+        /// <para>{Field: TableSize, Type: Desc}</para>
         /// </summary>
         [NameInMap("OrderBy")]
         [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>30</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
