@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [Validation(Required=false)]
         public string BizId { get; set; }
 
+        [NameInMap("ChatbiTaskId")]
+        [Validation(Required=false)]
+        public string ChatbiTaskId { get; set; }
+
+        [NameInMap("ChatbiTaskStatus")]
+        [Validation(Required=false)]
+        public string ChatbiTaskStatus { get; set; }
+
         [NameInMap("CommodityCode")]
         [Validation(Required=false)]
         public string CommodityCode { get; set; }
@@ -36,6 +44,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        [NameInMap("OpenChatBi")]
+        [Validation(Required=false)]
+        public bool? OpenChatBi { get; set; }
 
         [NameInMap("OrdTime")]
         [Validation(Required=false)]
@@ -76,14 +88,6 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         [NameInMap("TemplateId")]
         [Validation(Required=false)]
         public string TemplateId { get; set; }
-
-        [NameInMap("chatbiTaskId")]
-        [Validation(Required=false)]
-        public string ChatbiTaskId { get; set; }
-
-        [NameInMap("chatbiTaskStatus")]
-        [Validation(Required=false)]
-        public string ChatbiTaskStatus { get; set; }
 
     }
 

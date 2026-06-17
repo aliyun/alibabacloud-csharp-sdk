@@ -18,7 +18,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"public", "websitebuild.aliyuncs.com"},
+                {"cn-zhangjiakou", "websitebuild.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("websitebuild", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1091,12 +1096,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试用转正</para>
+        /// <para>Converts a trial instance to a paid instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1182,12 +1187,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试用转正</para>
+        /// <para>Converts a trial instance to a paid instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1273,12 +1278,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试用转正</para>
+        /// <para>Converts a trial instance to a paid instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1296,12 +1301,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>试用转正</para>
+        /// <para>Converts a trial instance to a paid instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14227,12 +14232,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据变更通知触发（for admin）</para>
+        /// <para>Triggers a data change notification (for admin).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14256,6 +14261,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
             {
                 query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Payload))
+            {
+                query["Payload"] = request.Payload;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
@@ -14282,12 +14291,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据变更通知触发（for admin）</para>
+        /// <para>Triggers a data change notification (for admin).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14311,6 +14320,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Env))
             {
                 query["Env"] = request.Env;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Payload))
+            {
+                query["Payload"] = request.Payload;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneId))
             {
@@ -14337,12 +14350,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据变更通知触发（for admin）</para>
+        /// <para>Triggers a data change notification (for admin).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14360,12 +14373,12 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>数据变更通知触发（for admin）</para>
+        /// <para>Triggers a data change notification (for admin).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询应用实例信息</para>
+        /// <para>Queries application instance information.</para>
         /// </description>
         /// 
         /// <param name="request">
