@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("wuyingai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +39,23 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>与 JVS Crew 进行流式对话，采用 Server-Sent Events (SSE) 协议实时推送对话内容。</para>
+        /// <para>Conducts a streaming conversation with JVS Crew, using the Server-Sent Events (SSE) protocol to push conversation content in real time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Features</em>*</para>
+        /// <list type="bullet">
+        /// <item><description>Real-time streaming response that reduces time to first token.</description></item>
+        /// <item><description>Supports multimodal input (text, images, and files).</description></item>
+        /// <item><description>Session persistence for multi-turn conversations.</description></item>
+        /// <item><description>Event-driven architecture for precise message status control.
+        /// <b>Request information</b></description></item>
+        /// <item><description><b>Request method</b>: <c>POST</c></description></item>
+        /// <item><description><b>Content-Type</b>: <c>application/json</c></description></item>
+        /// <item><description><b>Response Content-Type</b>: <c>text/event-stream</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ChatRequest
@@ -87,6 +102,14 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
             {
                 body["Input"] = request.InputShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resume))
+            {
+                body["Resume"] = request.Resume;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingKey))
             {
                 body["RoutingKey"] = request.RoutingKey;
@@ -125,8 +148,23 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>与 JVS Crew 进行流式对话，采用 Server-Sent Events (SSE) 协议实时推送对话内容。</para>
+        /// <para>Conducts a streaming conversation with JVS Crew, using the Server-Sent Events (SSE) protocol to push conversation content in real time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Features</em>*</para>
+        /// <list type="bullet">
+        /// <item><description>Real-time streaming response that reduces time to first token.</description></item>
+        /// <item><description>Supports multimodal input (text, images, and files).</description></item>
+        /// <item><description>Session persistence for multi-turn conversations.</description></item>
+        /// <item><description>Event-driven architecture for precise message status control.
+        /// <b>Request information</b></description></item>
+        /// <item><description><b>Request method</b>: <c>POST</c></description></item>
+        /// <item><description><b>Content-Type</b>: <c>application/json</c></description></item>
+        /// <item><description><b>Response Content-Type</b>: <c>text/event-stream</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ChatRequest
@@ -173,6 +211,14 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
             {
                 body["Input"] = request.InputShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resume))
+            {
+                body["Resume"] = request.Resume;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoutingKey))
             {
                 body["RoutingKey"] = request.RoutingKey;
@@ -211,8 +257,23 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>与 JVS Crew 进行流式对话，采用 Server-Sent Events (SSE) 协议实时推送对话内容。</para>
+        /// <para>Conducts a streaming conversation with JVS Crew, using the Server-Sent Events (SSE) protocol to push conversation content in real time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Features</em>*</para>
+        /// <list type="bullet">
+        /// <item><description>Real-time streaming response that reduces time to first token.</description></item>
+        /// <item><description>Supports multimodal input (text, images, and files).</description></item>
+        /// <item><description>Session persistence for multi-turn conversations.</description></item>
+        /// <item><description>Event-driven architecture for precise message status control.
+        /// <b>Request information</b></description></item>
+        /// <item><description><b>Request method</b>: <c>POST</c></description></item>
+        /// <item><description><b>Content-Type</b>: <c>application/json</c></description></item>
+        /// <item><description><b>Response Content-Type</b>: <c>text/event-stream</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChatRequest
@@ -229,8 +290,23 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>与 JVS Crew 进行流式对话，采用 Server-Sent Events (SSE) 协议实时推送对话内容。</para>
+        /// <para>Conducts a streaming conversation with JVS Crew, using the Server-Sent Events (SSE) protocol to push conversation content in real time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Features</em>*</para>
+        /// <list type="bullet">
+        /// <item><description>Real-time streaming response that reduces time to first token.</description></item>
+        /// <item><description>Supports multimodal input (text, images, and files).</description></item>
+        /// <item><description>Session persistence for multi-turn conversations.</description></item>
+        /// <item><description>Event-driven architecture for precise message status control.
+        /// <b>Request information</b></description></item>
+        /// <item><description><b>Request method</b>: <c>POST</c></description></item>
+        /// <item><description><b>Content-Type</b>: <c>application/json</c></description></item>
+        /// <item><description><b>Response Content-Type</b>: <c>text/event-stream</c>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChatRequest
@@ -247,8 +323,16 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户进行对话所需的访问令牌（AccessToken），用于后续调用 Chat 接口进行身份验证。</para>
+        /// <para>Obtains an access token (AccessToken) for user conversations, which is used to authenticate when invoking the Chat operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Token format</em>*: The AccessToken is a <b>JWT</b> consisting of <b>Header.Payload.Signature</b> segments, each Base64URL-encoded and concatenated with <c>.</c> into a single line. The examples in the following table are masked for illustration purposes. The actual RequestId and JWT segments are longer.
+        /// <b>Token validity</b>: The AccessToken <b>is valid for a limited period of time</b>. After it expires, call this operation again to obtain a new token.
+        /// <b>Authentication method</b>: POP V1 signature (AK/SK)
+        /// <b>Action</b>: <c>GetAccessToken</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAccessTokenRequest
@@ -293,8 +377,16 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户进行对话所需的访问令牌（AccessToken），用于后续调用 Chat 接口进行身份验证。</para>
+        /// <para>Obtains an access token (AccessToken) for user conversations, which is used to authenticate when invoking the Chat operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Token format</em>*: The AccessToken is a <b>JWT</b> consisting of <b>Header.Payload.Signature</b> segments, each Base64URL-encoded and concatenated with <c>.</c> into a single line. The examples in the following table are masked for illustration purposes. The actual RequestId and JWT segments are longer.
+        /// <b>Token validity</b>: The AccessToken <b>is valid for a limited period of time</b>. After it expires, call this operation again to obtain a new token.
+        /// <b>Authentication method</b>: POP V1 signature (AK/SK)
+        /// <b>Action</b>: <c>GetAccessToken</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAccessTokenRequest
@@ -339,8 +431,16 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户进行对话所需的访问令牌（AccessToken），用于后续调用 Chat 接口进行身份验证。</para>
+        /// <para>Obtains an access token (AccessToken) for user conversations, which is used to authenticate when invoking the Chat operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Token format</em>*: The AccessToken is a <b>JWT</b> consisting of <b>Header.Payload.Signature</b> segments, each Base64URL-encoded and concatenated with <c>.</c> into a single line. The examples in the following table are masked for illustration purposes. The actual RequestId and JWT segments are longer.
+        /// <b>Token validity</b>: The AccessToken <b>is valid for a limited period of time</b>. After it expires, call this operation again to obtain a new token.
+        /// <b>Authentication method</b>: POP V1 signature (AK/SK)
+        /// <b>Action</b>: <c>GetAccessToken</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAccessTokenRequest
@@ -357,8 +457,16 @@ namespace AlibabaCloud.SDK.WuyingAI20260311
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户进行对话所需的访问令牌（AccessToken），用于后续调用 Chat 接口进行身份验证。</para>
+        /// <para>Obtains an access token (AccessToken) for user conversations, which is used to authenticate when invoking the Chat operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Token format</em>*: The AccessToken is a <b>JWT</b> consisting of <b>Header.Payload.Signature</b> segments, each Base64URL-encoded and concatenated with <c>.</c> into a single line. The examples in the following table are masked for illustration purposes. The actual RequestId and JWT segments are longer.
+        /// <b>Token validity</b>: The AccessToken <b>is valid for a limited period of time</b>. After it expires, call this operation again to obtain a new token.
+        /// <b>Authentication method</b>: POP V1 signature (AK/SK)
+        /// <b>Action</b>: <c>GetAccessToken</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAccessTokenRequest

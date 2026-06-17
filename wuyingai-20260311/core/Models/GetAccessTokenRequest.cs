@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.WuyingAI20260311.Models
 {
     public class GetAccessTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the user in the external system.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>&quot;user-38764&quot;</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.WuyingAI20260311.Models
         public string ExternalUserId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the agent template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1600112233445566</para>
         /// </summary>
