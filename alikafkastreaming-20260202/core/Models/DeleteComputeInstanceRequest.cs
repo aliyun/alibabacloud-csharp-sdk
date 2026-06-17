@@ -23,6 +23,10 @@ namespace AlibabaCloud.SDK.AlikafkaStreaming20260202.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("ResourceType")]
+        [Validation(Required=false)]
+        public string ResourceType { get; set; }
+
     }
 
 }
