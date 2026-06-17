@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to group the results by API.</para>
+        /// <para>Specifies whether to group results by API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? GroupByApi { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The resource types.</para>
+        /// <para>The service source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K8S</para>

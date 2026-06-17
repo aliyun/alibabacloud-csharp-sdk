@@ -18,7 +18,35 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "apig.us-west-1.aliyuncs.com"},
+                {"us-east-1", "apig.us-east-1.aliyuncs.com"},
+                {"me-east-1", "apig.me-east-1.aliyuncs.com"},
+                {"me-central-1", "apig.me-central-1.aliyuncs.com"},
+                {"eu-west-1", "apig.eu-west-1.aliyuncs.com"},
+                {"eu-central-1", "apig.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "apig.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "apig.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "apig.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "apig.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "apig.cn-qingdao.aliyuncs.com"},
+                {"cn-hongkong", "apig.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "apig.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou", "apig.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "apig.cn-guangzhou.aliyuncs.com"},
+                {"cn-chengdu", "apig.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "apig.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-7", "apig.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-6", "apig.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-5", "apig.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-3", "apig.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-2", "apig.ap-southeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "apig.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "apig.ap-northeast-2.aliyuncs.com"},
+                {"ap-northeast-1", "apig.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("apig", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1450,11 +1478,6 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates a domain name.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Create Domain.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateDomainRequest
         /// </param>
@@ -1483,6 +1506,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
             {
                 body["clientCACert"] = request.ClientCACert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainScope))
+            {
+                body["domainScope"] = request.DomainScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceHttps))
             {
@@ -1549,11 +1576,6 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates a domain name.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Create Domain.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateDomainRequest
         /// </param>
@@ -1582,6 +1604,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
             {
                 body["clientCACert"] = request.ClientCACert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainScope))
+            {
+                body["domainScope"] = request.DomainScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceHttps))
             {
@@ -1648,11 +1674,6 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Creates a domain name.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Create Domain.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateDomainRequest
         /// </param>
@@ -1671,11 +1692,6 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Creates a domain name.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Create Domain.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreateDomainRequest
@@ -6641,7 +6657,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a consumer authentication rule.</para>
+        /// <para>Retrieves a consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6677,7 +6693,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a consumer authentication rule.</para>
+        /// <para>Retrieves a consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -6713,7 +6729,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a consumer authentication rule.</para>
+        /// <para>Retrieves a consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6728,7 +6744,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a consumer authentication rule.</para>
+        /// <para>Retrieves a consumer authorization rule.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -6949,7 +6965,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a domain name.</para>
+        /// <para>Queries a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6995,7 +7011,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a domain name.</para>
+        /// <para>Queries a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7041,7 +7057,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a domain name.</para>
+        /// <para>Queries a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7060,7 +7076,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a domain name.</para>
+        /// <para>Queries a domain name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7871,7 +7887,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a route of an HTTP API.</para>
+        /// <para>Retrieves the route details of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7907,7 +7923,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a route of an HTTP API.</para>
+        /// <para>Retrieves the route details of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -7943,7 +7959,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a route of an HTTP API.</para>
+        /// <para>Retrieves the route details of an HTTP API.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -7958,7 +7974,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a route of an HTTP API.</para>
+        /// <para>Retrieves the route details of an HTTP API.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8095,7 +8111,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a plug-in attachment.</para>
+        /// <para>Queries a plugin attachment.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8131,7 +8147,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a plug-in attachment.</para>
+        /// <para>Queries a plugin attachment.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8167,7 +8183,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a plug-in attachment.</para>
+        /// <para>Queries a plugin attachment.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8182,7 +8198,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a plug-in attachment.</para>
+        /// <para>Queries a plugin attachment.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8877,7 +8893,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a service source.</para>
+        /// <para>Queries the details of a service source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8913,7 +8929,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a service source.</para>
+        /// <para>Queries the details of a service source.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -8949,7 +8965,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a service source.</para>
+        /// <para>Queries the details of a service source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -8964,7 +8980,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the details of a service source.</para>
+        /// <para>Queries the details of a service source.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -9481,7 +9497,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of consumer authentication rules.</para>
+        /// <para>Retrieves the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9535,7 +9551,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of consumer authentication rules.</para>
+        /// <para>Retrieves the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9589,7 +9605,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of consumer authentication rules.</para>
+        /// <para>Retrieves the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9608,7 +9624,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains a list of consumer authentication rules.</para>
+        /// <para>Retrieves the list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9801,6 +9817,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainScope))
+            {
+                query["domainScope"] = request.DomainScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
             {
                 query["gatewayId"] = request.GatewayId;
@@ -9867,6 +9887,10 @@ namespace AlibabaCloud.SDK.APIG20240327
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainScope))
+            {
+                query["domainScope"] = request.DomainScope;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
             {
                 query["gatewayId"] = request.GatewayId;
@@ -9955,7 +9979,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListEnvironments</para>
+        /// <para>Queries a list of environments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10035,7 +10059,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListEnvironments</para>
+        /// <para>Queries a list of environments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10115,7 +10139,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListEnvironments</para>
+        /// <para>Queries a list of environments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10140,7 +10164,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ListEnvironments</para>
+        /// <para>Queries a list of environments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11051,7 +11075,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the route list for an HTTP API.</para>
+        /// <para>Queries the route list of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11153,7 +11177,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the route list for an HTTP API.</para>
+        /// <para>Queries the route list of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11255,7 +11279,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the route list for an HTTP API.</para>
+        /// <para>Queries the route list of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11274,7 +11298,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets the route list for an HTTP API.</para>
+        /// <para>Queries the route list of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13233,7 +13257,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries SSL certificates.</para>
+        /// <para>Retrieves a list of certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13291,7 +13315,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries SSL certificates.</para>
+        /// <para>Retrieves a list of certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13349,7 +13373,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries SSL certificates.</para>
+        /// <para>Retrieves a list of certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13368,7 +13392,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries SSL certificates.</para>
+        /// <para>Retrieves a list of certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13489,7 +13513,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of consumer authentication rules.</para>
+        /// <para>Queries a list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13575,7 +13599,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of consumer authentication rules.</para>
+        /// <para>Queries a list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13661,7 +13685,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of consumer authentication rules.</para>
+        /// <para>Queries a list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13680,7 +13704,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of consumer authentication rules.</para>
+        /// <para>Queries a list of consumer authorization rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15196,7 +15220,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update the listening Ingress only for sources whose types are <b>ACK</b>.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15227,6 +15251,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
             {
                 body["clientCACert"] = request.ClientCACert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainScope))
+            {
+                body["domainScope"] = request.DomainScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceHttps))
             {
@@ -15283,7 +15311,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update the listening Ingress only for sources whose types are <b>ACK</b>.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15314,6 +15342,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientCACert))
             {
                 body["clientCACert"] = request.ClientCACert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainScope))
+            {
+                body["domainScope"] = request.DomainScope;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceHttps))
             {
@@ -15370,7 +15402,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update the listening Ingress only for sources whose types are <b>ACK</b>.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15394,7 +15426,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can update the listening Ingress only for sources whose types are <b>ACK</b>.</para>
+        /// <para>Only sources of the <b>Container Service</b> type can update the listener Ingress configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16517,7 +16549,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an operation of an HTTP API.</para>
+        /// <para>Updates an API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16563,7 +16595,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an operation of an HTTP API.</para>
+        /// <para>Updates an API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16609,7 +16641,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an operation of an HTTP API.</para>
+        /// <para>Updates an API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16628,7 +16660,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an operation of an HTTP API.</para>
+        /// <para>Updates an API operation.</para>
         /// </summary>
         /// 
         /// <param name="request">

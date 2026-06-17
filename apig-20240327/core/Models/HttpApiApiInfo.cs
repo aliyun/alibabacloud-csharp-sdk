@@ -161,6 +161,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HttpApiApiInfoEnvironmentsGatewayInfo GatewayInfo { get; set; }
             public class HttpApiApiInfoEnvironmentsGatewayInfo : TeaModel {
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>MultiTenantServerless</para>
+                /// </summary>
+                [NameInMap("gatewayEdition")]
+                [Validation(Required=false)]
+                public string GatewayEdition { get; set; }
+
+                /// <summary>
                 /// <para>The instance ID.</para>
                 /// 
                 /// <b>Example:</b>

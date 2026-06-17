@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListConsumerAuthorizationRulesRequest : TeaModel {
         /// <summary>
-        /// <para>API name for fuzzy search.</para>
+        /// <para>The fuzzy match parameter for the API name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned on each page. If you do not specify this parameter, the default value is 10.</para>
+        /// <para>The page size. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

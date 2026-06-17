@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GatewayInfo : TeaModel {
         /// <summary>
-        /// <para>The instance engine version.</para>
+        /// <para>The gateway DPI engine database engine version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.7</para>
@@ -20,7 +20,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <b>Example:</b>
+        /// <para>MultiTenantServerless</para>
+        /// </summary>
+        [NameInMap("gatewayEdition")]
+        [Validation(Required=false)]
+        public string GatewayEdition { get; set; }
+
+        /// <summary>
+        /// <para>The gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cq7og15lhtgi6qasrj60</para>
@@ -30,7 +38,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The instance name.</para>
+        /// <para>The gateway name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apitest-gw</para>
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) information.</para>
+        /// <para>The VPC information.</para>
         /// </summary>
         [NameInMap("vpcInfo")]
         [Validation(Required=false)]

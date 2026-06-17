@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListHttpApiRoutesResponseBodyData Data { get; set; }
         public class ListHttpApiRoutesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>An array of route objects.</para>
+            /// <para>路由列表。</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<HttpRoute> Items { get; set; }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of available entries.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>9</para>

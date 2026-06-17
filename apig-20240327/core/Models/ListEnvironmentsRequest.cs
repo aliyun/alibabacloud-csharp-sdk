@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListEnvironmentsRequest : TeaModel {
         /// <summary>
-        /// <para>Environment alias, fuzzy search.</para>
+        /// <para>The environment alias. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>测试</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string AliasLike { get; set; }
 
         /// <summary>
-        /// <para>Gateway ID, exact search.</para>
+        /// <para>The gateway ID. Exact match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-cptv6ktlhtgnqr73h8d1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>Gateway name, fuzzy search.</para>
+        /// <para>The gateway name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-gw</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayNameLike { get; set; }
 
         /// <summary>
-        /// <para>The gateway type</para>
+        /// <para>The gateway type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>APIGateway</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>Environment name, fuzzy search.</para>
+        /// <para>The environment name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>Page number, default is 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is 10.</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek2nqpppkzplmq</para>

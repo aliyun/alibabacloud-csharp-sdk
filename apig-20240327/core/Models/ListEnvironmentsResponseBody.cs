@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListEnvironmentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Paged query environment list response.</para>
+        /// <para>The paged query response for the environment list.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public ListEnvironmentsResponseBodyData Data { get; set; }
         public class ListEnvironmentsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of environment information.</para>
+            /// <para>环境信息列表。</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<EnvironmentInfo> Items { get; set; }
 
             /// <summary>
-            /// <para>Page number.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>Number of items per page.</para>
+            /// <para>The number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of items.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Response message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used for tracing the call chain.</para>
+        /// <para>The request ID, which is used to trace the call chain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE857A85-251D-5018-8103-A38957D71E20</para>

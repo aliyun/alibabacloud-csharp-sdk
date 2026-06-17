@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetEnvironmentRequest : TeaModel {
         /// <summary>
-        /// <para>The request ID, which is used to trace the API call link.</para>
+        /// <para>Specifies whether to return online resource information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithStatistics { get; set; }
 
         /// <summary>
-        /// <para>Schema of Response</para>
+        /// <para>Specifies whether to include VPC information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

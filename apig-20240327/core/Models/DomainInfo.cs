@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DomainInfo : TeaModel {
         /// <summary>
-        /// <para>The certificate identifier.</para>
+        /// <para>The China Security certificate identity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>235556-cn-hangzhou</para>
@@ -34,12 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ClientCACert { get; set; }
 
         /// <summary>
-        /// <para>The creation source of the domain name.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Console</description></item>
-        /// <item><description>Ingress</description></item>
-        /// </list>
+        /// <para>The source from which the domain name was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Console</para>
@@ -68,8 +63,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string DomainId { get; set; }
 
+        [NameInMap("domainScope")]
+        [Validation(Required=false)]
+        public string DomainScope { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether to enable forcible HTTPS redirection when HTTPS is used as the protocol.</para>
+        /// <para>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is configured.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -79,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ForceHttps { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable mutual authentication.</para>
+        /// <para>Specifies whether to enable mTLS mutual authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -99,10 +98,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The supported protocol. Valid values:</para>
+        /// <para>The protocol type supported by the domain name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>HTTP</description></item>
-        /// <item><description>HTTPS</description></item>
+        /// <item><description>HTTP: Only HTTP is supported.</description></item>
+        /// <item><description>HTTPS: Only HTTPS is supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,11 +123,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The domain name status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>UnPublished</description></item>
-        /// <item><description>Published</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Published</para>

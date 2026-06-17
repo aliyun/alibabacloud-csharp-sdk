@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BackendServiceName { get; set; }
 
         /// <summary>
-        /// <para>Filters the results, returning only routes authorized by the specified consumer authorization rule.</para>
+        /// <para>The consumer authorization rule ID. If specified, the response includes only routes that are authorized by the specified rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cas-xxx</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DeployStatuses { get; set; }
 
         /// <summary>
-        /// <para>Filters routes by the specified domain ID.</para>
+        /// <para>The domain name ID used to filter routes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-xxx</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string EnvironmentId { get; set; }
 
         /// <summary>
-        /// <para>Set to <c>true</c> if the query is for a deployment scenario.</para>
+        /// <para>Specifies whether the query is for a deployment scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The route name. This parameter requires an exact match.</para>
+        /// <para>The route name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>itemcenter-gateway</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by route name using a fuzzy search.</para>
+        /// <para>The route name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>item</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The page number, starting from 1. Defaults to 1 if unspecified.</para>
+        /// <para>The page number. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid values are 1 to 100. Defaults to 10 if unspecified.</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters the results by route path using a fuzzy search.</para>
+        /// <para>The route path for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/v1</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PathLike { get; set; }
 
         /// <summary>
-        /// <para>Set to <c>true</c> to include the consumer authorization policy in the response.</para>
+        /// <para>Specifies whether to include consumer authorization information in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAuthPolicyInfo { get; set; }
 
         /// <summary>
-        /// <para>The consumer ID. If specified, the response includes the consumer\&quot;s associated authorization rules for each route.</para>
+        /// <para>The consumer ID. If specified, the response includes the authorization rule list for the specified consumer in each route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInfoById { get; set; }
 
         /// <summary>
-        /// <para>The plugin ID. If specified, the response includes the attachment information for this plugin for each route.</para>
+        /// <para>The plug-in ID. If specified, the response includes the attachment information of the specified plug-in for each route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-xxx</para>

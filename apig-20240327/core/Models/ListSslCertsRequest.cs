@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListSslCertsRequest : TeaModel {
         /// <summary>
-        /// <para>The name keyword for matching.</para>
+        /// <para>The keyword for fuzzy match of the certificate name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ali</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

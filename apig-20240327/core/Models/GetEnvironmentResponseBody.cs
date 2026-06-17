@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetEnvironmentResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response message returned.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The environment ID.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetEnvironmentResponseBodyData Data { get; set; }
         public class GetEnvironmentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Test environment</para>
+            /// <para>The environment alias.</para>
             /// 
             /// <b>Example:</b>
             /// <para>测试环境</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Alias { get; set; }
 
             /// <summary>
-            /// <para>The update timestamp.</para>
+            /// <para>The creation timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719386834548</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? CreateTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The creation timestamp.</para>
+            /// <para>Indicates whether this is the default environment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public bool? Default { get; set; }
 
             /// <summary>
-            /// <para>Testing environment for xx project of xxx</para>
+            /// <para>The environment description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>这是xxx的xx项目测试环境</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The environment name.</para>
+            /// <para>The environment ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env-cq7l5s5lhtgi6qasrdc0</para>
@@ -77,14 +77,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string EnvironmentId { get; set; }
 
             /// <summary>
-            /// <para>The subdomains.</para>
+            /// <para>The gateway information.</para>
             /// </summary>
             [NameInMap("gatewayInfo")]
             [Validation(Required=false)]
             public GatewayInfo GatewayInfo { get; set; }
 
             /// <summary>
-            /// <para>The environment alias.</para>
+            /// <para>The environment name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>rg-aekzzzntl5njbpi</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aekz4us4iruleja</para>
@@ -104,14 +104,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The information about online resources.</para>
+            /// <para>The online resource information.</para>
             /// </summary>
             [NameInMap("statisticsInfo")]
             [Validation(Required=false)]
             public GetEnvironmentResponseBodyDataStatisticsInfo StatisticsInfo { get; set; }
             public class GetEnvironmentResponseBodyDataStatisticsInfo : TeaModel {
                 /// <summary>
-                /// <para>4</para>
+                /// <para>The online resource count.</para>
                 /// </summary>
                 [NameInMap("resourceStatistics")]
                 [Validation(Required=false)]
@@ -130,14 +130,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The subdomain information.</para>
+            /// <para>The list of subdomains.</para>
             /// </summary>
             [NameInMap("subDomainInfos")]
             [Validation(Required=false)]
             public List<SubDomainInfo> SubDomainInfos { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The update timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719386834548</para>
@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The request ID, which is used to trace the API call chain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3F8EE674-BB08-5E92-BE6F-E4756A748B0F</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class QueryConsumerAuthorizationRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Ok</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response payload.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public QueryConsumerAuthorizationRulesResponseBodyData Data { get; set; }
         public class QueryConsumerAuthorizationRulesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The rules.</para>
+            /// <para>消费者规则列表。</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<QueryConsumerAuthorizationRulesResponseBodyDataItems> Items { get; set; }
             public class QueryConsumerAuthorizationRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The API details.</para>
+                /// <para>API信息详情。</para>
                 /// </summary>
                 [NameInMap("apiInfo")]
                 [Validation(Required=false)]
                 public HttpApiApiInfo ApiInfo { get; set; }
 
                 /// <summary>
-                /// <para>The rule ID.</para>
+                /// <para>消费者授权规则ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>car-csgeka5lhtggrjcprok0</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerAuthorizationRuleId { get; set; }
 
                 /// <summary>
-                /// <para>The consumer ID.</para>
+                /// <para>消费者ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cs-csheiftlhtgmp0j0hp4g</para>
@@ -61,14 +61,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>The consumer information.</para>
+                /// <para>消费者信息详情。</para>
                 /// </summary>
                 [NameInMap("consumerInfo")]
                 [Validation(Required=false)]
                 public ConsumerInfo ConsumerInfo { get; set; }
 
                 /// <summary>
-                /// <para>The creation timestamp. Unit: milliseconds.</para>
+                /// <para>创建时间戳。单位: 毫秒。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? CreateTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The deployment status of the API in the current environment.</para>
+                /// <para>API在当前环境的发布状态</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{}</para>
@@ -88,14 +88,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string DeployStatus { get; set; }
 
                 /// <summary>
-                /// <para>The environment information.</para>
+                /// <para>环境信息。</para>
                 /// </summary>
                 [NameInMap("environmentInfo")]
                 [Validation(Required=false)]
                 public EnvironmentInfo EnvironmentInfo { get; set; }
 
                 /// <summary>
-                /// <para>The expiry mode. Valid values: LongTerm and ShortTerm.</para>
+                /// <para>失效模式。LongTerm、ShortTerm，二选一。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ShortTerm</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExpireMode { get; set; }
 
                 /// <summary>
-                /// <para>The rule status.</para>
+                /// <para>失效状态。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>InEffect</para>
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExpireStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the rule expires.</para>
+                /// <para>到期时间。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>172086834548</para>
@@ -125,14 +125,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public long? ExpireTimestamp { get; set; }
 
                 /// <summary>
-                /// <para>The instance information.</para>
+                /// <para>网关信息。</para>
                 /// </summary>
                 [NameInMap("gatewayInfo")]
                 [Validation(Required=false)]
                 public GatewayInfo GatewayInfo { get; set; }
 
                 /// <summary>
-                /// <para>The resource IDs.</para>
+                /// <para>资源ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2351944</para>
@@ -142,21 +142,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource information.</para>
+                /// <para>资源信息详情。</para>
                 /// </summary>
                 [NameInMap("resourceInfo")]
                 [Validation(Required=false)]
                 public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo ResourceInfo { get; set; }
                 public class QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo : TeaModel {
                     /// <summary>
-                    /// <para>The operation information.</para>
+                    /// <para>接口信息。</para>
                     /// </summary>
                     [NameInMap("operationInfo")]
                     [Validation(Required=false)]
                     public HttpApiOperationInfo OperationInfo { get; set; }
 
                     /// <summary>
-                    /// <para>The route.</para>
+                    /// <para>路由规则。</para>
                     /// </summary>
                     [NameInMap("route")]
                     [Validation(Required=false)]
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The resource type.</para>
+                /// <para>资源类型。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HttpApiRoute</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceType { get; set; }
 
                 /// <summary>
-                /// <para>The update timestamp. Unit: milliseconds.</para>
+                /// <para>更新时间戳。单位: 毫秒。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1719386834548</para>
@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The page number of the returned page.</para>
+            /// <para>The page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The page size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -229,7 +229,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</para>

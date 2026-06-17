@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListDomainsRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <b>Example:</b>
+        /// <para>Serverless</para>
+        /// </summary>
+        [NameInMap("domainScope")]
+        [Validation(Required=false)]
+        public string DomainScope { get; set; }
+
+        /// <summary>
+        /// <para>The gateway ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxxxxx</para>
@@ -20,7 +28,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The gateway type to filter. Valid values: <b>AI</b> and <b>API</b>.</para>
+        /// <para>The gateway type used for filtering. Valid values: <b>AI</b> and <b>API</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -30,7 +38,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayType { get; set; }
 
         /// <summary>
-        /// <para>The domain name keyword for fuzzy search.</para>
+        /// <para>The domain name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,7 +48,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NameLike { get; set; }
 
         /// <summary>
-        /// <para>The page number of the page to return. Default value: 1.</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +68,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aek27lpqyiie6qy</para>

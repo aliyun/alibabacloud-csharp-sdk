@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiApiInfo ApiInfo { get; set; }
 
         /// <summary>
-        /// <para>Filters the list of operations by a specific consumer authorization rule ID. Only authorized operations are returned in the response.</para>
+        /// <para>The consumer authorization rule ID used to filter the API list. The API list in the response contains only authorized APIs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>car-ctgdn8em1hko5krqq03g</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The publishing status of the API in the current environment.</para>
+        /// <para>The publish status of the API in the current environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -57,14 +57,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DeployStatus { get; set; }
 
         /// <summary>
-        /// <para>The environment information.</para>
+        /// <para>The environment context.</para>
         /// </summary>
         [NameInMap("environmentInfo")]
         [Validation(Required=false)]
         public EnvironmentInfo EnvironmentInfo { get; set; }
 
         /// <summary>
-        /// <para>The expiry mode. Valid values: LongTerm and ShortTerm.</para>
+        /// <para>The expiration mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>LongTerm</description></item>
+        /// <item><description>ShortTerm.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>LongTerm</para>
@@ -74,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExpireMode { get; set; }
 
         /// <summary>
-        /// <para>The rule status.</para>
+        /// <para>The expiration status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -101,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GatewayInfo GatewayInfo { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>53102737-1E4E-5A8B-8E0A-4184B0959B84</para>

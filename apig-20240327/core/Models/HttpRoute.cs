@@ -130,6 +130,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HttpRouteEnvironmentInfoGatewayInfo GatewayInfo { get; set; }
             public class HttpRouteEnvironmentInfoGatewayInfo : TeaModel {
                 /// <summary>
+                /// <b>Example:</b>
+                /// <para>MultiTenantServerless</para>
+                /// </summary>
+                [NameInMap("gatewayEdition")]
+                [Validation(Required=false)]
+                public string GatewayEdition { get; set; }
+
+                /// <summary>
                 /// <para>The gateway ID</para>
                 /// 
                 /// <b>Example:</b>
