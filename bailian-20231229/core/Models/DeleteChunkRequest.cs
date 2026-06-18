@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteChunkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of text chunks to be deleted. You can specify up to 10 chunk IDs at a time.</para>
+        /// <para>The list of text chunks to delete. A maximum of 10 text chunk IDs can be specified in a single request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ChunkIds")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public List<string> ChunkIds { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base ID, which is the <c>Data.Id</c> parameter returned by <b>CreateIndex</b>.</para>
+        /// <para>The knowledge base ID, which is the <c>Data.Id</c> returned by the <b>CreateIndex</b> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

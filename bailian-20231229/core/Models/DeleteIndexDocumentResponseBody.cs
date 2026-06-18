@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteIndexDocumentResponseBody : TeaModel {
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Index.InvalidParameter</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The parameters returned by the operation.</para>
+        /// <para>The business data field returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteIndexDocumentResponseBodyData Data { get; set; }
         public class DeleteIndexDocumentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of primary key IDs of documents that are deleted.</para>
+            /// <para>The list of successfully deleted file IDs.</para>
             /// </summary>
             [NameInMap("DeletedDocument")]
             [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -66,10 +66,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

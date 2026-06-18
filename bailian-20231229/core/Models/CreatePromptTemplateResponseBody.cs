@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class CreatePromptTemplateResponseBody : TeaModel {
         /// <summary>
+        /// <para>Prompt template ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6e49109bfeb94a39bb268f4e483ccxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string PromptTemplateId { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9B6CBF-47E6-5D76-9C5D-B814DD5ABxxx</para>
         /// </summary>

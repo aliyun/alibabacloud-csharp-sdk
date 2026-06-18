@@ -63,10 +63,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <para>The model name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <list type="bullet">
-                /// <item><description>qwen-vl-max</description></item>
-                /// <item><description>qwen-vl-plus</description></item>
-                /// </list>
+                /// <para>qwen-vl-max</para>
                 /// </summary>
                 [NameInMap("ModelName")]
                 [Validation(Required=false)]
@@ -76,10 +73,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <para>The prompt used for parsing.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <h1>Role</h1>
-                /// <para>You are a professional image content annotator, skilled in identifying and describing the contents of images.  </para>
-                /// <h1>Task Objective</h1>
-                /// <para>Based on the input image, provide a detailed description of its contents.</para>
+                /// <para>#角色
+                /// 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。</para>
+                /// <h1>任务目标</h1>
+                /// <para>请结合输入图片，详细描述图片中的内容。</para>
                 /// </summary>
                 [NameInMap("ModelPrompt")]
                 [Validation(Required=false)]
@@ -91,7 +88,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// <para>The display name of the parsing method.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Digital parsing</para>
+            /// <para>电子文档解析</para>
             /// </summary>
             [NameInMap("ParserDisplayName")]
             [Validation(Required=false)]

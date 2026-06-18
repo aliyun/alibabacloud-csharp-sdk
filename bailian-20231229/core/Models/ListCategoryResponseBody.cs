@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListCategoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -17,27 +19,46 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response payload.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ListCategoryResponseBodyData Data { get; set; }
         public class ListCategoryResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The list of categories.</para>
+            /// </summary>
             [NameInMap("CategoryList")]
             [Validation(Required=false)]
             public List<ListCategoryResponseBodyDataCategoryList> CategoryList { get; set; }
             public class ListCategoryResponseBodyDataCategoryList : TeaModel {
                 /// <summary>
+                /// <para>The category ID.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>cate_cdd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</para>
+                /// <para>cate_cdd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</para>
                 /// </summary>
                 [NameInMap("CategoryId")]
                 [Validation(Required=false)]
                 public string CategoryId { get; set; }
 
+                /// <summary>
+                /// <para>The category name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>类目1</para>
+                /// </summary>
                 [NameInMap("CategoryName")]
                 [Validation(Required=false)]
                 public string CategoryName { get; set; }
 
                 /// <summary>
+                /// <para>The category type. The only valid value is:</para>
+                /// <list type="bullet">
+                /// <item><description><c>UNSTRUCTURED</c>: A standard category.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>UNSTRUCTURED</para>
                 /// </summary>
@@ -46,6 +67,15 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string CategoryType { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the category is the default. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>true</c>: The category is the default.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: The category is not the default.</para>
+                /// </description></item>
+                /// </list>
+                /// <para>You cannot delete the default category.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -54,8 +84,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public bool? IsDefault { get; set; }
 
                 /// <summary>
+                /// <para>The parent category ID.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>cate_addd11b1b79a74e8bbd675c356a91ee3XXXXXXXX</para>
+                /// <para>cate_addd11b1b79a74e8bbd675c356a91ee3xxxxxxxx</para>
                 /// </summary>
                 [NameInMap("ParentCategoryId")]
                 [Validation(Required=false)]
@@ -64,6 +96,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             }
 
             /// <summary>
+            /// <para>Indicates whether more results are available for retrieval. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>true</c>: More results are available.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: This is the last page of results.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -72,6 +112,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public bool? HasNext { get; set; }
 
             /// <summary>
+            /// <para>The maximum number of results to return per page.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -80,6 +122,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
+            /// <para>The token used to retrieve the next page of results. This parameter is omitted when no more results are available.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AAAAALHWGpGoYCcYMxiFfmlhvh7Z4G8jiXR6IjHYd+M9WQVJ</para>
             /// </summary>
@@ -88,6 +132,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string NextToken { get; set; }
 
             /// <summary>
+            /// <para>The total number of matching categories.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20</para>
             /// </summary>
@@ -98,6 +144,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>workspace id is null or invalid.</para>
         /// </summary>
@@ -106,7 +154,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17204B98-xxxx-4F9A-8464-2446A84821CA</para>
@@ -116,6 +164,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status code for the request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -124,6 +174,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The request failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

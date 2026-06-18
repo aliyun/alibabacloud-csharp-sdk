@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetIndexJobStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Index.Forbidden</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data field returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetIndexJobStatusResponseBodyData Data { get; set; }
         public class GetIndexJobStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of imported documents.</para>
+            /// <para>The list of files imported in this job.</para>
             /// </summary>
             [NameInMap("Documents")]
             [Validation(Required=false)]
             public List<GetIndexJobStatusResponseBodyDataDocuments> Documents { get; set; }
             public class GetIndexJobStatusResponseBodyDataDocuments : TeaModel {
                 /// <summary>
-                /// <para>HTTP status code</para>
+                /// <para>The error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Index.Document.ChunkError</para>
@@ -44,17 +44,20 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>The primary key ID of the document.</para>
+                /// <para>The file ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</para>
+                /// <para>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</para>
                 /// </summary>
                 [NameInMap("DocId")]
                 [Validation(Required=false)]
                 public string DocId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the document.</para>
+                /// <para>The file name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>XXX产品介绍</para>
                 /// </summary>
                 [NameInMap("DocName")]
                 [Validation(Required=false)]
@@ -75,12 +78,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The import status of the document. Valid values:</para>
+                /// <para>The file import status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INSERT_ERROR</description></item>
-                /// <item><description>RUNNING</description></item>
-                /// <item><description>DELETED</description></item>
-                /// <item><description>FINISH</description></item>
+                /// <item><description>INSERT_ERROR: The file import failed.</description></item>
+                /// <item><description>RUNNING: The file is being imported.</description></item>
+                /// <item><description>DELETED: The file has been deleted.</description></item>
+                /// <item><description>FINISH: The file was imported.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -93,22 +96,22 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             }
 
             /// <summary>
-            /// <para>The ID of the job.</para>
+            /// <para>The job ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>66122af12a4e45ddae6bd6c845556647</para>
+            /// <para>66122af12a4e45ddae6bd6c84555xxxx</para>
             /// </summary>
             [NameInMap("JobId")]
             [Validation(Required=false)]
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The status of the knowledge base job. Valid values:</para>
+            /// <para>The current status of the knowledge base job. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>COMPLETED</description></item>
-            /// <item><description>FAILED</description></item>
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>PENDING</description></item>
+            /// <item><description>COMPLETED: The job succeeded.</description></item>
+            /// <item><description>FAILED: The job failed.</description></item>
+            /// <item><description>RUNNING: The job is running.</description></item>
+            /// <item><description>PENDING: The job is pending execution.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +144,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The HTTP status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -151,10 +154,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The operation was successful.</description></item>
+        /// <item><description>false: The operation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -40,8 +40,6 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>1C139002-0EC5-584C-A755-4B8B9FA080BE</para>
         /// </summary>

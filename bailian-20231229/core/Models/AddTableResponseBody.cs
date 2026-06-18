@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class AddTableResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Index.Forbidden</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddTableResponseBodyData Data { get; set; }
         public class AddTableResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The table ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>table_b6ddc67e7df14db38b74ef5e2e0fe24e_12792097</para>
             /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Required parameter(%s) missing or invalid, please check the request parameters.</para>
         /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status code returned by the operation.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -58,6 +69,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Succeeded.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

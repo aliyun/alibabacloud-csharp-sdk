@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>The keyword that is used to search for templates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>小红书</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

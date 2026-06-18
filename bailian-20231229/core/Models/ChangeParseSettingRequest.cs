@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ChangeParseSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The category ID, which is the <c>CategoryId</c> returned by <b>AddCategory</b>. To view the category ID, click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> page.</para>
+        /// <para>The category ID. This is the <c>CategoryId</c> returned by the <b>AddCategory</b> operation. You can also obtain the ID from the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a> - File tab&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/?tab=app#/data-center">Application Data</a> - Unstructured Data tab by clicking the ID icon next to the category name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,39 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CategoryId { get; set; }
 
         /// <summary>
-        /// <para>The file type. Valid values: pdf, docx, and doc.</para>
+        /// <para>The file type, specified by its extension. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>doc</para>
+        /// </description></item>
+        /// <item><description><para>docx</para>
+        /// </description></item>
+        /// <item><description><para>ppt</para>
+        /// </description></item>
+        /// <item><description><para>pptx</para>
+        /// </description></item>
+        /// <item><description><para>xls</para>
+        /// </description></item>
+        /// <item><description><para>xlsx</para>
+        /// </description></item>
+        /// <item><description><para>md</para>
+        /// </description></item>
+        /// <item><description><para>txt</para>
+        /// </description></item>
+        /// <item><description><para>pdf</para>
+        /// </description></item>
+        /// <item><description><para>png</para>
+        /// </description></item>
+        /// <item><description><para>jpg</para>
+        /// </description></item>
+        /// <item><description><para>jpeg</para>
+        /// </description></item>
+        /// <item><description><para>bmp</para>
+        /// </description></item>
+        /// <item><description><para>gif</para>
+        /// </description></item>
+        /// <item><description><para>html</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,12 +64,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>The parser code. Valid values:</para>
+        /// <para>The identifier for the parser. Different parsers are suitable for different scenarios. For more information, refer to the knowledge base. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DOCMIND (Intelligent parsing)</description></item>
-        /// <item><description>DOCMIND_DIGITAL (Digital parsing)</description></item>
-        /// <item><description>DOCMIND_LLM_VERSION (LLM parsing)</description></item>
-        /// <item><description>DASH_QWEN_VL_PARSER (Qwen VL parsing)</description></item>
+        /// <item><description><para>DOCMIND (intelligent document parsing)</para>
+        /// </description></item>
+        /// <item><description><para>DOCMIND_DIGITAL (digital document parsing)</para>
+        /// </description></item>
+        /// <item><description><para>DOCMIND_LLM_VERSION (LLM-based document parsing)</para>
+        /// </description></item>
+        /// <item><description><para>DASH_QWEN_VL_PARSER (Qwen VL Parser)</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,7 +85,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Parser { get; set; }
 
         /// <summary>
-        /// <para>The parser configuration. Currently, this is available only for Qwen VL parsing.</para>
+        /// <para>The parser configuration. This parameter is required only when the <c>Parser</c> parameter is set to <c>DASH_QWEN_VL_PARSER</c>.</para>
         /// </summary>
         [NameInMap("ParserConfig")]
         [Validation(Required=false)]
@@ -57,11 +93,6 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public class ChangeParseSettingRequestParserConfig : TeaModel {
             /// <summary>
             /// <para>The model name.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>qwen-vl-max</description></item>
-            /// <item><description>qwen-vl-plus</description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>qwen-vl-max</para>
@@ -71,7 +102,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string ModelName { get; set; }
 
             /// <summary>
-            /// <para>The prompt used for parsing.</para>
+            /// <para>The prompt to use when calling the Qwen VL Parser.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>#角色
+            /// 你是一个专业的图片内容标注人员，擅长识别并描述出图片中的内容。</para>
+            /// <h1>任务目标</h1>
+            /// <para>请结合输入图片，详细描述图片中的内容。</para>
             /// </summary>
             [NameInMap("modelPrompt")]
             [Validation(Required=false)]

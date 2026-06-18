@@ -10,30 +10,27 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class CreateIndexResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Forbidden</para>
+        /// <para>Error status code</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned if the request is successful.</para>
+        /// <para>The business data returned when the request is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateIndexResponseBodyData Data { get; set; }
         public class CreateIndexResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The knowledge base ID, or <c>IndexId</c>, is a unique identifier for the knowledge base created.</para>
+            /// <para>The ID of the knowledge base, also known as \<c>IndexId\\</c>. This is the unique identifier of the created knowledge base.</para>
             /// <remarks>
-            /// <para>Keep this ID. It is required for all subsequent API operations related to this knowledge base.</para>
+            /// <para>Keep this value safe. It will be used for all subsequent API operations related to this knowledge base.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>jkurxhju6b</para>
+            /// <para>jkurxhxxxx</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -42,40 +39,39 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>The error message.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Invalid input, variable name is missing</para>
+        /// <para>Error message</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>17204B98-7734-4F9A-8464-2446A84821CA</para>
+        /// <para>17204B98-xxxx-4F9A--2446A84821CA</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The status code returned by the interface.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>&quot;200&quot;</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Possible values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: Successful</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class AddTableRequest : TeaModel {
         /// <summary>
+        /// <para>The connector ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
+        /// <para>The column information of the table.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TableColumns")]
@@ -27,6 +29,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public List<AddTableRequestTableColumns> TableColumns { get; set; }
         public class AddTableRequestTableColumns : TeaModel {
             /// <summary>
+            /// <para>The column description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>desc</para>
             /// </summary>
@@ -35,6 +39,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string ColumnDesc { get; set; }
 
             /// <summary>
+            /// <para>The column name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -45,6 +50,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public string ColumnName { get; set; }
 
             /// <summary>
+            /// <para>The data type.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -56,7 +62,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         }
 
+        [NameInMap("TableDesc")]
+        [Validation(Required=false)]
+        public string TableDesc { get; set; }
+
         /// <summary>
+        /// <para>The table name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

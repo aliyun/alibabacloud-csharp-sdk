@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteMemoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6a71f2d9-f1c9-913b-818b-114029103cad</para>
+        /// <para>6a71f2d9-f1c9-913b-818b-11402910xxxx</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

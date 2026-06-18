@@ -45,6 +45,9 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public class GetAvailableParserTypesResponseBodyDataParserList : TeaModel {
                 /// <summary>
                 /// <para>The display name of the parsing method.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>智能文档解析</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]

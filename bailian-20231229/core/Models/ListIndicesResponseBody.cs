@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListIndicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Index.InvalidParameter</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public List<ListIndicesResponseBodyDataIndices> Indices { get; set; }
             public class ListIndicesResponseBodyDataIndices : TeaModel {
                 /// <summary>
-                /// <para>The estimated length of chunks. Valid values: [1-2048].</para>
+                /// <para>The estimated chunk length. Valid values: 1 to 2048.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -43,6 +43,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 [Validation(Required=false)]
                 public int? ChunkSize { get; set; }
 
+                /// <summary>
+                /// <para>The configuration mode used by this knowledge base. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>recommend: recommended configuration.</description></item>
+                /// <item><description>user-defined: custom configuration.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>recommend</para>
+                /// </summary>
                 [NameInMap("ConfgModel")]
                 [Validation(Required=false)]
                 public string ConfgModel { get; set; }
@@ -51,14 +61,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <para>The description of the knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>If each RAM user belongs to a RAM group, the configuration is considered compliant.</para>
+                /// <para>清单中产品主要面向海外客户。</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The list of the primary key IDs of the documents.</para>
+                /// <para>The list of file IDs.</para>
                 /// </summary>
                 [NameInMap("DocumentIds")]
                 [Validation(Required=false)]
@@ -66,26 +76,44 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
                 /// <summary>
                 /// <para>The name of the embedding model. Valid values:</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;</para>
                 /// <list type="bullet">
-                /// <item><description>text-embedding-v2</description></item>
+                /// <item><description>text-embedding-v4: the text-embedding-v4 model.</description></item>
+                /// <item><description>text-embedding-v3: the text-embedding-v3 model.</description></item>
+                /// <item><description>text-embedding-v2: the text-embedding-v2 model.</description></item>
                 /// </list>
+                /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+                /// <list type="bullet">
+                /// <item><description>text-embedding-v2: the text-embedding-v2 model.</description></item>
+                /// </list>
+                /// <para>.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>conv-rewrite-qwen-1.8b</para>
+                /// <para>text-embedding-v2</para>
                 /// </summary>
                 [NameInMap("EmbeddingModelName")]
                 [Validation(Required=false)]
                 public string EmbeddingModelName { get; set; }
 
+                /// <summary>
+                /// <para>Indicates whether &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">multi-turn conversation rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">multi-turn conversation rewriting</a> is enabled for this knowledge base. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>true: Enabled.</description></item>
+                /// <item><description>false: Disabled.</description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("EnableRewrite")]
                 [Validation(Required=false)]
                 public bool? EnableRewrite { get; set; }
 
                 /// <summary>
-                /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
+                /// <para>The knowledge base ID, which is the <c>Data.Id</c> returned by the <b>CreateIndex</b> operation.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>259899</para>
+                /// <para>lecxr5xxxx</para>
                 /// </summary>
                 [NameInMap("Id")]
                 [Validation(Required=false)]
@@ -95,14 +123,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <para>The name of the knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>temp_mUB4j</para>
+                /// <para>XXXX产品清单</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The overlap length. Valid values: [0-1024].</para>
+                /// <para>The chunk overlap length. Valid values: 0 to 1024.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -112,7 +140,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public int? OverlapSize { get; set; }
 
                 /// <summary>
-                /// <para>Similarity Threshold Valid values: [0.01-1.00].</para>
+                /// <para>The similarity threshold. Valid values: 0.01 to 1.00.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0.01</para>
@@ -122,11 +150,20 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string RerankMinScore { get; set; }
 
                 /// <summary>
-                /// <para>The name of the rank model. Valid values:</para>
+                /// <para>The name of the rerank model. Valid values:</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;</para>
                 /// <list type="bullet">
-                /// <item><description>gte-rerank-hybrid</description></item>
-                /// <item><description>gte-rerank</description></item>
+                /// <item><description>qwen3-rerank-hybrid: qwen3-rerank (hybrid) reranking.</description></item>
+                /// <item><description>qwen3-rerank: qwen3-rerank reranking.</description></item>
+                /// <item><description>gte-rerank-hybrid: gte-rerank (hybrid) reranking.</description></item>
+                /// <item><description>gte-rerank: gte-rerank reranking.</description></item>
                 /// </list>
+                /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+                /// <list type="bullet">
+                /// <item><description>gte-rerank-hybrid: official reranking.</description></item>
+                /// <item><description>gte-rerank: gte-rerank reranking.</description></item>
+                /// </list>
+                /// <para>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>gte-rerank-hybrid</para>
@@ -136,19 +173,20 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string RerankModelName { get; set; }
 
                 /// <summary>
-                /// <para>The clause identifier. Separate multiple clause identifiers with |. Valid values:</para>
+                /// <para>The sentence separator. If multiple separators are used, they are separated by |. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>\n: line break</description></item>
+                /// <item><description>\
+                /// : line break</description></item>
                 /// <item><description>，: Chinese comma</description></item>
                 /// <item><description>,: English comma</description></item>
-                /// <item><description>。 : Chinese full stop</description></item>
-                /// <item><description>.: English full stop</description></item>
-                /// <item><description>！ : Chinese exclamation point</description></item>
-                /// <item><description>! : English exclamation point</description></item>
+                /// <item><description>。: Chinese period</description></item>
+                /// <item><description>.: English period</description></item>
+                /// <item><description>！: Chinese exclamation mark</description></item>
+                /// <item><description>!: English exclamation mark</description></item>
                 /// <item><description>；: Chinese semicolon</description></item>
                 /// <item><description>;: English semicolon</description></item>
-                /// <item><description>？ : Chinese question mark</description></item>
-                /// <item><description>?: English question mark</description></item>
+                /// <item><description>？: Chinese question mark</description></item>
+                /// <item><description>?: English question mark.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -159,17 +197,17 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string Separator { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the vector storage instance.</para>
+                /// <para>The instance ID of the vector storage for the knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>gp-bp1gq62t1788yw2ol</para>
+                /// <para>gp-bp1gq62t1788yxxxx</para>
                 /// </summary>
                 [NameInMap("SinkInstanceId")]
                 [Validation(Required=false)]
                 public string SinkInstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The region of the vector storage instance.</para>
+                /// <para>The region of the vector storage instance for the knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -181,27 +219,28 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 /// <summary>
                 /// <para>The vector storage type of the knowledge base. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ES: Built-in vector database.</description></item>
-                /// <item><description>BUILT_IN: Built-in vector database.</description></item>
+                /// <item><description>ES: built-in vector database.</description></item>
+                /// <item><description>BUILT_IN: built-in vector database.</description></item>
                 /// <item><description>ADB: AnalyticDB for PostgreSQL database.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>es</para>
+                /// <para>BUILT_IN</para>
                 /// </summary>
                 [NameInMap("SinkType")]
                 [Validation(Required=false)]
                 public string SinkType { get; set; }
 
                 /// <summary>
-                /// <para>The data type of <a href="https://bailian.console.aliyun.com/#/data-center">Data Management</a>. For unstructured knowledge base, possible values:</para>
+                /// <para>The data type of Alibaba Cloud Model Studio &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">application data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">application data</a>.</para>
+                /// <para>For document search&lt;props=&quot;china&quot;&gt;/audio and video search knowledge bases, valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DATA_CENTER_CATEGORY: The category type.</description></item>
-                /// <item><description>DATA_CENTER_FILE: The document type.</description></item>
+                /// <item><description>DATA_CENTER_CATEGORY: category type.</description></item>
+                /// <item><description>DATA_CENTER_FILE: file type.</description></item>
                 /// </list>
-                /// <para>For structured knowledge base, possible values:</para>
+                /// <para>For data query/image Q&amp;A knowledge bases, valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DATA_CENTER_STRUCTURED_TABLE: The data table type.</description></item>
+                /// <item><description>DATA_CENTER_STRUCTURED_TABLE: data table type.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,13 +251,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
                 public string SourceType { get; set; }
 
                 /// <summary>
-                /// <para>The vector storage type of the knowledge base. Valid values:</para>
+                /// <para>The type of the knowledge base. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>UNSTRUCTURED</description></item>
+                /// <item><description>UNSTRUCTURED: document search.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
-                /// <para>structured</para>
+                /// <para>UNSTRUCTURED</para>
                 /// </summary>
                 [NameInMap("StructureType")]
                 [Validation(Required=false)]
@@ -227,7 +266,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             }
 
             /// <summary>
-            /// <para>The specified page number.</para>
+            /// <para>The page number returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -237,7 +276,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The specified number of documents on each page.</para>
+            /// <para>The number of entries per page returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -247,7 +286,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of knowledge bases returned.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48</para>
@@ -279,7 +318,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -289,10 +328,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

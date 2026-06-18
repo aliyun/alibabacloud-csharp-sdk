@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteIndexResponseBody : TeaModel {
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Index.InvalidParameter</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

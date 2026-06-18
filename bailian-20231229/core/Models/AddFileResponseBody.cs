@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class AddFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DataCenter.FileTooLarge</para>
@@ -20,26 +20,26 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data fields.</para>
+        /// <para>The data returned for the request.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AddFileResponseBodyData Data { get; set; }
         public class AddFileResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The primary key ID of the document. We recommend that you store the ID because it is required for all subsequent API operations related to this document.</para>
+            /// <para>The ID of the file. Save this ID for use in subsequent API calls involving this file.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</para>
+            /// <para>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</para>
             /// </summary>
             [NameInMap("FileId")]
             [Validation(Required=false)]
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The parser that is used to parse the document. Valid value:</para>
+            /// <para>The parser that was used for the file. A possible value is:</para>
             /// <list type="bullet">
-            /// <item><description>DASHSCOPE_DOCMIND: Intelligent document parsing by Alibaba Cloud.</description></item>
+            /// <item><description><c>DASHSCOPE_DOCMIND</c>: Alibaba Cloud Document Intelligence</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The status code of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -82,10 +82,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c>: The call was successful.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The call failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

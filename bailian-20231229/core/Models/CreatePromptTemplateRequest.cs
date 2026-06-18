@@ -10,14 +10,22 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class CreatePromptTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>Prompt template content.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>请写一篇小红书种草笔记，增加丰富的emoji元素，结尾作总结，并加上相关标签。主题为：${theme}</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
+        /// <para>Template name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>小红书文案助手</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]

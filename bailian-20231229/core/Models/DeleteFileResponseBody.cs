@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteFileResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
         /// </summary>
@@ -17,13 +19,18 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business data field of the API response.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteFileResponseBodyData Data { get; set; }
         public class DeleteFileResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The file ID.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>file_9a65732555b54d5ea10796ca5742ba22_XXXXXXXX</para>
+            /// <para>file_9a65732555b54d5ea10796ca5742ba22_xxxxxxxx</para>
             /// </summary>
             [NameInMap("FileId")]
             [Validation(Required=false)]
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Current file status does not support delete.</para>
         /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The status code returned by the API.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -58,6 +69,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

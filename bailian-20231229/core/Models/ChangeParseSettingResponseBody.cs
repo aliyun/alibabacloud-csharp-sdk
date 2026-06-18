@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ChangeParseSettingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InvalidParameter</para>
@@ -20,14 +20,20 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data fields.</para>
+        /// <para>The data returned for a successful request.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ChangeParseSettingResponseBodyData Data { get; set; }
         public class ChangeParseSettingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The result of the modification.</para>
+            /// <para>Indicates whether the configuration was successfully updated.</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: The configuration was updated.</para>
+            /// </description></item>
+            /// <item><description><para>false: The configuration failed to be updated.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -59,7 +65,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code returned for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -69,10 +75,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

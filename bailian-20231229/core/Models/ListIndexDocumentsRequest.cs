@@ -10,21 +10,24 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListIndexDocumentsRequest : TeaModel {
         /// <summary>
-        /// <para>The names of the queried documents. The default value is null, which means the names are not used to filter the results.</para>
+        /// <para>Filters the returned file list by file name (without the file extension). Default value: empty, which means the results are not filtered by file name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>product-overview</para>
         /// </summary>
         [NameInMap("DocumentName")]
         [Validation(Required=false)]
         public string DocumentName { get; set; }
 
         /// <summary>
-        /// <para>The import status of the documents to be queried. Valid values:</para>
+        /// <para>Filters the returned file list by file import status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>INSERT_ERROR</description></item>
-        /// <item><description>RUNNING</description></item>
-        /// <item><description>DELETED</description></item>
-        /// <item><description>FINISH</description></item>
+        /// <item><description>INSERT_ERROR: The file failed to be imported.</description></item>
+        /// <item><description>RUNNING: The file is being imported.</description></item>
+        /// <item><description>DELETED: The file has been deleted.</description></item>
+        /// <item><description>FINISH: The file was imported.</description></item>
         /// </list>
-        /// <para>The default value is null, which means the import status is not used to filter the results.</para>
+        /// <para>Default value: empty, which means the results are not filtered by file import status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FINISH</para>
@@ -33,23 +36,34 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string DocumentStatus { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable fuzzy matching for file names. This parameter is used together with the <c>DocumentName</c> parameter. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Fuzzy matching is used to filter the returned file list by file name.</description></item>
+        /// <item><description>false: Exact matching is used to filter the returned file list by file name.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("EnableNameLike")]
         [Validation(Required=false)]
         public string EnableNameLike { get; set; }
 
         /// <summary>
-        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
+        /// <para>The knowledge base ID, which is the <c>Data.Id</c> returned by the <b>CreateIndex</b> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>79c0aly8zw</para>
+        /// <para>79c0alxxxx</para>
         /// </summary>
         [NameInMap("IndexId")]
         [Validation(Required=false)]
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>The page numbers of the pages to return. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,7 +73,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of documents displayed on each page. No maximum value. Default value: 10.</para>
+        /// <para>The number of files to display per page in a paging query. No maximum limit.
+        /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

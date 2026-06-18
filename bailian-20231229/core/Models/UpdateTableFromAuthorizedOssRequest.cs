@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class UpdateTableFromAuthorizedOssRequest : TeaModel {
         /// <summary>
+        /// <para>Name of the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/177682.html">bucket</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string OssBucket { get; set; }
 
         /// <summary>
+        /// <para>Object key of the file in the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/273129.html">object naming</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string OssKey { get; set; }
 
         /// <summary>
+        /// <para>Region ID of the OSS bucket. For details, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string OssRegionId { get; set; }
 
         /// <summary>
+        /// <para>Update mode. Valid values: APPEND and OVERWRITE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

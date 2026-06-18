@@ -10,37 +10,37 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class SubmitIndexJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>InvalidParameter</para>
+        /// <para>Index.InvalidParameter</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The business data returned by the operation.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitIndexJobResponseBodyData Data { get; set; }
         public class SubmitIndexJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The primary key ID of the job, which is the <c>JobId</c> parameter of the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-getindexjobstatus">GetIndexJobStatus</a> operation.</para>
+            /// <para>The task ID, which is the <c>JobId</c> required when calling the <b>GetIndexJobStatus</b> operation.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>eFDr2fGRzP9gdDZWAdo3YQ==</para>
+            /// <para>eFDr2fGRzP9gdDZWAdo3xxxx</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The primary key ID of the knowledge base.</para>
+            /// <para>The knowledge base ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>khdyak1uuj</para>
+            /// <para>79c0alxxxx</para>
             /// </summary>
             [NameInMap("IndexId")]
             [Validation(Required=false)]
@@ -69,24 +69,24 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Success</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>True</para>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetAlipayTransferStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The tipping code returned by the Alipay tipping link request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx-xxxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The Bailian workspace ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>llm-cxxxxxxb8d47ks</para>
         /// </summary>

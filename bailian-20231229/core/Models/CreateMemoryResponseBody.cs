@@ -10,16 +10,24 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class CreateMemoryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The long-term memory ID.</para>
+        /// <remarks>
+        /// <para>Store this value properly. It is required for all subsequent API operations related to this long-term memory.
+        /// .</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
-        /// <para>6bff4f317a14442fbc9f73d29dbd5fc3</para>
+        /// <para>6bff4f317a14442fbc9f73d29dbxxxx</para>
         /// </summary>
         [NameInMap("memoryId")]
         [Validation(Required=false)]
         public string MemoryId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>6a71f2d9-f1c9-913b-818b-114029103cad</para>
+        /// <para>17204B98-xxxx-4F9A--2446A84821CA</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

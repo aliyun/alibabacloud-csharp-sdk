@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class AddTableShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The connector ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,13 +21,19 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string ConnectorId { get; set; }
 
         /// <summary>
+        /// <para>The column information of the table.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TableColumns")]
         [Validation(Required=false)]
         public string TableColumnsShrink { get; set; }
 
+        [NameInMap("TableDesc")]
+        [Validation(Required=false)]
+        public string TableDesc { get; set; }
+
         /// <summary>
+        /// <para>The table name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

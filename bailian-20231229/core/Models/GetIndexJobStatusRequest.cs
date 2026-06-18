@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class GetIndexJobStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
+        /// <para>The knowledge base ID, which is the <c>Data.Id</c> returned by the <b>CreateIndex</b> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>79c0aly8zw</para>
+        /// <para>79c0alxxxx</para>
         /// </summary>
         [NameInMap("IndexId")]
         [Validation(Required=false)]
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base job ID, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> or <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations.</para>
+        /// <para>The knowledge base job ID, which is the <c>Data.Id</c> returned by the <b>SubmitIndexJob</b> or <b>SubmitIndexAddDocumentsJob</b> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string JobId { get; set; }
 
         /// <summary>
-        /// <para>Both the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexjob">SubmitIndexJob</a> and <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-submitindexadddocumentsjob">SubmitIndexAddDocumentsJob</a> operations support batch import of documents. This operation returns both the overall <c>Status</c> of the job and the <c>Document.Status</c> of each document. If there are a large number of documents, you can use the <c>PageNumber</c> parameter to perform a paged query. Pages start from page 1. Default value: 1.</para>
+        /// <para>The <b>SubmitIndexJob</b> and <b>SubmitIndexAddDocumentsJob</b> operations support batch file import. This operation returns the overall knowledge base job status <c>Status</c> and the import status of each file <c>Document.Status</c>. If there are many files, use the <c>PageNumber</c> parameter for paging. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of document import jobs that are displayed on each page. No maximum value. Default value: 10.</para>
+        /// <para>The number of file import tasks to display per page in a paged query. No maximum limit. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

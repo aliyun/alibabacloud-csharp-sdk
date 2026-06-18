@@ -10,17 +10,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class DeleteChunkResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>InvalidParameter</para>
+        /// <para>The error status code.</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned if the request is successful.</para>
+        /// <para>The business data returned upon a successful request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -31,9 +28,6 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>The error message.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>Required parameter(%s) missing or invalid, please check the request parameters.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
@@ -50,7 +44,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code returned by the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -60,10 +54,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

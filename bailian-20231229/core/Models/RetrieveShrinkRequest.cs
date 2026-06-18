@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class RetrieveShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Vector retrieval top K. After generating vectors based on input text, the top K chunks in the knowledge base that are most similar to the vector representation of the input text are retrieved. Valid values: 0 to 100. The sum of the <c>DenseSimilarityTopK</c> and <c>SparseSimilarityTopK</c> parameters must be less than or equal to 200.</para>
+        /// <para>The number of top-K similar text chunks to retrieve using vector retrieval. This is achieved by generating a vector representation of the query and searching the knowledge base for the K text chunks with the most similar vectors. The value must be an integer from 0 to 100. The sum of <c>DenseSimilarityTopK</c> and <c>SparseSimilarityTopK</c> must not exceed 200.</para>
         /// <para>Default value: 100.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? DenseSimilarityTopK { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable reranking. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
+        /// <para>Specifies whether to enable reranking. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c>: Enables reranking.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disables reranking.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: true.</para>
+        /// <para>Default value: <c>true</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -36,12 +38,15 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public bool? EnableReranking { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable multi-round conversation rewriting. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values:</para>
+        /// <para>Specifies whether to enable &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>.
+        /// Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c>: Enables conversational query rewriting.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disables conversational query rewriting.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -54,42 +59,56 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         [Validation(Required=false)]
         public string ExtraShrink { get; set; }
 
+        /// <summary>
+        /// <para>The URLs of images to include in the query.</para>
+        /// </summary>
         [NameInMap("Images")]
         [Validation(Required=false)]
         public string ImagesShrink { get; set; }
 
         /// <summary>
-        /// <para>The primary key ID of the knowledge base, which is the <c>Data.Id</c> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</para>
+        /// <para>The ID of the knowledge base. This is the <c>Data.Id</c> value returned by the <c>CreateIndex</c> operation.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Ensure the specified knowledge base exists and has not been deleted.</description></item>
+        /// </list>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>5pwe0m2g6t</para>
+        /// <para>5pwe0mxxxx</para>
         /// </summary>
         [NameInMap("IndexId")]
         [Validation(Required=false)]
         public string IndexId { get; set; }
 
         /// <summary>
-        /// <para>The input query prompt. The length and characters of the query are not limited.</para>
+        /// <para>The query, which is the original user prompt. There are no limits on the length of the query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>阿里云百炼平台介绍</para>
         /// </summary>
         [NameInMap("Query")]
         [Validation(Required=false)]
         public string Query { get; set; }
 
+        /// <summary>
+        /// <para>The conversation history, used for &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/model-studio/use-cases/rag-optimization#b7031e2ad6cji">conversational query rewriting</a>. This parameter is effective only when <c>EnableRewrite</c> is set to <c>true</c>.</para>
+        /// </summary>
         [NameInMap("QueryHistory")]
         [Validation(Required=false)]
         public string QueryHistoryShrink { get; set; }
 
         /// <summary>
-        /// <para>Ranking configurations.</para>
+        /// <para>The reranking configurations.</para>
         /// </summary>
         [NameInMap("Rerank")]
         [Validation(Required=false)]
         public string RerankShrink { get; set; }
 
         /// <summary>
-        /// <para>Similarity Threshold The lowest similarity score of chunks that can be returned. This parameter is used to filter text chunks returned by the rank model. For more information, see <a href="https://www.alibabacloud.com/help/en/model-studio/user-guide/rag-knowledge-base">Create a knowledge base</a>. Valid values: [0.01-1.00]. The priority of this parameter is greater than the similarity threshold configured for the knowledge base.</para>
-        /// <para>By default, this parameter is left empty. In this case, the similarity threshold of the knowledge base is used.</para>
+        /// <para>The similarity threshold for reranking. Only text chunks with a similarity score greater than this value are returned. The value must be between 0.01 and 1.00, inclusive. This parameter overrides the similarity threshold setting of the knowledge base.</para>
+        /// <para>If not specified, the threshold configured for the knowledge base is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.20</para>
@@ -99,7 +118,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public float? RerankMinScore { get; set; }
 
         /// <summary>
-        /// <para>The top N return data after reranking. Valid values: 1 to 20. Default value: 5.</para>
+        /// <para>The number of top-ranked text chunks to return after reranking. The value must be an integer from 1 to 20. Default value: 5.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -109,19 +128,21 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? RerankTopN { get; set; }
 
         /// <summary>
-        /// <para>Conversation rewriting configurations.</para>
+        /// <para>Configuration for conversational query rewriting.</para>
         /// </summary>
         [NameInMap("Rewrite")]
         [Validation(Required=false)]
         public string RewriteShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to save the retrieve test history. Valid values:</para>
+        /// <para>Specifies whether to save the retrieval history for testing purposes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para><c>true</c>: Saves the retrieval history.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Does not save the retrieval history.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: false.</para>
+        /// <para>Default value: <c>false</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -131,14 +152,17 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public bool? SaveRetrieverHistory { get; set; }
 
         /// <summary>
-        /// <para>Specifies complex filter conditions. For more information about the syntax of SearchFilters, see the SearchFilter syntax section of this topic.</para>
+        /// <para>Specifies custom retrieval conditions, such as tags, to filter semantic retrieval results and exclude irrelevant information.
+        /// The filtering logic is applied only when the <c>is_displayed_chunk_content</c> parameter is set to <c>true</c>. For more information, see <a href="https://help.aliyun.com/document_detail/2869641.html">SearchFilters for a knowledge base</a>.</para>
         /// </summary>
         [NameInMap("SearchFilters")]
         [Validation(Required=false)]
         public string SearchFiltersShrink { get; set; }
 
         /// <summary>
-        /// <para>The top K of keyword retrieval. Chunks that exactly match the keywords of the input text are retrieved from the knowledge base. This filters out irrelevant chunks and boosts accuracy. Valid values: 0 to 100. The sum of the <c>DenseSimilarityTopK</c> and <c>SparseSimilarityTopK</c> parameters must be less than or equal to 200.</para>
+        /// <para>The number of top-K text chunks to retrieve using keyword retrieval. This feature finds text chunks in the knowledge base that exactly match the keywords in the query. It helps filter out irrelevant text chunks and provide more accurate results.
+        /// The value must be an integer from 0 to 100.
+        /// The sum of <c>DenseSimilarityTopK</c> and <c>SparseSimilarityTopK</c> must not exceed 200.</para>
         /// <para>Default value: 100.</para>
         /// 
         /// <b>Example:</b>

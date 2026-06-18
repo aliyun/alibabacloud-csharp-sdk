@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class SubmitIndexAddDocumentsJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The error code returned on failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Index.InvalidParameter</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The business data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitIndexAddDocumentsJobResponseBodyData Data { get; set; }
         public class SubmitIndexAddDocumentsJobResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The primary key ID of the task, <c>JobId</c>.</para>
+            /// <para>The job ID, also known as <c>JobId</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>42687eb254a34802bed398357f5498ae</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned on failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Required parameter(%s) missing or invalid, please check the request parameters.</para>
@@ -52,14 +52,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>778C0B3B-03C1-5FC1-A947-36EDD13606AB</para>
+        /// <para>778C0B3B-xxxx-5FC1-A947-36EDD13606AB</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -69,10 +69,12 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indications whether the API call is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The request was successful.</para>
+        /// </description></item>
+        /// <item><description><para>false: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
