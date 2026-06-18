@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListWorkspacesRequest : TeaModel {
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token used to retrieve more results. You do not need to specify this parameter for the first request. For subsequent requests, use the token returned in the previous response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>uwCwQ5FFCDo=</para>
         /// </summary>
@@ -34,6 +38,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>The keyword for fuzzy match by business workspace name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ws_test</para>
         /// </summary>

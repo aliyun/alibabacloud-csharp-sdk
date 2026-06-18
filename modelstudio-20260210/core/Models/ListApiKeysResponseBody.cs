@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class ListApiKeysResponseBody : TeaModel {
+        /// <summary>
+        /// <para>List of API Keys.</para>
+        /// </summary>
         [NameInMap("apiKeys")]
         [Validation(Required=false)]
         public List<ListApiKeysResponseBodyApiKeys> ApiKeys { get; set; }
         public class ListApiKeysResponseBodyApiKeys : TeaModel {
             /// <summary>
-            /// <para>API Key ID。</para>
+            /// <para>API Key ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2965964</para>
@@ -24,6 +27,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? ApiKeyId { get; set; }
 
             /// <summary>
+            /// <para>Value of the API Key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>sk-ws-djI.8O7d*****2aICctnid4u4</para>
             /// </summary>
@@ -31,17 +36,25 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             [Validation(Required=false)]
             public string ApiKeyValue { get; set; }
 
+            /// <summary>
+            /// <para>Permission settings.</para>
+            /// </summary>
             [NameInMap("auth")]
             [Validation(Required=false)]
             public ListApiKeysResponseBodyApiKeysAuth Auth { get; set; }
             public class ListApiKeysResponseBodyApiKeysAuth : TeaModel {
+                /// <summary>
+                /// <para>IP access whitelist.</para>
+                /// </summary>
                 [NameInMap("accessIps")]
                 [Validation(Required=false)]
                 public List<string> AccessIps { get; set; }
 
                 /// <summary>
+                /// <para>All: All permissions; Custom: Custom permissions.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>All</para>
+                /// <para>Custom</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]
@@ -50,6 +63,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             }
 
             /// <summary>
+            /// <para>Creator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1378030599924858</para>
             /// </summary>
@@ -58,6 +73,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string CreatedBy { get; set; }
 
             /// <summary>
+            /// <para>Description.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test</para>
             /// </summary>
@@ -66,6 +83,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>Whether the API Key is disabled.</para>
+            /// <list type="bullet">
+            /// <item><description><b>0</b>: Active.</description></item>
+            /// <item><description><b>1</b>: Disabled.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -74,6 +97,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public int? Disabled { get; set; }
 
             /// <summary>
+            /// <para>Creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1774338222000</para>
             /// </summary>
@@ -82,6 +107,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>Workspace ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ws-950f9aca7e76c816</para>
             /// </summary>
@@ -92,6 +119,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
+        /// <para>Response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -100,6 +129,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -108,6 +139,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -116,6 +149,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>Response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -124,6 +159,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Used to return more results. This parameter is not required for the first query. The token required for subsequent queries can be obtained from the returned results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>lwytFRtLdNk=</para>
         /// </summary>
@@ -142,6 +179,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the API call is successful:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -150,6 +193,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>Total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4</para>
         /// </summary>

@@ -18,6 +18,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string ServiceSite { get; set; }
 
         /// <summary>
+        /// <para>The name of the business workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

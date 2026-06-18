@@ -18,7 +18,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"eu-central-1", "modelstudio.eu-central-1.aliyuncs.com"},
+                {"cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"},
+                {"cn-beijing", "modelstudio.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("modelstudio", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +46,355 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ApiKey</para>
+        /// <para>Creates an account and directly adds it as a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddOrganizationMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddOrganizationMemberResponse
+        /// </returns>
+        public AddOrganizationMemberResponse AddOrganizationMemberWithOptions(AddOrganizationMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                query["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgRoleCode))
+            {
+                query["OrgRoleCode"] = request.OrgRoleCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
+            {
+                query["SpecType"] = request.SpecType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddOrganizationMember",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/tokenplan/organization/member-additions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddOrganizationMemberResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account and directly adds it as a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddOrganizationMemberRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddOrganizationMemberResponse
+        /// </returns>
+        public async Task<AddOrganizationMemberResponse> AddOrganizationMemberWithOptionsAsync(AddOrganizationMemberRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountName))
+            {
+                query["AccountName"] = request.AccountName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                query["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgId))
+            {
+                query["OrgId"] = request.OrgId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrgRoleCode))
+            {
+                query["OrgRoleCode"] = request.OrgRoleCode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecType))
+            {
+                query["SpecType"] = request.SpecType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddOrganizationMember",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/tokenplan/organization/member-additions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddOrganizationMemberResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account and directly adds it as a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddOrganizationMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddOrganizationMemberResponse
+        /// </returns>
+        public AddOrganizationMemberResponse AddOrganizationMember(AddOrganizationMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddOrganizationMemberWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account and directly adds it as a member.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddOrganizationMemberRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddOrganizationMemberResponse
+        /// </returns>
+        public async Task<AddOrganizationMemberResponse> AddOrganizationMemberAsync(AddOrganizationMemberRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddOrganizationMemberWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns seats in bulk to the member level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAssignSeatsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAssignSeatsResponse
+        /// </returns>
+        public BatchAssignSeatsResponse BatchAssignSeatsWithOptions(BatchAssignSeatsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsStr))
+            {
+                query["AccountIdsStr"] = request.AccountIdsStr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                query["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
+            {
+                query["Locale"] = request.Locale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeatType))
+            {
+                query["SeatType"] = request.SeatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAssignSeats",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/tokenplan/subscription/seat-assignments",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchAssignSeatsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns seats in bulk to the member level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAssignSeatsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAssignSeatsResponse
+        /// </returns>
+        public async Task<BatchAssignSeatsResponse> BatchAssignSeatsWithOptionsAsync(BatchAssignSeatsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIds))
+            {
+                query["AccountIds"] = request.AccountIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountIdsStr))
+            {
+                query["AccountIdsStr"] = request.AccountIdsStr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                query["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
+            {
+                query["Locale"] = request.Locale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeatType))
+            {
+                query["SeatType"] = request.SeatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchAssignSeats",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/tokenplan/subscription/seat-assignments",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchAssignSeatsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns seats in bulk to the member level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAssignSeatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAssignSeatsResponse
+        /// </returns>
+        public BatchAssignSeatsResponse BatchAssignSeats(BatchAssignSeatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchAssignSeatsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Assigns seats in bulk to the member level.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BatchAssignSeatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchAssignSeatsResponse
+        /// </returns>
+        public async Task<BatchAssignSeatsResponse> BatchAssignSeatsAsync(BatchAssignSeatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchAssignSeatsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -95,7 +450,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ApiKey</para>
+        /// <para>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -151,7 +506,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ApiKey</para>
+        /// <para>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -170,7 +525,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建ApiKey</para>
+        /// <para>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -189,7 +544,169 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务空间</para>
+        /// <para>Creates a UAC API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTokenPlanKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTokenPlanKeyResponse
+        /// </returns>
+        public CreateTokenPlanKeyResponse CreateTokenPlanKeyWithOptions(CreateTokenPlanKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                query["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTokenPlanKey",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/tokenplan/api-keys",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTokenPlanKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a UAC API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTokenPlanKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTokenPlanKeyResponse
+        /// </returns>
+        public async Task<CreateTokenPlanKeyResponse> CreateTokenPlanKeyWithOptionsAsync(CreateTokenPlanKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountId))
+            {
+                query["AccountId"] = request.AccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                query["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTokenPlanKey",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/tokenplan/api-keys",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTokenPlanKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a UAC API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTokenPlanKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTokenPlanKeyResponse
+        /// </returns>
+        public CreateTokenPlanKeyResponse CreateTokenPlanKey(CreateTokenPlanKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTokenPlanKeyWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a UAC API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTokenPlanKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTokenPlanKeyResponse
+        /// </returns>
+        public async Task<CreateTokenPlanKeyResponse> CreateTokenPlanKeyAsync(CreateTokenPlanKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTokenPlanKeyWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a business workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -239,7 +756,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务空间</para>
+        /// <para>Creates a business workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -289,7 +806,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务空间</para>
+        /// <para>Creates a business workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -308,7 +825,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建业务空间</para>
+        /// <para>Creates a business workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -327,7 +844,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除apiKey</para>
+        /// <para>Deletes an authentication credential API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -363,7 +880,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除apiKey</para>
+        /// <para>Deletes an authentication credential API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -399,7 +916,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除apiKey</para>
+        /// <para>Deletes an authentication credential API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -414,7 +931,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除apiKey</para>
+        /// <para>Deletes an authentication credential API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -429,8 +946,19 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务空间</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A workspace can be deleted only if the following conditional requirements are met:</para>
+        /// <ol>
+        /// <item><description>The workspace is not the default workspace.</description></item>
+        /// <item><description>The workspace is not used to purchase other products, such as AMB.</description></item>
+        /// <item><description>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</description></item>
+        /// <item><description>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkspaceRequest
@@ -469,8 +997,19 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务空间</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A workspace can be deleted only if the following conditional requirements are met:</para>
+        /// <ol>
+        /// <item><description>The workspace is not the default workspace.</description></item>
+        /// <item><description>The workspace is not used to purchase other products, such as AMB.</description></item>
+        /// <item><description>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</description></item>
+        /// <item><description>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkspaceRequest
@@ -509,8 +1048,19 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务空间</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A workspace can be deleted only if the following conditional requirements are met:</para>
+        /// <ol>
+        /// <item><description>The workspace is not the default workspace.</description></item>
+        /// <item><description>The workspace is not used to purchase other products, such as AMB.</description></item>
+        /// <item><description>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</description></item>
+        /// <item><description>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkspaceRequest
@@ -528,8 +1078,19 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除业务空间</para>
+        /// <para>Deletes a workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>A workspace can be deleted only if the following conditional requirements are met:</para>
+        /// <ol>
+        /// <item><description>The workspace is not the default workspace.</description></item>
+        /// <item><description>The workspace is not used to purchase other products, such as AMB.</description></item>
+        /// <item><description>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</description></item>
+        /// <item><description>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</description></item>
+        /// </ol>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkspaceRequest
@@ -547,8 +1108,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用API Key</para>
+        /// <para>Disables an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An API key cannot be disabled if it is already disabled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableApiKeyRequest
@@ -587,8 +1153,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用API Key</para>
+        /// <para>Disables an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An API key cannot be disabled if it is already disabled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableApiKeyRequest
@@ -627,8 +1198,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用API Key</para>
+        /// <para>Disables an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An API key cannot be disabled if it is already disabled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableApiKeyRequest
@@ -646,8 +1222,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>禁用API Key</para>
+        /// <para>Disables an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An API key cannot be disabled if it is already disabled.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DisableApiKeyRequest
@@ -665,8 +1246,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用API Key</para>
+        /// <para>Enables an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An API key that is already enabled cannot be enabled again.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableApiKeyRequest
@@ -705,8 +1291,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用API Key</para>
+        /// <para>Enables an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An API key that is already enabled cannot be enabled again.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableApiKeyRequest
@@ -745,8 +1336,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用API Key</para>
+        /// <para>Enables an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An API key that is already enabled cannot be enabled again.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableApiKeyRequest
@@ -764,8 +1360,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启用API Key</para>
+        /// <para>Enables an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An API key that is already enabled cannot be enabled again.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// EnableApiKeyRequest
@@ -783,7 +1384,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ApiKey详情</para>
+        /// <para>Retrieves the information of a specified authentication credential API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -819,7 +1420,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ApiKey详情</para>
+        /// <para>Retrieves the information of a specified authentication credential API key.</para>
         /// </summary>
         /// 
         /// <param name="headers">
@@ -855,7 +1456,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ApiKey详情</para>
+        /// <para>Retrieves the information of a specified authentication credential API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -870,7 +1471,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询ApiKey详情</para>
+        /// <para>Retrieves the information of a specified authentication credential API key.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -885,7 +1486,201 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ApiKey列表</para>
+        /// <para>Queries seat details by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSubscriptionSeatDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSubscriptionSeatDetailsResponse
+        /// </returns>
+        public GetSubscriptionSeatDetailsResponse GetSubscriptionSeatDetailsWithOptions(GetSubscriptionSeatDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                query["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryAssigned))
+            {
+                query["QueryAssigned"] = request.QueryAssigned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeatId))
+            {
+                query["SeatId"] = request.SeatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeatType))
+            {
+                query["SeatType"] = request.SeatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListStr))
+            {
+                query["StatusListStr"] = request.StatusListStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSubscriptionSeatDetails",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/tokenplan/subscription/seat-detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSubscriptionSeatDetailsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries seat details by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSubscriptionSeatDetailsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSubscriptionSeatDetailsResponse
+        /// </returns>
+        public async Task<GetSubscriptionSeatDetailsResponse> GetSubscriptionSeatDetailsWithOptionsAsync(GetSubscriptionSeatDetailsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallerUacAccountId))
+            {
+                query["CallerUacAccountId"] = request.CallerUacAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NamespaceId))
+            {
+                query["NamespaceId"] = request.NamespaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QueryAssigned))
+            {
+                query["QueryAssigned"] = request.QueryAssigned;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeatId))
+            {
+                query["SeatId"] = request.SeatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SeatType))
+            {
+                query["SeatType"] = request.SeatType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusList))
+            {
+                query["StatusList"] = request.StatusList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusListStr))
+            {
+                query["StatusListStr"] = request.StatusListStr;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSubscriptionSeatDetails",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/tokenplan/subscription/seat-detail",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSubscriptionSeatDetailsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries seat details by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSubscriptionSeatDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSubscriptionSeatDetailsResponse
+        /// </returns>
+        public GetSubscriptionSeatDetailsResponse GetSubscriptionSeatDetails(GetSubscriptionSeatDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSubscriptionSeatDetailsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries seat details by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSubscriptionSeatDetailsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSubscriptionSeatDetailsResponse
+        /// </returns>
+        public async Task<GetSubscriptionSeatDetailsResponse> GetSubscriptionSeatDetailsAsync(GetSubscriptionSeatDetailsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSubscriptionSeatDetailsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the list of authentication credential API Key information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -947,7 +1742,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ApiKey列表</para>
+        /// <para>Obtain the list of authentication credential API Key information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1009,7 +1804,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ApiKey列表</para>
+        /// <para>Obtain the list of authentication credential API Key information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1028,7 +1823,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ApiKey列表</para>
+        /// <para>Obtain the list of authentication credential API Key information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1047,7 +1842,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>业务空间列表</para>
+        /// <para>Retrieves the list of business workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1105,7 +1900,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>业务空间列表</para>
+        /// <para>Retrieves the list of business workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1163,7 +1958,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>业务空间列表</para>
+        /// <para>Retrieves the list of business workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1182,7 +1977,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>业务空间列表</para>
+        /// <para>Retrieves the list of business workspaces.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1201,8 +1996,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置API Key</para>
+        /// <para>Resets an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only the API key value changes. The API key ID remains unchanged.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetApiKeyRequest
@@ -1241,8 +2041,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置API Key</para>
+        /// <para>Resets an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only the API key value changes. The API key ID remains unchanged.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetApiKeyRequest
@@ -1281,8 +2086,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置API Key</para>
+        /// <para>Resets an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only the API key value changes. The API key ID remains unchanged.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetApiKeyRequest
@@ -1300,8 +2110,13 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置API Key</para>
+        /// <para>Resets an API key.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Only the API key value changes. The API key ID remains unchanged.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetApiKeyRequest
@@ -1319,7 +2134,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑apiKey的描述</para>
+        /// <para>Edits the information of an authentication credential API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1371,7 +2186,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑apiKey的描述</para>
+        /// <para>Edits the information of an authentication credential API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1423,7 +2238,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑apiKey的描述</para>
+        /// <para>Edits the information of an authentication credential API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1442,7 +2257,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>编辑apiKey的描述</para>
+        /// <para>Edits the information of an authentication credential API key.</para>
         /// </summary>
         /// 
         /// <param name="request">

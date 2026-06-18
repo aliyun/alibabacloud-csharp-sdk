@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
 {
     public class DeleteWorkspaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of failure reasons.</para>
+        /// </summary>
         [NameInMap("failReasons")]
         [Validation(Required=false)]
         public List<DeleteWorkspaceResponseBodyFailReasons> FailReasons { get; set; }
         public class DeleteWorkspaceResponseBodyFailReasons : TeaModel {
             /// <summary>
+            /// <para>The specific reason.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>API Key exists. Please clear them first.</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string Reason { get; set; }
 
             /// <summary>
+            /// <para>The resource type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>API Key</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +59,14 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the workspace is successfully deleted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: Succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>false: Failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -56,6 +75,8 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public bool? IsDeleted { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -74,6 +95,12 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Succeeded.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
