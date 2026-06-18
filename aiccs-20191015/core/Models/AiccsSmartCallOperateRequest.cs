@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AiccsSmartCallOperateRequest : TeaModel {
         /// <summary>
+        /// <para>Unique receipt ID of the call. You can obtain it by invoking <a href="https://help.aliyun.com/document_detail/311247.html">SendCcoSmartCall</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>116012854210^102814279****</para>
         /// </summary>
@@ -18,6 +20,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
+        /// <para>Specifies the action to be initiated for the called number during an Intelligent outbound call.</para>
+        /// <remarks>
+        /// <para>Currently, only the <b>parallelBridge</b> parameter is supported, which indicates bridging the called number with a call center agent.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>parallelBridge</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Extension field.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Param</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Param { get; set; }
 
         /// <summary>
+        /// <para>Product name. Default value: <b>aiccs</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aiccs</para>
         /// </summary>

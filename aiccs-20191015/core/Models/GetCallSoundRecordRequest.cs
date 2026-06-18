@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetCallSoundRecordRequest : TeaModel {
         /// <summary>
+        /// <para>Unique call ID.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API and check the <b>Data</b> field in the response parameters to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +22,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
+        /// <para>Call creation time. Format: YYYY-MM-DD hh:mm:ss.</para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API and check the <b>date</b> parameter in the <b>Response Header</b> to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class HangupThirdCallResponseBody : TeaModel {
         /// <summary>
+        /// <para>Fault encoding</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Fault description</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID, used to trail the cause of a fault</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

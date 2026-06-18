@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetCustomerInfoRequest : TeaModel {
         /// <summary>
+        /// <para>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Membership ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

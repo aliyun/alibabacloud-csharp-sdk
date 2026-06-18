@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddModelApplicationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>应用并发请求数</para>
+        /// <para>The number of concurrent requests per second (CPS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ApplicationCps { get; set; }
 
         /// <summary>
-        /// <para>模型应用名称</para>
+        /// <para>The name of the model application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>测试应用</para>
         /// </summary>
         [NameInMap("ApplicationName")]
         [Validation(Required=false)]
         public string ApplicationName { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to push an event notification when a call is connected. The default value is false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -40,38 +42,38 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? CallConnectedTriggerModel { get; set; }
 
         /// <summary>
-        /// <para>场景名称</para>
+        /// <para>The scene name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>测试场景</para>
         /// </summary>
         [NameInMap("DyvmsSceneName")]
         [Validation(Required=false)]
         public string DyvmsSceneName { get; set; }
 
         /// <summary>
-        /// <para>模型编码</para>
+        /// <para>The model code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>1234</para>
         /// </summary>
         [NameInMap("ModelCode")]
         [Validation(Required=false)]
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// <para>模型版本</para>
+        /// <para>The model version.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("ModelVersion")]
         [Validation(Required=false)]
         public string ModelVersion { get; set; }
 
         /// <summary>
-        /// <para>第一个静音是否唤起模型</para>
+        /// <para>Specifies whether the first mute event triggers the model.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? MuteActive { get; set; }
 
         /// <summary>
-        /// <para>静音时长</para>
+        /// <para>The mute duration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? MuteDuration { get; set; }
 
         /// <summary>
-        /// <para>连续多少个静音事件主动挂机</para>
+        /// <para>The number of consecutive mute events that trigger an automatic hang-up.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -105,17 +107,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>提示词</para>
+        /// <para>The prompt.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>测试提示词。</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>资质ID</para>
+        /// <para>The qualification ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>85</para>
@@ -125,18 +127,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? QualificationId { get; set; }
 
         /// <summary>
-        /// <para>资质名称</para>
+        /// <para>The name of the qualification.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>测试资质</para>
         /// </summary>
         [NameInMap("QualificationName")]
         [Validation(Required=false)]
         public string QualificationName { get; set; }
 
         /// <summary>
+        /// <para>The URL of the audio file for the opening line. This parameter is required if <c>StartWordType</c> is set to <c>1</c>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para><a href="https://xxxxxxxx.wav">https://xxxxxxxx.wav</a></para>
         /// </summary>
         [NameInMap("RecordingFile")]
         [Validation(Required=false)]
@@ -151,7 +155,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>来源</para>
+        /// <para>The source. The value must be <c>USER</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -161,17 +165,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>话术内容</para>
+        /// <para>The speech script content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>测试话术。</para>
         /// </summary>
         [NameInMap("SpeechContent")]
         [Validation(Required=false)]
         public string SpeechContent { get; set; }
 
         /// <summary>
-        /// <para>话束id</para>
+        /// <para>The speech script ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>88</para>
@@ -181,26 +185,29 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? SpeechId { get; set; }
 
         /// <summary>
-        /// <para>开场白</para>
+        /// <para>The opening line.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>你好，这是一句开场白。</para>
         /// </summary>
         [NameInMap("StartWord")]
         [Validation(Required=false)]
         public string StartWord { get; set; }
 
         /// <summary>
+        /// <para>The type of the opening line.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>0：文本
+        /// 1：录音</para>
         /// </summary>
         [NameInMap("StartWordType")]
         [Validation(Required=false)]
         public long? StartWordType { get; set; }
 
         /// <summary>
-        /// <para>tts配置，包括音色、音量、音速等。</para>
+        /// <para>The TTS configuration, including voice, volume, speech speed, and more.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TtsConfig")]
@@ -208,10 +215,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string TtsConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>用途</para>
+        /// <para>The purpose of the application.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>测试用途</para>
         /// </summary>
         [NameInMap("UsageDesc")]
         [Validation(Required=false)]

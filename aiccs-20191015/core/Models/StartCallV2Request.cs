@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class StartCallV2Request : TeaModel {
         /// <summary>
+        /// <para>Agent account name (agent logon name).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>Callee number for hotline outbound calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Callee { get; set; }
 
         /// <summary>
+        /// <para>Caller number for hotline outbound calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Caller { get; set; }
 
         /// <summary>
+        /// <para>Call type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Inbound</description></item>
+        /// <item><description><b>2</b>: Outbound</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +58,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? CallerType { get; set; }
 
         /// <summary>
+        /// <para>Unique customer request ID. Used for idempotency validation. You can generate it using UUID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
         /// </summary>
@@ -58,6 +68,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

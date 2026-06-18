@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListHotlineRecordResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code. A return value of Success indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Hotline session information.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<ListHotlineRecordResponseBodyData> Data { get; set; }
         public class ListHotlineRecordResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Session ID. This corresponds to the acid in WebSocket after an inbound call.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100365558</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string CallId { get; set; }
 
             /// <summary>
+            /// <para>Connection ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100365548</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string ConnectionId { get; set; }
 
             /// <summary>
+            /// <para>Recording end UNIX timestamp. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16128694810</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? EndTime { get; set; }
 
             /// <summary>
+            /// <para>Recording start UNIX timestamp. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>16128694110</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? StartTime { get; set; }
 
             /// <summary>
+            /// <para>Recording file URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com</a></para>
             /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -72,6 +89,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -80,6 +99,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Whether the API call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AiccsSmartCallResponseBody : TeaModel {
         /// <summary>
+        /// <para>Unique receipt ID for this call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>116012854210^10281427****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Request status code. A return value of &quot;OK&quot; indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A90E4451-FED7-49D2-87C8-00700A8C4D0D</para>
         /// </summary>

@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddLargeModelRequest : TeaModel {
         /// <summary>
-        /// <para>授权码</para>
+        /// <para>The authorization code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>sk-xxxxxxxxxxx*******xx</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>基础模型</para>
+        /// <para>The base model.</para>
         /// </summary>
         [NameInMap("BaseModel")]
         [Validation(Required=false)]
         public List<string> BaseModel { get; set; }
 
         /// <summary>
-        /// <para>模型名称</para>
+        /// <para>The model name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test Model Name</para>
@@ -37,10 +37,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>模型地址</para>
+        /// <para>The model URL.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para><a href="https://xxxxxxxxxxx">https://xxxxxxxxxxx</a></para>
         /// </summary>
         [NameInMap("ModelUrl")]
         [Validation(Required=false)]
@@ -59,30 +59,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>温度</para>
+        /// <para>The temperature.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>16.46</para>
+        /// <para>0.1</para>
         /// </summary>
         [NameInMap("Temperature")]
         [Validation(Required=false)]
         public double? Temperature { get; set; }
 
         /// <summary>
-        /// <para>topK</para>
+        /// <para>The <c>top-k</c> value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>87</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TopK")]
         [Validation(Required=false)]
         public long? TopK { get; set; }
 
         /// <summary>
-        /// <para>topP</para>
+        /// <para>The <c>top-p</c> value.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>73.64386</para>
+        /// <para>0.1</para>
         /// </summary>
         [NameInMap("TopP")]
         [Validation(Required=false)]

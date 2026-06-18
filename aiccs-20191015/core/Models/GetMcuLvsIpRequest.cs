@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetMcuLvsIpRequest : TeaModel {
         /// <summary>
+        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Intelligent Cloud Call console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

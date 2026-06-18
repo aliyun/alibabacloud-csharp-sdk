@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateAiCallTaskShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The days of the week when calls can be made.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CallDay")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallDayShrink { get; set; }
 
         /// <summary>
+        /// <para>The retry interval in minutes. The maximum value is 120.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>25</para>
         /// </summary>
@@ -24,11 +27,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? CallRetryInterval { get; set; }
 
+        /// <summary>
+        /// <para>The call failure statuses that trigger a retry.</para>
+        /// </summary>
         [NameInMap("CallRetryReason")]
         [Validation(Required=false)]
         public string CallRetryReasonShrink { get; set; }
 
         /// <summary>
+        /// <para>The number of retries. The maximum value is 3.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -37,6 +45,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? CallRetryTimes { get; set; }
 
         /// <summary>
+        /// <para>The callable time windows.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CallTime")]
@@ -60,6 +69,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string LinePhoneNum { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable retry. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>true</c>: Yes.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c> (default): No.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -96,6 +113,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? Source { get; set; }
 
         /// <summary>
+        /// <para>The startup method. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>IMMEDIATE</c>: Start immediately.</para>
+        /// </description></item>
+        /// <item><description><para><c>SCHEDULE</c>: Start at a specified time.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,6 +130,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string StartType { get; set; }
 
         /// <summary>
+        /// <para>The number of concurrent calls per second (CPS) for the task. The maximum value is 500.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -116,26 +141,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? TaskCps { get; set; }
 
         /// <summary>
+        /// <para>The ID of the task to update.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1152311212312***</para>
+        /// <para>1187**************</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The task name. The name must be unique within an Alibaba Cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>测试任务</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]
         public string TaskName { get; set; }
 
         /// <summary>
+        /// <para>The scheduled start time for the task, specified as a Unix timestamp in milliseconds. This parameter is required when <c>StartType</c> is set to <c>SCHEDULE</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1748923429000</para>
         /// </summary>
@@ -144,6 +173,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? TaskStartTime { get; set; }
 
         /// <summary>
+        /// <para>The service instance used for outbound calls.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0537022*****</para>
         /// </summary>

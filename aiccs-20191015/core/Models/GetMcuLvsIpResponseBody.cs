@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetMcuLvsIpResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code. A return value of 200 indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>IP information. The value is a JSON string of the List type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{ &quot;xmculvs&quot;:[ 0:{ &quot;port&quot;:00 &quot;ip&quot;:&quot;0.0.0.0&quot; &quot;name&quot;:&quot;lvs1&quot; } ]}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

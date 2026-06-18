@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class AddHotlineNumberRequest : TeaModel {
         /// <summary>
+        /// <para>Description of the number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>desc</para>
+        /// <para>热线号码</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the number is used for inbound calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableInbound { get; set; }
 
         /// <summary>
+        /// <para>Whether inbound satisfaction evaluation is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableInboundEvaluation { get; set; }
 
         /// <summary>
+        /// <para>Whether it is used for outbound calls.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableOutbound { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether outbound call satisfaction evaluation is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,6 +65,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? EnableOutboundEvaluation { get; set; }
 
         /// <summary>
+        /// <para>Satisfaction Level. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>2</b>: Two-level (Satisfied, Not satisfied)  </description></item>
+        /// <item><description><b>3</b>: Three-level (Satisfied, Neutral, Not satisfied)  </description></item>
+        /// <item><description><b>4</b>: Four-level (Very satisfied, Satisfied, Neutral, Not satisfied)  </description></item>
+        /// <item><description><b>5</b>: Five-level (Very satisfied, Satisfied, Neutral, Not satisfied, Very poor)</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -68,6 +81,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? EvaluationLevel { get; set; }
 
         /// <summary>
+        /// <para>Hotline number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +92,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string HotlineNumber { get; set; }
 
         /// <summary>
+        /// <para>The IVR flow ID for inbound calls. You can obtain it on the SaaS Workbench &gt; Channel Integration &gt; IVR Flow Management page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456</para>
         /// </summary>
@@ -86,6 +102,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? InboundFlowId { get; set; }
 
         /// <summary>
+        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it in the Intelligent Contact Center console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,6 +113,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Whether outbound calls apply to all departments under the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,11 +123,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public bool? OutboundAllDepart { get; set; }
 
+        /// <summary>
+        /// <para>Outbound call effective scope.</para>
+        /// </summary>
         [NameInMap("OutboundRangeList")]
         [Validation(Required=false)]
         public List<AddHotlineNumberRequestOutboundRangeList> OutboundRangeList { get; set; }
         public class AddHotlineNumberRequestOutboundRangeList : TeaModel {
             /// <summary>
+            /// <para>Effective department ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456</para>
             /// </summary>
@@ -117,6 +140,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             [Validation(Required=false)]
             public long? DepartmentId { get; set; }
 
+            /// <summary>
+            /// <para>List of effective skill groups.  </para>
+            /// <remarks>
+            /// <para>If the skill group list is empty, the setting applies to the entire department. Otherwise, it applies only to the specified skill groups under the department.</para>
+            /// </remarks>
+            /// </summary>
             [NameInMap("GroupIdList")]
             [Validation(Required=false)]
             public List<long?> GroupIdList { get; set; }

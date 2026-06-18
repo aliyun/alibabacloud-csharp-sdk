@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateLargeModelShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>授权码</para>
+        /// <para>The authorization code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>sk-sxxxxx*********xx</para>
         /// </summary>
         [NameInMap("AuthCode")]
         [Validation(Required=false)]
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>基础模型</para>
+        /// <para>A list of base models.</para>
         /// </summary>
         [NameInMap("BaseModel")]
         [Validation(Required=false)]
         public string BaseModelShrink { get; set; }
 
         /// <summary>
-        /// <para>模型编码</para>
+        /// <para>The model code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test Model Name</para>
@@ -37,20 +37,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// <para>模型名称</para>
+        /// <para>The model name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>Test model</para>
         /// </summary>
         [NameInMap("ModelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>模型地址</para>
+        /// <para>The model URL.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para><a href="https://xxxxxxxxx">https://xxxxxxxxx</a></para>
         /// </summary>
         [NameInMap("ModelUrl")]
         [Validation(Required=false)]
@@ -69,30 +69,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>温度</para>
+        /// <para>Controls the randomness of the model\&quot;s output. A higher value increases randomness, and a lower value makes the output more deterministic.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>49.29</para>
+        /// <para>0.1</para>
         /// </summary>
         [NameInMap("Temperature")]
         [Validation(Required=false)]
         public double? Temperature { get; set; }
 
         /// <summary>
-        /// <para>topK</para>
+        /// <para>Restricts token selection to the top k most probable tokens.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("TopK")]
         [Validation(Required=false)]
         public long? TopK { get; set; }
 
         /// <summary>
-        /// <para>topP</para>
+        /// <para>Controls output diversity by using nucleus sampling. It defines a cumulative probability threshold for token selection, considering only the most likely tokens.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>84.38427</para>
+        /// <para>0.1</para>
         /// </summary>
         [NameInMap("TopP")]
         [Validation(Required=false)]

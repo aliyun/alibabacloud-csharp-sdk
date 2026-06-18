@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineMessageLogRequest : TeaModel {
         /// <summary>
+        /// <para>Session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Acid { get; set; }
 
         /// <summary>
+        /// <para>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

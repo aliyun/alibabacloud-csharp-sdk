@@ -10,16 +10,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class SendHotlineHeartBeatRequest : TeaModel {
         /// <summary>
+        /// <para>Agent account name, which is the phone number or mailbox specified during account registration. It is unique within the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:123@123.com">123@123.com</a></para>
+        /// <para><a href="mailto:username@example.com">username@example.com</a></para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it in the <b>Instance Management</b> section of the left-side navigation pane in the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Heartbeat signature.  </para>
+        /// <para>You can obtain the token by invoking the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

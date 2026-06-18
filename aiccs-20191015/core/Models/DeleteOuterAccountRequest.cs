@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class DeleteOuterAccountRequest : TeaModel {
         /// <summary>
+        /// <para>External Account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterAccountId { get; set; }
 
         /// <summary>
+        /// <para>Type of the external account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

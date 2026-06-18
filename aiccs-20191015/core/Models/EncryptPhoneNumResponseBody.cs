@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class EncryptPhoneNumResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A return value of 200 indicates that the Request Succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The ciphertext after encryption.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>
         /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API Call Succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

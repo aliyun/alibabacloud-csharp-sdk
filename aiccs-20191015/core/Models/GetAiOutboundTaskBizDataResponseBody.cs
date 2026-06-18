@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetAiOutboundTaskBizDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The business information associated with this call.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAiOutboundTaskBizDataResponseBodyData Data { get; set; }
         public class GetAiOutboundTaskBizDataResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Custom business information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;customer&quot;:123}</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string BizData { get; set; }
 
             /// <summary>
+            /// <para>The Activity ID associated with this outbound call.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? CaseId { get; set; }
 
             /// <summary>
+            /// <para>The outbound phone number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>158****0000</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string PhoneNum { get; set; }
 
             /// <summary>
+            /// <para>The job ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123456</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -72,6 +89,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded.</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

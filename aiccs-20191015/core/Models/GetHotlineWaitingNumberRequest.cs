@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineWaitingNumberRequest : TeaModel {
         /// <summary>
+        /// <para>Agent account name (agent logon name)</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>Unique customer request ID, used for idempotency validation; can be generated using UUID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>AICCS instance ID, visible in the Artificial Intelligence Cloud Call Service console</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

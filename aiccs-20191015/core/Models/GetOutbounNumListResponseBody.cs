@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetOutbounNumListResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Success</para>
         /// </summary>
@@ -17,19 +19,37 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Information about the number list.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetOutbounNumListResponseBodyData Data { get; set; }
         public class GetOutbounNumListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Caller number information.</para>
+            /// </summary>
             [NameInMap("Num")]
             [Validation(Required=false)]
             public List<GetOutbounNumListResponseBodyDataNum> Num { get; set; }
             public class GetOutbounNumListResponseBodyDataNum : TeaModel {
+                /// <summary>
+                /// <para>Description of the caller number (geographic location information).</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>浙江省杭州市</para>
+                /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>Caller number type. Valid values:  </para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: Number.  </description></item>
+                /// <item><description><b>2</b>: Number group.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -38,6 +58,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? Type { get; set; }
 
                 /// <summary>
+                /// <para>Caller number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>07512234****</para>
                 /// </summary>
@@ -47,11 +69,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 
             }
 
+            /// <summary>
+            /// <para>Number group information.</para>
+            /// </summary>
             [NameInMap("NumGroup")]
             [Validation(Required=false)]
             public List<GetOutbounNumListResponseBodyDataNumGroup> NumGroup { get; set; }
             public class GetOutbounNumListResponseBodyDataNumGroup : TeaModel {
                 /// <summary>
+                /// <para>Number group description (number group name).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Jella</para>
                 /// </summary>
@@ -60,6 +87,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>Number group type. Valid values:  </para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: Number.  </description></item>
+                /// <item><description><b>2</b>: Number group.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -68,6 +101,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
                 public int? Type { get; set; }
 
                 /// <summary>
+                /// <para>Number group ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>7688****</para>
                 /// </summary>
@@ -80,6 +115,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -88,6 +125,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -96,6 +135,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -104,6 +145,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

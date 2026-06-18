@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class DescribeRecordDataRequest : TeaModel {
         /// <summary>
+        /// <para>AccountId.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2235****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountId { get; set; }
 
         /// <summary>
+        /// <para>Account type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BUC_TYPE</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountType { get; set; }
 
         /// <summary>
+        /// <para>Session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1004849****</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Product name. Default value: <b>aiccs</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aiccs</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>Recording desensitization level. Valid values: <b>1–4</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class HangupCallRequest : TeaModel {
         /// <summary>
+        /// <para>Agent account name (agent logon name).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>Hotline session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7719786</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
+        /// <para>Unique customer request ID. Used for idempotency validation and can be generated using UUID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
         /// </summary>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The connId from the WebSocket after an inbound call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7719788</para>
         /// </summary>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ConnectionId { get; set; }
 
         /// <summary>
+        /// <para>AICCS instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The jobId from the WebSocket after an inbound call.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7719787</para>
         /// </summary>

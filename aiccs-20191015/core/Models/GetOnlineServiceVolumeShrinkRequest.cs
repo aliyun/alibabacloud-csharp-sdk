@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetOnlineServiceVolumeShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>List of agent IDs.</para>
+        /// </summary>
         [NameInMap("AgentIds")]
         [Validation(Required=false)]
         public string AgentIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>Current page number. The value must be greater than <b>0</b>. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>List of department IDs.</para>
+        /// </summary>
         [NameInMap("DepIds")]
         [Validation(Required=false)]
         public string DepIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>End Datetime UNIX timestamp. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1617761765000</para>
         /// </summary>
@@ -34,6 +44,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EndDate { get; set; }
 
         /// <summary>
+        /// <para>Whether to query by agent grouping. Default value: <b>false</b>. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.  </description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -42,6 +58,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? ExistAgentGrouping { get; set; }
 
         /// <summary>
+        /// <para>Whether to group by department in the query. Default Value: <b>false</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -50,6 +72,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? ExistDepartmentGrouping { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether to query by skill group grouping. Default value: <b>false</b>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -57,11 +85,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public bool? ExistSkillGroupGrouping { get; set; }
 
+        /// <summary>
+        /// <para>List of skill group IDs.</para>
+        /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public string GroupIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>AICCS instance ID.<br>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +104,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>Page size. The value must be greater than <b>0</b>. Default value: <b>20</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -80,6 +114,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Start date UNIX timestamp. Unit: milliseconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1615083365000</para>
         /// </summary>
@@ -88,6 +124,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? StartDate { get; set; }
 
         /// <summary>
+        /// <para>Time latitude type. Valid values:  </para>
+        /// <list type="bullet">
+        /// <item><description><b>minute</b>: Minute.  </description></item>
+        /// <item><description><b>hour</b>: Hour.  </description></item>
+        /// <item><description><b>day</b>: Day.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>minute</para>
         /// </summary>

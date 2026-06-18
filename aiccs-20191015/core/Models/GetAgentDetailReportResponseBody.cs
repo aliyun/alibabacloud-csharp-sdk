@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetAgentDetailReportResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code. A return value of 200 indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>List of data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetAgentDetailReportResponseBodyData Data { get; set; }
         public class GetAgentDetailReportResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Current page number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageNum { get; set; }
 
             /// <summary>
+            /// <para>Page size.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2000</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public long? PageSize { get; set; }
 
             /// <summary>
+            /// <para>A JSON string of type List<Map>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;t_wait&quot;:379322.0,&quot;hotline_time_outcall_avg&quot;:&quot;32.00&quot;,&quot;n_ringing&quot;:0,&quot;t_outbound_40&quot;:0.0,&quot;hotline_time_incall_avg&quot;:-1,&quot;t_calldialing&quot;:0.0,&quot;n_inbound&quot;:276,&quot;servicer_id&quot;:&quot;-1&quot;,&quot;call_in_sep_sat_cnt&quot;:13,&quot;request_cnt&quot;:231,&quot;n_not_ready_99&quot;:811,&quot;t_work_outbound&quot;:49338.0,&quot;hotline_rate_handle_in_60s&quot;:&quot;96%&quot;,&quot;n_not_ready_login&quot;:811,&quot;t_not_ready_login&quot;:0.0,&quot;n_work_inbound&quot;:176,&quot;}</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Rows { get; set; }
 
             /// <summary>
+            /// <para>Total number of records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>successful</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -72,6 +89,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

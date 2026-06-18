@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class DescribeRecordDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>Session ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1004849****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Acid { get; set; }
 
         /// <summary>
+        /// <para>Agent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1212****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>Status code. A return value of 200 indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Status code description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Recording file link.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>https://****</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OssLink { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>

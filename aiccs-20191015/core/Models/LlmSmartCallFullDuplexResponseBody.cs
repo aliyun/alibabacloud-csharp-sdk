@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class LlmSmartCallFullDuplexResponseBody : TeaModel {
         /// <summary>
+        /// <para>The call record ID that identifies a call record.</para>
+        /// <remarks>
+        /// <para>When you call the LlmSmartCall operation to initiate an LLM-based outbound call, this call record ID (CallId) is returned.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>153955119976^140696759976</para>
         /// </summary>
@@ -18,6 +23,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +33,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>

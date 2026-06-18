@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The robot name. You can view the robot name in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>测试机器人</para>
+        /// </summary>
         [NameInMap("RobotName")]
         [Validation(Required=false)]
         public string RobotName { get; set; }

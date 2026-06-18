@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiVoiceAgentDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The agent ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123123********</para>
         /// </summary>

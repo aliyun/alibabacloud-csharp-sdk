@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetQualityProjectDetailRequest : TeaModel {
         /// <summary>
+        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the console of Artificial Intelligence Cloud Call Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The quality inspection job ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

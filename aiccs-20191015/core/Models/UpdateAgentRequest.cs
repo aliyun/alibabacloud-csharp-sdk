@@ -10,16 +10,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class UpdateAgentRequest : TeaModel {
         /// <summary>
+        /// <para>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.  </para>
+        /// <remarks>
+        /// <para>Update is not supported.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="mailto:123@123.com">123@123.com</a></para>
+        /// <para><a href="mailto:username@example.com">username@example.com</a></para>
         /// </summary>
         [NameInMap("AccountName")]
         [Validation(Required=false)]
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>Unique ID for the customer request. Used for idempotency validation. You can generate it using UUID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>46c1341e-2648-447a-9b11-70b6a298d94d</para>
         /// </summary>
@@ -28,13 +34,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>Agent\&quot;s display name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>XX测试</para>
         /// </summary>
         [NameInMap("DisplayName")]
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>AICCS instance ID.<br>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,10 +55,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>Skill groups to which the agent belongs.</para>
+        /// </summary>
         [NameInMap("SkillGroupId")]
         [Validation(Required=false)]
         public List<long?> SkillGroupId { get; set; }
 
+        /// <summary>
+        /// <para>List of skill groups to which the agent belongs.</para>
+        /// </summary>
         [NameInMap("SkillGroupIdList")]
         [Validation(Required=false)]
         public List<long?> SkillGroupIdList { get; set; }

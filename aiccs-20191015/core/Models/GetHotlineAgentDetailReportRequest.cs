@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetHotlineAgentDetailReportRequest : TeaModel {
         /// <summary>
+        /// <para>The current page number. The value must be greater than <b>0</b>. Default value: <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        /// <summary>
+        /// <para>The list of department IDs.</para>
+        /// </summary>
         [NameInMap("DepIds")]
         [Validation(Required=false)]
         public List<long?> DepIds { get; set; }
 
         /// <summary>
+        /// <para>The UNIX timestamp of the end date. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,11 +37,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? EndDate { get; set; }
 
+        /// <summary>
+        /// <para>The list of skill group IDs.</para>
+        /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public List<long?> GroupIds { get; set; }
 
         /// <summary>
+        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.</para>
+        /// <para>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,14 +57,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. The value must be greater than <b>0</b>. Default value: <b>20</b>.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The UNIX timestamp of the start date. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

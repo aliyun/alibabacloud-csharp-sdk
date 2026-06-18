@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class HangupOperateResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of \&quot;OK\&quot; indicates that the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The status message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Mesage { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EFD543DD-E087-54A2-AC0B-54E0656511D7</para>
         /// </summary>
@@ -34,6 +40,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The result of the operation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>true</b>: The hang-up was successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The hang-up operation failed.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

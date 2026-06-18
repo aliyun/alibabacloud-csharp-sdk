@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class StartMicroOutboundRequest : TeaModel {
         /// <summary>
+        /// <para>Account ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>223457****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountId { get; set; }
 
         /// <summary>
+        /// <para>Account type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>BUC_TYPE</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountType { get; set; }
 
         /// <summary>
+        /// <para>Custom AppName for the business.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aliyun</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AppName { get; set; }
 
         /// <summary>
+        /// <para>Called number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0571456****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CalledNumber { get; set; }
 
         /// <summary>
+        /// <para>Calling number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1367123****</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallingNumber { get; set; }
 
         /// <summary>
+        /// <para>Instruction code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>outBound_Call</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CommandCode { get; set; }
 
         /// <summary>
+        /// <para>Business information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;caseId&quot;:23232****}</para>
         /// </summary>
@@ -70,6 +84,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>Product name. Default value: <b>aiccs</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aiccs</para>
         /// </summary>

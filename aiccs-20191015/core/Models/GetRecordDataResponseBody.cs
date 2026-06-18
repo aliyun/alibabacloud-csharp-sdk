@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetRecordDataResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code. A return value of 200 indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>Data list.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetRecordDataResponseBodyData Data { get; set; }
         public class GetRecordDataResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>Session ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1001067****</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string Acid { get; set; }
 
             /// <summary>
+            /// <para>Recording file URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav">http://aliccrec-shvpc.oss-cn-shanghai.aliyuncs.com/accrec_tmp/10010679716-12-01-56.wav</a>?***</para>
             /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,6 +59,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

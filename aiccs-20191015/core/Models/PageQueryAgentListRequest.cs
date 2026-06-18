@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class PageQueryAgentListRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier for the agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1231*******</para>
         /// </summary>
@@ -18,8 +20,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AgentId { get; set; }
 
         /// <summary>
+        /// <para>The name of the agent.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>测试智能体</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from 1. The default value is 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +44,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries to return per page. The default value is 10.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The status of the agent.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryHotlineInQueueRequest : TeaModel {
         /// <summary>
+        /// <para>External skill group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OuterGroupId { get; set; }
 
         /// <summary>
+        /// <para>External skill group type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

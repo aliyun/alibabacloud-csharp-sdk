@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetRtcTokenRequest : TeaModel {
         /// <summary>
+        /// <para>The agent account name, which is the phone number or mailbox entered during account registration. It is unique within the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The instance ID of Artificial Intelligence Cloud Call Service (AICCS).
+        /// You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

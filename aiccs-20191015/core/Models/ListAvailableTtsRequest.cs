@@ -22,18 +22,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>复刻音色编码</para>
+        /// <para>The voice code for a custom voice. You can find it on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>V123456789</para>
+        /// <para>V9A******</para>
         /// </summary>
         [NameInMap("TtsVoiceCode")]
         [Validation(Required=false)]
         public string TtsVoiceCode { get; set; }
 
         /// <summary>
+        /// <para>The type of the TTS voice. Valid values:</para>
+        /// <para><c>SYSTEM</c>: system voice.</para>
+        /// <para><c>COSYCLONE</c>: cloned voice.</para>
+        /// <para><c>BL-CUSTOM</c>: premium custom voice.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>SYSTEM</para>
         /// </summary>
         [NameInMap("VoiceType")]
         [Validation(Required=false)]

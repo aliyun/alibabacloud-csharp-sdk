@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ListRobotCallDialogRequest : TeaModel {
         /// <summary>
+        /// <para>Unique call ID. You can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API and check the <b>Data</b> field in the response to obtain it.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>125165515022^11195613****</para>
+        /// <para>12516551<b><b>^11195613</b></b></para>
         /// </summary>
         [NameInMap("CallId")]
         [Validation(Required=false)]
         public string CallId { get; set; }
 
         /// <summary>
+        /// <para>Creation Time. Format: YYYY-MM-DD hh:mm:ss. The time must be precise. You can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API and view the <b>date</b> parameter in the <b>Response Header</b> of the response to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

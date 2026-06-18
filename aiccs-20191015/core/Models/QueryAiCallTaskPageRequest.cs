@@ -10,8 +10,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryAiCallTaskPageRequest : TeaModel {
         /// <summary>
+        /// <para>The agent name. The system performs a fuzzy search based on this name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>测试智能体</para>
         /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The page number. The value must be greater than <b>0</b>. The default value is <b>1</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? PageNo { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -62,6 +68,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? Source { get; set; }
 
         /// <summary>
+        /// <para>The task status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>INIT</b>: The task is initialized but has not started.</para>
+        /// </description></item>
+        /// <item><description><para><b>FAILED</b>: The task failed to start.</para>
+        /// </description></item>
+        /// <item><description><para><b>RUNNING</b>: The task is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>STOPPED</b>: The task is stopped.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>INIT</para>
         /// </summary>
@@ -70,16 +88,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the task.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>112212312*****</para>
+        /// <para>1187**************</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
 
         /// <summary>
+        /// <para>The task name. The system performs a fuzzy search based on this name.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>测试任务</para>
         /// </summary>
         [NameInMap("TaskName")]
         [Validation(Required=false)]

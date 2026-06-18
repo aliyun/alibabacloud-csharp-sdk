@@ -22,10 +22,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>112123123******</para>
+        /// <para>1187**************</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

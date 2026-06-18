@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class CancelTaskResponseBody : TeaModel {
         /// <summary>
+        /// <para>Request status code. A value of OK indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation succeeded. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,14 +34,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>Ok</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D9CB3933-9FE3-4870-BA8E-2BEE91B69D23</para>
         /// </summary>
@@ -42,6 +54,12 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API was invoked successfully. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Succeeded.</description></item>
+        /// <item><description><b>false</b>: Failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

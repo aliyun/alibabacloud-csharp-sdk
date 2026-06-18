@@ -18,7 +18,34 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "central";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"us-west-1", "aiccs.aliyuncs.com"},
+                {"us-east-1", "aiccs.aliyuncs.com"},
+                {"me-east-1", "aiccs.aliyuncs.com"},
+                {"eu-west-1", "aiccs.aliyuncs.com"},
+                {"eu-central-1", "aiccs.aliyuncs.com"},
+                {"cn-zhangjiakou", "aiccs.aliyuncs.com"},
+                {"cn-wulanchabu", "aiccs.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "aiccs.aliyuncs.com"},
+                {"cn-shenzhen", "aiccs.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "aiccs.aliyuncs.com"},
+                {"cn-shanghai", "aiccs.aliyuncs.com"},
+                {"cn-qingdao", "aiccs.aliyuncs.com"},
+                {"cn-north-2-gov-1", "aiccs.aliyuncs.com"},
+                {"cn-huhehaote", "aiccs.aliyuncs.com"},
+                {"cn-hongkong", "aiccs.aliyuncs.com"},
+                {"cn-hangzhou-finance", "aiccs.aliyuncs.com"},
+                {"cn-hangzhou", "aiccs.aliyuncs.com"},
+                {"cn-chengdu", "aiccs.aliyuncs.com"},
+                {"cn-beijing-finance-1", "aiccs.aliyuncs.com"},
+                {"cn-beijing", "aiccs.aliyuncs.com"},
+                {"ap-southeast-5", "aiccs.aliyuncs.com"},
+                {"ap-southeast-3", "aiccs.aliyuncs.com"},
+                {"ap-southeast-1", "aiccs.aliyuncs.com"},
+                {"ap-northeast-1", "aiccs.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("aiccs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +66,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增热线号码</para>
+        /// <para>Invoke the AddHotlineNumber API to add a hotline number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Hotline numbers are for inbound and outbound calls only.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddHotlineNumberRequest
@@ -127,8 +161,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增热线号码</para>
+        /// <para>Invoke the AddHotlineNumber API to add a hotline number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Hotline numbers are for inbound and outbound calls only.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// AddHotlineNumberRequest
@@ -215,8 +256,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增热线号码</para>
+        /// <para>Invoke the AddHotlineNumber API to add a hotline number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Hotline numbers are for inbound and outbound calls only.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddHotlineNumberRequest
@@ -233,8 +281,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增热线号码</para>
+        /// <para>Invoke the AddHotlineNumber API to add a hotline number.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Hotline numbers are for inbound and outbound calls only.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddHotlineNumberRequest
@@ -251,7 +306,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加呼入号码</para>
+        /// <para>Adds one or more inbound numbers.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -323,7 +378,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加呼入号码</para>
+        /// <para>Adds one or more inbound numbers.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -395,7 +450,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加呼入号码</para>
+        /// <para>Adds one or more inbound numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -413,7 +468,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加呼入号码</para>
+        /// <para>Adds one or more inbound numbers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -431,7 +486,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddLargeModel</para>
+        /// <para>Adds a large language model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -515,7 +570,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddLargeModel</para>
+        /// <para>Adds a large language model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -599,7 +654,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddLargeModel</para>
+        /// <para>Adds a large language model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -617,7 +672,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddLargeModel</para>
+        /// <para>Adds a large language model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -635,7 +690,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型应用</para>
+        /// <para>Add a model application</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -771,7 +826,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型应用</para>
+        /// <para>Add a model application</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -907,7 +962,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型应用</para>
+        /// <para>Add a model application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -925,7 +980,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>新增模型应用</para>
+        /// <para>Add a model application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -941,6 +996,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await AddModelApplicationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AddOuterAccount to add an external account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddOuterAccountRequest
         /// </param>
@@ -974,6 +1034,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AddOuterAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AddOuterAccount to add an external account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddOuterAccountRequest
         /// </param>
@@ -1007,6 +1072,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AddOuterAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AddOuterAccount to add an external account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddOuterAccountRequest
         /// </param>
@@ -1020,6 +1090,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return AddOuterAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AddOuterAccount to add an external account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddOuterAccountRequest
         /// </param>
@@ -1033,6 +1108,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await AddOuterAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AddSkillGroup to create an external skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSkillGroupRequest
         /// </param>
@@ -1066,6 +1146,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AddSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AddSkillGroup to create an external skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSkillGroupRequest
         /// </param>
@@ -1099,6 +1184,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AddSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AddSkillGroup to create an external skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSkillGroupRequest
         /// </param>
@@ -1112,6 +1202,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return AddSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AddSkillGroup to create an external skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AddSkillGroupRequest
         /// </param>
@@ -1125,6 +1220,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await AddSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the AiccsSmartCall API to initiate an Intelligent Speech Interaction call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AiccsSmartCallRequest
         /// </param>
@@ -1286,6 +1386,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AiccsSmartCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the AiccsSmartCall API to initiate an Intelligent Speech Interaction call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AiccsSmartCallRequest
         /// </param>
@@ -1447,6 +1552,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AiccsSmartCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the AiccsSmartCall API to initiate an Intelligent Speech Interaction call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AiccsSmartCallRequest
         /// </param>
@@ -1460,6 +1570,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return AiccsSmartCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the AiccsSmartCall API to initiate an Intelligent Speech Interaction call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AiccsSmartCallRequest
         /// </param>
@@ -1473,6 +1588,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await AiccsSmartCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the AiccsSmartCallOperate API to initiate a specified action during an Intelligent outbound call. This API is only used for scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AiccsSmartCallOperateRequest
         /// </param>
@@ -1534,6 +1654,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AiccsSmartCallOperateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the AiccsSmartCallOperate API to initiate a specified action during an Intelligent outbound call. This API is only used for scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AiccsSmartCallOperateRequest
         /// </param>
@@ -1595,6 +1720,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AiccsSmartCallOperateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the AiccsSmartCallOperate API to initiate a specified action during an Intelligent outbound call. This API is only used for scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AiccsSmartCallOperateRequest
         /// </param>
@@ -1608,6 +1738,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return AiccsSmartCallOperateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the AiccsSmartCallOperate API to initiate a specified action during an Intelligent outbound call. This API is only used for scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AiccsSmartCallOperateRequest
         /// </param>
@@ -1621,6 +1756,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await AiccsSmartCallOperateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AnswerCall to answer an incoming call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnswerCallRequest
         /// </param>
@@ -1678,6 +1818,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AnswerCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AnswerCall to answer an incoming call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnswerCallRequest
         /// </param>
@@ -1735,6 +1880,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<AnswerCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AnswerCall to answer an incoming call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnswerCallRequest
         /// </param>
@@ -1748,6 +1898,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return AnswerCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke AnswerCall to answer an incoming call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AnswerCallRequest
         /// </param>
@@ -1763,8 +1918,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加任务明细</para>
+        /// <para>Append job details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After creating an Intelligent Contact Robot calling job, you can invoke this API to append job details.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully created Intelligent Contact Robot calling job, you can click <b>Create Job</b> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachTaskRequest
@@ -1821,8 +1993,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加任务明细</para>
+        /// <para>Append job details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After creating an Intelligent Contact Robot calling job, you can invoke this API to append job details.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully created Intelligent Contact Robot calling job, you can click <b>Create Job</b> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachTaskRequest
@@ -1879,8 +2068,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加任务明细</para>
+        /// <para>Append job details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After creating an Intelligent Contact Robot calling job, you can invoke this API to append job details.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully created Intelligent Contact Robot calling job, you can click <b>Create Job</b> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachTaskRequest
@@ -1897,8 +2103,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>追加任务明细</para>
+        /// <para>Append job details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After creating an Intelligent Contact Robot calling job, you can invoke this API to append job details.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully created Intelligent Contact Robot calling job, you can click <b>Create Job</b> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// AttachTaskRequest
@@ -2063,8 +2286,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消大模型解决方案Ai外呼明细任务</para>
+        /// <para>This operation cancels calls from a call task. You cannot cancel a call if its detail record is already in the pending call queue or is in progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Use this operation to cancel calls. Alternatively, you can manually cancel calls in the console by navigating to <b>Call Task Management</b> &gt; <b>Manage</b> &gt; <b>Execution Records</b> &gt; <b>Pending</b>.</description></item>
+        /// <item><description>Before calling this operation, ensure you have created a call task and imported callee data.</description></item>
+        /// <item><description>If you have not created a call task, you can create one and import callee data on the <b>Call Task Management</b> page. You can also call the <a href="https://help.aliyun.com/document_detail/2926815.html">CreateAiCallTask</a> and <a href="">ImportTaskNumberDatas</a> operations.</description></item>
+        /// <item><description>Canceling a call task may affect your business. Please proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CancelAiCallDetailsRequest
@@ -2143,8 +2376,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消大模型解决方案Ai外呼明细任务</para>
+        /// <para>This operation cancels calls from a call task. You cannot cancel a call if its detail record is already in the pending call queue or is in progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Use this operation to cancel calls. Alternatively, you can manually cancel calls in the console by navigating to <b>Call Task Management</b> &gt; <b>Manage</b> &gt; <b>Execution Records</b> &gt; <b>Pending</b>.</description></item>
+        /// <item><description>Before calling this operation, ensure you have created a call task and imported callee data.</description></item>
+        /// <item><description>If you have not created a call task, you can create one and import callee data on the <b>Call Task Management</b> page. You can also call the <a href="https://help.aliyun.com/document_detail/2926815.html">CreateAiCallTask</a> and <a href="">ImportTaskNumberDatas</a> operations.</description></item>
+        /// <item><description>Canceling a call task may affect your business. Please proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CancelAiCallDetailsRequest
@@ -2223,8 +2466,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消大模型解决方案Ai外呼明细任务</para>
+        /// <para>This operation cancels calls from a call task. You cannot cancel a call if its detail record is already in the pending call queue or is in progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Use this operation to cancel calls. Alternatively, you can manually cancel calls in the console by navigating to <b>Call Task Management</b> &gt; <b>Manage</b> &gt; <b>Execution Records</b> &gt; <b>Pending</b>.</description></item>
+        /// <item><description>Before calling this operation, ensure you have created a call task and imported callee data.</description></item>
+        /// <item><description>If you have not created a call task, you can create one and import callee data on the <b>Call Task Management</b> page. You can also call the <a href="https://help.aliyun.com/document_detail/2926815.html">CreateAiCallTask</a> and <a href="">ImportTaskNumberDatas</a> operations.</description></item>
+        /// <item><description>Canceling a call task may affect your business. Please proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelAiCallDetailsRequest
@@ -2241,8 +2494,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量取消大模型解决方案Ai外呼明细任务</para>
+        /// <para>This operation cancels calls from a call task. You cannot cancel a call if its detail record is already in the pending call queue or is in progress.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Use this operation to cancel calls. Alternatively, you can manually cancel calls in the console by navigating to <b>Call Task Management</b> &gt; <b>Manage</b> &gt; <b>Execution Records</b> &gt; <b>Pending</b>.</description></item>
+        /// <item><description>Before calling this operation, ensure you have created a call task and imported callee data.</description></item>
+        /// <item><description>If you have not created a call task, you can create one and import callee data on the <b>Call Task Management</b> page. You can also call the <a href="https://help.aliyun.com/document_detail/2926815.html">CreateAiCallTask</a> and <a href="">ImportTaskNumberDatas</a> operations.</description></item>
+        /// <item><description>Canceling a call task may affect your business. Please proceed with caution.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelAiCallDetailsRequest
@@ -2259,8 +2522,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能外呼任务</para>
+        /// <para>Cancel an Intelligent Contact Robot calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to cancel an Intelligent Contact Robot calling job, or manually cancel the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>After an Intelligent Contact Robot calling job is canceled, it cannot be started again. Proceed with caution.</description></item>
+        /// <item><description>If you want to pause a job and restart it later, you can manually pause the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or pause it by using the <a href="https://help.aliyun.com/document_detail/2718006.html">StopTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelTaskRequest
@@ -2313,8 +2593,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能外呼任务</para>
+        /// <para>Cancel an Intelligent Contact Robot calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to cancel an Intelligent Contact Robot calling job, or manually cancel the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>After an Intelligent Contact Robot calling job is canceled, it cannot be started again. Proceed with caution.</description></item>
+        /// <item><description>If you want to pause a job and restart it later, you can manually pause the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or pause it by using the <a href="https://help.aliyun.com/document_detail/2718006.html">StopTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelTaskRequest
@@ -2367,8 +2664,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能外呼任务</para>
+        /// <para>Cancel an Intelligent Contact Robot calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to cancel an Intelligent Contact Robot calling job, or manually cancel the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>After an Intelligent Contact Robot calling job is canceled, it cannot be started again. Proceed with caution.</description></item>
+        /// <item><description>If you want to pause a job and restart it later, you can manually pause the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or pause it by using the <a href="https://help.aliyun.com/document_detail/2718006.html">StopTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelTaskRequest
@@ -2385,8 +2699,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能外呼任务</para>
+        /// <para>Cancel an Intelligent Contact Robot calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to cancel an Intelligent Contact Robot calling job, or manually cancel the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>After an Intelligent Contact Robot calling job is canceled, it cannot be started again. Proceed with caution.</description></item>
+        /// <item><description>If you want to pause a job and restart it later, you can manually pause the job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or pause it by using the <a href="https://help.aliyun.com/document_detail/2718006.html">StopTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelTaskRequest
@@ -2403,8 +2734,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改在线客服状态</para>
+        /// <para>Invoke ChangeChatAgentStatus to modify the Live Support status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, only changing the Live Support status to offline is supported.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeChatAgentStatusRequest
@@ -2457,8 +2795,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改在线客服状态</para>
+        /// <para>Invoke ChangeChatAgentStatus to modify the Live Support status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, only changing the Live Support status to offline is supported.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeChatAgentStatusRequest
@@ -2511,8 +2856,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改在线客服状态</para>
+        /// <para>Invoke ChangeChatAgentStatus to modify the Live Support status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, only changing the Live Support status to offline is supported.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeChatAgentStatusRequest
@@ -2529,8 +2881,15 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改在线客服状态</para>
+        /// <para>Invoke ChangeChatAgentStatus to modify the Live Support status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Currently, only changing the Live Support status to offline is supported.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeChatAgentStatusRequest
@@ -2661,6 +3020,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await ChangeQualityProjectStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create an agent account in the Cloud Customer Service System and return the agent ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify skill group information, refer to the guidance in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>You can manage agents by calling <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-deleteagent">DeleteAgent</a> to delete an agent or <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update agent data.</description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: No rate limiting.  </description></item>
+        /// <item><description>API call frequency: 100 queries per second (QPS).  <remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAgentRequest
         /// </param>
@@ -2724,6 +3105,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<CreateAgentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create an agent account in the Cloud Customer Service System and return the agent ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify skill group information, refer to the guidance in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>You can manage agents by calling <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-deleteagent">DeleteAgent</a> to delete an agent or <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update agent data.</description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: No rate limiting.  </description></item>
+        /// <item><description>API call frequency: 100 queries per second (QPS).  <remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAgentRequest
         /// </param>
@@ -2787,6 +3190,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<CreateAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create an agent account in the Cloud Customer Service System and return the agent ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify skill group information, refer to the guidance in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>You can manage agents by calling <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-deleteagent">DeleteAgent</a> to delete an agent or <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update agent data.</description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: No rate limiting.  </description></item>
+        /// <item><description>API call frequency: 100 queries per second (QPS).  <remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAgentRequest
         /// </param>
@@ -2800,6 +3225,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return CreateAgentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create an agent account in the Cloud Customer Service System and return the agent ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before calling this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify skill group information, refer to the guidance in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>You can manage agents by calling <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-deleteagent">DeleteAgent</a> to delete an agent or <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update agent data.</description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: No rate limiting.  </description></item>
+        /// <item><description>API call frequency: 100 queries per second (QPS).  <remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateAgentRequest
         /// </param>
@@ -2815,8 +3262,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Creates a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a call task, make a test call with an agent to ensure the results meet your requirements.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAiCallTaskRequest
@@ -2947,8 +3399,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Creates a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a call task, make a test call with an agent to ensure the results meet your requirements.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAiCallTaskRequest
@@ -3079,8 +3536,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Creates a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a call task, make a test call with an agent to ensure the results meet your requirements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAiCallTaskRequest
@@ -3097,8 +3559,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建任务</para>
+        /// <para>Creates a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before creating a call task, make a test call with an agent to ensure the results meet your requirements.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAiCallTaskRequest
@@ -3115,8 +3582,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能外呼任务（预测式外呼、自动外呼）</para>
+        /// <para>Create an Intelligent Outbound Call Job. You can configure the Task Type, job name, outbound caller ID, callee number deduplication policy, and other settings when creating the job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>Data</b> field in the response parameters of this API is the job ID.  </description></item>
+        /// <item><description>After creating an Intelligent Outbound Call Job, if you need to make updates, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API to update the outbound call job.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 20 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAiOutboundTaskRequest
@@ -3207,8 +3690,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能外呼任务（预测式外呼、自动外呼）</para>
+        /// <para>Create an Intelligent Outbound Call Job. You can configure the Task Type, job name, outbound caller ID, callee number deduplication policy, and other settings when creating the job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>Data</b> field in the response parameters of this API is the job ID.  </description></item>
+        /// <item><description>After creating an Intelligent Outbound Call Job, if you need to make updates, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API to update the outbound call job.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 20 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateAiOutboundTaskRequest
@@ -3299,8 +3798,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能外呼任务（预测式外呼、自动外呼）</para>
+        /// <para>Create an Intelligent Outbound Call Job. You can configure the Task Type, job name, outbound caller ID, callee number deduplication policy, and other settings when creating the job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>Data</b> field in the response parameters of this API is the job ID.  </description></item>
+        /// <item><description>After creating an Intelligent Outbound Call Job, if you need to make updates, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API to update the outbound call job.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 20 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAiOutboundTaskRequest
@@ -3317,8 +3832,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能外呼任务（预测式外呼、自动外呼）</para>
+        /// <para>Create an Intelligent Outbound Call Job. You can configure the Task Type, job name, outbound caller ID, callee number deduplication policy, and other settings when creating the job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>Data</b> field in the response parameters of this API is the job ID.  </description></item>
+        /// <item><description>After creating an Intelligent Outbound Call Job, if you need to make updates, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API to update the outbound call job.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 20 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAiOutboundTaskRequest
@@ -3335,8 +3866,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能外呼任务批次</para>
+        /// <para>Creates a batch for an Intelligent Outbound Calling job based on the instance ID and job ID, enabling data under the job to be queried by batch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, we recommend that you confirm the instance ID and job ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</para>
+        /// <h3>QPS limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 queries per second (QPS).</description></item>
+        /// <item><description>API-wide invocation frequency: 20 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAiOutboundTaskBatchRequest
@@ -3381,8 +3925,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能外呼任务批次</para>
+        /// <para>Creates a batch for an Intelligent Outbound Calling job based on the instance ID and job ID, enabling data under the job to be queried by batch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, we recommend that you confirm the instance ID and job ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</para>
+        /// <h3>QPS limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 queries per second (QPS).</description></item>
+        /// <item><description>API-wide invocation frequency: 20 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAiOutboundTaskBatchRequest
@@ -3427,8 +3984,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能外呼任务批次</para>
+        /// <para>Creates a batch for an Intelligent Outbound Calling job based on the instance ID and job ID, enabling data under the job to be queried by batch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, we recommend that you confirm the instance ID and job ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</para>
+        /// <h3>QPS limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 queries per second (QPS).</description></item>
+        /// <item><description>API-wide invocation frequency: 20 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAiOutboundTaskBatchRequest
@@ -3445,8 +4015,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建智能外呼任务批次</para>
+        /// <para>Creates a batch for an Intelligent Outbound Calling job based on the instance ID and job ID, enabling data under the job to be queried by batch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this API, we recommend that you confirm the instance ID and job ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</para>
+        /// <h3>QPS limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 queries per second (QPS).</description></item>
+        /// <item><description>API-wide invocation frequency: 20 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateAiOutboundTaskBatchRequest
@@ -3463,8 +4046,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建部门信息</para>
+        /// <para>Creates department information based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department name. Upon successful creation, the department ID is returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you need to update department information, you can invoke the <a href="https://help.aliyun.com/document_detail/2717977.html">UpdateDepartment</a> API.</description></item>
+        /// <item><description>After successfully creating department information by invoking this API, the <b>Data</b> field in the response contains the department ID. If you need to query the department ID later, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDepartmentRequest
@@ -3509,8 +4108,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建部门信息</para>
+        /// <para>Creates department information based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department name. Upon successful creation, the department ID is returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you need to update department information, you can invoke the <a href="https://help.aliyun.com/document_detail/2717977.html">UpdateDepartment</a> API.</description></item>
+        /// <item><description>After successfully creating department information by invoking this API, the <b>Data</b> field in the response contains the department ID. If you need to query the department ID later, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDepartmentRequest
@@ -3555,8 +4170,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建部门信息</para>
+        /// <para>Creates department information based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department name. Upon successful creation, the department ID is returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you need to update department information, you can invoke the <a href="https://help.aliyun.com/document_detail/2717977.html">UpdateDepartment</a> API.</description></item>
+        /// <item><description>After successfully creating department information by invoking this API, the <b>Data</b> field in the response contains the department ID. If you need to query the department ID later, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDepartmentRequest
@@ -3573,8 +4204,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建部门信息</para>
+        /// <para>Creates department information based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department name. Upon successful creation, the department ID is returned.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you need to update department information, you can invoke the <a href="https://help.aliyun.com/document_detail/2717977.html">UpdateDepartment</a> API.</description></item>
+        /// <item><description>After successfully creating department information by invoking this API, the <b>Data</b> field in the response contains the department ID. If you need to query the department ID later, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDepartmentRequest
@@ -4129,6 +4776,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await CreateQualityRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a skill group based on the skill group name and channel type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API allows you to define information such as the external display name and description of the skill group. For details, see <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>The <b>Data</b> parameter returned by this API is the ID of the successfully created skill group.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupRequest
         /// </param>
@@ -4190,6 +4858,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<CreateSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a skill group based on the skill group name and channel type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API allows you to define information such as the external display name and description of the skill group. For details, see <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>The <b>Data</b> parameter returned by this API is the ID of the successfully created skill group.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupRequest
         /// </param>
@@ -4251,6 +4940,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<CreateSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a skill group based on the skill group name and channel type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API allows you to define information such as the external display name and description of the skill group. For details, see <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>The <b>Data</b> parameter returned by this API is the ID of the successfully created skill group.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupRequest
         /// </param>
@@ -4264,6 +4974,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return CreateSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Create a skill group based on the skill group name and channel type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API allows you to define information such as the external display name and description of the skill group. For details, see <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>The <b>Data</b> parameter returned by this API is the ID of the successfully created skill group.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateSkillGroupRequest
         /// </param>
@@ -4279,8 +5010,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外呼任务</para>
+        /// <para>Create an Artificial Intelligence Cloud Call Service robot outbound calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to create a job, or create one in the <b>Artificial Intelligence Cloud Call Service console</b> &gt; <b>Outbound Robot (Standard Edition)</b> &gt; <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> by clicking <b>Create Job</b>.  </description></item>
+        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique job ID of the robot outbound calling task.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTaskRequest
@@ -4381,8 +5128,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外呼任务</para>
+        /// <para>Create an Artificial Intelligence Cloud Call Service robot outbound calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to create a job, or create one in the <b>Artificial Intelligence Cloud Call Service console</b> &gt; <b>Outbound Robot (Standard Edition)</b> &gt; <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> by clicking <b>Create Job</b>.  </description></item>
+        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique job ID of the robot outbound calling task.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTaskRequest
@@ -4483,8 +5246,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外呼任务</para>
+        /// <para>Create an Artificial Intelligence Cloud Call Service robot outbound calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to create a job, or create one in the <b>Artificial Intelligence Cloud Call Service console</b> &gt; <b>Outbound Robot (Standard Edition)</b> &gt; <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> by clicking <b>Create Job</b>.  </description></item>
+        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique job ID of the robot outbound calling task.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTaskRequest
@@ -4501,8 +5280,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建外呼任务</para>
+        /// <para>Create an Artificial Intelligence Cloud Call Service robot outbound calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to create a job, or create one in the <b>Artificial Intelligence Cloud Call Service console</b> &gt; <b>Outbound Robot (Standard Edition)</b> &gt; <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> by clicking <b>Create Job</b>.  </description></item>
+        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique job ID of the robot outbound calling task.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTaskRequest
@@ -4519,7 +5314,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建坐席并开通sso登录能力</para>
+        /// <para>Create an agent that enables password-free login to the Cloud Customer Service System based on a User Account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4595,7 +5390,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建坐席并开通sso登录能力</para>
+        /// <para>Create an agent that enables password-free login to the Cloud Customer Service System based on a User Account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4671,7 +5466,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建坐席并开通sso登录能力</para>
+        /// <para>Create an agent that enables password-free login to the Cloud Customer Service System based on a User Account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4689,7 +5484,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建坐席并开通sso登录能力</para>
+        /// <para>Create an agent that enables password-free login to the Cloud Customer Service System based on a User Account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4707,8 +5502,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除坐席账号</para>
+        /// <para>Deletes an agent account in the Cloud Customer Service System based on the instance ID and agent account name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before deletion, we recommend that you confirm the agent account name and instance ID to be deleted. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If an agent is accidentally deleted, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createagent">CreateAgent</a> API to recreate the agent.<remarks>
+        /// <para>If an account is re-added after deletion, the agent ID remains unchanged.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAgentRequest
@@ -4757,8 +5571,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除坐席账号</para>
+        /// <para>Deletes an agent account in the Cloud Customer Service System based on the instance ID and agent account name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before deletion, we recommend that you confirm the agent account name and instance ID to be deleted. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If an agent is accidentally deleted, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createagent">CreateAgent</a> API to recreate the agent.<remarks>
+        /// <para>If an account is re-added after deletion, the agent ID remains unchanged.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAgentRequest
@@ -4807,8 +5640,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除坐席账号</para>
+        /// <para>Deletes an agent account in the Cloud Customer Service System based on the instance ID and agent account name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before deletion, we recommend that you confirm the agent account name and instance ID to be deleted. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If an agent is accidentally deleted, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createagent">CreateAgent</a> API to recreate the agent.<remarks>
+        /// <para>If an account is re-added after deletion, the agent ID remains unchanged.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAgentRequest
@@ -4825,8 +5677,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除坐席账号</para>
+        /// <para>Deletes an agent account in the Cloud Customer Service System based on the instance ID and agent account name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before deletion, we recommend that you confirm the agent account name and instance ID to be deleted. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If an agent is accidentally deleted, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createagent">CreateAgent</a> API to recreate the agent.<remarks>
+        /// <para>If an account is re-added after deletion, the agent ID remains unchanged.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAgentRequest
@@ -4843,8 +5714,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能外呼任务</para>
+        /// <para>Deletes an Intelligent Outbound Calling job by instance ID and job ID. After deletion, the job will no longer appear in the outbound calling job list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: Deletion is a sensitive operation. Proceed with caution.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before deletion, we recommend that you confirm the job ID and related information. You can call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API to view the outbound calling job list and verify the task name, description, and corresponding job ID.</description></item>
+        /// <item><description>If you need to recreate an Intelligent Outbound Calling job, you can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAiOutboundTaskRequest
@@ -4889,8 +5779,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能外呼任务</para>
+        /// <para>Deletes an Intelligent Outbound Calling job by instance ID and job ID. After deletion, the job will no longer appear in the outbound calling job list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: Deletion is a sensitive operation. Proceed with caution.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before deletion, we recommend that you confirm the job ID and related information. You can call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API to view the outbound calling job list and verify the task name, description, and corresponding job ID.</description></item>
+        /// <item><description>If you need to recreate an Intelligent Outbound Calling job, you can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAiOutboundTaskRequest
@@ -4935,8 +5844,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能外呼任务</para>
+        /// <para>Deletes an Intelligent Outbound Calling job by instance ID and job ID. After deletion, the job will no longer appear in the outbound calling job list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: Deletion is a sensitive operation. Proceed with caution.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before deletion, we recommend that you confirm the job ID and related information. You can call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API to view the outbound calling job list and verify the task name, description, and corresponding job ID.</description></item>
+        /// <item><description>If you need to recreate an Intelligent Outbound Calling job, you can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAiOutboundTaskRequest
@@ -4953,8 +5881,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除智能外呼任务</para>
+        /// <para>Deletes an Intelligent Outbound Calling job by instance ID and job ID. After deletion, the job will no longer appear in the outbound calling job list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: Deletion is a sensitive operation. Proceed with caution.</para>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Before deletion, we recommend that you confirm the job ID and related information. You can call the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API to view the outbound calling job list and verify the task name, description, and corresponding job ID.</description></item>
+        /// <item><description>If you need to recreate an Intelligent Outbound Calling job, you can call the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteAiOutboundTaskRequest
@@ -4971,8 +5918,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除部门信息</para>
+        /// <para>Deletes department information based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deletion is a sensitive operation. Proceed with caution.</description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If you accidentally delete department information, you can call the <a href="https://help.aliyun.com/document_detail/2717974.html">CreateDepartment</a> API to recreate it.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDepartmentRequest
@@ -5017,8 +5981,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除部门信息</para>
+        /// <para>Deletes department information based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deletion is a sensitive operation. Proceed with caution.</description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If you accidentally delete department information, you can call the <a href="https://help.aliyun.com/document_detail/2717974.html">CreateDepartment</a> API to recreate it.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDepartmentRequest
@@ -5063,8 +6044,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除部门信息</para>
+        /// <para>Deletes department information based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deletion is a sensitive operation. Proceed with caution.</description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If you accidentally delete department information, you can call the <a href="https://help.aliyun.com/document_detail/2717974.html">CreateDepartment</a> API to recreate it.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDepartmentRequest
@@ -5081,8 +6079,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除部门信息</para>
+        /// <para>Deletes department information based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deletion is a sensitive operation. Proceed with caution.</description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If you accidentally delete department information, you can call the <a href="https://help.aliyun.com/document_detail/2717974.html">CreateDepartment</a> API to recreate it.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteDepartmentRequest
@@ -5099,7 +6114,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热线号码</para>
+        /// <para>Invoke the DeleteHotlineNumber API to delete a configured hotline number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5145,7 +6160,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热线号码</para>
+        /// <para>Invoke the DeleteHotlineNumber API to delete a configured hotline number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5191,7 +6206,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热线号码</para>
+        /// <para>Invoke the DeleteHotlineNumber API to delete a configured hotline number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5209,7 +6224,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除热线号码</para>
+        /// <para>Invoke the DeleteHotlineNumber API to delete a configured hotline number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5333,6 +6348,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await DeleteOutboundTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke DeleteOuterAccount to delete an external account by its external Account ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteOuterAccountRequest
         /// </param>
@@ -5366,6 +6386,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<DeleteOuterAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke DeleteOuterAccount to delete an external account by its external Account ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteOuterAccountRequest
         /// </param>
@@ -5399,6 +6424,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<DeleteOuterAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke DeleteOuterAccount to delete an external account by its external Account ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteOuterAccountRequest
         /// </param>
@@ -5412,6 +6442,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return DeleteOuterAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke DeleteOuterAccount to delete an external account by its external Account ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteOuterAccountRequest
         /// </param>
@@ -5641,6 +6676,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await DeleteQualityRuleWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an external skill group based on the skill group ID and skill group channel type.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupRequest
         /// </param>
@@ -5674,6 +6714,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<DeleteSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an external skill group based on the skill group ID and skill group channel type.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupRequest
         /// </param>
@@ -5707,6 +6752,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<DeleteSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an external skill group based on the skill group ID and skill group channel type.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupRequest
         /// </param>
@@ -5720,6 +6770,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return DeleteSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an external skill group based on the skill group ID and skill group channel type.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteSkillGroupRequest
         /// </param>
@@ -5733,6 +6788,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await DeleteSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the DescribeRecordData API to retrieve call information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRecordDataRequest
         /// </param>
@@ -5798,6 +6858,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<DescribeRecordDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the DescribeRecordData API to retrieve call information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRecordDataRequest
         /// </param>
@@ -5863,6 +6928,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<DescribeRecordDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the DescribeRecordData API to retrieve call information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRecordDataRequest
         /// </param>
@@ -5876,6 +6946,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return DescribeRecordDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the DescribeRecordData API to retrieve call information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeRecordDataRequest
         /// </param>
@@ -6339,7 +7414,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线号码加密</para>
+        /// <para>Invoke EncryptPhoneNum to encrypt the User\&quot;s Phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6377,7 +7452,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线号码加密</para>
+        /// <para>Invoke EncryptPhoneNum to encrypt the User\&quot;s Phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6415,7 +7490,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线号码加密</para>
+        /// <para>Invoke EncryptPhoneNum to encrypt the User\&quot;s Phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6433,7 +7508,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线号码加密</para>
+        /// <para>Invoke EncryptPhoneNum to encrypt the User\&quot;s Phone number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6449,6 +7524,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await EncryptPhoneNumWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve or recover a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FetchCallRequest
         /// </param>
@@ -6510,6 +7590,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<FetchCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve or recover a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FetchCallRequest
         /// </param>
@@ -6571,6 +7656,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<FetchCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve or recover a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FetchCallRequest
         /// </param>
@@ -6584,6 +7674,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return FetchCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve or recover a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// FetchCallRequest
         /// </param>
@@ -6597,6 +7692,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await FetchCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>End the hotline service by instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total number of calls from multiple users exceeds the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FinishHotlineServiceRequest
         /// </param>
@@ -6642,6 +7754,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<FinishHotlineServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>End the hotline service by instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total number of calls from multiple users exceeds the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FinishHotlineServiceRequest
         /// </param>
@@ -6687,6 +7816,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<FinishHotlineServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>End the hotline service by instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total number of calls from multiple users exceeds the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FinishHotlineServiceRequest
         /// </param>
@@ -6700,6 +7846,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return FinishHotlineServiceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>End the hotline service by instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total number of calls from multiple users exceeds the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// FinishHotlineServiceRequest
         /// </param>
@@ -6713,6 +7876,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await FinishHotlineServiceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generate a message channel access signature based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to generate a message channel access signature. The <b>Data</b> field in the response contains the MessageBox message channel signature code.</description></item>
+        /// <item><description>Before invoking the API, we recommend that you confirm your AICCS instance ID. For instructions on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API-wide frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GenerateWebSocketSignRequest
         /// </param>
@@ -6758,6 +7942,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GenerateWebSocketSignResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generate a message channel access signature based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to generate a message channel access signature. The <b>Data</b> field in the response contains the MessageBox message channel signature code.</description></item>
+        /// <item><description>Before invoking the API, we recommend that you confirm your AICCS instance ID. For instructions on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API-wide frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GenerateWebSocketSignRequest
         /// </param>
@@ -6803,6 +8008,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GenerateWebSocketSignResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generate a message channel access signature based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to generate a message channel access signature. The <b>Data</b> field in the response contains the MessageBox message channel signature code.</description></item>
+        /// <item><description>Before invoking the API, we recommend that you confirm your AICCS instance ID. For instructions on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API-wide frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GenerateWebSocketSignRequest
         /// </param>
@@ -6816,6 +8042,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GenerateWebSocketSignWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generate a message channel access signature based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to generate a message channel access signature. The <b>Data</b> field in the response contains the MessageBox message channel signature code.</description></item>
+        /// <item><description>Before invoking the API, we recommend that you confirm your AICCS instance ID. For instructions on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API-wide frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GenerateWebSocketSignRequest
         /// </param>
@@ -6829,6 +8076,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GenerateWebSocketSignWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query agent information in the Cloud Customer Service System by instance ID and agent account name, such as agent ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and the agent account name. For guidance on how to obtain these details, refer to the instructions in <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>Deleted agents can also be queried. Check the <b>Status</b> parameter in the response. If its value is 2, it indicates that the agent has been deleted.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAgentRequest
         /// </param>
@@ -6862,6 +8130,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetAgentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query agent information in the Cloud Customer Service System by instance ID and agent account name, such as agent ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and the agent account name. For guidance on how to obtain these details, refer to the instructions in <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>Deleted agents can also be queried. Check the <b>Status</b> parameter in the response. If its value is 2, it indicates that the agent has been deleted.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAgentRequest
         /// </param>
@@ -6895,6 +8184,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query agent information in the Cloud Customer Service System by instance ID and agent account name, such as agent ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and the agent account name. For guidance on how to obtain these details, refer to the instructions in <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>Deleted agents can also be queried. Check the <b>Status</b> parameter in the response. If its value is 2, it indicates that the agent has been deleted.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAgentRequest
         /// </param>
@@ -6908,6 +8218,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetAgentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query agent information in the Cloud Customer Service System by instance ID and agent account name, such as agent ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and the agent account name. For guidance on how to obtain these details, refer to the instructions in <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>Deleted agents can also be queried. Check the <b>Status</b> parameter in the response. If its value is 2, it indicates that the agent has been deleted.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAgentRequest
         /// </param>
@@ -6923,8 +8254,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席纬度基础状态量</para>
+        /// <para>Obtain the agent-level status metrics under hotline monitoring. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetAgentBasisStatusRequest
@@ -6971,8 +8318,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席纬度基础状态量</para>
+        /// <para>Obtain the agent-level status metrics under hotline monitoring. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetAgentBasisStatusRequest
@@ -7019,8 +8382,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席纬度基础状态量</para>
+        /// <para>Obtain the agent-level status metrics under hotline monitoring. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentBasisStatusRequest
@@ -7037,8 +8416,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席纬度基础状态量</para>
+        /// <para>Obtain the agent-level status metrics under hotline monitoring. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentBasisStatusRequest
@@ -7163,8 +8558,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线坐席纬度详情汇总</para>
+        /// <para>Retrieve the summary data of hotline agent details under hotline reports. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you invoke this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetAgentDetailReportRequest
@@ -7211,8 +8622,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线坐席纬度详情汇总</para>
+        /// <para>Retrieve the summary data of hotline agent details under hotline reports. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you invoke this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetAgentDetailReportRequest
@@ -7259,8 +8686,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线坐席纬度详情汇总</para>
+        /// <para>Retrieve the summary data of hotline agent details under hotline reports. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you invoke this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentDetailReportRequest
@@ -7277,8 +8720,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线坐席纬度详情汇总</para>
+        /// <para>Retrieve the summary data of hotline agent details under hotline reports. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you invoke this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentDetailReportRequest
@@ -7293,6 +8752,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetAgentDetailReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain real-time agent detail data grouped by instance, department, and skill group (real-time data).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.</description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 10 requests per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAgentIndexRealTimeRequest
         /// </param>
@@ -7346,6 +8826,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetAgentIndexRealTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain real-time agent detail data grouped by instance, department, and skill group (real-time data).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.</description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 10 requests per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAgentIndexRealTimeRequest
         /// </param>
@@ -7399,6 +8900,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetAgentIndexRealTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain real-time agent detail data grouped by instance, department, and skill group (real-time data).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.</description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 10 requests per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAgentIndexRealTimeRequest
         /// </param>
@@ -7412,6 +8934,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetAgentIndexRealTimeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain real-time agent detail data grouped by instance, department, and skill group (real-time data).</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.</description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 10 requests per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAgentIndexRealTimeRequest
         /// </param>
@@ -7427,8 +8970,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席服务状态量</para>
+        /// <para>Obtain the agent service status metrics from online reports. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 queries per second.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetAgentServiceStatusRequest
@@ -7475,8 +9034,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席服务状态量</para>
+        /// <para>Obtain the agent service status metrics from online reports. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 queries per second.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetAgentServiceStatusRequest
@@ -7523,8 +9098,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席服务状态量</para>
+        /// <para>Obtain the agent service status metrics from online reports. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 queries per second.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentServiceStatusRequest
@@ -7541,8 +9132,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席服务状态量</para>
+        /// <para>Obtain the agent service status metrics from online reports. Supports queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 queries per second.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentServiceStatusRequest
@@ -7559,8 +9166,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席纬度统计量</para>
+        /// <para>Obtain agent-level statistics under hotline monitoring. Supports querying by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetAgentStatisticsRequest
@@ -7607,8 +9230,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席纬度统计量</para>
+        /// <para>Obtain agent-level statistics under hotline monitoring. Supports querying by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetAgentStatisticsRequest
@@ -7655,8 +9294,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席纬度统计量</para>
+        /// <para>Obtain agent-level statistics under hotline monitoring. Supports querying by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentStatisticsRequest
@@ -7673,8 +9328,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>坐席纬度统计量</para>
+        /// <para>Obtain agent-level statistics under hotline monitoring. Supports querying by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentStatisticsRequest
@@ -7691,8 +9362,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能外呼任务业务自定义信息</para>
+        /// <para>Query the business information associated with this call by instance ID and session ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Call frequency per user: 100 times/second.</description></item>
+        /// <item><description>API call frequency: 100 times/second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskBizDataRequest
@@ -7729,8 +9412,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能外呼任务业务自定义信息</para>
+        /// <para>Query the business information associated with this call by instance ID and session ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Call frequency per user: 100 times/second.</description></item>
+        /// <item><description>API call frequency: 100 times/second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskBizDataRequest
@@ -7767,8 +9462,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能外呼任务业务自定义信息</para>
+        /// <para>Query the business information associated with this call by instance ID and session ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Call frequency per user: 100 times/second.</description></item>
+        /// <item><description>API call frequency: 100 times/second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskBizDataRequest
@@ -7785,8 +9492,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取智能外呼任务业务自定义信息</para>
+        /// <para>Query the business information associated with this call by instance ID and session ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Call frequency per user: 100 times/second.</description></item>
+        /// <item><description>API call frequency: 100 times/second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskBizDataRequest
@@ -7803,8 +9522,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务配置详情查询</para>
+        /// <para>Obtain the outbound call job details by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The outbound call job details include the job ID, job status, task type, outbound caller number, callee number repetition policy, and other information. For more information, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskDetailRequest
@@ -7841,8 +9573,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务配置详情查询</para>
+        /// <para>Obtain the outbound call job details by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The outbound call job details include the job ID, job status, task type, outbound caller number, callee number repetition policy, and other information. For more information, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskDetailRequest
@@ -7879,8 +9624,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务配置详情查询</para>
+        /// <para>Obtain the outbound call job details by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The outbound call job details include the job ID, job status, task type, outbound caller number, callee number repetition policy, and other information. For more information, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskDetailRequest
@@ -7897,8 +9655,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务配置详情查询</para>
+        /// <para>Obtain the outbound call job details by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The outbound call job details include the job ID, job status, task type, outbound caller number, callee number repetition policy, and other information. For more information, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskDetailRequest
@@ -7915,8 +9686,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务执行详情</para>
+        /// <para>Obtain task execution details by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task execution details include the total number of jobs, job batches, outbound call numbers, corresponding call counts, execution status, and other information.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskExecDetailRequest
@@ -7953,8 +9737,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务执行详情</para>
+        /// <para>Obtain task execution details by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task execution details include the total number of jobs, job batches, outbound call numbers, corresponding call counts, execution status, and other information.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskExecDetailRequest
@@ -7991,8 +9788,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务执行详情</para>
+        /// <para>Obtain task execution details by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task execution details include the total number of jobs, job batches, outbound call numbers, corresponding call counts, execution status, and other information.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskExecDetailRequest
@@ -8009,8 +9819,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务执行详情</para>
+        /// <para>Obtain task execution details by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The task execution details include the total number of jobs, job batches, outbound call numbers, corresponding call counts, execution status, and other information.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskExecDetailRequest
@@ -8027,8 +9850,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务列表查询</para>
+        /// <para>Retrieve the outbound call job list by instance ID and Task Type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The job list contains job information, including job ID, Task Status, Task Name, task completion rate, and more. For details, see <a href="#api-detail-40">Response parameters</a>.</description></item>
+        /// <item><description>If you need to update job information, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskListRequest
@@ -8065,8 +9904,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务列表查询</para>
+        /// <para>Retrieve the outbound call job list by instance ID and Task Type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The job list contains job information, including job ID, Task Status, Task Name, task completion rate, and more. For details, see <a href="#api-detail-40">Response parameters</a>.</description></item>
+        /// <item><description>If you need to update job information, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskListRequest
@@ -8103,8 +9958,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务列表查询</para>
+        /// <para>Retrieve the outbound call job list by instance ID and Task Type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The job list contains job information, including job ID, Task Status, Task Name, task completion rate, and more. For details, see <a href="#api-detail-40">Response parameters</a>.</description></item>
+        /// <item><description>If you need to update job information, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskListRequest
@@ -8121,8 +9992,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务列表查询</para>
+        /// <para>Retrieve the outbound call job list by instance ID and Task Type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The job list contains job information, including job ID, Task Status, Task Name, task completion rate, and more. For details, see <a href="#api-detail-40">Response parameters</a>.</description></item>
+        /// <item><description>If you need to update job information, you can invoke the <a href="https://help.aliyun.com/document_detail/2718021.html">UpdateAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.</description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskListRequest
@@ -8139,8 +10026,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务执行进度</para>
+        /// <para>Obtain the outbound call job progress by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>The outbound call job progress includes information such as job ID, Task Type, job completion rate, agent connection rate, and customer connection rate. For details, see <a href="#api-detail-40">Response Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskProgressRequest
@@ -8177,8 +10080,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务执行进度</para>
+        /// <para>Obtain the outbound call job progress by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>The outbound call job progress includes information such as job ID, Task Type, job completion rate, agent connection rate, and customer connection rate. For details, see <a href="#api-detail-40">Response Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskProgressRequest
@@ -8215,8 +10134,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务执行进度</para>
+        /// <para>Obtain the outbound call job progress by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>The outbound call job progress includes information such as job ID, Task Type, job completion rate, agent connection rate, and customer connection rate. For details, see <a href="#api-detail-40">Response Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskProgressRequest
@@ -8233,8 +10168,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务执行进度</para>
+        /// <para>Obtain the outbound call job progress by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>The outbound call job progress includes information such as job ID, Task Type, job completion rate, agent connection rate, and customer connection rate. For details, see <a href="#api-detail-40">Response Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAiOutboundTaskProgressRequest
@@ -8253,6 +10204,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// <summary>
         /// <para>getAllDepartment</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to obtain department IDs for department group queries in certain data query APIs (such as <a href="https://help.aliyun.com/document_detail/2717938.html">GetHotlineServiceStatistics</a>).  </description></item>
+        /// <item><description>After creating, deleting, or updating department information, you can invoke this API to confirm whether the department information matches your expectations.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAllDepartmentRequest
@@ -8292,6 +10259,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// <para>getAllDepartment</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to obtain department IDs for department group queries in certain data query APIs (such as <a href="https://help.aliyun.com/document_detail/2717938.html">GetHotlineServiceStatistics</a>).  </description></item>
+        /// <item><description>After creating, deleting, or updating department information, you can invoke this API to confirm whether the department information matches your expectations.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAllDepartmentRequest
         /// </param>
@@ -8330,6 +10313,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// <para>getAllDepartment</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to obtain department IDs for department group queries in certain data query APIs (such as <a href="https://help.aliyun.com/document_detail/2717938.html">GetHotlineServiceStatistics</a>).  </description></item>
+        /// <item><description>After creating, deleting, or updating department information, you can invoke this API to confirm whether the department information matches your expectations.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAllDepartmentRequest
         /// </param>
@@ -8348,6 +10347,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
         /// <para>getAllDepartment</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to obtain department IDs for department group queries in certain data query APIs (such as <a href="https://help.aliyun.com/document_detail/2717938.html">GetHotlineServiceStatistics</a>).  </description></item>
+        /// <item><description>After creating, deleting, or updating department information, you can invoke this API to confirm whether the department information matches your expectations.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetAllDepartmentRequest
         /// </param>
@@ -8363,7 +10378,135 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询对话内容</para>
+        /// <para>Retrieves the upload address for a voice memo recording.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAudioNoteUploadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAudioNoteUploadUrlResponse
+        /// </returns>
+        public GetAudioNoteUploadUrlResponse GetAudioNoteUploadUrlWithOptions(GetAudioNoteUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAudioNoteUploadUrl",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAudioNoteUploadUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload address for a voice memo recording.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAudioNoteUploadUrlRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAudioNoteUploadUrlResponse
+        /// </returns>
+        public async Task<GetAudioNoteUploadUrlResponse> GetAudioNoteUploadUrlWithOptionsAsync(GetAudioNoteUploadUrlRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileName))
+            {
+                query["FileName"] = request.FileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileType))
+            {
+                query["FileType"] = request.FileType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAudioNoteUploadUrl",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAudioNoteUploadUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload address for a voice memo recording.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAudioNoteUploadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAudioNoteUploadUrlResponse
+        /// </returns>
+        public GetAudioNoteUploadUrlResponse GetAudioNoteUploadUrl(GetAudioNoteUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAudioNoteUploadUrlWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the upload address for a voice memo recording.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAudioNoteUploadUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAudioNoteUploadUrlResponse
+        /// </returns>
+        public async Task<GetAudioNoteUploadUrlResponse> GetAudioNoteUploadUrlAsync(GetAudioNoteUploadUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAudioNoteUploadUrlWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the dialog content for a call by using its call ID. You can retrieve content for calls completed within the last 30 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8421,7 +10564,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询对话内容</para>
+        /// <para>Retrieves the dialog content for a call by using its call ID. You can retrieve content for calls completed within the last 30 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8479,7 +10622,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询对话内容</para>
+        /// <para>Retrieves the dialog content for a call by using its call ID. You can retrieve content for calls completed within the last 30 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8497,7 +10640,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询对话内容</para>
+        /// <para>Retrieves the dialog content for a call by using its call ID. You can retrieve content for calls completed within the last 30 days.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8515,8 +10658,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话录音文件</para>
+        /// <para>Obtain the URL of a call recording file based on the call creation time and the unique call ID, and then retrieve the call recording file using the URL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>Before invoking this API, ensure that call recording was enabled during the invocation of the <a href="https://help.aliyun.com/document_detail/223270.html">RobotCall</a> API and that you successfully received the recording receipt, indicating that the recording file has been generated. Otherwise, an invalid URL will be returned.</para>
+        /// <h3>How-To</h3>
+        /// <para>This API serves as a supplementary method to the recording receipt. If the URL in the recording receipt message expires, you can use this API to obtain a new recording URL. By default, the validity period of the recording receipt URL is three days.</para>
+        /// <remarks>
+        /// <para>We recommend that you directly download the recording content using the recording receipt URL and save it locally, rather than relying on the receipt URL, to avoid issues caused by expiration.</para>
+        /// </remarks>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>Throttling will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCallSoundRecordRequest
@@ -8573,8 +10735,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话录音文件</para>
+        /// <para>Obtain the URL of a call recording file based on the call creation time and the unique call ID, and then retrieve the call recording file using the URL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>Before invoking this API, ensure that call recording was enabled during the invocation of the <a href="https://help.aliyun.com/document_detail/223270.html">RobotCall</a> API and that you successfully received the recording receipt, indicating that the recording file has been generated. Otherwise, an invalid URL will be returned.</para>
+        /// <h3>How-To</h3>
+        /// <para>This API serves as a supplementary method to the recording receipt. If the URL in the recording receipt message expires, you can use this API to obtain a new recording URL. By default, the validity period of the recording receipt URL is three days.</para>
+        /// <remarks>
+        /// <para>We recommend that you directly download the recording content using the recording receipt URL and save it locally, rather than relying on the receipt URL, to avoid issues caused by expiration.</para>
+        /// </remarks>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>Throttling will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCallSoundRecordRequest
@@ -8631,8 +10812,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话录音文件</para>
+        /// <para>Obtain the URL of a call recording file based on the call creation time and the unique call ID, and then retrieve the call recording file using the URL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>Before invoking this API, ensure that call recording was enabled during the invocation of the <a href="https://help.aliyun.com/document_detail/223270.html">RobotCall</a> API and that you successfully received the recording receipt, indicating that the recording file has been generated. Otherwise, an invalid URL will be returned.</para>
+        /// <h3>How-To</h3>
+        /// <para>This API serves as a supplementary method to the recording receipt. If the URL in the recording receipt message expires, you can use this API to obtain a new recording URL. By default, the validity period of the recording receipt URL is three days.</para>
+        /// <remarks>
+        /// <para>We recommend that you directly download the recording content using the recording receipt URL and save it locally, rather than relying on the receipt URL, to avoid issues caused by expiration.</para>
+        /// </remarks>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>Throttling will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCallSoundRecordRequest
@@ -8649,8 +10849,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取通话录音文件</para>
+        /// <para>Obtain the URL of a call recording file based on the call creation time and the unique call ID, and then retrieve the call recording file using the URL.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Prerequisites</h3>
+        /// <para>Before invoking this API, ensure that call recording was enabled during the invocation of the <a href="https://help.aliyun.com/document_detail/223270.html">RobotCall</a> API and that you successfully received the recording receipt, indicating that the recording file has been generated. Otherwise, an invalid URL will be returned.</para>
+        /// <h3>How-To</h3>
+        /// <para>This API serves as a supplementary method to the recording receipt. If the URL in the recording receipt message expires, you can use this API to obtain a new recording URL. By default, the validity period of the recording receipt URL is three days.</para>
+        /// <remarks>
+        /// <para>We recommend that you directly download the recording content using the recording receipt URL and save it locally, rather than relying on the receipt URL, to avoid issues caused by expiration.</para>
+        /// </remarks>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>Throttling will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCallSoundRecordRequest
@@ -8667,7 +10886,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线配置号码列表</para>
+        /// <para>Invoke the GetConfigNumList API to obtain the hotline settings number list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8705,7 +10924,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线配置号码列表</para>
+        /// <para>Invoke the GetConfigNumList API to obtain the hotline settings number list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8743,7 +10962,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线配置号码列表</para>
+        /// <para>Invoke the GetConfigNumList API to obtain the hotline settings number list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8761,7 +10980,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线配置号码列表</para>
+        /// <para>Invoke the GetConfigNumList API to obtain the hotline settings number list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8779,7 +10998,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会员信息</para>
+        /// <para>You can invoke the GetCustomerInfo API to obtain membership details by Workbench membership ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8817,7 +11036,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会员信息</para>
+        /// <para>You can invoke the GetCustomerInfo API to obtain membership details by Workbench membership ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8855,7 +11074,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会员信息</para>
+        /// <para>You can invoke the GetCustomerInfo API to obtain membership details by Workbench membership ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8873,7 +11092,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会员信息</para>
+        /// <para>You can invoke the GetCustomerInfo API to obtain membership details by Workbench membership ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8891,8 +11110,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能组分组</para>
+        /// <para>Queries skill group categories and the skill group list by AICCS instance ID and agent ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The skill groups returned by this API are grouped by department ID, which can be specified when you <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">create a skill group</a>.</description></item>
+        /// <item><description>To query detailed skill group information, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API.</description></item>
+        /// <item><description>Before invoking this API, you should confirm the AICCS instance ID and agent ID. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 1000 queries per second.</description></item>
+        /// <item><description>API-wide invocation frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDepGroupTreeDataRequest
@@ -8929,8 +11165,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能组分组</para>
+        /// <para>Queries skill group categories and the skill group list by AICCS instance ID and agent ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The skill groups returned by this API are grouped by department ID, which can be specified when you <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">create a skill group</a>.</description></item>
+        /// <item><description>To query detailed skill group information, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API.</description></item>
+        /// <item><description>Before invoking this API, you should confirm the AICCS instance ID and agent ID. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 1000 queries per second.</description></item>
+        /// <item><description>API-wide invocation frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDepGroupTreeDataRequest
@@ -8967,8 +11220,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能组分组</para>
+        /// <para>Queries skill group categories and the skill group list by AICCS instance ID and agent ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The skill groups returned by this API are grouped by department ID, which can be specified when you <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">create a skill group</a>.</description></item>
+        /// <item><description>To query detailed skill group information, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API.</description></item>
+        /// <item><description>Before invoking this API, you should confirm the AICCS instance ID and agent ID. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 1000 queries per second.</description></item>
+        /// <item><description>API-wide invocation frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDepGroupTreeDataRequest
@@ -8985,8 +11255,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能组分组</para>
+        /// <para>Queries skill group categories and the skill group list by AICCS instance ID and agent ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The skill groups returned by this API are grouped by department ID, which can be specified when you <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">create a skill group</a>.</description></item>
+        /// <item><description>To query detailed skill group information, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API.</description></item>
+        /// <item><description>Before invoking this API, you should confirm the AICCS instance ID and agent ID. For guidance on how to obtain them, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 1000 queries per second.</description></item>
+        /// <item><description>API-wide invocation frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDepGroupTreeDataRequest
@@ -9003,8 +11290,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部门纬度坐席状态量</para>
+        /// <para>Obtain department-level status metrics under hotline monitoring. Supports queries by instance, time range, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetDepartmentalLatitudeAgentStatusRequest
@@ -9047,8 +11350,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部门纬度坐席状态量</para>
+        /// <para>Obtain department-level status metrics under hotline monitoring. Supports queries by instance, time range, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetDepartmentalLatitudeAgentStatusRequest
@@ -9091,8 +11410,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部门纬度坐席状态量</para>
+        /// <para>Obtain department-level status metrics under hotline monitoring. Supports queries by instance, time range, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDepartmentalLatitudeAgentStatusRequest
@@ -9109,8 +11444,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部门纬度坐席状态量</para>
+        /// <para>Obtain department-level status metrics under hotline monitoring. Supports queries by instance, time range, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetDepartmentalLatitudeAgentStatusRequest
@@ -9125,6 +11476,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetDepartmentalLatitudeAgentStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the current service details of a hotline agent based on the instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The hotline agent details include information such as agent posture status, agent ID, and heartbeat signature. For more information, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: Rate Limiting is not applied.  </description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentDetailRequest
         /// </param>
@@ -9158,6 +11527,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineAgentDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the current service details of a hotline agent based on the instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The hotline agent details include information such as agent posture status, agent ID, and heartbeat signature. For more information, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: Rate Limiting is not applied.  </description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentDetailRequest
         /// </param>
@@ -9191,6 +11578,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineAgentDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the current service details of a hotline agent based on the instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The hotline agent details include information such as agent posture status, agent ID, and heartbeat signature. For more information, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: Rate Limiting is not applied.  </description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentDetailRequest
         /// </param>
@@ -9204,6 +11609,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetHotlineAgentDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the current service details of a hotline agent based on the instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The hotline agent details include information such as agent posture status, agent ID, and heartbeat signature. For more information, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: Rate Limiting is not applied.  </description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentDetailRequest
         /// </param>
@@ -9217,6 +11640,35 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetHotlineAgentDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain detailed data metrics by hotline agent dimension (T+1). Supports grouping queries by instance, time range, department, and skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.</description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
+        /// <para>Query logic priority:</para>
+        /// <list type="bullet">
+        /// <item><description>If GroupIds is not empty, query data metrics under the specified skill groups.</description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, query data metrics under the corresponding department groups.</description></item>
+        /// <item><description>Otherwise, query data metrics under the AICCS instance.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 10 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentDetailReportRequest
         /// </param>
@@ -9278,6 +11730,35 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineAgentDetailReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain detailed data metrics by hotline agent dimension (T+1). Supports grouping queries by instance, time range, department, and skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.</description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
+        /// <para>Query logic priority:</para>
+        /// <list type="bullet">
+        /// <item><description>If GroupIds is not empty, query data metrics under the specified skill groups.</description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, query data metrics under the corresponding department groups.</description></item>
+        /// <item><description>Otherwise, query data metrics under the AICCS instance.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 10 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentDetailReportRequest
         /// </param>
@@ -9339,6 +11820,35 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineAgentDetailReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain detailed data metrics by hotline agent dimension (T+1). Supports grouping queries by instance, time range, department, and skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.</description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
+        /// <para>Query logic priority:</para>
+        /// <list type="bullet">
+        /// <item><description>If GroupIds is not empty, query data metrics under the specified skill groups.</description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, query data metrics under the corresponding department groups.</description></item>
+        /// <item><description>Otherwise, query data metrics under the AICCS instance.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 10 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentDetailReportRequest
         /// </param>
@@ -9352,6 +11862,35 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetHotlineAgentDetailReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain detailed data metrics by hotline agent dimension (T+1). Supports grouping queries by instance, time range, department, and skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.</description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
+        /// <para>Query logic priority:</para>
+        /// <list type="bullet">
+        /// <item><description>If GroupIds is not empty, query data metrics under the specified skill groups.</description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, query data metrics under the corresponding department groups.</description></item>
+        /// <item><description>Otherwise, query data metrics under the AICCS instance.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>QPS Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 10 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentDetailReportRequest
         /// </param>
@@ -9365,6 +11904,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetHotlineAgentDetailReportWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hotline agent status in the Cloud Customer Service System by AICCS instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and the agent account name. For guidance on how to obtain these details, see the description in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>To retrieve detailed information about a hotline agent, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-gethotlineagentdetail">GetHotlineAgentDetail</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API-wide frequency: 200 queries per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentStatusRequest
         /// </param>
@@ -9406,6 +11966,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineAgentStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hotline agent status in the Cloud Customer Service System by AICCS instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and the agent account name. For guidance on how to obtain these details, see the description in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>To retrieve detailed information about a hotline agent, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-gethotlineagentdetail">GetHotlineAgentDetail</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API-wide frequency: 200 queries per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentStatusRequest
         /// </param>
@@ -9447,6 +12028,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineAgentStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hotline agent status in the Cloud Customer Service System by AICCS instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and the agent account name. For guidance on how to obtain these details, see the description in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>To retrieve detailed information about a hotline agent, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-gethotlineagentdetail">GetHotlineAgentDetail</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API-wide frequency: 200 queries per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentStatusRequest
         /// </param>
@@ -9460,6 +12062,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetHotlineAgentStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the hotline agent status in the Cloud Customer Service System by AICCS instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and the agent account name. For guidance on how to obtain these details, see the description in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>To retrieve detailed information about a hotline agent, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-gethotlineagentdetail">GetHotlineAgentDetail</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API-wide frequency: 200 queries per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineAgentStatusRequest
         /// </param>
@@ -9475,8 +12098,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询话务动作结果数据</para>
+        /// <para>Invoke the GetHotlineCallAction API to query the result data of call actions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 50 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotlineCallActionRequest
@@ -9541,8 +12176,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询话务动作结果数据</para>
+        /// <para>Invoke the GetHotlineCallAction API to query the result data of call actions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 50 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotlineCallActionRequest
@@ -9607,8 +12254,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询话务动作结果数据</para>
+        /// <para>Invoke the GetHotlineCallAction API to query the result data of call actions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 50 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotlineCallActionRequest
@@ -9625,8 +12284,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询话务动作结果数据</para>
+        /// <para>Invoke the GetHotlineCallAction API to query the result data of call actions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 50 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotlineCallActionRequest
@@ -9641,6 +12312,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetHotlineCallActionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve detailed (T+1) data by hotline skill group dimension. Supports grouping by instance, time range, department, and skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.  </description></item>
+        /// <item><description>API frequency: 10 queries per second.<remarks>
+        /// <para>Throttle will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineGroupDetailReportRequest
         /// </param>
@@ -9702,6 +12394,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineGroupDetailReportResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve detailed (T+1) data by hotline skill group dimension. Supports grouping by instance, time range, department, and skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.  </description></item>
+        /// <item><description>API frequency: 10 queries per second.<remarks>
+        /// <para>Throttle will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineGroupDetailReportRequest
         /// </param>
@@ -9763,6 +12476,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineGroupDetailReportResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve detailed (T+1) data by hotline skill group dimension. Supports grouping by instance, time range, department, and skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.  </description></item>
+        /// <item><description>API frequency: 10 queries per second.<remarks>
+        /// <para>Throttle will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineGroupDetailReportRequest
         /// </param>
@@ -9776,6 +12510,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetHotlineGroupDetailReportWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve detailed (T+1) data by hotline skill group dimension. Supports grouping by instance, time range, department, and skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/document_detail/276009.html">activated the service</a> and <a href="https://help.aliyun.com/document_detail/276011.html">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.  </description></item>
+        /// <item><description>API frequency: 10 queries per second.<remarks>
+        /// <para>Throttle will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetHotlineGroupDetailReportRequest
         /// </param>
@@ -9791,7 +12546,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线聊天记录</para>
+        /// <para>Invoke the GetHotlineMessageLog API to retrieve hotline message records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9829,7 +12584,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线聊天记录</para>
+        /// <para>Invoke the GetHotlineMessageLog API to retrieve hotline message records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9867,7 +12622,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线聊天记录</para>
+        /// <para>Invoke the GetHotlineMessageLog API to retrieve hotline message records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9885,7 +12640,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线聊天记录</para>
+        /// <para>Invoke the GetHotlineMessageLog API to retrieve hotline message records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9903,7 +12658,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线当前信息</para>
+        /// <para>Invoke the GetHotlineRuntimeInfo API to query hotline runtime information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9941,7 +12696,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线当前信息</para>
+        /// <para>Invoke the GetHotlineRuntimeInfo API to query hotline runtime information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9979,7 +12734,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线当前信息</para>
+        /// <para>Invoke the GetHotlineRuntimeInfo API to query hotline runtime information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9997,7 +12752,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取热线当前信息</para>
+        /// <para>Invoke the GetHotlineRuntimeInfo API to query hotline runtime information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10015,8 +12770,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务统计量数据</para>
+        /// <para>Obtain service statistics under hotline monitoring. Supports grouped queries by instance, time dimension, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetHotlineServiceStatisticsRequest
@@ -10067,8 +12838,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务统计量数据</para>
+        /// <para>Obtain service statistics under hotline monitoring. Supports grouped queries by instance, time dimension, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetHotlineServiceStatisticsRequest
@@ -10119,8 +12906,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务统计量数据</para>
+        /// <para>Obtain service statistics under hotline monitoring. Supports grouped queries by instance, time dimension, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotlineServiceStatisticsRequest
@@ -10137,8 +12940,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务统计量数据</para>
+        /// <para>Obtain service statistics under hotline monitoring. Supports grouped queries by instance, time dimension, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to provide agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetHotlineServiceStatisticsRequest
@@ -10153,6 +12972,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetHotlineServiceStatisticsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the queue length of hotline members.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHotlineWaitingNumberRequest
         /// </param>
@@ -10186,6 +13010,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineWaitingNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the queue length of hotline members.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHotlineWaitingNumberRequest
         /// </param>
@@ -10219,6 +13048,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetHotlineWaitingNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the queue length of hotline members.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHotlineWaitingNumberRequest
         /// </param>
@@ -10232,6 +13066,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetHotlineWaitingNumberWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the queue length of hotline members.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetHotlineWaitingNumberRequest
         /// </param>
@@ -10245,6 +13084,35 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetHotlineWaitingNumberWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can obtain the current statistical metrics (real-time data) and query them by instance ID, department, or skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The current data statistics metrics include cumulative metrics for the day and real-time metrics.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
+        /// <para>Query logic priority:  </para>
+        /// <list type="bullet">
+        /// <item><description>If GroupIds is not empty, query the data metrics for the specified skill groups.  </description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, query the data metrics for the specified departments.  </description></item>
+        /// <item><description>Otherwise, query the data metrics for the Artificial Intelligence Cloud Call Service (AICCS) instance.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetIndexCurrentValueRequest
         /// </param>
@@ -10290,6 +13158,35 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetIndexCurrentValueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can obtain the current statistical metrics (real-time data) and query them by instance ID, department, or skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The current data statistics metrics include cumulative metrics for the day and real-time metrics.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
+        /// <para>Query logic priority:  </para>
+        /// <list type="bullet">
+        /// <item><description>If GroupIds is not empty, query the data metrics for the specified skill groups.  </description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, query the data metrics for the specified departments.  </description></item>
+        /// <item><description>Otherwise, query the data metrics for the Artificial Intelligence Cloud Call Service (AICCS) instance.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetIndexCurrentValueRequest
         /// </param>
@@ -10335,6 +13232,35 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetIndexCurrentValueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can obtain the current statistical metrics (real-time data) and query them by instance ID, department, or skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The current data statistics metrics include cumulative metrics for the day and real-time metrics.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
+        /// <para>Query logic priority:  </para>
+        /// <list type="bullet">
+        /// <item><description>If GroupIds is not empty, query the data metrics for the specified skill groups.  </description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, query the data metrics for the specified departments.  </description></item>
+        /// <item><description>Otherwise, query the data metrics for the Artificial Intelligence Cloud Call Service (AICCS) instance.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetIndexCurrentValueRequest
         /// </param>
@@ -10348,6 +13274,35 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetIndexCurrentValueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can obtain the current statistical metrics (real-time data) and query them by instance ID, department, or skill group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The current data statistics metrics include cumulative metrics for the day and real-time metrics.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.<remarks>
+        /// <para>Query logic priority:  </para>
+        /// <list type="bullet">
+        /// <item><description>If GroupIds is not empty, query the data metrics for the specified skill groups.  </description></item>
+        /// <item><description>Otherwise, if DepIds is not empty, query the data metrics for the specified departments.  </description></item>
+        /// <item><description>Otherwise, query the data metrics for the Artificial Intelligence Cloud Call Service (AICCS) instance.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetIndexCurrentValueRequest
         /// </param>
@@ -10479,7 +13434,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线检测获取mcu ip地址</para>
+        /// <para>Invoke the GetMcuLvsIp API to query the hotline server IP address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10517,7 +13472,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线检测获取mcu ip地址</para>
+        /// <para>Invoke the GetMcuLvsIp API to query the hotline server IP address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10555,7 +13510,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线检测获取mcu ip地址</para>
+        /// <para>Invoke the GetMcuLvsIp API to query the hotline server IP address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10573,7 +13528,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>热线检测获取mcu ip地址</para>
+        /// <para>Invoke the GetMcuLvsIp API to query the hotline server IP address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10589,6 +13544,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetMcuLvsIpWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the number\&quot;s归属地 information based on the instance ID and phone number.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetNumLocationRequest
         /// </param>
@@ -10622,6 +13594,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetNumLocationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the number\&quot;s归属地 information based on the instance ID and phone number.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetNumLocationRequest
         /// </param>
@@ -10655,6 +13644,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetNumLocationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the number\&quot;s归属地 information based on the instance ID and phone number.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetNumLocationRequest
         /// </param>
@@ -10668,6 +13674,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetNumLocationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the number\&quot;s归属地 information based on the instance ID and phone number.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// GetNumLocationRequest
         /// </param>
@@ -10683,8 +13706,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线坐席信息</para>
+        /// <para>Obtain online agent information data under real-time monitoring. Support queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetOnlineSeatInformationRequest
@@ -10731,8 +13770,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线坐席信息</para>
+        /// <para>Obtain online agent information data under real-time monitoring. Support queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetOnlineSeatInformationRequest
@@ -10779,8 +13834,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线坐席信息</para>
+        /// <para>Obtain online agent information data under real-time monitoring. Support queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOnlineSeatInformationRequest
@@ -10797,8 +13868,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线坐席信息</para>
+        /// <para>Obtain online agent information data under real-time monitoring. Support queries by instance, time range, agent, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent or department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOnlineSeatInformationRequest
@@ -10815,8 +13902,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线服务总量</para>
+        /// <para>Obtain the volume of Online Services under online monitoring. Support grouped queries by instance, time range, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetOnlineServiceVolumeRequest
@@ -10867,8 +13970,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线服务总量</para>
+        /// <para>Obtain the volume of Online Services under online monitoring. Support grouped queries by instance, time range, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetOnlineServiceVolumeRequest
@@ -10919,8 +14038,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线服务总量</para>
+        /// <para>Obtain the volume of Online Services under online monitoring. Support grouped queries by instance, time range, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOnlineServiceVolumeRequest
@@ -10937,8 +14072,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在线服务总量</para>
+        /// <para>Obtain the volume of Online Services under online monitoring. Support grouped queries by instance, time range, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetOnlineServiceVolumeRequest
@@ -10953,6 +14104,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetOnlineServiceVolumeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of external hotline numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetOutbounNumListRequest
         /// </param>
@@ -10998,6 +14154,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetOutbounNumListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of external hotline numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetOutbounNumListRequest
         /// </param>
@@ -11043,6 +14204,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetOutbounNumListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of external hotline numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetOutbounNumListRequest
         /// </param>
@@ -11056,6 +14222,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetOutbounNumListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieve the list of external hotline numbers.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetOutbounNumListRequest
         /// </param>
@@ -11069,6 +14240,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetOutbounNumListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetQualityProjectDetail to obtain the quality inspection job details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityProjectDetailRequest
         /// </param>
@@ -11110,6 +14286,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetQualityProjectDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetQualityProjectDetail to obtain the quality inspection job details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityProjectDetailRequest
         /// </param>
@@ -11151,6 +14332,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetQualityProjectDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetQualityProjectDetail to obtain the quality inspection job details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityProjectDetailRequest
         /// </param>
@@ -11164,6 +14350,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetQualityProjectDetailWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetQualityProjectDetail to obtain the quality inspection job details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityProjectDetailRequest
         /// </param>
@@ -11177,6 +14368,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetQualityProjectDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetQualityProjectList to obtain the quality inspection job list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityProjectListRequest
         /// </param>
@@ -11238,6 +14434,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetQualityProjectListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetQualityProjectList to obtain the quality inspection job list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityProjectListRequest
         /// </param>
@@ -11299,6 +14500,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetQualityProjectListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetQualityProjectList to obtain the quality inspection job list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityProjectListRequest
         /// </param>
@@ -11312,6 +14518,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetQualityProjectListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke GetQualityProjectList to obtain the quality inspection job list.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetQualityProjectListRequest
         /// </param>
@@ -11931,8 +15142,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度队列信息</para>
+        /// <para>Obtain queue information under the skill group dimension in online monitoring. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetQueueInformationRequest
@@ -11979,8 +15206,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度队列信息</para>
+        /// <para>Obtain queue information under the skill group dimension in online monitoring. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetQueueInformationRequest
@@ -12027,8 +15270,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度队列信息</para>
+        /// <para>Obtain queue information under the skill group dimension in online monitoring. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQueueInformationRequest
@@ -12045,8 +15304,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度队列信息</para>
+        /// <para>Obtain queue information under the skill group dimension in online monitoring. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetQueueInformationRequest
@@ -12061,6 +15336,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await GetQueueInformationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the GetRecordData API to obtain a recording file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRecordDataRequest
         /// </param>
@@ -12102,6 +15382,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetRecordDataResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the GetRecordData API to obtain a recording file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRecordDataRequest
         /// </param>
@@ -12143,6 +15428,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<GetRecordDataResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the GetRecordData API to obtain a recording file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRecordDataRequest
         /// </param>
@@ -12156,6 +15446,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return GetRecordDataWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the GetRecordData API to obtain a recording file.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// GetRecordDataRequest
         /// </param>
@@ -12171,7 +15466,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音链接</para>
+        /// <para>Invoke the GetRecordUrl API to obtain the incoming and outgoing calls recording link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12209,7 +15504,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音链接</para>
+        /// <para>Invoke the GetRecordUrl API to obtain the incoming and outgoing calls recording link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12247,7 +15542,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音链接</para>
+        /// <para>Invoke the GetRecordUrl API to obtain the incoming and outgoing calls recording link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12265,7 +15560,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取录音链接</para>
+        /// <para>Invoke the GetRecordUrl API to obtain the incoming and outgoing calls recording link.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12283,7 +15578,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取RtcToken</para>
+        /// <para>Invoke GetRtcToken to obtain the token for a shift agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12321,7 +15616,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取RtcToken</para>
+        /// <para>Invoke GetRtcToken to obtain the token for a shift agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12359,7 +15654,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取RtcToken</para>
+        /// <para>Invoke GetRtcToken to obtain the token for a shift agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12377,7 +15672,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取RtcToken</para>
+        /// <para>Invoke GetRtcToken to obtain the token for a shift agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12395,8 +15690,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部门纬度坐席信息数据</para>
+        /// <para>Obtain agent service capacity data under online monitoring. Supports queries by instance, time range, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSeatInformationRequest
@@ -12439,8 +15750,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部门纬度坐席信息数据</para>
+        /// <para>Obtain agent service capacity data under online monitoring. Supports queries by instance, time range, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSeatInformationRequest
@@ -12483,8 +15810,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部门纬度坐席信息数据</para>
+        /// <para>Obtain agent service capacity data under online monitoring. Supports queries by instance, time range, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSeatInformationRequest
@@ -12501,8 +15844,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>部门纬度坐席信息数据</para>
+        /// <para>Obtain agent service capacity data under online monitoring. Supports queries by instance, time range, and department group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSeatInformationRequest
@@ -12519,8 +15878,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组坐席状态详情</para>
+        /// <para>Obtain the service status metrics of skill groups. Support grouped queries by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupAgentStatusDetailsRequest
@@ -12567,8 +15942,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组坐席状态详情</para>
+        /// <para>Obtain the service status metrics of skill groups. Support grouped queries by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupAgentStatusDetailsRequest
@@ -12615,8 +16006,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组坐席状态详情</para>
+        /// <para>Obtain the service status metrics of skill groups. Support grouped queries by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupAgentStatusDetailsRequest
@@ -12633,8 +16040,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组坐席状态详情</para>
+        /// <para>Obtain the service status metrics of skill groups. Support grouped queries by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupAgentStatusDetailsRequest
@@ -12651,8 +16074,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组坐席汇总状态量</para>
+        /// <para>Obtain the aggregated agent status metrics for skill groups under hotline monitoring. Supports grouped queries by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupAndAgentStatusSummaryRequest
@@ -12699,8 +16138,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组坐席汇总状态量</para>
+        /// <para>Obtain the aggregated agent status metrics for skill groups under hotline monitoring. Supports grouped queries by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupAndAgentStatusSummaryRequest
@@ -12747,8 +16202,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组坐席汇总状态量</para>
+        /// <para>Obtain the aggregated agent status metrics for skill groups under hotline monitoring. Supports grouped queries by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupAndAgentStatusSummaryRequest
@@ -12765,8 +16236,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组坐席汇总状态量</para>
+        /// <para>Obtain the aggregated agent status metrics for skill groups under hotline monitoring. Supports grouped queries by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupAndAgentStatusSummaryRequest
@@ -12783,8 +16270,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度状态量</para>
+        /// <para>Obtain the hotline monitoring status metrics by skill group dimension. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupLatitudeStateRequest
@@ -12831,8 +16334,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度状态量</para>
+        /// <para>Obtain the hotline monitoring status metrics by skill group dimension. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupLatitudeStateRequest
@@ -12879,8 +16398,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度状态量</para>
+        /// <para>Obtain the hotline monitoring status metrics by skill group dimension. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupLatitudeStateRequest
@@ -12897,8 +16432,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度状态量</para>
+        /// <para>Obtain the hotline monitoring status metrics by skill group dimension. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupLatitudeStateRequest
@@ -12915,8 +16466,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度服务能力</para>
+        /// <para>Retrieve skill group–level service capacity data under online monitoring. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupServiceCapabilityRequest
@@ -12963,8 +16530,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度服务能力</para>
+        /// <para>Retrieve skill group–level service capacity data under online monitoring. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupServiceCapabilityRequest
@@ -13011,8 +16594,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度服务能力</para>
+        /// <para>Retrieve skill group–level service capacity data under online monitoring. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupServiceCapabilityRequest
@@ -13029,8 +16628,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组纬度服务能力</para>
+        /// <para>Retrieve skill group–level service capacity data under online monitoring. Supports queries grouped by instance, time range, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify department or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupServiceCapabilityRequest
@@ -13047,8 +16662,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组服务状态量</para>
+        /// <para>Obtain the service status metrics of skill groups in online reports.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupServiceStatusRequest
@@ -13099,8 +16726,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组服务状态量</para>
+        /// <para>Obtain the service status metrics of skill groups in online reports.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupServiceStatusRequest
@@ -13151,8 +16790,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组服务状态量</para>
+        /// <para>Obtain the service status metrics of skill groups in online reports.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupServiceStatusRequest
@@ -13169,8 +16820,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组服务状态量</para>
+        /// <para>Obtain the service status metrics of skill groups in online reports.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 100 times per second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupServiceStatusRequest
@@ -13187,8 +16850,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组状态总量</para>
+        /// <para>Obtain the total status count of skill groups under hotline reports. Supports grouped queries by instance, time range, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupStatusTotalRequest
@@ -13239,8 +16918,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组状态总量</para>
+        /// <para>Obtain the total status count of skill groups under hotline reports. Supports grouped queries by instance, time range, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetSkillGroupStatusTotalRequest
@@ -13291,8 +16986,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组状态总量</para>
+        /// <para>Obtain the total status count of skill groups under hotline reports. Supports grouped queries by instance, time range, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupStatusTotalRequest
@@ -13309,8 +17020,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>技能组状态总量</para>
+        /// <para>Obtain the total status count of skill groups under hotline reports. Supports grouped queries by instance, time range, agent, department, and skill group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have <a href="https://help.aliyun.com/zh/aiccs/user-guide/activate-aiccs?spm=a2c4g.11186623.0.0.38365923RQDwdH">activated the service</a> and <a href="https://help.aliyun.com/zh/aiccs/user-guide/create-an-instance?spm=a2c4g.11186623.0.0.8e0b5a2fWNeRUn">created an instance</a>.  </description></item>
+        /// <item><description>If you need to specify agent, department, or skill group information, refer to the guidance in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times per second.  <remarks>
+        /// <para>Throttling will be triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetSkillGroupStatusTotalRequest
@@ -13327,7 +17054,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动端呼叫挂断</para>
+        /// <para>Cancel dual-call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13373,7 +17100,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动端呼叫挂断</para>
+        /// <para>Cancel dual-call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13419,7 +17146,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动端呼叫挂断</para>
+        /// <para>Cancel dual-call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13437,7 +17164,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动端呼叫挂断</para>
+        /// <para>Cancel dual-call.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13453,6 +17180,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await HangUpDoubleCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke HangupCall to execute the agent hang-up operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HangupCallRequest
         /// </param>
@@ -13510,6 +17242,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<HangupCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke HangupCall to execute the agent hang-up operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HangupCallRequest
         /// </param>
@@ -13567,6 +17304,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<HangupCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke HangupCall to execute the agent hang-up operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HangupCallRequest
         /// </param>
@@ -13580,6 +17322,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return HangupCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke HangupCall to execute the agent hang-up operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HangupCallRequest
         /// </param>
@@ -13595,8 +17342,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通信智能引擎中主动挂断通话</para>
+        /// <para>Hangs up a call in Communication Intelligence Engine.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you hang up a call in Communication Intelligence Engine, ensure that a call has been initiated by a large model.</description></item>
+        /// <item><description>If a call has not been initiated, use the <a href="https://help.aliyun.com/document_detail/2862828.html">LlmSmartCall</a> or <a href="https://help.aliyun.com/document_detail/2881065.html">LlmSmartCallEncrypt</a> operation to do so.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HangupOperateRequest
@@ -13641,8 +17396,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通信智能引擎中主动挂断通话</para>
+        /// <para>Hangs up a call in Communication Intelligence Engine.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you hang up a call in Communication Intelligence Engine, ensure that a call has been initiated by a large model.</description></item>
+        /// <item><description>If a call has not been initiated, use the <a href="https://help.aliyun.com/document_detail/2862828.html">LlmSmartCall</a> or <a href="https://help.aliyun.com/document_detail/2881065.html">LlmSmartCallEncrypt</a> operation to do so.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HangupOperateRequest
@@ -13687,8 +17450,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通信智能引擎中主动挂断通话</para>
+        /// <para>Hangs up a call in Communication Intelligence Engine.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you hang up a call in Communication Intelligence Engine, ensure that a call has been initiated by a large model.</description></item>
+        /// <item><description>If a call has not been initiated, use the <a href="https://help.aliyun.com/document_detail/2862828.html">LlmSmartCall</a> or <a href="https://help.aliyun.com/document_detail/2881065.html">LlmSmartCallEncrypt</a> operation to do so.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HangupOperateRequest
@@ -13705,8 +17476,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通信智能引擎中主动挂断通话</para>
+        /// <para>Hangs up a call in Communication Intelligence Engine.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you hang up a call in Communication Intelligence Engine, ensure that a call has been initiated by a large model.</description></item>
+        /// <item><description>If a call has not been initiated, use the <a href="https://help.aliyun.com/document_detail/2862828.html">LlmSmartCall</a> or <a href="https://help.aliyun.com/document_detail/2881065.html">LlmSmartCallEncrypt</a> operation to do so.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// HangupOperateRequest
@@ -13721,6 +17500,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await HangupOperateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hang up a third-party call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HangupThirdCallRequest
         /// </param>
@@ -13778,6 +17562,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<HangupThirdCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hang up a third-party call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HangupThirdCallRequest
         /// </param>
@@ -13835,6 +17624,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<HangupThirdCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hang up a third-party call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HangupThirdCallRequest
         /// </param>
@@ -13848,6 +17642,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return HangupThirdCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hang up a third-party call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HangupThirdCallRequest
         /// </param>
@@ -13861,6 +17660,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await HangupThirdCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hold the call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HoldCallRequest
         /// </param>
@@ -13918,6 +17722,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<HoldCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hold the call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HoldCallRequest
         /// </param>
@@ -13975,6 +17784,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<HoldCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hold the call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HoldCallRequest
         /// </param>
@@ -13988,6 +17802,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return HoldCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Hold the call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// HoldCallRequest
         /// </param>
@@ -14001,6 +17820,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await HoldCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query call details by instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call details include the total number of records, call result, agent name, call time, and other information.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 80 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotlineSessionQueryRequest
         /// </param>
@@ -14142,6 +17979,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<HotlineSessionQueryResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query call details by instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call details include the total number of records, call result, agent name, call time, and other information.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 80 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotlineSessionQueryRequest
         /// </param>
@@ -14283,6 +18138,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<HotlineSessionQueryResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query call details by instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call details include the total number of records, call result, agent name, call time, and other information.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 80 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotlineSessionQueryRequest
         /// </param>
@@ -14296,6 +18169,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return HotlineSessionQueryWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query call details by instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call details include the total number of records, call result, agent name, call time, and other information.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 80 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// HotlineSessionQueryRequest
         /// </param>
@@ -14311,7 +18202,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音智能体外呼任务导入单条数据</para>
+        /// <para>Imports a single phone number to a task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14387,7 +18278,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音智能体外呼任务导入单条数据</para>
+        /// <para>Imports a single phone number to a task.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -14463,7 +18354,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音智能体外呼任务导入单条数据</para>
+        /// <para>Imports a single phone number to a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14481,7 +18372,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>语音智能体外呼任务导入单条数据</para>
+        /// <para>Imports a single phone number to a task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14499,8 +18390,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入任务号码数据</para>
+        /// <para>Imports callee data for a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can import callee data by calling this operation. Alternatively, go to the <b>call task management</b> page, click <b>Import Callee Data</b>, download the template, and then upload your file.</description></item>
+        /// <item><description>This API operation currently supports only the JSON data type for importing callee data.</description></item>
+        /// <item><description>Ensure that you have created a call task before you call this operation.</description></item>
+        /// <item><description>To create a call task, go to the <b>call task management</b> page and click <b>Create Call Task</b>, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ImportTaskNumberDatasRequest
@@ -14577,8 +18478,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入任务号码数据</para>
+        /// <para>Imports callee data for a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can import callee data by calling this operation. Alternatively, go to the <b>call task management</b> page, click <b>Import Callee Data</b>, download the template, and then upload your file.</description></item>
+        /// <item><description>This API operation currently supports only the JSON data type for importing callee data.</description></item>
+        /// <item><description>Ensure that you have created a call task before you call this operation.</description></item>
+        /// <item><description>To create a call task, go to the <b>call task management</b> page and click <b>Create Call Task</b>, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ImportTaskNumberDatasRequest
@@ -14655,8 +18566,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入任务号码数据</para>
+        /// <para>Imports callee data for a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can import callee data by calling this operation. Alternatively, go to the <b>call task management</b> page, click <b>Import Callee Data</b>, download the template, and then upload your file.</description></item>
+        /// <item><description>This API operation currently supports only the JSON data type for importing callee data.</description></item>
+        /// <item><description>Ensure that you have created a call task before you call this operation.</description></item>
+        /// <item><description>To create a call task, go to the <b>call task management</b> page and click <b>Create Call Task</b>, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImportTaskNumberDatasRequest
@@ -14673,8 +18594,18 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入任务号码数据</para>
+        /// <para>Imports callee data for a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can import callee data by calling this operation. Alternatively, go to the <b>call task management</b> page, click <b>Import Callee Data</b>, download the template, and then upload your file.</description></item>
+        /// <item><description>This API operation currently supports only the JSON data type for importing callee data.</description></item>
+        /// <item><description>Ensure that you have created a call task before you call this operation.</description></item>
+        /// <item><description>To create a call task, go to the <b>call task management</b> page and click <b>Create Call Task</b>, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ImportTaskNumberDatasRequest
@@ -14691,8 +18622,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务导入号码</para>
+        /// <para>Import outbound call callee numbers based on the instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After importing outbound call callee numbers, the outbound calling job can operate normally.  </description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 50 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InsertAiOutboundPhoneNumsRequest
@@ -14751,8 +18698,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务导入号码</para>
+        /// <para>Import outbound call callee numbers based on the instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After importing outbound call callee numbers, the outbound calling job can operate normally.  </description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 50 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// InsertAiOutboundPhoneNumsRequest
@@ -14811,8 +18774,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务导入号码</para>
+        /// <para>Import outbound call callee numbers based on the instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After importing outbound call callee numbers, the outbound calling job can operate normally.  </description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 50 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InsertAiOutboundPhoneNumsRequest
@@ -14829,8 +18808,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>智能外呼任务导入号码</para>
+        /// <para>Import outbound call callee numbers based on the instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After importing outbound call callee numbers, the outbound calling job can operate normally.  </description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the instance ID and job ID. For more information, see <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.  </description></item>
+        /// <item><description>API invocation frequency: 50 times/second.  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// InsertAiOutboundPhoneNumsRequest
@@ -14961,6 +18956,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await InsertTaskDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a third party to the call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// JoinThirdCallRequest
         /// </param>
@@ -15022,6 +19022,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<JoinThirdCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a third party to the call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// JoinThirdCallRequest
         /// </param>
@@ -15083,6 +19088,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<JoinThirdCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a third party to the call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// JoinThirdCallRequest
         /// </param>
@@ -15096,6 +19106,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return JoinThirdCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Add a third party to the call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// JoinThirdCallRequest
         /// </param>
@@ -15109,6 +19124,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await JoinThirdCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the agent list in the Cloud Customer Service System by AICCS instance ID and skill group ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and skill group information. For guidance on how to obtain these details, refer to the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If an agent is not assigned to any skill group, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-getagent">GetAgent</a> to query the agent information.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAgentBySkillGroupIdRequest
         /// </param>
@@ -15142,6 +19178,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<ListAgentBySkillGroupIdResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the agent list in the Cloud Customer Service System by AICCS instance ID and skill group ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and skill group information. For guidance on how to obtain these details, refer to the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If an agent is not assigned to any skill group, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-getagent">GetAgent</a> to query the agent information.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAgentBySkillGroupIdRequest
         /// </param>
@@ -15175,6 +19232,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<ListAgentBySkillGroupIdResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the agent list in the Cloud Customer Service System by AICCS instance ID and skill group ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and skill group information. For guidance on how to obtain these details, refer to the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If an agent is not assigned to any skill group, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-getagent">GetAgent</a> to query the agent information.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAgentBySkillGroupIdRequest
         /// </param>
@@ -15188,6 +19266,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return ListAgentBySkillGroupIdWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query the agent list in the Cloud Customer Service System by AICCS instance ID and skill group ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, confirm the AICCS instance information and skill group information. For guidance on how to obtain these details, refer to the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>If an agent is not assigned to any skill group, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-getagent">GetAgent</a> to query the agent information.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAgentBySkillGroupIdRequest
         /// </param>
@@ -15203,8 +19302,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有机器人列表</para>
+        /// <para>Retrieve the list of robot scripts, including robot type, robot name, robot ID, associated business, and industry information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you already have scripts that have passed the Review.</description></item>
+        /// <item><description>If you do not have any scripts that have passed the Review, add a script and submit it for Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface first.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAiccsRobotRequest
@@ -15257,8 +19372,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有机器人列表</para>
+        /// <para>Retrieve the list of robot scripts, including robot type, robot name, robot ID, associated business, and industry information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you already have scripts that have passed the Review.</description></item>
+        /// <item><description>If you do not have any scripts that have passed the Review, add a script and submit it for Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface first.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAiccsRobotRequest
@@ -15311,8 +19442,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有机器人列表</para>
+        /// <para>Retrieve the list of robot scripts, including robot type, robot name, robot ID, associated business, and industry information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you already have scripts that have passed the Review.</description></item>
+        /// <item><description>If you do not have any scripts that have passed the Review, add a script and submit it for Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface first.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAiccsRobotRequest
@@ -15329,8 +19476,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询所有机器人列表</para>
+        /// <para>Retrieve the list of robot scripts, including robot type, robot name, robot ID, associated business, and industry information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you already have scripts that have passed the Review.</description></item>
+        /// <item><description>If you do not have any scripts that have passed the Review, add a script and submit it for Review in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface first.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAiccsRobotRequest
@@ -15347,8 +19510,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取tts音色列表</para>
+        /// <para>Lists the system and custom TTS voices available for large model-based outbound calls.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have not created and published any custom voices on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page, the operation returns only system voices.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAvailableTtsRequest
@@ -15405,8 +19573,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取tts音色列表</para>
+        /// <para>Lists the system and custom TTS voices available for large model-based outbound calls.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have not created and published any custom voices on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page, the operation returns only system voices.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAvailableTtsRequest
@@ -15463,8 +19636,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取tts音色列表</para>
+        /// <para>Lists the system and custom TTS voices available for large model-based outbound calls.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have not created and published any custom voices on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page, the operation returns only system voices.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAvailableTtsRequest
@@ -15481,8 +19659,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取tts音色列表</para>
+        /// <para>Lists the system and custom TTS voices available for large model-based outbound calls.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If you have not created and published any custom voices on the <a href="https://aiccs.console.aliyun.com/engine/voiceprint">Custom Voice</a> page, the operation returns only system voices.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAvailableTtsRequest
@@ -15499,8 +19682,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据时间段查询在线会话详情，包含会话内容，时间段范围最长不超过1天</para>
+        /// <para>Invoke ListChatRecordDetail to query online session details by time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API queries information about completed online sessions within a specified time range, including session content. The query rules are as follows:  </para>
+        /// <list type="bullet">
+        /// <item><description>The maximum time span for the query is 1 Day.  </description></item>
+        /// <item><description>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </description></item>
+        /// <item><description>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If both times are provided but the time span exceeds 1 Day, an abnormal response is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListChatRecordDetailRequest
@@ -15537,8 +19732,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据时间段查询在线会话详情，包含会话内容，时间段范围最长不超过1天</para>
+        /// <para>Invoke ListChatRecordDetail to query online session details by time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API queries information about completed online sessions within a specified time range, including session content. The query rules are as follows:  </para>
+        /// <list type="bullet">
+        /// <item><description>The maximum time span for the query is 1 Day.  </description></item>
+        /// <item><description>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </description></item>
+        /// <item><description>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If both times are provided but the time span exceeds 1 Day, an abnormal response is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListChatRecordDetailRequest
@@ -15575,8 +19782,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据时间段查询在线会话详情，包含会话内容，时间段范围最长不超过1天</para>
+        /// <para>Invoke ListChatRecordDetail to query online session details by time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API queries information about completed online sessions within a specified time range, including session content. The query rules are as follows:  </para>
+        /// <list type="bullet">
+        /// <item><description>The maximum time span for the query is 1 Day.  </description></item>
+        /// <item><description>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </description></item>
+        /// <item><description>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If both times are provided but the time span exceeds 1 Day, an abnormal response is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListChatRecordDetailRequest
@@ -15593,8 +19812,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据时间段查询在线会话详情，包含会话内容，时间段范围最长不超过1天</para>
+        /// <para>Invoke ListChatRecordDetail to query online session details by time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API queries information about completed online sessions within a specified time range, including session content. The query rules are as follows:  </para>
+        /// <list type="bullet">
+        /// <item><description>The maximum time span for the query is 1 Day.  </description></item>
+        /// <item><description>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </description></item>
+        /// <item><description>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If both times are provided but the time span exceeds 1 Day, an abnormal response is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListChatRecordDetailRequest
@@ -15611,8 +19842,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看对话记录</para>
+        /// <para>Query Intelligent Contact Bot conversation records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to query Intelligent Contact Bot conversation records, or view them in the <b>Task Management</b> &gt; <b>Details</b> &gt; <b>View Conversation Records</b> interface.</description></item>
+        /// <item><description>Before invoking this API, ensure that your created Intelligent Contact Bot calling job has successfully connected to at least one phone number.</description></item>
+        /// <item><description>If you do not have an existing Intelligent Contact Bot calling job, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDialogRequest
@@ -15669,8 +19917,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看对话记录</para>
+        /// <para>Query Intelligent Contact Bot conversation records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to query Intelligent Contact Bot conversation records, or view them in the <b>Task Management</b> &gt; <b>Details</b> &gt; <b>View Conversation Records</b> interface.</description></item>
+        /// <item><description>Before invoking this API, ensure that your created Intelligent Contact Bot calling job has successfully connected to at least one phone number.</description></item>
+        /// <item><description>If you do not have an existing Intelligent Contact Bot calling job, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDialogRequest
@@ -15727,8 +19992,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看对话记录</para>
+        /// <para>Query Intelligent Contact Bot conversation records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to query Intelligent Contact Bot conversation records, or view them in the <b>Task Management</b> &gt; <b>Details</b> &gt; <b>View Conversation Records</b> interface.</description></item>
+        /// <item><description>Before invoking this API, ensure that your created Intelligent Contact Bot calling job has successfully connected to at least one phone number.</description></item>
+        /// <item><description>If you do not have an existing Intelligent Contact Bot calling job, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDialogRequest
@@ -15745,8 +20027,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看对话记录</para>
+        /// <para>Query Intelligent Contact Bot conversation records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to query Intelligent Contact Bot conversation records, or view them in the <b>Task Management</b> &gt; <b>Details</b> &gt; <b>View Conversation Records</b> interface.</description></item>
+        /// <item><description>Before invoking this API, ensure that your created Intelligent Contact Bot calling job has successfully connected to at least one phone number.</description></item>
+        /// <item><description>If you do not have an existing Intelligent Contact Bot calling job, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDialogRequest
@@ -15761,6 +20060,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await ListDialogWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke ListHotlineRecord to query the hotline recording list by hotline session ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHotlineRecordRequest
         /// </param>
@@ -15794,6 +20098,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<ListHotlineRecordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke ListHotlineRecord to query the hotline recording list by hotline session ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHotlineRecordRequest
         /// </param>
@@ -15827,6 +20136,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<ListHotlineRecordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke ListHotlineRecord to query the hotline recording list by hotline session ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHotlineRecordRequest
         /// </param>
@@ -15840,6 +20154,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return ListHotlineRecordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke ListHotlineRecord to query the hotline recording list by hotline session ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ListHotlineRecordRequest
         /// </param>
@@ -15855,8 +20174,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据时间段查询热线详情列表，包含热线通话信息，时间段范围最长不超过1天</para>
+        /// <para>Query the list of hotline details by time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API queries detailed hotline information within a specified time range, including hotline call information. The query rules are as follows:  </para>
+        /// <list type="bullet">
+        /// <item><description>The maximum time span for the query is 1 Day.  </description></item>
+        /// <item><description>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </description></item>
+        /// <item><description>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If both times are provided but the time span exceeds 1 Day, an abnormal result is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHotlineRecordDetailRequest
@@ -15893,8 +20224,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据时间段查询热线详情列表，包含热线通话信息，时间段范围最长不超过1天</para>
+        /// <para>Query the list of hotline details by time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API queries detailed hotline information within a specified time range, including hotline call information. The query rules are as follows:  </para>
+        /// <list type="bullet">
+        /// <item><description>The maximum time span for the query is 1 Day.  </description></item>
+        /// <item><description>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </description></item>
+        /// <item><description>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If both times are provided but the time span exceeds 1 Day, an abnormal result is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHotlineRecordDetailRequest
@@ -15931,8 +20274,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据时间段查询热线详情列表，包含热线通话信息，时间段范围最长不超过1天</para>
+        /// <para>Query the list of hotline details by time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API queries detailed hotline information within a specified time range, including hotline call information. The query rules are as follows:  </para>
+        /// <list type="bullet">
+        /// <item><description>The maximum time span for the query is 1 Day.  </description></item>
+        /// <item><description>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </description></item>
+        /// <item><description>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If both times are provided but the time span exceeds 1 Day, an abnormal result is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHotlineRecordDetailRequest
@@ -15949,8 +20304,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据时间段查询热线详情列表，包含热线通话信息，时间段范围最长不超过1天</para>
+        /// <para>Query the list of hotline details by time period.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API queries detailed hotline information within a specified time range, including hotline call information. The query rules are as follows:  </para>
+        /// <list type="bullet">
+        /// <item><description>The maximum time span for the query is 1 Day.  </description></item>
+        /// <item><description>If only the query End Time is provided, the query Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If only the query Start Time is provided, the End Time is set to 1 hour after the Start Time.  </description></item>
+        /// <item><description>If neither time is provided, the End Time defaults to the current time, and the Start Time is set to 1 hour before the End Time.  </description></item>
+        /// <item><description>If both times are provided but the time span exceeds 1 Day, an abnormal result is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHotlineRecordDetailRequest
@@ -15965,6 +20332,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await ListHotlineRecordDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the outbound caller phone numbers for a specified agent based on the instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListOutboundPhoneNumberRequest
         /// </param>
@@ -15998,6 +20382,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<ListOutboundPhoneNumberResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the outbound caller phone numbers for a specified agent based on the instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListOutboundPhoneNumberRequest
         /// </param>
@@ -16031,6 +20432,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<ListOutboundPhoneNumberResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the outbound caller phone numbers for a specified agent based on the instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListOutboundPhoneNumberRequest
         /// </param>
@@ -16044,6 +20462,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return ListOutboundPhoneNumberWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Obtain the outbound caller phone numbers for a specified agent based on the instance ID and agent account name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user API call frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListOutboundPhoneNumberRequest
         /// </param>
@@ -16059,8 +20494,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看对话记录</para>
+        /// <para>Query Intelligent Contact Robot call records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have already initiated an outbound job using the Intelligent Contact Robot.</description></item>
+        /// <item><description>If you have not yet initiated an outbound job using the Intelligent Contact Robot, you can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API to start one.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotCallDialogRequest
@@ -16117,8 +20568,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看对话记录</para>
+        /// <para>Query Intelligent Contact Robot call records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have already initiated an outbound job using the Intelligent Contact Robot.</description></item>
+        /// <item><description>If you have not yet initiated an outbound job using the Intelligent Contact Robot, you can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API to start one.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotCallDialogRequest
@@ -16175,8 +20642,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看对话记录</para>
+        /// <para>Query Intelligent Contact Robot call records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have already initiated an outbound job using the Intelligent Contact Robot.</description></item>
+        /// <item><description>If you have not yet initiated an outbound job using the Intelligent Contact Robot, you can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API to start one.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotCallDialogRequest
@@ -16193,8 +20676,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看对话记录</para>
+        /// <para>Query Intelligent Contact Robot call records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have already initiated an outbound job using the Intelligent Contact Robot.</description></item>
+        /// <item><description>If you have not yet initiated an outbound job using the Intelligent Contact Robot, you can invoke the <a href="https://help.aliyun.com/document_detail/2717996.html">RobotCall</a> API to start one.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotCallDialogRequest
@@ -16211,8 +20710,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询机器人输出列表</para>
+        /// <para>Retrieves the list of robot node information based on the robot ID, which is the script ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Robot node information includes flow name, model name, node name, whether it is an output, and output ID.  </description></item>
+        /// <item><description>Before invoking this API, you can confirm the robot ID (that is, the script ID) by following the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotNodeRequest
@@ -16265,8 +20780,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询机器人输出列表</para>
+        /// <para>Retrieves the list of robot node information based on the robot ID, which is the script ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Robot node information includes flow name, model name, node name, whether it is an output, and output ID.  </description></item>
+        /// <item><description>Before invoking this API, you can confirm the robot ID (that is, the script ID) by following the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotNodeRequest
@@ -16319,8 +20850,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询机器人输出列表</para>
+        /// <para>Retrieves the list of robot node information based on the robot ID, which is the script ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Robot node information includes flow name, model name, node name, whether it is an output, and output ID.  </description></item>
+        /// <item><description>Before invoking this API, you can confirm the robot ID (that is, the script ID) by following the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotNodeRequest
@@ -16337,8 +20884,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询机器人输出列表</para>
+        /// <para>Retrieves the list of robot node information based on the robot ID, which is the script ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Robot node information includes flow name, model name, node name, whether it is an output, and output ID.  </description></item>
+        /// <item><description>Before invoking this API, you can confirm the robot ID (that is, the script ID) by following the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotNodeRequest
@@ -16355,8 +20918,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数列表</para>
+        /// <para>Queries the list of robot parameters by robot ID, which is also the script ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have already added input parameters for the robot.</description></item>
+        /// <item><description>If your robot does not have any input parameters, go to the <a href="https://aiccs.console.aliyun.com/patter/list"><b>Script Management</b></a> &gt; <b>Configuration</b> &gt; <b>Input and Output Parameters</b> interface and click to add an input parameter.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotParamsRequest
@@ -16409,8 +20988,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数列表</para>
+        /// <para>Queries the list of robot parameters by robot ID, which is also the script ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have already added input parameters for the robot.</description></item>
+        /// <item><description>If your robot does not have any input parameters, go to the <a href="https://aiccs.console.aliyun.com/patter/list"><b>Script Management</b></a> &gt; <b>Configuration</b> &gt; <b>Input and Output Parameters</b> interface and click to add an input parameter.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotParamsRequest
@@ -16463,8 +21058,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数列表</para>
+        /// <para>Queries the list of robot parameters by robot ID, which is also the script ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have already added input parameters for the robot.</description></item>
+        /// <item><description>If your robot does not have any input parameters, go to the <a href="https://aiccs.console.aliyun.com/patter/list"><b>Script Management</b></a> &gt; <b>Configuration</b> &gt; <b>Input and Output Parameters</b> interface and click to add an input parameter.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotParamsRequest
@@ -16481,8 +21092,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数列表</para>
+        /// <para>Queries the list of robot parameters by robot ID, which is also the script ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, ensure that you have already added input parameters for the robot.</description></item>
+        /// <item><description>If your robot does not have any input parameters, go to the <a href="https://aiccs.console.aliyun.com/patter/list"><b>Script Management</b></a> &gt; <b>Configuration</b> &gt; <b>Input and Output Parameters</b> interface and click to add an input parameter.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListRobotParamsRequest
@@ -16499,7 +21126,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取租户下的所有角色</para>
+        /// <para>Invoke ListRoles to obtain the list of all roles under a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16537,7 +21164,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取租户下的所有角色</para>
+        /// <para>Invoke ListRoles to obtain the list of all roles under a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16575,7 +21202,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取租户下的所有角色</para>
+        /// <para>Invoke ListRoles to obtain the list of all roles under a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16593,7 +21220,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取租户下的所有角色</para>
+        /// <para>Invoke ListRoles to obtain the list of all roles under a tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16609,6 +21236,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await ListRolesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query skill groups in the Cloud Customer Service System by instance ID and skill group channel type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSkillGroupRequest
         /// </param>
@@ -16642,6 +21286,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<ListSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query skill groups in the Cloud Customer Service System by instance ID and skill group channel type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSkillGroupRequest
         /// </param>
@@ -16675,6 +21336,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<ListSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query skill groups in the Cloud Customer Service System by instance ID and skill group channel type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSkillGroupRequest
         /// </param>
@@ -16688,6 +21366,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return ListSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query skill groups in the Cloud Customer Service System by instance ID and skill group channel type.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListSkillGroupRequest
         /// </param>
@@ -16703,8 +21398,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Perform a paged query to retrieve the list of Intelligent Contact Robot call jobs. The response includes the total number of jobs and job details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to obtain the list of Intelligent Contact Robot call jobs, or retrieve the job list from the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>If you have not created any Intelligent Contact Robot call jobs, you can click <b>Create Job</b> in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by invoking the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// <item><description>The optional parameters of this API serve as Filter Conditions for the Intelligent Contact Robot call job list. If these parameters are not specified, the API queries all jobs.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the combined invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTaskRequest
@@ -16777,8 +21489,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Perform a paged query to retrieve the list of Intelligent Contact Robot call jobs. The response includes the total number of jobs and job details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to obtain the list of Intelligent Contact Robot call jobs, or retrieve the job list from the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>If you have not created any Intelligent Contact Robot call jobs, you can click <b>Create Job</b> in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by invoking the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// <item><description>The optional parameters of this API serve as Filter Conditions for the Intelligent Contact Robot call job list. If these parameters are not specified, the API queries all jobs.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the combined invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTaskRequest
@@ -16851,8 +21580,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Perform a paged query to retrieve the list of Intelligent Contact Robot call jobs. The response includes the total number of jobs and job details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to obtain the list of Intelligent Contact Robot call jobs, or retrieve the job list from the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>If you have not created any Intelligent Contact Robot call jobs, you can click <b>Create Job</b> in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by invoking the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// <item><description>The optional parameters of this API serve as Filter Conditions for the Intelligent Contact Robot call job list. If these parameters are not specified, the API queries all jobs.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the combined invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTaskRequest
@@ -16869,8 +21615,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Perform a paged query to retrieve the list of Intelligent Contact Robot call jobs. The response includes the total number of jobs and job details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to obtain the list of Intelligent Contact Robot call jobs, or retrieve the job list from the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>If you have not created any Intelligent Contact Robot call jobs, you can click <b>Create Job</b> in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or create a job by invoking the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// <item><description>The optional parameters of this API serve as Filter Conditions for the Intelligent Contact Robot call job list. If these parameters are not specified, the API queries all jobs.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.</description></item>
+        /// <item><description>API frequency: 500 calls per second.<remarks>
+        /// <para>If the combined invocations from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTaskRequest
@@ -16887,8 +21650,26 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务详情查看通话列表</para>
+        /// <para>Obtain the detail information of Intelligent Contact Robot call jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to obtain the detail information of Intelligent Contact Robot call jobs. Alternatively, you can view this information in the <b>Detail</b> interface under <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</description></item>
+        /// <item><description>Before invoking this API, ensure that you have created an Intelligent Contact Robot and successfully started a job.</description></item>
+        /// <item><description>If you do not have any successfully created Intelligent Contact Robot call jobs, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
+        /// <item><description>The optional parameters in this API serve as filter conditions for the detail information of Intelligent Contact Robot call jobs. If these parameters are not specified, all job details will be queried.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTaskDetailRequest
@@ -16965,8 +21746,26 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务详情查看通话列表</para>
+        /// <para>Obtain the detail information of Intelligent Contact Robot call jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to obtain the detail information of Intelligent Contact Robot call jobs. Alternatively, you can view this information in the <b>Detail</b> interface under <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</description></item>
+        /// <item><description>Before invoking this API, ensure that you have created an Intelligent Contact Robot and successfully started a job.</description></item>
+        /// <item><description>If you do not have any successfully created Intelligent Contact Robot call jobs, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
+        /// <item><description>The optional parameters in this API serve as filter conditions for the detail information of Intelligent Contact Robot call jobs. If these parameters are not specified, all job details will be queried.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTaskDetailRequest
@@ -17043,8 +21842,26 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务详情查看通话列表</para>
+        /// <para>Obtain the detail information of Intelligent Contact Robot call jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to obtain the detail information of Intelligent Contact Robot call jobs. Alternatively, you can view this information in the <b>Detail</b> interface under <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</description></item>
+        /// <item><description>Before invoking this API, ensure that you have created an Intelligent Contact Robot and successfully started a job.</description></item>
+        /// <item><description>If you do not have any successfully created Intelligent Contact Robot call jobs, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
+        /// <item><description>The optional parameters in this API serve as filter conditions for the detail information of Intelligent Contact Robot call jobs. If these parameters are not specified, all job details will be queried.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTaskDetailRequest
@@ -17061,8 +21878,26 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务详情查看通话列表</para>
+        /// <para>Obtain the detail information of Intelligent Contact Robot call jobs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to obtain the detail information of Intelligent Contact Robot call jobs. Alternatively, you can view this information in the <b>Detail</b> interface under <a href="https://aiccs.console.aliyun.com/job/list"><b>Task Management</b></a>.</description></item>
+        /// <item><description>Before invoking this API, ensure that you have created an Intelligent Contact Robot and successfully started a job.</description></item>
+        /// <item><description>If you do not have any successfully created Intelligent Contact Robot call jobs, you can create and start a job in the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface, or use the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> and <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> APIs to create and start a job.</description></item>
+        /// <item><description>The optional parameters in this API serve as filter conditions for the detail information of Intelligent Contact Robot call jobs. If these parameters are not specified, all job details will be queried.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTaskDetailRequest
@@ -17079,8 +21914,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高德全双工</para>
+        /// <para>Performs full-duplex large language model operations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation can be called only during an intelligent outbound call. When you call this operation, set the <b>CallId</b> request parameter to the unique receipt ID of the ongoing call.</description></item>
+        /// <item><description><b>CallId</b> is the <b>CallId</b> parameter returned by the <a href="https://help.aliyun.com/document_detail/2718012.html">LlmSmartCallFullDuplex</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// LlmFullDuplexCallOperateRequest
@@ -17129,8 +21972,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高德全双工</para>
+        /// <para>Performs full-duplex large language model operations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation can be called only during an intelligent outbound call. When you call this operation, set the <b>CallId</b> request parameter to the unique receipt ID of the ongoing call.</description></item>
+        /// <item><description><b>CallId</b> is the <b>CallId</b> parameter returned by the <a href="https://help.aliyun.com/document_detail/2718012.html">LlmSmartCallFullDuplex</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// LlmFullDuplexCallOperateRequest
@@ -17179,8 +22030,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高德全双工</para>
+        /// <para>Performs full-duplex large language model operations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation can be called only during an intelligent outbound call. When you call this operation, set the <b>CallId</b> request parameter to the unique receipt ID of the ongoing call.</description></item>
+        /// <item><description><b>CallId</b> is the <b>CallId</b> parameter returned by the <a href="https://help.aliyun.com/document_detail/2718012.html">LlmSmartCallFullDuplex</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// LlmFullDuplexCallOperateRequest
@@ -17197,8 +22056,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>高德全双工</para>
+        /// <para>Performs full-duplex large language model operations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This operation can be called only during an intelligent outbound call. When you call this operation, set the <b>CallId</b> request parameter to the unique receipt ID of the ongoing call.</description></item>
+        /// <item><description><b>CallId</b> is the <b>CallId</b> parameter returned by the <a href="https://help.aliyun.com/document_detail/2718012.html">LlmSmartCallFullDuplex</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// LlmFullDuplexCallOperateRequest
@@ -17215,8 +22082,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于大模型的智能外呼</para>
+        /// <para>Intelligent outbound call based on an LLM.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each API invocation supports adding only one called number. If you have multiple called numbers, invoke the API multiple times.</description></item>
+        /// <item><description>Before initiating an intelligent call based on an LLM, ensure that you have created an LLM application in the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface and have successfully requested a real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Number Management</a> interface.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// LlmSmartCallRequest
@@ -17319,8 +22194,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于大模型的智能外呼</para>
+        /// <para>Intelligent outbound call based on an LLM.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each API invocation supports adding only one called number. If you have multiple called numbers, invoke the API multiple times.</description></item>
+        /// <item><description>Before initiating an intelligent call based on an LLM, ensure that you have created an LLM application in the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface and have successfully requested a real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Number Management</a> interface.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// LlmSmartCallRequest
@@ -17423,8 +22306,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于大模型的智能外呼</para>
+        /// <para>Intelligent outbound call based on an LLM.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each API invocation supports adding only one called number. If you have multiple called numbers, invoke the API multiple times.</description></item>
+        /// <item><description>Before initiating an intelligent call based on an LLM, ensure that you have created an LLM application in the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface and have successfully requested a real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Number Management</a> interface.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// LlmSmartCallRequest
@@ -17441,8 +22332,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于大模型的智能外呼</para>
+        /// <para>Intelligent outbound call based on an LLM.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Each API invocation supports adding only one called number. If you have multiple called numbers, invoke the API multiple times.</description></item>
+        /// <item><description>Before initiating an intelligent call based on an LLM, ensure that you have created an LLM application in the <a href="https://aiccs.console.aliyun.com/engine/llmApp">Application Management</a> interface and have successfully requested a real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Number Management</a> interface.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// LlmSmartCallRequest
@@ -17459,7 +22358,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>大模型外呼加密号码接口</para>
+        /// <para>Initiates a smart call to an encrypted number using a large language model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17543,7 +22442,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>大模型外呼加密号码接口</para>
+        /// <para>Initiates a smart call to an encrypted number using a large language model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -17627,7 +22526,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>大模型外呼加密号码接口</para>
+        /// <para>Initiates a smart call to an encrypted number using a large language model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17645,7 +22544,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>大模型外呼加密号码接口</para>
+        /// <para>Initiates a smart call to an encrypted number using a large language model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17663,8 +22562,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于大模型的智能外呼</para>
+        /// <para>Initiates a full-duplex Artificial Intelligence Cloud Call Service call with support for personalized configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have configured the ASR callback URL.</description></item>
+        /// <item><description>This operation is available only to users whose UIDs are added to the whitelist.</description></item>
+        /// <item><description>The request rate limit for a single user is 100 QPS.</description></item>
+        /// <item><description><c>CalledNumber</c> and <c>CallerNumber</c> are required parameters that specify the called number and the calling number, respectively.</description></item>
+        /// <item><description>Optional parameters such as <c>StartWordParam</c>, <c>TtsVoiceCode</c>, <c>TtsSpeed</c>, and <c>TtsVolume</c> allow you to customize the call experience. If these parameters are not specified, the default settings of the application are used.</description></item>
+        /// <item><description>The <c>SessionTimeout</c> parameter specifies the maximum call duration in seconds. The call is automatically ended when the specified duration is exceeded. For the default value and valid range, refer to the relevant documentation.</description></item>
+        /// <item><description>The <c>OutId</c> field can be used to track a unique identifier in an external system. The value must be 1 to 32 bytes in length.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// LlmSmartCallFullDuplexRequest
@@ -17743,8 +22656,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于大模型的智能外呼</para>
+        /// <para>Initiates a full-duplex Artificial Intelligence Cloud Call Service call with support for personalized configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have configured the ASR callback URL.</description></item>
+        /// <item><description>This operation is available only to users whose UIDs are added to the whitelist.</description></item>
+        /// <item><description>The request rate limit for a single user is 100 QPS.</description></item>
+        /// <item><description><c>CalledNumber</c> and <c>CallerNumber</c> are required parameters that specify the called number and the calling number, respectively.</description></item>
+        /// <item><description>Optional parameters such as <c>StartWordParam</c>, <c>TtsVoiceCode</c>, <c>TtsSpeed</c>, and <c>TtsVolume</c> allow you to customize the call experience. If these parameters are not specified, the default settings of the application are used.</description></item>
+        /// <item><description>The <c>SessionTimeout</c> parameter specifies the maximum call duration in seconds. The call is automatically ended when the specified duration is exceeded. For the default value and valid range, refer to the relevant documentation.</description></item>
+        /// <item><description>The <c>OutId</c> field can be used to track a unique identifier in an external system. The value must be 1 to 32 bytes in length.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// LlmSmartCallFullDuplexRequest
@@ -17823,8 +22750,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于大模型的智能外呼</para>
+        /// <para>Initiates a full-duplex Artificial Intelligence Cloud Call Service call with support for personalized configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have configured the ASR callback URL.</description></item>
+        /// <item><description>This operation is available only to users whose UIDs are added to the whitelist.</description></item>
+        /// <item><description>The request rate limit for a single user is 100 QPS.</description></item>
+        /// <item><description><c>CalledNumber</c> and <c>CallerNumber</c> are required parameters that specify the called number and the calling number, respectively.</description></item>
+        /// <item><description>Optional parameters such as <c>StartWordParam</c>, <c>TtsVoiceCode</c>, <c>TtsSpeed</c>, and <c>TtsVolume</c> allow you to customize the call experience. If these parameters are not specified, the default settings of the application are used.</description></item>
+        /// <item><description>The <c>SessionTimeout</c> parameter specifies the maximum call duration in seconds. The call is automatically ended when the specified duration is exceeded. For the default value and valid range, refer to the relevant documentation.</description></item>
+        /// <item><description>The <c>OutId</c> field can be used to track a unique identifier in an external system. The value must be 1 to 32 bytes in length.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// LlmSmartCallFullDuplexRequest
@@ -17841,8 +22782,22 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>基于大模型的智能外呼</para>
+        /// <para>Initiates a full-duplex Artificial Intelligence Cloud Call Service call with support for personalized configurations.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Before calling this operation, make sure that you have configured the ASR callback URL.</description></item>
+        /// <item><description>This operation is available only to users whose UIDs are added to the whitelist.</description></item>
+        /// <item><description>The request rate limit for a single user is 100 QPS.</description></item>
+        /// <item><description><c>CalledNumber</c> and <c>CallerNumber</c> are required parameters that specify the called number and the calling number, respectively.</description></item>
+        /// <item><description>Optional parameters such as <c>StartWordParam</c>, <c>TtsVoiceCode</c>, <c>TtsSpeed</c>, and <c>TtsVolume</c> allow you to customize the call experience. If these parameters are not specified, the default settings of the application are used.</description></item>
+        /// <item><description>The <c>SessionTimeout</c> parameter specifies the maximum call duration in seconds. The call is automatically ended when the specified duration is exceeded. For the default value and valid range, refer to the relevant documentation.</description></item>
+        /// <item><description>The <c>OutId</c> field can be used to track a unique identifier in an external system. The value must be 1 to 32 bytes in length.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// LlmSmartCallFullDuplexRequest
@@ -17857,6 +22812,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await LlmSmartCallFullDuplexWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke MakeCall to initiate a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MakeCallRequest
         /// </param>
@@ -17914,6 +22874,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<MakeCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke MakeCall to initiate a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MakeCallRequest
         /// </param>
@@ -17971,6 +22936,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<MakeCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke MakeCall to initiate a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MakeCallRequest
         /// </param>
@@ -17984,6 +22954,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return MakeCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke MakeCall to initiate a call.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MakeCallRequest
         /// </param>
@@ -17999,7 +22974,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动端发起呼叫</para>
+        /// <para>You can invoke MakeDoubleCall to initiate a call by using the server-side software development kit (SDK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18061,7 +23036,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动端发起呼叫</para>
+        /// <para>You can invoke MakeDoubleCall to initiate a call by using the server-side software development kit (SDK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18123,7 +23098,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动端发起呼叫</para>
+        /// <para>You can invoke MakeDoubleCall to initiate a call by using the server-side software development kit (SDK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18141,7 +23116,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>移动端发起呼叫</para>
+        /// <para>You can invoke MakeDoubleCall to initiate a call by using the server-side software development kit (SDK).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18159,7 +23134,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询智能体列表</para>
+        /// <para>Returns a paginated list of agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18229,7 +23204,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询智能体列表</para>
+        /// <para>Returns a paginated list of agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18299,7 +23274,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询智能体列表</para>
+        /// <para>Returns a paginated list of agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18317,7 +23292,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询智能体列表</para>
+        /// <para>Returns a paginated list of agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18335,7 +23310,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询智能体列表（代运营模式V2）</para>
+        /// <para>Retrieve a paginated list of agents (agency mode V2)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18397,7 +23372,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询智能体列表（代运营模式V2）</para>
+        /// <para>Retrieve a paginated list of agents (agency mode V2)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18459,7 +23434,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询智能体列表（代运营模式V2）</para>
+        /// <para>Retrieve a paginated list of agents (agency mode V2)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18477,7 +23452,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询智能体列表（代运营模式V2）</para>
+        /// <para>Retrieve a paginated list of agents (agency mode V2)</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18495,8 +23470,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询明细记录</para>
+        /// <para>Runs a paginated query for call task details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You must create a call task before you can query its details.</description></item>
+        /// <item><description>You can create a call task on the <b>call task management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> API.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// QueryAiCallDetailPageRequest
@@ -18619,8 +23602,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询明细记录</para>
+        /// <para>Runs a paginated query for call task details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You must create a call task before you can query its details.</description></item>
+        /// <item><description>You can create a call task on the <b>call task management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> API.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// QueryAiCallDetailPageRequest
@@ -18743,8 +23734,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询明细记录</para>
+        /// <para>Runs a paginated query for call task details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You must create a call task before you can query its details.</description></item>
+        /// <item><description>You can create a call task on the <b>call task management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> API.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAiCallDetailPageRequest
@@ -18761,8 +23760,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询明细记录</para>
+        /// <para>Runs a paginated query for call task details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You must create a call task before you can query its details.</description></item>
+        /// <item><description>You can create a call task on the <b>call task management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> API.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAiCallDetailPageRequest
@@ -18779,7 +23786,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务详情</para>
+        /// <para>Gets basic information for a call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18833,7 +23840,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务详情</para>
+        /// <para>Gets basic information for a call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18887,7 +23894,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务详情</para>
+        /// <para>Gets basic information for a call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18905,7 +23912,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务详情</para>
+        /// <para>Gets basic information for a call task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18923,7 +23930,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Retrieves a list of call tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19005,7 +24012,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Retrieves a list of call tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19087,7 +24094,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Retrieves a list of call tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19105,7 +24112,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询任务列表</para>
+        /// <para>Retrieves a list of call tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19123,7 +24130,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体明细</para>
+        /// <para>Retrieve the details of a communication agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19177,7 +24184,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体明细</para>
+        /// <para>Retrieve the details of a communication agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19231,7 +24238,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体明细</para>
+        /// <para>Retrieve the details of a communication agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19249,7 +24256,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体明细</para>
+        /// <para>Retrieve the details of a communication agent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19267,8 +24274,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体详情（代运营模式V2）</para>
+        /// <para>Gets details for a specified agent, including its basic, branch, and version information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves the details of a communication agent.</description></item>
+        /// <item><description>If you do not specify <c>BranchId</c> and <c>VersionId</c>, the API returns the configuration for the latest published version on the effective branch. If the effective branch only contains a draft version, no configuration is returned.</description></item>
+        /// <item><description>If you specify only <c>BranchId</c>, the API returns the configuration for the latest published version on the specified branch. If the specified branch only contains a draft version, no configuration is returned.</description></item>
+        /// <item><description>If you specify both <c>BranchId</c> and <c>VersionId</c>, the API returns the configuration for the specified version.</description></item>
+        /// <item><description>When <c>BranchDeployStatus</c> is <c>1</c> (branch deployed) and <c>VersionPublishStatus</c> is <c>1</c> (version published), imported outbound tasks use the configuration of this branch.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAiVoiceAgentDetailNewRequest
@@ -19317,8 +24336,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体详情（代运营模式V2）</para>
+        /// <para>Gets details for a specified agent, including its basic, branch, and version information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves the details of a communication agent.</description></item>
+        /// <item><description>If you do not specify <c>BranchId</c> and <c>VersionId</c>, the API returns the configuration for the latest published version on the effective branch. If the effective branch only contains a draft version, no configuration is returned.</description></item>
+        /// <item><description>If you specify only <c>BranchId</c>, the API returns the configuration for the latest published version on the specified branch. If the specified branch only contains a draft version, no configuration is returned.</description></item>
+        /// <item><description>If you specify both <c>BranchId</c> and <c>VersionId</c>, the API returns the configuration for the specified version.</description></item>
+        /// <item><description>When <c>BranchDeployStatus</c> is <c>1</c> (branch deployed) and <c>VersionPublishStatus</c> is <c>1</c> (version published), imported outbound tasks use the configuration of this branch.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAiVoiceAgentDetailNewRequest
@@ -19367,8 +24398,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体详情（代运营模式V2）</para>
+        /// <para>Gets details for a specified agent, including its basic, branch, and version information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves the details of a communication agent.</description></item>
+        /// <item><description>If you do not specify <c>BranchId</c> and <c>VersionId</c>, the API returns the configuration for the latest published version on the effective branch. If the effective branch only contains a draft version, no configuration is returned.</description></item>
+        /// <item><description>If you specify only <c>BranchId</c>, the API returns the configuration for the latest published version on the specified branch. If the specified branch only contains a draft version, no configuration is returned.</description></item>
+        /// <item><description>If you specify both <c>BranchId</c> and <c>VersionId</c>, the API returns the configuration for the specified version.</description></item>
+        /// <item><description>When <c>BranchDeployStatus</c> is <c>1</c> (branch deployed) and <c>VersionPublishStatus</c> is <c>1</c> (version published), imported outbound tasks use the configuration of this branch.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAiVoiceAgentDetailNewRequest
@@ -19385,8 +24428,20 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询智能体详情（代运营模式V2）</para>
+        /// <para>Gets details for a specified agent, including its basic, branch, and version information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Usage notes</h2>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves the details of a communication agent.</description></item>
+        /// <item><description>If you do not specify <c>BranchId</c> and <c>VersionId</c>, the API returns the configuration for the latest published version on the effective branch. If the effective branch only contains a draft version, no configuration is returned.</description></item>
+        /// <item><description>If you specify only <c>BranchId</c>, the API returns the configuration for the latest published version on the specified branch. If the specified branch only contains a draft version, no configuration is returned.</description></item>
+        /// <item><description>If you specify both <c>BranchId</c> and <c>VersionId</c>, the API returns the configuration for the specified version.</description></item>
+        /// <item><description>When <c>BranchDeployStatus</c> is <c>1</c> (branch deployed) and <c>VersionPublishStatus</c> is <c>1</c> (version published), imported outbound tasks use the configuration of this branch.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryAiVoiceAgentDetailNewRequest
@@ -19403,8 +24458,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话详情信息</para>
+        /// <para>Gets call details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves call details. You can also view these details on the <b>call task management</b> &gt; <b>details</b> &gt; <b>execution history</b> &gt; <b>completed</b> &gt; <b>call details</b> page.</description></item>
+        /// <item><description>Before calling this API, make sure you have created a call task and imported called number data.</description></item>
+        /// <item><description>You can create a call task and import called number data either on the <b>call task management</b> page or by using the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> APIs.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryConversationDetailInfoRequest
@@ -19465,8 +24529,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话详情信息</para>
+        /// <para>Gets call details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves call details. You can also view these details on the <b>call task management</b> &gt; <b>details</b> &gt; <b>execution history</b> &gt; <b>completed</b> &gt; <b>call details</b> page.</description></item>
+        /// <item><description>Before calling this API, make sure you have created a call task and imported called number data.</description></item>
+        /// <item><description>You can create a call task and import called number data either on the <b>call task management</b> page or by using the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> APIs.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryConversationDetailInfoRequest
@@ -19527,8 +24600,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话详情信息</para>
+        /// <para>Gets call details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves call details. You can also view these details on the <b>call task management</b> &gt; <b>details</b> &gt; <b>execution history</b> &gt; <b>completed</b> &gt; <b>call details</b> page.</description></item>
+        /// <item><description>Before calling this API, make sure you have created a call task and imported called number data.</description></item>
+        /// <item><description>You can create a call task and import called number data either on the <b>call task management</b> page or by using the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> APIs.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryConversationDetailInfoRequest
@@ -19545,8 +24627,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话详情信息</para>
+        /// <para>Gets call details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API retrieves call details. You can also view these details on the <b>call task management</b> &gt; <b>details</b> &gt; <b>execution history</b> &gt; <b>completed</b> &gt; <b>call details</b> page.</description></item>
+        /// <item><description>Before calling this API, make sure you have created a call task and imported called number data.</description></item>
+        /// <item><description>You can create a call task and import called number data either on the <b>call task management</b> page or by using the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> APIs.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryConversationDetailInfoRequest
@@ -19563,8 +24654,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话记录接口-新</para>
+        /// <para>Queries the details of a call task and call records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a call task and imported callee data.</description></item>
+        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryConversationDetailInfoNewRequest
@@ -19629,8 +24729,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话记录接口-新</para>
+        /// <para>Queries the details of a call task and call records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a call task and imported callee data.</description></item>
+        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryConversationDetailInfoNewRequest
@@ -19695,8 +24804,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话记录接口-新</para>
+        /// <para>Queries the details of a call task and call records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a call task and imported callee data.</description></item>
+        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryConversationDetailInfoNewRequest
@@ -19713,8 +24831,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询通话记录接口-新</para>
+        /// <para>Queries the details of a call task and call records.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can call this operation to query call details. You can also view call details in the <b>Call Task Management</b> &gt; <b>Details</b> &gt; <b>Execution Records</b> &gt; <b>Completed</b> &gt; <b>Call Details</b> console.</description></item>
+        /// <item><description>Before calling this operation, make sure that you have created a call task and imported callee data.</description></item>
+        /// <item><description>If you do not have a created call task, create a call task and import callee data in the <b>Call Task Management</b> console, or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> and <a href="https://help.aliyun.com/document_detail/2926815.html">ImportTaskNumberDatas</a> operations to create a call task and import callee data.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryConversationDetailInfoNewRequest
@@ -19729,6 +24856,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await QueryConversationDetailInfoNewWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryHotlineInQueue to obtain hotline agent data for a skill group by skill group ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryHotlineInQueueRequest
         /// </param>
@@ -19762,6 +24894,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<QueryHotlineInQueueResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryHotlineInQueue to obtain hotline agent data for a skill group by skill group ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryHotlineInQueueRequest
         /// </param>
@@ -19795,6 +24932,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<QueryHotlineInQueueResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryHotlineInQueue to obtain hotline agent data for a skill group by skill group ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryHotlineInQueueRequest
         /// </param>
@@ -19808,6 +24950,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return QueryHotlineInQueueWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke QueryHotlineInQueue to obtain hotline agent data for a skill group by skill group ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryHotlineInQueueRequest
         /// </param>
@@ -19823,8 +24970,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热线号码配置</para>
+        /// <para>Query the hotline number configuration list by instance ID. Fuzzy query by hotline number is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The hotline number configuration includes information such as the hotline number, number location, carrier, and whether it is used for incoming calls. For details, see <a href="#api-detail-40">Return Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.</description></item>
+        /// <item><description>API invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// QueryHotlineNumberRequest
@@ -19867,8 +25027,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热线号码配置</para>
+        /// <para>Query the hotline number configuration list by instance ID. Fuzzy query by hotline number is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The hotline number configuration includes information such as the hotline number, number location, carrier, and whether it is used for incoming calls. For details, see <a href="#api-detail-40">Return Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.</description></item>
+        /// <item><description>API invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// QueryHotlineNumberRequest
@@ -19911,8 +25084,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热线号码配置</para>
+        /// <para>Query the hotline number configuration list by instance ID. Fuzzy query by hotline number is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The hotline number configuration includes information such as the hotline number, number location, carrier, and whether it is used for incoming calls. For details, see <a href="#api-detail-40">Return Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.</description></item>
+        /// <item><description>API invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryHotlineNumberRequest
@@ -19929,8 +25115,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询热线号码配置</para>
+        /// <para>Query the hotline number configuration list by instance ID. Fuzzy query by hotline number is supported.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The hotline number configuration includes information such as the hotline number, number location, carrier, and whether it is used for incoming calls. For details, see <a href="#api-detail-40">Return Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times per second.</description></item>
+        /// <item><description>API invocation frequency: 100 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// QueryHotlineNumberRequest
@@ -20309,6 +25508,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await QueryOutboundTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the skill group list of the Cloud Customer Service System by instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows you to query information such as the display name, description, channel type, and ID of skill groups. For details, see <a href="#api-detail-40">Response Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QuerySkillGroupsRequest
         /// </param>
@@ -20366,6 +25583,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<QuerySkillGroupsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the skill group list of the Cloud Customer Service System by instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows you to query information such as the display name, description, channel type, and ID of skill groups. For details, see <a href="#api-detail-40">Response Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QuerySkillGroupsRequest
         /// </param>
@@ -20423,6 +25658,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<QuerySkillGroupsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the skill group list of the Cloud Customer Service System by instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows you to query information such as the display name, description, channel type, and ID of skill groups. For details, see <a href="#api-detail-40">Response Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QuerySkillGroupsRequest
         /// </param>
@@ -20436,6 +25689,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return QuerySkillGroupsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the skill group list of the Cloud Customer Service System by instance ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows you to query information such as the display name, description, channel type, and ID of skill groups. For details, see <a href="#api-detail-40">Response Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QuerySkillGroupsRequest
         /// </param>
@@ -20661,6 +25932,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await QueryTaskDetailWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryTickets API to query ticket information.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// QueryTicketsRequest
         /// </param>
@@ -20752,6 +26028,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<QueryTicketsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryTickets API to query ticket information.</para>
+        /// </summary>
+        /// 
         /// <param name="tmpReq">
         /// QueryTicketsRequest
         /// </param>
@@ -20843,6 +26124,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<QueryTicketsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryTickets API to query ticket information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTicketsRequest
         /// </param>
@@ -20856,6 +26142,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return QueryTicketsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the QueryTickets API to query ticket information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// QueryTicketsRequest
         /// </param>
@@ -20869,6 +26160,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await QueryTicketsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query contact data by instance, list of contact IDs, list of session IDs, and so on.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows you to query contact data such as contact status, session recipient, agent name, contact channel, satisfaction rating, and evaluation status. For details, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.  </description></item>
+        /// <item><description>API frequency: 50 queries per second (QPS).  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryTouchListRequest
         /// </param>
@@ -20978,6 +26287,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<QueryTouchListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query contact data by instance, list of contact IDs, list of session IDs, and so on.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows you to query contact data such as contact status, session recipient, agent name, contact channel, satisfaction rating, and evaluation status. For details, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.  </description></item>
+        /// <item><description>API frequency: 50 queries per second (QPS).  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryTouchListRequest
         /// </param>
@@ -21087,6 +26414,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<QueryTouchListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query contact data by instance, list of contact IDs, list of session IDs, and so on.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows you to query contact data such as contact status, session recipient, agent name, contact channel, satisfaction rating, and evaluation status. For details, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.  </description></item>
+        /// <item><description>API frequency: 50 queries per second (QPS).  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryTouchListRequest
         /// </param>
@@ -21100,6 +26445,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return QueryTouchListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Query contact data by instance, list of contact IDs, list of session IDs, and so on.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API allows you to query contact data such as contact status, session recipient, agent name, contact channel, satisfaction rating, and evaluation status. For details, see <a href="#api-detail-40">Response parameters</a>.  </para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No Rate Limiting.  </description></item>
+        /// <item><description>API frequency: 50 queries per second (QPS).  <remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// QueryTouchListRequest
         /// </param>
@@ -21115,8 +26478,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从技能组中移除坐席</para>
+        /// <para>Remove agent accounts from a skill group by specifying the skill group and agent IDs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you need to provide agent or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// <item><description>You can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-listagentbyskillgroupid">ListAgentBySkillGroupId</a> to retrieve agent information under a skill group and verify whether the removal aligns with your expectations.</description></item>
+        /// <item><description>If you accidentally remove an agent, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update the agent data and reassign the skill group to the agent.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 50 times/second.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RemoveAgentFromSkillGroupRequest
@@ -21171,8 +26551,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从技能组中移除坐席</para>
+        /// <para>Remove agent accounts from a skill group by specifying the skill group and agent IDs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you need to provide agent or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// <item><description>You can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-listagentbyskillgroupid">ListAgentBySkillGroupId</a> to retrieve agent information under a skill group and verify whether the removal aligns with your expectations.</description></item>
+        /// <item><description>If you accidentally remove an agent, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update the agent data and reassign the skill group to the agent.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 50 times/second.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// RemoveAgentFromSkillGroupRequest
@@ -21227,8 +26624,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从技能组中移除坐席</para>
+        /// <para>Remove agent accounts from a skill group by specifying the skill group and agent IDs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you need to provide agent or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// <item><description>You can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-listagentbyskillgroupid">ListAgentBySkillGroupId</a> to retrieve agent information under a skill group and verify whether the removal aligns with your expectations.</description></item>
+        /// <item><description>If you accidentally remove an agent, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update the agent data and reassign the skill group to the agent.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 50 times/second.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveAgentFromSkillGroupRequest
@@ -21245,8 +26659,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从技能组中移除坐席</para>
+        /// <para>Remove agent accounts from a skill group by specifying the skill group and agent IDs.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>If you need to provide agent or skill group information, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// <item><description>You can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-listagentbyskillgroupid">ListAgentBySkillGroupId</a> to retrieve agent information under a skill group and verify whether the removal aligns with your expectations.</description></item>
+        /// <item><description>If you accidentally remove an agent, you can invoke <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-updateagent">UpdateAgent</a> to update the agent data and reassign the skill group to the agent.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 50 times/second.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RemoveAgentFromSkillGroupRequest
@@ -21261,6 +26692,29 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await RemoveAgentFromSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a skill group in the Cloud Customer Service System based on the AICCS instance ID and skill group ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deletion is a sensitive operation. Proceed with caution.  </description></item>
+        /// <item><description>Before deletion, confirm the AICCS instance ID and the skill group ID to be deleted. Refer to the guidance in <a href="#api-detail-35">Request Parameters</a> for details on how to obtain them.  </description></item>
+        /// <item><description>After deletion, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to verify the skill group status.  </description></item>
+        /// <item><description>If you accidentally delete a skill group, you can recreate it by invoking the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">CreateSkillGroup</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveSkillGroupRequest
         /// </param>
@@ -21306,6 +26760,29 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<RemoveSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a skill group in the Cloud Customer Service System based on the AICCS instance ID and skill group ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deletion is a sensitive operation. Proceed with caution.  </description></item>
+        /// <item><description>Before deletion, confirm the AICCS instance ID and the skill group ID to be deleted. Refer to the guidance in <a href="#api-detail-35">Request Parameters</a> for details on how to obtain them.  </description></item>
+        /// <item><description>After deletion, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to verify the skill group status.  </description></item>
+        /// <item><description>If you accidentally delete a skill group, you can recreate it by invoking the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">CreateSkillGroup</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveSkillGroupRequest
         /// </param>
@@ -21351,6 +26828,29 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<RemoveSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a skill group in the Cloud Customer Service System based on the AICCS instance ID and skill group ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deletion is a sensitive operation. Proceed with caution.  </description></item>
+        /// <item><description>Before deletion, confirm the AICCS instance ID and the skill group ID to be deleted. Refer to the guidance in <a href="#api-detail-35">Request Parameters</a> for details on how to obtain them.  </description></item>
+        /// <item><description>After deletion, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to verify the skill group status.  </description></item>
+        /// <item><description>If you accidentally delete a skill group, you can recreate it by invoking the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">CreateSkillGroup</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveSkillGroupRequest
         /// </param>
@@ -21364,6 +26864,29 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return RemoveSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a skill group in the Cloud Customer Service System based on the AICCS instance ID and skill group ID.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Deletion is a sensitive operation. Proceed with caution.  </description></item>
+        /// <item><description>Before deletion, confirm the AICCS instance ID and the skill group ID to be deleted. Refer to the guidance in <a href="#api-detail-35">Request Parameters</a> for details on how to obtain them.  </description></item>
+        /// <item><description>After deletion, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to verify the skill group status.  </description></item>
+        /// <item><description>If you accidentally delete a skill group, you can recreate it by invoking the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-createskillgroup">CreateSkillGroup</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 1000 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RemoveSkillGroupRequest
         /// </param>
@@ -21379,7 +26902,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置热线号码</para>
+        /// <para>Invoke the ResetHotlineNumber API to reset the inbound (IVR flow) and outbound (effective scope) configuration information of a hotline number.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21467,7 +26990,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置热线号码</para>
+        /// <para>Invoke the ResetHotlineNumber API to reset the inbound (IVR flow) and outbound (effective scope) configuration information of a hotline number.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -21555,7 +27078,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置热线号码</para>
+        /// <para>Invoke the ResetHotlineNumber API to reset the inbound (IVR flow) and outbound (effective scope) configuration information of a hotline number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21573,7 +27096,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置热线号码</para>
+        /// <para>Invoke the ResetHotlineNumber API to reset the inbound (IVR flow) and outbound (effective scope) configuration information of a hotline number.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21697,6 +27220,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await RestartOutboundTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an outbound call using the Intelligent Contact Robot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before initiating an outbound call using the Intelligent Contact Robot, ensure that you already have a reviewed and approved script in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface and an approved real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</description></item>
+        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after invoking this API.  <remarks>
+        /// <para>For example, if the <b>date</b> parameter is: <c>&quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;</c>, then the call creation time is: <c>&quot;2024-06-24 03:40:31&quot;</c>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RobotCallRequest
         /// </param>
@@ -21770,6 +27317,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<RobotCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an outbound call using the Intelligent Contact Robot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before initiating an outbound call using the Intelligent Contact Robot, ensure that you already have a reviewed and approved script in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface and an approved real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</description></item>
+        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after invoking this API.  <remarks>
+        /// <para>For example, if the <b>date</b> parameter is: <c>&quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;</c>, then the call creation time is: <c>&quot;2024-06-24 03:40:31&quot;</c>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RobotCallRequest
         /// </param>
@@ -21843,6 +27414,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<RobotCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an outbound call using the Intelligent Contact Robot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before initiating an outbound call using the Intelligent Contact Robot, ensure that you already have a reviewed and approved script in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface and an approved real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</description></item>
+        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after invoking this API.  <remarks>
+        /// <para>For example, if the <b>date</b> parameter is: <c>&quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;</c>, then the call creation time is: <c>&quot;2024-06-24 03:40:31&quot;</c>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RobotCallRequest
         /// </param>
@@ -21856,6 +27451,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return RobotCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an outbound call using the Intelligent Contact Robot.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before initiating an outbound call using the Intelligent Contact Robot, ensure that you already have a reviewed and approved script in the <a href="https://aiccs.console.aliyun.com/patter/list">Script Management</a> interface and an approved real number in the Voice Service <a href="https://dyvmsnext.console.aliyun.com/number/list/normal">Real Number Management</a> interface.</description></item>
+        /// <item><description>You can obtain the creation time of the call from the <b>date</b> parameter in the <b>Response Header</b> after invoking this API.  <remarks>
+        /// <para>For example, if the <b>date</b> parameter is: <c>&quot;date&quot;: &quot;Mon, 24 Jun 2024 03:40:31 GMT&quot;</c>, then the call creation time is: <c>&quot;2024-06-24 03:40:31&quot;</c>.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 1000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttle will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// RobotCallRequest
         /// </param>
@@ -21869,6 +27488,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await RobotCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an Intelligent Speech Interaction call based on the callee\&quot;s caller ID, callee number, and intelligent outbound call audio file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The following characters cannot appear in the Intelligent Speech Interaction SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.  </description></item>
+        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique receipt ID for this call, which can be used when invoking the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries Per Second (QPS) Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendCcoSmartCallRequest
         /// </param>
@@ -22030,6 +27670,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<SendCcoSmartCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an Intelligent Speech Interaction call based on the callee\&quot;s caller ID, callee number, and intelligent outbound call audio file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The following characters cannot appear in the Intelligent Speech Interaction SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.  </description></item>
+        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique receipt ID for this call, which can be used when invoking the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries Per Second (QPS) Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendCcoSmartCallRequest
         /// </param>
@@ -22191,6 +27852,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<SendCcoSmartCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an Intelligent Speech Interaction call based on the callee\&quot;s caller ID, callee number, and intelligent outbound call audio file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The following characters cannot appear in the Intelligent Speech Interaction SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.  </description></item>
+        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique receipt ID for this call, which can be used when invoking the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries Per Second (QPS) Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendCcoSmartCallRequest
         /// </param>
@@ -22204,6 +27886,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return SendCcoSmartCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an Intelligent Speech Interaction call based on the callee\&quot;s caller ID, callee number, and intelligent outbound call audio file.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The following characters cannot appear in the Intelligent Speech Interaction SendCcoSmartCall callback: <c>@ = : &quot;&quot; $ { } ^ * ￥</c>.  </description></item>
+        /// <item><description>After invoking this API, the <b>Data</b> field in the response contains the unique receipt ID for this call, which can be used when invoking the <a href="https://help.aliyun.com/document_detail/2718013.html">SendCcoSmartCallOperate</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries Per Second (QPS) Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.  </description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendCcoSmartCallRequest
         /// </param>
@@ -22217,6 +27920,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await SendCcoSmartCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a specified action during an Intelligent Outbound Call, applicable only to scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API can be successfully invoked only during an ongoing Intelligent Outbound Call. When invoking it, note that the <b>CallId</b> in the request parameters must be set to the unique receipt ID of the active call.  </description></item>
+        /// <item><description>The <b>CallId</b> is the <b>Data</b> parameter returned when you invoke the <a href="https://help.aliyun.com/document_detail/2718012.html">SendCcoSmartCall</a> API.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendCcoSmartCallOperateRequest
         /// </param>
@@ -22278,6 +27994,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<SendCcoSmartCallOperateResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a specified action during an Intelligent Outbound Call, applicable only to scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API can be successfully invoked only during an ongoing Intelligent Outbound Call. When invoking it, note that the <b>CallId</b> in the request parameters must be set to the unique receipt ID of the active call.  </description></item>
+        /// <item><description>The <b>CallId</b> is the <b>Data</b> parameter returned when you invoke the <a href="https://help.aliyun.com/document_detail/2718012.html">SendCcoSmartCall</a> API.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendCcoSmartCallOperateRequest
         /// </param>
@@ -22339,6 +28068,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<SendCcoSmartCallOperateResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a specified action during an Intelligent Outbound Call, applicable only to scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API can be successfully invoked only during an ongoing Intelligent Outbound Call. When invoking it, note that the <b>CallId</b> in the request parameters must be set to the unique receipt ID of the active call.  </description></item>
+        /// <item><description>The <b>CallId</b> is the <b>Data</b> parameter returned when you invoke the <a href="https://help.aliyun.com/document_detail/2718012.html">SendCcoSmartCall</a> API.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendCcoSmartCallOperateRequest
         /// </param>
@@ -22352,6 +28094,19 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return SendCcoSmartCallOperateWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates a specified action during an Intelligent Outbound Call, applicable only to scenarios such as parallel transfer to a human agent or allowing a human agent to listen in on the man-machine dialogue.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API can be successfully invoked only during an ongoing Intelligent Outbound Call. When invoking it, note that the <b>CallId</b> in the request parameters must be set to the unique receipt ID of the active call.  </description></item>
+        /// <item><description>The <b>CallId</b> is the <b>Data</b> parameter returned when you invoke the <a href="https://help.aliyun.com/document_detail/2718012.html">SendCcoSmartCall</a> API.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendCcoSmartCallOperateRequest
         /// </param>
@@ -22365,6 +28120,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await SendCcoSmartCallOperateWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Send a hotline heartbeat request based on the instance ID, agent account name, and heartbeat signature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendHotlineHeartBeatRequest
         /// </param>
@@ -22414,6 +28186,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<SendHotlineHeartBeatResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Send a hotline heartbeat request based on the instance ID, agent account name, and heartbeat signature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendHotlineHeartBeatRequest
         /// </param>
@@ -22463,6 +28252,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<SendHotlineHeartBeatResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Send a hotline heartbeat request based on the instance ID, agent account name, and heartbeat signature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendHotlineHeartBeatRequest
         /// </param>
@@ -22476,6 +28282,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return SendHotlineHeartBeatWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Send a hotline heartbeat request based on the instance ID, agent account name, and heartbeat signature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SendHotlineHeartBeatRequest
         /// </param>
@@ -22491,8 +28314,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动任务</para>
+        /// <para>Starts a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you start a call task, ensure its status is Stopped.</description></item>
+        /// <item><description>If you do not have a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAiCallTaskRequest
@@ -22545,8 +28376,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动任务</para>
+        /// <para>Starts a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you start a call task, ensure its status is Stopped.</description></item>
+        /// <item><description>If you do not have a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAiCallTaskRequest
@@ -22599,8 +28438,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动任务</para>
+        /// <para>Starts a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you start a call task, ensure its status is Stopped.</description></item>
+        /// <item><description>If you do not have a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAiCallTaskRequest
@@ -22617,8 +28464,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动任务</para>
+        /// <para>Starts a call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you start a call task, ensure its status is Stopped.</description></item>
+        /// <item><description>If you do not have a call task, create one on the <b>Call Task Management</b> page or by calling the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAiCallTaskRequest
@@ -22635,8 +28490,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动智能外呼任务</para>
+        /// <para>Start an outbound calling job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to start an outbound calling job that is in the paused state.  </description></item>
+        /// <item><description>An outbound calling job in the stopped state cannot be started again.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 20 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAiOutboundTaskRequest
@@ -22681,8 +28552,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动智能外呼任务</para>
+        /// <para>Start an outbound calling job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to start an outbound calling job that is in the paused state.  </description></item>
+        /// <item><description>An outbound calling job in the stopped state cannot be started again.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 20 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAiOutboundTaskRequest
@@ -22727,8 +28614,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动智能外呼任务</para>
+        /// <para>Start an outbound calling job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to start an outbound calling job that is in the paused state.  </description></item>
+        /// <item><description>An outbound calling job in the stopped state cannot be started again.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 20 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAiOutboundTaskRequest
@@ -22745,8 +28648,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>启动智能外呼任务</para>
+        /// <para>Start an outbound calling job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to start an outbound calling job that is in the paused state.  </description></item>
+        /// <item><description>An outbound calling job in the stopped state cannot be started again.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times per second.  </description></item>
+        /// <item><description>API invocation frequency: 20 times per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartAiOutboundTaskRequest
@@ -22761,6 +28680,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await StartAiOutboundTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an outbound call based on the instance ID, agent account name, hotline outbound caller number, and callee number.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartCallRequest
         /// </param>
@@ -22814,6 +28750,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<StartCallResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an outbound call based on the instance ID, agent account name, hotline outbound caller number, and callee number.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartCallRequest
         /// </param>
@@ -22867,6 +28820,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<StartCallResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an outbound call based on the instance ID, agent account name, hotline outbound caller number, and callee number.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartCallRequest
         /// </param>
@@ -22880,6 +28850,23 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return StartCallWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiate an outbound call based on the instance ID, agent account name, hotline outbound caller number, and callee number.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartCallRequest
         /// </param>
@@ -22893,6 +28880,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await StartCallWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke StartCallV2 to initiate an outbound call V2.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartCallV2Request
         /// </param>
@@ -22950,6 +28942,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<StartCallV2Response>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke StartCallV2 to initiate an outbound call V2.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartCallV2Request
         /// </param>
@@ -23007,6 +29004,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<StartCallV2Response>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke StartCallV2 to initiate an outbound call V2.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartCallV2Request
         /// </param>
@@ -23020,6 +29022,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return StartCallV2WithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke StartCallV2 to initiate an outbound call V2.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartCallV2Request
         /// </param>
@@ -23035,7 +29042,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改在线客服为上班状态</para>
+        /// <para>Invoke StartChatWork to switch an online agent to the working status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23081,7 +29088,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改在线客服为上班状态</para>
+        /// <para>Invoke StartChatWork to switch an online agent to the working status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23127,7 +29134,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改在线客服为上班状态</para>
+        /// <para>Invoke StartChatWork to switch an online agent to the working status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23145,7 +29152,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改在线客服为上班状态</para>
+        /// <para>Invoke StartChatWork to switch an online agent to the working status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23161,6 +29168,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await StartChatWorkWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sign in a hotline agent by instance ID and agent account name to start the hotline service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>Data</b> parameter returned by this API is the token required to initiate a heartbeat.  </description></item>
+        /// <item><description>If the agent takes a break, you can pause the hotline service by invoking the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartHotlineServiceRequest
         /// </param>
@@ -23206,6 +29234,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<StartHotlineServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sign in a hotline agent by instance ID and agent account name to start the hotline service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>Data</b> parameter returned by this API is the token required to initiate a heartbeat.  </description></item>
+        /// <item><description>If the agent takes a break, you can pause the hotline service by invoking the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartHotlineServiceRequest
         /// </param>
@@ -23251,6 +29300,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<StartHotlineServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sign in a hotline agent by instance ID and agent account name to start the hotline service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>Data</b> parameter returned by this API is the token required to initiate a heartbeat.  </description></item>
+        /// <item><description>If the agent takes a break, you can pause the hotline service by invoking the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartHotlineServiceRequest
         /// </param>
@@ -23264,6 +29334,27 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return StartHotlineServiceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sign in a hotline agent by instance ID and agent account name to start the hotline service.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>The <b>Data</b> parameter returned by this API is the token required to initiate a heartbeat.  </description></item>
+        /// <item><description>If the agent takes a break, you can pause the hotline service by invoking the <a href="https://help.aliyun.com/document_detail/2718046.html">SuspendHotlineService</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// StartHotlineServiceRequest
         /// </param>
@@ -23277,6 +29368,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await StartHotlineServiceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the StartMicroOutbound API to initiate an outbound call request.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartMicroOutboundRequest
         /// </param>
@@ -23354,6 +29450,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<StartMicroOutboundResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the StartMicroOutbound API to initiate an outbound call request.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartMicroOutboundRequest
         /// </param>
@@ -23431,6 +29532,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<StartMicroOutboundResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the StartMicroOutbound API to initiate an outbound call request.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartMicroOutboundRequest
         /// </param>
@@ -23444,6 +29550,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return StartMicroOutboundWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the StartMicroOutbound API to initiate an outbound call request.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// StartMicroOutboundRequest
         /// </param>
@@ -23459,8 +29570,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>立即或定时启动智能外呼任务</para>
+        /// <para>Start a successfully created Intelligent Contact Robot calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to start a successfully created Intelligent Contact Robot calling job, or manually start the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully created Intelligent Contact Robot outbound calling job, you can click to create a job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or create one by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartTaskRequest
@@ -23517,8 +29645,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>立即或定时启动智能外呼任务</para>
+        /// <para>Start a successfully created Intelligent Contact Robot calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to start a successfully created Intelligent Contact Robot calling job, or manually start the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully created Intelligent Contact Robot outbound calling job, you can click to create a job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or create one by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartTaskRequest
@@ -23575,8 +29720,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>立即或定时启动智能外呼任务</para>
+        /// <para>Start a successfully created Intelligent Contact Robot calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to start a successfully created Intelligent Contact Robot calling job, or manually start the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully created Intelligent Contact Robot outbound calling job, you can click to create a job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or create one by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartTaskRequest
@@ -23593,8 +29755,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>立即或定时启动智能外呼任务</para>
+        /// <para>Start a successfully created Intelligent Contact Robot calling job.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can invoke this API to start a successfully created Intelligent Contact Robot calling job, or manually start the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully created Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully created Intelligent Contact Robot outbound calling job, you can click to create a job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> page or create one by using the <a href="https://help.aliyun.com/document_detail/2718003.html">CreateTask</a> API.</description></item>
+        /// </list>
+        /// <h3>queries per second (QPS) Limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StartTaskRequest
@@ -23611,8 +29790,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止任务</para>
+        /// <para>Stops an outbound call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you stop an outbound call task, ensure that the task has been created and its status is <c>running</c>.</description></item>
+        /// <item><description>If you have not created an outbound call task, create one on the Outbound Task Management page or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAiCallTaskRequest
@@ -23665,8 +29852,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止任务</para>
+        /// <para>Stops an outbound call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you stop an outbound call task, ensure that the task has been created and its status is <c>running</c>.</description></item>
+        /// <item><description>If you have not created an outbound call task, create one on the Outbound Task Management page or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAiCallTaskRequest
@@ -23719,8 +29914,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止任务</para>
+        /// <para>Stops an outbound call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you stop an outbound call task, ensure that the task has been created and its status is <c>running</c>.</description></item>
+        /// <item><description>If you have not created an outbound call task, create one on the Outbound Task Management page or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAiCallTaskRequest
@@ -23737,8 +29940,16 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止任务</para>
+        /// <para>Stops an outbound call task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before you stop an outbound call task, ensure that the task has been created and its status is <c>running</c>.</description></item>
+        /// <item><description>If you have not created an outbound call task, create one on the Outbound Task Management page or call the <a href="https://help.aliyun.com/document_detail/2926796.html">CreateAiCallTask</a> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAiCallTaskRequest
@@ -23755,8 +29966,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动暂停智能外呼任务</para>
+        /// <para>Pause an outbound calling job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After pausing an outbound calling job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718027.html">StartAiOutboundTask</a> API to restart it.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAiOutboundTaskRequest
@@ -23801,8 +30025,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动暂停智能外呼任务</para>
+        /// <para>Pause an outbound calling job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After pausing an outbound calling job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718027.html">StartAiOutboundTask</a> API to restart it.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAiOutboundTaskRequest
@@ -23847,8 +30084,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动暂停智能外呼任务</para>
+        /// <para>Pause an outbound calling job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After pausing an outbound calling job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718027.html">StartAiOutboundTask</a> API to restart it.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAiOutboundTaskRequest
@@ -23865,8 +30115,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>手动暂停智能外呼任务</para>
+        /// <para>Pause an outbound calling job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>After pausing an outbound calling job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718027.html">StartAiOutboundTask</a> API to restart it.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopAiOutboundTaskRequest
@@ -23883,8 +30146,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停外呼任务</para>
+        /// <para>Pause an Intelligent Contact Robot calling job that has been successfully started.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to pause an Intelligent Contact Robot calling job that has been successfully started, or manually pause the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully started Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully started Intelligent Contact Robot calling job, click <b>Start</b> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or start a job by using the <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopTaskRequest
@@ -23937,8 +30217,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停外呼任务</para>
+        /// <para>Pause an Intelligent Contact Robot calling job that has been successfully started.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to pause an Intelligent Contact Robot calling job that has been successfully started, or manually pause the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully started Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully started Intelligent Contact Robot calling job, click <b>Start</b> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or start a job by using the <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopTaskRequest
@@ -23991,8 +30288,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停外呼任务</para>
+        /// <para>Pause an Intelligent Contact Robot calling job that has been successfully started.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to pause an Intelligent Contact Robot calling job that has been successfully started, or manually pause the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully started Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully started Intelligent Contact Robot calling job, click <b>Start</b> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or start a job by using the <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopTaskRequest
@@ -24009,8 +30323,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停外呼任务</para>
+        /// <para>Pause an Intelligent Contact Robot calling job that has been successfully started.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>You can use this API to pause an Intelligent Contact Robot calling job that has been successfully started, or manually pause the job on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface.</description></item>
+        /// <item><description>Before invoking this API, ensure that you already have a successfully started Intelligent Contact Robot calling job.</description></item>
+        /// <item><description>If you do not have a successfully started Intelligent Contact Robot calling job, click <b>Start</b> on the <a href="https://aiccs.console.aliyun.com/job/list">Task Management</a> interface or start a job by using the <a href="https://help.aliyun.com/document_detail/2718005.html">StartTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 500 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// StopTaskRequest
@@ -24025,6 +30356,168 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await StopTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a recording notes task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAudioNoteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAudioNoteResponse
+        /// </returns>
+        public SubmitAudioNoteResponse SubmitAudioNoteWithOptions(SubmitAudioNoteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                query["FilePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmModelId))
+            {
+                query["LlmModelId"] = request.LlmModelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAudioNote",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAudioNoteResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a recording notes task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAudioNoteRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAudioNoteResponse
+        /// </returns>
+        public async Task<SubmitAudioNoteResponse> SubmitAudioNoteWithOptionsAsync(SubmitAudioNoteRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["AgentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
+            {
+                query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                query["FilePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmModelId))
+            {
+                query["LlmModelId"] = request.LlmModelId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAudioNote",
+                Version = "2019-10-15",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAudioNoteResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a recording notes task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAudioNoteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAudioNoteResponse
+        /// </returns>
+        public SubmitAudioNoteResponse SubmitAudioNote(SubmitAudioNoteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitAudioNoteWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a recording notes task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitAudioNoteRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAudioNoteResponse
+        /// </returns>
+        public async Task<SubmitAudioNoteResponse> SubmitAudioNoteAsync(SubmitAudioNoteRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitAudioNoteWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pause hotline service when an agent takes a short break.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the break ends and you need to resume hotline service, you can invoke the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> API.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SuspendHotlineServiceRequest
         /// </param>
@@ -24074,6 +30567,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<SuspendHotlineServiceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pause hotline service when an agent takes a short break.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the break ends and you need to resume hotline service, you can invoke the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> API.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SuspendHotlineServiceRequest
         /// </param>
@@ -24123,6 +30634,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<SuspendHotlineServiceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pause hotline service when an agent takes a short break.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the break ends and you need to resume hotline service, you can invoke the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> API.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SuspendHotlineServiceRequest
         /// </param>
@@ -24136,6 +30665,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return SuspendHotlineServiceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Pause hotline service when an agent takes a short break.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>If the break ends and you need to resume hotline service, you can invoke the <a href="https://help.aliyun.com/document_detail/2718045.html">StartHotlineService</a> API.</para>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 100 queries per second (QPS).<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// SuspendHotlineServiceRequest
         /// </param>
@@ -24259,8 +30806,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止智能外呼任务</para>
+        /// <para>Terminate an outbound call job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API supports terminating an outbound call job. Once terminated, the job cannot be restarted.</description></item>
+        /// <item><description>To temporarily stop an outbound call job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718024.html">StopAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API-wide invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TerminateAiOutboundTaskRequest
@@ -24305,8 +30868,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止智能外呼任务</para>
+        /// <para>Terminate an outbound call job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API supports terminating an outbound call job. Once terminated, the job cannot be restarted.</description></item>
+        /// <item><description>To temporarily stop an outbound call job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718024.html">StopAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API-wide invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TerminateAiOutboundTaskRequest
@@ -24351,8 +30930,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止智能外呼任务</para>
+        /// <para>Terminate an outbound call job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API supports terminating an outbound call job. Once terminated, the job cannot be restarted.</description></item>
+        /// <item><description>To temporarily stop an outbound call job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718024.html">StopAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API-wide invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TerminateAiOutboundTaskRequest
@@ -24369,8 +30964,24 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>终止智能外呼任务</para>
+        /// <para>Terminate an outbound call job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API supports terminating an outbound call job. Once terminated, the job cannot be restarted.</description></item>
+        /// <item><description>To temporarily stop an outbound call job, you can invoke the <a href="https://help.aliyun.com/document_detail/2718024.html">StopAiOutboundTask</a> API.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 20 times/second.</description></item>
+        /// <item><description>API-wide invocation frequency: 20 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// TerminateAiOutboundTaskRequest
@@ -24557,6 +31168,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await TestLargeModelWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferCallToSkillGroup API to execute a single-step or two-step transfer to a skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferCallToSkillGroupRequest
         /// </param>
@@ -24630,6 +31246,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<TransferCallToSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferCallToSkillGroup API to execute a single-step or two-step transfer to a skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferCallToSkillGroupRequest
         /// </param>
@@ -24703,6 +31324,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<TransferCallToSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferCallToSkillGroup API to execute a single-step or two-step transfer to a skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferCallToSkillGroupRequest
         /// </param>
@@ -24716,6 +31342,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TransferCallToSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke the TransferCallToSkillGroup API to execute a single-step or two-step transfer to a skill group.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// TransferCallToSkillGroupRequest
         /// </param>
@@ -24729,6 +31360,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await TransferCallToSkillGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify agent information in the Cloud Customer Service System based on the instance ID and agent account name. You can modify the agent\&quot;s display name and the skill groups to which the agent belongs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, we recommend that you confirm your Artificial Intelligence Cloud Call Service (AICCS) instance ID. For guidance on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>After the update, you can invoke the <a href="https://help.aliyun.com/document_detail/2717961.html">GetAgent</a> API to confirm whether the update meets your expectations.<remarks>
+        /// <para>Currently, only the display name and assigned skill groups can be modified.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAgentRequest
         /// </param>
@@ -24786,6 +31441,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<UpdateAgentResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify agent information in the Cloud Customer Service System based on the instance ID and agent account name. You can modify the agent\&quot;s display name and the skill groups to which the agent belongs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, we recommend that you confirm your Artificial Intelligence Cloud Call Service (AICCS) instance ID. For guidance on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>After the update, you can invoke the <a href="https://help.aliyun.com/document_detail/2717961.html">GetAgent</a> API to confirm whether the update meets your expectations.<remarks>
+        /// <para>Currently, only the display name and assigned skill groups can be modified.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAgentRequest
         /// </param>
@@ -24843,6 +31522,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<UpdateAgentResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify agent information in the Cloud Customer Service System based on the instance ID and agent account name. You can modify the agent\&quot;s display name and the skill groups to which the agent belongs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, we recommend that you confirm your Artificial Intelligence Cloud Call Service (AICCS) instance ID. For guidance on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>After the update, you can invoke the <a href="https://help.aliyun.com/document_detail/2717961.html">GetAgent</a> API to confirm whether the update meets your expectations.<remarks>
+        /// <para>Currently, only the display name and assigned skill groups can be modified.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAgentRequest
         /// </param>
@@ -24856,6 +31559,30 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return UpdateAgentWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modify agent information in the Cloud Customer Service System based on the instance ID and agent account name. You can modify the agent\&quot;s display name and the skill groups to which the agent belongs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Before invoking this API, we recommend that you confirm your Artificial Intelligence Cloud Call Service (AICCS) instance ID. For guidance on how to obtain it, see the description of <a href="#api-detail-35">Request Parameters</a>.</description></item>
+        /// <item><description>After the update, you can invoke the <a href="https://help.aliyun.com/document_detail/2717961.html">GetAgent</a> API to confirm whether the update meets your expectations.<remarks>
+        /// <para>Currently, only the display name and assigned skill groups can be modified.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API-wide invocation frequency: 100 queries per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API-wide frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateAgentRequest
         /// </param>
@@ -24871,8 +31598,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI外呼任务配置</para>
+        /// <para>Updates a call task configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ensure the call task is stopped before you update its configuration.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateAiCallTaskRequest
@@ -24999,8 +31731,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI外呼任务配置</para>
+        /// <para>Updates a call task configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ensure the call task is stopped before you update its configuration.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateAiCallTaskRequest
@@ -25127,8 +31864,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI外呼任务配置</para>
+        /// <para>Updates a call task configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ensure the call task is stopped before you update its configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAiCallTaskRequest
@@ -25145,8 +31887,13 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新AI外呼任务配置</para>
+        /// <para>Updates a call task configuration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Ensure the call task is stopped before you update its configuration.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAiCallTaskRequest
@@ -25163,8 +31910,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能外呼任务（预测式外呼、自动外呼）</para>
+        /// <para>Update an outbound call job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API supports updating information such as the task name, task description, outbound caller number, and skill group ID. For details, see <a href="#api-detail-35">Request Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 20 times per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateAiOutboundTaskRequest
@@ -25255,8 +32015,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能外呼任务（预测式外呼、自动外呼）</para>
+        /// <para>Update an outbound call job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API supports updating information such as the task name, task description, outbound caller number, and skill group ID. For details, see <a href="#api-detail-35">Request Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 20 times per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateAiOutboundTaskRequest
@@ -25347,8 +32120,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能外呼任务（预测式外呼、自动外呼）</para>
+        /// <para>Update an outbound call job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API supports updating information such as the task name, task description, outbound caller number, and skill group ID. For details, see <a href="#api-detail-35">Request Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 20 times per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAiOutboundTaskRequest
@@ -25365,8 +32151,21 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新智能外呼任务（预测式外呼、自动外呼）</para>
+        /// <para>Update an outbound call job by instance ID and job ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This API supports updating information such as the task name, task description, outbound caller number, and skill group ID. For details, see <a href="#api-detail-35">Request Parameters</a>.</para>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: No rate limiting.</description></item>
+        /// <item><description>API frequency: 20 times per second.<remarks>
+        /// <para>Throttling is triggered if the total invocations from multiple users exceed the API frequency limit.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateAiOutboundTaskRequest
@@ -25383,8 +32182,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新部门信息</para>
+        /// <para>Update the department name based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API supports updating only the department name and does not support updating the department ID.  </description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>After the update is complete, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API to confirm whether the department information matches your expectations.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDepartmentRequest
@@ -25433,8 +32249,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新部门信息</para>
+        /// <para>Update the department name based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API supports updating only the department name and does not support updating the department ID.  </description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>After the update is complete, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API to confirm whether the department information matches your expectations.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDepartmentRequest
@@ -25483,8 +32316,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新部门信息</para>
+        /// <para>Update the department name based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API supports updating only the department name and does not support updating the department ID.  </description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>After the update is complete, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API to confirm whether the department information matches your expectations.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDepartmentRequest
@@ -25501,8 +32351,25 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新部门信息</para>
+        /// <para>Update the department name based on the Artificial Intelligence Cloud Call Service (AICCS) instance ID and department ID.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API supports updating only the department name and does not support updating the department ID.  </description></item>
+        /// <item><description>Before invoking this API, we recommend that you confirm the AICCS instance ID and department ID. For guidance on how to obtain them, see the instructions in <a href="#api-detail-35">Request Parameters</a>.  </description></item>
+        /// <item><description>After the update is complete, you can invoke the <a href="https://help.aliyun.com/document_detail/2717975.html">GetAllDepartment</a> API to confirm whether the department information matches your expectations.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limits</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user invocation frequency: 100 times/second.  </description></item>
+        /// <item><description>API-wide invocation frequency: 100 times/second.<remarks>
+        /// <para>If the total invocations from multiple users exceed the API-wide frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateDepartmentRequest
@@ -25519,7 +32386,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateLargeModel</para>
+        /// <para>Updates a large language model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25607,7 +32474,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateLargeModel</para>
+        /// <para>Updates a large language model.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25695,7 +32562,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateLargeModel</para>
+        /// <para>Updates a large language model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25713,7 +32580,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>UpdateLargeModel</para>
+        /// <para>Updates a large language model.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25731,7 +32598,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改模型应用</para>
+        /// <para>Edit Model Application</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -25810,6 +32677,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["DtmfRetryPromptText"] = request.DtmfRetryPromptText;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtmfSendMaxCount))
+            {
+                query["DtmfSendMaxCount"] = request.DtmfSendMaxCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtmfSendWaitTimeout))
+            {
+                query["DtmfSendWaitTimeout"] = request.DtmfSendWaitTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DyvmsSceneName))
             {
                 query["DyvmsSceneName"] = request.DyvmsSceneName;
@@ -25817,6 +32692,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDtmfReceive))
             {
                 query["EnableDtmfReceive"] = request.EnableDtmfReceive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDtmfSend))
+            {
+                query["EnableDtmfSend"] = request.EnableDtmfSend;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMorse))
             {
@@ -25845,6 +32724,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MuteHangupNum))
             {
                 query["MuteHangupNum"] = request.MuteHangupNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MutePushMode))
+            {
+                query["MutePushMode"] = request.MutePushMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -25927,7 +32810,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改模型应用</para>
+        /// <para>Edit Model Application</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -26006,6 +32889,14 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             {
                 query["DtmfRetryPromptText"] = request.DtmfRetryPromptText;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtmfSendMaxCount))
+            {
+                query["DtmfSendMaxCount"] = request.DtmfSendMaxCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DtmfSendWaitTimeout))
+            {
+                query["DtmfSendWaitTimeout"] = request.DtmfSendWaitTimeout;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DyvmsSceneName))
             {
                 query["DyvmsSceneName"] = request.DyvmsSceneName;
@@ -26013,6 +32904,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDtmfReceive))
             {
                 query["EnableDtmfReceive"] = request.EnableDtmfReceive;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableDtmfSend))
+            {
+                query["EnableDtmfSend"] = request.EnableDtmfSend;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableMorse))
             {
@@ -26041,6 +32936,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MuteHangupNum))
             {
                 query["MuteHangupNum"] = request.MuteHangupNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MutePushMode))
+            {
+                query["MutePushMode"] = request.MutePushMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
@@ -26123,7 +33022,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改模型应用</para>
+        /// <para>Edit Model Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26141,7 +33040,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改模型应用</para>
+        /// <para>Edit Model Application</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26157,6 +33056,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await UpdateModelApplicationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke UpdateOuterAccount to update an external account based on the external account ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateOuterAccountRequest
         /// </param>
@@ -26190,6 +33094,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<UpdateOuterAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke UpdateOuterAccount to update an external account based on the external account ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateOuterAccountRequest
         /// </param>
@@ -26223,6 +33132,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<UpdateOuterAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke UpdateOuterAccount to update an external account based on the external account ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateOuterAccountRequest
         /// </param>
@@ -26236,6 +33150,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return UpdateOuterAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invoke UpdateOuterAccount to update an external account based on the external account ID.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateOuterAccountRequest
         /// </param>
@@ -26249,6 +33168,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return await UpdateOuterAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the skill group information in the Cloud Customer Service System based on the AICCS instance ID and skill group ID. This API supports updating the skill group description and display name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API does not support updating the skill group ID or skill group name.  </description></item>
+        /// <item><description>After the update, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to query the skill group information.  </description></item>
+        /// <item><description>If you need to provide the AICCS instance ID and skill group ID, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: No rate limiting.</description></item>
+        /// <item><description>API call frequency: 1000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupRequest
         /// </param>
@@ -26306,6 +33247,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<UpdateSkillGroupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the skill group information in the Cloud Customer Service System based on the AICCS instance ID and skill group ID. This API supports updating the skill group description and display name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API does not support updating the skill group ID or skill group name.  </description></item>
+        /// <item><description>After the update, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to query the skill group information.  </description></item>
+        /// <item><description>If you need to provide the AICCS instance ID and skill group ID, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: No rate limiting.</description></item>
+        /// <item><description>API call frequency: 1000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupRequest
         /// </param>
@@ -26363,6 +33326,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return TeaModel.ToObject<UpdateSkillGroupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the skill group information in the Cloud Customer Service System based on the AICCS instance ID and skill group ID. This API supports updating the skill group description and display name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API does not support updating the skill group ID or skill group name.  </description></item>
+        /// <item><description>After the update, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to query the skill group information.  </description></item>
+        /// <item><description>If you need to provide the AICCS instance ID and skill group ID, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: No rate limiting.</description></item>
+        /// <item><description>API call frequency: 1000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupRequest
         /// </param>
@@ -26376,6 +33361,28 @@ namespace AlibabaCloud.SDK.Aiccs20191015
             return UpdateSkillGroupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Update the skill group information in the Cloud Customer Service System based on the AICCS instance ID and skill group ID. This API supports updating the skill group description and display name.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>This API does not support updating the skill group ID or skill group name.  </description></item>
+        /// <item><description>After the update, you can invoke the <a href="https://help.aliyun.com/zh/aiccs/developer-reference/api-aiccs-2019-10-15-queryskillgroups">QuerySkillGroups</a> API to query the skill group information.  </description></item>
+        /// <item><description>If you need to provide the AICCS instance ID and skill group ID, refer to the instructions in the <a href="#api-detail-35">Request Parameters</a> section.</description></item>
+        /// </list>
+        /// <h3>Queries per second (QPS) limit</h3>
+        /// <list type="bullet">
+        /// <item><description>Per-user call frequency: No rate limiting.</description></item>
+        /// <item><description>API call frequency: 1000 calls per second.<remarks>
+        /// <para>If the total calls from multiple users exceed the API frequency limit, throttling will be triggered.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateSkillGroupRequest
         /// </param>

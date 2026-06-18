@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class QueryTicketsResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code. A return value of 200 indicates that the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>Ticket information.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{ &quot;totalResults&quot;:1 &quot;previousPage&quot;:1 &quot;data&quot;:[ 0:{ &quot;serviceType&quot;:1 &quot;lastUrgeTime&quot;:0 &quot;queueId&quot;:0 &quot;sopCateId&quot;:252011 &quot;totalUrgeMemo&quot;:&quot;&quot; &quot;taskGmtModified&quot;:0 &quot;departmentId&quot;:10 &quot;groupId&quot;:0 &quot;channelType&quot;:1 &quot;questionInfo&quot;:&quot;&quot; &quot;templateId&quot;:0 &quot;deadLine&quot;:0 &quot;srType&quot;:30701 &quot;caseId&quot;:2000000001165962}</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Data { get; set; }
 
         /// <summary>
+        /// <para>Description of the status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EE338D98-9BD3-4413-B165</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the API call succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

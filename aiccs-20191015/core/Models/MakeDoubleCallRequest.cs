@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class MakeDoubleCallRequest : TeaModel {
         /// <summary>
+        /// <para>Account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>Business data carried in the request. The value must be in JSON format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;bizId&quot;: 123456}</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string BizData { get; set; }
 
         /// <summary>
+        /// <para>Artificial Intelligence Cloud Call Service (AICCS) instance ID. You can obtain it from the Artificial Intelligence Cloud Call Service console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>User\&quot;s phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string MemberPhone { get; set; }
 
         /// <summary>
+        /// <para>Outbound caller number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +64,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string OutboundCallNumber { get; set; }
 
         /// <summary>
+        /// <para>Agent\&quot;s phone number.  </para>
+        /// <remarks>
+        /// <para>This parameter is required only if the call needs to be placed through the agent\&quot;s phone.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>150****1234</para>
         /// </summary>

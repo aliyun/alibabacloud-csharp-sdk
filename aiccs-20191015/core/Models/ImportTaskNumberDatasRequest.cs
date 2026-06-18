@@ -10,6 +10,17 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class ImportTaskNumberDatasRequest : TeaModel {
         /// <summary>
+        /// <para>The data type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>EXCEL</para>
+        /// </description></item>
+        /// <item><description><para>JSON</para>
+        /// <remarks>
+        /// <para>Notice: </para>
+        /// </remarks>
+        /// <para>API calls currently support only the JSON data type.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +39,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? EncryptionType { get; set; }
 
         /// <summary>
+        /// <para>The OSS file path. This parameter is optional.</para>
+        /// <remarks>
+        /// <para>Importing data by specifying an OSS file path is not available because API calls currently support only the JSON data type.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>123dsdfsdfsdf.xlsx</para>
         /// </summary>
@@ -39,6 +55,9 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>If <c>DataType</c> is set to <c>JSON</c>, you must use this parameter to upload the data. You can import up to 1,000 records per request.</para>
+        /// </summary>
         [NameInMap("PhoneNumberList")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> PhoneNumberList { get; set; }
@@ -52,10 +71,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the call task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12131213132123*****</para>
+        /// <para>119181071278******</para>
         /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]

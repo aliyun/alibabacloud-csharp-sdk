@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class GetCallDialogContentRequest : TeaModel {
         /// <summary>
+        /// <para>The outbound call date, in yyyy-MM-dd format. You can only query data from the last 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallDate { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier for a call.</para>
+        /// <remarks>
+        /// <para>The LlmSmartCall API returns this ID in the CallId parameter of its response.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

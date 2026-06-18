@@ -10,6 +10,11 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class InsertAiOutboundPhoneNumsRequest : TeaModel {
         /// <summary>
+        /// <para>The batch version number of the job.  </para>
+        /// <remarks>
+        /// <para>If this parameter is not specified, numbers are imported into the default batch.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -18,6 +23,10 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public int? BatchVersion { get; set; }
 
         /// <summary>
+        /// <para>Number details.  </para>
+        /// <remarks>
+        /// <para>A maximum of 30 entries are allowed.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Details")]
@@ -25,6 +34,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public List<InsertAiOutboundPhoneNumsRequestDetails> Details { get; set; }
         public class InsertAiOutboundPhoneNumsRequestDetails : TeaModel {
             /// <summary>
+            /// <para>Custom business information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxxx</para>
             /// </summary>
@@ -33,6 +44,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
             public string BizData { get; set; }
 
             /// <summary>
+            /// <para>The callee number for outbound calls.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>150****0000</para>
             /// </summary>
@@ -43,6 +56,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         }
 
         /// <summary>
+        /// <para>The Artificial Intelligence Cloud Call Service (AICCS) instance ID.<br>You can obtain it from <b>Instance Management</b> in the left-side navigation pane of the <a href="https://aiccs.console.aliyun.com/overview">Artificial Intelligence Cloud Call Service console</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,6 +67,8 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The job ID.  </para>
+        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/312260.html">CreateAiOutboundTask</a> API and check the <b>Data</b> field in the response, or invoke the <a href="https://help.aliyun.com/document_detail/2718026.html">GetAiOutboundTaskList</a> API and check the <b>TaskId</b> field in the response.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
 {
     public class LlmFullDuplexCallOperateRequest : TeaModel {
         /// <summary>
-        /// <para>通话的唯一回执 ID。可通过 llmSmartCallFullDuplex 接口获取。</para>
+        /// <para>The unique receipt ID of the call. You can obtain this ID by calling the LlmSmartCallFullDuplex operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>动作指令：play / flush / hangup / sendDtmf</para>
+        /// <para>The action command: play / flush / hangup / sendDtmf.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Aiccs20191015.Models
         public string Command { get; set; }
 
         /// <summary>
-        /// <para>扩展参数，JSON 字符串。各 command 参数说明：</para>
+        /// <para>The extension parameter, a JSON character string. The metric description for each command:</para>
         /// 
         /// <b>Example:</b>
         /// <para>示例值示例值</para>
