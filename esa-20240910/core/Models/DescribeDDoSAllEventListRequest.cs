@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeDDoSAllEventListRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The maximum time range is 31 days.</para>
-        /// <para>If you do not configure this parameter, the current time is used as the end of the time range to query.</para>
+        /// <para>The end time of the query.</para>
+        /// <para>The time must be in ISO 8601 format and in UTC. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c>. The time range between <c>StartTime</c> and <c>EndTime</c> cannot exceed 31 days.</para>
+        /// <para>If this parameter is not specified, it defaults to the current time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-02-22T15:59:59Z</para>
@@ -22,13 +22,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The type of DDoS attacks to query. Valid values:</para>
+        /// <para>The type of DDoS attack events to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>web-cc</b>: web resource exhaustion attacks.</description></item>
-        /// <item><description><b>cc</b>: connection flood attacks.</description></item>
-        /// <item><description><b>traffic</b>: volumetric attacks.</description></item>
+        /// <item><description><para><b>web-cc</b>: A web resource exhaustion attack.</para>
+        /// </description></item>
+        /// <item><description><para><b>cc</b>: A connection-based attack.</para>
+        /// </description></item>
+        /// <item><description><para><b>traffic</b>: A traffic-based attack.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: web-cc.</para>
+        /// <para>If you do not specify this parameter, the operation queries <c>web-cc</c> events by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>web-cc</para>
@@ -38,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: <b>1</b> to <b>100000</b>.</para>
+        /// <para>The page number to return. Valid range: <b>1</b> to <b>100000</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: 5, 10, and 20.</para>
+        /// <para>The number of entries per page. Default value: <b>10</b>. Valid values: <b>5</b>, <b>10</b>, and <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,8 +73,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
+        /// <para>The start time of the query.</para>
+        /// <para>The time must be in ISO 8601 format and in UTC. Format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

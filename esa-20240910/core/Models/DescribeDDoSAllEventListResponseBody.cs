@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeDDoSAllEventListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The DDoS attack events.</para>
+        /// <para>A list of DDoS attack event details.</para>
         /// </summary>
         [NameInMap("DataList")]
         [Validation(Required=false)]
         public List<DescribeDDoSAllEventListResponseBodyDataList> DataList { get; set; }
         public class DescribeDDoSAllEventListResponseBodyDataList : TeaModel {
             /// <summary>
-            /// <para>The peak of volumetric attacks. Unit: bit/s.</para>
+            /// <para>The peak bits per second (Bps) of a volumetric attack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -26,12 +26,26 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public long? Bps { get; set; }
 
+            /// <summary>
+            /// <para>The attack region. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>domestic</b>: Chinese mainland.</para>
+            /// </description></item>
+            /// <item><description><para><b>global</b>: Global.</para>
+            /// </description></item>
+            /// <item><description><para><b>overseas</b>: global (excluding Chinese mainland).</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>domestic</para>
+            /// </summary>
             [NameInMap("Coverage")]
             [Validation(Required=false)]
             public string Coverage { get; set; }
 
             /// <summary>
-            /// <para>The peak of connection flood attacks. Unit: connections per seconds (CPS).</para>
+            /// <para>The peak connections per second (Cps) of a connection-based attack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50</para>
@@ -41,8 +55,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Cps { get; set; }
 
             /// <summary>
-            /// <para>The time when the DDoS attack ends.</para>
-            /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The end time of the DDoS attack event.</para>
+            /// <para>The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-12T15:59:59Z</para>
@@ -52,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The attack event ID.</para>
+            /// <para>The event ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>web-cc_1</para>
@@ -61,16 +75,33 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string EventId { get; set; }
 
+            /// <summary>
+            /// <para>The event result. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>clean</b>: The attack was successfully cleaned.</para>
+            /// </description></item>
+            /// <item><description><para><b>ratelimit</b>: Rate limiting was applied.</para>
+            /// </description></item>
+            /// <item><description><para><b>blackhole</b>: Blackhole filtering was triggered.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>clean</para>
+            /// </summary>
             [NameInMap("EventResult")]
             [Validation(Required=false)]
             public string EventResult { get; set; }
 
             /// <summary>
-            /// <para>The type of DDoS attacks that was queried. Valid values:</para>
+            /// <para>The type of the DDoS attack event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>web-cc</b>: web resource exhaustion attacks.</description></item>
-            /// <item><description><b>cc</b>: connection flood attacks.</description></item>
-            /// <item><description><b>traffic</b>: volumetric attacks.</description></item>
+            /// <item><description><para><b>web-cc</b>: A web resource exhaustion attack.</para>
+            /// </description></item>
+            /// <item><description><para><b>cc</b>: A connection-based attack.</para>
+            /// </description></item>
+            /// <item><description><para><b>traffic</b>: A volumetric attack.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +112,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EventType { get; set; }
 
             /// <summary>
-            /// <para>The peak of volumetric attacks. Unit: packets per second (PPS).</para>
+            /// <para>The peak packets per second (Pps) of a volumetric attack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12000</para>
@@ -91,7 +122,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Pps { get; set; }
 
             /// <summary>
-            /// <para>The peak QPS of web resource exhaustion attacks.</para>
+            /// <para>The peak queries per second (Qps) of a web resource exhaustion attack.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7692</para>
@@ -101,8 +132,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Qps { get; set; }
 
             /// <summary>
-            /// <para>The time when the DDoS attack starts.</para>
-            /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The start time of the DDoS attack event.</para>
+            /// <para>The time is in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format and is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-12T15:00:00Z</para>
@@ -122,7 +153,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>The ID of the web resource exhaustion attack target.</para>
+            /// <para>The ID of the attack target.</para>
             /// 
             /// <b>Example:</b>
             /// <para>000000000155****</para>
@@ -144,7 +175,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -164,7 +195,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7096621098****</para>

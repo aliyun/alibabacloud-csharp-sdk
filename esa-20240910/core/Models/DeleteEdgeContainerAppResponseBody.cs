@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the deletion is successful.</para>
+        /// <para>The deletion status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ok</para>

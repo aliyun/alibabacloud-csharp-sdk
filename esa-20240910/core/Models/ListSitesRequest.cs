@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListSitesRequest : TeaModel {
         /// <summary>
-        /// <para>The DNS setup. Valid values:</para>
+        /// <para>The access type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NS</b></description></item>
-        /// <item><description><b>CNAME</b></description></item>
+        /// <item><description><para><b>NS</b>: NS access.</para>
+        /// </description></item>
+        /// <item><description><para><b>CNAME</b>: CNAME access.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,11 +26,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AccessType { get; set; }
 
         /// <summary>
-        /// <para>The service location. Valid values:</para>
+        /// <para>The acceleration region. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>domestic</b>: the Chinese mainland</description></item>
-        /// <item><description><b>global</b>: global</description></item>
-        /// <item><description><b>overseas</b>: outside the Chinese mainland</description></item>
+        /// <item><description><para><b>domestic</b>: Chinese mainland only.</para>
+        /// </description></item>
+        /// <item><description><para><b>global</b>: Global.</para>
+        /// </description></item>
+        /// <item><description><para><b>overseas</b>: Global (excluding the Chinese mainland).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Coverage { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query only websites on Enterprise plans. Valid values: <b>true and false</b>.</para>
+        /// <para>Specifies whether to return only sites that use the Enterprise Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -49,10 +54,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? OnlyEnterprise { get; set; }
 
         /// <summary>
-        /// <para>Sorting field. By default, it sorts by creation time, supporting the following options:</para>
+        /// <para>The field to sort the results by. By default, results are sorted by creation time (gmtCreate). Supported values:</para>
         /// <list type="bullet">
-        /// <item><description>gmtCreate: website creation time</description></item>
-        /// <item><description>visitTime: website visit time</description></item>
+        /// <item><description><para><c>gmtCreate</c>: site creation time</para>
+        /// </description></item>
+        /// <item><description><para><c>visitTime</c>: site access time</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: <b>1</b>.</para>
+        /// <para>The number of the page to return. The default value is <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -73,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: <b>500</b>.</para>
+        /// <para>The number of entries to return on each page. The default value is <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -83,12 +90,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The plan type. Valid values:</para>
+        /// <para>The subscription plan type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>basicplan</b>: Entrance</description></item>
-        /// <item><description><b>standardplan</b>: Pro</description></item>
-        /// <item><description><b>advancedplan</b>: Premium</description></item>
-        /// <item><description><b>enterpriseplan</b>: Enterprise</description></item>
+        /// <item><description><para><b>basicplan</b>: Basic Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>standardplan</b>: Standard Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>advancedplan</b>: Advanced Edition.</para>
+        /// </description></item>
+        /// <item><description><para><b>enterpriseplan</b>: Enterprise Edition.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PlanSubscribeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group. This parameter specifies a filter condition for the query.</para>
+        /// <para>The resource group ID, used to filter query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-aekzd3styujvyei</para>
@@ -109,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The website name. This parameter specifies a filter condition for the query.</para>
+        /// <para>The site name, used to filter query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -119,12 +130,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>The match mode to search for the website name. Default value: exact. Valid values:</para>
+        /// <para>The match mode for the <c>SiteName</c> parameter. The default value is <c>exact</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>prefix</b>: match by prefix.</description></item>
-        /// <item><description><b>suffix</b>: match by suffix.</description></item>
-        /// <item><description><b>exact</b>: exact match.</description></item>
-        /// <item><description><b>fuzzy</b>: fuzzy match.</description></item>
+        /// <item><description><para><b>prefix</b>: prefix match.</para>
+        /// </description></item>
+        /// <item><description><para><b>suffix</b>: suffix match.</para>
+        /// </description></item>
+        /// <item><description><para><b>exact</b>: exact match.</para>
+        /// </description></item>
+        /// <item><description><para><b>fuzzy</b>: fuzzy match.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -135,7 +150,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteSearchType { get; set; }
 
         /// <summary>
-        /// <para>The website status. This parameter specifies a filter condition for the query.</para>
+        /// <para>The site status, used to filter query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pending</para>
@@ -145,14 +160,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tag filtering rule.</para>
+        /// <para>A list of tags to use for filtering sites.</para>
         /// </summary>
         [NameInMap("TagFilter")]
         [Validation(Required=false)]
         public List<ListSitesRequestTagFilter> TagFilter { get; set; }
         public class ListSitesRequestTagFilter : TeaModel {
             /// <summary>
-            /// <para>The tag key. This parameter specifies a filter condition for the query.</para>
+            /// <para>The tag key, used to filter query results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>tag1</para>
@@ -162,7 +177,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. This parameter specifies a filter condition for the query.</para>
+            /// <para>The tag value, used to filter query results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aaa</para>

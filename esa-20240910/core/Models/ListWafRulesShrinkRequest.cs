@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Query page number, used for pagination.</para>
+        /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Query page size, used for pagination.</para>
+        /// <para>The number of items to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,10 +30,24 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>WAF rule type. Values:</para>
+        /// <para>The WAF rule execution phase. Valid values are:</para>
         /// <list type="bullet">
-        /// <item><description>http_anti_scan: Scan protection</description></item>
-        /// <item><description>http_bot: Bots</description></item>
+        /// <item><description><para><c>http_whitelist</c>: whitelist rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_custom</c>: custom rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_managed</c>: managed rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_anti_scan</c>: scan protection rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_ratelimit</c>: rate limiting rule</para>
+        /// </description></item>
+        /// <item><description><para><c>ip_access_rule</c>: IP access rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_bot</c>: Advanced bots</para>
+        /// </description></item>
+        /// <item><description><para><c>http_security_level_rule</c>: security rule</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>Query filter conditions.</para>
+        /// <para>Query filters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_custom</para>
@@ -54,12 +68,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string QueryArgsShrink { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the WAF ruleset. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10000001</para>
+        /// </summary>
         [NameInMap("RulesetId")]
         [Validation(Required=false)]
         public long? RulesetId { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Site version.</para>
+        /// <para>The site configuration version. For sites with configuration version management enabled, this parameter specifies the version to use. Defaults to 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

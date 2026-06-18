@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateWafRulesetResponseBody : TeaModel {
         /// <summary>
-        /// <para>Ruleset ID.</para>
+        /// <para>The ruleset ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>

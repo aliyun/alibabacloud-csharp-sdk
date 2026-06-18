@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetCertificateQuotaResponseBody : TeaModel {
         /// <summary>
-        /// <para>Free certificate quota.</para>
+        /// <para>The free certificate quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Quota { get; set; }
 
         /// <summary>
-        /// <para>Usage of free certificate quota.</para>
+        /// <para>The number of used free certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? QuotaUsage { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0AEDAF20-4DDF-4165-8750-47FF9C1929C9</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Number of sites.</para>
+        /// <para>The site count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteCount { get; set; }
 
         /// <summary>
-        /// <para>List of site usage details.</para>
+        /// <para>Details about the certificate usage for each site.</para>
         /// </summary>
         [NameInMap("SiteUsage")]
         [Validation(Required=false)]
         public List<GetCertificateQuotaResponseBodySiteUsage> SiteUsage { get; set; }
         public class GetCertificateQuotaResponseBodySiteUsage : TeaModel {
             /// <summary>
-            /// <para>Site ID.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>165929521496928</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteId { get; set; }
 
             /// <summary>
-            /// <para>Site name.</para>
+            /// <para>The site name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>Site usage.</para>
+            /// <para>The number of certificates used by the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Certificate Quota type.</para>
+        /// <para>The certificate quota type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>free</para>

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserRatePlanInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to query only the plans that have remaining quota for associating websites. Valid values:</para>
+        /// <para>Specifies whether to filter for rate plan instances that have a remaining site quota. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: queries only the plans that have remaining quota for associating websites.</description></item>
-        /// <item><description>false: queries all plans in your account.</description></item>
+        /// <item><description><para><b>true</b>: Returns only rate plan instances that have a remaining site quota.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Returns all rate plan instances for the user.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CheckRemainingSiteQuota { get; set; }
 
         /// <summary>
-        /// <para>The plan ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The ID of the rate plan instance to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-xcdn-96wblslz****</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Valid values: <b>1</b> to <b>100000</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number. The default value is <b>1</b>. The value must be in the range of <b>1 to 100,000</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -66,10 +68,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? RemainingExpireDays { get; set; }
 
         /// <summary>
-        /// <para>The sorting field. By default, the queried plans are sorted by purchase time. Valid values:</para>
+        /// <para>The sort field. By default, results are sorted by creation time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CreateTime: the time when the plans were purchased.</description></item>
-        /// <item><description>ExpireTime: the time when the plans expire.</description></item>
+        /// <item><description><para><b>CreateTime</b>: Sorts by creation time.</para>
+        /// </description></item>
+        /// <item><description><para><b>ExpireTime</b>: Sorts by expiration time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -80,10 +84,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The order in which you want to sort the query results. Default value: desc. Valid values:</para>
+        /// <para>The sort order. The default is descending. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>asc: in ascending order.</description></item>
-        /// <item><description>desc: in descending order.</description></item>
+        /// <item><description><para><b>asc</b>: Sorts in ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b>: Sorts in descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -94,12 +100,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>The plan status. Valid values:</para>
+        /// <para>The status of the rate plan instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>online: The plan is in service.</description></item>
-        /// <item><description>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</description></item>
-        /// <item><description>disable: The plan is released.</description></item>
-        /// <item><description>overdue: The plan is stopped due to overdue payments.</description></item>
+        /// <item><description><para><b>online</b>: The instance is in service.</para>
+        /// </description></item>
+        /// <item><description><para><b>offline</b>: The instance has expired and is unavailable.</para>
+        /// </description></item>
+        /// <item><description><para><b>disable</b>: The instance is released.</para>
+        /// </description></item>
+        /// <item><description><para><b>overdue</b>: The instance is overdue.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

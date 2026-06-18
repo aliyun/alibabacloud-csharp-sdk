@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token for the next query. If NextToken is empty, all information has been displayed on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAYwsxxxxxxx</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>The resource tags.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The resource ID.</para>
+            /// <para>The resource ID. Enter a site ID or a DNS record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -47,7 +47,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ResourceId { get; set; }
 
             /// <summary>
-            /// <para>The resource type.</para>
+            /// <para>The resource type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>site: site</description></item>
+            /// <item><description>record: DNS record.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>site</para>
@@ -79,10 +83,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>16</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]

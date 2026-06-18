@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateHttpsBasicConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>Custom cipher suite, indicating the specific encryption algorithm selected when CiphersuiteGroup is set to custom.</para>
+        /// <para>The custom cipher suite to use when <c>CiphersuiteGroup</c> is set to <c>custom</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256</para>
@@ -20,11 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Ciphersuite { get; set; }
 
         /// <summary>
-        /// <para>Cipher suite group. Default is all cipher suites. Value range:</para>
+        /// <para>The cipher suite group. Default value: <c>all</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>all: All cipher suites.</description></item>
-        /// <item><description>strict: Strong cipher suites.</description></item>
-        /// <item><description>custom: Custom cipher suites.</description></item>
+        /// <item><description><para><c>all</c>: All cipher suites.</para>
+        /// </description></item>
+        /// <item><description><para><c>strict</c>: strong cipher suites.</para>
+        /// </description></item>
+        /// <item><description><para><c>custom</c>: custom cipher suites.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CiphersuiteGroup { get; set; }
 
         /// <summary>
-        /// <para>Configuration ID.</para>
+        /// <para>The configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,10 +49,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable HTTP2. Default is enabled. Value range:</para>
+        /// <para>Indicates whether HTTP/2 is enabled. Default value: <c>on</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,10 +65,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Http2 { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable HTTP3. Default is enabled. Value range:</para>
+        /// <para>Indicates whether HTTP/3 is enabled. Default value: <c>on</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,10 +81,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Http3 { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable HTTPS. Default is enabled. Value range:</para>
+        /// <para>Indicates whether HTTPS is enabled. Default value: <c>on</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,10 +97,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Https { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable OCSP. Default is disabled. Value range:</para>
+        /// <para>Indicates whether OCSP stapling is enabled. Default value: <c>off</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,10 +113,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OcspStapling { get; set; }
 
         /// <summary>
-        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <para>The conditional expression used to match incoming requests. This parameter is not required when you add a global configuration. Use cases:</para>
         /// <list type="bullet">
-        /// <item><description>Match all incoming requests: Set the value to true</description></item>
-        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// <item><description><para>To match all incoming requests, set the value to <c>true</c>.</para>
+        /// </description></item>
+        /// <item><description><para>To match specific requests, set the value to a custom expression, for example, <c>(http.host eq &quot;video.example.com&quot;)</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,10 +129,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. This parameter is not required when adding a global configuration. Value range:</para>
+        /// <para>Indicates whether the rule is enabled. This parameter is not required when you add a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,7 +145,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
+        /// <para>The rule name. This parameter is not required when you add a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -139,12 +154,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        /// <summary>
+        /// <para>The rule execution order. A smaller value indicates a higher priority.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Sequence")]
         [Validation(Required=false)]
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -155,10 +176,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable TLS1.0. Default is disabled. Value range:</para>
+        /// <para>Indicates whether TLS 1.0 is enabled. Default value: <c>off</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -169,10 +192,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Tls10 { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable TLS1.1. Default is disabled. Value range:</para>
+        /// <para>Indicates whether TLS 1.1 is enabled. Default value: <c>off</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -183,10 +208,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Tls11 { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable TLS1.2. Default is disabled. Value range:</para>
+        /// <para>Indicates whether TLS 1.2 is enabled. Default value: <c>off</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -197,10 +224,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Tls12 { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable TLS1.3. Default is disabled. Value range:</para>
+        /// <para>Indicates whether TLS 1.3 is enabled. Default value: <c>off</c>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

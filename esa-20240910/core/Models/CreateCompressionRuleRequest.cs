@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateCompressionRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Brotli compression. Value range:</para>
+        /// <para>Specifies whether to enable Brotli compression. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enables Brotli compression.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disables Brotli compression.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Brotli { get; set; }
 
         /// <summary>
-        /// <para>Gzip compression. Value range:</para>
+        /// <para>Specifies whether to enable Gzip compression. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enables Gzip compression.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disables Gzip compression.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +42,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Gzip { get; set; }
 
         /// <summary>
-        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <para>The conditional expression used to match user requests. This parameter is not required when adding a global configuration. There are two use cases:</para>
         /// <list type="bullet">
-        /// <item><description>To match all incoming requests: Set the value to true</description></item>
-        /// <item><description>To match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// <item><description><para>To match all incoming requests, set the value to <c>true</c>.</para>
+        /// </description></item>
+        /// <item><description><para>To match specific requests, set the value to a custom expression, for example, <c>(http.host eq &quot;video.example.com&quot;)</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,10 +58,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. This parameter is not required when adding a global configuration. Value range:</para>
+        /// <para>Specifies whether to enable the rule. This parameter is not required when adding a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enables the rule.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disables the rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +74,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
+        /// <para>The name of the rule. This parameter is not required when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -75,12 +83,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        /// <summary>
+        /// <para>The execution priority of the rule. A smaller value indicates a higher priority.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Sequence")]
         [Validation(Required=false)]
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The unique identifier of the site. To obtain this value, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +105,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the site configuration, defaulting to version 0.</para>
+        /// <para>The version of the site\&quot;s configuration. If versioning is enabled for the site, this parameter specifies the version to modify. Defaults to 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -101,10 +115,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
-        /// <para>Zstd compression. Value range:</para>
+        /// <para>Specifies whether to enable Zstd compression. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para><c>on</c>: Enables Zstd compression.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disables Zstd compression.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

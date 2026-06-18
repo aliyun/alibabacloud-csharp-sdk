@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCustomHostnameRequest : TeaModel {
         /// <summary>
-        /// <para>云盾证书ID，使用云盾证书时必填</para>
+        /// <para>The ID of the Alibaba Cloud Security certificate. This parameter is required when CertType is set to cas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30000478</para>
@@ -20,7 +20,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? CasId { get; set; }
 
         /// <summary>
-        /// <para>云盾证书所在地域，使用云盾证书时必填</para>
+        /// <para>The region of the Alibaba Cloud Security certificate. This parameter is required when CertType is set to cas.</para>
+        /// <list type="bullet">
+        /// <item><description><para>cn-hangzhou: The value for accounts on the Alibaba Cloud China Website (www\.aliyun.com).</para>
+        /// </description></item>
+        /// <item><description><para>ap-southeast-1: The value for accounts on the Alibaba Cloud International Website (www\.alibabacloud.com).</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +36,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CasRegion { get; set; }
 
         /// <summary>
-        /// <para>证书类型，SSL 开启时必填</para>
+        /// <para>The certificate type. This parameter is required when SslFlag is set to on.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>free</b>: Free certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>upload</b>: Uploaded certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>cas</b>: Alibaba Cloud Security certificate.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cas</para>
@@ -40,7 +54,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>证书公钥，使用上传证书时必填</para>
+        /// <para>The content of the certificate. This parameter is required when CertType is set to upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -50,6 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Certificate { get; set; }
 
         /// <summary>
+        /// <para>The ID of the SaaS domain name. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/3018667.html">ListCustomHostnames</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? HostnameId { get; set; }
 
         /// <summary>
-        /// <para>证书私钥，使用上传证书时必填</para>
+        /// <para>The private key of the certificate. This parameter is required when CertType is set to upload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----</para>
@@ -70,7 +85,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>绑定的源站记录ID</para>
+        /// <para>The ID of the record to attach. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123</para>
@@ -80,7 +95,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>SSL开关</para>
+        /// <para>The SSL switch.</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>on</b>: Enables SSL.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: Disables SSL.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>

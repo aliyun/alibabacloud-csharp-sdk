@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Certificate content.</para>
+        /// <para>The certificate content in PEM format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The unique ID for the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The certificate information.</para>
+        /// <para>Detailed certificate information.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public GetCertificateResponseBodyResult Result { get; set; }
         public class GetCertificateResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The error code returned for certificate application.</para>
+            /// <para>The error code for the certificate application process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ApplyCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned for certificate application.</para>
+            /// <para>The error message for the certificate application process.</para>
             /// 
             /// <b>Example:</b>
             /// <para>canceled</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ApplyMessage { get; set; }
 
             /// <summary>
-            /// <para>Cloud certificate ID.</para>
+            /// <para>The ID of the CAS certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30000478</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CasId { get; set; }
 
             /// <summary>
-            /// <para>Common Name (CN) field of the certificate.</para>
+            /// <para>The Common Name (CN) field of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CommonName { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The time when the certificate record was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-05-12 02:00:53</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The DCV name. It is a TXT record name if Type is DNS or URL if Type is HTTP.</para>
+                /// <para>The DCV name. For DNS, this is the TXT record name. For HTTP, this is the URL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow">http://www.example.com/.well-known/acme-challenge/pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow</a></para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The verification status.</para>
+                /// <para>The status of the DCV check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pending</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Status { get; set; }
 
                 /// <summary>
-                /// <para>The DCV type. Valid values: DNS and HTTP.</para>
+                /// <para>The DCV type. Valid values: <c>DNS</c> and <c>HTTP</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
@@ -134,7 +134,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The DCV content.</para>
+                /// <para>The value required for the DCV check. For a DNS check, this is the TXT record value. For an HTTP check, this is the content of the validation file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>pH20CqwS5L3ZnvkhI436DCzadKFuG7QcUcvB_4KsAow.KfzYo4LH3EgOt7a73G-RqZkbR0eYtLfEUmtmqGmr4FQ</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>SHA256 fingerprint of the certificate.</para>
+            /// <para>The SHA-256 fingerprint of the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1dc5fc9af4eead2570c70d94b416130baeb6d4429b51fd3557379588456aca66</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string FingerprintSha256 { get; set; }
 
             /// <summary>
-            /// <para>Certificate ID.</para>
+            /// <para>The certificate ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>babaded901474b9693acf530e0fb1d95</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Certificate issuer.</para>
+            /// <para>The certificate issuer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DigiCert</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Issuer { get; set; }
 
             /// <summary>
-            /// <para>Certificate issuing authority.</para>
+            /// <para>The issuer\&quot;s Common Name (CN).</para>
             /// 
             /// <b>Example:</b>
             /// <para>DigiCert Global Root CA</para>
@@ -185,12 +185,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string IssuerCN { get; set; }
 
+            /// <summary>
+            /// <para>The Keyless server ID. This parameter is returned only when the value of <c>Type</c> is <c>keyless</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>baba39055622c008b90285a8838e****</para>
+            /// </summary>
             [NameInMap("KeyServerId")]
             [Validation(Required=false)]
             public string KeyServerId { get; set; }
 
             /// <summary>
-            /// <para>Certificate name.</para>
+            /// <para>The certificate name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>yourCertName</para>
@@ -200,7 +206,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>End time of the certificate validity period.</para>
+            /// <para>The end of the certificate\&quot;s validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-26T16:00:00Z</para>
@@ -210,7 +216,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotAfter { get; set; }
 
             /// <summary>
-            /// <para>Start time of the certificate validity period.</para>
+            /// <para>The start of the certificate\&quot;s validity period.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-11-26T16:00:00Z</para>
@@ -220,7 +226,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NotBefore { get; set; }
 
             /// <summary>
-            /// <para>Certificate public key algorithm.</para>
+            /// <para>The algorithm of the certificate\&quot;s public key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECDSA</para>
@@ -230,7 +236,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PubAlg { get; set; }
 
             /// <summary>
-            /// <para>Region.</para>
+            /// <para>The region where the certificate is stored.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -240,7 +246,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Region { get; set; }
 
             /// <summary>
-            /// <para>Subject Alternative Name (SAN) of the certificate.</para>
+            /// <para>The Subject Alternative Name (SAN) field, which specifies the host names covered by the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://www.example.com,*.example.com">www.example.com,*.example.com</a></para>
@@ -250,7 +256,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SAN { get; set; }
 
             /// <summary>
-            /// <para>Serial number of the certificate.</para>
+            /// <para>The unique serial number assigned to the certificate by the issuer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>babaded901474b9693acf530e0fb1daa</para>
@@ -260,7 +266,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SerialNumber { get; set; }
 
             /// <summary>
-            /// <para>Certificate signature algorithm.</para>
+            /// <para>The algorithm used to sign the certificate.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ECDSA-SHA1</para>
@@ -270,7 +276,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SigAlg { get; set; }
 
             /// <summary>
-            /// <para>Certificate status.</para>
+            /// <para>The certificate status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -280,7 +286,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Certificate type.</para>
+            /// <para>The certificate type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>free</para>
@@ -290,7 +296,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Update time.</para>
+            /// <para>The time when the certificate record was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-09-22 05:33:13</para>
@@ -302,7 +308,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Site ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123</para>
@@ -312,7 +318,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Site name.</para>
+        /// <para>The site name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -322,7 +328,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>Certificate status.</para>
+        /// <para>The certificate status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchPutKvWithHighCapacityResponseBody : TeaModel {
         /// <summary>
-        /// <para>The keys that failed to be written.</para>
+        /// <para>The keys that could not be written.</para>
         /// </summary>
         [NameInMap("FailKeys")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The keys that were written.</para>
+        /// <para>The keys that were successfully written.</para>
         /// </summary>
         [NameInMap("SuccessKeys")]
         [Validation(Required=false)]

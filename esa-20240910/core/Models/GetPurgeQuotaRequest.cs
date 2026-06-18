@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetPurgeQuotaRequest : TeaModel {
         /// <summary>
-        /// <para>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,12 +23,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The type of the purge task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>file</b> (default): purges the cache by file.</description></item>
-        /// <item><description><b>cachetag</b>: purges the cache by cache tag.</description></item>
-        /// <item><description><b>directory</b>: purges the cache by directory.</description></item>
-        /// <item><description><b>ignoreParams</b>: purges the cache by URL with specific parameters ignored.</description></item>
-        /// <item><description><b>hostname</b>: purges the cache by hostname.</description></item>
-        /// <item><description><b>purgeall</b>: purges all cache.</description></item>
+        /// <item><description><para><b>file</b> (default): File purge.</para>
+        /// </description></item>
+        /// <item><description><para><b>cachetag</b>: Cache tag purge.</para>
+        /// </description></item>
+        /// <item><description><para><b>directory</b>: Directory purge.</para>
+        /// </description></item>
+        /// <item><description><para><b>ignoreParams</b>: Purge by ignoring parameters.</para>
+        /// </description></item>
+        /// <item><description><para><b>hostname</b>: Hostname purge.</para>
+        /// </description></item>
+        /// <item><description><para><b>purgeall</b>: Purges all cached content for the site.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

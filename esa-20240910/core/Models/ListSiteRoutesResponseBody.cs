@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListSiteRoutesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned configurations.</para>
+        /// <para>The list of returned configs.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public List<ListSiteRoutesResponseBodyConfigs> Configs { get; set; }
         public class ListSiteRoutesResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>The bypass mode. Valid values:</para>
+            /// <para>Whether bypass mode is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description><para>on: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>off: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +43,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? ConfigId { get; set; }
 
             /// <summary>
-            /// <para>The configuration type to query. Valid values:</para>
+            /// <para>The configuration type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: global configurations.</description></item>
-            /// <item><description>rule: queries rule configurations.</description></item>
+            /// <item><description><para>global: Global configuration.</para>
+            /// </description></item>
+            /// <item><description><para>rule: Rule-based configuration.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,15 +58,29 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string ConfigType { get; set; }
 
+            /// <summary>
+            /// <para>Whether CDN fallback is enabled. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>on: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>off: Disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>on</para>
+            /// </summary>
             [NameInMap("Fallback")]
             [Validation(Required=false)]
             public string Fallback { get; set; }
 
             /// <summary>
-            /// <para>The configuration mode. Specifies whether to check the image used by the instance supports hot migration. Valid values:</para>
+            /// <para>The configuration mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>simple: Simple Mode</description></item>
-            /// <item><description>custom: Custom Mode</description></item>
+            /// <item><description><para>simple: Simple mode.</para>
+            /// </description></item>
+            /// <item><description><para>custom: Custom mode.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -73,10 +91,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Mode { get; set; }
 
             /// <summary>
-            /// <para>The route switch. Valid values:</para>
+            /// <para>Whether the route is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description><para>on: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>off: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,7 +117,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RouteName { get; set; }
 
             /// <summary>
-            /// <para>The function name.</para>
+            /// <para>The routine name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-routine1</para>
@@ -117,7 +137,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>The order in which the rule is executed.</para>
+            /// <para>The rule execution sequence.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -127,7 +147,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>The version number of the website.</para>
+            /// <para>The site version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -136,6 +156,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public int? SiteVersion { get; set; }
 
+            /// <summary>
+            /// <para>The ER timeout.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>60</para>
+            /// </summary>
             [NameInMap("Timeout")]
             [Validation(Required=false)]
             public string Timeout { get; set; }
@@ -143,7 +169,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -153,7 +179,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -173,7 +199,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -183,7 +209,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

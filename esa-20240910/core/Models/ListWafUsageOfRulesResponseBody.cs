@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? InstanceUsage { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of site usage.</para>
+        /// <para>A list of sites and their respective WAF rule usage.</para>
         /// </summary>
         [NameInMap("Sites")]
         [Validation(Required=false)]
         public List<ListWafUsageOfRulesResponseBodySites> Sites { get; set; }
         public class ListWafUsageOfRulesResponseBodySites : TeaModel {
             /// <summary>
-            /// <para>Site ID.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Site name.</para>
+            /// <para>The site name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Usage of WAF rules/WAF rule sets.</para>
+            /// <para>The number of WAF rules or rule sets used by the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

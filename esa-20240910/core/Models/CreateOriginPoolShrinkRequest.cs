@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateOriginPoolShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Whether the origin address pool is enabled:</para>
+        /// <para>Specifies whether the origin pool is enabled.</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled;</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description><para><c>true</c>: enabled</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The name of the origin address pool, which must be unique within a site.</para>
+        /// <para>The name of the origin pool. The name must be unique within a site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,14 +37,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Information about the origins added to the origin address pool, with multiple origins passed as an array.</para>
+        /// <para>The list of origins to add to the origin pool. Use an array to specify multiple origins.</para>
         /// </summary>
         [NameInMap("Origins")]
         [Validation(Required=false)]
         public string OriginsShrink { get; set; }
 
         /// <summary>
-        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

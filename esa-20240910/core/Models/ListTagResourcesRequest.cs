@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The maximum number of tags to return.</para>
+        /// <para>The maximum number of entries to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? MaxItem { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next query to return more results.</para>
         /// <remarks>
-        /// <para> This parameter is not required for the first request. If not all results are returned in one query, you can specify the token that is obtained from the previous query as the value of <b>NextToken</b>.</para>
+        /// <para>You do not need to specify this parameter for the first query. If a query does not return all results, pass the <b>NextToken</b> value returned from the previous query to continue the query.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region where the resources reside.</para>
+        /// <para>The region ID. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>): cn-hangzhou</description></item>
+        /// <item><description>Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>): ap-southeast-1.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,14 +48,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The resource ID. Enter a site ID or a DNS record ID. You must specify at least one of ResourceId and Tag.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type.</para>
+        /// <para>The resource type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>site: site</description></item>
+        /// <item><description>record: DNS record.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +74,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SecurityToken { get; set; }
 
         /// <summary>
-        /// <para>A list of tags. You can enter up to 20 tags.</para>
+        /// <para>The list of tags. You can specify up to 20 tags. You must specify at least one of ResourceId and Tag.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateTransportLayerApplicationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to enable China mainland network access optimization, default is disabled. Value range:</para>
+        /// <para>Enables or disables network optimization for access from the Chinese mainland. This feature is disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: Enables the optimization.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disables the optimization.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CrossBorderOptimization { get; set; }
 
         /// <summary>
-        /// <para>IP access rule switch. When enabled, the WAF\&quot;s IP access rules apply to the transport layer application.</para>
+        /// <para>Applies IP access rules from Web Application Firewall (WAF) to this Transport Layer Application. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: Enables the feature.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disables the feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string IpAccessRule { get; set; }
 
         /// <summary>
-        /// <para>IPv6 switch.</para>
+        /// <para>Enables or disables IPv6 support.</para>
         /// 
         /// <b>Example:</b>
         /// <para>off</para>
@@ -47,12 +51,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Ipv6 { get; set; }
 
+        /// <summary>
+        /// <para>Enables or disables keep-alive protection.</para>
+        /// </summary>
         [NameInMap("KeepAliveProtection")]
         [Validation(Required=false)]
         public string KeepAliveProtection { get; set; }
 
         /// <summary>
-        /// <para>Domain name of the transport layer application.</para>
+        /// <para>The domain name of the Transport Layer Application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>List of forwarding rules.</para>
+        /// <para>The list of forwarding rules.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Rules")]
@@ -71,7 +78,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RulesShrink { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

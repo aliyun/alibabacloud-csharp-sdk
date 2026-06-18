@@ -10,14 +10,32 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateWafRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Rule configuration, specifying the detailed configuration for creating a rule.</para>
+        /// <para>The detailed configuration of the WAF rule.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string ConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>WAF operation phase.</para>
+        /// <para>The phase in which the WAF rule runs.</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>http_whitelist</c>: whitelist rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_custom</c>: custom rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_managed</c>: managed rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_anti_scan</c>: anti-scan rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_ratelimit</c>: rate limit rule</para>
+        /// </description></item>
+        /// <item><description><para><c>ip_access_rule</c>: IP access rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_bot</c>: Advanced Mode Bots</para>
+        /// </description></item>
+        /// <item><description><para><c>http_security_level_rule</c>: Security Rule</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>Ruleset ID.</para>
+        /// <para>The ID of the WAF ruleset. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -38,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RulesetId { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The ID of the site. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Site version.</para>
+        /// <para>If version management is enabled for the site, use this parameter to specify the version to which the configuration applies. The default is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

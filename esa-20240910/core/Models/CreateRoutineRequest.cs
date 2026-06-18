@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineRequest : TeaModel {
         /// <summary>
-        /// <para>The routine description.</para>
+        /// <para>The description of the Edge Routine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>the description of this routine</para>
@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the Edge Routine contains asset files.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("HasAssets")]
         [Validation(Required=false)]
         public bool? HasAssets { get; set; }
 
         /// <summary>
-        /// <para>The routine name, which must be unique in the same account.</para>
+        /// <para>The name of the Edge Routine. The name must be unique within the same account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

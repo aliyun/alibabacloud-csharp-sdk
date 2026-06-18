@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ResetScheduledPreloadJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account.</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15685865xxx14622</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AliUid { get; set; }
 
         /// <summary>
-        /// <para>The time when the SQL task was created.</para>
+        /// <para>The time when the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-02T02:23:26Z</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The domain names to be prefetched.</para>
+        /// <para>The list of domain names to prefetch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testurl.com</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Domains { get; set; }
 
         /// <summary>
-        /// <para>The error message that is returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>invalid domain:test.com</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ErrorInfo { get; set; }
 
         /// <summary>
-        /// <para>The URL of the OSS object that stores a list of URLs that failed the conditional check for prefetching.</para>
+        /// <para>The OSS address of the failed file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FailedFileOss { get; set; }
 
         /// <summary>
-        /// <para>The ID of the URL list file, which can be used during downloads.</para>
+        /// <para>The ID of the URL list file, which is used for downloading.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665d3b48621bccf3fe29e1a7</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the prefetch task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665d3af3621bccf3fe29e1a4</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The method to submit the URLs to be prefetched.</para>
+        /// <para>The URL insertion method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InsertWay { get; set; }
 
         /// <summary>
-        /// <para>The delivery project name.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>190007158391808</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The number of submitted prefetch tasks.</para>
+        /// <para>The number of URLs that have been submitted to the system for prefetch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TaskSubmitted { get; set; }
 
         /// <summary>
-        /// <para>The task type. Valid values: refresh and preload.</para>
+        /// <para>The task type, such as refresh or prefetch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>preload</para>

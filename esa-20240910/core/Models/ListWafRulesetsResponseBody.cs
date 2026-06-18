@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafRulesetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Number of WAF rule sets used by the instance in this WAF operation phase.</para>
+        /// <para>The number of WAF rulesets used by the instance in this WAF phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? InstanceUsage { get; set; }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of rule set information, containing detailed information about the rule sets.</para>
+        /// <para>A list of rulesets.</para>
         /// </summary>
         [NameInMap("Rulesets")]
         [Validation(Required=false)]
         public List<ListWafRulesetsResponseBodyRulesets> Rulesets { get; set; }
         public class ListWafRulesetsResponseBodyRulesets : TeaModel {
             /// <summary>
-            /// <para>List of match objects.</para>
+            /// <para>A list of match fields.</para>
             /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
             public List<string> Fields { get; set; }
 
             /// <summary>
-            /// <para>ID of the WAF rule set.</para>
+            /// <para>The ID of the WAF ruleset. This value is returned by the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000001</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Name of the rule set.</para>
+            /// <para>The ruleset name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -84,7 +84,25 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>WAF operation phase.</para>
+            /// <para>The execution phase of the ruleset. Valid values are:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>http_whitelist</c>: whitelist rule</para>
+            /// </description></item>
+            /// <item><description><para><c>http_custom</c>: custom rule</para>
+            /// </description></item>
+            /// <item><description><para><c>http_managed</c>: managed rule</para>
+            /// </description></item>
+            /// <item><description><para><c>http_anti_scan</c>: scan protection rule</para>
+            /// </description></item>
+            /// <item><description><para><c>http_ratelimit</c>: rate limiting rule</para>
+            /// </description></item>
+            /// <item><description><para><c>ip_access_rule</c>: IP access rule</para>
+            /// </description></item>
+            /// <item><description><para><c>http_bot</c>: advanced bot protection</para>
+            /// </description></item>
+            /// <item><description><para><c>http_security_level_rule</c>: security rule</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>http_bot</para>
@@ -94,7 +112,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>Status of the rule set.</para>
+            /// <para>The ruleset status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -104,7 +122,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Protection target type in http_bot.</para>
+            /// <para>The protection target for the \&quot;http_bot\&quot; phase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>web</para>
@@ -114,14 +132,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Target { get; set; }
 
             /// <summary>
-            /// <para>List of rule types.</para>
+            /// <para>A list of rule types.</para>
             /// </summary>
             [NameInMap("Types")]
             [Validation(Required=false)]
             public List<string> Types { get; set; }
 
             /// <summary>
-            /// <para>Last modification time of the rule set.</para>
+            /// <para>The time the ruleset was last modified.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -133,7 +151,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Number of WAF rule sets used by the site in this WAF operation phase.</para>
+        /// <para>The number of WAF rulesets used by the site in this WAF phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -143,7 +161,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteUsage { get; set; }
 
         /// <summary>
-        /// <para>Total number of filtered records.</para>
+        /// <para>The total number of entries returned after filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

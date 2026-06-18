@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeEdgeContainerAppStatsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Average CPU limit ratio</para>
+        /// <para>The average CPU usage as a percentage of the limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public double? CpuUsageSecondsQuotaRateAvg { get; set; }
 
         /// <summary>
-        /// <para>Average number of CPU cores</para>
+        /// <para>Average CPU core usage, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public double? CpuUsageSecondsTotalAvg { get; set; }
 
         /// <summary>
-        /// <para>Average read IO</para>
+        /// <para>The average read IO.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public double? FsReadsBytesAvgAvg { get; set; }
 
         /// <summary>
-        /// <para>Average write IO</para>
+        /// <para>The average write IO.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public double? FsWritesBytesAvgAvg { get; set; }
 
         /// <summary>
-        /// <para>Average memory usage</para>
+        /// <para>The average memory usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public double? MemoryRssAvg { get; set; }
 
         /// <summary>
-        /// <para>Average memory limit proportion</para>
+        /// <para>The average memory usage as a percentage of the limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public double? MemoryRssQuotaRateAvg { get; set; }
 
         /// <summary>
-        /// <para>Average PodReady rate</para>
+        /// <para>The average pod ready rate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -79,11 +79,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public double? PodReadyRateAvg { get; set; }
 
+        /// <summary>
+        /// <para>The time and value of each data point for the chart.</para>
+        /// </summary>
         [NameInMap("Points")]
         [Validation(Required=false)]
         public List<DescribeEdgeContainerAppStatsResponseBodyPoints> Points { get; set; }
         public class DescribeEdgeContainerAppStatsResponseBodyPoints : TeaModel {
             /// <summary>
+            /// <para>The CPU usage as a percentage of the limit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
             /// </summary>
@@ -92,6 +97,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public double? ContainerCpuUsageSecondsQuotaRate { get; set; }
 
             /// <summary>
+            /// <para>The number of CPU cores.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -100,6 +107,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public double? ContainerCpuUsageSecondsTotal { get; set; }
 
             /// <summary>
+            /// <para>The read IO.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -108,6 +117,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public double? ContainerFsReadsBytesAvg { get; set; }
 
             /// <summary>
+            /// <para>The write IO.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -116,6 +127,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public double? ContainerFsWritesBytesAvg { get; set; }
 
             /// <summary>
+            /// <para>The memory usage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
             /// </summary>
@@ -124,6 +137,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public double? ContainerMemoryRss { get; set; }
 
             /// <summary>
+            /// <para>The memory usage as a percentage of the limit.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -132,6 +147,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public double? ContainerMemoryRssQuotaRate { get; set; }
 
             /// <summary>
+            /// <para>The pod ready rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -140,6 +157,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public double? PodReadyRate { get; set; }
 
             /// <summary>
+            /// <para>The time of the data point. The format is yyyy-MM-ddTHH:mm:ssZ in UTC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-01-18T15:04:05Z</para>
             /// </summary>

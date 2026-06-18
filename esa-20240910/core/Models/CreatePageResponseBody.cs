@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreatePageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the custom error page.<a href="~~2850223~~"></a></para>
+        /// <para>The ID of the custom error page. Obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> API.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000001</para>

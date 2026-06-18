@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class PutKvRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the content of the key is Base64-encoded. Set this parameter to true if you want to store the key content in binary format. When this parameter is set to true, the Value parameter must be Base64-encoded.</para>
+        /// <para>Indicates whether the Value parameter uses Base64 encoding. Set this to true when storing a binary value. If this parameter is true, Value must be a valid Base64-encoded string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Base64 { get; set; }
 
         /// <summary>
-        /// <para>The time when the key-value pair expires, which cannot be earlier than the current time. The value is a timestamp in seconds. If you specify both Expiration and ExpirationTtl, only ExpirationTtl takes effect.</para>
+        /// <para>The expiration time for the key-value pair, as a Unix timestamp in seconds. This value cannot be earlier than the current time. If you specify both Expiration and ExpirationTtl, ExpirationTtl takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1690081381</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Expiration { get; set; }
 
         /// <summary>
-        /// <para>The relative expiration time. Unit: seconds. If you specify both Expiration and ExpirationTtl, only ExpirationTtl takes effect.</para>
+        /// <para>The time-to-live (TTL) for the key-value pair, in seconds. If you specify both Expiration and ExpirationTtl, ExpirationTtl takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ExpirationTtl { get; set; }
 
         /// <summary>
-        /// <para>The key name. The name can be up to 512 characters in length and cannot contain spaces or backslashes (\\).</para>
+        /// <para>The key can be up to 512 bytes long and cannot contain spaces or forward slashes (/).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
+        /// <para>The name of the namespace. You specify this name when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The content of the key, which can be up to 2 MB (2 × 1000 × 1000). If the content is larger than 2 MB, call <a href="https://help.aliyun.com/document_detail/2850486.html">PutKvWithHighCapacity</a>.</para>
+        /// <para>The value to associate with the key. The maximum size is 2 MB (2,000,000 bytes). For values that exceed this limit, use the <a href="https://help.aliyun.com/document_detail/2850486.html">PutKvWithHighCapacity</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

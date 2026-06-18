@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetTransportLayerApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Specific value of the origin, which needs to match the type of the origin.</para>
+        /// <para>The ID of the Transport Layer Application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>17099311410****</para>
@@ -20,11 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable China mainland network access optimization, default is off. Value range:</para>
-        /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
-        /// </list>
+        /// <para>The CNAME domain name of the Transport Layer Application. This parameter is returned only if the Site was added using the CNAME method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com.ialicdn.com</para>
@@ -34,6 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Cname { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether network optimization for access from the Chinese mainland is enabled. This feature is disabled by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>on</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: Disabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>
@@ -42,7 +46,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CrossBorderOptimization { get; set; }
 
         /// <summary>
-        /// <para>#/components/schemas/WafRuleMatch2</para>
+        /// <para>Indicates whether the IP Access Rule feature is enabled. If enabled, IP Access Rules in Web Application Firewall (WAF) take effect for the Transport Layer Application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>on</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: Disabled.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -52,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string IpAccessRule { get; set; }
 
         /// <summary>
-        /// <para>Ipv6 switch</para>
+        /// <para>Indicates whether IPv6 is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -61,12 +71,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Ipv6 { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether keep-alive protection is enabled.</para>
+        /// </summary>
         [NameInMap("KeepAliveProtection")]
         [Validation(Required=false)]
         public string KeepAliveProtection { get; set; }
 
         /// <summary>
-        /// <para>Query Transport Layer Acceleration Application</para>
+        /// <para>The domain name of the Transport Layer Application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.example.com</para>
@@ -76,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EB635996-1FD6-5DFD-BA57-27A849599940</para>
@@ -86,19 +99,24 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Edge port. Supports:</para>
-        /// <list type="bullet">
-        /// <item><description>A single port, such as 80.</description></item>
-        /// <item><description>Port range, such as 81-85, representing ports 81, 82, 83, 84, 85.</description></item>
-        /// <item><description>Combination of ports and port ranges, separated by commas, for example 80,81-85,90, representing ports 80, 81, 82, 83, 84, 85, 90.</description></item>
-        /// </list>
+        /// <para>A list of forwarding rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<GetTransportLayerApplicationResponseBodyRules> Rules { get; set; }
         public class GetTransportLayerApplicationResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>The domain name of the transport layer application.</para>
+            /// <para>The client IP pass-through mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>off</b>: Client IP pass-through is disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>PPv1</b>: PROXY Protocol v1, which supports client IP pass-through for TCP.</para>
+            /// </description></item>
+            /// <item><description><para><b>PPv2</b>: PROXY Protocol v2, which supports client IP pass-through for both TCP and UDP.</para>
+            /// </description></item>
+            /// <item><description><para><b>SPP</b>: Simple Proxy Protocol, which supports client IP pass-through for UDP.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -108,21 +126,25 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ClientIPPassThroughMode { get; set; }
 
             /// <summary>
-            /// <para>Switch for IP access rules. When turned on, the IP access rules in WAF take effect on the transport layer application.</para>
-            /// <list type="bullet">
-            /// <item><description>on: Turned on.</description></item>
-            /// <item><description>off: Turned off.</description></item>
-            /// </list>
+            /// <para>A comment about the forwarding rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>IPv6 switch.</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Comment")]
             [Validation(Required=false)]
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Comment information of the rule.</para>
+            /// <para>The edge port. The following formats are supported:</para>
+            /// <list type="bullet">
+            /// <item><description><para>A single port, for example, <c>80</c>.</para>
+            /// </description></item>
+            /// <item><description><para>A port range, such as <c>81-85</c> (ports 81 to 85).</para>
+            /// </description></item>
+            /// <item><description><para>A comma-separated list of ports and port ranges, such as <c>80,81-85,90</c>.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -132,12 +154,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EdgePort { get; set; }
 
             /// <summary>
-            /// <para>Client IP pass-through protocol, supporting:</para>
+            /// <para>The protocol for the forwarding rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>off</b>: No pass-through.</description></item>
-            /// <item><description><b>PPv1</b>: PROXY Protocol v1, supports client IP pass-through for TCP protocol.</description></item>
-            /// <item><description><b>PPv2</b>: PROXY Protocol v2, supports client IP pass-through for TCP and UDP protocols.</description></item>
-            /// <item><description><b>SPP</b>: Simple Proxy Protocol, supports client IP pass-through for UDP protocol.</description></item>
+            /// <item><description><para><b>TCP</b>: For TCP traffic.</para>
+            /// </description></item>
+            /// <item><description><para><b>UDP</b>: For UDP traffic.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,11 +170,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>Status of the transport layer application</para>
-            /// <list type="bullet">
-            /// <item><description><b>deploying</b>: Deploying. In this state, modification and deletion are not allowed.</description></item>
-            /// <item><description><b>active</b>: Active.</description></item>
-            /// </list>
+            /// <para>The rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234323***</para>
@@ -162,11 +180,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? RuleId { get; set; }
 
             /// <summary>
-            /// <para>Origin port. Supports:</para>
-            /// <list type="bullet">
-            /// <item><description>A single port, when the origin port is a single port, any valid edge port combination is supported.</description></item>
-            /// <item><description>Port range, only when the edge port is a port range, the origin port can be set as a port range and the size of the range must be consistent with the edge port. For example, if the edge port is 90-93, the origin port cannot be set to 81-85 because the origin port range is 5 and the edge port range is 3, which are inconsistent.</description></item>
-            /// </list>
+            /// <para>The origin. This value must be consistent with the specified origin type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.1.1</para>
@@ -176,7 +190,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The CNAME domain corresponding to the transport layer acceleration application. This field is not empty only when the site is accessed via CNAME.</para>
+            /// <para>The origin port. The following formats are supported:</para>
+            /// <list type="bullet">
+            /// <item><description><para>A single port. A single origin port can be mapped to one or more edge ports.</para>
+            /// </description></item>
+            /// <item><description><para>A port range. When mapping a range of edge ports to a range of origin ports, both ranges must contain the same number of ports. For example, you cannot map edge ports <c>90-93</c> (4 ports) to origin ports <c>81-85</c> (5 ports).</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -186,7 +206,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SourcePort { get; set; }
 
             /// <summary>
-            /// <para>Rule ID.</para>
+            /// <para>The origin type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>ip</b>: An IP address.</para>
+            /// </description></item>
+            /// <item><description><para><b>domain</b>: A domain name.</para>
+            /// </description></item>
+            /// <item><description><para><b>OP</b>: An origin address pool.</para>
+            /// </description></item>
+            /// <item><description><para><b>LB</b>: A load balancer.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>domain</para>
@@ -198,11 +228,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Forwarding rule protocol, with values:</para>
-        /// <list type="bullet">
-        /// <item><description>TCP: TCP protocol.</description></item>
-        /// <item><description>UDP: UDP protocol.</description></item>
-        /// </list>
+        /// <para>The number of forwarding rules in the Transport Layer Application.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -212,7 +238,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? RulesCount { get; set; }
 
         /// <summary>
-        /// <para>Details of the forwarding rule.</para>
+        /// <para>The ID of the Site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -240,6 +266,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The status of the Transport Layer Application. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>deploying</b>: The application is deploying. You cannot modify or delete the application in this state.</para>
+        /// </description></item>
+        /// <item><description><para><b>active</b>: The application is active.</para>
+        /// </description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>active</para>
         /// </summary>

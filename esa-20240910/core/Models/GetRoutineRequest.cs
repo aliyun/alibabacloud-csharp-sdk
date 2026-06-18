@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRoutineRequest : TeaModel {
         /// <summary>
-        /// <para>The routine name.</para>
+        /// <para>The name of the edge function Routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>GetRoutine</para>
+        /// <para>test-routine1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

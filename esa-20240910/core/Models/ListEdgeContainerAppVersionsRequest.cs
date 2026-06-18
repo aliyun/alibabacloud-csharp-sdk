@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>DESC</para>
+        /// <para>Desc</para>
         /// </summary>
         [NameInMap("OrderType")]
         [Validation(Required=false)]

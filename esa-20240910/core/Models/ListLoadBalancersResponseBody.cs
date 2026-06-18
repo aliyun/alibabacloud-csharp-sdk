@@ -10,24 +10,26 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListLoadBalancersResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array format that returns the list of load balancers.</para>
+        /// <para>An array of load balancers.</para>
         /// </summary>
         [NameInMap("LoadBalancers")]
         [Validation(Required=false)]
         public List<ListLoadBalancersResponseBodyLoadBalancers> LoadBalancers { get; set; }
         public class ListLoadBalancersResponseBodyLoadBalancers : TeaModel {
             /// <summary>
-            /// <para>Cross-pool failover configuration.</para>
+            /// <para>The configuration for failover across pools.</para>
             /// </summary>
             [NameInMap("AdaptiveRouting")]
             [Validation(Required=false)]
             public ListLoadBalancersResponseBodyLoadBalancersAdaptiveRouting AdaptiveRouting { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersAdaptiveRouting : TeaModel {
                 /// <summary>
-                /// <para>Whether to fail over across pools.</para>
+                /// <para>Indicates whether to enable failover across pools.</para>
                 /// <list type="bullet">
-                /// <item><description>true: Yes.</description></item>
-                /// <item><description>false: No.</description></item>
+                /// <item><description><para><c>true</c>: Enabled.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>List of default address pool IDs.</para>
+            /// <para>A list of default pool IDs.</para>
             /// </summary>
             [NameInMap("DefaultPools")]
             [Validation(Required=false)]
@@ -61,10 +63,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Whether the load balancer is enabled.</para>
+            /// <para>Indicates whether the load balancer is enabled.</para>
             /// <list type="bullet">
-            /// <item><description>true: Enabled.</description></item>
-            /// <item><description>false: Not enabled.</description></item>
+            /// <item><description><para><c>true</c>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The fallback pool ID, to which traffic will be redirected if all other pools are unavailable.</para>
+            /// <para>The ID of the fallback pool. The load balancer routes traffic to this pool when all other pools are unavailable.</para>
             /// 
             /// <b>Example:</b>
             /// <para>96228666776****</para>
@@ -85,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? FallbackPool { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier ID of the load balancer.</para>
+            /// <para>The unique ID of the load balancer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>998676487607104</para>
@@ -95,14 +99,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Monitor configuration.</para>
+            /// <para>The health check configuration.</para>
             /// </summary>
             [NameInMap("Monitor")]
             [Validation(Required=false)]
             public ListLoadBalancersResponseBodyLoadBalancersMonitor Monitor { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersMonitor : TeaModel {
                 /// <summary>
-                /// <para>The number of consecutive failed probes required to consider the target unhealthy, such as 5.</para>
+                /// <para>The number of consecutive failed health checks required to consider a pool unhealthy. For example, <c>5</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -112,7 +116,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? ConsecutiveDown { get; set; }
 
                 /// <summary>
-                /// <para>The number of consecutive successful probes required to consider the target healthy, such as 3.</para>
+                /// <para>The number of consecutive successful health checks required to consider a pool healthy. For example, <c>3</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -122,7 +126,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? ConsecutiveUp { get; set; }
 
                 /// <summary>
-                /// <para>The expected status codes, such as 200,202, indicating successful HTTP responses.</para>
+                /// <para>The expected HTTP status codes that indicate a successful health check, such as <c>200</c> or <c>202</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>200,202</para>
@@ -132,10 +136,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string ExpectedCodes { get; set; }
 
                 /// <summary>
-                /// <para>Whether to follow redirects.</para>
+                /// <para>Indicates whether the health check should follow redirects.</para>
                 /// <list type="bullet">
-                /// <item><description>true: Yes.</description></item>
-                /// <item><description>false: No.</description></item>
+                /// <item><description><para><c>true</c>: Follows redirects.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Does not follow redirects.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -146,7 +152,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? FollowRedirects { get; set; }
 
                 /// <summary>
-                /// <para>The header information included in the probe, such as HTTP headers.</para>
+                /// <para>The HTTP headers to include in the health check probe.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public object Header { get; set; }
 
                 /// <summary>
-                /// <para>The interval for the health check, in seconds.</para>
+                /// <para>The interval between health checks, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Interval { get; set; }
 
                 /// <summary>
-                /// <para>The method for the health check.</para>
+                /// <para>The method used for the health check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>GET</para>
@@ -180,12 +186,26 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 [Validation(Required=false)]
                 public string Method { get; set; }
 
+                /// <summary>
+                /// <para>The probe locations for health checks. The default is <c>Global</c>. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>Global</c>: Sends probes from global locations.</para>
+                /// </description></item>
+                /// <item><description><para><c>ChineseMainland</c>: Sends probes from locations within the Chinese mainland.</para>
+                /// </description></item>
+                /// <item><description><para><c>OutsideChineseMainland</c>: Sends probes from global locations outside the Chinese mainland.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Global</para>
+                /// </summary>
                 [NameInMap("MonitoringRegion")]
                 [Validation(Required=false)]
                 public string MonitoringRegion { get; set; }
 
                 /// <summary>
-                /// <para>The path.</para>
+                /// <para>The path to request for the health check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
@@ -195,7 +215,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Path { get; set; }
 
                 /// <summary>
-                /// <para>The target port.</para>
+                /// <para>The destination port for the health check.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -205,7 +225,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>Application health check timeout, in seconds.</para>
+                /// <para>The timeout for a single health check, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -215,7 +235,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Timeout { get; set; }
 
                 /// <summary>
-                /// <para>The type of monitor protocol, such as HTTP, used for health checks. When the value is <c>off</c>, it indicates that no check will be performed.</para>
+                /// <para>The protocol for the health check, such as <c>HTTP</c>. Set to <c>off</c> to disable health checks.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>HTTP</para>
@@ -237,14 +257,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</para>
+            /// <para>The configuration for weighted round robin, which controls traffic distribution among pools.</para>
             /// </summary>
             [NameInMap("RandomSteering")]
             [Validation(Required=false)]
             public ListLoadBalancersResponseBodyLoadBalancersRandomSteering RandomSteering { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersRandomSteering : TeaModel {
                 /// <summary>
-                /// <para>Weight configuration for each backend server pool, where the key is the pool ID and the value is the weight coefficient. The weight coefficient represents the proportion of relative traffic distribution.</para>
+                /// <para>The default weight applied to any pool not defined in <c>PoolWeights</c>. The weight determines the proportion of traffic sent to the pool.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -254,7 +274,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? DefaultWeight { get; set; }
 
                 /// <summary>
-                /// <para>Weight configuration for each backend server pool, where the key is the pool ID and the value is the weight coefficient.</para>
+                /// <para>The weight configuration for each backend pool, where the key is the pool ID and the value is the weight.</para>
                 /// </summary>
                 [NameInMap("PoolWeights")]
                 [Validation(Required=false)]
@@ -263,7 +283,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>Address pools corresponding to primary regions.</para>
+            /// <para>The pools that correspond to regions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -281,21 +301,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public object RegionPools { get; set; }
 
             /// <summary>
-            /// <para>List of rule configurations, used to define behaviors under specific conditions.</para>
+            /// <para>A list of rule configurations that define behavior for specific conditions.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<ListLoadBalancersResponseBodyLoadBalancersRules> Rules { get; set; }
             public class ListLoadBalancersResponseBodyLoadBalancersRules : TeaModel {
                 /// <summary>
-                /// <para>Executes a specified response after matching the rule.</para>
+                /// <para>Specifies the response to return when a rule matches.</para>
                 /// </summary>
                 [NameInMap("FixedResponse")]
                 [Validation(Required=false)]
                 public ListLoadBalancersResponseBodyLoadBalancersRulesFixedResponse FixedResponse { get; set; }
                 public class ListLoadBalancersResponseBodyLoadBalancersRulesFixedResponse : TeaModel {
                     /// <summary>
-                    /// <para>The Content-Type field in the HTTP Header.</para>
+                    /// <para>The <c>Content-Type</c> header.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>application/json</para>
@@ -305,7 +325,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string ContentType { get; set; }
 
                     /// <summary>
-                    /// <para>The location field in the HTTP response.</para>
+                    /// <para>The <c>Location</c> response header.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://www.example.com/index.html">http://www.example.com/index.html</a></para>
@@ -315,7 +335,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string Location { get; set; }
 
                     /// <summary>
-                    /// <para>The response body value.</para>
+                    /// <para>The content of the response body.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Hello World.</para>
@@ -325,7 +345,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string MessageBody { get; set; }
 
                     /// <summary>
-                    /// <para>Status code.</para>
+                    /// <para>The status code.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
@@ -337,7 +357,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>Modifies the corresponding load balancer configuration after matching the rule. The fields in this configuration will override the corresponding fields in the load balancer configuration.</para>
+                /// <para>The load balancer settings to override when a rule matches. Any field you specify overwrites the load balancer\&quot;s corresponding setting.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -396,10 +416,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public object Overrides { get; set; }
 
                 /// <summary>
-                /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding global configurations. There are two usage scenarios: </para>
+                /// <para>The rule expression that matches user requests. This parameter is not required for global configurations. Use cases:</para>
                 /// <list type="bullet">
-                /// <item><description>Match all incoming requests: set the value to true </description></item>
-                /// <item><description>Match specific requests: set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</description></item>
+                /// <item><description><para>To match all incoming requests, set the value to <c>true</c>.</para>
+                /// </description></item>
+                /// <item><description><para>To match specific requests, set the value to a custom expression, such as <c>(http.host eq &quot;video.example.com&quot;)</c>.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -410,10 +432,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Rule { get; set; }
 
                 /// <summary>
-                /// <para>The switch for the rule. This parameter is not required when adding a global configuration. Possible values:</para>
+                /// <para>Indicates whether the rule is enabled. This parameter is not required for global configurations. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>on: Enabled.</description></item>
-                /// <item><description>off: Disabled.</description></item>
+                /// <item><description><para><c>on</c>: Enabled.</para>
+                /// </description></item>
+                /// <item><description><para><c>off</c>: Disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -424,7 +448,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleEnable { get; set; }
 
                 /// <summary>
-                /// <para>The name of the rule. This parameter is not required when adding a global configuration.</para>
+                /// <para>The name of the rule. This parameter is not required for global configurations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>r2</para>
@@ -434,7 +458,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string RuleName { get; set; }
 
                 /// <summary>
-                /// <para>The execution order of the rule. The higher the value, the higher the priority.</para>
+                /// <para>The execution priority of the rule. Higher values indicate higher priority.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -444,10 +468,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Sequence { get; set; }
 
                 /// <summary>
-                /// <para>Whether to terminate the execution of subsequent rules.</para>
+                /// <para>Specifies whether to stop executing subsequent rules after this rule matches.</para>
                 /// <list type="bullet">
-                /// <item><description>true: Yes.</description></item>
-                /// <item><description>false: No, which is the default value.</description></item>
+                /// <item><description><para><c>true</c>: Stops executing subsequent rules.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Continues to execute subsequent rules. This is the default value.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -460,11 +486,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>Session persistence, with possible values:</para>
+            /// <para>The session affinity setting. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>off: Not enabled.</description></item>
-            /// <item><description>ip: Session persistence by IP.</description></item>
-            /// <item><description>cookie: Session persistence by cookie.</description></item>
+            /// <item><description><para><c>off</c>: Session affinity is disabled.</para>
+            /// </description></item>
+            /// <item><description><para><c>ip</c>: Enables session affinity based on the client\&quot;s IP address.</para>
+            /// </description></item>
+            /// <item><description><para><c>cookie</c>: Enables session affinity based on a cookie.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -475,7 +504,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SessionAffinity { get; set; }
 
             /// <summary>
-            /// <para>The site ID to which the load balancer belongs.</para>
+            /// <para>The site ID of the load balancer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1159101787****</para>
@@ -505,7 +534,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SteeringPolicy { get; set; }
 
             /// <summary>
-            /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</para>
+            /// <para>The pools that correspond to sub-regions. If multiple sub-regions share the same set of pools, you can use a comma-separated list of sub-region codes as the key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>
@@ -515,7 +544,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public object SubRegionPools { get; set; }
 
             /// <summary>
-            /// <para>The TTL value, which is the DNS record\&quot;s time to live, with a default value of 30.</para>
+            /// <para>The Time to Live (TTL) for the DNS record, in seconds. The default value is 30.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -527,7 +556,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Page number, same as the PageNumber in the request parameters.</para>
+        /// <para>The page number. This value matches the <c>PageNumber</c> request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -537,7 +566,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of items per page.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -557,7 +586,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of items.</para>
+        /// <para>The total number of entries found.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -567,7 +596,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

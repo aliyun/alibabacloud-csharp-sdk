@@ -288,6 +288,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string HostPolicy { get; set; }
 
+        [NameInMap("HttpPorts")]
+        [Validation(Required=false)]
+        public string HttpPorts { get; set; }
+
+        [NameInMap("HttpsPorts")]
+        [Validation(Required=false)]
+        public string HttpsPorts { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to proxy the record. Only CNAME and A/AAAA records can be proxied. Valid values:</para>
         /// <list type="bullet">

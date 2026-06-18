@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The CA that issued the certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DCDN CA</para>
+        /// <para>ESA CA</para>
         /// </summary>
         [NameInMap("Issuer")]
         [Validation(Required=false)]

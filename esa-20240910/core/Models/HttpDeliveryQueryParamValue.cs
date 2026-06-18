@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class HttpDeliveryQueryParamValue : TeaModel {
         /// <summary>
         /// <para>The static variable.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>alicdn</para>
         /// </summary>
         [NameInMap("StaticValue")]
         [Validation(Required=false)]

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateOriginPoolShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Whether the origin pool is enabled:</para>
+        /// <para>Specifies whether to enable the origin pool:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled;</description></item>
-        /// <item><description>false: Disabled.</description></item>
+        /// <item><description><para>true: Enables the origin pool.</para>
+        /// </description></item>
+        /// <item><description><para>false: Disables the origin pool.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>The ID of the origin pool, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2863947.html">ListOriginPools</a> interface.</para>
+        /// <para>The origin pool ID. Get this ID by calling the <a href="~~ListOriginPools~~">ListOriginPools</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,14 +37,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Information about the origins added to the origin pool. Multiple origins are passed as an array.</para>
+        /// <para>An array of origin configurations.</para>
         /// </summary>
         [NameInMap("Origins")]
         [Validation(Required=false)]
         public string OriginsShrink { get; set; }
 
         /// <summary>
-        /// <para>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <para>The site ID. Get this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

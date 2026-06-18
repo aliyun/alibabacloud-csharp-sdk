@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <para>The command that is run before the container is started. Format: <c>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;\\]}}</c>. If you want to cancel this configuration, set the parameter value to <c>&quot;&quot;</c> or <c>{}</c>. If you do not specify this parameter, this configuration is ignored.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;touch\&quot;,\&quot;/home/admin/checkpoststartV1\&quot;]}}</para>
+                /// <para>sh poststart.sh &quot;echo hello world&quot;</para>
                 /// </summary>
                 [NameInMap("PostStart")]
                 [Validation(Required=false)]
@@ -363,6 +363,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 /// <summary>
                 /// <para>The storage capacity of the container. Valid values: 0.5G, 10G, 20G, and 30G.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.5G, 标识存储空间，取值范围（0.5G | 10G | 20G | 30G）</para>
                 /// </summary>
                 [NameInMap("Storage")]
                 [Validation(Required=false)]
@@ -423,9 +426,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The status of the current version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>created: The version is created.</description></item>
-            /// <item><description>failed: The version failed to be created.</description></item>
-            /// <item><description>creating: The version is being created.</description></item>
+            /// <item><description><para>created: The version is created.</para>
+            /// </description></item>
+            /// <item><description><para>failed: The version failed to be created.</para>
+            /// </description></item>
+            /// <item><description><para>creating: The version is being created.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

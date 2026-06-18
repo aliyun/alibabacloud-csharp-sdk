@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>GetRoutineStagingCodeUploadInfo</para>
+        /// <para>test-routine1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

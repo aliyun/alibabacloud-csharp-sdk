@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCustomResponseCodeRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Modifies the list of response code configurations.</para>
+        /// <para>You can modify the response code configuration list.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The configuration type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>global: global configuration.</description></item>
-            /// <item><description>rule: rule configuration.</description></item>
+            /// <item><description><para>global: Global configuration.</para>
+            /// </description></item>
+            /// <item><description><para>rule: Rule configuration.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConfigType { get; set; }
 
             /// <summary>
-            /// <para>Response page.</para>
+            /// <para>The response page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PageId { get; set; }
 
             /// <summary>
-            /// <para>Response code</para>
+            /// <para>The response code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>200</para>
@@ -61,10 +63,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ReturnCode { get; set; }
 
             /// <summary>
-            /// <para>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</para>
+            /// <para>The rule content. Use a conditional expression to match user requests. Do not set this parameter when adding a global configuration. There are two scenarios:</para>
             /// <list type="bullet">
-            /// <item><description>true: Match all incoming requests.</description></item>
-            /// <item><description>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</description></item>
+            /// <item><description><para>Match all incoming requests: Set the value to true.</para>
+            /// </description></item>
+            /// <item><description><para>Match specific requests: Set the value to a custom expression, such as (http.host eq &quot;video.example.com&quot;).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -75,10 +79,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Rule { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</para>
+            /// <para>The rule switch. Do not set this parameter when adding a global configuration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>on</description></item>
-            /// <item><description>off</description></item>
+            /// <item><description><para>on: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para>off: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -89,7 +95,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleEnable { get; set; }
 
             /// <summary>
-            /// <para>The rule name. You do not need to set this parameter when you add global configuration.</para>
+            /// <para>The rule name. Do not set this parameter when adding a global configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rule_example</para>
@@ -99,7 +105,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
-            /// <para>The order in which the rule is executed. A smaller value gives priority to the rule.</para>
+            /// <para>The rule execution order. A smaller value indicates higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,7 +115,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Sequence { get; set; }
 
             /// <summary>
-            /// <para>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</para>
+            /// <para>The version number of the site configuration. For sites with configuration version control enabled, this parameter specifies the site version for which the configuration takes effect. The default value is version 0.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The number of the returned page. Default value: <b>1</b>.</para>
+        /// <para>The page number. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 500. Valid values: 1 to 500.</para>
+        /// <para>The page size. Default value: 500. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -161,7 +167,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

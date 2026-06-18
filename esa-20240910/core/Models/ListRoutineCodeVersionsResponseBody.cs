@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineCodeVersionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The code versions of the routine.</para>
+        /// <para>The list of Edge Routine code versions.</para>
         /// </summary>
         [NameInMap("CodeVersions")]
         [Validation(Required=false)]
         public List<ListRoutineCodeVersionsResponseBodyCodeVersions> CodeVersions { get; set; }
         public class ListRoutineCodeVersionsResponseBodyCodeVersions : TeaModel {
             /// <summary>
-            /// <para>The ID of the code version build.</para>
+            /// <para>The build ID of the code version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>25801233</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CodeDescription { get; set; }
 
             /// <summary>
-            /// <para>The version of the code.</para>
+            /// <para>The code version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1723599747213377175</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CodeVersion { get; set; }
 
             /// <summary>
-            /// <para>Code version configuration items.</para>
+            /// <para>The configuration items of the code version.</para>
             /// </summary>
             [NameInMap("ConfOptions")]
             [Validation(Required=false)]
             public ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions ConfOptions { get; set; }
             public class ListRoutineCodeVersionsResponseBodyCodeVersionsConfOptions : TeaModel {
                 /// <summary>
-                /// <para>Code version configuration items NotFoundStrategy.</para>
+                /// <para>The NotFoundStrategy configuration item of the code version.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SinglePageApplication</para>
@@ -76,7 +76,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Additional information about the code version.</para>
+            /// <para>The deployment environment. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>staging</b>: staging environment.</description></item>
+            /// <item><description><b>production</b>: production environment.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>staging</para>
+            /// </summary>
+            [NameInMap("DeployEnv")]
+            [Validation(Required=false)]
+            public string DeployEnv { get; set; }
+
+            /// <summary>
+            /// <para>The additional information about the code version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{\&quot;approver\&quot;:[\&quot;348678\&quot;,\&quot;111133\&quot;,\&quot;411544\&quot;]}</para>
@@ -84,6 +98,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [NameInMap("ExtraInfo")]
             [Validation(Required=false)]
             public string ExtraInfo { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether environment variables exist.</para>
+            /// </summary>
+            [NameInMap("HasEnvVars")]
+            [Validation(Required=false)]
+            public bool? HasEnvVars { get; set; }
 
             /// <summary>
             /// <para>The status of the code version.</para>
@@ -98,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -128,7 +149,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of code versions returned.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

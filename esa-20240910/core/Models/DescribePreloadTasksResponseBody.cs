@@ -69,9 +69,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The error message returned upon a prefetch task failure. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>Internal Error</b></description></item>
-            /// <item><description><b>Origin Timeout</b></description></item>
-            /// <item><description><b>Origin Return StatusCode 5XX</b></description></item>
+            /// <item><description><para><b>Internal Error</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Origin Timeout</b></para>
+            /// </description></item>
+            /// <item><description><para><b>Origin Return StatusCode 5XX</b></para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -94,9 +97,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The task status.</para>
             /// <list type="bullet">
-            /// <item><description><b>Complete</b>: The task is complete.</description></item>
-            /// <item><description><b>Refreshing</b>: The task is in progress.</description></item>
-            /// <item><description><b>Failed</b>: The task failed.</description></item>
+            /// <item><description><para><b>Complete</b>: The task is complete.</para>
+            /// </description></item>
+            /// <item><description><para><b>Refreshing</b>: The task is in progress.</para>
+            /// </description></item>
+            /// <item><description><para><b>Failed</b>: The task failed.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetOriginClientCertificateHostnamesRequest : TeaModel {
         /// <summary>
-        /// <para>The domain names to associate.</para>
+        /// <para>The hostnames to associate with the certificate.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Hostnames")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> Hostnames { get; set; }
 
         /// <summary>
-        /// <para>The certificate ID.</para>
+        /// <para>The ID of the certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The ID of the site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

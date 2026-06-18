@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The ID of the scheduled prefetch task.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ResetScheduledPreloadJob</para>
+        /// <para>665d3af3621bccf3fe29e1a4</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

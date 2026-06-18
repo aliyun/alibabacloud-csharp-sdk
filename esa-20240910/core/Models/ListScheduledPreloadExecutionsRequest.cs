@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListScheduledPreloadExecutionsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the scheduled prefetch task.</para>
+        /// <para>The ID of the scheduled preload task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ListScheduledPreloadExecutions</para>
+        /// <para>665d3af3621bccf3fe29e1a4</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

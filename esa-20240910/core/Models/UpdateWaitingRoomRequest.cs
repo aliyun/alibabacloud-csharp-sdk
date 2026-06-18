@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The content of the custom waiting room page. You must specify this parameter if you set WaitingRoomType to custom. The content must be Base64-encoded.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Hello%20world!</para>
+        /// <para>SGVsbG8gd29ybGQ=</para>
         /// </summary>
         [NameInMap("CustomPageHtml")]
         [Validation(Required=false)]
@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The description of the waiting room.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Special event waiting room page</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -39,8 +42,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to disable session renewal. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para>on</para>
+        /// </description></item>
+        /// <item><description><para>off</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,8 +58,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to enable the waiting room. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para>on</para>
+        /// </description></item>
+        /// <item><description><para>off</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -106,8 +113,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to enable JSON response. If JSON response is enabled, a JSON body is returned for requests to the waiting room with the header Accept: application/json. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para>on</para>
+        /// </description></item>
+        /// <item><description><para>off</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,9 +129,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The language of the waiting room page. You must specify this parameter if you set WaitingRoomType to default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enus: English.</description></item>
-        /// <item><description>zhcn: Simplified Chinese.</description></item>
-        /// <item><description>zhhk: Traditional Chinese.</description></item>
+        /// <item><description><para>enus: English.</para>
+        /// </description></item>
+        /// <item><description><para>zhcn: Simplified Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>zhhk: Traditional Chinese.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -134,6 +146,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The name of the waiting room.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Holiday promotion waiting room</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -152,8 +167,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to queue all requests. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para>on</para>
+        /// </description></item>
+        /// <item><description><para>off</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,10 +183,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The queuing method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>random: Users gain access to the origin randomly, regardless of the arrival time.</description></item>
-        /// <item><description>fifo: Users gain access to the origin in order of arrival.</description></item>
-        /// <item><description>passthrough: Users pass through the waiting room and go straight to the origin.</description></item>
-        /// <item><description>reject-all: Users are blocked from reaching the origin.</description></item>
+        /// <item><description><para>random: Users gain access to the origin randomly, regardless of the arrival time.</para>
+        /// </description></item>
+        /// <item><description><para>fifo: Users gain access to the origin in order of arrival.</para>
+        /// </description></item>
+        /// <item><description><para>passthrough: Users pass through the waiting room and go straight to the origin.</para>
+        /// </description></item>
+        /// <item><description><para>reject-all: Users are blocked from reaching the origin.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -182,9 +203,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The HTTP status code to return while a user is in the queue. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>200</description></item>
-        /// <item><description>202</description></item>
-        /// <item><description>429</description></item>
+        /// <item><description><para>200</para>
+        /// </description></item>
+        /// <item><description><para>202</para>
+        /// </description></item>
+        /// <item><description><para>429</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -239,8 +263,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The type of the waiting room. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>default</description></item>
-        /// <item><description>custom</description></item>
+        /// <item><description><para>default</para>
+        /// </description></item>
+        /// <item><description><para>custom</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListScheduledPreloadExecutionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about prefetch plans returned.</para>
+        /// <para>A list of execution plans.</para>
         /// </summary>
         [NameInMap("Executions")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AliUid { get; set; }
 
             /// <summary>
-            /// <para>The end time of the prefetch plan.</para>
+            /// <para>The end time of the execution plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-31T18:10:48.849+08:00</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the prefetch plan.</para>
+            /// <para>The ID of the execution plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>66599bd7397885b43804901c</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The time interval between each batch execution in the plan. Unit: seconds.</para>
+            /// <para>The execution interval between batches, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? Interval { get; set; }
 
             /// <summary>
-            /// <para>The ID of the prefetch task.</para>
+            /// <para>The ID of the scheduled preload task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>665d3af3621bccf3fe29e1a4</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string JobId { get; set; }
 
             /// <summary>
-            /// <para>The number of URLs prefetched in each batch.</para>
+            /// <para>The number of URLs to preload in each batch.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? SliceLen { get; set; }
 
             /// <summary>
-            /// <para>The start time of the prefetch plan.</para>
+            /// <para>The start time of the execution plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-31T17:10:48.849+08:00</para>
@@ -87,13 +87,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the prefetch plan. Valid values:</para>
+            /// <para>The status of the execution plan. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>waiting</b></description></item>
-            /// <item><description><b>running</b></description></item>
-            /// <item><description><b>finished</b></description></item>
-            /// <item><description><b>failed</b></description></item>
-            /// <item><description><b>stopped</b></description></item>
+            /// <item><description><para><b>waiting</b>: Pending execution.</para>
+            /// </description></item>
+            /// <item><description><para><b>running</b>: Executing.</para>
+            /// </description></item>
+            /// <item><description><para><b>finished</b>: Completed.</para>
+            /// </description></item>
+            /// <item><description><para><b>failed</b>: Failed.</para>
+            /// </description></item>
+            /// <item><description><para><b>stopped</b>: Paused.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -106,7 +111,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ET5BF670-09D5-4D0B-BEBY-D96A2A528000</para>
@@ -116,7 +121,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of execution plans.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListKeylessServersResponseBody : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</para>
         /// </summary>
@@ -33,11 +39,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>A list of keyless server configurations.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListKeylessServersResponseBodyResult> Result { get; set; }
         public class ListKeylessServersResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The CA certificate used to verify the server certificate of the keyless server. This parameter applies only when <c>Verify</c> is set to <c>true</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-----BEGIN CERTIFICATE-----****</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CaCertificate { get; set; }
 
             /// <summary>
+            /// <para>The client certificate. This parameter must be provided with <c>ClientPrivateKey</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-----BEGIN CERTIFICATE-----****</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ClientCertificate { get; set; }
 
             /// <summary>
+            /// <para>The client private key. This parameter must be provided with <c>ClientCertificate</c>.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-----BEGIN RSA PRIVATE KEY-----****</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ClientPrivateKey { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-06-24 07:48:51</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The keyless server host name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
             /// </summary>
@@ -78,7 +97,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Host { get; set; }
 
             /// <summary>
-            /// <para>Keyless server ID。</para>
+            /// <para>The keyless server ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>babab9db65ee5efcca9f3d41d4b5****</para>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Id { get; set; }
 
             /// <summary>
+            /// <para>The keyless server name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example</para>
             /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The keyless server port. Valid values: 1 to 65535.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>443</para>
             /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Port { get; set; }
 
             /// <summary>
+            /// <para>The update time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2024-07-20 06:18:42</para>
             /// </summary>
@@ -112,6 +137,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to verify the server certificate of the keyless server. Defaults to false.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -122,6 +149,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The site ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>54362329990032</para>
         /// </summary>
@@ -130,6 +159,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>The site name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>
@@ -138,6 +169,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
+        /// <para>The total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>90</para>
         /// </summary>

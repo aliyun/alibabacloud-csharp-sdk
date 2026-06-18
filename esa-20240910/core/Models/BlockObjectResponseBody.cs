@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The blocking task ID.</para>
+        /// <para>The ID of the task. A task ID is returned when you create a block task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15940956620</para>

@@ -10,6 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateOriginProtectionRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to automatically enable the latest back-to-origin IP addresses list. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>off: Do not automatically enable.</description></item>
+        /// <item><description>on: Automatically enable.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>off</para>
         /// </summary>
@@ -18,7 +24,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AutoConfirmIPList { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation. The plan associated with the site must support the origin protection feature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchDeleteKvWithHighCapacityAdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
+        /// <para>The name specified when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +21,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the key-value pairs that you want to delete. This parameter is automatically filled in when you use the SDK to call the operation.</para>
+        /// <para>The download URL that stores the key-value pairs to be batch deleted, such as an OSS download URL with read permission.</para>
+        /// <list type="bullet">
+        /// <item><description><para>When you call this operation by using an SDK, the SDK automatically uploads the submitted content to OSS and passes in the corresponding URL.</para>
+        /// </description></item>
+        /// <item><description><para>To call this operation directly, you must upload the JSON payload (in the same format as the BatchDeleteKv body: {&quot;Namespace&quot;:&quot;...&quot;,&quot;Keys&quot;:[...]}) to an OSS bucket and generate a signed HTTPS GET URL.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></para>
+        /// <para><a href="https://xxxobject.oss-cn-region.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-region.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></para>
         /// </summary>
         [NameInMap("Url")]
         [Validation(Required=false)]

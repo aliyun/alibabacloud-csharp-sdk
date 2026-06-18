@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetCustomHostnameResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The information about the queried SaaS domain name.</para>
+        /// </summary>
         [NameInMap("CustomHostnameModel")]
         [Validation(Required=false)]
         public GetCustomHostnameResponseBodyCustomHostnameModel CustomHostnameModel { get; set; }
         public class GetCustomHostnameResponseBodyCustomHostnameModel : TeaModel {
             /// <summary>
+            /// <para>The SSL Certificates Service certificate ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30000478</para>
             /// </summary>
@@ -22,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? CasId { get; set; }
 
             /// <summary>
-            /// <para>免费证书申请错误码</para>
+            /// <para>The error code for the free certificate application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -32,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? CertApplyCode { get; set; }
 
             /// <summary>
-            /// <para>免费证书申请错误说明</para>
+            /// <para>The error description for the free certificate application.</para>
             /// 
             /// <b>Example:</b>
             /// <para>canceled</para>
@@ -42,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertApplyMessage { get; set; }
 
             /// <summary>
-            /// <para>证书校验HTTP名称</para>
+            /// <para>The certificate verification HTTP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://custom.site.com/.well-known/acme-challenge/jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc">http://custom.site.com/.well-known/acme-challenge/jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc</a></para>
@@ -52,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertHttpKey { get; set; }
 
             /// <summary>
-            /// <para>证书校验HTTP内容</para>
+            /// <para>The certificate verification HTTP content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>jLmMHlEaZ3jb352Qo3ciaSoAC8KZ5Hk0F-4_1xLQtgc.GridYdfJJB5PgFEL-t89XfaFvMPB4f2-I9fwLpKl6e0</para>
@@ -62,6 +67,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertHttpValue { get; set; }
 
             /// <summary>
+            /// <para>The certificate ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>baba2c9e90e840b3b55698cedf02b308</para>
             /// </summary>
@@ -70,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertId { get; set; }
 
             /// <summary>
-            /// <para>证书过期时间</para>
+            /// <para>The certificate expiration time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -80,7 +87,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertNotAfter { get; set; }
 
             /// <summary>
-            /// <para>证书状态</para>
+            /// <para>The certificate status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>OK</b>: Normal.</description></item>
+            /// <item><description><b>Applying</b>: Being applied.</description></item>
+            /// <item><description><b>ApplyFailed</b>: Application failed.</description></item>
+            /// <item><description><b>Expiring</b>: About to expire.</description></item>
+            /// <item><description><b>Expired</b>: Expired.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -90,7 +104,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertStatus { get; set; }
 
             /// <summary>
-            /// <para>证书校验TXT名称</para>
+            /// <para>The certificate verification TXT name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_acme-challenge.custom.site.com</para>
@@ -100,7 +114,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertTxtKey { get; set; }
 
             /// <summary>
-            /// <para>证书校验TXT内容</para>
+            /// <para>The certificate verification TXT content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>lcKYad3UQXgrZLvMm_6TBUYKK4xTkGmninV0Mzx4gjM</para>
@@ -110,7 +124,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertTxtValue { get; set; }
 
             /// <summary>
-            /// <para>证书类型</para>
+            /// <para>The certificate type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>free</b>: Free certificate.</description></item>
+            /// <item><description><b>upload</b>: Uploaded certificate.</description></item>
+            /// <item><description><b>cas</b>: SSL Certificates Service certificate.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>free</para>
@@ -120,7 +139,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CertType { get; set; }
 
             /// <summary>
-            /// <para>上传的证书公钥</para>
+            /// <para>The certificate content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -130,6 +149,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Certificate { get; set; }
 
             /// <summary>
+            /// <para>The reason why the SaaS domain name is occupied. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>existing_custom_hostname</b>: Conflicts with an existing SaaS domain name.</description></item>
+            /// <item><description><b>existing_record</b>: Conflicts with an existing site record.</description></item>
+            /// <item><description><b>existing_load_balancer</b>: Conflicts with an existing load balancing instance.</description></item>
+            /// <item><description><b>existing_origin_pool</b>: Conflicts with an existing origin IPAM pool.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>existing_custom_hostname</para>
             /// </summary>
@@ -138,7 +165,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ConflictWith { get; set; }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The time when the SaaS domain name was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -148,7 +175,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>用户自定义的主机名</para>
+            /// <para>The SaaS domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom.site.com</para>
@@ -158,6 +185,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Hostname { get; set; }
 
             /// <summary>
+            /// <para>The ID of the SaaS domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1234567890123</para>
             /// </summary>
@@ -166,6 +195,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? HostnameId { get; set; }
 
             /// <summary>
+            /// <para>The reason why the SaaS domain name was taken offline. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>expiration_arrears</b>: The subscription plan expired or the account has an overdue payment.</description></item>
+            /// <item><description><b>internally_disabled</b>: Disabled by the system.</description></item>
+            /// <item><description><b>missing_icp</b>: The domain name does not have an ICP filing.</description></item>
+            /// <item><description><b>content_violation</b>: Content violation.</description></item>
+            /// <item><description><b>proactively_disabled</b>: You proactively disabled the domain name or the usage cap that you configured was reached.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>missing_icp</para>
             /// </summary>
@@ -174,6 +212,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string OfflineReason { get; set; }
 
             /// <summary>
+            /// <para>The private key of the certificate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>-----BEGIN RSA PRIVATE KEY-----</para>
             /// </summary>
@@ -182,7 +222,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PrivateKey { get; set; }
 
             /// <summary>
-            /// <para>绑定的源站记录ID</para>
+            /// <para>The record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4042843419650112</para>
@@ -192,7 +232,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? RecordId { get; set; }
 
             /// <summary>
-            /// <para>绑定的源站记录名</para>
+            /// <para>The record name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>origin.example.com</para>
@@ -202,7 +242,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordName { get; set; }
 
             /// <summary>
-            /// <para>与主机名关联的站点ID</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>890601022130656</para>
@@ -212,7 +252,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SiteId { get; set; }
 
             /// <summary>
-            /// <para>关联站点名称</para>
+            /// <para>The site name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -222,7 +262,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>SSL开关的状态</para>
+            /// <para>The SSL switch. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>on</b>: SSL is enabled.</description></item>
+            /// <item><description><b>off</b>: SSL is disabled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -232,7 +276,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SslFlag { get; set; }
 
             /// <summary>
-            /// <para>自定义主机名状态</para>
+            /// <para>The status of the SaaS domain name. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>pending</b>: Pending verification.</description></item>
+            /// <item><description><b>active</b>: Activated.</description></item>
+            /// <item><description><b>conflicted</b>: Occupied.</description></item>
+            /// <item><description><b>offline</b>: Offline.</description></item>
+            /// <item><description><b>configuring</b>: Being configured.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>active</para>
@@ -242,7 +293,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>更新时间</para>
+            /// <para>The time when the SaaS domain name was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-04-19T11:15:20Z</para>
@@ -252,7 +303,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>归属校验TXT内容</para>
+            /// <para>The domain verification TXT content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verify_16ab7f4d389d4dff6655f995c6a997bd</para>
@@ -262,7 +313,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string VerifyCode { get; set; }
 
             /// <summary>
-            /// <para>归属校验TXT名称</para>
+            /// <para>The domain verification TXT name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>_esa_custom_hostname.custom.site.com</para>
@@ -274,7 +325,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>本次请求的唯一标识</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7C414690-9D7B-5D66-9CD9-AD0B3F25ED49</para>

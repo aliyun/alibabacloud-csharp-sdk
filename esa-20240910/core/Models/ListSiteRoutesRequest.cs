@@ -20,12 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The configuration type. You can use this parameter to query global configurations or feature configurations. This parameter takes effect only if the functionName parameter is passed.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>global</description></item>
-        /// <item><description>rule</description></item>
-        /// </list>
+        /// <para>The configuration type. Use this parameter to query global or feature-specific configurations. This parameter takes effect only if the <c>functionName</c> parameter is also specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>global</para>
@@ -35,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. The default is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 500. Default value: 500.</para>
+        /// <para>The number of entries per page, with a maximum of 500. The default is 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -55,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The rule name. This parameter takes effect only when parameter functionName is specified.</para>
+        /// <para>The route name. Use this parameter to find a route by its name. This parameter takes effect only if the <c>functionName</c> parameter is also specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_route</para>
@@ -65,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RouteName { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

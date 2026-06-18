@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration. You can call the ListHttpIncomingResponseHeaderModificationRules operation to query the ID.</para>
+        /// <para>The configuration ID. You can obtain this ID by calling the <c>ListHttpIncomingResponseHeaderModificationRules</c> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Modifies a response header. You can add, delete, or modify a request header.</para>
+        /// <para>A list of objects specifying modifications to response headers. Supported operations include <c>add</c>, <c>del</c>, and <c>modify</c>.</para>
         /// </summary>
         [NameInMap("ResponseHeaderModification")]
         [Validation(Required=false)]
         public string ResponseHeaderModificationShrink { get; set; }
 
         /// <summary>
-        /// <para>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configuration. Use cases:</para>
+        /// <para>The condition expression used to match incoming requests. This parameter is not required for a global configuration. You can use this parameter in two ways:</para>
         /// <list type="bullet">
-        /// <item><description>true: Match all incoming requests.</description></item>
-        /// <item><description>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</description></item>
+        /// <item><description><para>To match all incoming requests, set the value to <c>true</c>.</para>
+        /// </description></item>
+        /// <item><description><para>To match specific requests, set the value to a custom expression, such as <c>(http.host eq &quot;video.example.com&quot;)</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,10 +44,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configuration. Valid values:</para>
+        /// <para>The status of the rule. This parameter is not required for a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para><c>on</c>: Enables the rule.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disables the rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. You do not need to set this parameter when you add global configuration.</para>
+        /// <para>The name of the rule. This parameter is not required for a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The order in which the rule is executed. A smaller value gives priority to the rule.</para>
+        /// <para>The priority of the rule. Rules with a lower value are executed first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can obtain this ID by calling the <c>ListSites</c> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

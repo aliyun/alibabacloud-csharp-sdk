@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetKvNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The available capacity of the namespace. Unit: bytes.</para>
+        /// <para>The available capacity of the namespace, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1073741824</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The available capacity of the namespace.</para>
+        /// <para>The available capacity of the namespace, formatted as a human-readable string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1 GB</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CapacityString { get; set; }
 
         /// <summary>
-        /// <para>The used capacity of the namespace. Unit: bytes.</para>
+        /// <para>The used capacity of the namespace, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10048576</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? CapacityUsed { get; set; }
 
         /// <summary>
-        /// <para>The used capacity of the namespace.</para>
+        /// <para>The used capacity of the namespace, formatted as a human-readable string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100 MB</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NamespaceId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
@@ -92,10 +92,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The status of the namespace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b>: working as expected.</description></item>
-        /// <item><description><b>delete</b>: pending deletion.</description></item>
-        /// <item><description><b>deleting</b>: being deleted.</description></item>
-        /// <item><description><b>deleted</b>: deleted.</description></item>
+        /// <item><description><para><b>online</b>: The namespace is active.</para>
+        /// </description></item>
+        /// <item><description><para><b>delete</b>: The namespace is marked for deletion.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: The namespace is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleted</b>: The namespace has been deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

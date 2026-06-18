@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRoutineCodeVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The function name.</para>
+        /// <para>The name of the Edge Routine program.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ListRoutineCodeVersions</para>
+        /// <para>test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page. Default value: 1. Valid values: 1 and 2.</para>
+        /// <para>The page number. Default value: 1. Maximum value: 2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The keyword used for fuzzy search.</para>
+        /// <para>The keyword for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello</para>

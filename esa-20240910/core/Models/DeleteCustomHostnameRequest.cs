@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DeleteCustomHostnameRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom hostname. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/3018667.html">ListCustomHostnames</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

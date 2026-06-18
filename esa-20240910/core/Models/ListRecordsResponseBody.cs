@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The DNS record information. The format of this field varies based on the record type. For more information, see Add DNS records.</para>
+        /// <para>A list of DNS records. For details, see the &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/2708761.html">documentation</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/doc-detail/2708761.html">documentation</a>.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<ListRecordsResponseBodyRecords> Records { get; set; }
         public class ListRecordsResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The origin authentication information of the CNAME record.</para>
+            /// <para>The origin authentication settings for the CNAME record.</para>
             /// </summary>
             [NameInMap("AuthConf")]
             [Validation(Required=false)]
             public ListRecordsResponseBodyRecordsAuthConf AuthConf { get; set; }
             public class ListRecordsResponseBodyRecordsAuthConf : TeaModel {
                 /// <summary>
-                /// <para>The access key of the account to which the origin server belongs. This value is returned when the SourceType is OSS, and AuthType is private_cross_account, or when the SourceType is S3 and AuthType is private.</para>
+                /// <para>The AccessKey for the account that owns the origin server. This parameter is required if the origin type is OSS and the authentication type is <c>private_cross_account</c>, or if the origin type is S3 and the authentication type is <c>private</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>u0Nkg5gBK***QF5wvKMM504JUHt</para>
@@ -54,12 +54,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string AccessKey { get; set; }
 
                 /// <summary>
-                /// <para>The authentication type of the origin server. Different origins support different authentication types. The type of origin refers to the SourceType parameter in this operation. If the type of origin is OSS or S3, the authentication type of the origin must be specified. Valid values:</para>
+                /// <para>The origin authentication type. The available authentication types depend on the origin type, which is specified by the <c>RecordSourceType</c> parameter. This parameter is required if the origin type is OSS or S3. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>public</b>: public read. This value is returned when the origin is a public OSS or S3 bucket.</description></item>
-                /// <item><description><b>private</b>: private read. This value is returned when the origin is a private S3 bucket.</description></item>
-                /// <item><description><b>private_same_account</b>: private read under the same account. This value is returned when the origin is a private OSS bucket in your Alibaba Cloud account.</description></item>
-                /// <item><description><b>private_cross_account</b>: private read across accounts. This value is returned when the origin is a private OSS bucket in a different Alibaba Cloud account.</description></item>
+                /// <item><description><para><b>public</b>: Public read. Use this value if the origin type is OSS or S3 and the origin server allows public read access.</para>
+                /// </description></item>
+                /// <item><description><para><b>private</b>: Private read. Use this value if the origin type is S3 and the origin server requires private read access.</para>
+                /// </description></item>
+                /// <item><description><para><b>private_same_account</b>: Private read within the same account. Use this value if the origin type is OSS, the origin server is in the same Alibaba Cloud account, and requires private read access.</para>
+                /// </description></item>
+                /// <item><description><para><b>private_cross_account</b>: Private read across different accounts. Use this value if the origin type is OSS, the origin server is in a different Alibaba Cloud account, and requires private read access.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string AuthType { get; set; }
 
                 /// <summary>
-                /// <para>The region of the origin. This parameter is returned if the origin type is S3. You can get the region information from the official website of Amazon S3.</para>
+                /// <para>The region where the origin server is located. This parameter is required if the origin type is S3. For valid region names, refer to the official S3 documentation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>us-east-1</para>
@@ -80,7 +84,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Region { get; set; }
 
                 /// <summary>
-                /// <para>The secret access key of the account to which the origin server belongs. This value is returned when the SourceType is OSS, and AuthType is private_same_account, or when the SourceType is S3 and AuthType is private.</para>
+                /// <para>The SecretKey for the account that owns the origin server. This parameter is required if the origin type is OSS and the authentication type is <c>private_cross_account</c>, or if the origin type is S3 and the authentication type is <c>private</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VIxuvJSA2S03f***kp208dy5w7</para>
@@ -90,12 +94,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string SecretKey { get; set; }
 
                 /// <summary>
-                /// <para>The version of the signature algorithm. This value is returned when the origin type is S3 and AuthType is private. Valid values:</para>
+                /// <para>The signature algorithm version. This parameter is required if the origin type is S3 and the authentication type is <c>private</c>. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>v2</b></description></item>
-                /// <item><description><b>v4</b></description></item>
+                /// <item><description><para><b>v2</b></para>
+                /// </description></item>
+                /// <item><description><para><b>v4</b></para>
+                /// </description></item>
                 /// </list>
-                /// <para>If this parameter is left empty, the default value v4 is used.</para>
+                /// <para>The default is <c>v4</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v4</para>
@@ -107,11 +113,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The business scenario of the record for acceleration. Valid values:</para>
+            /// <para>The business scenario for record acceleration. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>image_video</b>: video and image.</description></item>
-            /// <item><description><b>api</b>: API.</description></item>
-            /// <item><description><b>web</b>: web page.</description></item>
+            /// <item><description><para><b>image_video</b>: Images and videos.</para>
+            /// </description></item>
+            /// <item><description><para><b>api</b>: API.</para>
+            /// </description></item>
+            /// <item><description><para><b>web</b>: Web page.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -122,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BizName { get; set; }
 
             /// <summary>
-            /// <para>The comments of the record.</para>
+            /// <para>The record\&quot;s comment.</para>
             /// 
             /// <b>Example:</b>
             /// <para>this is a remark.</para>
@@ -132,7 +141,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>The time when the record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The UTC time when the record was created, in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-24T02:01:11Z</para>
@@ -141,8 +150,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
+            [NameInMap("CustomPort")]
+            [Validation(Required=false)]
+            public string CustomPort { get; set; }
+
             /// <summary>
-            /// <para>The DNS record information. Different types of records contain different information.</para>
+            /// <para>The DNS details of the record. The fields in this object vary based on the record type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;value&quot;:&quot;1.1.1.1&quot;}</para>
@@ -152,7 +165,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public ListRecordsResponseBodyRecordsData Data { get; set; }
             public class ListRecordsResponseBodyRecordsData : TeaModel {
                 /// <summary>
-                /// <para>The encryption algorithm used for the record. Valid values: 0 to 255. Exclusive to CERT and SSHFP records.</para>
+                /// <para>The encryption algorithm for the record. The value ranges from <b>0 to 255</b>. This parameter is valid only for CERT and SSHFP records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -162,7 +175,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Algorithm { get; set; }
 
                 /// <summary>
-                /// <para>The public key of the certificate. Exclusive to CERT, SMIMEA, and TLSA records.</para>
+                /// <para>The public key certificate. This parameter is valid only for CERT, SMIMEA, and TLSA records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dGVzdGFkYWxrcw==</para>
@@ -172,7 +185,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Certificate { get; set; }
 
                 /// <summary>
-                /// <para>The public key fingerprint of the record. Exclusive to SSHFP records.</para>
+                /// <para>The public key fingerprint. This parameter is valid only for SSHFP records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abcdef1234567890</para>
@@ -182,7 +195,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Fingerprint { get; set; }
 
                 /// <summary>
-                /// <para>The flag bit of the record. The Flag for a CAA record indicates its priority and how it is processed. Valid values: 0 to 255. Exclusive to CAA records.</para>
+                /// <para>The record\&quot;s flag. For a CAA record, the flag determines how a certificate authority (CA) processes the record. The value ranges from <b>0 to 255</b>. This parameter applies only to CAA records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>128</para>
@@ -192,7 +205,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Flag { get; set; }
 
                 /// <summary>
-                /// <para>The public key identification for the record. Valid values: 0 to 65535. Exclusive to CERT records.</para>
+                /// <para>The public key identifier. The value ranges from <b>0 to 65535</b>. This parameter is valid only for CERT records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -202,7 +215,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? KeyTag { get; set; }
 
                 /// <summary>
-                /// <para>The algorithm policy used to match or validate the certificate. Valid values: 0 to 255. Exclusive to SMIMEA and TLSA records.</para>
+                /// <para>The algorithm policy for matching or validating certificates. The value ranges from <b>0 to 255</b>. This parameter is valid only for SMIMEA and TLSA records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -212,7 +225,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? MatchingType { get; set; }
 
                 /// <summary>
-                /// <para>The port of the record. Valid values: 0 to 65535. Exclusive to SRV records.</para>
+                /// <para>The port number, which must be an integer from <b>0 to 65535</b>. This parameter applies only to SRV records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>80</para>
@@ -222,7 +235,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>The priority of the record. Valid values: 0 to 65535. A smaller value indicates a higher priority. Exclusive to MX, SRV, and URI records.</para>
+                /// <para>The priority of the record, which must be an integer from <b>0 to 65535</b>. A lower value indicates a higher priority. This parameter applies only to MX, SRV, and URI records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -232,7 +245,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Priority { get; set; }
 
                 /// <summary>
-                /// <para>The type of certificate or public key. Valid values: 0 to 255. Exclusive to SMIMEA, and TLSA records.</para>
+                /// <para>The type of certificate or public key for the record. The value ranges from <b>0 to 255</b>. This parameter is valid only for SMIMEA and TLSA records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -242,7 +255,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Selector { get; set; }
 
                 /// <summary>
-                /// <para>The tag of the record. The Tag of a CAA record indicate its specific type and usage. Exclusive to CAA records.</para>
+                /// <para>The record\&quot;s tag. For a CAA record, the tag indicates its specific type and purpose. This parameter is valid only for CAA records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>issue</para>
@@ -256,7 +269,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public Dictionary<string, object> Tags { get; set; }
 
                 /// <summary>
-                /// <para>The certificate type of the record (in CERT records), or the public key type (in SSHFP records).</para>
+                /// <para>The certificate type for a CERT record, or the public key type for an SSHFP record.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -266,7 +279,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Type { get; set; }
 
                 /// <summary>
-                /// <para>The usage identifier of the record. Valid values: 0 to 255. Exclusive to SMIMEA, and TLSA records.</para>
+                /// <para>The usage identifier. The value ranges from <b>0 to 255</b>. This parameter is valid only for SMIMEA and TLSA records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -276,16 +289,24 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public int? Usage { get; set; }
 
                 /// <summary>
-                /// <para>Record value or part of the record content. This value is returned when the record is A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, or URI. It has different meanings based on types of records:</para>
+                /// <para>The value of the record. This parameter applies to A/AAAA, CNAME, NS, MX, TXT, CAA, SRV, and URI records. The meaning of this parameter varies based on the record type:</para>
                 /// <list type="bullet">
-                /// <item><description><b>A/AAAA</b>: the IP addresses. IP addresses are separated by commas (,). There is at least one IPv4 address.</description></item>
-                /// <item><description><b>CNAME</b>: the pointed/mapped domain name.</description></item>
-                /// <item><description><b>NS</b>: the nameservers for the domain name.</description></item>
-                /// <item><description><b>MX</b>: a valid domain name of the mail server.</description></item>
-                /// <item><description><b>TXT</b>: a valid text string.</description></item>
-                /// <item><description><b>CAA</b>: a valid domain name of the certificate authority.</description></item>
-                /// <item><description><b>SRV</b>: a valid domain name of the target host.</description></item>
-                /// <item><description><b>URI</b>: a valid URI string.</description></item>
+                /// <item><description><para><b>A/AAAA</b>: The target IP address. Use an IPv4 address for an A record and an IPv6 address for an AAAA record.</para>
+                /// </description></item>
+                /// <item><description><para><b>CNAME</b>: The target domain name.</para>
+                /// </description></item>
+                /// <item><description><para><b>NS</b>: The name server for the specified domain.</para>
+                /// </description></item>
+                /// <item><description><para><b>MX</b>: The domain name of the target mail server.</para>
+                /// </description></item>
+                /// <item><description><para><b>TXT</b>: A text string.</para>
+                /// </description></item>
+                /// <item><description><para><b>CAA</b>: The domain name of the certificate authority.</para>
+                /// </description></item>
+                /// <item><description><para><b>SRV</b>: The domain name of the target host.</para>
+                /// </description></item>
+                /// <item><description><para><b>URI</b>: A URI string.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -296,7 +317,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Value { get; set; }
 
                 /// <summary>
-                /// <para>The weight of the record. Valid values: 0 to 65535. Exclusive to SRV and URI records.</para>
+                /// <para>The weight of the record, which must be an integer from <b>0 to 65535</b>. This parameter applies only to SRV and URI records.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -308,10 +329,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The origin host policy. This policy takes effect when the record type is CNAME. Valid values:</para>
+            /// <para>The policy for the <c>HOST</c> header in back-to-origin requests. This parameter applies only to CNAME records. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>follow_hostname: matches the requested domain name.</description></item>
-            /// <item><description>follow_origin_domain: matches the origin\&quot;s domain name.</description></item>
+            /// <item><description><para><b>follow_hostname</b>: Uses the <c>HOST</c> header of the incoming request.</para>
+            /// </description></item>
+            /// <item><description><para><b>follow_origin_domain</b>: Uses the domain name of the origin server.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -321,11 +344,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string HostPolicy { get; set; }
 
+            [NameInMap("HttpPorts")]
+            [Validation(Required=false)]
+            public string HttpPorts { get; set; }
+
+            [NameInMap("HttpsPorts")]
+            [Validation(Required=false)]
+            public string HttpsPorts { get; set; }
+
             /// <summary>
-            /// <para>Indicates whether the record is proxied. Valid values:</para>
+            /// <para>Indicates whether proxy acceleration is enabled for the record. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Proxy acceleration is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Proxy acceleration is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -336,7 +369,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? Proxied { get; set; }
 
             /// <summary>
-            /// <para>The CNAME. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</para>
+            /// <para>The CNAME value assigned to this record. To enable the service, create a CNAME record in your DNS provider\&quot;s settings that points to this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a.example.com.cnamezone.com</para>
@@ -366,15 +399,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordName { get; set; }
 
             /// <summary>
-            /// <para>The origin type for the CNAME record. This parameter is returned when you add a CNAME record. Valid values:</para>
+            /// <para>The type of origin for the CNAME record. This parameter is required when you add a CNAME record. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>OSS</b>: OSS bucket.</description></item>
-            /// <item><description><b>S3</b>: S3 bucket.</description></item>
-            /// <item><description><b>LB</b>: load balancer.</description></item>
-            /// <item><description><b>OP</b>: origin pool.</description></item>
-            /// <item><description><b>Domain</b>: domain name.</description></item>
+            /// <item><description><para><b>OSS</b>: OSS origin.</para>
+            /// </description></item>
+            /// <item><description><para><b>S3</b>: S3 origin.</para>
+            /// </description></item>
+            /// <item><description><para><b>LB</b>: Load balancer origin.</para>
+            /// </description></item>
+            /// <item><description><para><b>OP</b>: Origin pool.</para>
+            /// </description></item>
+            /// <item><description><para><b>Domain</b>: Domain origin.</para>
+            /// </description></item>
             /// </list>
-            /// <para>If you do not pass this parameter or if you leave its value empty, Domain is returned by default.</para>
+            /// <para>If this parameter is not specified, the default value is <c>Domain</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OSS</para>
@@ -384,7 +422,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordSourceType { get; set; }
 
             /// <summary>
-            /// <para>The DNS type of the record, such as <b>A/AAAA, CNAME, and TXT</b>.</para>
+            /// <para>The DNS record type, such as <b>A/AAAA, CNAME, and TXT</b>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A/AAAA</para>
@@ -394,7 +432,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordType { get; set; }
 
             /// <summary>
-            /// <para>The website ID.</para>
+            /// <para>The ID of the site to which the record belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890123</para>
@@ -404,7 +442,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SiteId { get; set; }
 
             /// <summary>
-            /// <para>The website name.</para>
+            /// <para>The name of the site to which the record belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -414,7 +452,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>The TTL of the record. Unit: seconds. If the value is 1, the TTL of the record is determined by the system.</para>
+            /// <para>The Time to Live (TTL) for the record, in seconds. A value of 1 indicates that the TTL is automatic.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -424,7 +462,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Ttl { get; set; }
 
             /// <summary>
-            /// <para>The time when the record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The UTC time when the record was last updated, in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-06-07T10:02:59Z</para>
@@ -446,7 +484,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

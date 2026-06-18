@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafManagedRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of managed rules.</para>
+        /// <para>An array of managed rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListWafManagedRulesResponseBodyRules> Rules { get; set; }
         public class ListWafManagedRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>Protection action of the managed rule.</para>
+            /// <para>The managed rule\&quot;s action.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deny</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>ID of the managed rule.</para>
+            /// <para>The managed rule ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Name of the managed rule.</para>
+            /// <para>The managed rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SQL injection</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Protection level of the managed rule.</para>
+            /// <para>The managed rule\&quot;s protection level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? ProtectionLevel { get; set; }
 
             /// <summary>
-            /// <para>Protection status of the managed rule.</para>
+            /// <para>The managed rule\&quot;s status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Total number of rules after filtering.</para>
+        /// <para>The total number of rules after filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

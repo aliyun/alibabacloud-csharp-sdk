@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetKvAccountResponseBody : TeaModel {
         /// <summary>
-        /// <para>The available capacity of all namespaces in the account. Unit: bytes.</para>
+        /// <para>The total available capacity of all namespaces for the account, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1073741824</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Capacity { get; set; }
 
         /// <summary>
-        /// <para>The available capacity of all namespaces in the account.</para>
+        /// <para>The total available capacity of all namespaces for the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1 GB</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CapacityString { get; set; }
 
         /// <summary>
-        /// <para>The used capacity of all namespaces in the account. Unit: bytes.</para>
+        /// <para>The total used capacity of all namespaces for the account, in bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10048576</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? CapacityUsed { get; set; }
 
         /// <summary>
-        /// <para>The used capacity of all namespaces in the account.</para>
+        /// <para>The total used capacity of all namespaces for the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100 MB</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CapacityUsedString { get; set; }
 
         /// <summary>
-        /// <para>The namespaces in the account.</para>
+        /// <para>The list of namespaces for the account.</para>
         /// </summary>
         [NameInMap("NamespaceList")]
         [Validation(Required=false)]
         public List<GetKvAccountResponseBodyNamespaceList> NamespaceList { get; set; }
         public class GetKvAccountResponseBodyNamespaceList : TeaModel {
             /// <summary>
-            /// <para>The available capacity of the namespace. Unit: bytes.</para>
+            /// <para>The available capacity of the namespace, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1073741824</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CapacityString { get; set; }
 
             /// <summary>
-            /// <para>The used capacity of the namespace. Unit: bytes.</para>
+            /// <para>The used capacity of the namespace, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100048576</para>
@@ -129,10 +129,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The status of the namespace. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>online</b>: normal.</description></item>
-            /// <item><description><b>delete</b>: pending deletion.</description></item>
-            /// <item><description><b>deleting</b>: being deleted.</description></item>
-            /// <item><description><b>deleted</b>: deleted.</description></item>
+            /// <item><description><para><b>online</b>: Normal.</para>
+            /// </description></item>
+            /// <item><description><para><b>delete</b>: Pending deletion.</para>
+            /// </description></item>
+            /// <item><description><para><b>deleting</b>: Being deleted.</para>
+            /// </description></item>
+            /// <item><description><para><b>deleted</b>: Deleted.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,7 +149,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of namespaces that can be created in the account.</para>
+        /// <para>The quota on the number of KV storage spaces that you can request for the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? NamespaceQuota { get; set; }
 
         /// <summary>
-        /// <para>The number of created namespaces that store key-value data in the account.</para>
+        /// <para>The number of namespaces created for the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -175,10 +179,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Edge KV is activated for the Alibaba Cloud account.</para>
+        /// <para>The status of the account.</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b></description></item>
-        /// <item><description><b>offline</b></description></item>
+        /// <item><description><para><b>online</b>: The account is active.</para>
+        /// </description></item>
+        /// <item><description><para><b>offline</b>: The account is shut down.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

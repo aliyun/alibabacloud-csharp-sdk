@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<string> Content { get; set; }
 
         /// <summary>
-        /// <para>The period of time during which the URL is blocked. Unit: seconds. Specify this parameter if Type is set to block.</para>
+        /// <para>The effective period of the block, in seconds. Specify this parameter when Type is set to block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>864000</para>
@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Maxage { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>BlockObject</para>
+        /// <para>123456****</para>
         /// </summary>
         [NameInMap("SiteId")]
         [Validation(Required=false)]
@@ -41,8 +41,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>block</b></description></item>
-        /// <item><description><b>unblock</b></description></item>
+        /// <item><description><para><b>block</b>: Blocks access.</para>
+        /// </description></item>
+        /// <item><description><para><b>unblock</b>: Unblocks access.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

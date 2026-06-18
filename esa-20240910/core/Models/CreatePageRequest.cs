@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreatePageRequest : TeaModel {
         /// <summary>
-        /// <para>The Base64-encoded page content. Example: &quot;PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4=&quot;, which indicates &quot;hello page&quot;.</para>
+        /// <para>The page content, which must be provided in BASE64 encoding. For example, the value PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4= decodes to \<html>hello page\</html>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PGh0bWw+aGVsbG8gcGFnZTwvaHRtbD4=</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The Content-Type field in the HTTP header. Valid values:</para>
+        /// <para>The <c>Content-Type</c> HTTP header. Examples:</para>
         /// <list type="bullet">
-        /// <item><description>text/html</description></item>
-        /// <item><description>application/json</description></item>
+        /// <item><description><para>text/html</para>
+        /// </description></item>
+        /// <item><description><para>application/json</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

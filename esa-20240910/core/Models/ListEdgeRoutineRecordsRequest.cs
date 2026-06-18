@@ -32,10 +32,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The match mode to filter the record names.</para>
         /// <list type="bullet">
-        /// <item><description><b>fuzzy</b>: fuzzy match.</description></item>
-        /// <item><description><b>prefix</b>: match by prefix.</description></item>
-        /// <item><description><b>suffix</b>: match by suffix.</description></item>
-        /// <item><description><b>exact</b> (default): exact match .</description></item>
+        /// <item><description><para><b>fuzzy</b>: fuzzy match.</para>
+        /// </description></item>
+        /// <item><description><para><b>prefix</b>: match by prefix.</para>
+        /// </description></item>
+        /// <item><description><para><b>suffix</b>: match by suffix.</para>
+        /// </description></item>
+        /// <item><description><para><b>exact</b> (default): exact match .</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class QuotaListItemsValue : TeaModel {
         /// <summary>
-        /// <para>The switch for the type of item in the custom list.</para>
+        /// <para>Whether the item type is enabled.</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>Format restrictions for the type of item in the custom list.</para>
+        /// <para>The format constraints for the item type.</para>
         /// </summary>
         [NameInMap("Value")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class QuotaPageContentTypesValue : TeaModel {
         /// <summary>
-        /// <para>The switch for the Content-Type type in custom response pages.</para>
+        /// <para>Whether the Content-Type is enabled.</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>The content length quota for the Content-Type in custom response pages.</para>
+        /// <para>The maximum content length for this Content-Type.</para>
         /// </summary>
         [NameInMap("ContentLength")]
         [Validation(Required=false)]

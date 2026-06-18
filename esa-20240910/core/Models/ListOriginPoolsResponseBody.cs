@@ -10,17 +10,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListOriginPoolsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of origin pools.</para>
+        /// <para>A list of origin pools.</para>
         /// </summary>
         [NameInMap("OriginPools")]
         [Validation(Required=false)]
         public List<ListOriginPoolsResponseBodyOriginPools> OriginPools { get; set; }
         public class ListOriginPoolsResponseBodyOriginPools : TeaModel {
             /// <summary>
-            /// <para>Whether the origin pool is enabled:</para>
+            /// <para>Indicates whether the origin pool is enabled.</para>
             /// <list type="bullet">
-            /// <item><description>true: Enabled;</description></item>
-            /// <item><description>false: Disabled.</description></item>
+            /// <item><description><para><c>true</c>: Enabled.</para>
+            /// </description></item>
+            /// <item><description><para><c>false</c>: Disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +33,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>ID of the origin pool.</para>
+            /// <para>The ID of the origin pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1038520525196928</para>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Name of the origin pool, unique within a site.</para>
+            /// <para>The name of the origin pool. The name must be unique within a site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pool1</para>
@@ -51,14 +53,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Information about the origins added to the origin pool.</para>
+            /// <para>The origins in the origin pool.</para>
             /// </summary>
             [NameInMap("Origins")]
             [Validation(Required=false)]
             public List<ListOriginPoolsResponseBodyOriginPoolsOrigins> Origins { get; set; }
             public class ListOriginPoolsResponseBodyOriginPoolsOrigins : TeaModel {
                 /// <summary>
-                /// <para>Origin address, e.g., <a href="http://www.example.com">www.example.com</a>.</para>
+                /// <para>The address of the origin, such as <c>www.example.com</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -68,14 +70,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Address { get; set; }
 
                 /// <summary>
-                /// <para>Authentication information. When the origin is OSS or S3 and requires authentication, you need to provide related configuration information for authentication.</para>
+                /// <para>The authentication configuration. This parameter is required if the origin is an OSS or AWS S3 bucket that requires authentication.</para>
                 /// </summary>
                 [NameInMap("AuthConf")]
                 [Validation(Required=false)]
                 public ListOriginPoolsResponseBodyOriginPoolsOriginsAuthConf AuthConf { get; set; }
                 public class ListOriginPoolsResponseBodyOriginPoolsOriginsAuthConf : TeaModel {
                     /// <summary>
-                    /// <para>The AccessKey required for private authentication.</para>
+                    /// <para>The Access Key ID required for private authentication.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>yourAccessKeyID</para>
@@ -85,12 +87,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string AccessKey { get; set; }
 
                     /// <summary>
-                    /// <para>Authentication type.</para>
+                    /// <para>The authentication type. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>public: Public read/write, used when the origin is OSS or S3 and it is set to public read/write;</description></item>
-                    /// <item><description>private_same_account: Private same account, used when the origin is OSS and the authentication type is private within the same account;</description></item>
-                    /// <item><description>private_cross_account: Private cross-account, used when the origin is OSS and the authentication type is private across accounts;</description></item>
-                    /// <item><description>private: Used when the origin is S3 and the authentication type is private.</description></item>
+                    /// <item><description><para><c>public</c>: Public read/write. Use for OSS or AWS S3 origins that have public access permissions.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>private_same_account</c>: Private, same account. Use for OSS origins that use private authentication within the same account.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>private_cross_account</c>: Private, cross-account. Use for OSS origins that use private authentication from a different account.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>private</c>: Private. Use for AWS S3 origins that require private authentication.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string AuthType { get; set; }
 
                     /// <summary>
-                    /// <para>The Region of the origin required when the origin is AWS S3.</para>
+                    /// <para>The region of the origin. Required for AWS S3 origins.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>us-east-1</para>
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string Region { get; set; }
 
                     /// <summary>
-                    /// <para>The SecretKey required for private authentication.</para>
+                    /// <para>The Secret Access Key required for private authentication.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>yourAccessKeySecret</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string SecretKey { get; set; }
 
                     /// <summary>
-                    /// <para>The signature version required when the origin is AWS S3.</para>
+                    /// <para>The signature version. Required for AWS S3 origins.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>v2</para>
@@ -133,10 +139,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>Whether the origin is enabled:</para>
+                /// <para>Indicates whether the origin is enabled.</para>
                 /// <list type="bullet">
-                /// <item><description>true: Enabled;</description></item>
-                /// <item><description>false: Disabled.</description></item>
+                /// <item><description><para><c>true</c>: Enabled.</para>
+                /// </description></item>
+                /// <item><description><para><c>false</c>: Disabled.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -147,7 +155,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>The request header to be carried during back-to-origin, only supports Host.</para>
+                /// <para>The request header to include in origin fetches. Only the <c>Host</c> header is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -161,7 +169,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public object Header { get; set; }
 
                 /// <summary>
-                /// <para>Origin ID.</para>
+                /// <para>The ID of the origin.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>997502094872132</para>
@@ -170,12 +178,28 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 [Validation(Required=false)]
                 public long? Id { get; set; }
 
+                /// <summary>
+                /// <para>The IP protocol version used for origin fetch requests. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><c>round_robin</c>: Randomly selects an IPv4 or IPv6 origin.</para>
+                /// </description></item>
+                /// <item><description><para><c>ipv4_first</c>: Prioritizes IPv4 origins.</para>
+                /// </description></item>
+                /// <item><description><para><c>ipv6_first</c>: Prioritizes IPv6 origins.</para>
+                /// </description></item>
+                /// <item><description><para><c>follow</c>: Follows the IP version used by the client.</para>
+                /// </description></item>
+                /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>round_robin</para>
+                /// </summary>
                 [NameInMap("IpVersionPolicy")]
                 [Validation(Required=false)]
                 public string IpVersionPolicy { get; set; }
 
                 /// <summary>
-                /// <para>Origin name.</para>
+                /// <para>The name of the origin.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>origin1</para>
@@ -185,11 +209,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Origin type:</para>
+                /// <para>The type of the origin. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ip_domain: IP or domain type origin; </description></item>
-                /// <item><description>OSS: OSS address origin; </description></item>
-                /// <item><description>S3: AWS S3 origin.</description></item>
+                /// <item><description><para><c>ip_domain</c>: An origin with an IP address or domain name.</para>
+                /// </description></item>
+                /// <item><description><para><c>OSS</c>: An Alibaba Cloud Object Storage Service (OSS) origin.</para>
+                /// </description></item>
+                /// <item><description><para><c>S3</c>: An AWS S3 origin.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -200,7 +227,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>Weight, an integer between 0 and 100.</para>
+                /// <para>The weight of the origin, an integer from 0 to 100.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -212,7 +239,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>Domain name assigned to the origin pool, which can be used as the origin address for records under the site.</para>
+            /// <para>The domain name assigned to the origin pool. This can be used as the origin address for records within the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pool1.example.com</para>
@@ -222,7 +249,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordName { get; set; }
 
             /// <summary>
-            /// <para>Number of load balancers that reference this origin pool.</para>
+            /// <para>The number of load balancers that reference this origin pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -232,21 +259,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? ReferenceLBCount { get; set; }
 
             /// <summary>
-            /// <para>Reference information for the origin pool. The origin pool is considered referenced when it is configured in a load balancer or set as the origin for a record.</para>
+            /// <para>The resources that reference this origin pool. An origin pool is considered referenced when it is configured as an origin for a load balancer or a record.</para>
             /// </summary>
             [NameInMap("References")]
             [Validation(Required=false)]
             public ListOriginPoolsResponseBodyOriginPoolsReferences References { get; set; }
             public class ListOriginPoolsResponseBodyOriginPoolsReferences : TeaModel {
                 /// <summary>
-                /// <para>使用此源地址池为源站的七层记录列表。</para>
+                /// <para>A list of Layer 7 records that use this origin pool as an origin.</para>
                 /// </summary>
                 [NameInMap("DnsRecords")]
                 [Validation(Required=false)]
                 public List<ListOriginPoolsResponseBodyOriginPoolsReferencesDnsRecords> DnsRecords { get; set; }
                 public class ListOriginPoolsResponseBodyOriginPoolsReferencesDnsRecords : TeaModel {
                     /// <summary>
-                    /// <para>Record ID.</para>
+                    /// <para>The ID of the record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1042852886352704</para>
@@ -256,7 +283,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>Record name.</para>
+                    /// <para>The name of the record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -268,14 +295,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>List of layer 4 records that use this origin pool as the origin.</para>
+                /// <para>A list of Layer 4 records that use this origin pool as an origin.</para>
                 /// </summary>
                 [NameInMap("IPARecords")]
                 [Validation(Required=false)]
                 public List<ListOriginPoolsResponseBodyOriginPoolsReferencesIPARecords> IPARecords { get; set; }
                 public class ListOriginPoolsResponseBodyOriginPoolsReferencesIPARecords : TeaModel {
                     /// <summary>
-                    /// <para>Record ID.</para>
+                    /// <para>The ID of the record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1042852886352704</para>
@@ -285,7 +312,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>Record name.</para>
+                    /// <para>The name of the record.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>ipa.example.com</para>
@@ -297,14 +324,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>List of load balancers using this origin pool.</para>
+                /// <para>A list of load balancers that use this origin pool.</para>
                 /// </summary>
                 [NameInMap("LoadBalancers")]
                 [Validation(Required=false)]
                 public List<ListOriginPoolsResponseBodyOriginPoolsReferencesLoadBalancers> LoadBalancers { get; set; }
                 public class ListOriginPoolsResponseBodyOriginPoolsReferencesLoadBalancers : TeaModel {
                     /// <summary>
-                    /// <para>ID of the load balancer.</para>
+                    /// <para>The ID of the load balancer.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>998740660522624</para>
@@ -314,7 +341,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>Name of the load balancer.</para>
+                    /// <para>The name of the load balancer.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>lb1.example.com</para>
@@ -328,7 +355,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>ID of the site to which the origin pool belongs.</para>
+            /// <para>The ID of the site to which the origin pool belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>216558609793952</para>
@@ -340,7 +367,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Current page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -350,7 +377,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size.</para>
+        /// <para>The number of items returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -360,7 +387,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15C66C7B-671A-4297-9187-2C4477247A74</para>
@@ -370,7 +397,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total count.</para>
+        /// <para>The total number of origin pools found.</para>
         /// 
         /// <b>Example:</b>
         /// <para>16</para>
@@ -380,7 +407,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

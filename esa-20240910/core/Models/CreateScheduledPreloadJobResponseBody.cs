@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AliUid { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was created.</para>
+        /// <para>The time the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-06-05T10:04:20+0800</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The domain names to be prefetched.</para>
+        /// <para>The list of domains to preload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testurl.com</para>
@@ -40,12 +40,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Domains { get; set; }
 
         /// <summary>
-        /// <para>The error message. Multiple error messages are separated by commas (,). Valid values:</para>
+        /// <para>The error message. Multiple error codes are separated by commas.</para>
         /// <list type="bullet">
-        /// <item><description><b>InvalidUrl</b>: The URL format is invalid.</description></item>
-        /// <item><description><b>InvalidDomain</b>: The domain name fails the domain ownership verification.</description></item>
-        /// <item><description><b>QuotaExcess</b>: the quota limit has been reached.</description></item>
-        /// <item><description><b>OtherErrors</b>: other errors.</description></item>
+        /// <item><description><para><b>InvalidUrl</b>: The URL format is invalid.</para>
+        /// </description></item>
+        /// <item><description><para><b>InvalidDomain</b>: Domain ownership verification failed.</para>
+        /// </description></item>
+        /// <item><description><para><b>QuotaExcess</b>: The quota is exceeded.</para>
+        /// </description></item>
+        /// <item><description><para><b>OtherErrors</b>: Other errors.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ErrorInfo { get; set; }
 
         /// <summary>
-        /// <para>The URL of the OSS object that stores a list of URLs that failed the conditional check for prefetching.</para>
+        /// <para>The OSS URL for the file that lists the failed URLs.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7">https://xxxobject.oss-cn-reginon.aliyuncs.com/9d91_xxxxxxxxxxx_158bb6e0f97c477791209bb46bd599f7</a></para>
@@ -66,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FailedFileOss { get; set; }
 
         /// <summary>
-        /// <para>The ID of the URL list file, which can be used during downloads.</para>
+        /// <para>The ID of the file containing the list of URLs. Use this ID to download the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665d3b48621bccf3fe29e1a7</para>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the scheduled prefetch task.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>665d3af3621bccf3fe29e1a4</para>
@@ -86,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The method to submit the URLs to be prefetched.</para>
+        /// <para>The URL submission method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss</para>
@@ -116,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>190007158391808</para>
@@ -126,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The number of submitted prefetch tasks.</para>
+        /// <para>The number of tasks submitted. A value of 1 indicates that the task was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -136,7 +140,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TaskSubmitted { get; set; }
 
         /// <summary>
-        /// <para>The task type (refresh or preload).</para>
+        /// <para>The task type. Valid values are refresh or preload.</para>
         /// 
         /// <b>Example:</b>
         /// <para>preload</para>
@@ -146,7 +150,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string TaskType { get; set; }
 
         /// <summary>
-        /// <para>The total number of URLs.</para>
+        /// <para>The total number of URLs provided in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -156,7 +160,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? UrlCount { get; set; }
 
         /// <summary>
-        /// <para>The number of submitted URLs.</para>
+        /// <para>The number of URLs accepted for preloading.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

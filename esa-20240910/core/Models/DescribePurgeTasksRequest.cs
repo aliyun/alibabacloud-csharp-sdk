@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time.</para>
+        /// <para>The end time must be later than the start time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,9 +75,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Complete</b>: The task is complete.</description></item>
-        /// <item><description><b>Refreshing</b>: The task is in progress.</description></item>
-        /// <item><description><b>Failed</b>: The task failed.</description></item>
+        /// <item><description><para><b>Complete</b>: The task is complete.</para>
+        /// </description></item>
+        /// <item><description><para><b>Refreshing</b>: The task is in progress.</para>
+        /// </description></item>
+        /// <item><description><para><b>Failed</b>: The task failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,12 +93,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>file</b> (default): purges the cache by file.</description></item>
-        /// <item><description><b>cachetag</b>: purges the cache by cache tag.</description></item>
-        /// <item><description><b>directory</b>: purges the cache by directory.</description></item>
-        /// <item><description><b>ignoreParams</b>: purges the cache by URL with specified parameters ignored.</description></item>
-        /// <item><description><b>hostname</b>: purges the cache by hostname.</description></item>
-        /// <item><description><b>purgeall</b>: purges all cache.</description></item>
+        /// <item><description><para><b>file</b> (default): purges the cache by file.</para>
+        /// </description></item>
+        /// <item><description><para><b>cachetag</b>: purges the cache by cache tag.</para>
+        /// </description></item>
+        /// <item><description><para><b>directory</b>: purges the cache by directory.</para>
+        /// </description></item>
+        /// <item><description><para><b>ignoreParams</b>: purges the cache by URL with specified parameters ignored.</para>
+        /// </description></item>
+        /// <item><description><para><b>hostname</b>: purges the cache by hostname.</para>
+        /// </description></item>
+        /// <item><description><para><b>purgeall</b>: purges all cache.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

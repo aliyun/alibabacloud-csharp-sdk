@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetTransportLayerApplicationRequest : TeaModel {
         /// <summary>
-        /// <para>Number of forwarding rules contained in the transport layer acceleration application.</para>
+        /// <para>The application ID. Call the <a href="~~ListTransportLayerApplications~~">ListTransportLayerApplications</a> API to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>Transport layer application ID.</para>
+        /// <para>The site ID. Call the <a href="~~ListSites~~">ListSites</a> API to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

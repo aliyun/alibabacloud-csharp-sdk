@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineRelatedRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The routine name.</para>
+        /// <para>The name of the edge function Routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CreateRoutineRelatedRecord</para>
+        /// <para>test-routine1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

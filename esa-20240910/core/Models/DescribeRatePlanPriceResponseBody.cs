@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeRatePlanPriceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The pricing information.</para>
+        /// </summary>
         [NameInMap("PriceModel")]
         [Validation(Required=false)]
         public DescribeRatePlanPriceResponseBodyPriceModel PriceModel { get; set; }
@@ -156,7 +159,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50423A7F-A83D-1E24-B80E-86DD25790759</para>

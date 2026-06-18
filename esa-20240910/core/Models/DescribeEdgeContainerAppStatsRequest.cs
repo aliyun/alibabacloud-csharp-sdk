@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeEdgeContainerAppStatsRequest : TeaModel {
         /// <summary>
+        /// <para>Basic information about the application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string App { get; set; }
 
         /// <summary>
+        /// <para>The end time to retrieve data. The date must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// <remarks>
+        /// <para>The end time must be later than the start time.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-09-02T16:04:05Z</para>
         /// </summary>
@@ -28,6 +34,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The metric fields.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,14 +45,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Fields { get; set; }
 
         /// <summary>
+        /// <para>The Internet Service Provider (ISP).</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>telecom,unicom,cmcc</para>
+        /// <para>telecom,unicom,mobile</para>
         /// </summary>
         [NameInMap("Isp")]
         [Validation(Required=false)]
         public string Isp { get; set; }
 
         /// <summary>
+        /// <para>The region.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>huizhou</para>
         /// </summary>
@@ -54,6 +65,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Locate { get; set; }
 
         /// <summary>
+        /// <para>The start time. The date must be in ISO 8601 format and use UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2024-09-02T15:04:05Z</para>
         /// </summary>
@@ -62,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-xxxx</para>

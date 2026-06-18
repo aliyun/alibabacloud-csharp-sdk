@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateUserWafRulesetShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the WAF ruleset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The expression of the WAF ruleset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ip.src == 1.1.1.1</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Expression { get; set; }
 
         /// <summary>
+        /// <para>The WAF ruleset ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The name of the WAF ruleset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The position of the WAF ruleset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Position { get; set; }
 
         /// <summary>
+        /// <para>A list of rule configurations in the WAF ruleset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[
         ///   {
@@ -75,11 +87,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RulesShrink { get; set; }
 
+        /// <summary>
+        /// <para>The shared configuration of the WAF ruleset.</para>
+        /// </summary>
         [NameInMap("Shared")]
         [Validation(Required=false)]
         public string SharedShrink { get; set; }
 
         /// <summary>
+        /// <para>The status of the WAF ruleset.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>on</para>
         /// </summary>

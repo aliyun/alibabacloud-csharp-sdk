@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsRequest : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Specifies the page number for paginated results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Specifies the number of results to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query arguments in the JSON format, which contain filter conditions.</para>
+        /// <para>A JSON object containing query parameters to filter the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ListLists</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public ListListsRequestQueryArgs QueryArgs { get; set; }
         public class ListListsRequestQueryArgs : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to sort the returned data in descending order.</para>
+            /// <para>If true, sorts the results in descending order.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public bool? Desc { get; set; }
 
             /// <summary>
-            /// <para>The list description for fuzzy search.</para>
+            /// <para>Filters by a partial match on the list description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a custom list</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DescriptionLike { get; set; }
 
             /// <summary>
-            /// <para>The list ID for fuzzy search.</para>
+            /// <para>Filters by a partial match on the list ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40000001</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string IdLike { get; set; }
 
             /// <summary>
-            /// <para>The list content for fuzzy search.</para>
+            /// <para>Filters by a partial match on a list item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.1.1.1</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ItemLike { get; set; }
 
             /// <summary>
-            /// <para>The type of the custom list.</para>
+            /// <para>Filters by the list kind.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The list name and content for fuzzy search.</para>
+            /// <para>Filters by a partial match on both the list name and list items.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10.1.1.1</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NameItemLike { get; set; }
 
             /// <summary>
-            /// <para>The list name for fuzzy search.</para>
+            /// <para>Filters by a partial match on the list name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string NameLike { get; set; }
 
             /// <summary>
-            /// <para>The column by which you want to sort the returned data.</para>
+            /// <para>Specifies the sort field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>id</para>

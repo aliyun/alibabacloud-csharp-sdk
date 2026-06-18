@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListLoadBalancersRequest : TeaModel {
         /// <summary>
-        /// <para>The name matching strategy when querying by name:</para>
+        /// <para>The matching strategy to use when querying by name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>fuzzy: Fuzzy match;</description></item>
-        /// <item><description>exact: Exact match, equivalent to an equality query.</description></item>
+        /// <item><description><para><c>fuzzy</c>: Performs a fuzzy match.</para>
+        /// </description></item>
+        /// <item><description><para><c>exact</c>: Performs an exact match.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MatchType { get; set; }
 
         /// <summary>
-        /// <para>The name of the load balancer, which can be used to query by name.</para>
+        /// <para>The name of the load balancer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>lb.example.com</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sorting field. Currently, only sorting by id is supported. \&quot;id\&quot; indicates ascending order by id, and \&quot;-id\&quot; indicates descending order by id. The id size is positively correlated with the creation time. If not provided, it defaults to descending order by id.</para>
+        /// <para>The sort field. Only sorting by ID is supported. IDs are assigned chronologically. Specify <c>id</c> for ascending order or <c>-id</c> for descending order. If this parameter is omitted, the results are sorted by ID in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>id</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number for paginated queries.</para>
+        /// <para>The page number for pagination.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -54,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size for paginated queries, with a value range of 1-500.</para>
+        /// <para>The number of entries to return on each page. Valid values: 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> API.</para>
+        /// <para>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

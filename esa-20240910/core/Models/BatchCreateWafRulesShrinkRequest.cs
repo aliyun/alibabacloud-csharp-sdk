@@ -10,17 +10,31 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchCreateWafRulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>A list of configurations for each rule, specifying detailed configurations for each rule.</para>
+        /// <para>An array of rule configurations. Each object defines the settings for a single rule.</para>
         /// </summary>
         [NameInMap("Configs")]
         [Validation(Required=false)]
         public string ConfigsShrink { get; set; }
 
         /// <summary>
-        /// <para>WAF rule type, with values:</para>
+        /// <para>The WAF phase in which the rules are executed.</para>
         /// <list type="bullet">
-        /// <item><description><b>http_anti_scan</b>: Scan protection.</description></item>
-        /// <item><description><b>http_bot</b>: Bots.</description></item>
+        /// <item><description><para><c>http_whitelist</c>: whitelist rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_custom</c>: custom rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_managed</c>: managed rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_anti_scan</c>: scan protection rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_ratelimit</c>: rate limit rule</para>
+        /// </description></item>
+        /// <item><description><para><c>ip_access_rule</c>: IP access rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_bot</c>: bot control rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_security_level_rule</c>: security rule</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -31,7 +45,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>Ruleset ID.</para>
+        /// <para>The ID of the WAF ruleset. You can call the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -41,14 +55,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RulesetId { get; set; }
 
         /// <summary>
-        /// <para>Shared configuration for multiple rules, specifying common attributes of multiple rules.</para>
+        /// <para>The shared configuration object that specifies common properties for all rules created in the batch.</para>
         /// </summary>
         [NameInMap("Shared")]
         [Validation(Required=false)]
         public string SharedShrink { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The ID of the site. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Site version.</para>
+        /// <para>For sites with version management enabled, use this parameter to specify which site version the configuration applies to. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

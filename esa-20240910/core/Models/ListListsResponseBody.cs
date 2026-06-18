@@ -9,19 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListListsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The total number of items across all lists.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>5000</para>
+        /// </summary>
         [NameInMap("ItemsUsage")]
         [Validation(Required=false)]
         public long? ItemsUsage { get; set; }
 
         /// <summary>
-        /// <para>The array that contains list information, including list data after paging.</para>
+        /// <para>A paginated array of lists.</para>
         /// </summary>
         [NameInMap("Lists")]
         [Validation(Required=false)]
         public List<ListListsResponseBodyLists> Lists { get; set; }
         public class ListListsResponseBodyLists : TeaModel {
             /// <summary>
-            /// <para>The list description.</para>
+            /// <para>The description of the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a custom list</para>
@@ -31,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom list.<a href="~~2850217~~"></a></para>
+            /// <para>The ID of the custom list. To get this ID, call the <a href="https://help.aliyun.com/document_detail/2850217.html">ListLists</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40000001</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The list type.</para>
+            /// <para>The kind of the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The length of the list information array, which indicates how many items the list contains.</para>
+            /// <para>The number of items in the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Length { get; set; }
 
             /// <summary>
-            /// <para>The list name.</para>
+            /// <para>The name of the list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the list was last modified.</para>
+            /// <para>The time when the list was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -83,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of filtered lists.</para>
+        /// <para>The total number of filtered records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -123,7 +129,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The number of created lists.</para>
+        /// <para>The number of lists used by the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

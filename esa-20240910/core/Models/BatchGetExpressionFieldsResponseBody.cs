@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchGetExpressionFieldsResponseBody : TeaModel {
         /// <summary>
-        /// <para>List of match fields.</para>
+        /// <para>A list of objects, each containing the match fields for a corresponding expression.</para>
         /// </summary>
         [NameInMap("Fields")]
         [Validation(Required=false)]
         public List<BatchGetExpressionFieldsResponseBodyFields> Fields { get; set; }
         public class BatchGetExpressionFieldsResponseBodyFields : TeaModel {
             /// <summary>
-            /// <para>List of match fields for a single expression.</para>
+            /// <para>A list of match fields for the expression.</para>
             /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
             public List<string> Fields { get; set; }
 
             /// <summary>
-            /// <para>ID of the expression, corresponding to the ID in the input parameters.</para>
+            /// <para>The ID of the expression. This value corresponds to the <c>Id</c> of an expression in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>

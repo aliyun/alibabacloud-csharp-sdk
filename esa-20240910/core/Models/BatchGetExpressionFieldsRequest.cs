@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchGetExpressionFieldsRequest : TeaModel {
         /// <summary>
-        /// <para>List of expressions.</para>
+        /// <para>A list of expression objects to process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public List<BatchGetExpressionFieldsRequestExpressions> Expressions { get; set; }
         public class BatchGetExpressionFieldsRequestExpressions : TeaModel {
             /// <summary>
-            /// <para>Content of the expression.</para>
+            /// <para>The content of the expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip.src eq 1.1.1.1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Expression { get; set; }
 
             /// <summary>
-            /// <para>The sequence number of the expression.</para>
+            /// <para>The ID of the expression. This ID is used to associate an expression in the request with its corresponding result in the response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>WAF Phase</para>
+        /// <para>The WAF phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PlanNameEn { get; set; }
 
         /// <summary>
-        /// <para>Site ID</para>
+        /// <para>The ID of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

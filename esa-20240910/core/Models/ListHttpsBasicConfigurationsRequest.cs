@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Configuration type, which can be used to query global or rule configurations. Value range:</para>
         /// <list type="bullet">
-        /// <item><description>global: Query global configuration.</description></item>
-        /// <item><description>rule: Query rule configuration.</description></item>
+        /// <item><description><para>global: Query global configuration.</para>
+        /// </description></item>
+        /// <item><description><para>rule: Query rule configuration.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</para>
         /// 

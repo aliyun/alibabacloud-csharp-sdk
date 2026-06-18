@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetEdgeContainerAppResourceCapacityRequest : TeaModel {
         /// <summary>
-        /// <para>The application ID, which can be obtained by calling the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</para>
+        /// <para>The ID of the application. To obtain the application ID, call the <a href="~~ListEdgeContainerApps~~">ListEdgeContainerApps</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

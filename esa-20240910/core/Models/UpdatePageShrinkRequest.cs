@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdatePageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</para>
+        /// <para>The Base64-encoded content for the response page, corresponding to the specified <c>ContentType</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The Content-Type field in the HTTP header. Valid values:</para>
+        /// <para>The value for the Content-Type HTTP header. Examples:</para>
         /// <list type="bullet">
-        /// <item><description>text/html</description></item>
-        /// <item><description>application/json</description></item>
+        /// <item><description><para>text/html</para>
+        /// </description></item>
+        /// <item><description><para>application/json</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The description of the custom error page.</para>
+        /// <para>The description of the custom response page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom error page, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
+        /// <para>The ID of the custom response page. Retrieve this ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom error page.</para>
+        /// <para>The name of the custom response page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

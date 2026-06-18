@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetKvRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to decode the value by using Base 64. If you call the <a href="https://help.aliyun.com/document_detail/2850482.html">PutKv</a> operation and set the Base64 parameter to true, set this parameter to true to read the original content.</para>
+        /// <para>Specifies whether to Base64-decode the value. If you set the base64 parameter to true when you called the <a href="https://help.aliyun.com/document_detail/2850482.html">PutKv</a> operation, set this parameter to true to read the original content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Base64 { get; set; }
 
         /// <summary>
-        /// <para>The key name for the query.</para>
+        /// <para>The name of the key to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Key { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
+        /// <para>The name specified when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreateKvNamespace</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

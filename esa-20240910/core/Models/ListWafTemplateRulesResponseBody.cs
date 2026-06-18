@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafTemplateRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of returned template rules.</para>
+        /// <para>A list of template rules.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<ListWafTemplateRulesResponseBodyRules> Rules { get; set; }
         public class ListWafTemplateRulesResponseBodyRules : TeaModel {
             /// <summary>
-            /// <para>Rule configuration.</para>
+            /// <para>The rule configuration.</para>
             /// </summary>
             [NameInMap("Config")]
             [Validation(Required=false)]
             public WafRuleConfig Config { get; set; }
 
             /// <summary>
-            /// <para>Rule name.</para>
+            /// <para>The rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HTTP Directory Traversal Rule [Template]</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>WAF operation phase.</para>
+            /// <para>The WAF running phase.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http_anti_scan</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>Rule status.</para>
+            /// <para>The rule status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Rule type.</para>
+            /// <para>The rule type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http_directory_traversal</para>

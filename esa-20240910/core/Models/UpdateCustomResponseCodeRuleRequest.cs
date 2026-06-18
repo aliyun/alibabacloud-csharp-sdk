@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateCustomResponseCodeRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration.</para>
+        /// <para>The configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Response page.</para>
+        /// <para>The response page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -41,10 +41,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ReturnCode { get; set; }
 
         /// <summary>
-        /// <para>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configurations. Use cases:</para>
+        /// <para>The rule content. Use a conditional expression to match user requests. Do not set this parameter when adding a global configuration. There are two scenarios:</para>
         /// <list type="bullet">
-        /// <item><description>true: Match all incoming requests.</description></item>
-        /// <item><description>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</description></item>
+        /// <item><description><para>Match all incoming requests: Set the value to \<c>true\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para>Match specific requests: Set the value to a custom expression, such as: \<c>(http.host eq &quot;video.example.com&quot;)\\</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,10 +57,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configurations. Valid values:</para>
+        /// <para>The rule switch. Do not set this parameter when adding a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para>on: Enable the rule.</para>
+        /// </description></item>
+        /// <item><description><para>off: Disable the rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. You do not need to set this parameter when you add global configurations.</para>
+        /// <para>The rule name. Do not set this parameter when adding a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The order in which the rule is executed. A smaller value gives priority to the rule.</para>
+        /// <para>The rule execution order. A smaller value indicates higher priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. Get it by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

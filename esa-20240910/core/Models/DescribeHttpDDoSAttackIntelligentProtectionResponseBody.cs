@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeHttpDDoSAttackIntelligentProtectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The mode of smart HTTP DDoS protection. Valid values:</para>
+        /// <para>The protection mode for HTTP DDoS intelligent protection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>observe</b>: alert.</description></item>
-        /// <item><description><b>defense</b>: block.</description></item>
+        /// <item><description><para><b>observe</b>: Observe</para>
+        /// </description></item>
+        /// <item><description><para><b>defense</b>: Defense</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,12 +26,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AiMode { get; set; }
 
         /// <summary>
-        /// <para>The level of smart HTTP DDoS protection. Valid values:</para>
+        /// <para>The protection level for HTTP DDoS intelligent protection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>level0</b>: very loose.</description></item>
-        /// <item><description><b>level30</b>: loose.</description></item>
-        /// <item><description><b>level60</b>: normal.</description></item>
-        /// <item><description><b>level90</b>: strict.</description></item>
+        /// <item><description><para><b>level0</b>: Very Loose</para>
+        /// </description></item>
+        /// <item><description><para><b>level30</b>: Loose</para>
+        /// </description></item>
+        /// <item><description><para><b>level60</b>: Normal</para>
+        /// </description></item>
+        /// <item><description><para><b>level90</b>: Strict</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,7 +56,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>

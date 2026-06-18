@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class WafQuotaInteger : TeaModel {
         /// <summary>
-        /// <para>Is equal to</para>
+        /// <para>等于。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Equal { get; set; }
 
         /// <summary>
-        /// <para>Is greater than</para>
+        /// <para>大于。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? GreaterThan { get; set; }
 
         /// <summary>
-        /// <para>Is greater than or equal to</para>
+        /// <para>大于等于。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? GreaterThanOrEqual { get; set; }
 
         /// <summary>
-        /// <para>Is less than</para>
+        /// <para>小于。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? LessThan { get; set; }
 
         /// <summary>
-        /// <para>Is less than or equal to</para>
+        /// <para>小于等于。</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

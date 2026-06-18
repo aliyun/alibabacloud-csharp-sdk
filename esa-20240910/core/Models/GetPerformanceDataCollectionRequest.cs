@@ -10,10 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetPerformanceDataCollectionRequest : TeaModel {
         /// <summary>
+        /// <para>The Site ID.</para>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456****</para>
         /// </summary>
         [NameInMap("SiteId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UploadOriginCaCertificateRequest : TeaModel {
         /// <summary>
-        /// <para>The certificate content.</para>
+        /// <para>The content of the CA certificate.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>The certificate name.</para>
+        /// <para>The name of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="~~ListSites~~">ListSites</a> operation to get this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

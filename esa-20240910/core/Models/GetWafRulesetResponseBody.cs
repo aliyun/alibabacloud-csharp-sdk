@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWafRulesetResponseBody : TeaModel {
         /// <summary>
-        /// <para>Ruleset ID.</para>
+        /// <para>The ID of the WAF ruleset. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2878359.html">ListWafRulesets</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Ruleset name.</para>
+        /// <para>The ruleset name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,25 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The WAF operation phase applicable to the ruleset.</para>
+        /// <para>The execution phase of the WAF ruleset. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>http_whitelist</c>: A whitelist rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_custom</c>: A custom rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_managed</c>: A managed rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_anti_scan</c>: A scan protection rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_ratelimit</c>: A rate limit rule</para>
+        /// </description></item>
+        /// <item><description><para><c>ip_access_rule</c>: An IP access rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_bot</c>: A bot rule</para>
+        /// </description></item>
+        /// <item><description><para><c>http_security_level_rule</c>: A security rule</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Phase { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -52,21 +70,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of rule configurations in the ruleset.</para>
+        /// <para>The list of rule configurations in the ruleset.</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]
         public List<WafRuleConfig> Rules { get; set; }
 
         /// <summary>
-        /// <para>Shared configurations for the rules in the ruleset.</para>
+        /// <para>The shared configuration for rules within the ruleset.</para>
         /// </summary>
         [NameInMap("Shared")]
         [Validation(Required=false)]
         public WafBatchRuleShared Shared { get; set; }
 
         /// <summary>
-        /// <para>Ruleset status.</para>
+        /// <para>The ruleset status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>
@@ -76,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The last modified time of the ruleset.</para>
+        /// <para>The time when the ruleset was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>

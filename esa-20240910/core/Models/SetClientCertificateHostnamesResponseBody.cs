@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetClientCertificateHostnamesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of bound hostnames.</para>
+        /// </summary>
         [NameInMap("Hostnames")]
         [Validation(Required=false)]
         public List<string> Hostnames { get; set; }
@@ -17,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The ID of the client CA certificate.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>babab9db65ee5efcca9f3d41d4b50d66</para>
+        /// <para>babab9db65ee5efcca9f3d41d4b50d**</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
@@ -34,17 +37,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The ID of the site.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1234567890123</para>
+        /// <para>123456789****</para>
         /// </summary>
         [NameInMap("SiteId")]
         [Validation(Required=false)]
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The website name.</para>
+        /// <para>The site name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>

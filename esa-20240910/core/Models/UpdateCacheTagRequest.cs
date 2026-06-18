@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies whether to ignore case sensitivity. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para>on</para>
+        /// </description></item>
+        /// <item><description><para>off</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

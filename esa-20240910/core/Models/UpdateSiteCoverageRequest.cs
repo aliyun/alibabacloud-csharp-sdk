@@ -10,11 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateSiteCoverageRequest : TeaModel {
         /// <summary>
-        /// <para>The desired service location. Valid values:</para>
+        /// <para>The target acceleration area to modify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>domestic</b>: the Chinese mainland</description></item>
-        /// <item><description><b>global</b>: global</description></item>
-        /// <item><description><b>overseas</b>: outside the Chinese mainland</description></item>
+        /// <item><description><para><b>domestic</b>: Only the Chinese mainland.</para>
+        /// </description></item>
+        /// <item><description><para><b>global</b>: Global.</para>
+        /// </description></item>
+        /// <item><description><para><b>overseas</b>: Global (excluding the Chinese mainland).</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -26,7 +29,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Coverage { get; set; }
 
         /// <summary>
-        /// <para>The website ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the ID.</para>
+        /// <para>The site ID. Get this by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

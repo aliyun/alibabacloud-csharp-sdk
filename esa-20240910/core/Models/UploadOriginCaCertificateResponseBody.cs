@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UploadOriginCaCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Common Name of the certificate.</para>
+        /// <para>The common name of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The CA that issued the certificate.</para>
+        /// <para>The issuer of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GlobalSign nv-sa</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Issuer { get; set; }
 
         /// <summary>
-        /// <para>The time when the certificate expires.</para>
+        /// <para>The validity end time of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-12-01T02:13:07Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string NotAfter { get; set; }
 
         /// <summary>
-        /// <para>The time when the certificate takes effect.</para>
+        /// <para>The validity start time of the certificate.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-01T02:13:07Z</para>
@@ -100,11 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SignatureAlgorithm { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
-        /// <list type="bullet">
-        /// <item><description>OK</description></item>
-        /// <item><description>Fail</description></item>
-        /// </list>
+        /// <para>The certificate status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -114,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The validity period of the certificate. Unit: day.</para>
+        /// <para>The validity period of the certificate in days.</para>
         /// 
         /// <b>Example:</b>
         /// <para>365</para>

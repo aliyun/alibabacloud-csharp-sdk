@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class WafQuotaString : TeaModel {
         /// <summary>
+        /// <para>正则表达式。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>^\d+$</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetCustomResponseCodeRuleRequest : TeaModel {
         /// <summary>
+        /// <para>Configuration ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
+        /// <para>Site ID. For more information, see <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

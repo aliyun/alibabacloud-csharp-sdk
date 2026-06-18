@@ -18,10 +18,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AutoConfirmIPList { get; set; }
 
         /// <summary>
-        /// <para>The IP convergence status.</para>
+        /// <para>The origin fetch convergence switch.</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para>on: Enable origin fetch convergence.</para>
+        /// </description></item>
+        /// <item><description><para>off: Disable origin fetch convergence.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string OriginConverge { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API to get it.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

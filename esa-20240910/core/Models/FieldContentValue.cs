@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
             /// <summary>
             /// <para>The description of the field in Chinese.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>客户端的IP地址</para>
             /// </summary>
             [NameInMap("DescriptionCn")]
             [Validation(Required=false)]

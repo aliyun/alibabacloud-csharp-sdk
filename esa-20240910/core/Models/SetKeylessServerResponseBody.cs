@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetKeylessServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>Keyless server ID。</para>
+        /// <para>The keyless server ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babaabcd****</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>34DCBC8A-<b><b>-</b></b>-****-6DAA11D7DDBD</para>
         /// </summary>
@@ -28,6 +30,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The site ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
         /// </summary>
@@ -36,6 +40,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>The site name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
         /// </summary>

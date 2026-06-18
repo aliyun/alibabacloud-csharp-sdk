@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ApplyCertificateResponseBody : TeaModel {
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>156A6B-677B1A-4297B7-9187B7-2B44792</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of free certificate application details.</para>
+        /// <para>A list of application details for each free certificate.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ApplyCertificateResponseBodyResult> Result { get; set; }
         public class ApplyCertificateResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>Certificate domain.</para>
+            /// <para>The certificate domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>*.example.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Domain { get; set; }
 
             /// <summary>
-            /// <para>Certificate ID.</para>
+            /// <para>The certificate ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30000478</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>Status of the certificate application.</para>
+            /// <para>The certificate application status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Applying</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Site name.</para>
+        /// <para>The site name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>Number of certificates applied for, which is the same as the number of input domains.</para>
+        /// <para>The total number of certificates requested, which matches the number of domain names provided in the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

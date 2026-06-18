@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateKvNamespaceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The description of the namespace.</para>
+        /// <para>The description of the KV namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>this is a test namespace.</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The name of the namespace.</para>
+        /// <para>The name of the KV namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_namespace</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The ID of the namespace.</para>
+        /// <para>The ID of the KV namespace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>657717877171818496</para>
@@ -50,12 +50,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the namespace. Valid values:</para>
+        /// <para>The status of the KV namespace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b>: working as expected.</description></item>
-        /// <item><description><b>delete</b>: pending deletion.</description></item>
-        /// <item><description><b>deleting</b>: being deleted.</description></item>
-        /// <item><description><b>deleted</b>: deleted.</description></item>
+        /// <item><description><para><b>online</b>: The namespace is available.</para>
+        /// </description></item>
+        /// <item><description><para><b>delete</b>: The namespace is pending deletion.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleting</b>: The namespace is being deleted.</para>
+        /// </description></item>
+        /// <item><description><para><b>deleted</b>: The namespace is deleted.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

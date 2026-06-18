@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateSiteResponseBody : TeaModel {
         /// <summary>
-        /// <para>The nameservers assigned by ESA. The values are separated by commas (,). This parameter is returned if you set AccessType to NS. In this case, you must change the nameservers of your domain to the assigned ones. Then, you can verify the domain ownership and activate your website.</para>
+        /// <para>A comma-separated list of name servers assigned to the site. This parameter is returned only if the site uses NS-based access. To activate the site, you must change your domain\&quot;s DNS servers to these name servers. This verifies your ownership of the site and activates it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ns1.example.com,ns2.example.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The ID of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The verification code for the website. If you set AccessType to CNAME, you need to add a TXT record whose hostname is <b>_esaauth.[websiteDomainName]</b> and record value is the value of VerifyCode to the DNS records of your domain. ****Then, you can verify the domain ownership and activate your website.</para>
+        /// <para>The verification code for the site. This parameter is returned only if the site uses CNAME-based access. To activate the site, you must add a TXT record to your domain\&quot;s DNS settings. Set the record\&quot;s host to <b>_esaauth.[your_site_name]</b> and its value to this <b>verification code</b>. This verifies your ownership of the site and activates it.</para>
         /// 
         /// <b>Example:</b>
         /// <para>verify_aah9dioasmov****</para>

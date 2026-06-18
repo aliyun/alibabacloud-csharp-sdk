@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateHttpsApplicationConfigurationResponseBody : TeaModel {
         /// <summary>
-        /// <para>Configuration ID.</para>
+        /// <para>The ID of the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>352816096987136</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>

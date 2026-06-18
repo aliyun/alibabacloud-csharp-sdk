@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// <remarks>
-        /// <para> The end time must be later than the start time.</para>
+        /// <para>The end time must be later than the start time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,9 +75,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The task status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Complete</b>: The task is complete.</description></item>
-        /// <item><description><b>Refreshing</b>: The task is running.</description></item>
-        /// <item><description><b>Failed</b>: The task failed.</description></item>
+        /// <item><description><para><b>Complete</b>: The task is complete.</para>
+        /// </description></item>
+        /// <item><description><para><b>Refreshing</b>: The task is running.</para>
+        /// </description></item>
+        /// <item><description><para><b>Failed</b>: The task failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

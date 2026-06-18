@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Quota { get; set; }
 
+        /// <summary>
+        /// <para>The total quota available in a 30-day period. A value of 0 indicates that this quota is not configured.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200000</para>
+        /// </summary>
         [NameInMap("Quota30Day")]
         [Validation(Required=false)]
         public string Quota30Day { get; set; }
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The quota usage.</para>
+        /// <para>The used quota.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -43,6 +49,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Usage { get; set; }
 
+        /// <summary>
+        /// <para>The quota used within the 30-day period.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("Usage30Day")]
         [Validation(Required=false)]
         public string Usage30Day { get; set; }

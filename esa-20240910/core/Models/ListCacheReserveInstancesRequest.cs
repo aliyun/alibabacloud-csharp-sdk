@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCacheReserveInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sp-xcdn-96wblslz****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size. Range: <b>1~500</b>, default is <b>500</b>.</para>
+        /// <para>The number of entries per page. Valid values: <b>1 to 500</b>. The default value is <b>500</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,10 +40,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The criterion by which you want to sort the queried instances. Valid values:</para>
+        /// <para>The field to sort the results by. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ExpireTime</b></description></item>
-        /// <item><description><b>CreateTime</b></description></item>
+        /// <item><description><para><b>ExpireTime</b>: Expiration time.</para>
+        /// </description></item>
+        /// <item><description><para><b>CreateTime</b>: Creation time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,10 +56,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The order by which you want to sort the queried instances. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>asc</b></description></item>
-        /// <item><description><b>desc</b></description></item>
+        /// <item><description><para><b>asc</b>: Ascending order.</para>
+        /// </description></item>
+        /// <item><description><para><b>desc</b>: Descending order.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,10 +74,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The status of the cache reserve instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b>: The instance is in service.</description></item>
-        /// <item><description><b>offline</b>: The instance has expired within an allowable period. In this state, it is unavailable.</description></item>
-        /// <item><description><b>disable</b>: The instance has been released.</description></item>
-        /// <item><description><b>overdue</b>: The instance has been stopped due to overdue payments.</description></item>
+        /// <item><description><para><b>online</b>: The instance is running normally.</para>
+        /// </description></item>
+        /// <item><description><para><b>offline</b>: The instance has expired and is unavailable but remains within the grace period.</para>
+        /// </description></item>
+        /// <item><description><para><b>disable</b>: The instance is disabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>overdue</b>: The instance is suspended due to an overdue payment.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

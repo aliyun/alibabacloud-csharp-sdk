@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListScheduledPreloadJobsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time for querying the task creation time range. Specify the timestamp in milliseconds.</para>
+        /// <para>End of the time range for querying job creation time, in milliseconds since the UNIX epoch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717225277000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>Page number to retrieve.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>Number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>Site ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ListScheduledPreloadJobs</para>
+        /// <para>190007158391808</para>
         /// </summary>
         [NameInMap("SiteId")]
         [Validation(Required=false)]
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the task creation time range to query. Specify the timestamp in milliseconds.</para>
+        /// <para>Start of the time range for querying job creation time, in milliseconds since the UNIX epoch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1717225276000</para>

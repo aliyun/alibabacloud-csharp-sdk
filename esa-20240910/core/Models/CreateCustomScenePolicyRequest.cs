@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateCustomScenePolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The time when the policy expires.</para>
-        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The policy end time.</para>
+        /// <para>The time must be in UTC and in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,22 +33,31 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</para>
+        /// <para>The IDs of the sites to associate with the policy. Separate multiple site IDs with commas.</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated. Use <c>SiteIds</c> instead. If <c>SiteIds</c> is specified, the value of this parameter is ignored. To prevent ambiguity, specify a value for either <c>SiteIds</c> or <c>Objects</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>7096621098****</para>
+        /// <para>7096621098****,7096621099****</para>
         /// </summary>
         [NameInMap("Objects")]
         [Validation(Required=false)]
         public string Objects { get; set; }
 
+        /// <summary>
+        /// <para>The IDs of the sites to associate with the policy. Separate multiple site IDs with commas.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7096621098****,7096621099****</para>
+        /// </summary>
         [NameInMap("SiteIds")]
         [Validation(Required=false)]
         public string SiteIds { get; set; }
 
         /// <summary>
-        /// <para>The time when the policy takes effect.</para>
-        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The policy start time.</para>
+        /// <para>The time must be in UTC and in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,9 +68,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy template. Valid value:</para>
+        /// <para>The template name. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>promotion</b>: major events.</description></item>
+        /// <item><description><b>promotion</b>: a policy for major events.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

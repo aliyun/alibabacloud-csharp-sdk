@@ -21,8 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AppId { get; set; }
 
         /// <summary>
-        /// <para>The container group to be deployed for this version, which contains information about images.\
-        /// The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</para>
+        /// <para>The container group to be deployed for this version, which contains information about images.<br> The image data contains the image address, startup command, parameters, environment variables, and probe rules. You can specify one or more images. The parameter value is a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -231,6 +230,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The content of the container health probe.</para>
             /// <para>This parameter is required.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>For details, see the definition of readiness probes in Kubernetes.</para>
             /// </summary>
             [NameInMap("ProbeContent")]
             [Validation(Required=false)]
@@ -351,9 +353,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The type of the probe. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>exec: the command type.</description></item>
-            /// <item><description>tcpSocket: the TCP probe type.</description></item>
-            /// <item><description>httpGet: the HTTP access type.</description></item>
+            /// <item><description><para>exec: the command type.</para>
+            /// </description></item>
+            /// <item><description><para>tcpSocket: the TCP probe type.</para>
+            /// </description></item>
+            /// <item><description><para>httpGet: the HTTP access type.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

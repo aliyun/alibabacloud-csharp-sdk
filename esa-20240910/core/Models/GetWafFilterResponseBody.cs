@@ -10,25 +10,31 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetWafFilterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned match conditions.</para>
+        /// <para>The returned matching engine configuration.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public GetWafFilterResponseBodyFilter Filter { get; set; }
         public class GetWafFilterResponseBodyFilter : TeaModel {
             /// <summary>
-            /// <para>The matched objects and related properties.</para>
+            /// <para>A list of match objects and their properties.</para>
             /// </summary>
             [NameInMap("Fields")]
             [Validation(Required=false)]
             public List<GetWafFilterResponseBodyFilterFields> Fields { get; set; }
             public class GetWafFilterResponseBodyFilterFields : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether the current plan supports this match object.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
                 [NameInMap("Enable")]
                 [Validation(Required=false)]
                 public bool? Enable { get; set; }
 
                 /// <summary>
-                /// <para>The field for matched objects in the system.</para>
+                /// <para>The internal key for the match object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>http.request.headers</para>
@@ -38,7 +44,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The label of the matched object.</para>
+                /// <para>The label for the match object.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Header</para>
@@ -48,14 +54,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string Label { get; set; }
 
                 /// <summary>
-                /// <para>The logical conditions.</para>
+                /// <para>A list of logical operators that define the matching conditions.</para>
                 /// </summary>
                 [NameInMap("Logics")]
                 [Validation(Required=false)]
                 public List<GetWafFilterResponseBodyFilterFieldsLogics> Logics { get; set; }
                 public class GetWafFilterResponseBodyFilterFieldsLogics : TeaModel {
                     /// <summary>
-                    /// <para>A custom attribute. For example, this parameter can specify whether the value is case-sensitive.</para>
+                    /// <para>Configurable attributes, such as case sensitivity.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -64,17 +70,27 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     [Validation(Required=false)]
                     public int? Attributes { get; set; }
 
+                    /// <summary>
+                    /// <para>Indicates whether the current plan supports this operator.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>false</para>
+                    /// </summary>
                     [NameInMap("Enable")]
                     [Validation(Required=false)]
                     public bool? Enable { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the value input box. Valid values:</para>
+                    /// <para>The input type for the value. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>select:single</description></item>
-                    /// <item><description>select:multi</description></item>
-                    /// <item><description>input:single</description></item>
-                    /// <item><description>input:multi</description></item>
+                    /// <item><description><para><c>select:single</c>: A single-select input.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>select:multi</c>: A multi-select input.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>input:single</c>: A single-value text input.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>input:multi</c>: A multi-value text input.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -84,19 +100,25 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     [Validation(Required=false)]
                     public string Kind { get; set; }
 
+                    /// <summary>
+                    /// <para>The minimum plan that supports this operator, provided the current plan does not.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>high</para>
+                    /// </summary>
                     [NameInMap("MinPlan")]
                     [Validation(Required=false)]
                     public string MinPlan { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether the match result is inverted.</para>
+                    /// <para>Indicates whether to negate the match result.</para>
                     /// </summary>
                     [NameInMap("Negative")]
                     [Validation(Required=false)]
                     public bool? Negative { get; set; }
 
                     /// <summary>
-                    /// <para>The displayed matching characters.</para>
+                    /// <para>The label for the operator.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Does not equal</para>
@@ -106,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string Operator { get; set; }
 
                     /// <summary>
-                    /// <para>The matching characters in the system.</para>
+                    /// <para>The internal identifier for the operator.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>eq</para>
@@ -116,7 +138,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string Symbol { get; set; }
 
                     /// <summary>
-                    /// <para>The tip on how to enter a valid value that is required by the rules.</para>
+                    /// <para>A hint for entering a valid value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>e.g. image/jpeg</para>
@@ -128,10 +150,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     /// <summary>
                     /// <para>The type of the value. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>integer</description></item>
-                    /// <item><description>integer_slice</description></item>
-                    /// <item><description>string</description></item>
-                    /// <item><description>string_slice</description></item>
+                    /// <item><description><para><c>integer</c>: An integer.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>integer_slice</c>: An integer array.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>string</c>: A string.</para>
+                    /// </description></item>
+                    /// <item><description><para><c>string_slice</c>: A string array.</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -142,14 +168,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     public string Type { get; set; }
 
                     /// <summary>
-                    /// <para>The validator, which defines the validation rules for a value.</para>
+                    /// <para>The validator, which defines validation rules for the value.</para>
                     /// </summary>
                     [NameInMap("Validator")]
                     [Validation(Required=false)]
                     public GetWafFilterResponseBodyFilterFieldsLogicsValidator Validator { get; set; }
                     public class GetWafFilterResponseBodyFilterFieldsLogicsValidator : TeaModel {
                         /// <summary>
-                        /// <para>The error message when the validation fails.</para>
+                        /// <para>The error message returned when validation fails.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Enter a valid expression</para>
@@ -159,14 +185,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                         public string ErrMsg { get; set; }
 
                         /// <summary>
-                        /// <para>The length of the value.</para>
+                        /// <para>The length limit for the value.</para>
                         /// </summary>
                         [NameInMap("Length")]
                         [Validation(Required=false)]
                         public WafQuotaInteger Length { get; set; }
 
                         /// <summary>
-                        /// <para>The regular expression pattern of the value, which is used to validate strings.</para>
+                        /// <para>The regular expression pattern for the value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>^example$</para>
@@ -176,7 +202,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                         public string Pattern { get; set; }
 
                         /// <summary>
-                        /// <para>The range of the value, which is used to validate numbers.</para>
+                        /// <para>The value range for numeric validation.</para>
                         /// </summary>
                         [NameInMap("Range")]
                         [Validation(Required=false)]
@@ -186,26 +212,32 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
                 }
 
+                /// <summary>
+                /// <para>The minimum plan that supports this match object, provided the current plan does not.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>high</para>
+                /// </summary>
                 [NameInMap("MinPlan")]
                 [Validation(Required=false)]
                 public string MinPlan { get; set; }
 
                 /// <summary>
-                /// <para>The selector, which defines how to select a matched object.</para>
+                /// <para>The selector, which defines how to select the match object.</para>
                 /// </summary>
                 [NameInMap("Selector")]
                 [Validation(Required=false)]
                 public GetWafFilterResponseBodyFilterFieldsSelector Selector { get; set; }
                 public class GetWafFilterResponseBodyFilterFieldsSelector : TeaModel {
                     /// <summary>
-                    /// <para>The data. This parameter is available only when the value of the Kind parameter is data.</para>
+                    /// <para>A list of data options available when the selector <c>Kind</c> is <c>data</c>.</para>
                     /// </summary>
                     [NameInMap("Data")]
                     [Validation(Required=false)]
                     public List<GetWafFilterResponseBodyFilterFieldsSelectorData> Data { get; set; }
                     public class GetWafFilterResponseBodyFilterFieldsSelectorData : TeaModel {
                         /// <summary>
-                        /// <para>The label of the data.</para>
+                        /// <para>The label for the data option.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>China</para>
@@ -215,7 +247,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The value of the data.</para>
+                        /// <para>The value of the data option.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>CN</para>
@@ -227,7 +259,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                     }
 
                     /// <summary>
-                    /// <para>The type of selector. Valid values: data and others.</para>
+                    /// <para>The selector type, which indicates whether it targets data items or other entities.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>data</para>
@@ -239,7 +271,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the matched object contains a subfield.</para>
+                /// <para>Indicates whether the match object includes subfields.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -249,7 +281,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public bool? Sub { get; set; }
 
                 /// <summary>
-                /// <para>The tip on how to enter a subfield.</para>
+                /// <para>A hint for entering the subfield value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>e.g. Content-Type</para>
@@ -261,7 +293,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The WAF rule category.</para>
+            /// <para>The phase at which the WAF processes requests.</para>
             /// 
             /// <b>Example:</b>
             /// <para>http_bot</para>
@@ -271,7 +303,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Phase { get; set; }
 
             /// <summary>
-            /// <para>The condition for matching incoming requests.</para>
+            /// <para>The target of the matching engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>characteristics</para>

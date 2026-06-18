@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListWafManagedRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Attack type of the vulnerability protection event. Values:</para>
+        /// <para>The attack type to filter the results by. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SQL injection</description></item>
-        /// <item><description>Cross-site scripting</description></item>
-        /// <item><description>Code execution</description></item>
-        /// <item><description>CRLF</description></item>
-        /// <item><description>Local file inclusion</description></item>
-        /// <item><description>Remote file inclusion</description></item>
-        /// <item><description>Webshell</description></item>
-        /// <item><description>Cross-site request forgery</description></item>
-        /// <item><description>Other</description></item>
-        /// <item><description>SEMA</description></item>
+        /// <item><description><para>SQL injection</para>
+        /// </description></item>
+        /// <item><description><para>cross-site scripting</para>
+        /// </description></item>
+        /// <item><description><para>code execution</para>
+        /// </description></item>
+        /// <item><description><para>CRLF</para>
+        /// </description></item>
+        /// <item><description><para>local file inclusion</para>
+        /// </description></item>
+        /// <item><description><para>remote file inclusion</para>
+        /// </description></item>
+        /// <item><description><para>webshell</para>
+        /// </description></item>
+        /// <item><description><para>cross-site request forgery</para>
+        /// </description></item>
+        /// <item><description><para>Other</para>
+        /// </description></item>
+        /// <item><description><para>SEMA</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? AttackType { get; set; }
 
         /// <summary>
-        /// <para>ID of the WAF rule.</para>
+        /// <para>The ID of the WAF rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000001</para>
@@ -47,10 +57,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Language type, which will be used to return the response. Value range:</para>
+        /// <para>The response language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>en</b>: English.</description></item>
-        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,7 +109,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Query page number.</para>
+        /// <para>The number of the page to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -107,7 +119,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Query page size.</para>
+        /// <para>The number of entries to return on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -121,14 +133,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? ProtectionLevel { get; set; }
 
         /// <summary>
-        /// <para>Query conditions.</para>
+        /// <para>The query conditions.</para>
         /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]
         public ListWafManagedRulesRequestQueryArgs QueryArgs { get; set; }
         public class ListWafManagedRulesRequestQueryArgs : TeaModel {
             /// <summary>
-            /// <para>Action.</para>
+            /// <para>The rule action to filter by.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deny</para>
@@ -138,7 +150,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
-            /// <para>Fuzzy search for rule ID or rule name.</para>
+            /// <para>The keyword for a fuzzy search on the rule ID or rule name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -148,14 +160,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string IdNameLike { get; set; }
 
             /// <summary>
-            /// <para>List of rule protection levels.</para>
+            /// <para>The rule protection levels to filter the results by.</para>
             /// </summary>
             [NameInMap("ProtectionLevels")]
             [Validation(Required=false)]
             public List<int?> ProtectionLevels { get; set; }
 
             /// <summary>
-            /// <para>Status.</para>
+            /// <para>The rule status to filter by.</para>
             /// 
             /// <b>Example:</b>
             /// <para>on</para>
@@ -167,7 +179,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The ID of the site. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain this ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

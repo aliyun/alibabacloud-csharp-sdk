@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateLoadBalancerShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration for fallback across pools.</para>
+        /// <para>Configures origin-pull behavior across address pools.</para>
         /// </summary>
         [NameInMap("AdaptiveRouting")]
         [Validation(Required=false)]
         public string AdaptiveRoutingShrink { get; set; }
 
         /// <summary>
-        /// <para>List of default pool IDs.</para>
+        /// <para>A list of default address pool IDs.</para>
         /// </summary>
         [NameInMap("DefaultPools")]
         [Validation(Required=false)]
         public string DefaultPoolsShrink { get; set; }
 
         /// <summary>
-        /// <para>Detailed description of the load balancer, for easier management and identification.</para>
+        /// <para>An optional description of the load balancer for easier identification and management.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Load balancer description</para>
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether the load balancer is enabled.</para>
+        /// <para>Specifies whether the load balancer is enabled.</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Not enabled.</description></item>
+        /// <item><description><para><c>true</c>: The load balancer is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: The load balancer is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>Fallback pool ID, where traffic will be directed when all other pools are unavailable.</para>
+        /// <para>The ID of the fallback address pool. Traffic is routed to this pool when all other address pools are unavailable.</para>
         /// 
         /// <b>Example:</b>
         /// <para>96228666776****</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? FallbackPool { get; set; }
 
         /// <summary>
-        /// <para>Load balancer ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> API.</para>
+        /// <para>The ID of the load balancer. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2868897.html">ListLoadBalancers</a> API operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -69,21 +71,21 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>Monitor configuration for health checks.</para>
+        /// <para>The health check monitor configuration.</para>
         /// </summary>
         [NameInMap("Monitor")]
         [Validation(Required=false)]
         public string MonitorShrink { get; set; }
 
         /// <summary>
-        /// <para>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</para>
+        /// <para>The configuration for weighted round-robin. This setting controls the weight of traffic distributed to different address pools.</para>
         /// </summary>
         [NameInMap("RandomSteering")]
         [Validation(Required=false)]
         public string RandomSteeringShrink { get; set; }
 
         /// <summary>
-        /// <para>Address pool corresponding to the primary region.</para>
+        /// <para>A map of primary regions to their corresponding address pools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public object RegionPools { get; set; }
 
         /// <summary>
-        /// <para>Rule configuration list, used to define behavior overrides under specific conditions.</para>
+        /// <para>A list of rules that define behavior overrides for specific conditions.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -111,11 +113,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RulesShrink { get; set; }
 
         /// <summary>
-        /// <para>Session persistence, with possible values:</para>
+        /// <para>The method for session affinity, which ensures that requests from the same client are routed to the same origin server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: Not enabled.</description></item>
-        /// <item><description>ip: Session persistence by IP.</description></item>
-        /// <item><description>cookie: Session persistence by cookie.</description></item>
+        /// <item><description><para><c>off</c>: Disables session affinity.</para>
+        /// </description></item>
+        /// <item><description><para><c>ip</c>: Enables session affinity based on the client IP address.</para>
+        /// </description></item>
+        /// <item><description><para><c>cookie</c>: Enables session affinity based on a cookie.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -126,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SessionAffinity { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <para>The ID of the Site. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> API operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,7 +142,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Load balancing policy.</para>
+        /// <para>The traffic steering policy, which determines how traffic is distributed among the address pools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>order</para>
@@ -147,7 +152,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the regions can be concatenated with commas as the key.</para>
+        /// <para>A map of secondary regions to their corresponding address pools. To assign the same address pools to multiple secondary regions, combine their codes into a single, comma-separated key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>
@@ -157,7 +162,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public object SubRegionPools { get; set; }
 
         /// <summary>
-        /// <para>TTL value, the time-to-live for DNS records, with a default of 30 and a range of 10-600.</para>
+        /// <para>The Time to Live (TTL) for the DNS record, in seconds. The default is 30. The value must be between 10 and 600, inclusive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

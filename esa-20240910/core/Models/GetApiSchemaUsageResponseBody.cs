@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetApiSchemaUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The plan ID.</para>
+        /// <para>The plan\&quot;s instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esa-site-agknce3n****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The number of files uploaded for schema verification in the plan instance of the website.</para>
+        /// <para>The total count of API schema files uploaded to the plan instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? InstanceUsage { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>952ea16b-1f05-4a76-bb32-420282d8****</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Usage details for websites.</para>
+        /// <para>The usage details for each site.</para>
         /// </summary>
         [NameInMap("Usages")]
         [Validation(Required=false)]
         public List<GetApiSchemaUsageResponseBodyUsages> Usages { get; set; }
         public class GetApiSchemaUsageResponseBodyUsages : TeaModel {
             /// <summary>
-            /// <para>The website ID.</para>
+            /// <para>The site ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>40000449</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The website name.</para>
+            /// <para>The site name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The number of files uploaded for the website.</para>
+            /// <para>The number of API schema files uploaded for this site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

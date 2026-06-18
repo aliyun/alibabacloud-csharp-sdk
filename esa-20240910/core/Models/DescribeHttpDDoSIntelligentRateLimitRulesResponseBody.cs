@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>36af3fcc-43d0-441c-86b1-428951dc8225</para>
@@ -35,11 +39,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of rules.</para>
+        /// </summary>
         [NameInMap("RuleInfos")]
         [Validation(Required=false)]
         public List<DescribeHttpDDoSIntelligentRateLimitRulesResponseBodyRuleInfos> RuleInfos { get; set; }
         public class DescribeHttpDDoSIntelligentRateLimitRulesResponseBodyRuleInfos : TeaModel {
             /// <summary>
+            /// <para>The action to perform.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>js</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
+            /// <para>The conditions that trigger the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;$and&quot;:[{&quot;key&quot;:&quot;URI&quot;,&quot;opValue&quot;:&quot;prefix-match&quot;,&quot;values&quot;:&quot;/&quot;}]}</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Condition { get; set; }
 
             /// <summary>
+            /// <para>The ID of the protection rule for log records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100030</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? LogRuleId { get; set; }
 
             /// <summary>
+            /// <para>The duration of the penalty in seconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>86400</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? PunishTime { get; set; }
 
             /// <summary>
+            /// <para>The frequency information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;threshold&quot;:2000,&quot;interval&quot;:5,&quot;target&quot;:&quot;ip&quot;,&quot;ttl&quot;:600}</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RateLimit { get; set; }
 
             /// <summary>
+            /// <para>The name of the record.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test.example.com</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RecordName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20110849</para>
             /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? RuleId { get; set; }
 
             /// <summary>
+            /// <para>The name of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>inner_cc_client_ip_ratelimit</para>
             /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The statistics.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{&quot;field&quot;:&quot;ip&quot;,&quot;mode&quot;:&quot;count&quot;}</para>
             /// </summary>
@@ -114,6 +139,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The total number of rules.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

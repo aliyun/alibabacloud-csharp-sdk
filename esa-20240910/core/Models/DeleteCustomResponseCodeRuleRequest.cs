@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. Obtain this by calling ListSites.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

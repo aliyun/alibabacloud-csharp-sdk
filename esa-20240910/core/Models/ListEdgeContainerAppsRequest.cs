@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>Appid</para>
+        /// <para>AppId</para>
         /// </summary>
         [NameInMap("SearchType")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CommitRoutineStagingCodeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The version number of the newly generated code.</para>
+        /// <para>The newly generated code version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1710120201067203242</para>

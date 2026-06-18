@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetUserDeliveryTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The log category. Valid values:</para>
+        /// <para>The business type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>dcdn_log_access_l1</b> (default): access logs.</description></item>
-        /// <item><description><b>dcdn_log_er</b>: Edge Routine logs.</description></item>
-        /// <item><description><b>dcdn_log_waf</b>: firewall logs.</description></item>
-        /// <item><description><b>dcdn_log_ipa</b>: TCP/UDP proxy logs.</description></item>
+        /// <item><description><para><b>dcdn_log_access_l1</b> (default): access log.</para>
+        /// </description></item>
+        /// <item><description><para><b>dcdn_log_er</b>: edge function log.</para>
+        /// </description></item>
+        /// <item><description><para><b>dcdn_log_waf</b>: WAF log.</para>
+        /// </description></item>
+        /// <item><description><para><b>dcdn_log_ipa</b>: Layer 4 acceleration log.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,8 +32,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The data center. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>cn: the Chinese mainland.</description></item>
-        /// <item><description>sg: outside the Chinese mainland.</description></item>
+        /// <item><description><para><b>cn</b>: Chinese mainland</para>
+        /// </description></item>
+        /// <item><description><para><b>sg</b>: Global (excluding the Chinese mainland)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,14 +46,20 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DataCenter { get; set; }
 
         /// <summary>
-        /// <para>The destination of the delivery. Valid values:</para>
+        /// <para>The delivery type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>sls: Alibaba Cloud Simple Log Service (SLS).</description></item>
-        /// <item><description>http: HTTP server.</description></item>
-        /// <item><description>aws3: Amazon Simple Storage Service (S3).</description></item>
-        /// <item><description>oss: Alibaba Cloud Object Storage Service (OSS).</description></item>
-        /// <item><description>kafka: Kafka.</description></item>
-        /// <item><description>aws3cmpt: S3-compatible storage service.</description></item>
+        /// <item><description><para><b>sls</b>: Log Service</para>
+        /// </description></item>
+        /// <item><description><para><b>http</b>: HTTP service</para>
+        /// </description></item>
+        /// <item><description><para><b>aws3</b>: Amazon S3</para>
+        /// </description></item>
+        /// <item><description><para><b>oss</b>: OSS</para>
+        /// </description></item>
+        /// <item><description><para><b>kafka</b>: Kafka service</para>
+        /// </description></item>
+        /// <item><description><para><b>aws3cmpt</b>: Amazon S3-compatible service</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +84,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? DiscardRate { get; set; }
 
         /// <summary>
-        /// <para>The fields.</para>
+        /// <para>A comma-separated list of fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ClientRequestID,ClientRequestHost</para>
@@ -82,7 +94,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FieldList { get; set; }
 
         /// <summary>
-        /// <para>The filtering rules.</para>
+        /// <para>The filter rules.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;ClientSSLProtocol&quot;: {&quot;equals&quot;: [&quot;TLSv1.3&quot;]}}]</para>
@@ -120,7 +132,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public object SinkConfig { get; set; }
 
         /// <summary>
-        /// <para>The status of the delivery task.</para>
+        /// <para>The task status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>online</para>
@@ -130,7 +142,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testoss11</para>

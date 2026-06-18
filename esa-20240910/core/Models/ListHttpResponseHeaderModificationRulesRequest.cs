@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListHttpResponseHeaderModificationRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration ID.</para>
+        /// <para>The config ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35281609698****</para>
@@ -20,12 +20,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Configuration type, which can be used to query global or rule configurations. Possible values:</para>
+        /// <para>The type of configuration to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: Query global configuration.</description></item>
-        /// <item><description>rule: Query rule configuration.</description></item>
+        /// <item><description><para>global: Returns only the global configuration.</para>
+        /// </description></item>
+        /// <item><description><para>rule: Returns only the rule configuration.</para>
+        /// </description></item>
         /// </list>
-        /// <para>This parameter is optional. If not provided, it does not distinguish between global and rule configurations.</para>
+        /// <para>If you do not specify this parameter, the operation returns both global and rule configurations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>Page number.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size, default is 500. The value range is any integer from 1 to 500.</para>
+        /// <para>The number of entries to return on each page. Default value: 500. Valid values: an integer from 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
+        /// <para>The rule name. This parameter applies only when you query for a rule configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Version number of the site configuration. For sites with version management enabled, you can use this parameter to specify the effective version of the configuration, with the default being version 0.</para>
+        /// <para>The site version. For sites that have configuration versioning enabled, you can use this parameter to query a configuration from a specific version. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

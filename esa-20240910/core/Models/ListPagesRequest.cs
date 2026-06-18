@@ -29,11 +29,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The query filters, specified as a JSON object.</para>
+        /// </summary>
         [NameInMap("QueryArgs")]
         [Validation(Required=false)]
         public ListPagesRequestQueryArgs QueryArgs { get; set; }
         public class ListPagesRequestQueryArgs : TeaModel {
             /// <summary>
+            /// <para>Filters the custom response pages by content type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>application/json</para>
             /// </summary>
@@ -41,6 +46,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string ContentType { get; set; }
 
+            /// <summary>
+            /// <para>A keyword for a fuzzy search on the name or description of custom response pages.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>example</para>
+            /// </summary>
             [NameInMap("NameDescriptionLike")]
             [Validation(Required=false)]
             public string NameDescriptionLike { get; set; }

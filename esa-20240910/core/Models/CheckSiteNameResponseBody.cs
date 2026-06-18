@@ -12,11 +12,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The description of the verification result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>success</b>: The verification is successful.</description></item>
-        /// <item><description><b>Site.AlreadyExist</b>: The website domain name has already been added.</description></item>
-        /// <item><description><b>Site.InvalidName</b>: Invalid website domain name.</description></item>
-        /// <item><description><b>Site.SubSiteUnavailable</b>: Subdomains are not allowed.</description></item>
-        /// <item><description><b>Site.InternalError</b>: An internal error occurs.</description></item>
+        /// <item><description><para><b>success</b>: The verification is successful.</para>
+        /// </description></item>
+        /// <item><description><para><b>Site.AlreadyExist</b>: The website domain name has already been added.</para>
+        /// </description></item>
+        /// <item><description><para><b>Site.InvalidName</b>: Invalid website domain name.</para>
+        /// </description></item>
+        /// <item><description><para><b>Site.SubSiteUnavailable</b>: Subdomains are not allowed.</para>
+        /// </description></item>
+        /// <item><description><para><b>Site.InternalError</b>: An internal error occurs.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,8 +34,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Indicates whether a subdomain is specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,6 +49,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The verification message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Site name is available.</para>
         /// </summary>
         [NameInMap("Messeage")]
         [Validation(Required=false)]
@@ -50,8 +60,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Indicates whether the verification passed.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b></para>
+        /// </description></item>
+        /// <item><description><para><b>false</b></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

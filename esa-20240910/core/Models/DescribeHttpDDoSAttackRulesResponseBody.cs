@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeHttpDDoSAttackRulesResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4030CD2-0D9D-5E92-B358-421AE58307C6</para>
@@ -35,11 +39,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>A list of rule details.</para>
+        /// </summary>
         [NameInMap("RuleInfos")]
         [Validation(Required=false)]
         public List<DescribeHttpDDoSAttackRulesResponseBodyRuleInfos> RuleInfos { get; set; }
         public class DescribeHttpDDoSAttackRulesResponseBodyRuleInfos : TeaModel {
             /// <summary>
+            /// <para>The action to perform.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>deny</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Action { get; set; }
 
             /// <summary>
+            /// <para>The default action.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>deny</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DefaultAction { get; set; }
 
             /// <summary>
+            /// <para>The ID of the protection rule used for log records.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100010</para>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? LogRuleId { get; set; }
 
             /// <summary>
+            /// <para>The description of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>The HTTP request\&quot;s Accept header contains invalid features#1</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleDesc { get; set; }
 
             /// <summary>
+            /// <para>The ID of the HTTP DDoS protection rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>20203578</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public int? RuleId { get; set; }
 
             /// <summary>
+            /// <para>The short name of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>global_01_s</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleIdInfo { get; set; }
 
             /// <summary>
+            /// <para>The name of the rule.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Illegal request。</para>
             /// </summary>
@@ -96,6 +117,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string RuleName { get; set; }
 
             /// <summary>
+            /// <para>The status of the rule. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>on</b>: The rule is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>off</b>: The rule is disabled.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>on</para>
             /// </summary>
@@ -106,6 +135,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>

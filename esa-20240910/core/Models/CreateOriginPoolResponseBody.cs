@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateOriginPoolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the newly created origin address pool.</para>
+        /// <para>The origin pool ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>103852052519****</para>

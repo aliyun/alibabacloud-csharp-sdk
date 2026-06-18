@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <summary>
                 /// <para>The log path.</para>
                 /// <remarks>
-                /// <para> Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</para>
+                /// <para>Take note of the Expires field (expiration timestamp) in this parameter. If the log download URL expires, you must reobtain the URL.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>

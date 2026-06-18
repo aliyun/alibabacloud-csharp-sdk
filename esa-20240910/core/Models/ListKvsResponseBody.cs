@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListKvsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The key-value pairs.</para>
+        /// <para>The list of key-value pairs returned by this traversal.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public List<ListKvsResponseBodyKeys> Keys { get; set; }
         public class ListKvsResponseBodyKeys : TeaModel {
             /// <summary>
-            /// <para>The key name.</para>
+            /// <para>The name of the key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Key1</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1024</para>

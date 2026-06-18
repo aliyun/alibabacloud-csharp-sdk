@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetHttpsApplicationConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>ConfigId of the configuration, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2869087.html">listHttpsApplicationConfigurations</a> interface.</para>
+        /// <para>The configuration ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2869087.html">listHttpsApplicationConfigurations</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <para>The site ID. You can obtain this ID by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

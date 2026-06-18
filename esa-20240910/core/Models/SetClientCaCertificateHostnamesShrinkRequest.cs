@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetClientCaCertificateHostnamesShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>A list of hostnames.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Hostnames")]
@@ -17,6 +18,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HostnamesShrink { get; set; }
 
         /// <summary>
+        /// <para>The client CA certificate ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>babaabcd****</para>
         /// </summary>
@@ -25,6 +28,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AutoWebp { get; set; }
 
         /// <summary>
-        /// <para>Configuration ID.</para>
+        /// <para>The config ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>352816096987136</para>
@@ -36,10 +36,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>Configuration type. Possible values:</para>
+        /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: Global configuration;</description></item>
-        /// <item><description>rule: Rule-based configuration;</description></item>
+        /// <item><description><para>global: The global configuration.</para>
+        /// </description></item>
+        /// <item><description><para>rule: A rule configuration.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -50,10 +52,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable image transformation. Possible values:</para>
+        /// <para>Indicates whether image transformation is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para>on: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>off: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</para>
@@ -74,10 +78,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <para>The conditional expression of the rule, used to match user requests. This parameter is relevant only for a rule configuration.</para>
         /// <list type="bullet">
-        /// <item><description>Match all incoming requests: Set the value to true</description></item>
-        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// <item><description><para>A value of true matches all incoming requests.</para>
+        /// </description></item>
+        /// <item><description><para>A custom expression, such as (http.host eq &quot;video.example.com&quot;), matches specific requests.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -88,10 +94,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
+        /// <para>The status of the rule. This parameter is relevant only for a rule configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para>on: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para>off: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,7 +110,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name. This parameter does not need to be set when adding global configuration.</para>
+        /// <para>The rule name. This parameter is relevant only for a rule configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -112,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>Rule execution order. The smaller the value, the higher the priority.</para>
+        /// <para>The execution sequence of the rule. A smaller value indicates a higher execution priority.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -122,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site configuration. For sites with version management enabled, this parameter can specify the effective version of the site, defaulting to version 0.</para>
+        /// <para>The version number of the site configuration. For a site that has configuration versioning enabled, this value indicates the version to which the configuration applies. The default value is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

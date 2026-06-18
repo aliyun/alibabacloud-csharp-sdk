@@ -20,12 +20,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string AppId { get; set; }
 
+        /// <summary>
+        /// <para>The deployment percentage for the target version after the rollback. Valid values: <b>1 to 100</b>. Default value: <b>0</b>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>50</para>
+        /// </summary>
         [NameInMap("Percentage")]
         [Validation(Required=false)]
         public int? Percentage { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>Additional information about the rollback.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test rollback app</para>
@@ -34,12 +40,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string Remarks { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to use percentage rollback.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("UsedPercent")]
         [Validation(Required=false)]
         public bool? UsedPercent { get; set; }
 
         /// <summary>
-        /// <para>The ID of version that you want to roll back.</para>
+        /// <para>The ID of the version to roll back to.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

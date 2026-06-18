@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateHttpsApplicationConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>Alt-Svc feature switch, default is disabled. Possible values:</para>
+        /// <para>Specifies whether to enable the Alt-Svc header. Disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AltSvc { get; set; }
 
         /// <summary>
-        /// <para>Whether the Alt-Svc header includes the clear parameter, default is disabled. Possible values:</para>
+        /// <para>Specifies whether to include the <c>clear</c> parameter in the Alt-Svc header. Disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: The parameter is included.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: The parameter is not included.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AltSvcClear { get; set; }
 
         /// <summary>
-        /// <para>Alt-Svc validity period in seconds, default is 86400 seconds.</para>
+        /// <para>The Max Age for the Alt-Svc header, in seconds. The default is 86400.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86400</para>
@@ -48,10 +52,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AltSvcMa { get; set; }
 
         /// <summary>
-        /// <para>Whether the Alt-Svc header includes the persist parameter, default is disabled. Possible values:</para>
+        /// <para>Specifies whether to include the <c>persist</c> parameter in the Alt-Svc header. Disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: The parameter is included.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: The parameter is not included.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,10 +68,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AltSvcPersist { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable HSTS, default is disabled. Possible values:</para>
+        /// <para>Specifies whether to enable HTTP Strict Transport Security (HSTS). Disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,10 +84,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Hsts { get; set; }
 
         /// <summary>
-        /// <para>Whether to include subdomains in HSTS, default is disabled. Possible values:</para>
+        /// <para>Specifies whether to include the <c>includeSubDomains</c> directive in the HSTS header. Disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: The directive is included.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: The directive is not included.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HstsIncludeSubdomains { get; set; }
 
         /// <summary>
-        /// <para>HSTS expiration time in seconds.</para>
+        /// <para>The value of the <c>max-age</c> directive for the HSTS header, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -100,10 +110,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HstsMaxAge { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable HSTS preload, default is disabled. Possible values:</para>
+        /// <para>Specifies whether to enable HSTS Preload by including the <c>preload</c> directive in the HSTS header. Disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: The directive is included.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: The directive is not included.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -114,10 +126,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HstsPreload { get; set; }
 
         /// <summary>
-        /// <para>Whether to enable forced HTTPS, default is disabled. Possible values:</para>
+        /// <para>Specifies whether to enable Force HTTPS. Disabled by default. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,12 +142,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string HttpsForce { get; set; }
 
         /// <summary>
-        /// <para>Forced HTTPS redirect status code. Possible values:</para>
+        /// <para>The Redirection Status Code to use when Force HTTPS is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>301</description></item>
-        /// <item><description>302</description></item>
-        /// <item><description>307</description></item>
-        /// <item><description>308</description></item>
+        /// <item><description><para><c>301</c></para>
+        /// </description></item>
+        /// <item><description><para><c>302</c></para>
+        /// </description></item>
+        /// <item><description><para><c>307</c></para>
+        /// </description></item>
+        /// <item><description><para><c>308</c></para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -143,23 +161,55 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string HttpsForceCode { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to reject TLS Handshake Requests that do not include an SNI. Disabled by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>on</c>: Rejects requests without an SNI.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Allows requests without an SNI.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("HttpsNoSniDeny")]
         [Validation(Required=false)]
         public string HttpsNoSniDeny { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable Server Name Indication (SNI) verification. Disabled by default. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>on</para>
+        /// </summary>
         [NameInMap("HttpsSniVerify")]
         [Validation(Required=false)]
         public string HttpsSniVerify { get; set; }
 
+        /// <summary>
+        /// <para>Specifies the allowlist of SNI values. Separate multiple values with a space.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>abc edf</para>
+        /// </summary>
         [NameInMap("HttpsSniWhitelist")]
         [Validation(Required=false)]
         public string HttpsSniWhitelist { get; set; }
 
         /// <summary>
-        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <para>The content of the Rule, which is a Conditional Expression that matches user Requests. This parameter is optional when adding a Global Configuration. Supported use cases include:</para>
         /// <list type="bullet">
-        /// <item><description>Match all incoming requests: Set the value to true</description></item>
-        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// <item><description><para>To match all incoming requests, set the value to <c>true</c>.</para>
+        /// </description></item>
+        /// <item><description><para>To match specific requests, use a custom expression. For example: <c>(http.host eq &quot;video.example.com&quot;)</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -170,10 +220,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. This parameter is not required when adding a global configuration. Possible values:</para>
+        /// <para>Specifies whether to enable the rule. This parameter is optional when adding a Global Configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enabled.</description></item>
-        /// <item><description>off: Disabled.</description></item>
+        /// <item><description><para><c>on</c>: The rule is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: The rule is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -184,7 +236,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
+        /// <para>The name of the Rule. This parameter is optional when adding a Global Configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -193,12 +245,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        /// <summary>
+        /// <para>The execution order of the rule. A lower value indicates a higher priority.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Sequence")]
         [Validation(Required=false)]
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <para>The ID of the Site. You can get this ID by calling the <a href="~~ListSites~~">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -209,7 +267,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Version number of the site configuration. For sites with version management enabled, this parameter can specify the version to which the configuration applies, defaulting to version 0.</para>
+        /// <para>The Site\&quot;s configuration Version. For Sites with version management enabled, this parameter specifies the Version to which the configuration applies. The default is 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

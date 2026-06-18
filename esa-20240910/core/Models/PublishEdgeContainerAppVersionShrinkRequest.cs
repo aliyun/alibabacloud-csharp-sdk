@@ -43,8 +43,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The environment to which you want to release the version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>prod: the production environment.</description></item>
-        /// <item><description>staging: the staging environment.</description></item>
+        /// <item><description><para>prod: the production environment.</para>
+        /// </description></item>
+        /// <item><description><para>staging: the staging environment.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -58,8 +60,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>Specifies how the version is released. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>percentage: releases the version by percentage.</description></item>
-        /// <item><description>region: releases the version by region.</description></item>
+        /// <item><description><para>percentage: releases the version by percentage.</para>
+        /// </description></item>
+        /// <item><description><para>region: releases the version by region.</para>
+        /// </description></item>
         /// </list>
         /// <para>If you do not specify this parameter, the version is released by percentage by default.</para>
         /// 

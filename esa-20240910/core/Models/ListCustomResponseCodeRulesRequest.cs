@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The configuration type to query. Valid values:</para>
+        /// <para>The configuration type. Use this parameter to query global or rule configurations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: global configurations.</description></item>
-        /// <item><description>rule: rule configurations.</description></item>
+        /// <item><description><para>global: Queries global configurations.</para>
+        /// </description></item>
+        /// <item><description><para>rule: Queries rule configurations.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1.</para>
+        /// <para>The page number. The default value is 1 if you do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 500. Default value: 500.</para>
+        /// <para>The number of entries per page. The maximum value is 500. The default value is 500 if you do not specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. For more information, see <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the website configurations. You can use this parameter to specify a version of your website to apply the feature settings. By default, version 0 is used.</para>
+        /// <para>The version number of the site configuration. For sites with configuration version control enabled, specify the site version for which the configuration takes effect using this parameter. The default value is version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

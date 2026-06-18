@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateRewriteUrlRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration ID. It can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> interface.</para>
+        /// <para>The configuration ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2867480.html">ListRewriteUrlRules</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The query string after rewriting.</para>
+        /// <para>The query string after the rewrite.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example=123</para>
@@ -31,10 +31,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string QueryString { get; set; }
 
         /// <summary>
-        /// <para>Query string rewrite type. Value range:</para>
+        /// <para>The query string rewrite type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>static: Static mode.</description></item>
-        /// <item><description>dynamic: Dynamic mode.</description></item>
+        /// <item><description><para>static: Static Mode.</para>
+        /// </description></item>
+        /// <item><description><para>dynamic: Dynamic Mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -45,10 +47,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RewriteQueryStringType { get; set; }
 
         /// <summary>
-        /// <para>URI rewrite type. Value range:</para>
+        /// <para>The URI rewrite type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>static: Static mode.</description></item>
-        /// <item><description>dynamic: Dynamic mode.</description></item>
+        /// <item><description><para>static: Static Mode.</para>
+        /// </description></item>
+        /// <item><description><para>dynamic: Dynamic Mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,10 +66,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RewriteUriType { get; set; }
 
         /// <summary>
-        /// <para>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</para>
+        /// <para>The content of the rule, a conditional expression that matches user requests. This parameter is not required for a Global Configuration. Two use cases are supported:</para>
         /// <list type="bullet">
-        /// <item><description>Match all incoming requests: Set the value to true</description></item>
-        /// <item><description>Match specific requests: Set the value to a custom expression, for example: (http.host eq \&quot;video.example.com\&quot;)</description></item>
+        /// <item><description><para>To match all incoming requests, set the value to true.</para>
+        /// </description></item>
+        /// <item><description><para>To match specific requests, set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;).</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,10 +82,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Rule switch. This parameter is not required when adding a global configuration. Value range:</para>
+        /// <para>Specifies whether the rule is enabled. This parameter is not required for a Global Configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para>on: The rule is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>off: The rule is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -90,7 +98,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>Rule name. This parameter is not required when adding a global configuration.</para>
+        /// <para>The rule name. This parameter is not required for a Global Configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example=123</para>
@@ -99,12 +107,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RuleName { get; set; }
 
+        /// <summary>
+        /// <para>The execution priority of the rule. A smaller value indicates a higher priority.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Sequence")]
         [Validation(Required=false)]
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The site ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +129,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The target URI after rewriting.</para>
+        /// <para>The destination URI after the rewrite.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/image/example.jpg</para>

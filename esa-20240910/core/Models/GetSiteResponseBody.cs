@@ -20,17 +20,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The queried website information.</para>
+        /// <para>The details of the site.</para>
         /// </summary>
         [NameInMap("SiteModel")]
         [Validation(Required=false)]
         public GetSiteResponseBodySiteModel SiteModel { get; set; }
         public class GetSiteResponseBodySiteModel : TeaModel {
             /// <summary>
-            /// <para>The DNS setup option for the website. Valid values:</para>
+            /// <para>The access type of the site. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NS</b></description></item>
-            /// <item><description><b>CNAME</b></description></item>
+            /// <item><description><para><b>NS</b>: Access via NS.</para>
+            /// </description></item>
+            /// <item><description><para><b>CNAME</b>: Access via CNAME.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,7 +43,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The CNAME of the website domain. If you use CNAME setup when you add your website to ESA, the value is the CNAME that you configured then.</para>
+            /// <para>For sites onboarded via CNAME, use this suffix to configure the CNAME record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.cname.com</para>
@@ -51,11 +53,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CnameZone { get; set; }
 
             /// <summary>
-            /// <para>The service location. Valid values:</para>
+            /// <para>The acceleration region. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>domestic</b>: the Chinese mainland.</description></item>
-            /// <item><description><b>global</b>: global.</description></item>
-            /// <item><description><b>overseas</b>: outside the Chinese mainland.</description></item>
+            /// <item><description><para><b>domestic</b>: Chinese mainland only</para>
+            /// </description></item>
+            /// <item><description><para><b>global</b>: Global</para>
+            /// </description></item>
+            /// <item><description><para><b>overseas</b>: Global (excluding the Chinese mainland)</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -66,7 +71,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverage { get; set; }
 
             /// <summary>
-            /// <para>The time when the WEBsite was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</para>
+            /// <para>The time (in UTC) when the site was created, formatted in ISO 8601 (<c>yyyy-MM-ddTHH:mm:ssZ</c>).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-24T02:01:11Z</para>
@@ -76,7 +81,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The plan ID.</para>
+            /// <para>The ID of the plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cas-merge-q6h0bv</para>
@@ -86,7 +91,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The nameservers assigned to the website domain. They are separated by commas (,).</para>
+            /// <para>A comma-separated list of name servers assigned to the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>male1-1.ialicdn.com,female1-1.ialicdn.com</para>
@@ -95,12 +100,30 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             [Validation(Required=false)]
             public string NameServerList { get; set; }
 
+            /// <summary>
+            /// <para>The reason the site is offline. This parameter appears only when <c>Status</c> is <c>offline</c>. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>expiration_arrears</b>: The subscription plan has expired or the account has overdue payments.</para>
+            /// </description></item>
+            /// <item><description><para><b>internally_disabled</b>: The site was disabled by the system.</para>
+            /// </description></item>
+            /// <item><description><para><b>missing_icp</b>: The domain is missing an ICP license.</para>
+            /// </description></item>
+            /// <item><description><para><b>content_violation</b>: The site violated content policies.</para>
+            /// </description></item>
+            /// <item><description><para><b>proactively_disabled</b>: The site was disabled either by you or by a usage limit that you configured.</para>
+            /// </description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>expiration_ arrears</para>
+            /// </summary>
             [NameInMap("OfflineReason")]
             [Validation(Required=false)]
             public string OfflineReason { get; set; }
 
             /// <summary>
-            /// <para>The plan name.</para>
+            /// <para>The name of the plan.</para>
             /// 
             /// <b>Example:</b>
             /// <para>plan-168777532****</para>
@@ -110,7 +133,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanName { get; set; }
 
             /// <summary>
-            /// <para>The specification of the plan associated with the website.</para>
+            /// <para>The name of the plan specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -120,7 +143,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanSpecName { get; set; }
 
             /// <summary>
-            /// <para>The ID of your Alibaba Cloud resource group.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aek26g6i6se****</para>
@@ -130,7 +153,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The website ID.</para>
+            /// <para>The ID of the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890123</para>
@@ -140,7 +163,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? SiteId { get; set; }
 
             /// <summary>
-            /// <para>The website name.</para>
+            /// <para>The name of the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
@@ -150,12 +173,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>The website status. Valid values:</para>
+            /// <para>The status of the site. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>pending</b>: The website is to be configured.</description></item>
-            /// <item><description><b>active</b>: The website is active.</description></item>
-            /// <item><description><b>offline</b>: The website is suspended.</description></item>
-            /// <item><description><b>moved</b>: The website has been added and verified by another Alibaba Cloud account.</description></item>
+            /// <item><description><para><b>pending</b>: The site is pending configuration.</para>
+            /// </description></item>
+            /// <item><description><para><b>active</b>: The site is active.</para>
+            /// </description></item>
+            /// <item><description><para><b>offline</b>: The site is offline.</para>
+            /// </description></item>
+            /// <item><description><para><b>moved</b>: The site has been superseded.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -166,7 +193,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags of the website.</para>
+            /// <para>The tags of the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;tag1&quot;:&quot;value1&quot;}</para>
@@ -176,7 +203,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public Dictionary<string, object> Tags { get; set; }
 
             /// <summary>
-            /// <para>The time when the WEBsite was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</para>
+            /// <para>The time (in UTC) when the site was last updated, formatted in ISO 8601 (<c>yyyy-MM-ddTHH:mm:ssZ</c>).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-24T02:01:11Z</para>
@@ -186,14 +213,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The information about custom nameservers of the website domain. The key is a custom nameserver name, and the value is the IP address of the custom nameserver. Multiple IP addresses are separated by commas (,).</para>
+            /// <para>Each key is a custom name server, and its value is a comma-separated list of the server\&quot;s IP addresses.</para>
             /// </summary>
             [NameInMap("VanityNSList")]
             [Validation(Required=false)]
             public Dictionary<string, string> VanityNSList { get; set; }
 
             /// <summary>
-            /// <para>The code that is used to verify the website domain ownership. As part of the verification TXT record, this parameter is returned for websites that use CNAME setup.</para>
+            /// <para>For sites onboarded via CNAME, you must configure this code as a TXT record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>verify_d516cb3740f81f0cef77d162edd1****</para>
@@ -203,7 +230,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string VerifyCode { get; set; }
 
             /// <summary>
-            /// <para>The status of version management. If true is returned, version management is enabled for the website.</para>
+            /// <para>If <c>true</c>, version management is enabled for the site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

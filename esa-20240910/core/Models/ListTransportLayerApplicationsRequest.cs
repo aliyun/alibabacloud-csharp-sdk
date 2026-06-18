@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListTransportLayerApplicationsRequest : TeaModel {
         /// <summary>
-        /// <para>Query type for the transport layer application host record, supporting the following 4 types, with exact query as the default.</para>
+        /// <para>The match type for the host record of the Layer 4 application. The default is an exact search. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>fuzzy: Fuzzy query.</description></item>
-        /// <item><description>exact: Exact query.</description></item>
-        /// <item><description>prefix: Prefix match query.</description></item>
-        /// <item><description>suffix: Suffix match query.</description></item>
+        /// <item><description><para>fuzzy: fuzzy search.</para>
+        /// </description></item>
+        /// <item><description><para>exact: exact search.</para>
+        /// </description></item>
+        /// <item><description><para>prefix: prefix search.</para>
+        /// </description></item>
+        /// <item><description><para>suffix: suffix search.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MatchType { get; set; }
 
         /// <summary>
-        /// <para>Page number set for pagination. Starting value: 1. Default value: 1.</para>
+        /// <para>The page number. The minimum value is 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Page size. The maximum value is 500.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -46,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Host record of the transport layer application.</para>
+        /// <para>The host record of the Layer 4 application.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://www.example.com">www.example.com</a></para>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> API.</para>
+        /// <para>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain it.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

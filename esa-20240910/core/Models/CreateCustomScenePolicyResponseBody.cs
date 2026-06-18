@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateCustomScenePolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the policy expires.</para>
-        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The policy end time.</para>
+        /// <para>The time must be in UTC and in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-07T18:00:00Z</para>
@@ -31,7 +31,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The IDs of websites associated.</para>
+        /// <para>A list of associated site IDs.</para>
+        /// <remarks>
+        /// <para>This field is deprecated. Read the value from the <c>SiteIds</c> field instead.</para>
+        /// </remarks>
         /// </summary>
         [NameInMap("Objects")]
         [Validation(Required=false)]
@@ -57,13 +60,19 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The associated site IDs, separated by commas.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>7096621098****, 7096621099****</para>
+        /// </summary>
         [NameInMap("SiteIds")]
         [Validation(Required=false)]
         public string SiteIds { get; set; }
 
         /// <summary>
-        /// <para>The time when the policy takes effect.</para>
-        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The policy start time.</para>
+        /// <para>The time must be in UTC and in ISO 8601 format: <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-11-07T17:00:00Z</para>
@@ -73,7 +82,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy template.</para>
+        /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>promotion</para>

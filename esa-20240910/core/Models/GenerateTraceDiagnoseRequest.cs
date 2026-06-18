@@ -10,6 +10,17 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GenerateTraceDiagnoseRequest : TeaModel {
         /// <summary>
+        /// <para>The source of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ai</para>
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
+
+        /// <summary>
+        /// <para>The URL to diagnose.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

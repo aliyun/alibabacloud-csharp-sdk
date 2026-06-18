@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class BatchGetExpressionFieldsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>List of expressions.</para>
+        /// <para>A list of expression objects to process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Kind { get; set; }
 
         /// <summary>
-        /// <para>WAF Phase</para>
+        /// <para>The WAF phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>http_bot</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PlanNameEn { get; set; }
 
         /// <summary>
-        /// <para>Site ID</para>
+        /// <para>The ID of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

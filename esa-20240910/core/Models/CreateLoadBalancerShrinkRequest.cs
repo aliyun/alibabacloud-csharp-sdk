@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateLoadBalancerShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration for failover across pools.</para>
+        /// <para>The configuration for failover across address pools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AdaptiveRoutingShrink { get; set; }
 
         /// <summary>
-        /// <para>List of default pools.</para>
+        /// <para>A list of default address pool IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,20 +31,22 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string DefaultPoolsShrink { get; set; }
 
         /// <summary>
-        /// <para>Detailed description of the load balancer, for easier management and identification.</para>
+        /// <para>A description of the Server Load Balancer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Load balancer description</para>
+        /// <para>Test load balancer description</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Whether the load balancer is enabled.</para>
+        /// <para>Specifies whether to enable the Server Load Balancer.</para>
         /// <list type="bullet">
-        /// <item><description>true: Enabled.</description></item>
-        /// <item><description>false: Not enabled.</description></item>
+        /// <item><description><para><c>true</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>false</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public bool? Enabled { get; set; }
 
         /// <summary>
-        /// <para>Fallback pool ID, where traffic will be directed when all other pools are unavailable.</para>
+        /// <para>The ID of the fallback pool. The system directs traffic to this pool when all other pools are unavailable.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? FallbackPool { get; set; }
 
         /// <summary>
-        /// <para>Monitor configuration, used for health checks.</para>
+        /// <para>The monitor configuration for health checks.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -77,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string MonitorShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the load balancer, which must meet the domain name format validation and be a subdomain under the site.</para>
+        /// <para>The name of the Server Load Balancer. It must be a valid domain name and a subdomain of the site.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Weighted round-robin configuration, used to control the traffic distribution weights among different pools.</para>
+        /// <para>The configuration for weighted round-robin steering. This setting controls how the system distributes traffic across different address pools based on their weights.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RandomSteeringShrink { get; set; }
 
         /// <summary>
-        /// <para>Address pools corresponding to primary regions.</para>
+        /// <para>The mapping of primary regions to address pools.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -116,7 +118,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public object RegionPools { get; set; }
 
         /// <summary>
-        /// <para>Rule information.</para>
+        /// <para>A list of rules to override the default traffic steering policy for specific requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -134,11 +136,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RulesShrink { get; set; }
 
         /// <summary>
-        /// <para>Session persistence, with possible values:</para>
+        /// <para>Specifies the session affinity policy, which consistently routes requests from the same client to the same origin server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>off: Not enabled.</description></item>
-        /// <item><description>ip: Session persistence by IP.</description></item>
-        /// <item><description>cookie: Session persistence by cookie.</description></item>
+        /// <item><description><para><c>off</c>: Disables session affinity.</para>
+        /// </description></item>
+        /// <item><description><para><c>ip</c>: Routes requests based on the client\&quot;s IP address.</para>
+        /// </description></item>
+        /// <item><description><para><c>cookie</c>: Uses a cookie to maintain session affinity.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -149,7 +154,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SessionAffinity { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> interface.</para>
+        /// <para>The site ID. Call the <a href="~~ListSites~~">ListSites</a> operation to obtain this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -160,11 +165,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Load balancing strategy.</para>
+        /// <para>The traffic steering policy, which determines how the system distributes traffic among the address pools. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>geo: Geographical strategy.</description></item>
-        /// <item><description>random: Weighted round-robin.</description></item>
-        /// <item><description>order: Primary and backup method.</description></item>
+        /// <item><description><para><c>geo</c>: Geographic routing.</para>
+        /// </description></item>
+        /// <item><description><para><c>random</c>: Weighted round-robin.</para>
+        /// </description></item>
+        /// <item><description><para><c>order</c>: Primary/standby.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -176,7 +184,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SteeringPolicy { get; set; }
 
         /// <summary>
-        /// <para>Address pools corresponding to secondary regions. When multiple secondary regions share the same set of address pools, the keys can be concatenated with commas.</para>
+        /// <para>The mapping of secondary regions to address pools. To map multiple secondary regions to the same address pools, combine their region codes with commas to form the key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</para>
@@ -186,7 +194,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public object SubRegionPools { get; set; }
 
         /// <summary>
-        /// <para>TTL value, the time-to-live for DNS records, with a default of 30 seconds. The value range is 10-600.</para>
+        /// <para>The time to live (TTL) for the DNS record, in seconds. The default value is 30. The value must be between 10 and 600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>300</para>

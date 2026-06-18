@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetRoutineRouteResponseBody : TeaModel {
         /// <summary>
-        /// <para>Bypass mode. Valid values:</para>
+        /// <para>The bypass mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The configuration type to query. Valid values:</para>
+        /// <para>The configuration type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>global: global configurations.</description></item>
-        /// <item><description>rule: queries rule configurations.</description></item>
+        /// <item><description><para><c>global</c>: Queries the global configuration.</para>
+        /// </description></item>
+        /// <item><description><para><c>rule</c>: Queries the rule configuration.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,10 +52,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ConfigType { get; set; }
 
         /// <summary>
-        /// <para>The exception origin fetch switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</para>
+        /// <para>Specifies whether to enable fallback to origin. If this feature is enabled, requests are sent to the origin server when the function encounters an exception, such as exceeding its CPU limit. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,10 +68,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Fallback { get; set; }
 
         /// <summary>
-        /// <para>The configuration mode. Valid values: Valid values:</para>
+        /// <para>The configuration mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>simple</description></item>
-        /// <item><description>custom</description></item>
+        /// <item><description><para><c>simple</c>: simple mode.</para>
+        /// </description></item>
+        /// <item><description><para><c>custom</c>: custom mode.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,10 +94,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The routing switch. Valid values:</para>
+        /// <para>The route status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para><c>on</c>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -110,7 +120,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RouteName { get; set; }
 
         /// <summary>
-        /// <para>The function name.</para>
+        /// <para>The name of the edge function routine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-routine1</para>
@@ -120,7 +130,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RoutineName { get; set; }
 
         /// <summary>
-        /// <para>The rule content.</para>
+        /// <para>The rule expression.</para>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -130,7 +140,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The order in which the rule is executed.</para>
+        /// <para>The rule execution order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -140,7 +150,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The version number of the website.</para>
+        /// <para>The version number of the site.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

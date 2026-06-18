@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetOriginClientCertificateHostnamesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The domain names to associate.</para>
+        /// <para>The associated hostnames.</para>
         /// </summary>
         [NameInMap("Hostnames")]
         [Validation(Required=false)]
         public List<string> Hostnames { get; set; }
 
         /// <summary>
-        /// <para>The ID of the client certificate.</para>
+        /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babaabcd****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The website ID.</para>
+        /// <para>The site ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The website name.</para>
+        /// <para>The site name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>

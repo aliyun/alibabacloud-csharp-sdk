@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListUserRatePlanInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried plans.</para>
+        /// <para>An array of plan instances that meet the specified criteria.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PREPAY: subscription.</description></item>
-            /// <item><description>POSTPAY: pay-as-you-go.</description></item>
+            /// <item><description><para><b>PREPAY</b>: subscription.</para>
+            /// </description></item>
+            /// <item><description><para><b>POSTPAY</b>: pay-as-you-go.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -39,11 +41,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string BotRequest { get; set; }
 
             /// <summary>
-            /// <para>The service locations for the websites that can be associated with the plan. Multiple values are separated by commas (,). Valid values:</para>
+            /// <para>The acceleration regions covered by the plan instance. Multiple values are separated by commas (,). Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>domestic: the Chinese mainland.</description></item>
-            /// <item><description>overseas: outside the Chinese mainland.</description></item>
-            /// <item><description>global: global.</description></item>
+            /// <item><description><para><b>domestic</b>: The Chinese mainland.</para>
+            /// </description></item>
+            /// <item><description><para><b>overseas</b>: Regions outside the Chinese mainland.</para>
+            /// </description></item>
+            /// <item><description><para><b>global</b>: Global (including the Chinese mainland).</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -54,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Coverages { get; set; }
 
             /// <summary>
-            /// <para>The time when the plan was purchased.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YYYY-MM-DDThh:mm:ssZ</para>
@@ -80,7 +85,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DdosInstanceLevel { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration of the plan. Unit: month.</para>
+            /// <para>The duration in months.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -98,7 +103,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string EdgeWafRequest { get; set; }
 
             /// <summary>
-            /// <para>The time when the plan expires.</para>
+            /// <para>The expiration time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YYYY-MM-DDThh:mm:ssZ</para>
@@ -108,7 +113,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The plan ID.</para>
+            /// <para>The plan instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-xcdn-96wblslz****</para>
@@ -142,8 +147,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             /// <summary>
             /// <para>The plan type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>normal</description></item>
-            /// <item><description>enterprise</description></item>
+            /// <item><description><para><b>normal</b>: The normal plan.</para>
+            /// </description></item>
+            /// <item><description><para><b>enterprise</b>: The enterprise plan.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -154,7 +161,23 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string PlanType { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of websites that can be associated with the plan.</para>
+            /// <b>Example:</b>
+            /// <para>6</para>
+            /// </summary>
+            [NameInMap("RenewalDuration")]
+            [Validation(Required=false)]
+            public long? RenewalDuration { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>nomal</para>
+            /// </summary>
+            [NameInMap("RenewalStatus")]
+            [Validation(Required=false)]
+            public string RenewalStatus { get; set; }
+
+            /// <summary>
+            /// <para>The site quota.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -164,14 +187,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteQuota { get; set; }
 
             /// <summary>
-            /// <para>The websites that have been associated with the plan.</para>
+            /// <para>The sites associated with this plan instance.</para>
             /// </summary>
             [NameInMap("Sites")]
             [Validation(Required=false)]
             public List<ListUserRatePlanInstancesResponseBodyInstanceInfoSites> Sites { get; set; }
             public class ListUserRatePlanInstancesResponseBodyInstanceInfoSites : TeaModel {
                 /// <summary>
-                /// <para>The website ID.</para>
+                /// <para>The site ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123456****</para>
@@ -181,7 +204,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public long? SiteId { get; set; }
 
                 /// <summary>
-                /// <para>The website name.</para>
+                /// <para>The site name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example.com</para>
@@ -191,12 +214,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public string SiteName { get; set; }
 
                 /// <summary>
-                /// <para>The website status. Valid values:</para>
+                /// <para>The site status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>pending: The website is to be configured.</description></item>
-                /// <item><description>active: The website is active.</description></item>
-                /// <item><description>offline: The website is suspended.</description></item>
-                /// <item><description>moved: The website has been added and verified by another Alibaba Cloud account.</description></item>
+                /// <item><description><para><b>pending</b>: The site is pending configuration.</para>
+                /// </description></item>
+                /// <item><description><para><b>active</b>: The site is active.</para>
+                /// </description></item>
+                /// <item><description><para><b>offline</b>: The site is offline.</para>
+                /// </description></item>
+                /// <item><description><para><b>moved</b>: The site has been replaced.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -217,11 +244,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string StaticRequest { get; set; }
 
             /// <summary>
-            /// <para>The plan status. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>online: The plan is in service.</description></item>
-            /// <item><description>offline: The plan has expired within an allowable period. In this state, the plan is unavailable.</description></item>
-            /// <item><description>disable: The plan is released.</description></item>
+            /// <item><description><para><b>online</b>: The plan instance is active.</para>
+            /// </description></item>
+            /// <item><description><para><b>offline</b>: The plan instance is unavailable because it has expired but is still within the grace period.</para>
+            /// </description></item>
+            /// <item><description><para><b>disable</b>: The plan instance is released.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -248,7 +278,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -268,7 +298,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>68</para>
@@ -278,7 +308,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

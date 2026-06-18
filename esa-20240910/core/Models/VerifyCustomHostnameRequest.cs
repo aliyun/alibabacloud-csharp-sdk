@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class VerifyCustomHostnameRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the SaaS domain name. You can call the <a href="https://help.aliyun.com/document_detail/3018667.html">ListCustomHostnames</a> operation to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

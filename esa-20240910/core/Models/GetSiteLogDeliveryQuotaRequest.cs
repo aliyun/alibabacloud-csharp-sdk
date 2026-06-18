@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The log category. Valid values:</para>
         /// <ol>
-        /// <item><description>dcdn_log_access_l1 (default): access logs.</description></item>
-        /// <item><description>dcdn_log_er: Edge Routine logs.</description></item>
-        /// <item><description>dcdn_log_waf: firewall logs.</description></item>
-        /// <item><description>dcdn_log_ipa: TCP/UDP proxy logs.</description></item>
+        /// <item><description><para>dcdn_log_access_l1 (default): access logs.</para>
+        /// </description></item>
+        /// <item><description><para>dcdn_log_er: Edge Routine logs.</para>
+        /// </description></item>
+        /// <item><description><para>dcdn_log_waf: firewall logs.</para>
+        /// </description></item>
+        /// <item><description><para>dcdn_log_ipa: TCP/UDP proxy logs.</para>
+        /// </description></item>
         /// </ol>
         /// <para>This parameter is required.</para>
         /// 

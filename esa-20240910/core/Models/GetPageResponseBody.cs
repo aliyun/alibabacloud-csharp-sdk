@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetPageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</para>
+        /// <para>The Base64-encoded content of the custom response page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The Content-Type field in the HTTP header.</para>
+        /// <para>The value for the page\&quot;s Content-Type HTTP header.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>The description of the custom error page.</para>
+        /// <para>The description of the custom response page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a custom deny page</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom error page.<a href="~~2850223~~"></a></para>
+        /// <para>The ID of the custom response page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50000001</para>
@@ -82,12 +82,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The sites to which the page is applied.</para>
+        /// </summary>
         [NameInMap("SiteIds")]
         [Validation(Required=false)]
         public List<long?> SiteIds { get; set; }
 
         /// <summary>
-        /// <para>The time when the custom error page was last modified.</para>
+        /// <para>The time the custom response page was last modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-01-01T00:00:00Z</para>

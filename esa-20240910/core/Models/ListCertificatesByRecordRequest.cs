@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListCertificatesByRecordRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to return the certificate details. 0 indicates that the certificate details are not returned. 1 indicates that the certificate details are returned.</para>
+        /// <para>Specifies whether to return certificate details. A value of <c>1</c> includes certificate details, whereas a value of <c>0</c> excludes them.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RecordName { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The site ID. To obtain this ID, call the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only valid certificates. 0 indicates that all matched certificates are returned. 1 indicates that only valid certificates are returned.</para>
+        /// <para>Specifies whether to return only valid certificates. A value of <c>1</c> returns only valid certificates, whereas <c>0</c> returns all matching certificates.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

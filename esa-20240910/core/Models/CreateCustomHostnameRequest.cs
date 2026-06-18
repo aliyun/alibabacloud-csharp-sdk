@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateCustomHostnameRequest : TeaModel {
         /// <summary>
-        /// <para>云盾证书ID，使用云盾证书时必填</para>
+        /// <para>The ID of the CAS certificate. This parameter is required if <c>CertType</c> is set to <c>cas</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30000478</para>
@@ -20,7 +20,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? CasId { get; set; }
 
         /// <summary>
-        /// <para>云盾证书所在地域，使用云盾证书时必填</para>
+        /// <para>The region of the CAS certificate. This parameter is required if <c>CertType</c> is set to <c>cas</c>.</para>
+        /// <list type="bullet">
+        /// <item><description><para>For accounts on the China site, set this parameter to <c>cn-hangzhou</c>.</para>
+        /// </description></item>
+        /// <item><description><para>For accounts on the International site, set this parameter to <c>ap-southeast-1</c>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +36,15 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CasRegion { get; set; }
 
         /// <summary>
-        /// <para>证书类型，SSL 开启时必填</para>
+        /// <para>The certificate type. This parameter is required if <c>SslFlag</c> is set to <c>on</c>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>free</b>: A free certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>upload</b>: A user-uploaded certificate.</para>
+        /// </description></item>
+        /// <item><description><para><b>cas</b>: A CAS certificate.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>free</para>
@@ -40,7 +54,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string CertType { get; set; }
 
         /// <summary>
-        /// <para>证书公钥，使用上传证书时必填</para>
+        /// <para>The content of the certificate. This parameter is required if <c>CertType</c> is set to <c>upload</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----</para>
@@ -50,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>自定义主机名</para>
+        /// <para>The custom hostname.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +75,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Hostname { get; set; }
 
         /// <summary>
-        /// <para>证书私钥，使用上传证书时必填</para>
+        /// <para>The private key of the certificate. This parameter is required if <c>CertType</c> is set to <c>upload</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN PRIVATE KEY-----</para>
@@ -71,7 +85,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>绑定的源站记录ID</para>
+        /// <para>The ID of the record to bind. Call the <a href="https://help.aliyun.com/document_detail/2850265.html">ListRecords</a> operation to get this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,7 +96,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>关联站点ID</para>
+        /// <para>The site ID. Call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to get this ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +107,13 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>SSL开关</para>
+        /// <para>Specifies whether to enable SSL. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>on</b>: Enable SSL.</para>
+        /// </description></item>
+        /// <item><description><para><b>off</b>: Disable SSL.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListPagesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number returned.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The custom error pages. Each element in the array contains error page-specific information.</para>
+        /// <para>A list of custom response pages.</para>
         /// </summary>
         [NameInMap("Pages")]
         [Validation(Required=false)]
         public List<ListPagesResponseBodyPages> Pages { get; set; }
         public class ListPagesResponseBodyPages : TeaModel {
             /// <summary>
-            /// <para>The Base64-encoded content of the error page. The content type is specified by the Content-Type field.</para>
+            /// <para>The Base64-encoded content of the custom response page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The Content-Type field in the HTTP header.</para>
+            /// <para>The value of the Content-Type header in the HTTP response.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ContentType { get; set; }
 
             /// <summary>
-            /// <para>The description of the custom error page.</para>
+            /// <para>A custom description for the response page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a custom deny page</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom error page.<a href="~~2850223~~"></a></para>
+            /// <para>The ID of the custom response page.<a href="~~2850223~~"></a></para>
             /// 
             /// <b>Example:</b>
             /// <para>50000001</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The type of the custom error page.</para>
+            /// <para>The type of the custom response page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>custom</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
-            /// <para>The name of the custom error page.</para>
+            /// <para>The name of the custom response page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the custom error page was last modified.</para>
+            /// <para>The time the custom response page was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-01T00:00:00Z</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of custom error pages after filtering.</para>
+        /// <para>The total number of custom response pages that match the filter criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The number of custom error pages that you created.</para>
+        /// <para>The number of custom response pages that you have created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

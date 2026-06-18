@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetManagedTransformResponseBody : TeaModel {
         /// <summary>
-        /// <para>Add visitor geolocation header. Value range:</para>
+        /// <para>Indicates whether a header that contains the visitor\&quot;s geolocation is added. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para>on: Enables this feature.</para>
+        /// </description></item>
+        /// <item><description><para>off: Disables this feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string AddClientGeolocationHeader { get; set; }
 
         /// <summary>
-        /// <para>Add the &quot;ali-real-client-ip&quot; header containing the real client IP. Value range:</para>
+        /// <para>Indicates whether the &quot;ali-real-client-ip&quot; header is added to include the real client IP. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on: Enable.</description></item>
-        /// <item><description>off: Disable.</description></item>
+        /// <item><description><para>on: Enables this feature.</para>
+        /// </description></item>
+        /// <item><description><para>off: Disables this feature.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,12 +41,18 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string AddRealClientIpHeader { get; set; }
 
+        /// <summary>
+        /// <para>The real client IP header name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test-header</para>
+        /// </summary>
         [NameInMap("RealClientIpHeaderName")]
         [Validation(Required=false)]
         public string RealClientIpHeaderName { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>04F0F334-1335-436C-A1D7-6C044FE73368</para>
@@ -52,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The version number of the site. For sites with version management enabled, this parameter can be used to specify the site version for which the configuration takes effect, defaulting to version 0.</para>
+        /// <para>The version of the site for which the configuration is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>

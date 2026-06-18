@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineRelatedRecordResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The record ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>3227405728754048</para>
+        /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]
         public long? RecordId { get; set; }
@@ -24,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation is successful.</para>
+        /// <para>The status of the operation. A value of <c>OK</c> indicates that the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

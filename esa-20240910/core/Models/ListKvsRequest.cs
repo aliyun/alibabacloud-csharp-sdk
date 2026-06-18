@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListKvsRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the namespace that you specify when you call the <a href="https://help.aliyun.com/document_detail/2850317.html">CreatevNamespace</a> operation.</para>
+        /// <para>The name that you specified when you called <a href="https://help.aliyun.com/document_detail/2850317.html">CreatevNamespace</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Namespace { get; set; }
 
         /// <summary>
-        /// <para>The page number. The product of PageNumber and PageSize cannot exceed 50,000.</para>
+        /// <para>The page number to return. The value of PageNumber \* PageSize cannot exceed 50,000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 50. Maximum value: 100.</para>
+        /// <para>The number of entries to return on each page. Default: <b>50</b>. Maximum: <b>100</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The prefix to query.</para>
+        /// <para>The prefix of the keys to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prefix-</para>

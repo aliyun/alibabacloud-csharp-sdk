@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <para>The certificate ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>babaffe176ae44e2ad16d3e309b9e506</para>
+        /// <para>babae7c40fef412d887688b91c9e****</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]

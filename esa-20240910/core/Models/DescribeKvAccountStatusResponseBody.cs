@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class DescribeKvAccountStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EEEBE525-F576-1196-8DAF-2D70CA3F4D2F</para>
@@ -20,10 +20,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether Edge KV is activated for the Alibaba Cloud account.</para>
+        /// <para>Account status.</para>
         /// <list type="bullet">
-        /// <item><description><b>online</b></description></item>
-        /// <item><description><b>offline</b></description></item>
+        /// <item><description><para><b>online</b>: Enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>offline</b>: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

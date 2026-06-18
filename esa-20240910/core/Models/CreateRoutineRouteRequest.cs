@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class CreateRoutineRouteRequest : TeaModel {
         /// <summary>
-        /// <para>Bypass mode Valid values:</para>
+        /// <para>The bypass mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Bypass { get; set; }
 
         /// <summary>
-        /// <para>The exception origin fetch switch. After you turn on this switch, if a function exception occurs, such as CPU usage exceeding the upper limit, requests are sent back to the origin. Valid values:</para>
+        /// <para>The fallback-to-origin switch. When enabled, if the function encounters an exception such as CPU usage exceeding the limit, the request is forwarded to the origin server. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Fallback { get; set; }
 
         /// <summary>
-        /// <para>The routing switch. Valid values:</para>
+        /// <para>The route switch. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description>on: enabled.</description></item>
+        /// <item><description>off: disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RouteEnable { get; set; }
 
         /// <summary>
-        /// <para>The name of the route.</para>
+        /// <para>The route name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_route</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RouteName { get; set; }
 
         /// <summary>
-        /// <para>The edge function name.</para>
+        /// <para>The name of the edge function routine.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RoutineName { get; set; }
 
         /// <summary>
-        /// <para>The content of the rule.</para>
+        /// <para>The rule content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>(http.host eq \&quot;video.example.com\&quot;)</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>The order in which the rule is executed.</para>
+        /// <para>The rule execution sequence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation to obtain the site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,6 +104,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
+        /// <para>The edge routine timeout period. Valid values: 5 to 60. Unit: seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>

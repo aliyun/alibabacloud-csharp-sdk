@@ -10,12 +10,16 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateSiteDeliveryTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The log category. Valid values:</para>
+        /// <para>The real-time log type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>dcdn_log_access_l1 (default): access logs.</description></item>
-        /// <item><description>dcdn_log_er: Edge Routine logs.</description></item>
-        /// <item><description>dcdn_log_waf: firewall logs.</description></item>
-        /// <item><description>dcdn_log_ipa: TCP/UDP proxy logs.</description></item>
+        /// <item><description><para><b>dcdn_log_access_l1</b> (default): access log.</para>
+        /// </description></item>
+        /// <item><description><para><b>dcdn_log_er</b>: Edge Routine log.</para>
+        /// </description></item>
+        /// <item><description><para><b>dcdn_log_waf</b>: WAF log.</para>
+        /// </description></item>
+        /// <item><description><para><b>dcdn_log_ipa</b>: Layer 4 acceleration log.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public float? DiscardRate { get; set; }
 
         /// <summary>
-        /// <para>The log fields that you want to include in real-time logs to be delivered. Separate the log fields with commas (,).</para>
+        /// <para>A comma-separated list of delivery fields.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string FilterVer { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
+        /// <para>The site ID. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456****</para>
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>The name of the delivery task.</para>
+        /// <para>The task name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

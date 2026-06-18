@@ -10,18 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetPerformanceDataCollectionResponseBody : TeaModel {
         /// <summary>
-        /// <b>Example:</b>
-        /// <para>on</para>
+        /// <para>Indicates whether Data Quality collection is enabled. Valid values: <c>true</c> and <c>false</c>.</para>
         /// </summary>
         [NameInMap("Enable")]
         [Validation(Required=false)]
         public string Enable { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>F61CDR30-E83C-4FDA-BF73-9A94CDD44229</para>
+        /// <para>The unique ID of the request.</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

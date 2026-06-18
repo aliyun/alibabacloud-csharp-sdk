@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetUserWafRulesetRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the WAF ruleset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
+        /// <para>The ID of the WAF instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

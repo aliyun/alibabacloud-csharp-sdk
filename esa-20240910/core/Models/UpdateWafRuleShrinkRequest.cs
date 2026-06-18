@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateWafRuleShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Rule configuration.</para>
+        /// <para>The configuration of the rule.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public string ConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>WAF rule ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> interface.</para>
+        /// <para>The ID of the WAF rule. To obtain the rule ID, call the <a href="https://help.aliyun.com/document_detail/2878257.html">ListWafRules</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Id { get; set; }
 
         /// <summary>
-        /// <para>The position of the rule in the rule set.</para>
+        /// <para>The position of the rule within the rule set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Position { get; set; }
 
         /// <summary>
-        /// <para>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</para>
+        /// <para>The ID of the site. To obtain the site ID, call the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteId { get; set; }
 
         /// <summary>
-        /// <para>Site version.</para>
+        /// <para>The version number of the site configuration. For sites with configuration version management enabled, use this parameter to specify the effective configuration version. The default is version 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? SiteVersion { get; set; }
 
         /// <summary>
-        /// <para>Rule status.</para>
+        /// <para>The status of the rule.</para>
         /// 
         /// <b>Example:</b>
         /// <para>on</para>

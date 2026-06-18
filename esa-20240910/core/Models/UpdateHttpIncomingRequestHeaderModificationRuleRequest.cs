@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class UpdateHttpIncomingRequestHeaderModificationRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration ID. You can call the ListHttpIncomingRequestHeaderModificationRules operation to query the ID.</para>
+        /// <para>The ID of the configuration. To obtain this ID, call the ListHttpIncomingRequestHeaderModificationRules API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The configurations of modifying request headers. You can add, delete, or modify a request header.</para>
+        /// <para>An array of objects that defines the request header modifications. Supported operations include <c>add</c>, <c>del</c>, and <c>modify</c>.</para>
         /// </summary>
         [NameInMap("RequestHeaderModification")]
         [Validation(Required=false)]
@@ -39,11 +39,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The action. Valid values:</para>
+            /// <para>The operation to perform on the request header. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>add: adds a response header.</description></item>
-            /// <item><description>del: deletes a response header.</description></item>
-            /// <item><description>modify: modifies a response header.</description></item>
+            /// <item><description><para><c>add</c>: Adds a request header.</para>
+            /// </description></item>
+            /// <item><description><para><c>del</c>: Deletes a request header.</para>
+            /// </description></item>
+            /// <item><description><para><c>modify</c>: Modifies an existing request header.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -55,10 +58,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The value type. Valid values:</para>
+            /// <para>The type of value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>static</description></item>
-            /// <item><description>dynamic</description></item>
+            /// <item><description><para><c>static</c>: The value is a fixed, literal string.</para>
+            /// </description></item>
+            /// <item><description><para><c>dynamic</c>: The value is generated dynamically at runtime.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,10 +86,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>The content of the rule. A conditional expression is used to match a user request. You do not need to set this parameter when you add global configurations. Use cases:</para>
+        /// <para>The rule expression, a conditional expression that matches user requests. This parameter is not required for a global configuration. You can use this parameter in two ways:</para>
         /// <list type="bullet">
-        /// <item><description>true: Match all incoming requests.</description></item>
-        /// <item><description>Set the value to a custom expression, for example, (http.host eq &quot;video.example.com&quot;): Match the specified request.</description></item>
+        /// <item><description><para>To match all incoming requests, set this value to <c>true</c>.</para>
+        /// </description></item>
+        /// <item><description><para>To match specific requests, provide a custom expression, such as <c>(http.host eq &quot;video.example.com&quot;)</c>.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,10 +102,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the rule. Valid values: You do not need to set this parameter when you add global configurations. Valid values:</para>
+        /// <para>The status of the rule. This parameter is not required for a global configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>on</description></item>
-        /// <item><description>off</description></item>
+        /// <item><description><para><c>on</c>: The rule is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><c>off</c>: The rule is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,7 +118,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleEnable { get; set; }
 
         /// <summary>
-        /// <para>The rule name. You do not need to set this parameter when you add global configurations.</para>
+        /// <para>The name of the rule. This parameter is not required for a global configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rule_example</para>
@@ -119,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RuleName { get; set; }
 
         /// <summary>
-        /// <para>The order in which the rule is executed. A smaller value gives priority to the rule.</para>
+        /// <para>Specifies the rule\&quot;s priority. Rules with a lower value are executed first.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -129,7 +138,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? Sequence { get; set; }
 
         /// <summary>
-        /// <para>The website ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
+        /// <para>The ID of the site. To obtain this ID, call the <a href="~~ListSites~~">ListSites</a> API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

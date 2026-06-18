@@ -21,6 +21,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public string ConfOptionsShrink { get; set; }
 
+        [NameInMap("DeployEnv")]
+        [Validation(Required=false)]
+        public string DeployEnv { get; set; }
+
         [NameInMap("ExtraInfo")]
         [Validation(Required=false)]
         public string ExtraInfo { get; set; }

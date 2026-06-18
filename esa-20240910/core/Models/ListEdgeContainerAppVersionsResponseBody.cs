@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <para>If you want to cancel this configuration, set the parameter value to <c>&quot;&quot;</c> or <c>{}</c>. If you do not specify this parameter, this configuration is ignored.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>{\&quot;exec\&quot;:{\&quot;command\&quot;:[\&quot;bash\&quot;,\&quot;-c\&quot;,\&quot;cd /home/admin/</para>
+                /// <para>sh poststart.sh &quot;echo hello world&quot;</para>
                 /// </summary>
                 [NameInMap("PostStart")]
                 [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 /// <para>The command that is run before the container is stopped.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>sh stop.sh</para>
+                /// <para>sh prestop.sh &quot;echo hello world&quot;</para>
                 /// </summary>
                 [NameInMap("PreStop")]
                 [Validation(Required=false)]
