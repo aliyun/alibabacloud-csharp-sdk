@@ -1,3 +1,15 @@
+2026-06-18 Version: 3.7.0
+- Support API CreateBranch.
+- Support API CreateSnapshot.
+- Support API DeleteBranch.
+- Support API DeleteSnapshot.
+- Support API DescribeBranch.
+- Support API GetBranchSchema.
+- Support API ListBranches.
+- Support API RestartSupabaseProject.
+- Support API RestoreSnapshot.
+
+
 2026-06-17 Version: 3.6.0
 - Support API CreateSaasService.
 - Support API CreateWorkspace.

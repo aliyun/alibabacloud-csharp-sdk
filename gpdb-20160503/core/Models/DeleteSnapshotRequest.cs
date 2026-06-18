@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class CreateSupabaseProjectResponseBody : TeaModel {
+    public class DeleteSnapshotRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the associated order.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>278880417310796</para>
+        /// <para>0/3522648</para>
         /// </summary>
-        [NameInMap("OrderId")]
+        [NameInMap("Lsn")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string Lsn { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Supabase project.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>
@@ -30,14 +30,12 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
+        /// <para>cn-hangzhou</para>
         /// </summary>
-        [NameInMap("RequestId")]
+        [NameInMap("RegionId")]
         [Validation(Required=false)]
-        public string RequestId { get; set; }
+        public string RegionId { get; set; }
 
     }
 

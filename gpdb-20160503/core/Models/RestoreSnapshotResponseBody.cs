@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class CreateSupabaseProjectResponseBody : TeaModel {
+    public class RestoreSnapshotResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the associated order.</para>
+        /// <para>The ID of the restored branch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>278880417310796</para>
+        /// <para>br-restore</para>
         /// </summary>
-        [NameInMap("OrderId")]
+        [NameInMap("BranchId")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Supabase project.</para>
+        /// <para>The Supabase project ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>

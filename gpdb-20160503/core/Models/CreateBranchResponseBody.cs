@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Gpdb20160503.Models
 {
-    public class CreateSupabaseProjectResponseBody : TeaModel {
+    public class CreateBranchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the associated order.</para>
+        /// <para>The branch ID. This ID uniquely identifies a Supabase branch.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>278880417310796</para>
+        /// <para>br-xxxx</para>
         /// </summary>
-        [NameInMap("OrderId")]
+        [NameInMap("BranchId")]
         [Validation(Required=false)]
-        public string OrderId { get; set; }
+        public string BranchId { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the Supabase project.</para>
+        /// <para>The Supabase project ID that corresponds to the primary branch.</para>
         /// 
         /// <b>Example:</b>
         /// <para>spb-xxxx</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B4CAF581-2AC7-41AD-8940-D56DF7AADF5B</para>
+        /// <para>ABB39CC3-4488-4857-905D-2E4A051D****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
