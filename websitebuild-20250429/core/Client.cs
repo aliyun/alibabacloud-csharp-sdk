@@ -12070,6 +12070,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListAppInstancesShrinkRequest request = new ListAppInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizIds))
+            {
+                request.BizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizIds, "BizIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
             {
                 request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "StatusList", "json");
@@ -12078,6 +12082,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
             {
                 query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizIdsShrink))
+            {
+                query["BizIds"] = request.BizIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeBegin))
             {
@@ -12162,6 +12170,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ListAppInstancesShrinkRequest request = new ListAppInstancesShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.BizIds))
+            {
+                request.BizIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.BizIds, "BizIds", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.StatusList))
             {
                 request.StatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.StatusList, "StatusList", "json");
@@ -12170,6 +12182,10 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizId))
             {
                 query["BizId"] = request.BizId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizIdsShrink))
+            {
+                query["BizIds"] = request.BizIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeBegin))
             {

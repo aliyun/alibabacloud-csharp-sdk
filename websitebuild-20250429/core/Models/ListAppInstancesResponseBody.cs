@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether retry is allowed.</para>
+        /// <para>Indicates whether a retry is allowed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public bool? NextPage { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query. This parameter is empty if no more results exist.</para>
+        /// <para>The token for the next query. This parameter is empty if no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw+qdTi1EjVSWX/INJdYNw==</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.WebsiteBuild20250429.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the result limit is reached. The server processes up to 1000 recent records excluding pagination limits. If the results exceed 1000 records, <b>ResultLimit</b> is <b>true</b> and you must narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
+        /// <para>In addition to pagination limits, the server processes up to 1,000 recent records per query. If the result exceeds 1,000 records, <b>ResultLimit</b> is <b>true</b>. Narrow the time range and search again. Otherwise, <b>ResultLimit</b> is <b>false</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
