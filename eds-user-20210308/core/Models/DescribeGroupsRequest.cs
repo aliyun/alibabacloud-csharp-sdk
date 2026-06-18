@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
     public class DescribeGroupsRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is for internal use only.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BusinessChannel { get; set; }
 
         /// <summary>
-        /// <para>是否排除已关联登录策略的用户组。</para>
+        /// <para>Specifies whether to exclude user groups that are already associated with a logon policy.</para>
         /// </summary>
         [NameInMap("ExcludeAttachedLoginPolicyGroups")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The ID of the user group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ug-12341234****</para>
+        /// <para>ug-16nf7xxh4o9gc****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string IdpId { get; set; }
 
         /// <summary>
-        /// <para>指定关联的登录策略筛选。</para>
+        /// <para>The ID of a logon policy. If you specify this parameter, the call returns only user groups associated with the policy.</para>
         /// </summary>
         [NameInMap("LoginPolicyId")]
         [Validation(Required=false)]
         public string LoginPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.</para>
+        /// <para>The page number to return.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available.</para>
+        /// <para>This parameter is for internal use only.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string SolutionId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the file approval feature is enabled.</para>
+        /// <para>Specifies whether file approval is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

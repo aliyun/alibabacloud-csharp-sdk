@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the newly created resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-ckf3cx7isinhk***</para>

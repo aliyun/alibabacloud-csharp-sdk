@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 /// <para>The ID of the convenience user that failed to be unlocked.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test123</para>
+                /// <para>alice</para>
                 /// </summary>
                 [NameInMap("EndUserId")]
                 [Validation(Required=false)]

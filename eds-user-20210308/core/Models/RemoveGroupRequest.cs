@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class RemoveGroupRequest : TeaModel {
         /// <summary>
+        /// <para>Channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -21,7 +23,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The ID of the user group to be deleted.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ug-12341234****</para>
+        /// <para>ug-dzjax1ez5qgph****</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]

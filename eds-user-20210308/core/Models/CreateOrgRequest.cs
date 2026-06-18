@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateOrgRequest : TeaModel {
         /// <summary>
+        /// <para>Channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -20,6 +22,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <summary>
         /// <para>The name of the organization.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>设计部门</para>
         /// </summary>
         [NameInMap("OrgName")]
         [Validation(Required=false)]

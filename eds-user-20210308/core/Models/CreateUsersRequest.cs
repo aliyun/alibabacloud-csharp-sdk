@@ -10,16 +10,18 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateUsersRequest : TeaModel {
         /// <summary>
-        /// <para>The date on which the convenience users are automatically locked.</para>
+        /// <para>The date and time when the system automatically locks the convenience user\&quot;s account. The value must be in the <c>yyyy-MM-dd HH:mm:ss</c> format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2023-03-03</para>
+        /// <para>2025-11-28 00:00:00</para>
         /// </summary>
         [NameInMap("AutoLockTime")]
         [Validation(Required=false)]
         public string AutoLockTime { get; set; }
 
         /// <summary>
+        /// <para>The business channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -27,12 +29,18 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to set the convenience user as a local administrator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("IsLocalAdmin")]
         [Validation(Required=false)]
         public bool? IsLocalAdmin { get; set; }
 
         /// <summary>
-        /// <para>The initial password. If this parameter is left empty, an email for password reset is sent to the specified email address.</para>
+        /// <para>The initial password. If you do not specify this parameter, the system sends a password reset email to the convenience user\&quot;s email address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test123****</para>
@@ -41,12 +49,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Password { get; set; }
 
+        /// <summary>
+        /// <para>By default, a convenience user\&quot;s password does not expire. You can use this parameter to specify a password validity period of 30 to 365 days. After the password expires, the user must reset it to log in again.</para>
+        /// <remarks>
+        /// <para>This feature is in invited preview. To use this feature, submit a ticket.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30</para>
+        /// </summary>
         [NameInMap("PasswordExpireDays")]
         [Validation(Required=false)]
         public string PasswordExpireDays { get; set; }
 
         /// <summary>
-        /// <para>The information about the convenience user.</para>
+        /// <para>Details about the convenience users.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +74,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public List<CreateUsersRequestUsers> Users { get; set; }
         public class CreateUsersRequestUsers : TeaModel {
             /// <summary>
-            /// <para>The email address of the convenience user. The email address is used to receive notifications about events such as desktop assignment. You must specify an email address or a mobile number to receive notifications.</para>
+            /// <para>The email address of the convenience user. This email address is used for notifications, such as an alert when a cloud computer is assigned. You must specify either this parameter or the <c>Phone</c> parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:username@example.com">username@example.com</a></para>
@@ -67,11 +84,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The username of the convenience user. The name can contain lowercase letters, digits, and underscores (_), and must be 3 to 24 characters in length.</para>
+            /// <para>The user name. The user name must be 3 to 24 characters long and can contain lowercase letters, digits, and underscores (_).</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test1</para>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
@@ -82,22 +99,17 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public List<string> GroupIdList { get; set; }
 
             /// <summary>
-            /// <para>The organization to which the convenience user belongs.</para>
+            /// <para>The ID of the organization to which the convenience user belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1111****</para>
+            /// <para>design</para>
             /// </summary>
             [NameInMap("OrgId")]
             [Validation(Required=false)]
             public string OrgId { get; set; }
 
             /// <summary>
-            /// <para>The type of the account ownership.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CreateFromManager: administrator-activated</description></item>
-            /// <item><description>Normal: user-activated</description></item>
-            /// </list>
+            /// <para>The account activation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -107,20 +119,23 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string OwnerType { get; set; }
 
             /// <summary>
-            /// <para>The user password.</para>
+            /// <para>The password for the convenience user.</para>
             /// <remarks>
-            /// <para> The password must be at least 10 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).</para>
+            /// <para>The password must be at least 10 characters long and contain characters from at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>password1</para>
+            /// <para>Wuying1234</para>
             /// </summary>
             [NameInMap("Password")]
             [Validation(Required=false)]
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>Mobile numbers are not supported on the international site (alibabacloud.com).</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
+            /// <para>The phone number of the convenience user. This phone number is used for notifications, such as a text message when a cloud computer is assigned. You must specify either this parameter or the <c>Email</c> parameter.</para>
+            /// <para>&lt;props=&quot;intl&quot;&gt;</para>
+            /// <para>Phone numbers are not supported on the international site.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1381111****</para>
@@ -130,7 +145,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>The display name of the end user.</para>
+            /// <para>The display name of the convenience user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bean</para>
@@ -140,7 +155,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string RealNickName { get; set; }
 
             /// <summary>
-            /// <para>The remarks on the convenience user.</para>
+            /// <para>A remark for the convenience user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>remark1</para>

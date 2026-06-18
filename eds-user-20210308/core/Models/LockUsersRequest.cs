@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class LockUsersRequest : TeaModel {
         /// <summary>
+        /// <para>The channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -22,7 +24,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public bool? LogoutSession { get; set; }
 
         /// <summary>
-        /// <para>The usernames of the convenience users that you want to lock.</para>
+        /// <para>The usernames of the convenience accounts to lock.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

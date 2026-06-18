@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class SetUserPropertyValueRequest : TeaModel {
         /// <summary>
+        /// <para>Channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -22,7 +24,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>390</para>
+        /// <para>240**</para>
         /// </summary>
         [NameInMap("PropertyId")]
         [Validation(Required=false)]
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>978</para>
+        /// <para>2251**</para>
         /// </summary>
         [NameInMap("PropertyValueId")]
         [Validation(Required=false)]
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>11</para>
+        /// <para>111****</para>
         /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("UserName")]
         [Validation(Required=false)]

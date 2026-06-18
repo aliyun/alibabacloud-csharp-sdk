@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateResourceGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The business channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -23,7 +25,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is for internal use only.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,12 +36,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? IsResourceGroupWithOfficeSite { get; set; }
 
         /// <summary>
-        /// <remarks>
-        /// <para> Set the value to AliyunConsole.</para>
-        /// </remarks>
-        /// <list type="bullet">
-        /// <item><description>This parameter is not publicly available in other platforms.</description></item>
-        /// </list>
+        /// <para>Set this parameter to <c>AliyunConsole</c> for Wuying Workspace Enterprise Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunConsole</para>
@@ -54,6 +51,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <para>The name of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>部门A资源组</para>
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]

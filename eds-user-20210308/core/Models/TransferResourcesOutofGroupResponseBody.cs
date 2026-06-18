@@ -8,16 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
-    public class QuerySyncStatusByAliUidRequest : TeaModel {
+    public class TransferResourcesOutofGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Channel</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>ENTERPRISE</para>
+        /// <para>D2B1DF9E-576B-5B91-BAF6-2C3DD1****</para>
         /// </summary>
-        [NameInMap("BusinessChannel")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string BusinessChannel { get; set; }
+        public string RequestId { get; set; }
 
     }
 

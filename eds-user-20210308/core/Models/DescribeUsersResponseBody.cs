@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that determines the start point of the next query. If this parameter is left empty, all results are returned.</para>
+        /// <para>The token to start the next query. If this parameter is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
@@ -30,24 +30,24 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the convenience accounts.</para>
+        /// <para>The details of the convenience accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<DescribeUsersResponseBodyUsers> Users { get; set; }
         public class DescribeUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The work address of the convenience user.</para>
+            /// <para>The work address of the user.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Hangzhou \<em>\</em>\*</para>
+            /// <para>杭州市***</para>
             /// </summary>
             [NameInMap("Address")]
             [Validation(Required=false)]
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>The profile picture of the convenience user.</para>
+            /// <para>The URL of the user\&quot;s avatar.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cdn">https://cdn</a>.*****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Avatar { get; set; }
 
             /// <summary>
-            /// <para>The email address of the convenience user.</para>
+            /// <para>The email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:username@example.com">username@example.com</a></para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>Enables the administrator permissions.</para>
+            /// <para>Indicates whether administrator access is enabled.</para>
             /// </summary>
             [NameInMap("EnableAdminAccess")]
             [Validation(Required=false)]
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// <para>The username of the convenience user.</para>
+            /// <para>The end user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
@@ -83,14 +83,29 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the user imported from an external system.</para>
+            /// <remarks>
+            /// <para>This parameter is for internal use only.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>马**</para>
+            /// </summary>
             [NameInMap("ExternalName")]
             [Validation(Required=false)]
             public string ExternalName { get; set; }
 
+            /// <summary>
+            /// <para>The extended properties of the user.</para>
+            /// </summary>
             [NameInMap("Extras")]
             [Validation(Required=false)]
             public DescribeUsersResponseBodyUsersExtras Extras { get; set; }
             public class DescribeUsersResponseBodyUsersExtras : TeaModel {
+                /// <summary>
+                /// <para>The number of assigned cloud resources.</para>
+                /// </summary>
                 [NameInMap("AssignedResourceCount")]
                 [Validation(Required=false)]
                 public Dictionary<string, object> AssignedResourceCount { get; set; }
@@ -112,7 +127,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The user groups to which the convenience user belongs.</para>
+            /// <para>The user groups to which the convenience account belongs.</para>
             /// </summary>
             [NameInMap("Groups")]
             [Validation(Required=false)]
@@ -132,7 +147,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 /// <para>The name of the user group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>User Group 1</para>
+                /// <para>用户组1</para>
                 /// </summary>
                 [NameInMap("GroupName")]
                 [Validation(Required=false)]
@@ -141,7 +156,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The ID of the convenience user.</para>
+            /// <para>The ID of the convenience account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4205**</para>
@@ -151,7 +166,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the convenience user is an administrator. If the convenience user is of the administrator-activated type, you must specify a user administrator. Notifications such as password reset on a client are sent to the email address or mobile number of the user administrator. For more information, see <a href="https://help.aliyun.com/document_detail/214472.html">Create a convenience user</a>.</para>
+            /// <para>Indicates whether the user is a tenant manager. When you create a convenience account of the <c>CreateFromManager</c> type, you must specify a tenant manager. Notifications, such as password resets initiated by an end user from a client, are sent to the tenant manager\&quot;s email or mobile phone. For more information, see <a href="https://help.aliyun.com/document_detail/214472.html">Create a convenience account</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -161,7 +176,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public bool? IsTenantManager { get; set; }
 
             /// <summary>
-            /// <para>The employee number of the convenience user.</para>
+            /// <para>The employee ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A10000**</para>
@@ -171,19 +186,28 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string JobNumber { get; set; }
 
             /// <summary>
-            /// <para>The nickname of the convenience user.</para>
+            /// <para>The nickname of the user.<br>
+            /// The value is determined from the following parameters, in order of priority:<br></para>
+            /// <list type="bullet">
+            /// <item><description><para><c>RealNickName</c></para>
+            /// </description></item>
+            /// <item><description><para><c>Remark</c></para>
+            /// </description></item>
+            /// <item><description><para><c>EndUserId</c></para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>Lee</para>
+            /// <para>李**</para>
             /// </summary>
             [NameInMap("NickName")]
             [Validation(Required=false)]
             public string NickName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the organization to which the convenience user belongs.</para>
+            /// <para>The ID of the organization to which the convenience account belongs.</para>
             /// <remarks>
-            /// <para> This parameter will be deprecated in the future.</para>
+            /// <para>This parameter is deprecated and may be removed in a future release.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -194,14 +218,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string OrgId { get; set; }
 
             /// <summary>
-            /// <para>The organizations to which the convenience user belongs.</para>
+            /// <para>The organizations to which the convenience account belongs.</para>
             /// </summary>
             [NameInMap("Orgs")]
             [Validation(Required=false)]
             public List<DescribeUsersResponseBodyUsersOrgs> Orgs { get; set; }
             public class DescribeUsersResponseBodyUsersOrgs : TeaModel {
                 /// <summary>
-                /// <para>The organization ID.</para>
+                /// <para>The ID of the organization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>org-4mdgc1cocc59z****</para>
@@ -211,10 +235,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string OrgId { get; set; }
 
                 /// <summary>
-                /// <para>The organization name.</para>
+                /// <para>The name of the organization.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Organization 1</para>
+                /// <para>部门1</para>
                 /// </summary>
                 [NameInMap("OrgName")]
                 [Validation(Required=false)]
@@ -227,30 +251,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The type of the convenience account.</para>
+            /// <para>The type of the convenience account. The account can be activated in one of the following ways:</para>
             /// <list type="bullet">
-            /// <item><description>Administrator-activated type: The administrator specifies the username and password of the convenience account. User notifications such as password reset notifications are sent to the email address or mobile number of the administrator.</description></item>
-            /// <item><description>User-activated type: The administrator specifies the username and the email address or mobile number of a convenience user. Notifications such as activation notifications that contain the default password are sent to the email address or mobile number of the convenience user.</description></item>
-            /// </list>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>CreateFromManager</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>administrator-activated</para>
-            /// <!-- -->
+            /// <item><description><para>Tenant manager-activated: The tenant manager sets the username and password. Notifications such as password resets are sent to the tenant manager\&quot;s email address or mobile phone.</para>
             /// </description></item>
-            /// <item><description><para>Normal</para>
-            /// <!-- -->
-            /// 
-            /// <para>:</para>
-            /// <!-- -->
-            /// 
-            /// <para>user-activated</para>
-            /// <!-- --></description></item>
+            /// <item><description><para>End user-activated: The tenant manager sets the username and the end user\&quot;s email address or mobile phone. Notifications for the end user, such as the initial password for the cloud desktop, are sent to the end user\&quot;s email address or mobile phone.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -269,7 +275,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public int? PasswordExpireRestDays { get; set; }
 
             /// <summary>
-            /// <para>The mobile number of the convenience user. If you leave this parameter empty, the value of this parameter is not returned.</para>
+            /// <para>The phone number. This parameter is returned only if a phone number is set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1381111****</para>
@@ -278,11 +284,16 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             [Validation(Required=false)]
             public string Phone { get; set; }
 
+            /// <summary>
+            /// <para>A list of custom properties for the user.</para>
+            /// </summary>
             [NameInMap("Properties")]
             [Validation(Required=false)]
             public List<DescribeUsersResponseBodyUsersProperties> Properties { get; set; }
             public class DescribeUsersResponseBodyUsersProperties : TeaModel {
                 /// <summary>
+                /// <para>The property key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Role</para>
                 /// </summary>
@@ -291,6 +302,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The property value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Student</para>
                 /// </summary>
@@ -300,38 +313,28 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             }
 
+            /// <summary>
+            /// <para>The display name of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>李**</para>
+            /// </summary>
             [NameInMap("RealNickName")]
             [Validation(Required=false)]
             public string RealNickName { get; set; }
 
             /// <summary>
-            /// <para>The remarks on the convenience user.</para>
+            /// <para>The note about the convenience account.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>TestUser</para>
+            /// <para>Test user.</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The status of the convenience user.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>0: The convenience user is normal.</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>9: The convenience user is locked.</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>The status of the convenience account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -341,7 +344,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? Status { get; set; }
 
             /// <summary>
-            /// <para>The globally unique ID of the convenience user.</para>
+            /// <para>The globally unique ID of the convenience account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>41fd1254d8f7****</para>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>22C97624-2405-54AC-BD44-A63FBE97CC2D</para>
+        /// <para>22C97624-2405-54AC-BD44-A63FBE97****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The number of convenience users that are associated with the property.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("UseCount")]
         [Validation(Required=false)]

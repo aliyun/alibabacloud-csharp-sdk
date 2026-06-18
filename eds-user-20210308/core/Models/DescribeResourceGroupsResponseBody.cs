@@ -20,13 +20,15 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The resource groups.</para>
+        /// <para>A list of resource groups.</para>
         /// </summary>
         [NameInMap("ResourceGroup")]
         [Validation(Required=false)]
         public List<DescribeResourceGroupsResponseBodyResourceGroup> ResourceGroup { get; set; }
         public class DescribeResourceGroupsResponseBodyResourceGroup : TeaModel {
             /// <summary>
+            /// <para>The Alibaba Cloud resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-123456</para>
             /// </summary>
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The number of administrators that are authorized to access the resource group.</para>
+            /// <para>The number of administrators authorized for the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string AuthCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource group was created.</para>
+            /// <para>The time the resource group was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-11-29T17:25:40.000000000Z</para>
@@ -74,14 +76,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> The policy that is associated with the resource group.</para>
-            /// </remarks>
+            /// <para>The policies associated with the resource group.</para>
             /// <list type="bullet">
-            /// <item><description><para>The policy applies to cloud computers in the resource group. If multiple policies exist, they are enforced in order of priority.</para>
+            /// <item><description><para>These policies apply to the cloud computers in the resource group. If multiple policies are associated, they are applied in order of priority.</para>
             /// </description></item>
-            /// <item><description><para>If any of these cloud computers are already associated with other policies, the resource group\&quot;s policy takes precedence.</para>
+            /// <item><description><para>Policies associated with the resource group take precedence over policies assigned to individual cloud computers.</para>
             /// </description></item>
             /// </list>
+            /// </remarks>
             /// </summary>
             [NameInMap("Policies")]
             [Validation(Required=false)]
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to use the default policy.</para>
+                /// <para>Specifies whether this is the default policy.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>False</para>
@@ -109,6 +111,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
                 /// <summary>
                 /// <para>The policy name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>测试策略123</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -127,7 +132,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string ResourceCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-cyo0il2pzge1***</para>
@@ -138,6 +143,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <para>The name of the resource group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>测试资源组</para>
             /// </summary>
             [NameInMap("ResourceGroupName")]
             [Validation(Required=false)]
@@ -145,11 +153,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> The associated scheduled task.</para>
-            /// </remarks>
+            /// <para>The scheduled tasks associated with the resource group.</para>
             /// <list type="bullet">
-            /// <item><description>The scheduled task applies to all cloud computers in the resource group. If any of these cloud computers are already associated with other scheduled tasks, the resource group\&quot;s scheduled task takes precedence.</description></item>
+            /// <item><description>These scheduled tasks apply to cloud computers in the resource group and take precedence over any tasks associated with individual cloud computers.</description></item>
             /// </list>
+            /// </remarks>
             /// </summary>
             [NameInMap("Timers")]
             [Validation(Required=false)]
@@ -160,7 +168,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string BindStatus { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the scheduled task.</para>
+                /// <para>The scheduled task ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>t-asdzx0mbjhg***</para>
@@ -170,7 +178,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the scheduled task.</para>
+                /// <para>The scheduled task name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>测试任务123</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]

@@ -28,6 +28,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <para>The name of the organization.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>开发部</para>
             /// </summary>
             [NameInMap("OrgName")]
             [Validation(Required=false)]

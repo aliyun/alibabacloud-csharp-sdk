@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ChangeUserPasswordResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AA8D67CB-345D-5CDA-986E-FFAC7D0****</para>
         /// </summary>

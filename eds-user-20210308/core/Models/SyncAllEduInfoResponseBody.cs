@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class SyncAllEduInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>Status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>Error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>Request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request succeeded.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

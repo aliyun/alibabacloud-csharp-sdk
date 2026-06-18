@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class FilterUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If not all results are returned in a query, a value is returned for the NextToken parameter. In this case, you can use the returned NextToken value to start the next query.</para>
+        /// <para>The token for paginated results. If the response is truncated, this parameter is returned. To retrieve the next page of results, include this value in a subsequent request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
+        /// <para>caeba0bbb2be03f84eb48b699f0a****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -23,21 +23,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DBD276B5-00FF-5E04-8EF7-5CBA09BF112A</para>
+        /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the convenience accounts.</para>
+        /// <para>A list of convenience accounts.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<FilterUsersResponseBodyUsers> Users { get; set; }
         public class FilterUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The date when a convenience account is automatically locked.</para>
+            /// <para>The date the account will be automatically locked.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-03</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string AutoLockTime { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud desktops that are assigned to the convenience user.</para>
+            /// <para>The number of cloud desktops assigned to the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? DesktopCount { get; set; }
 
             /// <summary>
-            /// <para>The number of cloud desktop pools that are assigned to the convenience user. This value is returned if you set <c>IncludeDesktopGroupCount</c> to <c>true</c>.</para>
+            /// <para>The number of desktop groups the user can access. This parameter is returned only when <c>IncludeDesktopGroupCount</c> is set to <c>true</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -67,33 +67,17 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? DesktopGroupCount { get; set; }
 
             /// <summary>
-            /// <para>The email address of the convenience user.</para>
+            /// <para>The email address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="mailto:testName@example.com">testName@example.com</a></para>
+            /// <para><a href="mailto:username@example.com">username@example.com</a></para>
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the convenience user is a local administrator.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>Indicates whether the user has local administrator permissions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -103,34 +87,34 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public bool? EnableAdminAccess { get; set; }
 
             /// <summary>
-            /// <para>The username of the convenience user.</para>
+            /// <para>The user name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>testName</para>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The additional information about the convenience user.</para>
+            /// <para>External user information.</para>
             /// </summary>
             [NameInMap("ExternalInfo")]
             [Validation(Required=false)]
             public FilterUsersResponseBodyUsersExternalInfo ExternalInfo { get; set; }
             public class FilterUsersResponseBodyUsersExternalInfo : TeaModel {
                 /// <summary>
-                /// <para>The account that is associated with the convenience user.</para>
+                /// <para>The name of the mapped external account.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>account</para>
                 /// </summary>
                 [NameInMap("ExternalName")]
                 [Validation(Required=false)]
                 public string ExternalName { get; set; }
 
                 /// <summary>
-                /// <para>The account, student ID, or employee ID that is associated with the convenience user.</para>
+                /// <para>The ID of the external account, such as a student ID or an employee ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>030801</para>
@@ -156,33 +140,17 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The ID of the convenience user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>12345</para>
+            /// <para>4205**</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the convenience user is a tenant administrator.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>true</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>false</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
+            /// <para>Indicates whether the user is a tenant administrator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -192,7 +160,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public bool? IsTenantManager { get; set; }
 
             /// <summary>
-            /// <para>The organizations to which the user belongs.</para>
+            /// <para>A list of organizations the user belongs to.</para>
             /// </summary>
             [NameInMap("OrgList")]
             [Validation(Required=false)]
@@ -222,12 +190,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The type of the account ownership.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>CreateFromManager: administrator-activated</description></item>
-            /// <item><description>Normal: user-activated</description></item>
-            /// </list>
+            /// <para>The account ownership type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -237,9 +200,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string OwnerType { get; set; }
 
             /// <summary>
-            /// <para>By default, user account passwords do not expire. However, you can set a validity period between 30 and 365 days. Once the period expires, end users must change their password before they can log on to terminals.</para>
+            /// <para>The password validity period in days. By default, passwords do not expire. Set this to a value from 30 to 365 to enforce an expiration policy. When a password expires, the user must change it before logging on again.</para>
             /// <remarks>
-            /// <para> The feature is in invitational preview. If you want to use this feature, submit a ticket.</para>
+            /// <para>This feature is in preview and available by invitation only. To use this feature, submit a ticket.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -250,7 +213,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public int? PasswordExpireDays { get; set; }
 
             /// <summary>
-            /// <para>The number of days remaining until the account password expires.</para>
+            /// <para>The number of days until the password expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -260,7 +223,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public int? PasswordExpireRestDays { get; set; }
 
             /// <summary>
-            /// <para>The mobile number of the convenience user.</para>
+            /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1381111****</para>
@@ -270,20 +233,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Phone { get; set; }
 
             /// <summary>
-            /// <para>The nickname of the convenience user.</para>
+            /// <para>The user\&quot;s nickname.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Oliver</para>
+            /// <para>小明</para>
             /// </summary>
             [NameInMap("RealNickName")]
             [Validation(Required=false)]
             public string RealNickName { get; set; }
 
             /// <summary>
-            /// <para>The remarks on the convenience user.</para>
+            /// <para>The remark about the user.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>测试专用</para>
             /// </summary>
             [NameInMap("Remark")]
             [Validation(Required=false)]
@@ -304,12 +267,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The remarks on the convenience account.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>0: The convenience account is normal.</description></item>
-            /// <item><description>9: The convenience account is locked.</description></item>
-            /// </list>
+            /// <para>The status of the convenience account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -319,21 +277,21 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public long? Status { get; set; }
 
             /// <summary>
-            /// <para>The supported identity provider logon methods.</para>
+            /// <para>A list of identity providers (IdPs) that the user can use to log on.</para>
             /// </summary>
             [NameInMap("SupportLoginIdps")]
             [Validation(Required=false)]
             public List<FilterUsersResponseBodyUsersSupportLoginIdps> SupportLoginIdps { get; set; }
             public class FilterUsersResponseBodyUsersSupportLoginIdps : TeaModel {
                 /// <summary>
-                /// <para>The enterprise identity provider ID.</para>
+                /// <para>The ID of the identity provider (IdP).</para>
                 /// </summary>
                 [NameInMap("IdpId")]
                 [Validation(Required=false)]
                 public string IdpId { get; set; }
 
                 /// <summary>
-                /// <para>The enterprise identity provider name.</para>
+                /// <para>The name of the identity provider (IdP).</para>
                 /// </summary>
                 [NameInMap("IdpName")]
                 [Validation(Required=false)]
@@ -342,14 +300,14 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The information about the properties.</para>
+            /// <para>A list of user properties.</para>
             /// </summary>
             [NameInMap("UserSetPropertiesModels")]
             [Validation(Required=false)]
             public List<FilterUsersResponseBodyUsersUserSetPropertiesModels> UserSetPropertiesModels { get; set; }
             public class FilterUsersResponseBodyUsersUserSetPropertiesModels : TeaModel {
                 /// <summary>
-                /// <para>The property ID.</para>
+                /// <para>The ID of the user property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>12</para>
@@ -359,7 +317,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public long? PropertyId { get; set; }
 
                 /// <summary>
-                /// <para>The property name.</para>
+                /// <para>The name of the user property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>department</para>
@@ -369,7 +327,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 public string PropertyKey { get; set; }
 
                 /// <summary>
-                /// <para>The property type.</para>
+                /// <para>The type of the user property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -389,7 +347,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                     /// <para>The property value.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>A</para>
+                    /// <para>dev</para>
                     /// </summary>
                     [NameInMap("PropertyValue")]
                     [Validation(Required=false)]
@@ -408,20 +366,20 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the convenience user that is bound to the property.</para>
+                /// <para>The ID of the user associated with the property.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>12345</para>
+                /// <para>4205**</para>
                 /// </summary>
                 [NameInMap("UserId")]
                 [Validation(Required=false)]
                 public long? UserId { get; set; }
 
                 /// <summary>
-                /// <para>The username of the convenience user that is bound to the property.</para>
+                /// <para>The user name associated with the property.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>testName</para>
+                /// <para>alice</para>
                 /// </summary>
                 [NameInMap("UserName")]
                 [Validation(Required=false)]

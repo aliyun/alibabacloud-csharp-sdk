@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeResourceGroupsRequest : TeaModel {
+        /// <summary>
+        /// <para>A list of Aliyun resource group IDs.</para>
+        /// </summary>
         [NameInMap("AliyunResourceGroupIds")]
         [Validation(Required=false)]
         public List<string> AliyunResourceGroupIds { get; set; }
 
         /// <summary>
+        /// <para>The business channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -23,7 +28,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> This parameter is not publicly available.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,7 +39,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? NeedContainResourceGroupWithOfficeSite { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +49,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries to return per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -55,11 +60,11 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <remarks>
-        /// <para> Set the value to AliyunConsole.</para>
-        /// </remarks>
+        /// <para>The cloud platform.</para>
         /// <list type="bullet">
-        /// <item><description>This parameter is not publicly available on other platforms.</description></item>
+        /// <item><description>For Elastic Desktop Service (EDS) Enterprise Edition, this parameter must be set to AliyunConsole.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunConsole</para>
@@ -73,7 +78,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string ResourceClassification { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resource groups that you want to query.</para>
+        /// <para>A list of resource group IDs.</para>
         /// </summary>
         [NameInMap("ResourceGroupIds")]
         [Validation(Required=false)]
@@ -81,6 +86,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
         /// <summary>
         /// <para>The name of the resource group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>部门A资源组</para>
         /// </summary>
         [NameInMap("ResourceGroupName")]
         [Validation(Required=false)]

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class ModifyUserRequest : TeaModel {
         /// <summary>
+        /// <para>Channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -32,7 +34,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Alice</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeOrgsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</para>
+        /// <para>The token used to retrieve the next page of results. If this parameter is not empty, more results are available. To retrieve the next page, pass this value in the <c>NextToken</c> parameter of a subsequent request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The organizations.</para>
+        /// <para>The organization list.</para>
         /// </summary>
         [NameInMap("Orgs")]
         [Validation(Required=false)]
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <para>The organization ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>org-****</para>
+            /// <para>org-1mox****</para>
             /// </summary>
             [NameInMap("OrgId")]
             [Validation(Required=false)]
             public string OrgId { get; set; }
 
             /// <summary>
-            /// <para>The name of the organizational unit.</para>
+            /// <para>The organization name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>org****</para>
+            /// <para>设计部****</para>
             /// </summary>
             [NameInMap("OrgName")]
             [Validation(Required=false)]
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <para>The parent organization ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>org-****</para>
+            /// <para>org-ezqr****</para>
             /// </summary>
             [NameInMap("ParentOrgId")]
             [Validation(Required=false)]

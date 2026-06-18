@@ -10,6 +10,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class CreateGroupRequest : TeaModel {
         /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not publicly available for use.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -18,6 +22,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string BizType { get; set; }
 
         /// <summary>
+        /// <para>Channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -35,6 +41,12 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The group name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>开发组</para>
+        /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }

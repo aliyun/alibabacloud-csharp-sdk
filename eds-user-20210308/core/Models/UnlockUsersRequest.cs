@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string AutoLockTime { get; set; }
 
         /// <summary>
+        /// <para>Channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>

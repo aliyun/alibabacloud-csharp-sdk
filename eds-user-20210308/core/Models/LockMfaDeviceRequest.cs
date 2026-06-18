@@ -13,13 +13,15 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The domain of the Active Directory (AD) workspace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pg-jifenn.com</para>
+        /// <para>upower.vip</para>
         /// </summary>
         [NameInMap("AdDomain")]
         [Validation(Required=false)]
         public string AdDomain { get; set; }
 
         /// <summary>
+        /// <para>Channel</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>

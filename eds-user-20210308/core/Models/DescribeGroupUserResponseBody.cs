@@ -30,6 +30,9 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <para>The name of the user group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>开发组</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -102,7 +105,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <para>The email address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>alex****@aliyun.com</para>
+            /// <para>alex****@example.com</para>
             /// </summary>
             [NameInMap("Email")]
             [Validation(Required=false)]
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             /// <para>The mobile number.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>188888****</para>
+            /// <para>138****1111</para>
             /// </summary>
             [NameInMap("Phone")]
             [Validation(Required=false)]

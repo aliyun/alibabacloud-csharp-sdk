@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class LockUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the locking the convenience user.</para>
+        /// <para>The result of the LockUsers operation.</para>
         /// </summary>
         [NameInMap("LockUsersResult")]
         [Validation(Required=false)]
         public LockUsersResponseBodyLockUsersResult LockUsersResult { get; set; }
         public class LockUsersResponseBodyLockUsersResult : TeaModel {
             /// <summary>
-            /// <para>The convenience users that failed to be locked.</para>
+            /// <para>A list of convenience accounts that failed to lock.</para>
             /// </summary>
             [NameInMap("FailedUsers")]
             [Validation(Required=false)]
             public List<LockUsersResponseBodyLockUsersResultFailedUsers> FailedUsers { get; set; }
             public class LockUsersResponseBodyLockUsersResultFailedUsers : TeaModel {
                 /// <summary>
-                /// <para>The ID of the convenience user that failed to be locked.</para>
+                /// <para>The username of the convenience account that failed to lock.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test123</para>
+                /// <para>alice</para>
                 /// </summary>
                 [NameInMap("EndUserId")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The convenience users that were locked.</para>
+            /// <para>A list of successfully locked convenience accounts.</para>
             /// </summary>
             [NameInMap("LockedUsers")]
             [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</para>

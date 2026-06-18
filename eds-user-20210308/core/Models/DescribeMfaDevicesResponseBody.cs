@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeMfaDevicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the virtual MFA devices.</para>
+        /// <para>A list of virtual MFA devices.</para>
         /// </summary>
         [NameInMap("MfaDevices")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             }
 
             /// <summary>
-            /// <para>The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.</para>
+            /// <para>The number of consecutive failed attempts to bind or authenticate the virtual MFA device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public int? ConsecutiveFails { get; set; }
 
             /// <summary>
-            /// <para>The type of the virtual MFA device. The value can only be <c>TOTP_VIRTUAL</c>. This value indicates that the virtual MFA device follows the Time-based One-time Password (TOTP) algorithm.</para>
+            /// <para>The type of the virtual MFA device. Set the value to <c>TOTP_VIRTUAL</c>, which indicates a virtual MFA device that complies with the Time-based One-time Password (TOTP) algorithm.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TOTP_VIRTUAL</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <remarks>
-            /// <para> This parameter is not publicly available.</para>
+            /// <para>This parameter is not in use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -71,17 +71,17 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The username of the convenience account that uses the virtual MFA device.</para>
+            /// <para>The username of the convenience user who uses the virtual MFA device.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>alice</para>
             /// </summary>
             [NameInMap("EndUserId")]
             [Validation(Required=false)]
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The time when the virtual MFA device was enabled. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when the virtual MFA device was enabled. The time is displayed in UTC and is formatted as <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-22T06:20:49Z</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
             public string GmtEnabled { get; set; }
 
             /// <summary>
-            /// <para>The time when the locked virtual MFA device was automatically unlocked. The time follows the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time is displayed in UTC.</para>
+            /// <para>The time when the locked virtual MFA device is automatically unlocked. The time is displayed in UTC and is formatted as <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-23T06:20:49Z</para>
@@ -122,29 +122,6 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 
             /// <summary>
             /// <para>The status of the virtual MFA device.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>LOCKED</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>UNBOUND</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// </description></item>
-            /// <item><description><para>NORMAL</para>
-            /// <!-- -->
-            /// 
-            /// <!-- -->
-            /// 
-            /// <!-- --></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>NORMAL</para>
@@ -156,7 +133,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to retrieve the next page of results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6na6YlN9asMM31MsMcdQNpp</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
 {
     public class DescribeOrgsRequest : TeaModel {
         /// <summary>
+        /// <para>The channel.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
         /// </summary>
@@ -22,8 +24,8 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public List<string> IncludeOrgIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid values: 1 to 100.\
-        /// Default value: 100.</para>
+        /// <para>The maximum number of entries to return. Valid values: 1 to 100.<br>
+        /// Default value: 100.<br></para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -33,7 +35,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the query. The return value is the value of the NextToken response parameter that was returned last time the DescribeOrgs operation was called.</para>
+        /// <para>The pagination token. To retrieve the next page of results, set this parameter to the <c>NextToken</c> value that was returned from a previous request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK****</para>
@@ -43,10 +45,10 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The name of the organization.</para>
+        /// <para>The organization name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>org****</para>
+        /// <para>产品部</para>
         /// </summary>
         [NameInMap("OrgName")]
         [Validation(Required=false)]
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Eds_user20210308.Models
         /// <para>The parent organization ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>org-****</para>
+        /// <para>org-11fs****</para>
         /// </summary>
         [NameInMap("ParentOrgId")]
         [Validation(Required=false)]
