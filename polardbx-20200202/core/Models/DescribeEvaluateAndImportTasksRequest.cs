@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeEvaluateAndImportTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

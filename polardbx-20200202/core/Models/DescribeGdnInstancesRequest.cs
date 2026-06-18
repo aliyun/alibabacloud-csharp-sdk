@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeGdnInstancesRequest : TeaModel {
         /// <summary>
+        /// <para>The message filter type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gdn_id、
         /// polarx_id</para>
@@ -19,6 +21,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string FilterType { get; set; }
 
         /// <summary>
+        /// <para>The filter value for querying resources.</para>
+        /// <para>This parameter is used together with FilterKey.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gdn-<em><b>、
         /// pxc-</b></em></para>
@@ -28,7 +33,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string FilterValue { get; set; }
 
         /// <summary>
-        /// <para>GDN ID。</para>
+        /// <para>The GDN ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gdn-***</para>
@@ -38,6 +43,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string GDNId { get; set; }
 
         /// <summary>
+        /// <para>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>50</para>
         /// </summary>
@@ -46,6 +53,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PageNum { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -54,6 +63,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

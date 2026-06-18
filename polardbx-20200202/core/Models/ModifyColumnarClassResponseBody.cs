@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyColumnarClassResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The policy details returned.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyColumnarClassResponseBodyData Data { get; set; }
         public class ModifyColumnarClassResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>

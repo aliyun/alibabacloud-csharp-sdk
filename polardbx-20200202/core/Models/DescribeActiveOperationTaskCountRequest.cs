@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeActiveOperationTaskCountRequest : TeaModel {
         /// <summary>
+        /// <para>A reserved parameter. You do not need to specify this parameter.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Category</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Category { get; set; }
 
         /// <summary>
+        /// <para>The product. Default value: polarx.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polarx</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Product { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

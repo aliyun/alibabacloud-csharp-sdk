@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeStoragePoolInfoResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,15 +19,23 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of instance details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeStoragePoolInfoResponseBodyData Data { get; set; }
         public class DescribeStoragePoolInfoResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The storage pools.</para>
+            /// </summary>
             [NameInMap("StoragePools")]
             [Validation(Required=false)]
             public List<DescribeStoragePoolInfoResponseBodyDataStoragePools> StoragePools { get; set; }
             public class DescribeStoragePoolInfoResponseBodyDataStoragePools : TeaModel {
                 /// <summary>
+                /// <para>The specification type of the instance (the specification code).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>polar.mysql.x4.large</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Class { get; set; }
 
                 /// <summary>
+                /// <para>The list of DN IDs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[pxc-xdb-s-pxcbj<b><b>xxnwp0wac2c4\&quot;,\&quot;pxc-xdb-s-pxcbjr3b8</b></b>p0wa1589\&quot;]</para>
                 /// </summary>
@@ -52,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DnIdString { get; set; }
 
                 /// <summary>
+                /// <para>The reserved field.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;appId\&quot;:\&quot;APP_ETLUP1E5FMI5ND5IFO8W\&quot;}</para>
                 /// </summary>
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Extra { get; set; }
 
                 /// <summary>
+                /// <para>The time when the account was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-08-27 23:19:52.0</para>
                 /// </summary>
@@ -68,6 +84,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
+                /// <para>The time when the storage pool was last modified, in timestamp format.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-02 16:52:47.0</para>
                 /// </summary>
@@ -76,6 +94,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
+                /// <para>The list of idle DN IDs.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>none</para>
                 /// </summary>
@@ -84,6 +104,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public List<string> IdleDNIdList { get; set; }
 
                 /// <summary>
+                /// <para>The name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>test-cacheapi</para>
                 /// </summary>
@@ -92,6 +114,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>The DN that cannot be deleted.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pxc-xdb-s-hzr*****6j4se284344</para>
                 /// </summary>

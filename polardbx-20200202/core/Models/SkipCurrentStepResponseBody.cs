@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class SkipCurrentStepResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SkipCurrentStepResponseBodyData Data { get; set; }
         public class SkipCurrentStepResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Slink task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>etx-szr2rr6i*****</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The return message. This parameter is empty when the request succeeds. When the request fails, exception information such as error codes is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateDBRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the account that is authorized to access the created database.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The permissions granted to the account on the database. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ReadWrite</b>: read and write permissions.</description></item>
+        /// <item><description><b>ReadOnly</b>: read-only permissions.</description></item>
+        /// <item><description><b>DMLOnly</b>: DML-only permissions.</description></item>
+        /// <item><description><b>DDLOnly</b>: DDL-only permissions.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ReadWrite</para>
         /// </summary>
@@ -28,6 +37,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
+        /// <para>The character set. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>utf8</b></description></item>
+        /// <item><description><b>gbk</b></description></item>
+        /// <item><description><b>latin1</b></description></item>
+        /// <item><description><b>utf8mb4</b>.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +54,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Charset { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +65,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The description of the database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>db for test</para>
         /// </summary>
@@ -56,6 +75,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DbDescription { get; set; }
 
         /// <summary>
+        /// <para>The name of the database to create.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,6 +86,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>The mode of the database. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>auto</b>: The database supports automatic partitioning. You do not need to specify a partition key when you create a table.</description></item>
+        /// <item><description><b>drds</b>: The database does not support automatic partitioning. You must use the dedicated sharding syntax to specify sharding keys when you create a table.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>auto</para>
         /// </summary>
@@ -74,6 +100,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Mode { get; set; }
 
         /// <summary>
+        /// <para>The region where the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -84,6 +111,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the security administrator account.</para>
+        /// <remarks>
+        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>securityAccount</para>
         /// </summary>
@@ -92,6 +124,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountName { get; set; }
 
         /// <summary>
+        /// <para>The password of the security administrator account.</para>
+        /// <remarks>
+        /// <para>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is not required.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>securityPassword</para>
         /// </summary>

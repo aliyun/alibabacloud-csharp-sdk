@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteCustomEndpointRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom endpoint domain name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxe-8if3zrfsu****hgw</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CustomEndpointId { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxc-hzravgpt8q****</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region in which the instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

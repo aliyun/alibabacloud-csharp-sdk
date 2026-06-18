@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpgradeDBInstanceKernelVersionResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxc-hzjasd****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The target version number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polarx-kernel_5.4.7-16001481_xcluster-20200910</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string TargetMinorVersion { get; set; }
 
         /// <summary>
+        /// <para>The backend task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>422922413</para>
         /// </summary>

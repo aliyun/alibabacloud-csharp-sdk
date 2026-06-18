@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteAccountRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the account to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region in which the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the security administrator account.</para>
+        /// <remarks>
+        /// <para>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, you do not need to specify this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>securityAccount</para>
         /// </summary>
@@ -48,6 +56,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountName { get; set; }
 
         /// <summary>
+        /// <para>The password of the security administrator account.</para>
+        /// <remarks>
+        /// <para>If three-role mode is enabled, this parameter is required. If three-role mode is not enabled, you do not need to specify this parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>securityPassword</para>
         /// </summary>

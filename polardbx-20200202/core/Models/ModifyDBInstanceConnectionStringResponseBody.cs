@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyDBInstanceConnectionStringResponseBody : TeaModel {
         /// <summary>
+        /// <para>The response code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public long? Code { get; set; }
 
+        /// <summary>
+        /// <para>The new connection string information.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDBInstanceConnectionStringResponseBodyData Data { get; set; }
         public class ModifyDBInstanceConnectionStringResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The connection string.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>test2.polarx.huhehaote.rds.aliyuncs.com</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pxc-unrf5ssig0ecg8</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The network type of the connection string.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceNetType { get; set; }
 
             /// <summary>
+            /// <para>The port number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3300</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The response message. This is typically an error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID. It is a unique identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>c3cf535c-a585-11ea-8263-00163e04d3a7</para>
         /// </summary>

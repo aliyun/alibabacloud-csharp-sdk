@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class AllocateInstancePublicConnectionRequest : TeaModel {
         /// <summary>
+        /// <para>The prefix of the public endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ConnectionStringPrefix { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +48,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The port of the public endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +59,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Port { get; set; }
 
         /// <summary>
+        /// <para>The region in which the instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

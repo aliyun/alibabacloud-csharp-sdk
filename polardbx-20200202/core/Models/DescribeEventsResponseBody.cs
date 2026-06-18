@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeEventsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The event items.</para>
+        /// </summary>
         [NameInMap("EventItems")]
         [Validation(Required=false)]
         public List<DescribeEventsResponseBodyEventItems> EventItems { get; set; }
         public class DescribeEventsResponseBodyEventItems : TeaModel {
             /// <summary>
+            /// <para>The event ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>50421290</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public long? EventId { get; set; }
 
             /// <summary>
+            /// <para>The event name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ModifySecurityIps</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventName { get; set; }
 
             /// <summary>
+            /// <para>The supplementary information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{\&quot;Domain\&quot;: \&quot;rds-cn-hangzhou.aliyuncs.com\&quot;}</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventPayload { get; set; }
 
             /// <summary>
+            /// <para>The reason.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FROM_USER</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventReason { get; set; }
 
             /// <summary>
+            /// <para>The record time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-10-15T06:39:49Z</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventRecordTime { get; set; }
 
             /// <summary>
+            /// <para>The event time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-10-15T06:35:00Z</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventTime { get; set; }
 
             /// <summary>
+            /// <para>The event type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SecurityManagement</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventType { get; set; }
 
             /// <summary>
+            /// <para>The event user type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>USRE</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EventUserType { get; set; }
 
             /// <summary>
+            /// <para>The region ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The resource name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>px-bp1v8udesc89g156g</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ResourceName { get; set; }
 
             /// <summary>
+            /// <para>The resource type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>instance</para>
             /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The page size.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4748127A-6D50-432C-B635-433467074C27</para>
         /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

@@ -66,6 +66,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202
                 {"eu-west-1-oxs", "polardbx.aliyuncs.com"},
                 {"me-east-1", "polardbx.aliyuncs.com"},
                 {"rus-west-1-pop", "polardbx.aliyuncs.com"},
+                {"us-west-1", "polardbx.us-west-1.aliyuncs.com"},
+                {"us-east-1", "polardbx.us-east-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "polardbx.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "polardbx.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "polardbx.cn-shanghai.aliyuncs.com"},
+                {"cn-qingdao", "polardbx.cn-qingdao.aliyuncs.com"},
+                {"cn-huhehaote", "polardbx.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "polardbx.cn-hongkong.aliyuncs.com"},
+                {"cn-hangzhou", "polardbx.cn-hangzhou.aliyuncs.com"},
+                {"cn-chengdu", "polardbx.cn-chengdu.aliyuncs.com"},
+                {"cn-beijing", "polardbx.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "polardbx.ap-southeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("polardbx", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -219,7 +231,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通冷存储</para>
+        /// <para>Calls the AllocateColdDataVolume operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -265,7 +277,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通冷存储</para>
+        /// <para>Calls the AllocateColdDataVolume operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -311,7 +323,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通冷存储</para>
+        /// <para>Calls the AllocateColdDataVolume operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -329,7 +341,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通冷存储</para>
+        /// <para>Calls the AllocateColdDataVolume operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -347,7 +359,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通公网域名</para>
+        /// <para>Calls the AllocateInstancePublicConnection operation to create a public IP address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -421,7 +433,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通公网域名</para>
+        /// <para>Calls the AllocateInstancePublicConnection operation to create a public IP address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -495,7 +507,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通公网域名</para>
+        /// <para>Calls the AllocateInstancePublicConnection operation to create a public IP address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -513,7 +525,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开通公网域名</para>
+        /// <para>Calls the AllocateInstancePublicConnection operation to create a public IP address.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -529,6 +541,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await AllocateInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Mounts a columnar instance to a specified primary database instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AttachColumnarInstanceRequest
         /// </param>
@@ -570,6 +587,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<AttachColumnarInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Mounts a columnar instance to a specified primary database instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AttachColumnarInstanceRequest
         /// </param>
@@ -611,6 +633,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<AttachColumnarInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Mounts a columnar instance to a specified primary database instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AttachColumnarInstanceRequest
         /// </param>
@@ -624,6 +651,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return AttachColumnarInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Mounts a columnar instance to a specified primary database instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// AttachColumnarInstanceRequest
         /// </param>
@@ -639,7 +671,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消主动运维任务</para>
+        /// <para>Cancels active O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -677,7 +709,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消主动运维任务</para>
+        /// <para>Cancels active O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -715,7 +747,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消主动运维任务</para>
+        /// <para>Cancels active O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -733,7 +765,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消主动运维任务</para>
+        /// <para>Cancels active O&amp;M event tasks by calling the CancelActiveOperationTasks operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -751,8 +783,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例所在资源组.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>endpoint</b> differs from other operations. Use <b>polardbx.aliyuncs.com</b> for Chinese mainland regions and Singapore. For other regions, use <b>polardbx.{region id}.aliyunc.com</b>.</description></item>
+        /// <item><description>When testing this API operation, if a service unavailable error is returned, verify that the <b>endpoint</b> is correct. You can switch the <b>service address</b> to <b>Dubai</b> or <b>India</b> to change the <b>endpoint</b> to <b>polardbx.aliyuncs.com</b>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
@@ -805,8 +846,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例所在资源组.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>endpoint</b> differs from other operations. Use <b>polardbx.aliyuncs.com</b> for Chinese mainland regions and Singapore. For other regions, use <b>polardbx.{region id}.aliyunc.com</b>.</description></item>
+        /// <item><description>When testing this API operation, if a service unavailable error is returned, verify that the <b>endpoint</b> is correct. You can switch the <b>service address</b> to <b>Dubai</b> or <b>India</b> to change the <b>endpoint</b> to <b>polardbx.aliyuncs.com</b>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
@@ -859,8 +909,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例所在资源组.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>endpoint</b> differs from other operations. Use <b>polardbx.aliyuncs.com</b> for Chinese mainland regions and Singapore. For other regions, use <b>polardbx.{region id}.aliyunc.com</b>.</description></item>
+        /// <item><description>When testing this API operation, if a service unavailable error is returned, verify that the <b>endpoint</b> is correct. You can switch the <b>service address</b> to <b>Dubai</b> or <b>India</b> to change the <b>endpoint</b> to <b>polardbx.aliyuncs.com</b>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
@@ -877,8 +936,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例所在资源组.</para>
+        /// <para>Modifies the resource group of an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>endpoint</b> differs from other operations. Use <b>polardbx.aliyuncs.com</b> for Chinese mainland regions and Singapore. For other regions, use <b>polardbx.{region id}.aliyunc.com</b>.</description></item>
+        /// <item><description>When testing this API operation, if a service unavailable error is returned, verify that the <b>endpoint</b> is correct. You can switch the <b>service address</b> to <b>Dubai</b> or <b>India</b> to change the <b>endpoint</b> to <b>polardbx.aliyuncs.com</b>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeResourceGroupRequest
@@ -893,6 +961,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ChangeResourceGroupWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a PolarDB-X instance is authorized to use Key Management Service (KMS).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckCloudResourceAuthorizedRequest
         /// </param>
@@ -938,6 +1011,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a PolarDB-X instance is authorized to use Key Management Service (KMS).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckCloudResourceAuthorizedRequest
         /// </param>
@@ -983,6 +1061,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CheckCloudResourceAuthorizedResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a PolarDB-X instance is authorized to use Key Management Service (KMS).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckCloudResourceAuthorizedRequest
         /// </param>
@@ -996,6 +1079,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return CheckCloudResourceAuthorizedWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether a PolarDB-X instance is authorized to use Key Management Service (KMS).</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CheckCloudResourceAuthorizedRequest
         /// </param>
@@ -1009,6 +1097,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await CheckCloudResourceAuthorizedWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether SQL audit logs of a specified database instance have been successfully connected to Simple Log Service (SLS).
+        /// After the call, the system returns the connection status between the SQL audit feature and SLS for the current instance, the project and Logstore configuration information, and whether synchronization is normal.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckSqlAuditSlsStatusRequest
         /// </param>
@@ -1046,6 +1149,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CheckSqlAuditSlsStatusResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether SQL audit logs of a specified database instance have been successfully connected to Simple Log Service (SLS).
+        /// After the call, the system returns the connection status between the SQL audit feature and SLS for the current instance, the project and Logstore configuration information, and whether synchronization is normal.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckSqlAuditSlsStatusRequest
         /// </param>
@@ -1083,6 +1201,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CheckSqlAuditSlsStatusResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether SQL audit logs of a specified database instance have been successfully connected to Simple Log Service (SLS).
+        /// After the call, the system returns the connection status between the SQL audit feature and SLS for the current instance, the project and Logstore configuration information, and whether synchronization is normal.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckSqlAuditSlsStatusRequest
         /// </param>
@@ -1096,6 +1229,21 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return CheckSqlAuditSlsStatusWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Checks whether SQL audit logs of a specified database instance have been successfully connected to Simple Log Service (SLS).
+        /// After the call, the system returns the connection status between the SQL audit feature and SLS for the current instance, the project and Logstore configuration information, and whether synchronization is normal.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CheckSqlAuditSlsStatusRequest
         /// </param>
@@ -1111,7 +1259,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消实例迁移</para>
+        /// <para>Closes the database engine migration process for a specified instance. After you start a data migration task from another database (such as a self-managed MySQL database or an ApsaraDB RDS instance) to PolarDB-X, you can call this operation to safely stop the migration process if you need to terminate or clean up the migration state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1161,7 +1309,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消实例迁移</para>
+        /// <para>Closes the database engine migration process for a specified instance. After you start a data migration task from another database (such as a self-managed MySQL database or an ApsaraDB RDS instance) to PolarDB-X, you can call this operation to safely stop the migration process if you need to terminate or clean up the migration state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1211,7 +1359,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消实例迁移</para>
+        /// <para>Closes the database engine migration process for a specified instance. After you start a data migration task from another database (such as a self-managed MySQL database or an ApsaraDB RDS instance) to PolarDB-X, you can call this operation to safely stop the migration process if you need to terminate or clean up the migration state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1229,7 +1377,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消实例迁移</para>
+        /// <para>Closes the database engine migration process for a specified instance. After you start a data migration task from another database (such as a self-managed MySQL database or an ApsaraDB RDS instance) to PolarDB-X, you can call this operation to safely stop the migration process if you need to terminate or clean up the migration state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1247,8 +1395,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚切换时确认无连接</para>
+        /// <para>Confirms that no active connections exist before performing a rollback switchover.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms that no active connections exist before a rollback task to ensure operation safety.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfirmNoConnectionRequest
@@ -1297,8 +1450,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚切换时确认无连接</para>
+        /// <para>Confirms that no active connections exist before performing a rollback switchover.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms that no active connections exist before a rollback task to ensure operation safety.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfirmNoConnectionRequest
@@ -1347,8 +1505,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚切换时确认无连接</para>
+        /// <para>Confirms that no active connections exist before performing a rollback switchover.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms that no active connections exist before a rollback task to ensure operation safety.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfirmNoConnectionRequest
@@ -1365,8 +1528,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>回滚切换时确认无连接</para>
+        /// <para>Confirms that no active connections exist before performing a rollback switchover.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms that no active connections exist before a rollback task to ensure operation safety.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfirmNoConnectionRequest
@@ -1381,6 +1549,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ConfirmNoConnectionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account by calling the CreateAccount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAccountRequest
         /// </param>
@@ -1450,6 +1623,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account by calling the CreateAccount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAccountRequest
         /// </param>
@@ -1519,6 +1697,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account by calling the CreateAccount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAccountRequest
         /// </param>
@@ -1532,6 +1715,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return CreateAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an account by calling the CreateAccount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateAccountRequest
         /// </param>
@@ -1545,6 +1733,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await CreateAccountWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the CreateBackup operation to create a backup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBackupRequest
         /// </param>
@@ -1590,6 +1783,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateBackupResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the CreateBackup operation to create a backup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBackupRequest
         /// </param>
@@ -1635,6 +1833,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateBackupResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the CreateBackup operation to create a backup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBackupRequest
         /// </param>
@@ -1648,6 +1851,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return CreateBackupWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the CreateBackup operation to create a backup.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateBackupRequest
         /// </param>
@@ -1663,8 +1871,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义endpoint</para>
+        /// <para>Creates a custom endpoint for a database instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCustomEndpointRequest
@@ -1733,8 +1946,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义endpoint</para>
+        /// <para>Creates a custom endpoint for a database instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCustomEndpointRequest
@@ -1803,8 +2021,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义endpoint</para>
+        /// <para>Creates a custom endpoint for a database instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCustomEndpointRequest
@@ -1821,8 +2044,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建自定义endpoint</para>
+        /// <para>Creates a custom endpoint for a database instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>..</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCustomEndpointRequest
@@ -1837,6 +2065,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await CreateCustomEndpointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a database by calling the CreateDB operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDBRequest
         /// </param>
@@ -1914,6 +2147,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateDBResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a database by calling the CreateDB operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDBRequest
         /// </param>
@@ -1991,6 +2229,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a database by calling the CreateDB operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDBRequest
         /// </param>
@@ -2004,6 +2247,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return CreateDBWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a database by calling the CreateDB operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateDBRequest
         /// </param>
@@ -2019,8 +2267,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a PolarDB-X instance.</para>
+        /// <para>Calls the CreateDBInstance operation to create a PolarDB-X instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDBInstanceRequest
@@ -2187,8 +2440,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a PolarDB-X instance.</para>
+        /// <para>Calls the CreateDBInstance operation to create a PolarDB-X instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateDBInstanceRequest
@@ -2355,8 +2613,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a PolarDB-X instance.</para>
+        /// <para>Calls the CreateDBInstance operation to create a PolarDB-X instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDBInstanceRequest
@@ -2373,8 +2636,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a PolarDB-X instance.</para>
+        /// <para>Calls the CreateDBInstance operation to create a PolarDB-X instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDBInstanceRequest
@@ -2391,8 +2659,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的数据迁移任务</para>
+        /// <para>Creates a data import task to import external data files, such as SQL scripts and CSV files, into a target database instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data import task that imports SQL or CSV files stored in OSS or ECS, or directly provided files, into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataImportTaskRequest
@@ -2473,8 +2746,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的数据迁移任务</para>
+        /// <para>Creates a data import task to import external data files, such as SQL scripts and CSV files, into a target database instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data import task that imports SQL or CSV files stored in OSS or ECS, or directly provided files, into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataImportTaskRequest
@@ -2555,8 +2833,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的数据迁移任务</para>
+        /// <para>Creates a data import task to import external data files, such as SQL scripts and CSV files, into a target database instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data import task that imports SQL or CSV files stored in OSS or ECS, or directly provided files, into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataImportTaskRequest
@@ -2573,8 +2856,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的数据迁移任务</para>
+        /// <para>Creates a data import task to import external data files, such as SQL scripts and CSV files, into a target database instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data import task that imports SQL or CSV files stored in OSS or ECS, or directly provided files, into a target database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateDataImportTaskRequest
@@ -2591,7 +2879,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建GDN实例</para>
+        /// <para>Creates a Global Database Network (GDN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2657,7 +2945,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建GDN实例</para>
+        /// <para>Creates a Global Database Network (GDN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2723,7 +3011,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建GDN实例</para>
+        /// <para>Creates a Global Database Network (GDN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2741,7 +3029,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建GDN实例</para>
+        /// <para>Creates a Global Database Network (GDN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2761,6 +3049,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <summary>
         /// <para>创建GDN从实例</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateGdnStandbyMemberRequest
@@ -2896,6 +3189,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>创建GDN从实例</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateGdnStandbyMemberRequest
         /// </param>
@@ -3030,6 +3328,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>创建GDN从实例</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateGdnStandbyMemberRequest
         /// </param>
@@ -3048,6 +3351,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>创建GDN从实例</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CreateGdnStandbyMemberRequest
         /// </param>
@@ -3063,8 +3371,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建mem0</para>
+        /// <para>Enable Memory Engine</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMem0Request
@@ -3109,8 +3422,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建mem0</para>
+        /// <para>Enable Memory Engine</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMem0Request
@@ -3155,8 +3473,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建mem0</para>
+        /// <para>Enable Memory Engine</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMem0Request
@@ -3173,8 +3496,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建mem0</para>
+        /// <para>Enable Memory Engine</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMem0Request
@@ -3191,8 +3519,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估预检任务</para>
+        /// <para>Performs a health check on the replication task during data migration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRplInspectionTaskRequest
@@ -3261,8 +3594,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估预检任务</para>
+        /// <para>Performs a health check on the replication task during data migration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRplInspectionTaskRequest
@@ -3331,8 +3669,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估预检任务</para>
+        /// <para>Performs a health check on the replication task during data migration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRplInspectionTaskRequest
@@ -3349,8 +3692,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估预检任务</para>
+        /// <para>Performs a health check on the replication task during data migration.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for issues such as latency, replication interruption, or data inconsistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateRplInspectionTaskRequest
@@ -3367,7 +3715,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的兼容性评估任务</para>
+        /// <para>Creates a SQL statement assessment task. You submit SQL statements through this operation, and the system performs static analysis and risk assessment to identify execution risks and compatibility issues on the target database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3457,7 +3805,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的兼容性评估任务</para>
+        /// <para>Creates a SQL statement assessment task. You submit SQL statements through this operation, and the system performs static analysis and risk assessment to identify execution risks and compatibility issues on the target database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3547,7 +3895,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的兼容性评估任务</para>
+        /// <para>Creates a SQL statement assessment task. You submit SQL statements through this operation, and the system performs static analysis and risk assessment to identify execution risks and compatibility issues on the target database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3565,7 +3913,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的兼容性评估任务</para>
+        /// <para>Creates a SQL statement assessment task. You submit SQL statements through this operation, and the system performs static analysis and risk assessment to identify execution risks and compatibility issues on the target database instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3583,7 +3931,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 PolarDB-X 存储资源池</para>
+        /// <para>Creates a resource storage pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3641,7 +3989,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 PolarDB-X 存储资源池</para>
+        /// <para>Creates a resource storage pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3699,7 +4047,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 PolarDB-X 存储资源池</para>
+        /// <para>Creates a resource storage pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3717,7 +4065,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 PolarDB-X 存储资源池</para>
+        /// <para>Creates a resource storage pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3735,7 +4083,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的结构迁移任务</para>
+        /// <para>Creates a database schema import task. This operation allows you to import SQL script files or text content that contains DDL statements into a target database instance, and automatically performs schema operations such as creating tables, indexes, views, and stored procedures.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3791,7 +4139,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的结构迁移任务</para>
+        /// <para>Creates a database schema import task. This operation allows you to import SQL script files or text content that contains DDL statements into a target database instance, and automatically performs schema operations such as creating tables, indexes, views, and stored procedures.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3847,7 +4195,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的结构迁移任务</para>
+        /// <para>Creates a database schema import task. This operation allows you to import SQL script files or text content that contains DDL statements into a target database instance, and automatically performs schema operations such as creating tables, indexes, views, and stored procedures.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3865,7 +4213,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建评估升级的结构迁移任务</para>
+        /// <para>Creates a database schema import task. This operation allows you to import SQL script files or text content that contains DDL statements into a target database instance, and automatically performs schema operations such as creating tables, indexes, views, and stored procedures.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4045,6 +4393,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await CreateSubCNInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a privileged user. Each instance can have only one privileged user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSuperAccountRequest
         /// </param>
@@ -4098,6 +4451,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateSuperAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a privileged user. Each instance can have only one privileged user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSuperAccountRequest
         /// </param>
@@ -4151,6 +4509,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<CreateSuperAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a privileged user. Each instance can have only one privileged user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSuperAccountRequest
         /// </param>
@@ -4164,6 +4527,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return CreateSuperAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a privileged user. Each instance can have only one privileged user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// CreateSuperAccountRequest
         /// </param>
@@ -4179,7 +4547,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准版迁移到企业版的操作任务</para>
+        /// <para>Creates a conversion task to change a specific status or configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4229,7 +4597,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准版迁移到企业版的操作任务</para>
+        /// <para>Creates a conversion task to change a specific status or configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4279,7 +4647,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准版迁移到企业版的操作任务</para>
+        /// <para>Creates a conversion task to change a specific status or configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4297,7 +4665,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建标准版迁移到企业版的操作任务</para>
+        /// <para>Creates a conversion task to change a specific status or configuration of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4313,6 +4681,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await CreateTransformOperationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an account by calling the DeleteAccount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAccountRequest
         /// </param>
@@ -4366,6 +4739,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteAccountResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an account by calling the DeleteAccount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAccountRequest
         /// </param>
@@ -4419,6 +4797,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteAccountResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an account by calling the DeleteAccount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAccountRequest
         /// </param>
@@ -4432,6 +4815,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DeleteAccountWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an account by calling the DeleteAccount operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteAccountRequest
         /// </param>
@@ -4447,8 +4835,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义endpoint</para>
+        /// <para>Deletes a custom endpoint domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCustomEndpointRequest
@@ -4497,8 +4890,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义endpoint</para>
+        /// <para>Deletes a custom endpoint domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCustomEndpointRequest
@@ -4547,8 +4945,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义endpoint</para>
+        /// <para>Deletes a custom endpoint domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCustomEndpointRequest
@@ -4565,8 +4968,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除自定义endpoint</para>
+        /// <para>Deletes a custom endpoint domain name.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCustomEndpointRequest
@@ -4581,6 +4989,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DeleteCustomEndpointWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database by calling the DeleteDB operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDBRequest
         /// </param>
@@ -4626,6 +5039,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteDBResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database by calling the DeleteDB operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDBRequest
         /// </param>
@@ -4671,6 +5089,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DeleteDBResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database by calling the DeleteDB operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDBRequest
         /// </param>
@@ -4684,6 +5107,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DeleteDBWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a database by calling the DeleteDB operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DeleteDBRequest
         /// </param>
@@ -4699,7 +5127,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Calls the DeleteDBInstance operation to delete an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4745,7 +5173,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Calls the DeleteDBInstance operation to delete an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4791,7 +5219,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Calls the DeleteDBInstance operation to delete an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4809,7 +5237,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放实例</para>
+        /// <para>Calls the DeleteDBInstance operation to delete an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4827,8 +5255,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除评估导入任务</para>
+        /// <para>Deletes an evaluation import task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a created evaluation task and performs subsequent data import operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEvaluateAndImportTaskRequest
@@ -4873,8 +5306,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除评估导入任务</para>
+        /// <para>Deletes an evaluation import task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a created evaluation task and performs subsequent data import operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEvaluateAndImportTaskRequest
@@ -4919,8 +5357,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除评估导入任务</para>
+        /// <para>Deletes an evaluation import task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a created evaluation task and performs subsequent data import operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEvaluateAndImportTaskRequest
@@ -4937,8 +5380,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除评估导入任务</para>
+        /// <para>Deletes an evaluation import task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a created evaluation task and performs subsequent data import operations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteEvaluateAndImportTaskRequest
@@ -4955,7 +5403,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除GDN实例</para>
+        /// <para>Deletes a global database network (GDN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5001,7 +5449,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除GDN实例</para>
+        /// <para>Deletes a global database network (GDN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5047,7 +5495,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除GDN实例</para>
+        /// <para>Deletes a global database network (GDN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5065,7 +5513,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除GDN实例</para>
+        /// <para>Deletes a global database network (GDN) instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5083,8 +5531,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除mem0</para>
+        /// <para>Disables the memory engine.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables the access entry for the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteMem0Request
@@ -5129,8 +5582,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除mem0</para>
+        /// <para>Disables the memory engine.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables the access entry for the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteMem0Request
@@ -5175,8 +5633,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除mem0</para>
+        /// <para>Disables the memory engine.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables the access entry for the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteMem0Request
@@ -5193,8 +5656,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除mem0</para>
+        /// <para>Disables the memory engine.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables the access entry for the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteMem0Request
@@ -5365,6 +5833,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DeleteSubCNInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of accounts by calling the DescribeAccountList operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAccountListRequest
         /// </param>
@@ -5414,6 +5887,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeAccountListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of accounts by calling the DescribeAccountList operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAccountListRequest
         /// </param>
@@ -5463,6 +5941,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeAccountListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of accounts by calling the DescribeAccountList operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAccountListRequest
         /// </param>
@@ -5476,6 +5959,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeAccountListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of accounts by calling the DescribeAccountList operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeAccountListRequest
         /// </param>
@@ -5491,7 +5979,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局运维窗口配置</para>
+        /// <para>Calls the DescribeActiveOperationMaintainConf operation to display the O&amp;M window configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5533,7 +6021,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局运维窗口配置</para>
+        /// <para>Calls the DescribeActiveOperationMaintainConf operation to display the O&amp;M window configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5575,7 +6063,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局运维窗口配置</para>
+        /// <para>Calls the DescribeActiveOperationMaintainConf operation to display the O&amp;M window configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5593,7 +6081,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>展示全局运维窗口配置</para>
+        /// <para>Calls the DescribeActiveOperationMaintainConf operation to display the O&amp;M window configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5611,7 +6099,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主动运维任务数量</para>
+        /// <para>Retrieves the total number of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5649,7 +6137,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主动运维任务数量</para>
+        /// <para>Retrieves the total number of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5687,7 +6175,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主动运维任务数量</para>
+        /// <para>Retrieves the total number of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5705,7 +6193,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取主动运维任务数量</para>
+        /// <para>Retrieves the total number of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5723,7 +6211,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取待执行自动运维任务列表</para>
+        /// <para>Queries O&amp;M events by calling the DescribeActiveOperationTasks operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5761,7 +6249,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取待执行自动运维任务列表</para>
+        /// <para>Queries O&amp;M events by calling the DescribeActiveOperationTasks operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5799,7 +6287,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取待执行自动运维任务列表</para>
+        /// <para>Queries O&amp;M events by calling the DescribeActiveOperationTasks operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5817,7 +6305,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取待执行自动运维任务列表</para>
+        /// <para>Queries O&amp;M events by calling the DescribeActiveOperationTasks operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5835,7 +6323,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冷存储表列表</para>
+        /// <para>Lists cold storage tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5901,7 +6389,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冷存储表列表</para>
+        /// <para>Lists cold storage tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5967,7 +6455,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冷存储表列表</para>
+        /// <para>Lists cold storage tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5985,7 +6473,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冷存储表列表</para>
+        /// <para>Lists cold storage tables.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6003,7 +6491,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取已开启跨地域备份的地域</para>
+        /// <para>Queries the list of available regions that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6049,7 +6537,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取已开启跨地域备份的地域</para>
+        /// <para>Queries the list of available regions that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6095,7 +6583,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取已开启跨地域备份的地域</para>
+        /// <para>Queries the list of available regions that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6113,7 +6601,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取已开启跨地域备份的地域</para>
+        /// <para>Queries the list of available regions that support cross-region operations, typically used for multi-region deployment or data replication scenarios.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6131,7 +6619,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述备份策略</para>
+        /// <para>Calls the DescribeBackupPolicy operation to query the backup settings of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6177,7 +6665,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述备份策略</para>
+        /// <para>Calls the DescribeBackupPolicy operation to query the backup settings of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6223,7 +6711,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述备份策略</para>
+        /// <para>Calls the DescribeBackupPolicy operation to query the backup settings of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6241,7 +6729,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>描述备份策略</para>
+        /// <para>Calls the DescribeBackupPolicy operation to query the backup settings of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6259,7 +6747,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>备份集详情</para>
+        /// <para>Queries the details of a backup set by calling the DescribeBackupSet operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6313,7 +6801,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>备份集详情</para>
+        /// <para>Queries the details of a backup set by calling the DescribeBackupSet operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6367,7 +6855,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>备份集详情</para>
+        /// <para>Queries the details of a backup set by calling the DescribeBackupSet operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6385,7 +6873,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>备份集详情</para>
+        /// <para>Queries the details of a backup set by calling the DescribeBackupSet operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6401,6 +6889,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeBackupSetWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeBackupSetList operation to query the list of backup sets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupSetListRequest
         /// </param>
@@ -6434,6 +6927,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupSetListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeBackupSetList operation to query the list of backup sets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupSetListRequest
         /// </param>
@@ -6467,6 +6965,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBackupSetListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeBackupSetList operation to query the list of backup sets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupSetListRequest
         /// </param>
@@ -6480,6 +6983,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeBackupSetListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeBackupSetList operation to query the list of backup sets.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeBackupSetListRequest
         /// </param>
@@ -6493,6 +7001,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeBackupSetListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeBinaryLogList operation to query binlog logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binlog files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose record end time is after the query start time and whose record start time is before the query end time.</description></item>
+        /// <item><description>When the DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBinaryLogListRequest
         /// </param>
@@ -6554,6 +7076,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBinaryLogListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeBinaryLogList operation to query binlog logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binlog files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose record end time is after the query start time and whose record start time is before the query end time.</description></item>
+        /// <item><description>When the DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBinaryLogListRequest
         /// </param>
@@ -6615,6 +7151,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeBinaryLogListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeBinaryLogList operation to query binlog logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binlog files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose record end time is after the query start time and whose record start time is before the query end time.</description></item>
+        /// <item><description>When the DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBinaryLogListRequest
         /// </param>
@@ -6628,6 +7178,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeBinaryLogListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeBinaryLogList operation to query binlog logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binlog files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose record end time is after the query start time and whose record start time is before the query end time.</description></item>
+        /// <item><description>When the DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeBinaryLogListRequest
         /// </param>
@@ -6643,8 +7207,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多流规格列表</para>
+        /// <para>Queries the list of instance specifications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdcClassListRequest
@@ -6693,8 +7266,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多流规格列表</para>
+        /// <para>Queries the list of instance specifications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdcClassListRequest
@@ -6743,8 +7325,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多流规格列表</para>
+        /// <para>Queries the list of instance specifications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdcClassListRequest
@@ -6761,8 +7352,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询多流规格列表</para>
+        /// <para>Queries the list of instance specifications.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdcClassListRequest
@@ -6779,7 +7379,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CDC信息</para>
+        /// <para>Queries CDC information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6825,7 +7425,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CDC信息</para>
+        /// <para>Queries CDC information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6871,7 +7471,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CDC信息</para>
+        /// <para>Queries CDC information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6889,7 +7489,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询CDC信息</para>
+        /// <para>Queries CDC information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6907,8 +7507,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取CDC版本列表</para>
+        /// <para>Retrieves the list of CDC versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdcVersionListRequest
@@ -6957,8 +7566,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取CDC版本列表</para>
+        /// <para>Retrieves the list of CDC versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdcVersionListRequest
@@ -7007,8 +7625,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取CDC版本列表</para>
+        /// <para>Retrieves the list of CDC versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdcVersionListRequest
@@ -7025,8 +7652,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取CDC版本列表</para>
+        /// <para>Retrieves the list of CDC versions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCdcVersionListRequest
@@ -7041,6 +7677,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeCdcVersionListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the DescribeCharacterSet operation to query the character set types supported by databases in a target instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCharacterSetRequest
         /// </param>
@@ -7082,6 +7723,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeCharacterSetResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the DescribeCharacterSet operation to query the character set types supported by databases in a target instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCharacterSetRequest
         /// </param>
@@ -7123,6 +7769,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeCharacterSetResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the DescribeCharacterSet operation to query the character set types supported by databases in a target instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCharacterSetRequest
         /// </param>
@@ -7136,6 +7787,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeCharacterSetWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the DescribeCharacterSet operation to query the character set types supported by databases in a target instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeCharacterSetRequest
         /// </param>
@@ -7151,7 +7807,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冷存储基础信息</para>
+        /// <para>The cold storage basic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7189,7 +7845,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冷存储基础信息</para>
+        /// <para>The cold storage basic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7227,7 +7883,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冷存储基础信息</para>
+        /// <para>The cold storage basic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7245,7 +7901,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>冷存储基础信息</para>
+        /// <para>The cold storage basic information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7263,7 +7919,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询列存规格列表</para>
+        /// <para>Queries the list of column store specifications for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7313,7 +7969,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询列存规格列表</para>
+        /// <para>Queries the list of column store specifications for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7363,7 +8019,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询列存规格列表</para>
+        /// <para>Queries the list of column store specifications for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7381,7 +8037,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询列存规格列表</para>
+        /// <para>Queries the list of column store specifications for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7399,7 +8055,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Columnar信息</para>
+        /// <para>Queries column store information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7445,7 +8101,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Columnar信息</para>
+        /// <para>Queries column store information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7491,7 +8147,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Columnar信息</para>
+        /// <para>Queries column store information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7509,7 +8165,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Columnar信息</para>
+        /// <para>Queries column store information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7527,8 +8183,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Columnar版本列表</para>
+        /// <para>Queries column store version information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>When DownloadLink is not NULL, you can download the backup file from this URL. This URL is valid for 2 days after it is generated. Download the file before the expiration time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeColumnarVersionListRequest
@@ -7573,8 +8238,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Columnar版本列表</para>
+        /// <para>Queries column store version information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>When DownloadLink is not NULL, you can download the backup file from this URL. This URL is valid for 2 days after it is generated. Download the file before the expiration time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeColumnarVersionListRequest
@@ -7619,8 +8293,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Columnar版本列表</para>
+        /// <para>Queries column store version information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>When DownloadLink is not NULL, you can download the backup file from this URL. This URL is valid for 2 days after it is generated. Download the file before the expiration time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeColumnarVersionListRequest
@@ -7637,8 +8320,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取Columnar版本列表</para>
+        /// <para>Queries column store version information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>When DownloadLink is not NULL, you can download the backup file from this URL. This URL is valid for 2 days after it is generated. Download the file before the expiration time.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeColumnarVersionListRequest
@@ -7655,7 +8347,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PolarDB-X 实例指定组件的属性列表</para>
+        /// <para>Retrieves the property information of a specified component, including property names and types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7709,7 +8401,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PolarDB-X 实例指定组件的属性列表</para>
+        /// <para>Retrieves the property information of a specified component, including property names and types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7763,7 +8455,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PolarDB-X 实例指定组件的属性列表</para>
+        /// <para>Retrieves the property information of a specified component, including property names and types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7781,7 +8473,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询PolarDB-X 实例指定组件的属性列表</para>
+        /// <para>Retrieves the property information of a specified component, including property names and types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7799,8 +8491,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义连接信息</para>
+        /// <para>Queries the list of custom endpoints defined by the user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of custom endpoints configured by the user. You can use this operation to manage and view the settings of private connections or VPC endpoint services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCustomEndpointListRequest
@@ -7853,8 +8550,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义连接信息</para>
+        /// <para>Queries the list of custom endpoints defined by the user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of custom endpoints configured by the user. You can use this operation to manage and view the settings of private connections or VPC endpoint services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCustomEndpointListRequest
@@ -7907,8 +8609,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义连接信息</para>
+        /// <para>Queries the list of custom endpoints defined by the user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of custom endpoints configured by the user. You can use this operation to manage and view the settings of private connections or VPC endpoint services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCustomEndpointListRequest
@@ -7925,8 +8632,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询自定义连接信息</para>
+        /// <para>Queries the list of custom endpoints defined by the user.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of custom endpoints configured by the user. You can use this operation to manage and view the settings of private connections or VPC endpoint services.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCustomEndpointListRequest
@@ -7943,7 +8655,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Calls the DescribeDBInstanceAttribute operation to retrieve instance attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7993,7 +8705,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Calls the DescribeDBInstanceAttribute operation to retrieve instance attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8043,7 +8755,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Calls the DescribeDBInstanceAttribute operation to retrieve instance attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8061,7 +8773,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例详情</para>
+        /// <para>Calls the DescribeDBInstanceAttribute operation to retrieve instance attributes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8079,7 +8791,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例配置信息</para>
+        /// <para>Calls the DescribeDBInstanceConfig operation to retrieve the configuration parameters of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8129,7 +8841,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例配置信息</para>
+        /// <para>Calls the DescribeDBInstanceConfig operation to retrieve the configuration parameters of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8179,7 +8891,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例配置信息</para>
+        /// <para>Calls the DescribeDBInstanceConfig operation to retrieve the configuration parameters of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8197,7 +8909,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例配置信息</para>
+        /// <para>Calls the DescribeDBInstanceConfig operation to retrieve the configuration parameters of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8217,6 +8929,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <summary>
         /// <para>查询endpoint列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDBInstanceEndpointRequest
@@ -8272,6 +8989,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>查询endpoint列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceEndpointRequest
         /// </param>
@@ -8326,6 +9048,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>查询endpoint列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceEndpointRequest
         /// </param>
@@ -8344,6 +9071,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>查询endpoint列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceEndpointRequest
         /// </param>
@@ -8359,7 +9091,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的HA信息</para>
+        /// <para>Queries the high availability (HA) information of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8405,7 +9137,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的HA信息</para>
+        /// <para>Queries the high availability (HA) information of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8451,7 +9183,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的HA信息</para>
+        /// <para>Queries the high availability (HA) information of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8469,7 +9201,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例的HA信息</para>
+        /// <para>Queries the high availability (HA) information of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8485,6 +9217,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeDBInstanceHAWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views SSL information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceSSLRequest
         /// </param>
@@ -8526,6 +9263,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views SSL information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceSSLRequest
         /// </param>
@@ -8567,6 +9309,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views SSL information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceSSLRequest
         /// </param>
@@ -8580,6 +9327,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeDBInstanceSSLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Views SSL information.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceSSLRequest
         /// </param>
@@ -8593,6 +9345,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeDBInstanceTDE operation to retrieve the details of Transparent Data Encryption (TDE) for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceTDERequest
         /// </param>
@@ -8634,6 +9391,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceTDEResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeDBInstanceTDE operation to retrieve the details of Transparent Data Encryption (TDE) for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceTDERequest
         /// </param>
@@ -8675,6 +9437,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDBInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeDBInstanceTDE operation to retrieve the details of Transparent Data Encryption (TDE) for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceTDERequest
         /// </param>
@@ -8688,6 +9455,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeDBInstanceTDEWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeDBInstanceTDE operation to retrieve the details of Transparent Data Encryption (TDE) for an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDBInstanceTDERequest
         /// </param>
@@ -8703,7 +9475,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例拓扑</para>
+        /// <para>Calls the DescribeDBInstanceTopology operation to retrieve the topology information of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8761,7 +9533,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例拓扑</para>
+        /// <para>Calls the DescribeDBInstanceTopology operation to retrieve the topology information of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8819,7 +9591,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例拓扑</para>
+        /// <para>Calls the DescribeDBInstanceTopology operation to retrieve the topology information of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8837,7 +9609,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例拓扑</para>
+        /// <para>Calls the DescribeDBInstanceTopology operation to retrieve the topology information of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8855,7 +9627,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过Endpoint查询实例</para>
+        /// <para>Retrieves the basic information about an instance by using the endpoint of the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8901,7 +9673,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过Endpoint查询实例</para>
+        /// <para>Retrieves the basic information about an instance by using the endpoint of the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8947,7 +9719,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过Endpoint查询实例</para>
+        /// <para>Retrieves the basic information about an instance by using the endpoint of the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8965,7 +9737,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过Endpoint查询实例</para>
+        /// <para>Retrieves the basic information about an instance by using the endpoint of the instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8983,7 +9755,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取PolarDB-X实例列表</para>
+        /// <para>Calls the DescribeDBInstances operation to query a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9061,7 +9833,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取PolarDB-X实例列表</para>
+        /// <para>Calls the DescribeDBInstances operation to query a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9139,7 +9911,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取PolarDB-X实例列表</para>
+        /// <para>Calls the DescribeDBInstances operation to query a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9157,7 +9929,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取PolarDB-X实例列表</para>
+        /// <para>Calls the DescribeDBInstances operation to query a list of instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9175,8 +9947,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>性能监控数据接口</para>
+        /// <para>Queries the performance data of an instance by calling the DescribeDBNodePerformance operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>endpoint</b> differs from other API operations. Use <b>polardbx.aliyuncs.com</b> for Chinese regions and Singapore. For other regions, use <b>polardbx.{region id}.aliyunc.com</b>.</description></item>
+        /// <item><description>When debugging this API operation, if a service not active error is returned, confirm that the <b>endpoint</b> is correct. You can switch the <b>service address</b> to <b>Dubai</b> or <b>India</b> and change the <b>endpoint</b> to <b>polardbx.aliyuncs.com</b>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDBNodePerformanceRequest
@@ -9245,8 +10026,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>性能监控数据接口</para>
+        /// <para>Queries the performance data of an instance by calling the DescribeDBNodePerformance operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>endpoint</b> differs from other API operations. Use <b>polardbx.aliyuncs.com</b> for Chinese regions and Singapore. For other regions, use <b>polardbx.{region id}.aliyunc.com</b>.</description></item>
+        /// <item><description>When debugging this API operation, if a service not active error is returned, confirm that the <b>endpoint</b> is correct. You can switch the <b>service address</b> to <b>Dubai</b> or <b>India</b> and change the <b>endpoint</b> to <b>polardbx.aliyuncs.com</b>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDBNodePerformanceRequest
@@ -9315,8 +10105,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>性能监控数据接口</para>
+        /// <para>Queries the performance data of an instance by calling the DescribeDBNodePerformance operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>endpoint</b> differs from other API operations. Use <b>polardbx.aliyuncs.com</b> for Chinese regions and Singapore. For other regions, use <b>polardbx.{region id}.aliyunc.com</b>.</description></item>
+        /// <item><description>When debugging this API operation, if a service not active error is returned, confirm that the <b>endpoint</b> is correct. You can switch the <b>service address</b> to <b>Dubai</b> or <b>India</b> and change the <b>endpoint</b> to <b>polardbx.aliyuncs.com</b>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDBNodePerformanceRequest
@@ -9333,8 +10132,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>性能监控数据接口</para>
+        /// <para>Queries the performance data of an instance by calling the DescribeDBNodePerformance operation.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Note: </para>
+        /// <list type="bullet">
+        /// <item><description>The <b>endpoint</b> differs from other API operations. Use <b>polardbx.aliyuncs.com</b> for Chinese regions and Singapore. For other regions, use <b>polardbx.{region id}.aliyunc.com</b>.</description></item>
+        /// <item><description>When debugging this API operation, if a service not active error is returned, confirm that the <b>endpoint</b> is correct. You can switch the <b>service address</b> to <b>Dubai</b> or <b>India</b> and change the <b>endpoint</b> to <b>polardbx.aliyuncs.com</b>.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDBNodePerformanceRequest
@@ -9351,7 +10159,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入任务详情</para>
+        /// <para>Queries the execution details of a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9413,7 +10221,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入任务详情</para>
+        /// <para>Queries the execution details of a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9475,7 +10283,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入任务详情</para>
+        /// <para>Queries the execution details of a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9493,7 +10301,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入任务详情</para>
+        /// <para>Queries the execution details of a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9509,6 +10317,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeDataImportTaskInfoWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of databases by calling the DescribeDbList operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDbListRequest
         /// </param>
@@ -9554,6 +10367,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDbListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of databases by calling the DescribeDbList operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDbListRequest
         /// </param>
@@ -9599,6 +10417,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDbListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of databases by calling the DescribeDbList operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDbListRequest
         /// </param>
@@ -9612,6 +10435,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeDbListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of databases by calling the DescribeDbList operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDbListRequest
         /// </param>
@@ -9625,6 +10453,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeDbListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeDistributeTableList operation to retrieve the list of database tables.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDistributeTableListRequest
         /// </param>
@@ -9670,6 +10503,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDistributeTableListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeDistributeTableList operation to retrieve the list of database tables.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDistributeTableListRequest
         /// </param>
@@ -9715,6 +10553,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeDistributeTableListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeDistributeTableList operation to retrieve the list of database tables.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDistributeTableListRequest
         /// </param>
@@ -9728,6 +10571,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeDistributeTableListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeDistributeTableList operation to retrieve the list of database tables.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeDistributeTableListRequest
         /// </param>
@@ -9743,7 +10591,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取已开启跨地域备份的地域</para>
+        /// <para>Queries the currently enabled cross-zone configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9789,7 +10637,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取已开启跨地域备份的地域</para>
+        /// <para>Queries the currently enabled cross-zone configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9835,7 +10683,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取已开启跨地域备份的地域</para>
+        /// <para>Queries the currently enabled cross-zone configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9853,7 +10701,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取已开启跨地域备份的地域</para>
+        /// <para>Queries the currently enabled cross-zone configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9871,7 +10719,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个评估迁移任务详情</para>
+        /// <para>Queries the list of PolarDB-X assessment import tasks. (Single).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9917,7 +10765,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个评估迁移任务详情</para>
+        /// <para>Queries the list of PolarDB-X assessment import tasks. (Single).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9963,7 +10811,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个评估迁移任务详情</para>
+        /// <para>Queries the list of PolarDB-X assessment import tasks. (Single).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9981,7 +10829,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询单个评估迁移任务详情</para>
+        /// <para>Queries the list of PolarDB-X assessment import tasks. (Single).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9999,8 +10847,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求评估导入任务列表</para>
+        /// <para>Queries a list of assessment import tasks for PolarDB-X.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided files, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEvaluateAndImportTasksRequest
@@ -10049,8 +10902,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求评估导入任务列表</para>
+        /// <para>Queries a list of assessment import tasks for PolarDB-X.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided files, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEvaluateAndImportTasksRequest
@@ -10099,8 +10957,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求评估导入任务列表</para>
+        /// <para>Queries a list of assessment import tasks for PolarDB-X.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided files, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEvaluateAndImportTasksRequest
@@ -10117,8 +10980,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>请求评估导入任务列表</para>
+        /// <para>Queries a list of assessment import tasks for PolarDB-X.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided files, into a destination database instance. By specifying the instance ID, database name, engine type, data source (such as an OSS path), and import type, the system performs data write operations asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeEvaluateAndImportTasksRequest
@@ -10135,7 +11003,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史事件</para>
+        /// <para>Retrieves historical events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10173,7 +11041,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史事件</para>
+        /// <para>Retrieves historical events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10211,7 +11079,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史事件</para>
+        /// <para>Retrieves historical events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10229,7 +11097,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>历史事件</para>
+        /// <para>Retrieves historical events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10247,7 +11115,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取GDN实例列表</para>
+        /// <para>Retrieves a list of global database network (GDN) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10309,7 +11177,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取GDN实例列表</para>
+        /// <para>Retrieves a list of global database network (GDN) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10371,7 +11239,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取GDN实例列表</para>
+        /// <para>Retrieves a list of global database network (GDN) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10389,7 +11257,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取GDN实例列表</para>
+        /// <para>Retrieves a list of global database network (GDN) instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10407,8 +11275,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询mem0实例信息</para>
+        /// <para>View Memory Engine Information</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMem0InfoRequest
@@ -10453,8 +11330,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询mem0实例信息</para>
+        /// <para>View Memory Engine Information</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMem0InfoRequest
@@ -10499,8 +11385,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询mem0实例信息</para>
+        /// <para>View Memory Engine Information</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMem0InfoRequest
@@ -10517,8 +11412,17 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询mem0实例信息</para>
+        /// <para>View Memory Engine Information</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, the number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMem0InfoRequest
@@ -10535,7 +11439,171 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开放商业备份集</para>
+        /// <para>Queries the whitelist of a memory engine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMem0SecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMem0SecurityIpsResponse
+        /// </returns>
+        public DescribeMem0SecurityIpsResponse DescribeMem0SecurityIpsWithOptions(DescribeMem0SecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMem0SecurityIps",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMem0SecurityIpsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the whitelist of a memory engine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMem0SecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMem0SecurityIpsResponse
+        /// </returns>
+        public async Task<DescribeMem0SecurityIpsResponse> DescribeMem0SecurityIpsWithOptionsAsync(DescribeMem0SecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeMem0SecurityIps",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeMem0SecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the whitelist of a memory engine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMem0SecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMem0SecurityIpsResponse
+        /// </returns>
+        public DescribeMem0SecurityIpsResponse DescribeMem0SecurityIps(DescribeMem0SecurityIpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeMem0SecurityIpsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the whitelist of a memory engine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data processing, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribeMem0SecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeMem0SecurityIpsResponse
+        /// </returns>
+        public async Task<DescribeMem0SecurityIpsResponse> DescribeMem0SecurityIpsAsync(DescribeMem0SecurityIpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeMem0SecurityIpsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Exposes instance topology information and download links for commercial backup sets to support offline restoration of cloud instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10585,7 +11653,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开放商业备份集</para>
+        /// <para>Exposes instance topology information and download links for commercial backup sets to support offline restoration of cloud instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10635,7 +11703,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开放商业备份集</para>
+        /// <para>Exposes instance topology information and download links for commercial backup sets to support offline restoration of cloud instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10653,7 +11721,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开放商业备份集</para>
+        /// <para>Exposes instance topology information and download links for commercial backup sets to support offline restoration of cloud instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10671,7 +11739,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数模版列表</para>
+        /// <para>Queries the list of database parameter templates created by users or supported by the system, including basic information, associated engine types, and modification times of each parameter template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10709,7 +11777,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数模版列表</para>
+        /// <para>Queries the list of database parameter templates created by users or supported by the system, including basic information, associated engine types, and modification times of each parameter template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10747,7 +11815,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数模版列表</para>
+        /// <para>Queries the list of database parameter templates created by users or supported by the system, including basic information, associated engine types, and modification times of each parameter template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10765,7 +11833,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询参数模版列表</para>
+        /// <para>Queries the list of database parameter templates created by users or supported by the system, including basic information, associated engine types, and modification times of each parameter template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10783,7 +11851,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看参数模版</para>
+        /// <para>Calls the DescribeParameterTemplates operation to retrieve the parameter template list for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10837,7 +11905,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看参数模版</para>
+        /// <para>Calls the DescribeParameterTemplates operation to retrieve the parameter template list for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10891,7 +11959,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看参数模版</para>
+        /// <para>Calls the DescribeParameterTemplates operation to retrieve the parameter template list for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10909,7 +11977,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查看参数模版</para>
+        /// <para>Calls the DescribeParameterTemplates operation to retrieve the parameter template list for an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10925,6 +11993,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeParameterTemplatesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeParameters operation to retrieve instance parameters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParametersRequest
         /// </param>
@@ -10970,6 +12043,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeParametersResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeParameters operation to retrieve instance parameters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParametersRequest
         /// </param>
@@ -11015,6 +12093,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeParametersResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeParameters operation to retrieve instance parameters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParametersRequest
         /// </param>
@@ -11028,6 +12111,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeParametersWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeParameters operation to retrieve instance parameters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeParametersRequest
         /// </param>
@@ -11043,7 +12131,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据节点列表</para>
+        /// <para>Queries the details of all data nodes (Data Nodes) in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11101,7 +12189,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据节点列表</para>
+        /// <para>Queries the details of all data nodes (Data Nodes) in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11159,7 +12247,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据节点列表</para>
+        /// <para>Queries the details of all data nodes (Data Nodes) in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11177,7 +12265,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数据节点列表</para>
+        /// <para>Queries the details of all data nodes (Data Nodes) in a PolarDB-X instance, including node status, storage usage, and network addresses, to facilitate operations management and monitoring.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11193,6 +12281,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribePolarxDataNodesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of VPCs available for PolarDB-X.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of Virtual Private Clouds (VPCs) available under your account for database instances. You can use this operation to select an appropriate network environment when creating or managing database instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRdsVpcsRequest
         /// </param>
@@ -11234,6 +12332,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeRdsVpcsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of VPCs available for PolarDB-X.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of Virtual Private Clouds (VPCs) available under your account for database instances. You can use this operation to select an appropriate network environment when creating or managing database instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRdsVpcsRequest
         /// </param>
@@ -11275,6 +12383,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeRdsVpcsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of VPCs available for PolarDB-X.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of Virtual Private Clouds (VPCs) available under your account for database instances. You can use this operation to select an appropriate network environment when creating or managing database instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRdsVpcsRequest
         /// </param>
@@ -11288,6 +12406,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeRdsVpcsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of VPCs available for PolarDB-X.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of Virtual Private Clouds (VPCs) available under your account for database instances. You can use this operation to select an appropriate network environment when creating or managing database instances.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeRdsVpcsRequest
         /// </param>
@@ -11303,8 +12431,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Vswitch信息</para>
+        /// <para>Queries the list of available vSwitches in a virtual private cloud (VPC) for an ApsaraDB RDS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing a database instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRdsVswitchesRequest
@@ -11353,8 +12486,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Vswitch信息</para>
+        /// <para>Queries the list of available vSwitches in a virtual private cloud (VPC) for an ApsaraDB RDS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing a database instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRdsVswitchesRequest
@@ -11403,8 +12541,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Vswitch信息</para>
+        /// <para>Queries the list of available vSwitches in a virtual private cloud (VPC) for an ApsaraDB RDS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing a database instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRdsVswitchesRequest
@@ -11421,8 +12564,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Vswitch信息</para>
+        /// <para>Queries the list of available vSwitches in a virtual private cloud (VPC) for an ApsaraDB RDS instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of available virtual private clouds (VPCs) under your account for an instance, so that you can select an appropriate network environment when creating or managing a database instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRdsVswitchesRequest
@@ -11437,6 +12585,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeRdsVswitchesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeRegions operation to obtain the list of regions.</para>
+        /// </summary>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -11462,6 +12615,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeRegionsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeRegions operation to obtain the list of regions.</para>
+        /// </summary>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -11487,6 +12645,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeRegionsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeRegions operation to obtain the list of regions.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeRegionsResponse
         /// </returns>
@@ -11496,6 +12659,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeRegionsWithOptions(runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeRegions operation to obtain the list of regions.</para>
+        /// </summary>
+        /// 
         /// <returns>
         /// DescribeRegionsResponse
         /// </returns>
@@ -11507,8 +12675,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预检任务结果</para>
+        /// <para>Queries the details of a replication lag inspection task for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRplInspectionTaskRequest
@@ -11569,8 +12742,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预检任务结果</para>
+        /// <para>Queries the details of a replication lag inspection task for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRplInspectionTaskRequest
@@ -11631,8 +12809,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预检任务结果</para>
+        /// <para>Queries the details of a replication lag inspection task for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRplInspectionTaskRequest
@@ -11649,8 +12832,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询预检任务结果</para>
+        /// <para>Queries the details of a replication lag inspection task for an instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>During the data synchronization phase, proactively initiates a diagnostic task for the replication task to check for exceptions such as latency, interruption, or data inconsistency.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeRplInspectionTaskRequest
@@ -11665,6 +12853,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeRplInspectionTaskWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Display the ScaleOut migration task progress.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeScaleOutMigrateTaskListRequest
         /// </param>
@@ -11722,6 +12915,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeScaleOutMigrateTaskListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Display the ScaleOut migration task progress.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeScaleOutMigrateTaskListRequest
         /// </param>
@@ -11779,6 +12977,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeScaleOutMigrateTaskListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Display the ScaleOut migration task progress.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeScaleOutMigrateTaskListRequest
         /// </param>
@@ -11792,6 +12995,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeScaleOutMigrateTaskListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Display the ScaleOut migration task progress.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeScaleOutMigrateTaskListRequest
         /// </param>
@@ -11805,6 +13013,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeScaleOutMigrateTaskListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeSecurityIps operation to view the IP whitelist of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSecurityIpsRequest
         /// </param>
@@ -11846,6 +13059,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeSecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeSecurityIps operation to view the IP whitelist of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSecurityIpsRequest
         /// </param>
@@ -11887,6 +13105,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeSecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeSecurityIps operation to view the IP whitelist of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSecurityIpsRequest
         /// </param>
@@ -11900,6 +13123,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeSecurityIpsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeSecurityIps operation to view the IP whitelist of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeSecurityIpsRequest
         /// </param>
@@ -11915,7 +13143,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 PolarDB-X 存储节点信息</para>
+        /// <para>Queries the storage usage details of an instance, including the total capacity, used space, remaining space, and other information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11965,7 +13193,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 PolarDB-X 存储节点信息</para>
+        /// <para>Queries the storage usage details of an instance, including the total capacity, used space, remaining space, and other information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12015,7 +13243,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 PolarDB-X 存储节点信息</para>
+        /// <para>Queries the storage usage details of an instance, including the total capacity, used space, remaining space, and other information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12033,7 +13261,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 PolarDB-X 存储节点信息</para>
+        /// <para>Queries the storage usage details of an instance, including the total capacity, used space, remaining space, and other information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12051,7 +13279,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢SQL明细</para>
+        /// <para>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12125,7 +13353,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢SQL明细</para>
+        /// <para>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12199,7 +13427,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢SQL明细</para>
+        /// <para>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12217,7 +13445,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>慢SQL明细</para>
+        /// <para>Queries the details of slow SQL statements on compute nodes and storage nodes of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12233,6 +13461,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeSlowLogRecordsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries SQL audit information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSqlAuditInfoRequest
         /// </param>
@@ -12282,6 +13524,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeSqlAuditInfoResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries SQL audit information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSqlAuditInfoRequest
         /// </param>
@@ -12331,6 +13587,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeSqlAuditInfoResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries SQL audit information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSqlAuditInfoRequest
         /// </param>
@@ -12344,6 +13614,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeSqlAuditInfoWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries SQL audit information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data delivery. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeSqlAuditInfoRequest
         /// </param>
@@ -12359,7 +13643,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL闪回任务列表查询</para>
+        /// <para>Queries the list of SQL flashback tasks by calling the DescribeSqlFlashbackTaskList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12405,7 +13689,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL闪回任务列表查询</para>
+        /// <para>Queries the list of SQL flashback tasks by calling the DescribeSqlFlashbackTaskList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12451,7 +13735,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL闪回任务列表查询</para>
+        /// <para>Queries the list of SQL flashback tasks by calling the DescribeSqlFlashbackTaskList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12469,7 +13753,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL闪回任务列表查询</para>
+        /// <para>Queries the list of SQL flashback tasks by calling the DescribeSqlFlashbackTaskList operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12487,7 +13771,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 PolarDB-X 存储资源池信息</para>
+        /// <para>Queries the details of a storage pool, including capacity, usage, and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12537,7 +13821,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 PolarDB-X 存储资源池信息</para>
+        /// <para>Queries the details of a storage pool, including capacity, usage, and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12587,7 +13871,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 PolarDB-X 存储资源池信息</para>
+        /// <para>Queries the details of a storage pool, including capacity, usage, and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12605,7 +13889,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 PolarDB-X 存储资源池信息</para>
+        /// <para>Queries the details of a storage pool, including capacity, usage, and status.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12623,8 +13907,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询结构迁移任务结果</para>
+        /// <para>Queries the details of a database schema import task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. Specify the instance ID, database name, engine type, data source (such as an OSS path), and import type. The system performs the data write operation asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeStructureImportTaskInfoRequest
@@ -12669,8 +13958,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询结构迁移任务结果</para>
+        /// <para>Queries the details of a database schema import task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. Specify the instance ID, database name, engine type, data source (such as an OSS path), and import type. The system performs the data write operation asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeStructureImportTaskInfoRequest
@@ -12715,8 +14009,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询结构迁移任务结果</para>
+        /// <para>Queries the details of a database schema import task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. Specify the instance ID, database name, engine type, data source (such as an OSS path), and import type. The system performs the data write operation asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeStructureImportTaskInfoRequest
@@ -12733,8 +14032,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询结构迁移任务结果</para>
+        /// <para>Queries the details of a database schema import task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>The CreateDataImportTask operation creates a data import task. You can use this operation to import SQL or CSV files stored in OSS or ECS, or directly provided, into a destination database instance. Specify the instance ID, database name, engine type, data source (such as an OSS path), and import type. The system performs the data write operation asynchronously or synchronously. This operation is applicable to scenarios such as data migration, initialization, and data backfill. A task ID is returned for subsequent status queries and management.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeStructureImportTaskInfoRequest
@@ -12751,7 +14055,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签列表查询</para>
+        /// <para>Retrieves tag information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12801,7 +14105,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签列表查询</para>
+        /// <para>Retrieves tag information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12851,7 +14155,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签列表查询</para>
+        /// <para>Retrieves tag information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12869,7 +14173,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>标签列表查询</para>
+        /// <para>Retrieves tag information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12885,6 +14189,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeTagsWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the task list of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTasksRequest
         /// </param>
@@ -12958,6 +14267,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeTasksResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the task list of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTasksRequest
         /// </param>
@@ -13031,6 +14345,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeTasksResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the task list of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTasksRequest
         /// </param>
@@ -13044,6 +14363,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeTasksWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the task list of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeTasksRequest
         /// </param>
@@ -13059,7 +14383,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标准版迁移到企业版的任务状态</para>
+        /// <para>Queries the current status of a task that upgrades or converts a standard instance to an Enterprise instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13109,7 +14433,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标准版迁移到企业版的任务状态</para>
+        /// <para>Queries the current status of a task that upgrades or converts a standard instance to an Enterprise instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13159,7 +14483,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标准版迁移到企业版的任务状态</para>
+        /// <para>Queries the current status of a task that upgrades or converts a standard instance to an Enterprise instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13177,7 +14501,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询标准版迁移到企业版的任务状态</para>
+        /// <para>Queries the current status of a task that upgrades or converts a standard instance to an Enterprise instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13193,6 +14517,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeTransformStatusWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeUserEncryptionKeyList operation to retrieve the list of Transparent Data Encryption (TDE) keys for a user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUserEncryptionKeyListRequest
         /// </param>
@@ -13234,6 +14563,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeUserEncryptionKeyList operation to retrieve the list of Transparent Data Encryption (TDE) keys for a user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUserEncryptionKeyListRequest
         /// </param>
@@ -13275,6 +14609,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DescribeUserEncryptionKeyListResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeUserEncryptionKeyList operation to retrieve the list of Transparent Data Encryption (TDE) keys for a user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUserEncryptionKeyListRequest
         /// </param>
@@ -13288,6 +14627,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DescribeUserEncryptionKeyListWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the DescribeUserEncryptionKeyList operation to retrieve the list of Transparent Data Encryption (TDE) keys for a user.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeUserEncryptionKeyListRequest
         /// </param>
@@ -13301,6 +14645,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DescribeUserEncryptionKeyListWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables three-role mode.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableRightsSeparationRequest
         /// </param>
@@ -13350,6 +14699,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DisableRightsSeparationResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables three-role mode.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableRightsSeparationRequest
         /// </param>
@@ -13399,6 +14753,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DisableRightsSeparationResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables three-role mode.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableRightsSeparationRequest
         /// </param>
@@ -13412,6 +14771,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DisableRightsSeparationWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables three-role mode.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DisableRightsSeparationRequest
         /// </param>
@@ -13425,6 +14789,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await DisableRightsSeparationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the SQL audit feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After the SQL audit and analysis feature is disabled, data is no longer written to Simple Log Service. However, you can still view historical data, which incurs storage and indexing fees. You can delete all data to deactivate Simple Log Service. After Simple Log Service is deactivated, no further fees are incurred. For more information about deactivating Simple Log Service, see <a href="https://help.aliyun.com/document_detail/90650.html">Deactivate Simple Log Service</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableSqlAuditRequest
         /// </param>
@@ -13474,6 +14850,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DisableSqlAuditResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the SQL audit feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After the SQL audit and analysis feature is disabled, data is no longer written to Simple Log Service. However, you can still view historical data, which incurs storage and indexing fees. You can delete all data to deactivate Simple Log Service. After Simple Log Service is deactivated, no further fees are incurred. For more information about deactivating Simple Log Service, see <a href="https://help.aliyun.com/document_detail/90650.html">Deactivate Simple Log Service</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableSqlAuditRequest
         /// </param>
@@ -13523,6 +14911,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<DisableSqlAuditResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the SQL audit feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After the SQL audit and analysis feature is disabled, data is no longer written to Simple Log Service. However, you can still view historical data, which incurs storage and indexing fees. You can delete all data to deactivate Simple Log Service. After Simple Log Service is deactivated, no further fees are incurred. For more information about deactivating Simple Log Service, see <a href="https://help.aliyun.com/document_detail/90650.html">Deactivate Simple Log Service</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableSqlAuditRequest
         /// </param>
@@ -13536,6 +14936,18 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return DisableSqlAuditWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables the SQL audit feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>After the SQL audit and analysis feature is disabled, data is no longer written to Simple Log Service. However, you can still view historical data, which incurs storage and indexing fees. You can delete all data to deactivate Simple Log Service. After Simple Log Service is deactivated, no further fees are incurred. For more information about deactivating Simple Log Service, see <a href="https://help.aliyun.com/document_detail/90650.html">Deactivate Simple Log Service</a>.</para>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DisableSqlAuditRequest
         /// </param>
@@ -13551,7 +14963,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启三权分立</para>
+        /// <para>Enables three-role mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13621,7 +15033,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启三权分立</para>
+        /// <para>Enables three-role mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13691,7 +15103,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启三权分立</para>
+        /// <para>Enables three-role mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13709,7 +15121,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启三权分立</para>
+        /// <para>Enables three-role mode.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13725,6 +15137,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await EnableRightsSeparationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the SQL audit feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The PolarDB-X 2.0 SQL audit and analysis feature itself is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data transformation, data shipping, and other services. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableSqlAuditRequest
         /// </param>
@@ -13778,6 +15204,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<EnableSqlAuditResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the SQL audit feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The PolarDB-X 2.0 SQL audit and analysis feature itself is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data transformation, data shipping, and other services. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableSqlAuditRequest
         /// </param>
@@ -13831,6 +15271,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<EnableSqlAuditResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the SQL audit feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The PolarDB-X 2.0 SQL audit and analysis feature itself is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data transformation, data shipping, and other services. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableSqlAuditRequest
         /// </param>
@@ -13844,6 +15298,20 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return EnableSqlAuditWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables the SQL audit feature.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>The PolarDB-X 2.0 SQL audit and analysis feature itself is free of charge. However, Log Service charges fees for storage space, read traffic, number of requests, data transformation, data shipping, and other services. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL Audit and Analysis</a>.</description></item>
+        /// </list>
+        /// </remarks>
+        /// </description>
+        /// 
         /// <param name="request">
         /// EnableSqlAuditRequest
         /// </param>
@@ -13859,7 +15327,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Retrieves a list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13917,7 +15385,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Retrieves a list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13975,7 +15443,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Retrieves a list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13993,7 +15461,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查标签接口</para>
+        /// <para>Retrieves a list of labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14009,6 +15477,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ListTagResourcesWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an instance from one zone to another.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MigrateDBInstanceRequest
         /// </param>
@@ -14078,6 +15551,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<MigrateDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an instance from one zone to another.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MigrateDBInstanceRequest
         /// </param>
@@ -14147,6 +15625,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<MigrateDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an instance from one zone to another.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MigrateDBInstanceRequest
         /// </param>
@@ -14160,6 +15643,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return MigrateDBInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Migrates an instance from one zone to another.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// MigrateDBInstanceRequest
         /// </param>
@@ -14173,6 +15661,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await MigrateDBInstanceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyAccountDescription operation to modify the description of an account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAccountDescriptionRequest
         /// </param>
@@ -14222,6 +15715,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyAccountDescription operation to modify the description of an account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAccountDescriptionRequest
         /// </param>
@@ -14271,6 +15769,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyAccountDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyAccountDescription operation to modify the description of an account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAccountDescriptionRequest
         /// </param>
@@ -14284,6 +15787,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ModifyAccountDescriptionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyAccountDescription operation to modify the description of an account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAccountDescriptionRequest
         /// </param>
@@ -14297,6 +15805,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ModifyAccountDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a standard account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAccountPrivilegeRequest
         /// </param>
@@ -14358,6 +15871,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyAccountPrivilegeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a standard account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAccountPrivilegeRequest
         /// </param>
@@ -14419,6 +15937,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyAccountPrivilegeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a standard account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAccountPrivilegeRequest
         /// </param>
@@ -14432,6 +15955,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ModifyAccountPrivilegeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the permissions of a standard account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyAccountPrivilegeRequest
         /// </param>
@@ -14447,7 +15975,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改全局运维窗口信息</para>
+        /// <para>Calls the ModifyActiveOperationMaintainConf operation to modify the time configuration of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14485,7 +16013,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改全局运维窗口信息</para>
+        /// <para>Calls the ModifyActiveOperationMaintainConf operation to modify the time configuration of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14523,7 +16051,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改全局运维窗口信息</para>
+        /// <para>Calls the ModifyActiveOperationMaintainConf operation to modify the time configuration of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14541,7 +16069,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改全局运维窗口信息</para>
+        /// <para>Calls the ModifyActiveOperationMaintainConf operation to modify the time configuration of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14559,7 +16087,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改主动运维任务</para>
+        /// <para>Calls the ModifyActiveOperationTasks operation to modify the execution time of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14613,7 +16141,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改主动运维任务</para>
+        /// <para>Calls the ModifyActiveOperationTasks operation to modify the execution time of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14667,7 +16195,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改主动运维任务</para>
+        /// <para>Calls the ModifyActiveOperationTasks operation to modify the execution time of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14685,7 +16213,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改主动运维任务</para>
+        /// <para>Calls the ModifyActiveOperationTasks operation to modify the execution time of O&amp;M events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14703,12 +16231,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CDC变配</para>
+        /// <para>Modifies the CDC configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14766,12 +16294,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CDC变配</para>
+        /// <para>Modifies the CDC configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14829,12 +16357,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CDC变配</para>
+        /// <para>Modifies the CDC configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14852,12 +16380,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>CDC变配</para>
+        /// <para>Modifies the CDC configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14875,12 +16403,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Columnar变配</para>
+        /// <para>Modifies the column store specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14938,12 +16466,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Columnar变配</para>
+        /// <para>Modifies the column store specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15001,12 +16529,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Columnar变配</para>
+        /// <para>Modifies the column store specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15024,12 +16552,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Columnar变配</para>
+        /// <para>Modifies the column store specifications.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15047,8 +16575,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修复自定连接基本信息</para>
+        /// <para>Modifies the configuration of a custom endpoint.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In PolarDB-X, in addition to the default primary endpoint and read-only endpoint, you can create custom endpoints to implement more flexible read/write splitting, load balancing, or business isolation strategies. The ModifyCustomEndpoint operation allows you to dynamically adjust the attributes of these custom endpoints without restarting the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCustomEndpointRequest
@@ -15113,8 +16646,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修复自定连接基本信息</para>
+        /// <para>Modifies the configuration of a custom endpoint.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In PolarDB-X, in addition to the default primary endpoint and read-only endpoint, you can create custom endpoints to implement more flexible read/write splitting, load balancing, or business isolation strategies. The ModifyCustomEndpoint operation allows you to dynamically adjust the attributes of these custom endpoints without restarting the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCustomEndpointRequest
@@ -15179,8 +16717,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修复自定连接基本信息</para>
+        /// <para>Modifies the configuration of a custom endpoint.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In PolarDB-X, in addition to the default primary endpoint and read-only endpoint, you can create custom endpoints to implement more flexible read/write splitting, load balancing, or business isolation strategies. The ModifyCustomEndpoint operation allows you to dynamically adjust the attributes of these custom endpoints without restarting the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCustomEndpointRequest
@@ -15197,8 +16740,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修复自定连接基本信息</para>
+        /// <para>Modifies the configuration of a custom endpoint.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>In PolarDB-X, in addition to the default primary endpoint and read-only endpoint, you can create custom endpoints to implement more flexible read/write splitting, load balancing, or business isolation strategies. The ModifyCustomEndpoint operation allows you to dynamically adjust the attributes of these custom endpoints without restarting the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCustomEndpointRequest
@@ -15215,8 +16763,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修复自定连接的网络信息</para>
+        /// <para>Modifies the network configurations of a custom network endpoint, such as the subnet, security group, and public network access settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCustomEndpointNetRequest
@@ -15281,8 +16834,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修复自定连接的网络信息</para>
+        /// <para>Modifies the network configurations of a custom network endpoint, such as the subnet, security group, and public network access settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCustomEndpointNetRequest
@@ -15347,8 +16905,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修复自定连接的网络信息</para>
+        /// <para>Modifies the network configurations of a custom network endpoint, such as the subnet, security group, and public network access settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCustomEndpointNetRequest
@@ -15365,8 +16928,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修复自定连接的网络信息</para>
+        /// <para>Modifies the network configurations of a custom network endpoint, such as the subnet, security group, and public network access settings.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyCustomEndpointNetRequest
@@ -15381,6 +16949,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ModifyCustomEndpointNetWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDBInstanceClass operation to modify the specifications of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceClassRequest
         /// </param>
@@ -15458,6 +17031,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceClassResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDBInstanceClass operation to modify the specifications of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceClassRequest
         /// </param>
@@ -15535,6 +17113,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceClassResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDBInstanceClass operation to modify the specifications of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceClassRequest
         /// </param>
@@ -15548,6 +17131,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ModifyDBInstanceClassWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDBInstanceClass operation to modify the specifications of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceClassRequest
         /// </param>
@@ -15563,7 +17151,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Calls the ModifyDBInstanceConfig operation to modify instance configuration items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15617,7 +17205,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Calls the ModifyDBInstanceConfig operation to modify instance configuration items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15671,7 +17259,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Calls the ModifyDBInstanceConfig operation to modify instance configuration items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15689,7 +17277,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例配置</para>
+        /// <para>Calls the ModifyDBInstanceConfig operation to modify instance configuration items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15707,7 +17295,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例链接串</para>
+        /// <para>Modifies the connection string of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15765,7 +17353,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例链接串</para>
+        /// <para>Modifies the connection string of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15823,7 +17411,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例链接串</para>
+        /// <para>Modifies the connection string of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15841,7 +17429,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改实例链接串</para>
+        /// <para>Modifies the connection string of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15857,6 +17445,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ModifyDBInstanceConnectionStringWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDBInstanceDescription operation to modify the description of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceDescriptionRequest
         /// </param>
@@ -15902,6 +17495,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDBInstanceDescription operation to modify the description of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceDescriptionRequest
         /// </param>
@@ -15947,6 +17545,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDBInstanceDescription operation to modify the description of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceDescriptionRequest
         /// </param>
@@ -15960,6 +17563,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ModifyDBInstanceDescriptionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDBInstanceDescription operation to modify the description of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceDescriptionRequest
         /// </param>
@@ -15973,6 +17581,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ModifyDBInstanceDescriptionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maintenance window of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceMaintainTimeRequest
         /// </param>
@@ -16022,6 +17640,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceMaintainTimeResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maintenance window of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceMaintainTimeRequest
         /// </param>
@@ -16071,6 +17699,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDBInstanceMaintainTimeResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maintenance window of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceMaintainTimeRequest
         /// </param>
@@ -16084,6 +17722,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ModifyDBInstanceMaintainTimeWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the maintenance window of an instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDBInstanceMaintainTimeRequest
         /// </param>
@@ -16099,12 +17747,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换交换机</para>
+        /// <para>Modifies the virtual IP (VIP) address or network properties bound to a database instance. This operation supports changing the internal IP address, adjusting the vSwitch, migrating across zones, and other operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16162,12 +17810,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换交换机</para>
+        /// <para>Modifies the virtual IP (VIP) address or network properties bound to a database instance. This operation supports changing the internal IP address, adjusting the vSwitch, migrating across zones, and other operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16225,12 +17873,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换交换机</para>
+        /// <para>Modifies the virtual IP (VIP) address or network properties bound to a database instance. This operation supports changing the internal IP address, adjusting the vSwitch, migrating across zones, and other operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16248,12 +17896,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>切换交换机</para>
+        /// <para>Modifies the virtual IP (VIP) address or network properties bound to a database instance. This operation supports changing the internal IP address, adjusting the vSwitch, migrating across zones, and other operations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16269,6 +17917,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ModifyDBInstanceVipWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDatabaseDescription operation to modify the description of a database.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDatabaseDescriptionRequest
         /// </param>
@@ -16318,6 +17971,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDatabaseDescriptionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDatabaseDescription operation to modify the description of a database.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDatabaseDescriptionRequest
         /// </param>
@@ -16367,6 +18025,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyDatabaseDescriptionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDatabaseDescription operation to modify the description of a database.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDatabaseDescriptionRequest
         /// </param>
@@ -16380,6 +18043,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ModifyDatabaseDescriptionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyDatabaseDescription operation to modify the description of a database.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyDatabaseDescriptionRequest
         /// </param>
@@ -16395,12 +18063,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyEngineMigration</para>
+        /// <para>Modifies the configuration or migration parameters of a database engine migration task, such as the source database, destination database, migration objects, or migration mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16462,12 +18130,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyEngineMigration</para>
+        /// <para>Modifies the configuration or migration parameters of a database engine migration task, such as the source database, destination database, migration objects, or migration mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16529,12 +18197,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyEngineMigration</para>
+        /// <para>Modifies the configuration or migration parameters of a database engine migration task, such as the source database, destination database, migration objects, or migration mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16552,12 +18220,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyEngineMigration</para>
+        /// <para>Modifies the configuration or migration parameters of a database engine migration task, such as the source database, destination database, migration objects, or migration mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16573,6 +18241,183 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ModifyEngineMigrationWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the whitelist of a memory engine instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyMem0SecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMem0SecurityIpsResponse
+        /// </returns>
+        public ModifyMem0SecurityIpsResponse ModifyMem0SecurityIpsWithOptions(ModifyMem0SecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyMode))
+            {
+                query["ModifyMode"] = request.ModifyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
+            {
+                query["SecurityIPList"] = request.SecurityIPList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyMem0SecurityIps",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyMem0SecurityIpsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the whitelist of a memory engine instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyMem0SecurityIpsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMem0SecurityIpsResponse
+        /// </returns>
+        public async Task<ModifyMem0SecurityIpsResponse> ModifyMem0SecurityIpsWithOptionsAsync(ModifyMem0SecurityIpsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupName))
+            {
+                query["GroupName"] = request.GroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ModifyMode))
+            {
+                query["ModifyMode"] = request.ModifyMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityIPList))
+            {
+                query["SecurityIPList"] = request.SecurityIPList;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyMem0SecurityIps",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyMem0SecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the whitelist of a memory engine instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyMem0SecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMem0SecurityIpsResponse
+        /// </returns>
+        public ModifyMem0SecurityIpsResponse ModifyMem0SecurityIps(ModifyMem0SecurityIpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyMem0SecurityIpsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the whitelist of a memory engine instance.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ModifyMem0SecurityIpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyMem0SecurityIpsResponse
+        /// </returns>
+        public async Task<ModifyMem0SecurityIpsResponse> ModifyMem0SecurityIpsAsync(ModifyMem0SecurityIpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyMem0SecurityIpsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyParameter operation to modify instance parameters, including compute layer and storage layer parameters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyParameterRequest
         /// </param>
@@ -16630,6 +18475,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyParameterResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyParameter operation to modify instance parameters, including compute layer and storage layer parameters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyParameterRequest
         /// </param>
@@ -16687,6 +18537,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifyParameterResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyParameter operation to modify instance parameters, including compute layer and storage layer parameters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyParameterRequest
         /// </param>
@@ -16700,6 +18555,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ModifyParameterWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifyParameter operation to modify instance parameters, including compute layer and storage layer parameters.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifyParameterRequest
         /// </param>
@@ -16713,6 +18573,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ModifyParameterWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifySecurityIps operation to modify the whitelist of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySecurityIpsRequest
         /// </param>
@@ -16766,6 +18631,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifySecurityIpsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifySecurityIps operation to modify the whitelist of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySecurityIpsRequest
         /// </param>
@@ -16819,6 +18689,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ModifySecurityIpsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifySecurityIps operation to modify the whitelist of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySecurityIpsRequest
         /// </param>
@@ -16832,6 +18707,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ModifySecurityIpsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the ModifySecurityIps operation to modify the whitelist of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ModifySecurityIpsRequest
         /// </param>
@@ -16847,7 +18727,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL闪回任务预检</para>
+        /// <para>Performs a pre-check and feasibility assessment for a recovery task before you execute SQL flashback recovery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16905,7 +18785,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL闪回任务预检</para>
+        /// <para>Performs a pre-check and feasibility assessment for a recovery task before you execute SQL flashback recovery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16963,7 +18843,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL闪回任务预检</para>
+        /// <para>Performs a pre-check and feasibility assessment for a recovery task before you execute SQL flashback recovery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16981,7 +18861,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>SQL闪回任务预检</para>
+        /// <para>Performs a pre-check and feasibility assessment for a recovery task before you execute SQL flashback recovery.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16999,7 +18879,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新评估升级任务的导入元数据</para>
+        /// <para>Refreshes the metadata of an import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17049,7 +18929,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新评估升级任务的导入元数据</para>
+        /// <para>Refreshes the metadata of an import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17099,7 +18979,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新评估升级任务的导入元数据</para>
+        /// <para>Refreshes the metadata of an import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17117,7 +18997,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>刷新评估升级任务的导入元数据</para>
+        /// <para>Refreshes the metadata of an import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17135,7 +19015,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭冷存储</para>
+        /// <para>Calls the ReleaseColdDataVolume operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17181,7 +19061,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭冷存储</para>
+        /// <para>Calls the ReleaseColdDataVolume operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17227,7 +19107,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭冷存储</para>
+        /// <para>Calls the ReleaseColdDataVolume operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17245,7 +19125,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭冷存储</para>
+        /// <para>Calls the ReleaseColdDataVolume operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17261,6 +19141,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ReleaseColdDataVolumeWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public network connection of an instance by calling the ReleaseInstancePublicConnection operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseInstancePublicConnectionRequest
         /// </param>
@@ -17306,6 +19191,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public network connection of an instance by calling the ReleaseInstancePublicConnection operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseInstancePublicConnectionRequest
         /// </param>
@@ -17351,6 +19241,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ReleaseInstancePublicConnectionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public network connection of an instance by calling the ReleaseInstancePublicConnection operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseInstancePublicConnectionRequest
         /// </param>
@@ -17364,6 +19259,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ReleaseInstancePublicConnectionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Releases the public network connection of an instance by calling the ReleaseInstancePublicConnection operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ReleaseInstancePublicConnectionRequest
         /// </param>
@@ -17377,6 +19277,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ReleaseInstancePublicConnectionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of an account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetAccountPasswordRequest
         /// </param>
@@ -17434,6 +19339,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ResetAccountPasswordResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of an account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetAccountPasswordRequest
         /// </param>
@@ -17491,6 +19401,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ResetAccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of an account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetAccountPasswordRequest
         /// </param>
@@ -17504,6 +19419,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ResetAccountPasswordWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of an account.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// ResetAccountPasswordRequest
         /// </param>
@@ -17517,9 +19437,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ResetAccountPasswordWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of an account.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17579,9 +19504,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ResetAccountPasswordRestrictResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of an account.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17641,9 +19571,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<ResetAccountPasswordRestrictResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of an account.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17659,9 +19594,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return ResetAccountPasswordRestrictWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the password of an account.</para>
+        /// </summary>
+        /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <hr>
+        /// <para>***.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17677,6 +19617,167 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await ResetAccountPasswordRestrictWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the API key of the memory engine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetMem0AccountPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetMem0AccountPasswordResponse
+        /// </returns>
+        public ResetMem0AccountPasswordResponse ResetMem0AccountPasswordWithOptions(ResetMem0AccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mem0ApiKey))
+            {
+                query["Mem0ApiKey"] = request.Mem0ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetMem0AccountPassword",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetMem0AccountPasswordResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the API key of the memory engine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetMem0AccountPasswordRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetMem0AccountPasswordResponse
+        /// </returns>
+        public async Task<ResetMem0AccountPasswordResponse> ResetMem0AccountPasswordWithOptionsAsync(ResetMem0AccountPasswordRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mem0ApiKey))
+            {
+                query["Mem0ApiKey"] = request.Mem0ApiKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ResetMem0AccountPassword",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ResetMem0AccountPasswordResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the API key of the memory engine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetMem0AccountPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetMem0AccountPasswordResponse
+        /// </returns>
+        public ResetMem0AccountPasswordResponse ResetMem0AccountPassword(ResetMem0AccountPasswordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ResetMem0AccountPasswordWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Resets the API key of the memory engine.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>***.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ResetMem0AccountPasswordRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ResetMem0AccountPasswordResponse
+        /// </returns>
+        public async Task<ResetMem0AccountPasswordResponse> ResetMem0AccountPasswordAsync(ResetMem0AccountPasswordRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ResetMem0AccountPasswordWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an instance by calling the RestartDBInstance operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartDBInstanceRequest
         /// </param>
@@ -17718,6 +19819,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<RestartDBInstanceResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an instance by calling the RestartDBInstance operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartDBInstanceRequest
         /// </param>
@@ -17759,6 +19865,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<RestartDBInstanceResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an instance by calling the RestartDBInstance operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartDBInstanceRequest
         /// </param>
@@ -17772,6 +19883,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return RestartDBInstanceWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Restarts an instance by calling the RestartDBInstance operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// RestartDBInstanceRequest
         /// </param>
@@ -17787,7 +19903,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启数据导入任务</para>
+        /// <para>Restarts a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17841,7 +19957,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启数据导入任务</para>
+        /// <para>Restarts a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17895,7 +20011,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启数据导入任务</para>
+        /// <para>Restarts a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17913,7 +20029,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启数据导入任务</para>
+        /// <para>Restarts a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18311,7 +20427,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跳过评估迁移的当前步骤</para>
+        /// <para>This API is used to skip the current step.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18361,7 +20477,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跳过评估迁移的当前步骤</para>
+        /// <para>This API is used to skip the current step.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18411,7 +20527,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跳过评估迁移的当前步骤</para>
+        /// <para>This API is used to skip the current step.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18429,7 +20545,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跳过评估迁移的当前步骤</para>
+        /// <para>This API is used to skip the current step.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18447,7 +20563,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始评估迁移切换</para>
+        /// <para>Starts a database cutover for a database migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18517,7 +20633,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始评估迁移切换</para>
+        /// <para>Starts a database cutover for a database migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18587,7 +20703,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始评估迁移切换</para>
+        /// <para>Starts a database cutover for a database migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18605,7 +20721,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开始评估迁移切换</para>
+        /// <para>Starts a database cutover for a database migration or synchronization task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18623,7 +20739,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停数据导入任务</para>
+        /// <para>Stops a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18677,7 +20793,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停数据导入任务</para>
+        /// <para>Stops a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18731,7 +20847,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停数据导入任务</para>
+        /// <para>Stops a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18749,7 +20865,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停数据导入任务</para>
+        /// <para>Stops a data import task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18767,7 +20883,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交SQL闪回任务</para>
+        /// <para>Creates a SQL flashback task by calling the SubmitSqlFlashbackTask operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18849,7 +20965,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交SQL闪回任务</para>
+        /// <para>Creates a SQL flashback task by calling the SubmitSqlFlashbackTask operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18931,7 +21047,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交SQL闪回任务</para>
+        /// <para>Creates a SQL flashback task by calling the SubmitSqlFlashbackTask operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18949,7 +21065,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交SQL闪回任务</para>
+        /// <para>Creates a SQL flashback task by calling the SubmitSqlFlashbackTask operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19107,7 +21223,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GDN主备切换</para>
+        /// <para>Performs a primary/secondary switchover for a global database network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19181,7 +21297,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GDN主备切换</para>
+        /// <para>Performs a primary/secondary switchover for a global database network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19255,7 +21371,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GDN主备切换</para>
+        /// <para>Performs a primary/secondary switchover for a global database network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19273,7 +21389,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>GDN主备切换</para>
+        /// <para>Performs a primary/secondary switchover for a global database network (GDN).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19291,7 +21407,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Calls the TagResources operation to add tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19345,7 +21461,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Calls the TagResources operation to add tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19399,7 +21515,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Calls the TagResources operation to add tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19417,7 +21533,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>打标签接口</para>
+        /// <para>Calls the TagResources operation to add tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19435,7 +21551,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Removes tags from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19493,7 +21609,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Removes tags from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19551,7 +21667,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Removes tags from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19569,7 +21685,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删标签接口</para>
+        /// <para>Removes tags from a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19587,7 +21703,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新备份策略</para>
+        /// <para>Calls the UpdateBackupPolicy operation to modify the backup policy of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19709,7 +21825,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新备份策略</para>
+        /// <para>Calls the UpdateBackupPolicy operation to modify the backup policy of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19831,7 +21947,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新备份策略</para>
+        /// <para>Calls the UpdateBackupPolicy operation to modify the backup policy of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19849,7 +21965,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新备份策略</para>
+        /// <para>Calls the UpdateBackupPolicy operation to modify the backup policy of an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19869,6 +21985,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <summary>
         /// <para>更新实例的管控参数</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateCustinsParamRequest
@@ -19924,6 +22045,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>更新实例的管控参数</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateCustinsParamRequest
         /// </param>
@@ -19978,6 +22104,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>更新实例的管控参数</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateCustinsParamRequest
         /// </param>
@@ -19996,6 +22127,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
         /// <para>更新实例的管控参数</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// UpdateCustinsParamRequest
         /// </param>
@@ -20009,6 +22145,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await UpdateCustinsParamWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the SSL configuration of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDBInstanceSSLRequest
         /// </param>
@@ -20058,6 +22199,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateDBInstanceSSLResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the SSL configuration of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDBInstanceSSLRequest
         /// </param>
@@ -20107,6 +22253,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateDBInstanceSSLResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the SSL configuration of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDBInstanceSSLRequest
         /// </param>
@@ -20120,6 +22271,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return UpdateDBInstanceSSLWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the SSL configuration of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDBInstanceSSLRequest
         /// </param>
@@ -20133,6 +22289,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await UpdateDBInstanceSSLWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables Transparent Data Encryption (TDE) for an instance by calling the UpdateDBInstanceTDE operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDBInstanceTDERequest
         /// </param>
@@ -20186,6 +22347,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateDBInstanceTDEResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables Transparent Data Encryption (TDE) for an instance by calling the UpdateDBInstanceTDE operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDBInstanceTDERequest
         /// </param>
@@ -20239,6 +22405,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpdateDBInstanceTDEResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables Transparent Data Encryption (TDE) for an instance by calling the UpdateDBInstanceTDE operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDBInstanceTDERequest
         /// </param>
@@ -20252,6 +22423,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return UpdateDBInstanceTDEWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables Transparent Data Encryption (TDE) for an instance by calling the UpdateDBInstanceTDE operation.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpdateDBInstanceTDERequest
         /// </param>
@@ -20267,7 +22443,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扩缩容实例节点数</para>
+        /// <para>Calls the UpdatePolarDBXInstanceNode operation to change the number of nodes for an instance, including scaling out and scaling in. This request generates a billable order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20341,7 +22517,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扩缩容实例节点数</para>
+        /// <para>Calls the UpdatePolarDBXInstanceNode operation to change the number of nodes for an instance, including scaling out and scaling in. This request generates a billable order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20415,7 +22591,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扩缩容实例节点数</para>
+        /// <para>Calls the UpdatePolarDBXInstanceNode operation to change the number of nodes for an instance, including scaling out and scaling in. This request generates a billable order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20433,7 +22609,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>扩缩容实例节点数</para>
+        /// <para>Calls the UpdatePolarDBXInstanceNode operation to change the number of nodes for an instance, including scaling out and scaling in. This request generates a billable order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20451,7 +22627,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级CDC版本</para>
+        /// <para>Upgrades the CDC node version of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20513,7 +22689,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级CDC版本</para>
+        /// <para>Upgrades the CDC node version of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20575,7 +22751,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级CDC版本</para>
+        /// <para>Upgrades the CDC node version of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20593,7 +22769,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级CDC版本</para>
+        /// <para>Upgrades the CDC node version of a PolarDB-X instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20611,7 +22787,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级Columnar版本</para>
+        /// <para>Updates the column store version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20669,7 +22845,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级Columnar版本</para>
+        /// <para>Updates the column store version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20727,7 +22903,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级Columnar版本</para>
+        /// <para>Updates the column store version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20745,7 +22921,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>升级Columnar版本</para>
+        /// <para>Updates the column store version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20761,6 +22937,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return await UpgradeColumnarVersionWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the UpgradeDBInstanceKernelVersion operation to update the kernel version of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeDBInstanceKernelVersionRequest
         /// </param>
@@ -20810,6 +22991,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpgradeDBInstanceKernelVersionResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the UpgradeDBInstanceKernelVersion operation to update the kernel version of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeDBInstanceKernelVersionRequest
         /// </param>
@@ -20859,6 +23045,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return TeaModel.ToObject<UpgradeDBInstanceKernelVersionResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the UpgradeDBInstanceKernelVersion operation to update the kernel version of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeDBInstanceKernelVersionRequest
         /// </param>
@@ -20872,6 +23063,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             return UpgradeDBInstanceKernelVersionWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the UpgradeDBInstanceKernelVersion operation to update the kernel version of an instance.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// UpgradeDBInstanceKernelVersionRequest
         /// </param>

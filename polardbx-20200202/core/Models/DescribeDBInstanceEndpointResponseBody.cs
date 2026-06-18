@@ -191,6 +191,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     [Validation(Required=false)]
                     public string Port { get; set; }
 
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>节点id</para>
+                    /// </summary>
                     [NameInMap("ReplicaId")]
                     [Validation(Required=false)]
                     public long? ReplicaId { get; set; }
@@ -226,8 +230,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>A501A191-BD70-5E50-98A9-C2A486A82****</para>
         /// </summary>

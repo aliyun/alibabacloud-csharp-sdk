@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeSqlFlashbackTaskListRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the PolarDB-X instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string PolardbxInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region in which the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

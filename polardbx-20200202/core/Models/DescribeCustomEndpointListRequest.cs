@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeCustomEndpointListRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to check if the compute node (CN) has been deleted.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? CheckDeleteCN { get; set; }
 
         /// <summary>
+        /// <para>The IDs of custom endpoints.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxe-b6e****no4pfap1s</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CustomEndpointIds { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region in which the instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateStoragePoolRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rg-xxxxx</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The list of storage pool DNs.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>node6</para>
         /// </summary>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string StoragePoolDNList { get; set; }
 
         /// <summary>
+        /// <para>The name of the storage pool.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test</para>
         /// </summary>

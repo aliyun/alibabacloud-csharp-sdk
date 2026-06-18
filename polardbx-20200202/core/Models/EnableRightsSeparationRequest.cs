@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class EnableRightsSeparationRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the audit account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test123</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AuditAccountDescription { get; set; }
 
         /// <summary>
+        /// <para>The name of the audit account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AuditAccountName { get; set; }
 
         /// <summary>
+        /// <para>The password of the audit account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AuditAccountPassword { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The description of the security administrator account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test123</para>
         /// </summary>
@@ -66,6 +74,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountDescription { get; set; }
 
         /// <summary>
+        /// <para>The name of the security administrator account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +85,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountName { get; set; }
 
         /// <summary>
+        /// <para>The password of the security administrator account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

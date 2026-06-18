@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ResetAccountPasswordRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The password of the account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the security administrator account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>account_sec</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountName { get; set; }
 
         /// <summary>
+        /// <para>The password of the security administrator account.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>

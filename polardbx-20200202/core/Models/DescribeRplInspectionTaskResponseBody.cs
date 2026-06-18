@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeRplInspectionTaskResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The task details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeRplInspectionTaskResponseBodyData Data { get; set; }
         public class DescribeRplInspectionTaskResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The machine task information.</para>
+            /// </summary>
             [NameInMap("InspectionTaskList")]
             [Validation(Required=false)]
             public List<DescribeRplInspectionTaskResponseBodyDataInspectionTaskList> InspectionTaskList { get; set; }
             public class DescribeRplInspectionTaskResponseBodyDataInspectionTaskList : TeaModel {
                 /// <summary>
+                /// <para>The timestamp when the task was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-25T02:36:20.000+0000</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
+                /// <para>The description of the inspection task.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>For database: wms ,Found SIMPLE sequences in 1.0. PolarDB-X 2.0 does not support SIMPLE sequence any more， please use show sequence to check them.</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The task ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>10142</para>
                 /// </summary>
@@ -52,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string SlinkTaskId { get; set; }
 
                 /// <summary>
+                /// <para>The stage name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>CONNECTIVITY</para>
                 /// </summary>
@@ -60,6 +74,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Stage { get; set; }
 
                 /// <summary>
+                /// <para>The task status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>SUCCEEDED</para>
                 /// </summary>
@@ -68,6 +84,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Status { get; set; }
 
                 /// <summary>
+                /// <para>The timestamp of the most recent task update.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2025-09-23T03:25:21.000+0000</para>
                 /// </summary>
@@ -78,6 +96,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             }
 
             /// <summary>
+            /// <para>The slink status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PRE_CHECK</para>
             /// </summary>
@@ -88,6 +108,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The error message of the task.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -96,6 +118,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1AD222E9-E606-4A42-BF6D-8A4442913CEF</para>
         /// </summary>
@@ -104,6 +128,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

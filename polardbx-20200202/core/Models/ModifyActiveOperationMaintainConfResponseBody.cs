@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyActiveOperationMaintainConfResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>4035409E-7297-4115-ABC9-C1C3942BC069</para>
         /// </summary>

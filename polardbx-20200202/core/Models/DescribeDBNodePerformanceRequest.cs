@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDBNodePerformanceRequest : TeaModel {
         /// <summary>
+        /// <para>The node type. Valid values: polarx_cn, polarx_dn, polarx_cdc, polarx_gms, and polarx_columnar.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CharacterType { get; set; }
 
         /// <summary>
+        /// <para>The name of the PolarDB-X instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The node names. Separate multiple node names with commas (,). You can specify up to 10 CDC nodes and compute nodes, or up to 1 data node at a time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBNodeIds { get; set; }
 
         /// <summary>
+        /// <para>The node role. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>master: primary node.</description></item>
+        /// <item><description>slave: secondary node. This value applies to DN and GMS nodes.</description></item>
+        /// <item><description>standby: secondary node. This value applies to CN nodes.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>master</para>
         /// </summary>
@@ -48,6 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBNodeRole { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,6 +69,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The metric names. Separate multiple metric names with commas (,). You can specify up to 6 metrics. For more information, see <a href="https://help.aliyun.com/document_detail/332726.html">Performance metrics</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,6 +80,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Key { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +91,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

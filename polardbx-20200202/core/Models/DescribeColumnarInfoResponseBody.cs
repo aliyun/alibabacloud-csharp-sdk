@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeColumnarInfoResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeColumnarInfoResponseBodyData Data { get; set; }
         public class DescribeColumnarInfoResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The number of days that binlogs are retained.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -22,6 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? BinlogPersistTime { get; set; }
 
             /// <summary>
+            /// <para>The binlog size.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -32,6 +38,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public int? BinlogSize { get; set; }
 
             /// <summary>
+            /// <para>The checksum switch.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ON</para>
             /// </summary>
@@ -40,6 +48,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CheckSumSwitch { get; set; }
 
             /// <summary>
+            /// <para>The instance specifications.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>polarx.n8.medium.col</para>
             /// </summary>
@@ -48,6 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ClassCode { get; set; }
 
             /// <summary>
+            /// <para>The new column store version.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -58,6 +69,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ColumnarNewVersion { get; set; }
 
             /// <summary>
+            /// <para>The column store version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>polarx-col-kernel-5.4.20-20250819_17555906</para>
             /// </summary>
@@ -65,11 +78,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string ColumnarVersion { get; set; }
 
+            /// <summary>
+            /// <para>The instance list.</para>
+            /// </summary>
             [NameInMap("InstanceTopologyList")]
             [Validation(Required=false)]
             public List<DescribeColumnarInfoResponseBodyDataInstanceTopologyList> InstanceTopologyList { get; set; }
             public class DescribeColumnarInfoResponseBodyDataInstanceTopologyList : TeaModel {
                 /// <summary>
+                /// <para>The instance type description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <hr>
                 /// </summary>
@@ -78,6 +96,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Comment { get; set; }
 
                 /// <summary>
+                /// <para>The instance name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pxc-***</para>
                 /// </summary>
@@ -85,11 +105,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 [Validation(Required=false)]
                 public string InstanceName { get; set; }
 
+                /// <summary>
+                /// <para>The node array.</para>
+                /// </summary>
                 [NameInMap("PhysicalNodes")]
                 [Validation(Required=false)]
                 public List<DescribeColumnarInfoResponseBodyDataInstanceTopologyListPhysicalNodes> PhysicalNodes { get; set; }
                 public class DescribeColumnarInfoResponseBodyDataInstanceTopologyListPhysicalNodes : TeaModel {
                     /// <summary>
+                    /// <para>The zone in which the instance resides.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou-h</para>
                     /// </summary>
@@ -98,6 +123,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string AZone { get; set; }
 
                     /// <summary>
+                    /// <para>The disk size, in MB.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>204800</para>
                     /// </summary>
@@ -106,6 +133,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public int? Disk { get; set; }
 
                     /// <summary>
+                    /// <para>The instance specifications.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>polarx.n8.medium.col</para>
                     /// </summary>
@@ -114,6 +143,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string NodeClass { get; set; }
 
                     /// <summary>
+                    /// <para>The node ID.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <hr>
                     /// </summary>
@@ -122,6 +153,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string NodeId { get; set; }
 
                     /// <summary>
+                    /// <para>The instance status.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>ACTIVATION</para>
                     /// </summary>
@@ -130,6 +163,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                     public string Status { get; set; }
 
                     /// <summary>
+                    /// <para>The instance version.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>polarx-col-kernel-5.4.20-20250819_17555906</para>
                     /// </summary>
@@ -155,6 +190,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -175,6 +211,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

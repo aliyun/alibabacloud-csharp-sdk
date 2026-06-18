@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeEnabledCrossRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The parameter details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeEnabledCrossRegionsResponseBodyData> Data { get; set; }
         public class DescribeEnabledCrossRegionsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether VPC is supported.</para>
+            /// </summary>
             [NameInMap("Regions")]
             [Validation(Required=false)]
             public List<string> Regions { get; set; }
@@ -20,6 +26,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The error message.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -38,6 +46,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

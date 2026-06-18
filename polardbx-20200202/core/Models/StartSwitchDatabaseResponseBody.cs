@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class StartSwitchDatabaseResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The monitoring data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public StartSwitchDatabaseResponseBodyData Data { get; set; }
         public class StartSwitchDatabaseResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the slink task.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>etx-szr2rr6i*****</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class AllocateColdDataVolumeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D6A4256F-7B83-5BD7-9AC0-72E1FAC05330</para>
         /// </summary>

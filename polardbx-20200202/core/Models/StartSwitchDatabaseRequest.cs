@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class StartSwitchDatabaseRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxc-xxx</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The endpoint of the primary node of the target instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxc-*********.polarx.rds.aliyuncs.com</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstMainConnectString { get; set; }
 
         /// <summary>
+        /// <para>The port number of the target instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3313</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DstMainPort { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to modify the endpoint or port of the source or target instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -42,6 +50,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string IsModifyEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,6 +61,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the import task.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SlinkTaskId { get; set; }
 
         /// <summary>
+        /// <para>The endpoint of the primary node of the source instance, which is typically the internal or public endpoint of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rm-*********.mysql.rds.aliyuncs.com</para>
         /// </summary>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SrcMainConnectString { get; set; }
 
         /// <summary>
+        /// <para>The port number of the primary node of the source instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3308</para>
         /// </summary>

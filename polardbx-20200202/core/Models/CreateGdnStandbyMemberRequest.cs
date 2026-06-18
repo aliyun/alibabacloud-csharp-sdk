@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string CloneInstanceName { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4核32G</para>
+        /// </summary>
         [NameInMap("CnClass")]
         [Validation(Required=false)]
         public string CnClass { get; set; }
@@ -63,6 +67,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>4核32G</para>
+        /// </summary>
         [NameInMap("DnClass")]
         [Validation(Required=false)]
         public string DnClass { get; set; }
@@ -190,8 +198,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>vpc-*****</para>
         /// </summary>

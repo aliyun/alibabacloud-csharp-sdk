@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyCdcClassResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyCdcClassResponseBodyData Data { get; set; }
         public class ModifyCdcClassResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2209883</para>
             /// </summary>

@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeCdcClassListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeCdcClassListResponseBodyData Data { get; set; }
@@ -21,6 +24,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public List<DescribeCdcClassListResponseBodyDataClassCodeList> ClassCodeList { get; set; }
             public class DescribeCdcClassListResponseBodyDataClassCodeList : TeaModel {
                 /// <summary>
+                /// <para>The instance specification.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>polarx.n2.small.2e.cdc</para>
                 /// </summary>
@@ -29,6 +34,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string ClassCode { get; set; }
 
                 /// <summary>
+                /// <para>The number of CPU cores.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
                 /// </summary>
@@ -37,6 +44,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string CpuCore { get; set; }
 
                 /// <summary>
+                /// <para>The total memory size of the tenant. Unit: GB.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2048</para>
                 /// </summary>

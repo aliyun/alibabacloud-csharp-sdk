@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyCustomEndpointRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the custom endpoint.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CustomEndpointId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The name of the custom endpoint.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>secondary-endpoint</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether a node automatically joins the cluster and starts providing services after it is added or recovered.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -46,7 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public bool? NodeAutoEnter { get; set; }
 
         /// <summary>
-        /// <para>node ids</para>
+        /// <para>The node IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>node3</para>
@@ -56,6 +62,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeIds { get; set; }
 
         /// <summary>
+        /// <para>The role of the node.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>master</para>
         /// </summary>
@@ -64,6 +72,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string NodeRole { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou</para>
         /// </summary>

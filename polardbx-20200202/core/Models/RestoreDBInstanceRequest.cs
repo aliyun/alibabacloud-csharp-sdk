@@ -250,8 +250,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? UsedTime { get; set; }
 
         /// <summary>
-        /// <para>VPC ID。</para>
-        /// 
         /// <b>Example:</b>
         /// <para>vpc-*****</para>
         /// </summary>

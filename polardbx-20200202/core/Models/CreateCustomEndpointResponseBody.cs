@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateCustomEndpointResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateCustomEndpointResponseBodyData Data { get; set; }
         public class CreateCustomEndpointResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The endpoint ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pxe-c4gkgqg****7sgyg</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CustomEndpointId { get; set; }
 
             /// <summary>
+            /// <para>The instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pxc-*********</para>
             /// </summary>

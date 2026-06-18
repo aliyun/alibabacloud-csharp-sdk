@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeAvailableCrossRegionsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The parameter details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeAvailableCrossRegionsResponseBodyData> Data { get; set; }
         public class DescribeAvailableCrossRegionsResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The instance ID.</para>
+            /// </summary>
             [NameInMap("Regions")]
             [Validation(Required=false)]
             public List<string> Regions { get; set; }
@@ -20,6 +26,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The additional information returned. If the request is successful, success is returned. If the request fails, the corresponding error code is returned.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -38,6 +46,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

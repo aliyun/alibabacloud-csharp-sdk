@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyAccountPrivilegeRequest : TeaModel {
         /// <summary>
+        /// <para>The account name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The account permissions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ReadWrite</b></description></item>
+        /// <item><description><b>ReadOnly</b></description></item>
+        /// <item><description><b>DMLOnly</b></description></item>
+        /// <item><description><b>DDLOnly</b>.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>ReadWrite</para>
         /// </summary>
@@ -28,6 +37,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountPrivilege { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +48,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The database name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sbtest</para>
         /// </summary>
@@ -46,6 +58,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DbName { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the security administrator account.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>account_audit</para>
         /// </summary>
@@ -64,6 +79,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountName { get; set; }
 
         /// <summary>
+        /// <para>The password of the security administrator account.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>

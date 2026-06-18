@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteGdnInstanceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteGdnInstanceResponseBodyData Data { get; set; }
         public class DeleteGdnInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2209883</para>
             /// </summary>
@@ -24,6 +29,11 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// <remarks>
+        /// <para>This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -42,6 +52,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

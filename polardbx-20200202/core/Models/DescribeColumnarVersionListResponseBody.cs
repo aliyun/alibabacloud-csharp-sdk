@@ -9,10 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeColumnarVersionListResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The parameter details.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeColumnarVersionListResponseBodyData Data { get; set; }
         public class DescribeColumnarVersionListResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The version list.</para>
+            /// </summary>
             [NameInMap("VersionList")]
             [Validation(Required=false)]
             public List<string> VersionList { get; set; }

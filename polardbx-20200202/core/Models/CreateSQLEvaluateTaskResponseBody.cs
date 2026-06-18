@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateSQLEvaluateTaskResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned result.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSQLEvaluateTaskResponseBodyData Data { get; set; }
         public class CreateSQLEvaluateTaskResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The Slink task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>etx-szr2rr6i*****</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The returned message. &gt; This parameter is empty when the request succeeds. If the request fails, an error message is returned, such as an error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6352AC16-76BF-5135-B1EA-ED49293526E6</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>

@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeRdsVswitchesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The data struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeRdsVswitchesResponseBodyData Data { get; set; }
         public class DescribeRdsVswitchesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The vSwitch list.</para>
+            /// </summary>
             [NameInMap("VswitchList")]
             [Validation(Required=false)]
             public List<DescribeRdsVswitchesResponseBodyDataVswitchList> VswitchList { get; set; }
             public class DescribeRdsVswitchesResponseBodyDataVswitchList : TeaModel {
                 /// <summary>
+                /// <para>The number of available IP addresses.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>16378</para>
                 /// </summary>
@@ -26,6 +34,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string AvailabeIpCount { get; set; }
 
                 /// <summary>
+                /// <para>The CIDR block of the VPC.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>172.16.0.0/24</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string CidrBlock { get; set; }
 
                 /// <summary>
+                /// <para>The description of the database.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>describe</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>The node ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>babac91eff704edf9bdccfaa6ba4efce</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public long? Id { get; set; }
 
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>drdshbgae0han226</para>
                 /// </summary>
@@ -58,6 +74,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the VPC is the default VPC. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: The VPC is the default VPC.</description></item>
+                /// <item><description><b>false</b>: The VPC is not the default VPC.</description></item>
+                /// </list>
+                /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
                 /// </summary>
@@ -66,6 +88,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string IsDefault { get; set; }
 
                 /// <summary>
+                /// <para>The zone ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou-j</para>
                 /// </summary>
@@ -74,6 +98,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string IzNo { get; set; }
 
                 /// <summary>
+                /// <para>The name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>szt-backup</para>
                 /// </summary>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeParametersRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The parameter level. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>compute: compute layer</description></item>
+        /// <item><description>storage: storage layer.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>compute</para>
         /// </summary>
@@ -28,6 +35,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ParamLevel { get; set; }
 
         /// <summary>
+        /// <para>The region to which the instance belongs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeDBNodePerformanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxc-********</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The end of the time range to query. The time is in the YYYY-MM-ddTHH:mm:ssZ format (UTC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-10-20T02:00Z</para>
         /// </summary>
@@ -70,6 +74,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EFB5E10B-5268-170F-A378-9AF86CCEACC8</para>
         /// </summary>
@@ -78,6 +84,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The beginning of the time range to query. The time is in the YYYY-MM-ddTHH:mm:ssZ format (UTC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2021-10-20T00:00Z</para>
         /// </summary>

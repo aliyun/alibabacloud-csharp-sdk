@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ModifyActiveOperationTasksResponseBody : TeaModel {
         /// <summary>
+        /// <para>The list of O&amp;M event IDs, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Ids { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>8C9CC90A-9532-4752-B59F-580112C5A45B</para>
         /// </summary>

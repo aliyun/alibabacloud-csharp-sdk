@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeSlowLogRecordsRequest : TeaModel {
         /// <summary>
+        /// <para>The node type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string CharacterType { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The database name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testdb</para>
         /// </summary>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBName { get; set; }
 
         /// <summary>
+        /// <para>The node ID. You can specify multiple node IDs separated by commas (<c>,</c>). This parameter is required when you query storage nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxc-i-mezcj4ejdz</para>
         /// </summary>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBNodeIds { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,6 +63,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string EndTime { get; set; }
 
         /// <summary>
+        /// <para>The page number. Default value: 1.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -64,6 +73,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? Page { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page. Default value: 100.</para>
+        /// <para>Limit: A maximum of 100 entries can be returned at a time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -72,6 +84,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,6 +95,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The start time of the query. Specify the time in the YYYY-MM-ddTHH:mmZ format (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

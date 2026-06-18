@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ResetAccountPasswordRestrictRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the account whose password you want to reset. &gt; Only passwords of standard accounts can be reset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountName { get; set; }
 
         /// <summary>
+        /// <para>The account information for which you want to reset the password. Separate multiple account entries with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AccountPassword { get; set; }
 
         /// <summary>
+        /// <para>The instance ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196830.html">DescribeDBInstances</a> operation to query the details of all instances in the specified region, including instance IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The name of the account whose password you want to reset. &gt; <em>Only passwords of standard accounts can be reset.</em> You can invoke the <a href="https://help.aliyun.com/document_detail/196844.html">DescribeAccountList</a> operation to query the account information of the target instance, including account names.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>account_sec</para>
         /// </summary>
@@ -58,6 +64,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string SecurityAccountName { get; set; }
 
         /// <summary>
+        /// <para>The password of the security administrator account. &gt; If three-role mode is enabled, this parameter is required. For more information about three-role mode, see <a href="https://help.aliyun.com/document_detail/213824.html">Three-role mode</a>.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>

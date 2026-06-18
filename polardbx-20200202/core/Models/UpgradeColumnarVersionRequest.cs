@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpgradeColumnarVersionRequest : TeaModel {
         /// <summary>
+        /// <para>The column store version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>polarx-col-kernel-5.4.20-20250819_17555906</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ColumnarVersion { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxc-xxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The instance name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pxc-hzrh51fze****pon-cdc</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para>The region in which the instance resides.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The switch mode.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>

@@ -24,8 +24,6 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
-        /// 
         /// <b>Example:</b>
         /// <para>73559800-3c8c-****-bd40-99cfcff3fe1e</para>
         /// </summary>

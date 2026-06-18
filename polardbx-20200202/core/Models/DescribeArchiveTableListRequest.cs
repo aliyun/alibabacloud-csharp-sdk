@@ -17,6 +17,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The page number. Pages start from 1.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("PageIndex")]

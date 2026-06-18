@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class UpgradeColumnarVersionResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpgradeColumnarVersionResponseBodyData Data { get; set; }
         public class UpgradeColumnarVersionResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The target version number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</para>
             /// </summary>
@@ -21,11 +26,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             [Validation(Required=false)]
             public string MinorVersion { get; set; }
 
+            /// <summary>
+            /// <para>The list of upgrade tasks.</para>
+            /// </summary>
             [NameInMap("TaskList")]
             [Validation(Required=false)]
             public List<UpgradeColumnarVersionResponseBodyDataTaskList> TaskList { get; set; }
             public class UpgradeColumnarVersionResponseBodyDataTaskList : TeaModel {
                 /// <summary>
+                /// <para>The instance ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>rm-uf68f345****88zf8</para>
                 /// </summary>
@@ -34,6 +44,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
                 public string DbInstanceName { get; set; }
 
                 /// <summary>
+                /// <para>The target task ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1861190497624654848</para>
                 /// </summary>
@@ -46,6 +58,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -64,6 +78,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

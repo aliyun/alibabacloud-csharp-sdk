@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CheckSqlAuditSlsStatusResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>173CA69A-3513-591D-8A09-C1EA37CBE2D9</para>
         /// </summary>
@@ -18,6 +20,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The enabling status of the SQL audit feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>enabled: Enabled.</description></item>
+        /// <item><description>disabled: Not enabled.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
         /// </summary>

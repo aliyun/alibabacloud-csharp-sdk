@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeActiveOperationMaintainConfResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The configuration information.</para>
+        /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public DescribeActiveOperationMaintainConfResponseBodyConfig Config { get; set; }
         public class DescribeActiveOperationMaintainConfResponseBodyConfig : TeaModel {
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-11T10:08:27Z</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
+            /// <para>The cycle time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1,2,3,4,5,6,7</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CycleTime { get; set; }
 
             /// <summary>
+            /// <para>The cycle type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Week</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string CycleType { get; set; }
 
             /// <summary>
+            /// <para>The end time of the O&amp;M window.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>04:00:00Z</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MaintainEndTime { get; set; }
 
             /// <summary>
+            /// <para>The start time of the O&amp;M window.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>04:00:00Z</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string MaintainStartTime { get; set; }
 
             /// <summary>
+            /// <para>The modification time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2021-08-11T10:08:27Z</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string ModifiedTime { get; set; }
 
             /// <summary>
+            /// <para>The status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -72,6 +89,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the O&amp;M window has been configured. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: configured.</description></item>
+        /// <item><description>0: not configured.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -80,6 +103,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public long? HasConfig { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1A586DCB-39A6-4050-81CC-C7BD4CCDB49F</para>
         /// </summary>

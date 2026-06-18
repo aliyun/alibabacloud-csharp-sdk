@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class RefreshImportMetaResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The monitoring data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public RefreshImportMetaResponseBodyData Data { get; set; }
         public class RefreshImportMetaResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The export task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>etx-szr2rr6i*****</para>
             /// </summary>
@@ -24,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>The result details of the import or export task. &gt; This parameter is empty unless an exception occurs.</para>
+        /// 
         /// <b>Example:</b>
         /// <hr>
         /// </summary>
@@ -32,6 +39,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AE4F6C34-065F-45AA-B5DC-4B8D816F6305</para>
         /// </summary>
@@ -40,6 +49,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

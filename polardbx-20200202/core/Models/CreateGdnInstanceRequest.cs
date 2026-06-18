@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class CreateGdnInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the primary instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The description of the instance.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FASTJSON 2.0.x has been released, faster and more secure, recommend you upgrade.</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The GDN mode.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>gdn_mode_master_slave, gdn_mode_bidirectional</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string GdnMode { get; set; }
 
         /// <summary>
+        /// <para>The region in which the instance resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The conflict strategy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DIRECT_OVERWRITE, OVERWRITE, IGNORE, INTERRUPT</para>
         /// </summary>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RplConflictStrategy { get; set; }
 
         /// <summary>
+        /// <para>The DML replication policy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MERGE,  SERIAL, TRANSACTION, SPLIT</para>
         /// </summary>
@@ -61,6 +71,9 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public string RplDmlStrategy { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to synchronize DDL statements.</para>
+        /// </summary>
         [NameInMap("RplSyncDdl")]
         [Validation(Required=false)]
         public bool? RplSyncDdl { get; set; }

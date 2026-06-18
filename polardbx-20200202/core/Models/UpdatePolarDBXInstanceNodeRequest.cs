@@ -14,6 +14,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string AddDNSpec { get; set; }
 
         /// <summary>
+        /// <para>The number of compute nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? CNNodeCount { get; set; }
 
         /// <summary>
+        /// <para>The client token. You can set this parameter to any random string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</para>
         /// </summary>
@@ -30,6 +34,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The instance name ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The number of storage nodes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -48,6 +55,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public int? DNNodeCount { get; set; }
 
         /// <summary>
+        /// <para>The target number of nodes for the instance. Valid values: 0 to 99.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3</para>
         /// </summary>
@@ -60,6 +69,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DeleteDNIds { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
