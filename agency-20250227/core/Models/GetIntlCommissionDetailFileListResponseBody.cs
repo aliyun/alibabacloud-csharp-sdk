@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Agency20250227.Models
 {
-    public class GetCommissionDetailFileListResponseBody : TeaModel {
+    public class GetIntlCommissionDetailFileListResponseBody : TeaModel {
         /// <summary>
-        /// <para>code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,12 +20,12 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetCommissionDetailFileListResponseBodyData Data { get; set; }
-        public class GetCommissionDetailFileListResponseBodyData : TeaModel {
+        public GetIntlCommissionDetailFileListResponseBodyData Data { get; set; }
+        public class GetIntlCommissionDetailFileListResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The billing month.</para>
             /// 
@@ -37,14 +37,20 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string BillMonth { get; set; }
 
             /// <summary>
-            /// <para>The file list.</para>
+            /// <para>The file list object.</para>
             /// </summary>
             [NameInMap("FileList")]
             [Validation(Required=false)]
-            public List<GetCommissionDetailFileListResponseBodyDataFileList> FileList { get; set; }
-            public class GetCommissionDetailFileListResponseBodyDataFileList : TeaModel {
+            public List<GetIntlCommissionDetailFileListResponseBodyDataFileList> FileList { get; set; }
+            public class GetIntlCommissionDetailFileListResponseBodyDataFileList : TeaModel {
                 /// <summary>
-                /// <para>The push status of the OSS file. Valid values: Processing, Succeeded, or Failed.</para>
+                /// <para>The push status of the OSS file. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>初始化状态: initialization status</description></item>
+                /// <item><description>处理中: processing</description></item>
+                /// <item><description>处理成功: processing succeeded</description></item>
+                /// <item><description>处理失败: processing failed.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>处理中</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public string BucketSyncStatus { get; set; }
 
                 /// <summary>
-                /// <para>The policy name.</para>
+                /// <para>The commission policy name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>参考【APS佣金查询下载功能】的政策名称</para>
@@ -67,31 +73,11 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>佣金202502021112</para>
+                /// <para>202606_FY27_TEST_4397912340.xlsx</para>
                 /// </summary>
                 [NameInMap("FileName")]
                 [Validation(Required=false)]
                 public string FileName { get; set; }
-
-                /// <summary>
-                /// <para>The file type.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>总代政策为拓渠、普通政策为拓客</para>
-                /// </summary>
-                [NameInMap("FileType")]
-                [Validation(Required=false)]
-                public string FileType { get; set; }
-
-                /// <summary>
-                /// <para>The file URL.</para>
-                /// 
-                /// <b>Example:</b>
-                /// <para>aps.ailyun.com/file/download?resourceId=1234&amp;type=1</para>
-                /// </summary>
-                [NameInMap("FileUrl")]
-                [Validation(Required=false)]
-                public string FileUrl { get; set; }
 
             }
 
@@ -108,7 +94,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The message information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>成功</para>
@@ -118,10 +104,10 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>RequestId</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>
+        /// <para>2103a30617045934095083027d88c5</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

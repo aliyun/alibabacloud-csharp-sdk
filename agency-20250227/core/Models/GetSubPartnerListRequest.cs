@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetSubPartnerListRequest : TeaModel {
         /// <summary>
-        /// <para>Page index, starting from the first page.</para>
+        /// <para>The page number, starting from 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Number of entries returned per page. Maximum value supported is 100.</para>
+        /// <para>The number of entries per page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Tier-2 partner company name</para>
+        /// <para>The company name of the secondary partner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx有限公司</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string SubPartnerCompanyName { get; set; }
 
         /// <summary>
-        /// <para>Tier-2 partner PID</para>
+        /// <para>The PID of the secondary partner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2323431211</para>

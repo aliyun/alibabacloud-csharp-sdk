@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetSubPartnerListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Message</para>
+        /// <para>The message returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>成功</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string PageNo { get; set; }
 
         /// <summary>
-        /// <para>Number of second-tier distributors returned per page, up to 100</para>
+        /// <para>The number of secondary distributors returned per page. Maximum value: 100.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</para>
@@ -51,14 +51,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>List of second-tier distributors</para>
+        /// <para>The list of secondary distributors.</para>
         /// </summary>
         [NameInMap("SubPartnerList")]
         [Validation(Required=false)]
         public List<GetSubPartnerListResponseBodySubPartnerList> SubPartnerList { get; set; }
         public class GetSubPartnerListResponseBodySubPartnerList : TeaModel {
             /// <summary>
-            /// <para>Detailed address of registration</para>
+            /// <para>The detailed registered address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx街道xxx号</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string Address { get; set; }
 
             /// <summary>
-            /// <para>Contract status encoding</para>
+            /// <para>The agreement status code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACTIVE_PERIOD</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string AgreementStatus { get; set; }
 
             /// <summary>
-            /// <para>Agreement status description</para>
+            /// <para>The description of the agreement status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>生效期</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string AgreementStatusDesc { get; set; }
 
             /// <summary>
-            /// <para>City of registration</para>
+            /// <para>The city of the registered address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>杭州市</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string City { get; set; }
 
             /// <summary>
-            /// <para>Name of the second-tier distributor</para>
+            /// <para>The name of the secondary distributor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx有限公司</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string CompanyName { get; set; }
 
             /// <summary>
-            /// <para>Contact name</para>
+            /// <para>The name of the contact.</para>
             /// 
             /// <b>Example:</b>
             /// <para>张三</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string Contact { get; set; }
 
             /// <summary>
-            /// <para>District or county of registration</para>
+            /// <para>The district or county of the registered address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>西湖区</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string District { get; set; }
 
             /// <summary>
-            /// <para>Initial onboarding time</para>
+            /// <para>The time when the secondary distributor first joined.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000-01-01</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string JoinTime { get; set; }
 
             /// <summary>
-            /// <para>Master account name of the secondary distributor</para>
+            /// <para>The name of the primary account of the secondary distributor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxxxxx有限公司主账号</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string MasterAccount { get; set; }
 
             /// <summary>
-            /// <para>UID of the Master account of the second-tier distributor</para>
+            /// <para>The UID of the primary account of the secondary distributor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string MasterUid { get; set; }
 
             /// <summary>
-            /// <para>PID of the secondary distributor</para>
+            /// <para>The PID of the secondary distributor.</para>
             /// 
             /// <b>Example:</b>
             /// <para>P123456</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string Pid { get; set; }
 
             /// <summary>
-            /// <para>Province of registration</para>
+            /// <para>The province of the registered address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>浙江省</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the invocation succeeded.</para>
+        /// <para>Indicates whether the call was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -190,7 +190,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total amount of data under the current request conditions</para>
+        /// <para>The total number of entries that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

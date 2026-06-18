@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetSubPartnerOrderListShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The UNIX timestamp of the start time for order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</para>
+        /// <para>The start timestamp of the order creation time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1727789348000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderCreateAfter { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp of the end time for order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</para>
+        /// <para>The end timestamp of the order creation time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741008566000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderCreateBefore { get; set; }
 
         /// <summary>
-        /// <para>Order ID</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>209335720330622</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp of the start time for order payment. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</para>
+        /// <para>The start timestamp of the order payment time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1727789348000</para>
@@ -50,8 +50,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderPayAfter { get; set; }
 
         /// <summary>
-        /// <para>UNIX timestamp of the order payment deadline. The time range cannot exceed six months.
-        /// The time range for order creation and the time range for order payment cannot both be empty.</para>
+        /// <para>The end timestamp of the order payment time range. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741008566000</para>
@@ -61,10 +60,12 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderPayBefore { get; set; }
 
         /// <summary>
-        /// <para>Order status. Valid values:
-        /// 1: Unpaid
-        /// 2: Paid
-        /// 3: Canceled</para>
+        /// <para>The order status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: unpaid</description></item>
+        /// <item><description>2: paid</description></item>
+        /// <item><description>3: voided.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -74,15 +75,15 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderStatus { get; set; }
 
         /// <summary>
-        /// <para>List of order types.
-        /// Valid order types include: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS</para>
+        /// <para>The list of order types.
+        /// Valid values: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, and OTHERS.</para>
         /// </summary>
         [NameInMap("OrderTypeList")]
         [Validation(Required=false)]
         public string OrderTypeListShrink { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -93,7 +94,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +105,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Minimum paid amount</para>
+        /// <para>The minimum actual payment amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -114,7 +115,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? PayAmountAfter { get; set; }
 
         /// <summary>
-        /// <para>Maximum paid amount</para>
+        /// <para>The maximum actual payment amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -124,7 +125,11 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? PayAmountBefore { get; set; }
 
         /// <summary>
-        /// <para>Payment Type:<br>1: Non-agent payment<br>2: Agent payment</para>
+        /// <para>The payment type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: non-delegated payment</description></item>
+        /// <item><description>2: delegated payment.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -134,7 +139,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? PayType { get; set; }
 
         /// <summary>
-        /// <para>Product code</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -144,7 +149,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Product Name</para>
+        /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>弹性计算</para>
@@ -154,7 +159,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>Opportunity ID</para>
+        /// <para>The opportunity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202501101023</para>
@@ -164,7 +169,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Sub-partner name</para>
+        /// <para>The name of the secondary partner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>XXX有限公司</para>
@@ -174,7 +179,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string SubPartnerName { get; set; }
 
         /// <summary>
-        /// <para>Sub-partner UID</para>
+        /// <para>The UID of the secondary partner.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123432311</para>

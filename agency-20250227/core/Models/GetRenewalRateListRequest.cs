@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetRenewalRateListRequest : TeaModel {
         /// <summary>
-        /// <para>Fiscal year and quarter</para>
+        /// <para>The fiscal year and quarter.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

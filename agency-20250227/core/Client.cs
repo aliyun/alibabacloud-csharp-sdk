@@ -77,6 +77,7 @@ namespace AlibabaCloud.SDK.Agency20250227
                 {"rus-west-1-pop", "agency.aliyuncs.com"},
                 {"us-east-1", "agency.aliyuncs.com"},
                 {"us-west-1", "agency.aliyuncs.com"},
+                {"ap-southeast-1", "agency.ap-southeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("agency", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -98,7 +99,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query bill export files.</para>
+        /// <para>Queries exported bill files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -164,7 +165,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query bill export files.</para>
+        /// <para>Queries exported bill files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -230,7 +231,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query bill export files.</para>
+        /// <para>Queries exported bill files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -248,7 +249,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query bill export files.</para>
+        /// <para>Queries exported bill files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -266,7 +267,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner commission details.</para>
+        /// <para>Queries the commission details of a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -332,7 +333,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner commission details.</para>
+        /// <para>Queries the commission details of a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -398,7 +399,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner commission details.</para>
+        /// <para>Queries the commission details of a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -416,7 +417,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner commission details.</para>
+        /// <para>Queries the commission details of a partner.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -434,7 +435,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner customer acquisition orders.</para>
+        /// <para>Queries partner customer acquisition orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -550,7 +551,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner customer acquisition orders.</para>
+        /// <para>Queries partner customer acquisition orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -666,7 +667,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner customer acquisition orders.</para>
+        /// <para>Queries partner customer acquisition orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -684,7 +685,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner customer acquisition orders.</para>
+        /// <para>Queries partner customer acquisition orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -702,7 +703,199 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner renewal rate.</para>
+        /// <para>Downloads the commission details of an international partner.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that the current caller identity is a T1 distribution partner. 
+        /// <notice>Available only for international sites.</notice>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIntlCommissionDetailFileListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIntlCommissionDetailFileListResponse
+        /// </returns>
+        public GetIntlCommissionDetailFileListResponse GetIntlCommissionDetailFileListWithOptions(GetIntlCommissionDetailFileListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
+            {
+                query["BillMonth"] = request.BillMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAccessKeyId))
+            {
+                query["OssAccessKeyId"] = request.OssAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAccessKeySecret))
+            {
+                query["OssAccessKeySecret"] = request.OssAccessKeySecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                query["OssBucketName"] = request.OssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssEndpoint))
+            {
+                query["OssEndpoint"] = request.OssEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegion))
+            {
+                query["OssRegion"] = request.OssRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssSecurityToken))
+            {
+                query["OssSecurityToken"] = request.OssSecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIntlCommissionDetailFileList",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIntlCommissionDetailFileListResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads the commission details of an international partner.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that the current caller identity is a T1 distribution partner. 
+        /// <notice>Available only for international sites.</notice>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIntlCommissionDetailFileListRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIntlCommissionDetailFileListResponse
+        /// </returns>
+        public async Task<GetIntlCommissionDetailFileListResponse> GetIntlCommissionDetailFileListWithOptionsAsync(GetIntlCommissionDetailFileListRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
+            {
+                query["BillMonth"] = request.BillMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAccessKeyId))
+            {
+                query["OssAccessKeyId"] = request.OssAccessKeyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssAccessKeySecret))
+            {
+                query["OssAccessKeySecret"] = request.OssAccessKeySecret;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssBucketName))
+            {
+                query["OssBucketName"] = request.OssBucketName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssEndpoint))
+            {
+                query["OssEndpoint"] = request.OssEndpoint;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssRegion))
+            {
+                query["OssRegion"] = request.OssRegion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssSecurityToken))
+            {
+                query["OssSecurityToken"] = request.OssSecurityToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetIntlCommissionDetailFileList",
+                Version = "2025-02-27",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetIntlCommissionDetailFileListResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads the commission details of an international partner.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that the current caller identity is a T1 distribution partner. 
+        /// <notice>Available only for international sites.</notice>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIntlCommissionDetailFileListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIntlCommissionDetailFileListResponse
+        /// </returns>
+        public GetIntlCommissionDetailFileListResponse GetIntlCommissionDetailFileList(GetIntlCommissionDetailFileListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetIntlCommissionDetailFileListWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Downloads the commission details of an international partner.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Make sure that the current caller identity is a T1 distribution partner. 
+        /// <notice>Available only for international sites.</notice>.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetIntlCommissionDetailFileListRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetIntlCommissionDetailFileListResponse
+        /// </returns>
+        public async Task<GetIntlCommissionDetailFileListResponse> GetIntlCommissionDetailFileListAsync(GetIntlCommissionDetailFileListRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetIntlCommissionDetailFileListWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the partner renewal rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -744,7 +937,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner renewal rate.</para>
+        /// <para>Queries the partner renewal rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -786,7 +979,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner renewal rate.</para>
+        /// <para>Queries the partner renewal rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -804,7 +997,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query partner renewal rate.</para>
+        /// <para>Queries the partner renewal rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -822,7 +1015,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of second-tier distributors.</para>
+        /// <para>Queries the list of secondary distributors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -876,7 +1069,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of second-tier distributors.</para>
+        /// <para>Queries the list of secondary distributors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -930,7 +1123,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of second-tier distributors.</para>
+        /// <para>Queries the list of secondary distributors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -948,7 +1141,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list of second-tier distributors.</para>
+        /// <para>Queries the list of secondary distributors.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -966,7 +1159,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query channel expansion orders.</para>
+        /// <para>Queries channel expansion orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1078,7 +1271,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query channel expansion orders.</para>
+        /// <para>Queries channel expansion orders.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1190,7 +1383,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query channel expansion orders.</para>
+        /// <para>Queries channel expansion orders.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1208,7 +1401,7 @@ namespace AlibabaCloud.SDK.Agency20250227
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query channel expansion orders.</para>
+        /// <para>Queries channel expansion orders.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetCustomerOrderListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Access denied details</para>
+        /// <para>The details of the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Status Code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetCustomerOrderListResponseBodyData> Data { get; set; }
         public class GetCustomerOrderListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Order discount</para>
+            /// <para>The order discount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? AmountDiscount { get; set; }
 
             /// <summary>
-            /// <para>Actual payment amount</para>
+            /// <para>The actual payment amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29137</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? AmountDue { get; set; }
 
             /// <summary>
-            /// <para>Creation Time</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-24 14:20:40</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Customer Account</para>
+            /// <para>The customer account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_123</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string CustomerAccount { get; set; }
 
             /// <summary>
-            /// <para>Customer categorization</para>
+            /// <para>The customer classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C类</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string CustomerClassification { get; set; }
 
             /// <summary>
-            /// <para>Customer UID</para>
+            /// <para>The customer UID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123456</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public long? CustomerUid { get; set; }
 
             /// <summary>
-            /// <para>Coupon amount</para>
+            /// <para>The coupon amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? DeductedAmountByCoupons { get; set; }
 
             /// <summary>
-            /// <para>Discounted price</para>
+            /// <para>The discounted price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29137</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? DiscountedPrice { get; set; }
 
             /// <summary>
-            /// <para>Order ID</para>
+            /// <para>The order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>236414227150922</para>
@@ -127,7 +127,12 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public long? OrderId { get; set; }
 
             /// <summary>
-            /// <para>Order status. Values include:<br>1: Unpaid<br>2: Paid<br>3: Voided</para>
+            /// <para>The order status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: unpaid</description></item>
+            /// <item><description>2: paid</description></item>
+            /// <item><description>3: canceled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -137,7 +142,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public int? OrderStatus { get; set; }
 
             /// <summary>
-            /// <para>Order type. Values include: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS</para>
+            /// <para>The order type. Valid values: BUY, UPGRADE, DOWNGRADE, RENEW, REFUND, OTHERS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BUY</para>
@@ -147,7 +152,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string OrderType { get; set; }
 
             /// <summary>
-            /// <para>Payment Time</para>
+            /// <para>The payment time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-01-24 14:20:40</para>
@@ -157,7 +162,11 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string PaidAt { get; set; }
 
             /// <summary>
-            /// <para>Payment type:<br>1: Non-agent payment<br>2: Agent payment</para>
+            /// <para>The payment type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: non-delegated payment</description></item>
+            /// <item><description>2: delegated payment.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -167,7 +176,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public int? PayType { get; set; }
 
             /// <summary>
-            /// <para>Original Price/List Price</para>
+            /// <para>The original price or list price.</para>
             /// 
             /// <b>Example:</b>
             /// <para>29137</para>
@@ -177,7 +186,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public double? Price { get; set; }
 
             /// <summary>
-            /// <para>Product code</para>
+            /// <para>The product code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>slb</para>
@@ -187,7 +196,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string ProductCode { get; set; }
 
             /// <summary>
-            /// <para>Product name</para>
+            /// <para>The product name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>slb</para>
@@ -197,7 +206,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string ProductName { get; set; }
 
             /// <summary>
-            /// <para>Opportunity ID</para>
+            /// <para>The opportunity ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202502230421</para>
@@ -207,7 +216,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>Customer-facing staff</para>
+            /// <para>The employee who follows up with the customer.</para>
             /// </summary>
             [NameInMap("RamAccountForCustomerManagers")]
             [Validation(Required=false)]
@@ -216,7 +225,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>400</para>
@@ -226,7 +235,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Message</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -236,7 +245,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -246,7 +255,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -256,7 +265,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2103a30617045934095083027d88c5</para>
@@ -266,7 +275,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation succeeded</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -276,7 +285,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>Total number of entries</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

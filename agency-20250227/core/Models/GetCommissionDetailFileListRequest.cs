@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetCommissionDetailFileListRequest : TeaModel {
         /// <summary>
-        /// <para>Billing month</para>
+        /// <para>The billing month.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202501</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string BillMonth { get; set; }
 
         /// <summary>
-        /// <para>AccessKeyID used to upload files to OSS</para>
+        /// <para>The AccessKey ID used to upload files to OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourAccessKeyID</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string OssAccessKeyId { get; set; }
 
         /// <summary>
-        /// <para>AccessKeySecret used to upload files to OSS</para>
+        /// <para>The AccessKey secret used to upload files to OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourAccessKeySecret</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string OssAccessKeySecret { get; set; }
 
         /// <summary>
-        /// <para>OSS bucket</para>
+        /// <para>The OSS bucket name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourBucketName</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string OssBucketName { get; set; }
 
         /// <summary>
-        /// <para>Edge zone of the Region where the OSS bucket for file sharing is located</para>
+        /// <para>The endpoint of the region where the Object Storage Service (OSS) bucket corresponding to the file sharing resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://oss-cn-beijing.aliyuncs.com">http://oss-cn-beijing.aliyuncs.com</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string OssEndpoint { get; set; }
 
         /// <summary>
-        /// <para>Region to which the current OSS bucket belongs</para>
+        /// <para>The region where the OSS bucket resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string OssRegion { get; set; }
 
         /// <summary>
-        /// <para>STS token used to upload files to OSS</para>
+        /// <para>The STS token used to upload files to OSS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>yourSecurityToken</para>

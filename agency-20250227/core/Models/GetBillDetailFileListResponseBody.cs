@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetBillDetailFileListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Returned data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetBillDetailFileListResponseBodyData> Data { get; set; }
         public class GetBillDetailFileListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Month</para>
+            /// <para>The billing month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>202502</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string BillMonth { get; set; }
 
             /// <summary>
-            /// <para>File Name</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>账单202502021112</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>File URL</para>
+            /// <para>The file URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aps.ailyun.com/file/download?resourceId=1234&amp;type=1</para>
@@ -57,7 +57,12 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string FileUrl { get; set; }
 
             /// <summary>
-            /// <para>OSS file push status. 1: Pending, 2: Processing, 3: Succeeded</para>
+            /// <para>The OSS file push status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>1: pending</description></item>
+            /// <item><description>2: processing</description></item>
+            /// <item><description>3: completed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -67,7 +72,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>Type: customer acquisition, channel expansion</para>
+            /// <para>The type. Valid values: customer acquisition or channel expansion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>拓渠</para>
@@ -79,7 +84,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         }
 
         /// <summary>
-        /// <para>Prompt message</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>成功</para>
@@ -89,7 +94,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Same as message</para>
+        /// <para>Same as Message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>成功</para>
@@ -109,7 +114,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation succeeded.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

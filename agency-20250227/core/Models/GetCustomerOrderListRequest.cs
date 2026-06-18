@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
 {
     public class GetCustomerOrderListRequest : TeaModel {
         /// <summary>
-        /// <para>Customer Account</para>
+        /// <para>The customer account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test_123</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string CustomerAccount { get; set; }
 
         /// <summary>
-        /// <para>Customer UID</para>
+        /// <para>The customer UID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? CustomerUid { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp indicating the start time of order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</para>
+        /// <para>The start timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1727789348000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderCreateAfter { get; set; }
 
         /// <summary>
-        /// <para>The UNIX timestamp indicating the end time of order creation. The time range must not exceed six months.<br>The time range for order creation and the time range for order payment cannot both be empty.</para>
+        /// <para>The end timestamp for order creation. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741008566000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderCreateBefore { get; set; }
 
         /// <summary>
-        /// <para>Order ID</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13595216</para>
@@ -60,8 +60,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderId { get; set; }
 
         /// <summary>
-        /// <para>Order payment start UNIX timestamp. The time range must not exceed six months.
-        /// The order creation time range and the order payment time range cannot both be empty.</para>
+        /// <para>The start timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1727789348000</para>
@@ -71,8 +70,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderPayAfter { get; set; }
 
         /// <summary>
-        /// <para>Order payment end UNIX timestamp. The time range must not exceed six months.
-        /// The order creation time range and the order payment time range cannot both be empty.</para>
+        /// <para>The end timestamp for order payment. The time range cannot exceed 6 months. The order creation time range and the order payment time range cannot both be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1741008566000</para>
@@ -82,11 +80,11 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? OrderPayBefore { get; set; }
 
         /// <summary>
-        /// <para>Order status:</para>
+        /// <para>The order status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>1 Unpaid</description></item>
-        /// <item><description>2 Discarded</description></item>
-        /// <item><description>3 Paid</description></item>
+        /// <item><description>1: unpaid</description></item>
+        /// <item><description>2: canceled</description></item>
+        /// <item><description>3: paid.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -97,14 +95,14 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? OrderStatus { get; set; }
 
         /// <summary>
-        /// <para>Order type List</para>
+        /// <para>The list of order types.</para>
         /// </summary>
         [NameInMap("OrderTypeList")]
         [Validation(Required=false)]
         public List<string> OrderTypeList { get; set; }
 
         /// <summary>
-        /// <para>Page number</para>
+        /// <para>The page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +113,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -126,7 +124,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Minimum paid amount</para>
+        /// <para>The minimum actual payment amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -136,7 +134,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public double? PayAmountAfter { get; set; }
 
         /// <summary>
-        /// <para>Actual payment amount up to this point</para>
+        /// <para>The maximum actual payment amount.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000</para>
@@ -146,9 +144,11 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public double? PayAmountBefore { get; set; }
 
         /// <summary>
-        /// <para>Payment Type:
-        /// 1: Non-agent payment;
-        /// 2: Agent payment</para>
+        /// <para>The payment type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: non-delegated payment</description></item>
+        /// <item><description>2: delegated payment.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public int? PayType { get; set; }
 
         /// <summary>
-        /// <para>Product code</para>
+        /// <para>The product code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>Product Name</para>
+        /// <para>The product name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>弹性计算</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string ProductName { get; set; }
 
         /// <summary>
-        /// <para>Opportunity ID</para>
+        /// <para>The opportunity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>202502002231</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>Customer follow-up staff</para>
+        /// <para>The employee who follows up with the customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234532</para>
