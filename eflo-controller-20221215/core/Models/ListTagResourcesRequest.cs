@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</para>
+        /// <para>The token used to retrieve the next page of results. Set this parameter to the NextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources.</para>
+        /// <para>The list of resource IDs.</para>
         /// </summary>
         [NameInMap("ResourceId")]
         [Validation(Required=false)]
@@ -39,14 +39,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Node</description></item>
-        /// <item><description>Vcc</description></item>
-        /// <item><description>Cluster</description></item>
-        /// <item><description>Subnet</description></item>
-        /// <item><description>Vpd</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +49,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

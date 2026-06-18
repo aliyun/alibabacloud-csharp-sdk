@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>NextToken for the next page. Include this value when requesting the next page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
+        /// <para>a3f2224a5ec7224116c4f5246120****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmywpvugkh7kq</para>
+        /// <para>rg-acfmywpvugk****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

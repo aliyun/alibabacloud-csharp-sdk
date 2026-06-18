@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>e01-cn-kvw44e6dn04</para>
+        /// <para>e01-cn-kvw44e6****</para>
         /// </summary>
         [NameInMap("NodeId")]
         [Validation(Required=false)]
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The type of the session corresponding to the session package.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Valid values: Sol (default): based on serial port Assistant: based on cloud assistant</para>
+        /// <para>Sol</para>
         /// </summary>
         [NameInMap("SessionType")]
         [Validation(Required=false)]

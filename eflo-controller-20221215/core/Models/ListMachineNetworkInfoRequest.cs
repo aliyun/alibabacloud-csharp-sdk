@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListMachineNetworkInfoRequest : TeaModel {
         /// <summary>
-        /// <para>hpn information of machine</para>
+        /// <para>The information about the machine types.</para>
         /// </summary>
         [NameInMap("MachineHpnInfo")]
         [Validation(Required=false)]
         public List<ListMachineNetworkInfoRequestMachineHpnInfo> MachineHpnInfo { get; set; }
         public class ListMachineNetworkInfoRequestMachineHpnInfo : TeaModel {
             /// <summary>
-            /// <para>hpn zone infomation</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
-            /// <para>The type of machine.</para>
+            /// <para>The machine type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>efg2.C48cNHmcn</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the application is located.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>

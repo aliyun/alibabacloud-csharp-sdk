@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>i118578141694745246055</para>
+            /// <para>i11857814169474524****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>Diagnostic content. For example, in network diagnostics, there are static configuration checks, dynamic operation checks, and other diagnostic contents.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>diagcontent</para>
+            /// <para>Test diagnosis information</para>
             /// </summary>
             [NameInMap("DiagContent")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>e01-cn-bl03ofg6206</para>
+            /// <para>e01-cn-bl03ofg6****</para>
             /// </summary>
             [NameInMap("ResourceId")]
             [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>NextToken for the next page. Include this value when requesting the next page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
+        /// <para>a3f2224a5ec7224116c4f5246120****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

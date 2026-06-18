@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ReportNodesStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error Message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Resource not found</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>B0699629-14FC-51E7-B49E-AAD83F6FEB60</para>
         /// </summary>

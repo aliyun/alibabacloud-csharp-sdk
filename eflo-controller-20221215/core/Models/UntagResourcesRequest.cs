@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags. This parameter takes effect only when TagKey.N is not specified. Valid values:</para>
+        /// <para>Specifies whether to remove all tags from the resources. This parameter takes effect only if you do not specify the TagKey.N parameter. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True</description></item>
-        /// <item><description>False</description></item>
+        /// <item><description><para>true: Removes all tags.</para>
+        /// </description></item>
+        /// <item><description><para>false: Does not remove all tags.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs.</para>
+        /// <para>The list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -45,11 +47,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Node</description></item>
-        /// <item><description>Cluster</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tag keys.</para>
+        /// <para>The list of tag keys.</para>
         /// </summary>
         [NameInMap("TagKey")]
         [Validation(Required=false)]

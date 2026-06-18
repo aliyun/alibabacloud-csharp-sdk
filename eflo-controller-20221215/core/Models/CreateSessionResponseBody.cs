@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The node ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2A59143F1</para>
+        /// <para>2A591****</para>
         /// </summary>
         [NameInMap("ServerSn")]
         [Validation(Required=false)]
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The session ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>i207023871669364793713</para>
+        /// <para>i20702387166936479****</para>
         /// </summary>
         [NameInMap("SessionId")]
         [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The session credential.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389c980</para>
+        /// <para>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389****</para>
         /// </summary>
         [NameInMap("SessionToken")]
         [Validation(Required=false)]

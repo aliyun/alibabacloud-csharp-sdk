@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the resources.</para>
+        /// <para>A list of resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -30,14 +30,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <para>The resource type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Node</description></item>
-        /// <item><description>Vcc</description></item>
-        /// <item><description>Cluster</description></item>
-        /// <item><description>Vpd</description></item>
-        /// <item><description>Subnet</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

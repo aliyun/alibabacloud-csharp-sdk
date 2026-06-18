@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The disks.</para>
+        /// <para>The list of disk information.</para>
         /// </summary>
         [NameInMap("Disks")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <summary>
             /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_essd</description></item>
+            /// <item><description>cloud_essd: ESSD cloud disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -63,17 +63,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The disk ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>d-bp1fi88ryk4yah8a6yos</para>
+            /// <para>d-2zeap7wkns2tdmbr11se</para>
             /// </summary>
             [NameInMap("DiskId")]
             [Validation(Required=false)]
             public string DiskId { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the ESSD that is used as the system disk. Valid values:</para>
+            /// <para>The performance level of the cloud disk when an ESSD cloud disk is created as a system disk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</description></item>
-            /// <item><description>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</description></item>
+            /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+            /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,8 +96,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <summary>
             /// <para>The disk type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>system: system disk</description></item>
-            /// <item><description>data: data disk</description></item>
+            /// <item><description>system: system disk.</description></item>
+            /// <item><description>data: data disk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -120,10 +120,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether file storage mounting is supported.</para>
+        /// <para>Indicates whether file system mounting is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>False</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("FileSystemMountEnabled")]
         [Validation(Required=false)]
@@ -150,6 +150,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
+        /// <para>The hyper node ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e01-cn-zvp2tgykr08</para>
         /// </summary>
@@ -178,7 +180,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The instance type.</para>
+        /// <para>The machine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>efg1.nvga1</para>
@@ -195,7 +197,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public List<DescribeNodeResponseBodyNetworks> Networks { get; set; }
         public class DescribeNodeResponseBodyNetworks : TeaModel {
             /// <summary>
-            /// <para>The port information of the elastic network interface (ENI).</para>
+            /// <para>The NIC port information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Bond0</para>
@@ -205,7 +207,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string BondName { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the node.</para>
+            /// <para>The machine IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>47.254.235.44</para>
@@ -214,12 +216,18 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string Ip { get; set; }
 
+            /// <summary>
+            /// <para>The security group ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>sg-bp1d3dvbh9by7j5rujax</para>
+            /// </summary>
             [NameInMap("SecurityGroupId")]
             [Validation(Required=false)]
             public string SecurityGroupId { get; set; }
 
             /// <summary>
-            /// <para>The subnet ID.</para>
+            /// <para>The cluster subnet ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf68v51fldm5egmui5a6k</para>
@@ -228,12 +236,18 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Validation(Required=false)]
             public string SubnetId { get; set; }
 
+            /// <summary>
+            /// <para>The vSwitch ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>vsw-asjdfklj</para>
+            /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cluster network.</para>
+            /// <para>The cluster network ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpd-xcuhjyrj</para>
@@ -275,6 +289,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
+        /// <para>The type of the current node. Valid values:
+        /// ● cpfs-enhanced
+        /// ● ebs-enhanced
+        /// ● standard
+        /// ● standby
+        /// ● standard-v2
+        /// ● standby-v2</para>
+        /// 
         /// <b>Example:</b>
         /// <para>standard</para>
         /// </summary>
@@ -284,22 +306,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
         /// <summary>
         /// <para>The node status.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Extending</description></item>
-        /// <item><description>UnusedNodeStopped</description></item>
-        /// <item><description>UnusedNodeStopping</description></item>
-        /// <item><description>Unused</description></item>
-        /// <item><description>Using</description></item>
-        /// <item><description>ReleaseLocking</description></item>
-        /// <item><description>Operating</description></item>
-        /// <item><description>Cutting</description></item>
-        /// <item><description>ClusterNodeStopped</description></item>
-        /// <item><description>UnusedNodeRecovering</description></item>
-        /// <item><description>ClusterNodeStopping</description></item>
-        /// <item><description>ClusterNodeRecovering</description></item>
-        /// <item><description>Replacing</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Using</para>
@@ -329,7 +335,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The serial number of the node.</para>
+        /// <para>The savings plan ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>spn-25e985acAWbrwEBK</para>
+        /// </summary>
+        [NameInMap("SavingsPlanId")]
+        [Validation(Required=false)]
+        public string SavingsPlanId { get; set; }
+
+        /// <summary>
+        /// <para>The unique machine identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sag42ckf4jx</para>
@@ -339,7 +355,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Sn { get; set; }
 
         /// <summary>
-        /// <para>The custom script.</para>
+        /// <para>The user-defined script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>#!/bin/bash

@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>节点缩容</para>
+            /// <para>Node scale-down</para>
             /// </summary>
             [NameInMap("StageTag")]
             [Validation(Required=false)]

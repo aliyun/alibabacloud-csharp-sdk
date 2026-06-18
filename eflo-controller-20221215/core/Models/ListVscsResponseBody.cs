@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListVscsResponseBody : TeaModel {
         /// <summary>
-        /// <para>No response is returned. The TotalCount parameter is used.</para>
+        /// <para>This parameter is not returned. Use the \<c>TotalCount\\</c> parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token. It can be used in the next request to retrieve a new page of results. If this parameter is empty, no next page exists.</para>
+        /// <para>The token to retrieve the next page of results. If this parameter is empty, all results have been returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>03668372-18FF-5959-98D9-6B36A4643C7A</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of VSCs.</para>
+        /// <para>The total number of entries that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>The VSCs.</para>
+        /// <para>A list of VSCs.</para>
         /// </summary>
         [NameInMap("Vscs")]
         [Validation(Required=false)]
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
+            /// <para>The ID of the resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm2zkwhkns57i</para>
@@ -78,13 +78,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The VSC status.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Creating</description></item>
-            /// <item><description>Normal</description></item>
-            /// <item><description>Deleting</description></item>
-            /// </list>
+            /// <para>The status of the VSC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Normal</para>
@@ -123,7 +117,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The VSC ID.</para>
+            /// <para>The ID of the VSC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsc-001</para>
@@ -143,7 +137,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string VscName { get; set; }
 
             /// <summary>
-            /// <para>The VSC type. Valid values: primary and standard.</para>
+            /// <para>The type of the VSC. Valid values: \<c>primary\\</c> and \<c>standard\\</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>primary</para>

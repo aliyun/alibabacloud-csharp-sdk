@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The region name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Hang Zhou</para>
+            /// <para>Hangzhou</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListFreeNodesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned pagination token which can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token returned for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The nodes.</para>
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
@@ -40,24 +40,24 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1652321554</para>
+            /// <para>2026-02-02T11:27:07</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the node expires.</para>
+            /// <para>The expiration time of the machine.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1673107200</para>
+            /// <para>2026-03-03T00:00:00</para>
             /// </summary>
             [NameInMap("ExpiredTime")]
             [Validation(Required=false)]
             public string ExpiredTime { get; set; }
 
             /// <summary>
-            /// <para>The cluster number.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>A1</para>
@@ -67,6 +67,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
+            /// <para>The hyper node ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e01-cn-zvp2tgykr08</para>
             /// </summary>
@@ -75,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HyperNodeId { get; set; }
 
             /// <summary>
-            /// <para>The instance type.</para>
+            /// <para>The machine type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>efg1.nvga1</para>
@@ -98,7 +100,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The node status.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Unused</para>
+            /// <para>Extending</para>
             /// </summary>
             [NameInMap("OperatingState")]
             [Validation(Required=false)]
@@ -115,7 +117,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The serial number of the node.</para>
+            /// <para>The serial number (SN) of the machine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sn_pozkHBgicd</para>
@@ -125,7 +127,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Sn { get; set; }
 
             /// <summary>
-            /// <para>The tags.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -135,7 +137,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>aa_key</para>
+                /// <para>alarm_xdc</para>
                 /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
@@ -145,7 +147,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>aa_vakye</para>
+                /// <para>true</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]

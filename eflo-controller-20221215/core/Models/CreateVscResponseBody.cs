@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateVscResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>887FA855-89F4-5DB3-B305-C5879EC480E6</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The VSC ID.</para>
+        /// <para>The ID of the VSC that is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vsc-001</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class CreateNodeGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>Node group ID</para>
+        /// <para>The ID of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ng-ec3c96ff0aa4c60d</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupId { get; set; }
 
         /// <summary>
-        /// <para>NodeGroupName</para>
+        /// <para>The name of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>emr-default</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>ID of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>887FA855-89F4-5DB3-B305-C5879EC480E6</para>

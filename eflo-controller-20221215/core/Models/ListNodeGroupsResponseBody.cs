@@ -58,9 +58,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 
             /// <summary>
             /// <para>Indicates whether file storage mounting is supported.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>False</para>
             /// </summary>
             [NameInMap("FileSystemMountEnabled")]
             [Validation(Required=false)]

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The maximum number of entries to return on each page. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</para>
+        /// <para>The token for pagination. To retrieve the next page of results, set this parameter to the NextToken value returned from the previous call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</para>
@@ -50,6 +50,9 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The operating states for filtering nodes.</para>
+        /// </summary>
         [NameInMap("OperatingStates")]
         [Validation(Required=false)]
         public List<string> OperatingStates { get; set; }
@@ -58,34 +61,34 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-xxkxkllss</para>
+        /// <para>rg-ksld39333ss</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tags for filtering nodes.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListClusterNodesRequestTags> Tags { get; set; }
         public class ListClusterNodesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key for the node.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>aa_key</para>
+            /// <para>my_key</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value for the node.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>aa_value</para>
+            /// <para>my_value</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListNetTestResultsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 100.</para>
+        /// <para>The number of entries returned on each page. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</description></item>
-        /// <item><description>If you set this parameter to a value that is greater than 100, the default value is 100.</description></item>
+        /// <item><description>If you do not set this parameter or you set it to a value less than 20, the default value is 20.</description></item>
+        /// <item><description>If you set the value to greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The results.</para>
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("NetTestResults")]
         [Validation(Required=false)]
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>i110667211718265012218</para>
+            /// <para>i11066721171826501****</para>
             /// </summary>
             [NameInMap("ClusterId")]
             [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterName { get; set; }
 
             /// <summary>
-            /// <para>Returned when NetTestType is CommTest.</para>
+            /// <para>The details of the communication library test. This object is returned if the value of \<c>NetTestType\\</c> is \<c>CommTest\\</c>.</para>
             /// </summary>
             [NameInMap("CommTest")]
             [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string GPUNum { get; set; }
 
                 /// <summary>
-                /// <para>The hosts of the test node.</para>
+                /// <para>The hosts of the test nodes.</para>
                 /// </summary>
                 [NameInMap("Hosts")]
                 [Validation(Required=false)]
@@ -89,14 +89,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     /// <para>The resource ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>e01-cn-wwo3eteze19</para>
+                    /// <para>e01-cn-wwo3ete****</para>
                     /// </summary>
                     [NameInMap("ResourceId")]
                     [Validation(Required=false)]
                     public string ResourceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the service.</para>
+                    /// <para>The service name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="http://www.xinjiaoyu.com">www.xinjiaoyu.com</a></para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Model { get; set; }
 
                 /// <summary>
-                /// <para>The CommTest type, which can be ACCL or NCCL.</para>
+                /// <para>The type of the communication library test. Valid values: ACCL or NCCL.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ACCL</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the task was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-01-19T02:18:12Z</para>
@@ -140,21 +140,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>Returned when NetTestType is DelayTest.</para>
+            /// <para>The details of the delay test. This object is returned if the value of \<c>NetTestType\\</c> is \<c>DelayTest\\</c>.</para>
             /// </summary>
             [NameInMap("DelayTest")]
             [Validation(Required=false)]
             public ListNetTestResultsResponseBodyNetTestResultsDelayTest DelayTest { get; set; }
             public class ListNetTestResultsResponseBodyNetTestResultsDelayTest : TeaModel {
                 /// <summary>
-                /// <para>The hosts.</para>
+                /// <para>The list of resources.</para>
                 /// </summary>
                 [NameInMap("Hosts")]
                 [Validation(Required=false)]
                 public List<ListNetTestResultsResponseBodyNetTestResultsDelayTestHosts> Hosts { get; set; }
                 public class ListNetTestResultsResponseBodyNetTestResultsDelayTestHosts : TeaModel {
                     /// <summary>
-                    /// <para>The bonding of network interface card.</para>
+                    /// <para>The bonded port of the network interface card.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>bond1</para>
@@ -177,14 +177,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     /// <para>The resource ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>e01-cn-wwo3eteze19</para>
+                    /// <para>e01-cn-wwo3ete****</para>
                     /// </summary>
                     [NameInMap("ResourceId")]
                     [Validation(Required=false)]
                     public string ResourceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the service.</para>
+                    /// <para>The service name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>WrF</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The finish time.</para>
+            /// <para>The time when the task was completed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-30T02:07Z</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NetworkMode { get; set; }
 
             /// <summary>
-            /// <para>The port number.</para>
+            /// <para>The test port.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -238,10 +238,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Port { get; set; }
 
             /// <summary>
-            /// <para>The status of the network test task. Valid values:\
-            /// ● InProgress\
-            /// ● Finished\
-            /// ● Failed</para>
+            /// <para>The status of the network test task. Valid values: ● InProgress: The test is in progress. ● Finished: The test is complete. ● Failed: The test failed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InProgress</para>
@@ -251,7 +248,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The test ID. The unique identifier of the resource test task.</para>
+            /// <para>The test ID. It is the unique identifier of the resource test task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>String	i-uf6i0tv2refv8wz*****</para>
@@ -261,21 +258,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string TestId { get; set; }
 
             /// <summary>
-            /// <para>Returned when NetTestType is TrafficTest.</para>
+            /// <para>The details of the traffic test. This object is returned if the value of \<c>NetTestType\\</c> is \<c>TrafficTest\\</c>.</para>
             /// </summary>
             [NameInMap("TrafficTest")]
             [Validation(Required=false)]
             public ListNetTestResultsResponseBodyNetTestResultsTrafficTest TrafficTest { get; set; }
             public class ListNetTestResultsResponseBodyNetTestResultsTrafficTest : TeaModel {
                 /// <summary>
-                /// <para>The clients.</para>
+                /// <para>The client.</para>
                 /// </summary>
                 [NameInMap("Clients")]
                 [Validation(Required=false)]
                 public List<ListNetTestResultsResponseBodyNetTestResultsTrafficTestClients> Clients { get; set; }
                 public class ListNetTestResultsResponseBodyNetTestResultsTrafficTestClients : TeaModel {
                     /// <summary>
-                    /// <para>The bonding of network interface card.</para>
+                    /// <para>The bonded port of the network interface card.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>bond1</para>
@@ -305,7 +302,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     public string ResourceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the service.</para>
+                    /// <para>The service name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>prod-gf-cn.juequling.com</para>
@@ -317,7 +314,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 }
 
                 /// <summary>
-                /// <para>The running duration of the pipeline job. Unit: seconds.</para>
+                /// <para>The runtime of the flow task, in seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -327,7 +324,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public long? Duration { get; set; }
 
                 /// <summary>
-                /// <para>If the protocol is RDMA, can be True or False. If the protocol is TCP, this field is empty.</para>
+                /// <para>If the protocol is RDMA, specify True or False. If the protocol is TCP, this field is empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
@@ -337,7 +334,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string GDR { get; set; }
 
                 /// <summary>
-                /// <para>The network protocol, which can be RDMA or TCP.</para>
+                /// <para>The network protocol. Valid values are RDMA and TCP.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TCP</para>
@@ -347,7 +344,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>If the protocol is TCP, the number of concurrent connections. If the protocol is RDMA, the configured QP value.</para>
+                /// <para>If the protocol is TCP, this parameter specifies the number of concurrent connections for the test. If the protocol is RDMA, this parameter specifies the QP value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RDMA</para>
@@ -357,14 +354,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public long? QP { get; set; }
 
                 /// <summary>
-                /// <para>If the TrafficModel is Fullmesh, this parameter is empty.</para>
+                /// <para>This field is empty if \<c>TrafficModel\\</c> is set to \<c>Fullmesh\\</c>.</para>
                 /// </summary>
                 [NameInMap("Servers")]
                 [Validation(Required=false)]
                 public List<ListNetTestResultsResponseBodyNetTestResultsTrafficTestServers> Servers { get; set; }
                 public class ListNetTestResultsResponseBodyNetTestResultsTrafficTestServers : TeaModel {
                     /// <summary>
-                    /// <para>The bonding of network interface card.</para>
+                    /// <para>The bonded port of the network interface card.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>bond1</para>
@@ -387,14 +384,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                     /// <para>The resource ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>e01-cn-wwo3eteze19</para>
+                    /// <para>e01-cn-wwo3ete****</para>
                     /// </summary>
                     [NameInMap("ResourceId")]
                     [Validation(Required=false)]
                     public string ResourceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the service.</para>
+                    /// <para>The service name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>prod-gf-cn.juequling.com</para>
@@ -406,7 +403,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 }
 
                 /// <summary>
-                /// <para>The traffic model, which can be MTON or Fullmesh.</para>
+                /// <para>The traffic model. Valid values are MTON and Fullmesh.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Fullmesh</para>
@@ -420,10 +417,10 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to retrieve the next page of results. If this parameter is not returned, it indicates that all results have been returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3a6b93229825ac667104463b56790c91</para>
+        /// <para>3a6b93229825ac667104463b5679****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]

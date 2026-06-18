@@ -10,24 +10,26 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeInvocationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The command execution record.</para>
+        /// <para>The object that contains the script execution records.</para>
         /// </summary>
         [NameInMap("Invocations")]
         [Validation(Required=false)]
         public DescribeInvocationsResponseBodyInvocations Invocations { get; set; }
         public class DescribeInvocationsResponseBodyInvocations : TeaModel {
             /// <summary>
-            /// <para>The file sending records.</para>
+            /// <para>The command execution records.</para>
             /// </summary>
             [NameInMap("Invocation")]
             [Validation(Required=false)]
             public List<DescribeInvocationsResponseBodyInvocationsInvocation> Invocation { get; set; }
             public class DescribeInvocationsResponseBodyInvocationsInvocation : TeaModel {
                 /// <summary>
-                /// <para>The executed command.</para>
+                /// <para>The content of the command.</para>
                 /// <list type="bullet">
-                /// <item><description>If ContentEncoding is set to PlainText in the request, the original command content is returned.</description></item>
-                /// <item><description>If ContentEncoding is set to Base64 in the request, the Base64-encoded command content is returned.</description></item>
+                /// <item><description><para>If \<c>ContentEncoding\\</c> is set to \<c>PlainText\\</c>, the original script content is returned.</para>
+                /// </description></item>
+                /// <item><description><para>If \<c>ContentEncoding\\</c> is set to \<c>Base64\\</c>, the Base64-encoded script content is returned.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string CommandContent { get; set; }
 
                 /// <summary>
-                /// <para>The command description.</para>
+                /// <para>The description of the command.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testDescription</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string CommandDescription { get; set; }
 
                 /// <summary>
-                /// <para>The command name.</para>
+                /// <para>The name of the command.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CommandTestName</para>
@@ -58,7 +60,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string CommandName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the command task was created.</para>
+                /// <para>The time when the task was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2020-01-19T09:15:46Z</para>
@@ -68,49 +70,58 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string CreationTime { get; set; }
 
                 /// <summary>
-                /// <para>The schedule on which the command was run.</para>
+                /// <para>The cron expression for the scheduled command.</para>
                 /// </summary>
                 [NameInMap("Frequency")]
                 [Validation(Required=false)]
                 public string Frequency { get; set; }
 
                 /// <summary>
-                /// <para>The overall execution state of the command task. The value of this parameter depends on the execution states of the command task on all the involved instances. Valid values:</para>
+                /// <para>The overall execution status of the command. This status is determined by the execution status on all involved instances. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Pending: The command was being verified or sent. If the execution state on at least one instance is Pending, the overall execution state is Pending.</para>
+                /// <item><description><para>Pending: The system is verifying or sending the command. If the command is in the Pending state on at least one instance, the overall status is Pending.</para>
                 /// </description></item>
-                /// <item><description><para>Scheduled: The command that is set to run on a schedule is sent and waiting to be run. If the execution state on at least one instance is Scheduled, the overall execution state is Scheduled.</para>
+                /// <item><description><para>Scheduled: The scheduled command is sent and is waiting to run. If the command is in the Scheduled state on at least one instance, the overall status is Scheduled.</para>
                 /// </description></item>
-                /// <item><description><para>Running: The command is being run on the instance. When the execution state on at least one instance is Running, the overall execution state is Running.</para>
+                /// <item><description><para>Running: The command is running on the instances. If the command is in the Running state on at least one instance, the overall status is Running.</para>
                 /// </description></item>
-                /// <item><description><para>Success: When the execution state on at least one instance is Success and the execution state on the other instances is Stopped or Success, the overall execution state is Success.</para>
+                /// <item><description><para>Success: The command was successfully executed. The command status on each instance is Stopped or Success, and the status on at least one instance is Success.</para>
                 /// <list type="bullet">
-                /// <item><description>One-time task: The execution is complete, and the exit code is 0.</description></item>
-                /// <item><description>Scheduled task: The last execution was complete, the exit code was 0, and the specified period ended.</description></item>
+                /// <item><description><para>For one-time tasks: The command execution is complete and the exit code is 0.</para>
+                /// </description></item>
+                /// <item><description><para>For scheduled tasks: The last execution was successful with an exit code of 0, and all scheduled executions are complete.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>Failed: When the execution state on all instances is Stopped or Failed, the overall execution state is Failed. When the execution state on an instance is one of the following values, Failed is returned as the overall execution state:</para>
+                /// <item><description><para>Failed: The command execution failed. The command status on each instance is Stopped or Failed. The overall status is Failed if the command status on one or more instances is one of the following:</para>
                 /// <list type="bullet">
-                /// <item><description>Invalid: The command is invalid.</description></item>
-                /// <item><description>Aborted: The command failed to be sent.</description></item>
-                /// <item><description>Failed: The execution was complete, but the exit code was not 0.</description></item>
-                /// <item><description>Timeout: The execution timed out.</description></item>
-                /// <item><description>Error: An error occurred while the command was being run.</description></item>
+                /// <item><description><para>The command failed to be verified (Invalid).</para>
+                /// </description></item>
+                /// <item><description><para>The command failed to be sent (Aborted).</para>
+                /// </description></item>
+                /// <item><description><para>The command execution is complete, but the exit code is not 0 (Failed).</para>
+                /// </description></item>
+                /// <item><description><para>The command timed out (Timeout).</para>
+                /// </description></item>
+                /// <item><description><para>An error occurred during the command execution (Error).</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>Stopping: The command task is being stopped. When the execution state on at least one instance is Stopping, the overall execution state is Stopping.</para>
+                /// <item><description><para>Stopping: The task is being stopped. If the command is in the Stopping state on at least one instance, the overall status is Stopping.</para>
                 /// </description></item>
-                /// <item><description><para>Stopped: The task was stopped. When the execution state on all instances is Stopped, the overall execution state is Stopped. When the execution state on an instance is one of the following values, Stopped is returned as the overall execution state:</para>
+                /// <item><description><para>Stopped: The task was stopped. The overall status is Stopped if the command is in the Stopped state on all instances. The overall status is Stopped if the command status on the instances is one of the following:</para>
                 /// <list type="bullet">
-                /// <item><description>Cancelled: The task was canceled.</description></item>
-                /// <item><description>Terminated: The task was terminated.</description></item>
+                /// <item><description><para>The task was canceled (Cancelled).</para>
+                /// </description></item>
+                /// <item><description><para>The task was terminated (Terminated).</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>PartialFailed: The execution was complete on some instances and failed on other instances. When the execution state is Success on some instances and is Failed or Stopped on the other instances, the overall execution state is PartialFailed.</para>
+                /// <item><description><para>PartialFailed: The command was successfully executed on some instances but failed on others. The overall status is PartialFailed if the command status on the instances is Success, Failed, or Stopped.</para>
                 /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para> The value of the <c>InvokeStatus</c> response parameter is similar to the value of InvocationStatus. We recommend that you ignore InvokeStatus and check the value of InvocationStatus.</para>
+                /// <para>The <c>InvokeStatus</c> parameter has a similar meaning. However, check the value of this parameter.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -121,7 +132,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string InvocationStatus { get; set; }
 
                 /// <summary>
-                /// <para>The execution ID.</para>
+                /// <para>The ID of the command execution.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>t-ind3k9ytvvduoe8</para>
@@ -138,14 +149,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public DescribeInvocationsResponseBodyInvocationsInvocationInvokeNodes InvokeNodes { get; set; }
                 public class DescribeInvocationsResponseBodyInvocationsInvocationInvokeNodes : TeaModel {
                     /// <summary>
-                    /// <para>The command execution records of the node.</para>
+                    /// <para>The command execution records on the nodes.</para>
                     /// </summary>
                     [NameInMap("InvokeNode")]
                     [Validation(Required=false)]
                     public List<DescribeInvocationsResponseBodyInvocationsInvocationInvokeNodesInvokeNode> InvokeNode { get; set; }
                     public class DescribeInvocationsResponseBodyInvocationsInvocationInvokeNodesInvokeNode : TeaModel {
                         /// <summary>
-                        /// <para>The start time of the execution.</para>
+                        /// <para>The start time of the command execution.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2023-02-06T07:12:50Z</para>
@@ -155,7 +166,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string CreationTime { get; set; }
 
                         /// <summary>
-                        /// <para>The size of the Output text that was truncated and discarded because the Output value exceeded 24 KB in size.</para>
+                        /// <para>The number of characters that are truncated and discarded because the \<c>Output\\</c> value exceeds 24 KB in size.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -165,25 +176,42 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public int? Dropped { get; set; }
 
                         /// <summary>
-                        /// <para>The error code returned when the file failed to be sent to the instance. Valid values:</para>
+                        /// <para>The error code for a file sending failure. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>Null: The file is sent to the instance.</description></item>
-                        /// <item><description>NodeNotExists: The specified instance does not exist or has been released.</description></item>
-                        /// <item><description>NodeReleased: The instance was released while the file was being sent.</description></item>
-                        /// <item><description>NodeNotRunning: The instance was not running while the file sending task was being created.</description></item>
-                        /// <item><description>AccountNotExists: The specified account does not exist.</description></item>
-                        /// <item><description>ClientNotRunning: Cloud Assistant Agent is not running.</description></item>
-                        /// <item><description>ClientNotResponse: Cloud Assistant Agent does not respond.</description></item>
-                        /// <item><description>ClientIsUpgrading: Cloud Assistant Agent is being upgraded.</description></item>
-                        /// <item><description>ClientNeedUpgrade: Cloud Assistant Agent needs to be upgraded.</description></item>
-                        /// <item><description>DeliveryTimeout: The file sending task timed out.</description></item>
-                        /// <item><description>FileCreateFail: The file failed to be created.</description></item>
-                        /// <item><description>FileAlreadyExists: A file with the same name exists in the specified directory.</description></item>
-                        /// <item><description>FileContentInvalid: The file content is invalid.</description></item>
-                        /// <item><description>FileNameInvalid: The file name is invalid.</description></item>
-                        /// <item><description>FilePathInvalid: The specified directory is invalid.</description></item>
-                        /// <item><description>FileAuthorityInvalid: The specified permissions on the file are invalid.</description></item>
-                        /// <item><description>UserGroupNotExists: The specified user group does not exist.</description></item>
+                        /// <item><description><para>Empty: The file was sent as expected.</para>
+                        /// </description></item>
+                        /// <item><description><para>NodeNotExists: The specified instance does not exist or has been released.</para>
+                        /// </description></item>
+                        /// <item><description><para>NodeReleased: The instance was released while the file was being sent.</para>
+                        /// </description></item>
+                        /// <item><description><para>NodeNotRunning: The instance was not in the Running state when the file sending task was created.</para>
+                        /// </description></item>
+                        /// <item><description><para>AccountNotExists: The specified account does not exist.</para>
+                        /// </description></item>
+                        /// <item><description><para>ClientNotRunning: Cloud Assistant Agent is not running.</para>
+                        /// </description></item>
+                        /// <item><description><para>ClientNotResponse: Cloud Assistant Agent is not responding.</para>
+                        /// </description></item>
+                        /// <item><description><para>ClientIsUpgrading: Cloud Assistant Agent is being upgraded.</para>
+                        /// </description></item>
+                        /// <item><description><para>ClientNeedUpgrade: Cloud Assistant Agent needs to be upgraded.</para>
+                        /// </description></item>
+                        /// <item><description><para>DeliveryTimeout: The file failed to be sent due to a timeout.</para>
+                        /// </description></item>
+                        /// <item><description><para>FileCreateFail: The file failed to be created.</para>
+                        /// </description></item>
+                        /// <item><description><para>FileAlreadyExists: A file with the same name exists in the same path.</para>
+                        /// </description></item>
+                        /// <item><description><para>FileContentInvalid: The file content is invalid.</para>
+                        /// </description></item>
+                        /// <item><description><para>FileNameInvalid: The file name is invalid.</para>
+                        /// </description></item>
+                        /// <item><description><para>FilePathInvalid: The file path is invalid.</para>
+                        /// </description></item>
+                        /// <item><description><para>FileAuthorityInvalid: The file permissions are invalid.</para>
+                        /// </description></item>
+                        /// <item><description><para>UserGroupNotExists: The user group specified for sending the file does not exist.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -194,26 +222,44 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string ErrorCode { get; set; }
 
                         /// <summary>
-                        /// <para>The error message returned when the command cannot be sent or run.</para>
+                        /// <para>The details about the cause of a command sending or execution failure. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>If this parameter is empty, the command was run as expected.</description></item>
-                        /// <item><description>the specified node does not exists: The specified instance does not exist or is released.</description></item>
-                        /// <item><description>the node has node when create task: The instance is released when the command is being run.</description></item>
-                        /// <item><description>the node is not running when create task: The instance is not in the Running state while the command is being run.</description></item>
-                        /// <item><description>the command is not applicable: The command is not applicable to the specified instance.</description></item>
-                        /// <item><description>the specified account does not exists: The specified account does not exist.</description></item>
-                        /// <item><description>the specified directory does not exists: The specified directory does not exist.</description></item>
-                        /// <item><description>the cron job expression is invalid: The cron expression that specifies the execution time is invalid.</description></item>
-                        /// <item><description>the aliyun service is not running on the instance: Cloud Assistant Agent is not running.</description></item>
-                        /// <item><description>the aliyun service in the instance does not response: Cloud Assistant Agent does not respond.</description></item>
-                        /// <item><description>the aliyun service in the node is upgrading now: Cloud Assistant Agent is being upgraded.</description></item>
-                        /// <item><description>the aliyun service in the node need upgrade: Cloud Assistant Agent needs to be upgraded.</description></item>
-                        /// <item><description>the command delivery has been timeout: The request to send the command timed out.</description></item>
-                        /// <item><description>the command execution has been timeout: The command execution timed out.</description></item>
-                        /// <item><description>the command execution got an exception: An exception occurred when the command is being run.</description></item>
-                        /// <item><description>the command execution has been interrupted: The command execution is interrupted.</description></item>
-                        /// <item><description>the command execution exit code is not zero: The command execution completes, but the exit code is not 0.</description></item>
-                        /// <item><description>the specified node has been released: The instance is released while the file is being sent.</description></item>
+                        /// <item><description><para>Empty: The command was executed as expected.</para>
+                        /// </description></item>
+                        /// <item><description><para>the specified node does not exist: The specified instance does not exist or has been released.</para>
+                        /// </description></item>
+                        /// <item><description><para>the instance was released during the command execution: The instance was released during the command execution.</para>
+                        /// </description></item>
+                        /// <item><description><para>the instance is not running when create task: The instance was not in the Running state during the command execution.</para>
+                        /// </description></item>
+                        /// <item><description><para>the command is not applicable: The command is not applicable to the specified instance.</para>
+                        /// </description></item>
+                        /// <item><description><para>the specified account does not exist: The specified account does not exist.</para>
+                        /// </description></item>
+                        /// <item><description><para>the specified directory does not exist: The specified directory does not exist.</para>
+                        /// </description></item>
+                        /// <item><description><para>the cron job expression is invalid: The specified cron expression is invalid.</para>
+                        /// </description></item>
+                        /// <item><description><para>Cloud Assistant Agent is not running: Cloud Assistant Agent is not running.</para>
+                        /// </description></item>
+                        /// <item><description><para>Cloud Assistant Agent is not responding: Cloud Assistant Agent is not responding.</para>
+                        /// </description></item>
+                        /// <item><description><para>Cloud Assistant Agent is being upgraded: Cloud Assistant Agent is being upgraded.</para>
+                        /// </description></item>
+                        /// <item><description><para>Cloud Assistant Agent needs to be upgraded: Cloud Assistant Agent needs to be upgraded.</para>
+                        /// </description></item>
+                        /// <item><description><para>The command failed to be sent due to a timeout: The command failed to be sent due to a timeout.</para>
+                        /// </description></item>
+                        /// <item><description><para>The command execution timed out: The command execution timed out.</para>
+                        /// </description></item>
+                        /// <item><description><para>An exception occurred during the command execution: An exception occurred during the command execution.</para>
+                        /// </description></item>
+                        /// <item><description><para>The command execution was interrupted: The command execution was interrupted.</para>
+                        /// </description></item>
+                        /// <item><description><para>The command execution is complete, but the exit code is not 0: The command execution is complete, but the exit code is not 0.</para>
+                        /// </description></item>
+                        /// <item><description><para>The instance was released while the file was being sent: The instance was released while the file was being sent.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -224,10 +270,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string ErrorInfo { get; set; }
 
                         /// <summary>
-                        /// <para>The exit code of the execution. Valid values:</para>
+                        /// <para>The exit code of the command process. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description>For Linux instances, the value is the exit code of the shell process.</description></item>
-                        /// <item><description>For Windows instances, the value is the exit code of the batch or PowerShell process.</description></item>
+                        /// <item><description><para>On a Linux instance, this is the exit code of the Shell process.</para>
+                        /// </description></item>
+                        /// <item><description><para>On a Windows instance, this is the exit code of the Batch or PowerShell process.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -238,7 +286,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public int? ExitCode { get; set; }
 
                         /// <summary>
-                        /// <para>The end time of the execution.</para>
+                        /// <para>The time when the execution was complete.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2023-02-06T07:12:50Z</para>
@@ -250,40 +298,46 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         /// <summary>
                         /// <para>The execution status of the command on a single instance. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>Pending: The command was being verified or sent.</para>
+                        /// <item><description><para>Pending: The system is verifying or sending the command.</para>
                         /// </description></item>
-                        /// <item><description><para>Invalid: The specified command type or parameter is invalid.</para>
+                        /// <item><description><para>Invalid: The specified command type or parameter is incorrect.</para>
                         /// </description></item>
-                        /// <item><description><para>Aborted: The command failed to be sent to the instance. To send a command to an instance, make sure that the instance is in the Running state and the command can be sent to the instance within 1 minute.</para>
+                        /// <item><description><para>Aborted: Failed to send the command to the instance. The instance must be in the Running state and the command must be sent within 1 minute.</para>
                         /// </description></item>
-                        /// <item><description><para>Running: The command is being run on the instance.</para>
+                        /// <item><description><para>Running: The command is running on the instance.</para>
                         /// </description></item>
                         /// <item><description><para>Success:</para>
                         /// <list type="bullet">
-                        /// <item><description>One-time task: The execution was complete, and the exit code was 0.</description></item>
-                        /// <item><description>Recurring execution: The previous occurrence of the execution is complete, and the exit code is 0. The specified recurring period during which the command is run ends.</description></item>
+                        /// <item><description><para>For a one-time command: The execution is complete and the exit code is 0.</para>
+                        /// </description></item>
+                        /// <item><description><para>For a scheduled command: The last execution was successful with an exit code of 0, and the specified period is over.</para>
+                        /// </description></item>
                         /// </list>
                         /// </description></item>
                         /// <item><description><para>Failed:</para>
                         /// <list type="bullet">
-                        /// <item><description>One-time task: The execution was complete, but the exit code was not 0.</description></item>
-                        /// <item><description>Recurring execution: The previous occurrence of the execution is complete, but the exit code is not 0. The specified recurring period during which the command is run is about to end.</description></item>
+                        /// <item><description><para>For a one-time command: The execution is complete, but the exit code is not 0.</para>
+                        /// </description></item>
+                        /// <item><description><para>For a scheduled command: The last execution was successful, but the exit code was not 0. The scheduled execution will be aborted.</para>
+                        /// </description></item>
                         /// </list>
                         /// </description></item>
-                        /// <item><description><para>Error: The execution cannot proceed due to an exception.</para>
+                        /// <item><description><para>Error: An exception occurred during the command execution and the execution cannot continue.</para>
                         /// </description></item>
-                        /// <item><description><para>Timeout: The execution timed out.</para>
+                        /// <item><description><para>Timeout: The command execution timed out.</para>
                         /// </description></item>
-                        /// <item><description><para>Cancelled: The execution was canceled before it started.</para>
+                        /// <item><description><para>Cancelled: The command execution was canceled. The command was not started.</para>
                         /// </description></item>
-                        /// <item><description><para>Stopping: The command task is being stopped.</para>
+                        /// <item><description><para>Stopping: The task is being stopped.</para>
                         /// </description></item>
-                        /// <item><description><para>Terminated: The execution was terminated before completion.</para>
+                        /// <item><description><para>Terminated: The command was terminated during execution.</para>
                         /// </description></item>
                         /// <item><description><para>Scheduled:</para>
                         /// <list type="bullet">
-                        /// <item><description>One-time task: The execution state can never be Scheduled.</description></item>
-                        /// <item><description>Recurring execution: The command is waiting to be run.</description></item>
+                        /// <item><description><para>For a one-time command: This status is not applicable and will not occur.</para>
+                        /// </description></item>
+                        /// <item><description><para>For a scheduled command: The command is waiting to run.</para>
+                        /// </description></item>
                         /// </list>
                         /// </description></item>
                         /// </list>
@@ -296,7 +350,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string InvocationStatus { get; set; }
 
                         /// <summary>
-                        /// <para>The node ID.</para>
+                        /// <para>The ID of the node.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>e01-cn-lbj36wkp70b</para>
@@ -316,10 +370,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string NodeInvokeStatus { get; set; }
 
                         /// <summary>
-                        /// <para>The command output.</para>
+                        /// <para>The output of the command.</para>
                         /// <list type="bullet">
-                        /// <item><description>If ContentEncoding is set to PlainText in the request, the original command output is returned.</description></item>
-                        /// <item><description>If ContentEncoding is set to Base64 in the request, the Base64-encoded command output is returned.</description></item>
+                        /// <item><description><para>If \<c>ContentEncoding\\</c> is set to \<c>PlainText\\</c>, the original output is returned.</para>
+                        /// </description></item>
+                        /// <item><description><para>If \<c>ContentEncoding\\</c> is set to \<c>Base64\\</c>, the Base64-encoded output is returned.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -330,10 +386,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string Output { get; set; }
 
                         /// <summary>
-                        /// <para>The number of times that the command was run on the instance.</para>
+                        /// <para>The number of times the command has been executed on the instance.</para>
                         /// <list type="bullet">
-                        /// <item><description>If the command is set to run only once, the value is 0 or 1.</description></item>
-                        /// <item><description>If the command is set to run on a schedule, the value is the number of times that the command has been run on the instance.</description></item>
+                        /// <item><description><para>If the command is a one-time execution, the value is 0 or 1.</para>
+                        /// </description></item>
+                        /// <item><description><para>If the command is a scheduled execution, the value is the number of times the command has been executed.</para>
+                        /// </description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -354,7 +412,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string StartTime { get; set; }
 
                         /// <summary>
-                        /// <para>The time when the command task was stopped. If you call the StopInvocation operation to stop the command task, the value of this parameter is the time when the operation is called.</para>
+                        /// <para>The time when \<c>StopInvocation\\</c> was called to stop the command execution.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2019-12-20T06:15:55Z</para>
@@ -364,14 +422,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string StopTime { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the command is to be automatically run. Valid values:</para>
+                        /// <para>Indicates whether the command will be automatically run in the future. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><para>true: The command is run by calling the <c>RunCommand</c> or <c>InvokeCommand</c> operation with <c>RepeatMode</c> set to <c>Period</c>, <c>NextRebootOnly</c>, or <c>EveryReboot</c>.</para>
+                        /// <item><description><para>true: The command is a scheduled command. The <c>RepeatMode</c> parameter was set to <c>Period</c>, <c>NextRebootOnly</c>, or <c>EveryReboot</c> when <c>RunCommand</c> or <c>InvokeCommand</c> was called.</para>
                         /// </description></item>
-                        /// <item><description><para>false (default): The command meets the following requirements.</para>
+                        /// <item><description><para>false (default): The command is a one-time command or has finished.</para>
                         /// <list type="bullet">
-                        /// <item><description>The command is run by calling the <c>RunCommand</c> or <c>InvokeCommand</c> operation with <c>RepeatMode</c> set to <c>Once</c>.</description></item>
-                        /// <item><description>The command task is canceled, stopped, or completed.</description></item>
+                        /// <item><description><para>The <c>RepeatMode</c> parameter was set to <c>Once</c> when <c>RunCommand</c> or <c>InvokeCommand</c> was called.</para>
+                        /// </description></item>
+                        /// <item><description><para>The command was canceled, stopped, or has finished running.</para>
+                        /// </description></item>
                         /// </list>
                         /// </description></item>
                         /// </list>
@@ -384,7 +444,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                         public string Timed { get; set; }
 
                         /// <summary>
-                        /// <para>The update time of the execution.</para>
+                        /// <para>The time when the record was updated.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>2023-02-06T07:12:50Z</para>
@@ -398,31 +458,37 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 }
 
                 /// <summary>
-                /// <para>The overall execution status of the command task. The value of this parameter depends on the execution states of the command task on all involved instances. Valid values:</para>
+                /// <para>The overall execution status of the command. This status is determined by the execution status on one or more instances. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para>Running:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduled task: Before you stop the scheduled execution of the command, the overall execution state is always Running.</description></item>
-                /// <item><description>One-time task: If the command is being run on instances, the overall execution state is Running.</description></item>
+                /// <item><description><para>Scheduled execution: The status is always Running before you manually stop the scheduled command.</para>
+                /// </description></item>
+                /// <item><description><para>One-time execution: The overall status is Running if a command process is in progress.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
                 /// <item><description><para>Finished:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduled task: The overall execution state can never be Finished.</description></item>
-                /// <item><description>One-time task: The execution is complete on all instances, or the execution is stopped on some instances and is complete on the other instances.</description></item>
+                /// <item><description><para>Scheduled execution: A command process cannot be in the Finished state.</para>
+                /// </description></item>
+                /// <item><description><para>One-time execution: The execution is complete on all instances. Alternatively, the command process is manually stopped on some instances and the execution is complete on the other instances.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
                 /// <item><description><para>Failed:</para>
                 /// <list type="bullet">
-                /// <item><description>Scheduled task: The overall execution state can never be Failed.</description></item>
-                /// <item><description>One-time task: The execution failed on all instances.</description></item>
+                /// <item><description><para>Scheduled execution: A command process cannot be in the Failed state.</para>
+                /// </description></item>
+                /// <item><description><para>One-time execution: The execution failed on all instances.</para>
+                /// </description></item>
                 /// </list>
                 /// </description></item>
-                /// <item><description><para>Stopped: The task is stopped.</para>
+                /// <item><description><para>Stopped: The command is stopped.</para>
                 /// </description></item>
-                /// <item><description><para>Stopping: The task is being stopped.</para>
+                /// <item><description><para>Stopping: The command is being stopped.</para>
                 /// </description></item>
-                /// <item><description><para>PartialFailed: The task fails on some instances. If you specify both this parameter and <c>InstanceId</c>, this parameter does not take effect.</para>
+                /// <item><description><para>PartialFailed: The execution failed on some instances. This value is not returned if you specify the <c>NodeId</c> parameter.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -446,10 +512,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 /// <summary>
                 /// <para>The execution mode of the command. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Once: The command is run immediately.</description></item>
-                /// <item><description>Period: The command is run on a schedule.</description></item>
-                /// <item><description>NextRebootOnly: The command is run the next time the instances start.</description></item>
-                /// <item><description>EveryReboot: runs the command every time the instances start.</description></item>
+                /// <item><description><para>Once: The command is immediately executed.</para>
+                /// </description></item>
+                /// <item><description><para>Period: The command is executed on a schedule.</para>
+                /// </description></item>
+                /// <item><description><para>NextRebootOnly: The command is automatically executed the next time the instance starts.</para>
+                /// </description></item>
+                /// <item><description><para>EveryReboot: The command is automatically executed every time the instance starts.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -470,7 +540,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public int? Timeout { get; set; }
 
                 /// <summary>
-                /// <para>The username that is used to run the command.</para>
+                /// <para>The name of the user who runs the command.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>root</para>
@@ -480,7 +550,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Username { get; set; }
 
                 /// <summary>
-                /// <para>The working directory of the command on the instance.</para>
+                /// <para>The directory where the command is run on the instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/home</para>
@@ -494,7 +564,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</para>

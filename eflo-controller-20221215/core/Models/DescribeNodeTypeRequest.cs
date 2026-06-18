@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeNodeTypeRequest : TeaModel {
         /// <summary>
+        /// <para>The node scale-out pattern.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>standard</para>
         /// </summary>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>Specify when NetTestType is CommTest.</para>
+        /// <para>Specify this parameter if NetTestType is set to CommTest.</para>
         /// </summary>
         [NameInMap("CommTest")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? GPUNum { get; set; }
 
             /// <summary>
-            /// <para>The host IDs.</para>
+            /// <para>The hosts.</para>
             /// </summary>
             [NameInMap("Hosts")]
             [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>VBw</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>The CommTest type, which can be ACCL or NCCL.</para>
+            /// <para>The type of communication library test. Valid values: ACCL and NCCL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACCL</para>
@@ -118,21 +118,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Specify when NetTestType is DelayTest.</para>
+        /// <para>Specify this parameter if NetTestType is set to DelayTest.</para>
         /// </summary>
         [NameInMap("DelayTest")]
         [Validation(Required=false)]
         public CreateNetTestTaskRequestDelayTest DelayTest { get; set; }
         public class CreateNetTestTaskRequestDelayTest : TeaModel {
             /// <summary>
-            /// <para>The hosts of the test node.</para>
+            /// <para>The hosts of the test nodes.</para>
             /// </summary>
             [NameInMap("Hosts")]
             [Validation(Required=false)]
             public List<CreateNetTestTaskRequestDelayTestHosts> Hosts { get; set; }
             public class CreateNetTestTaskRequestDelayTestHosts : TeaModel {
                 /// <summary>
-                /// <para>The bonding of network interface card.</para>
+                /// <para>The bonded NIC port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bond1</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NQU</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The type of the network test. Valid values: DelayTest, TrafficTest, and CommTest.</para>
+        /// <para>The type of network test. Valid values: DelayTest, TrafficTest, and CommTest.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DelayTest</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NetworkMode { get; set; }
 
         /// <summary>
-        /// <para>The port number.</para>
+        /// <para>The test port number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23604</para>
@@ -216,21 +216,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>If the TrafficModel is Fullmesh, leave this parameter empty.</para>
+        /// <para>This field is empty if TrafficModel is set to Fullmesh.</para>
         /// </summary>
         [NameInMap("TrafficTest")]
         [Validation(Required=false)]
         public CreateNetTestTaskRequestTrafficTest TrafficTest { get; set; }
         public class CreateNetTestTaskRequestTrafficTest : TeaModel {
             /// <summary>
-            /// <para>The client IDs.</para>
+            /// <para>The client resources.</para>
             /// </summary>
             [NameInMap("Clients")]
             [Validation(Required=false)]
             public List<CreateNetTestTaskRequestTrafficTestClients> Clients { get; set; }
             public class CreateNetTestTaskRequestTrafficTestClients : TeaModel {
                 /// <summary>
-                /// <para>The bonding of network interface card.</para>
+                /// <para>The bonded port of the network interface card (NIC).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bond1</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xMv</para>
@@ -282,7 +282,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The running duration of the pipeline job. Unit: seconds.</para>
+            /// <para>The runtime duration of the flow task, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? Duration { get; set; }
 
             /// <summary>
-            /// <para>If the protocol is RDMA, enter True or False. If the protocol is TCP, leave this field empty.</para>
+            /// <para>If Protocol is set to RDMA, specify True or False. This field is empty if Protocol is set to TCP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>False</para>
@@ -302,7 +302,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? GDR { get; set; }
 
             /// <summary>
-            /// <para>The network protocol, which can be RDMA or TCP.</para>
+            /// <para>The network protocol. Valid values: RDMA and TCP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TCP</para>
@@ -312,7 +312,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Protocol { get; set; }
 
             /// <summary>
-            /// <para>If the protocol is TCP, enter the number of concurrent connections. If the protocol is RDMA, enter the configured QP value.</para>
+            /// <para>If Protocol is set to TCP, specify the number of concurrent connections for the test. If Protocol is set to RDMA, specify the QP value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -322,14 +322,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public long? QP { get; set; }
 
             /// <summary>
-            /// <para>The services.</para>
+            /// <para>The list of servers.</para>
             /// </summary>
             [NameInMap("Servers")]
             [Validation(Required=false)]
             public List<CreateNetTestTaskRequestTrafficTestServers> Servers { get; set; }
             public class CreateNetTestTaskRequestTrafficTestServers : TeaModel {
                 /// <summary>
-                /// <para>The bonding of network interface card.</para>
+                /// <para>The bonded NIC port.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>bond1</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the service.</para>
+                /// <para>The service name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xMv</para>
@@ -381,7 +381,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
-            /// <para>The traffic model, which can be MTON or Fullmesh.</para>
+            /// <para>The traffic model. Valid values: MTON and Fullmesh.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Fullmesh</para>

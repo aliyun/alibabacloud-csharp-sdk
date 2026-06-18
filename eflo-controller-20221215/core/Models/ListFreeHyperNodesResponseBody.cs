@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListFreeHyperNodesResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of nodes.</para>
+        /// </summary>
         [NameInMap("HyperNodes")]
         [Validation(Required=false)]
         public List<ListFreeHyperNodesResponseBodyHyperNodes> HyperNodes { get; set; }
         public class ListFreeHyperNodesResponseBodyHyperNodes : TeaModel {
             /// <summary>
+            /// <para>The commodity code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>bccluster_eflocomputing_public_cn</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CommodityCode { get; set; }
 
             /// <summary>
+            /// <para>The time when the node was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-08-06T10:11:41.569</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the machine.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2025-01-22T23:59:59Z</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
+            /// <para>The hostname.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>alywlcb-lingjun-gpu-0025</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Hostname { get; set; }
 
             /// <summary>
+            /// <para>The cluster ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>A1</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
+            /// <para>The node ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>e01-cn-7pp2x193801</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HyperNodeId { get; set; }
 
             /// <summary>
+            /// <para>The machine type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>efg2.ks01L20Z2</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
+            /// <para>The status of the hypernode.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Using</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string OperatingState { get; set; }
 
             /// <summary>
+            /// <para>The resource group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>rg-acfmwaateahzoii</para>
             /// </summary>
@@ -88,6 +109,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <term><b>Obsolete</b></term>
             /// 
             /// <summary>
+            /// <para>The status of the hypernode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Using</para>
@@ -97,11 +119,16 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             [Obsolete]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The list of tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListFreeHyperNodesResponseBodyHyperNodesTags> Tags { get; set; }
             public class ListFreeHyperNodesResponseBodyHyperNodesTags : TeaModel {
                 /// <summary>
+                /// <para>The tag key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Cpu_Usage</para>
                 /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 public string Key { get; set; }
 
                 /// <summary>
+                /// <para>The tag value.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>on</para>
                 /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             }
 
             /// <summary>
+            /// <para>The zone ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-wulanchabu-a</para>
             /// </summary>
@@ -130,6 +161,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
+        /// <para>The number of entries returned on each page. The maximum value is 100.</para>
+        /// <para>Default value:</para>
+        /// <para>• If you do not set this parameter or you set a value less than 20, the default value is 20.</para>
+        /// <para>• If you set a value greater than 100, the default value is 100.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -138,6 +174,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The token to retrieve the next page of results. If this parameter is empty, no more results are available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>563d42ae0b17572449ec8c97f7f66069</para>
         /// </summary>
@@ -146,6 +184,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A511C02A-0127-51AA-A9F9-966382C9A1B5</para>
         /// </summary>

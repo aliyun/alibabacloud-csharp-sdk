@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow skipping failed nodes. Default value: False.</para>
+        /// <para>Specifies whether to skip failed nodes. The default value is False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The nodes.</para>
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Hostname { get; set; }
 
             /// <summary>
-            /// <para>The system image ID.</para>
+            /// <para>The OS image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>m-8vbf8rpv2nn14y7oybjy</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The user data.</para>
+        /// <para>The custom data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>#!/bin/sh

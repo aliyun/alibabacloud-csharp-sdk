@@ -30,21 +30,21 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>Specify when NetTestType is CommTest.</para>
+        /// <para>Specify this parameter if NetTestType is set to CommTest.</para>
         /// </summary>
         [NameInMap("CommTest")]
         [Validation(Required=false)]
         public string CommTestShrink { get; set; }
 
         /// <summary>
-        /// <para>Specify when NetTestType is DelayTest.</para>
+        /// <para>Specify this parameter if NetTestType is set to DelayTest.</para>
         /// </summary>
         [NameInMap("DelayTest")]
         [Validation(Required=false)]
         public string DelayTestShrink { get; set; }
 
         /// <summary>
-        /// <para>The type of the network test. Valid values: DelayTest, TrafficTest, and CommTest.</para>
+        /// <para>The type of network test. Valid values: DelayTest, TrafficTest, and CommTest.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DelayTest</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NetworkMode { get; set; }
 
         /// <summary>
-        /// <para>The port number.</para>
+        /// <para>The test port number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23604</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Port { get; set; }
 
         /// <summary>
-        /// <para>If the TrafficModel is Fullmesh, leave this parameter empty.</para>
+        /// <para>This field is empty if TrafficModel is set to Fullmesh.</para>
         /// </summary>
         [NameInMap("TrafficTest")]
         [Validation(Required=false)]

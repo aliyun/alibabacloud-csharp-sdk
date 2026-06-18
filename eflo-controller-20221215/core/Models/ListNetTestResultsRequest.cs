@@ -13,8 +13,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         /// <para>The number of entries to return on each page. Maximum value: 100.</para>
         /// <para>Default value:</para>
         /// <list type="bullet">
-        /// <item><description>If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</description></item>
-        /// <item><description>If you set this parameter to a value that is greater than 100, the default value is 100.</description></item>
+        /// <item><description>If you do not set this parameter or you set it to a value less than 20, the default value is 20.</description></item>
+        /// <item><description>If you set the value to greater than 100, the default value is 100.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,20 +35,20 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NetTestType { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</para>
+        /// <para>The token that is used to retrieve the next page of results. Set this parameter to the value of \<c>NextToken\\</c> that is returned in the last response.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3a6b93229825ac667104463b56790c91</para>
+        /// <para>3a6b93229825ac667104463b5679****</para>
         /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID.</para>
+        /// <para>The ID of the resource group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>rg-acfmxno4vh5muoq</para>
+        /// <para>rg-acfmxno4vh5****</para>
         /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]

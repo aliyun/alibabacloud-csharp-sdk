@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListFreeNodesRequest : TeaModel {
         /// <summary>
-        /// <para>The cluster number.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string HpnZone { get; set; }
 
         /// <summary>
-        /// <para>The instance type.</para>
+        /// <para>The machine type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mock-machine-type2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string MachineType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 20.</para>
+        /// <para>The number of entries to return on each page for a paged query. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</para>
+        /// <para>The query token. Set it to the NextToken value returned from the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The types of the returned nodes that are not used.</para>
+        /// <para>The type of unused nodes to be returned.</para>
         /// </summary>
         [NameInMap("OperatingStates")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>key_aa</para>
+            /// <para>my_key</para>
             /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>value_aa</para>
+            /// <para>129</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]

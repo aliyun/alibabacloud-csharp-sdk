@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListMachineTypesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The instance types.</para>
+        /// <para>Details of the machine types.</para>
         /// </summary>
         [NameInMap("MachineTypes")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public int? BondNum { get; set; }
 
             /// <summary>
-            /// <para>The CPU information.</para>
+            /// <para>CPU information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x Intel Icelake 8369B 32C CPU</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string CpuInfo { get; set; }
 
             /// <summary>
-            /// <para>The disk information.</para>
+            /// <para>Disk information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x 480GB SATA SSD</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string DiskInfo { get; set; }
 
             /// <summary>
-            /// <para>The GPU information.</para>
+            /// <para>GPU information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8x NVIDIA SXM4 80GB A100 GPU</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string GpuInfo { get; set; }
 
             /// <summary>
-            /// <para>The storage information.</para>
+            /// <para>Memory information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>32x 64GB DDR4 3200 Memory</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MemoryInfo { get; set; }
 
             /// <summary>
-            /// <para>The name of the instance type.</para>
+            /// <para>The name of the machine type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>efg1.nvga1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The network information.</para>
+            /// <para>Network information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2x 100Gbps DP NIC</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NodeCount { get; set; }
 
             /// <summary>
-            /// <para>The number of vCPUs.</para>
+            /// <para>The number of CPU cores.</para>
             /// 
             /// <b>Example:</b>
             /// <para>48</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public int? TotalCpuCore { get; set; }
 
             /// <summary>
-            /// <para>The access type.</para>
+            /// <para>The type of the machine type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Public</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token to request the next page of results. Include this token in your next request to retrieve the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a3f2224a5ec7224116c4f5246120abe4</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>F16BA4D8-FF50-53B6-A026-F443FE31006C</para>

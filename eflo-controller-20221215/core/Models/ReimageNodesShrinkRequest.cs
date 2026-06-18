@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to allow skipping failed nodes. Default value: False.</para>
+        /// <para>Specifies whether to skip failed nodes. The default value is False.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? IgnoreFailedNodeTasks { get; set; }
 
         /// <summary>
-        /// <para>The nodes.</para>
+        /// <para>The list of nodes.</para>
         /// </summary>
         [NameInMap("Nodes")]
         [Validation(Required=false)]
         public string NodesShrink { get; set; }
 
         /// <summary>
-        /// <para>The user data.</para>
+        /// <para>The custom data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>#!/bin/sh

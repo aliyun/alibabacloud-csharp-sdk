@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListMachineNetworkInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>machine network infomation</para>
+        /// <para>The network information of the machine types.</para>
         /// </summary>
         [NameInMap("MachineNetworkInfo")]
         [Validation(Required=false)]
         public List<ListMachineNetworkInfoResponseBodyMachineNetworkInfo> MachineNetworkInfo { get; set; }
         public class ListMachineNetworkInfoResponseBodyMachineNetworkInfo : TeaModel {
             /// <summary>
-            /// <para>Network of cluster</para>
+            /// <para>The cluster network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc/acl</para>
@@ -27,17 +27,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ClusterNet { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: The Jumbo Frame feature is enabled for the instance.</description></item>
-            /// <item><description>false: The Jumbo Frame feature is disabled for the instance.</description></item>
-            /// </list>
-            /// <para>Take note of the following items:</para>
-            /// <list type="bullet">
-            /// <item><description>The instance must be in the Running (<c>Running</c>) or Stopped (<c>Stopped</c>) state.</description></item>
-            /// <item><description>The instance must reside in a VPC.</description></item>
-            /// <item><description>After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500. You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">Jumbo Frames</a>.</description></item>
-            /// </list>
+            /// <para>Indicates whether jumbo frames are enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +37,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? EnableJumboFrame { get; set; }
 
             /// <summary>
-            /// <para>HPN zone</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B1</para>
@@ -57,7 +47,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string HpnZone { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether dpu machine.</para>
+            /// <para>Indicates whether the machine is in DPU mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +57,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public bool? IsDpuMode { get; set; }
 
             /// <summary>
-            /// <para>The type of machine.</para>
+            /// <para>The machine type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>efg1.nvga8n</para>
@@ -77,7 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string MachineType { get; set; }
 
             /// <summary>
-            /// <para>Network architecture</para>
+            /// <para>The network architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>XX-7.0</para>
@@ -87,7 +77,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string NetArch { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region in which the application is located.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-heyuan</para>
@@ -99,7 +89,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</para>

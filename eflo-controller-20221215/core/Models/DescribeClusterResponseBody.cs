@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class DescribeClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cluster description.</para>
+        /// <para>The description of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Test cluster</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The cluster name.</para>
+        /// <para>The name of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Eflo-YJ-Test-Cluster</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClusterName { get; set; }
 
         /// <summary>
-        /// <para>The cluster type.</para>
+        /// <para>The type of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AckEdgePro</para>
@@ -67,12 +67,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
             public string ComponentId { get; set; }
 
             /// <summary>
-            /// <para>The component type.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>ARMS</description></item>
-            /// <item><description>ACKEdge</description></item>
-            /// </list>
+            /// <para>The type of the component.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACKEdge</para>
@@ -84,7 +79,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         }
 
         /// <summary>
-        /// <para>The IP type of the computing network.</para>
+        /// <para>The IP version of the computing network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPv4</para>
@@ -94,7 +89,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ComputingIpVersion { get; set; }
 
         /// <summary>
-        /// <para>The creation time.</para>
+        /// <para>The time when the cluster was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-06-08T07:05:11Z</para>
@@ -104,7 +99,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The cluster number.</para>
+        /// <para>The zone of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A2</para>
@@ -121,7 +116,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public DescribeClusterResponseBodyNetworks Networks { get; set; }
         public class DescribeClusterResponseBodyNetworks : TeaModel {
             /// <summary>
-            /// <para>The ID of the CIDR block for the cluster.</para>
+            /// <para>The ID of the virtual private datacenter (VPD).</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpd-iqd7xunc</para>
@@ -153,7 +148,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public long? NodeGroupCount { get; set; }
 
         /// <summary>
-        /// <para>The status of Jumbo Frames for the elastic network interface (ENI).</para>
+        /// <para>The jumbo frame setting for the network interface.</para>
         /// 
         /// <b>Example:</b>
         /// <para>unsupported</para>
@@ -163,7 +158,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string OpenEniJumboFrame { get; set; }
 
         /// <summary>
-        /// <para>The cluster status.</para>
+        /// <para>The state of the cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>running</para>
@@ -192,12 +187,18 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The security group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sg-0jlff84q4o3s58i7fkhy</para>
+        /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The job ID.</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i152609221670466904596</para>
@@ -207,7 +208,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The update time.</para>
+        /// <para>The time when the cluster was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-08-23T06:36:17.000Z</para>
@@ -216,6 +217,12 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
+        /// <summary>
+        /// <para>The vSwitch ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>vsw-0jlwrfecgcbflyosvo242</para>
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public string VSwitchId { get; set; }

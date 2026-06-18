@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class ListSyslogsRequest : TeaModel {
         /// <summary>
+        /// <para>The start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string FromTime { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page. To retrieve the next page of results, include the token in the next request.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>392e8b4a03ed171433cc39f5b464ec9d</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The node ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NodeId { get; set; }
 
         /// <summary>
+        /// <para>The query condition.</para>
+        /// 
         /// <b>Example:</b>
         /// <list type="bullet">
         /// <item><description></description></item>
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string Query { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to sort the results by time in descending order.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -56,6 +64,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? Reverse { get; set; }
 
         /// <summary>
+        /// <para>The end time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
                 /// <para>The command description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Description</para>
+                /// <para>Description.</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

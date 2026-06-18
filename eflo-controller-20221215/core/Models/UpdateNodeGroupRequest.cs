@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
 {
     public class UpdateNodeGroupRequest : TeaModel {
         /// <summary>
-        /// <para>Whether file storage mounting is supported</para>
+        /// <para>Specifies whether to mount file storage on nodes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public bool? FileSystemMountEnabled { get; set; }
 
         /// <summary>
-        /// <para>The default image ID of the node group. If not set, it will not change.</para>
+        /// <para>The ID of the image for the node group. If you omit this parameter, the image remains unchanged.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i1232142432432</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>Key pair name.</para>
+        /// <para>The name of the key pair.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -40,17 +40,17 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string KeyPairName { get; set; }
 
         /// <summary>
-        /// <para>Login password for machines within the node group</para>
+        /// <para>The login password for the nodes in the node group.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LoginPassword</para>
+        /// <para>Password</para>
         /// </summary>
         [NameInMap("LoginPassword")]
         [Validation(Required=false)]
         public string LoginPassword { get; set; }
 
         /// <summary>
-        /// <para>Node group name</para>
+        /// <para>The new name of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-update</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string NewNodeGroupName { get; set; }
 
         /// <summary>
-        /// <para>Node group ID</para>
+        /// <para>The ID of the node group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i120021051733814190732</para>
@@ -69,12 +69,18 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         [Validation(Required=false)]
         public string NodeGroupId { get; set; }
 
+        /// <summary>
+        /// <para>To query the RAM roles that you have created, call the ListRoles operation in the RAM API. The trust policy for the role must specify Intelligent Computing Lingjun as the trusted entity. Note: You cannot remove a role by clearing this parameter.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>xianwen-test-ram-role</para>
+        /// </summary>
         [NameInMap("RamRoleName")]
         [Validation(Required=false)]
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// <para>User-defined script</para>
+        /// <para>The user data. This script runs at node startup.</para>
         /// 
         /// <b>Example:</b>
         /// <para>#!/bin/bash

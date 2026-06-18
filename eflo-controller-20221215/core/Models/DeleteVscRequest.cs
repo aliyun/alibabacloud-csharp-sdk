@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VSC that you want to delete.</para>
+        /// <para>The ID of the VSC to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

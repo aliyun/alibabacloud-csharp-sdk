@@ -19,6 +19,27 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"me-east-1", "eflo-controller.me-east-1.aliyuncs.com"},
+                {"eu-central-1", "eflo-controller.eu-central-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "eflo-controller.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-wulanchabu", "eflo-controller.cn-wulanchabu.aliyuncs.com"},
+                {"cn-shenzhen", "eflo-controller.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "eflo-controller.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shanghai", "eflo-controller.cn-shanghai.aliyuncs.com"},
+                {"cn-huhehaote", "eflo-controller.cn-huhehaote.aliyuncs.com"},
+                {"cn-hongkong", "eflo-controller.cn-hongkong.aliyuncs.com"},
+                {"cn-heyuan", "eflo-controller.cn-heyuan.aliyuncs.com"},
+                {"cn-hangzhou", "eflo-controller.cn-hangzhou.aliyuncs.com"},
+                {"cn-guangzhou", "eflo-controller.cn-guangzhou.aliyuncs.com"},
+                {"cn-beijing", "eflo-controller.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-8", "eflo-controller.ap-sourtheast-8.aliyuncs.com"},
+                {"ap-southeast-7", "eflo-controller.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-3", "eflo-controller.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-1", "eflo-controller.ap-southeast-1.aliyuncs.com"},
+                {"ap-northeast-1", "eflo-controller.ap-northeast-1.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eflo-controller", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -167,8 +188,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改节点的节点组</para>
+        /// <para>Changes the node group of a node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ChangeNodeGroupRequest
@@ -225,8 +251,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改节点的节点组</para>
+        /// <para>Changes the node group of a node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ChangeNodeGroupRequest
@@ -283,8 +314,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改节点的节点组</para>
+        /// <para>Changes the node group of a node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeNodeGroupRequest
@@ -301,8 +337,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改节点的节点组</para>
+        /// <para>Changes the node group of a node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a frontend endpoint, and starts an auto-triggered task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeNodeGroupRequest
@@ -319,7 +360,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点规格变配</para>
+        /// <para>Upgrades or downgrades the specifications of one or more nodes. Before you change the specifications, ensure that the node resources meet the requirements of the target specifications. If a node does not meet the new specification requirements, the task reports success, but the specifications are not changed. Therefore, do not rely on the task status. To confirm a successful change, query the node after the task is complete and check the returned specifications.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -371,7 +412,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点规格变配</para>
+        /// <para>Upgrades or downgrades the specifications of one or more nodes. Before you change the specifications, ensure that the node resources meet the requirements of the target specifications. If a node does not meet the new specification requirements, the task reports success, but the specifications are not changed. Therefore, do not rely on the task status. To confirm a successful change, query the node after the task is complete and check the returned specifications.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -423,7 +464,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点规格变配</para>
+        /// <para>Upgrades or downgrades the specifications of one or more nodes. Before you change the specifications, ensure that the node resources meet the requirements of the target specifications. If a node does not meet the new specification requirements, the task reports success, but the specifications are not changed. Therefore, do not rely on the task status. To confirm a successful change, query the node after the task is complete and check the returned specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -441,7 +482,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点规格变配</para>
+        /// <para>Upgrades or downgrades the specifications of one or more nodes. Before you change the specifications, ensure that the node resources meet the requirements of the target specifications. If a node does not meet the new specification requirements, the task reports success, but the specifications are not changed. Therefore, do not rely on the task status. To confirm a successful change, query the node after the task is complete and check the returned specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -459,7 +500,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource from one resource group to another.</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -513,7 +554,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource from one resource group to another.</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -567,7 +608,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource from one resource group to another.</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -585,7 +626,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Moves a resource from one resource group to another.</para>
+        /// <para>Changes the resource group of a resource.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -605,6 +646,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <summary>
         /// <para>Disconnect Connection</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CloseSessionRequest
@@ -652,6 +698,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Disconnect Connection</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloseSessionRequest
         /// </param>
@@ -698,6 +749,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Disconnect Connection</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloseSessionRequest
         /// </param>
@@ -716,6 +772,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Disconnect Connection</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, returning the front-end EndPoint, and initiating a periodic task to track the session status</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// CloseSessionRequest
         /// </param>
@@ -731,8 +792,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a large-scale computing cluster</para>
+        /// <para>Creates a new LINGJUN Cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>关闭远程会话的接口。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateClusterRequest
@@ -837,8 +903,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a large-scale computing cluster</para>
+        /// <para>Creates a new LINGJUN Cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>关闭远程会话的接口。</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateClusterRequest
@@ -943,8 +1014,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a large-scale computing cluster</para>
+        /// <para>Creates a new LINGJUN Cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>关闭远程会话的接口。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterRequest
@@ -961,8 +1037,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a large-scale computing cluster</para>
+        /// <para>Creates a new LINGJUN Cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>关闭远程会话的接口。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateClusterRequest
@@ -1146,11 +1227,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Creates a network test task.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
-        /// 
         /// <param name="tmpReq">
         /// CreateNetTestTaskRequest
         /// </param>
@@ -1234,11 +1310,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <summary>
         /// <para>Creates a network test task.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNetTestTaskRequest
@@ -1324,11 +1395,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Creates a network test task.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateNetTestTaskRequest
         /// </param>
@@ -1347,11 +1413,6 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Creates a network test task.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// CreateNetTestTaskRequest
         /// </param>
@@ -1367,8 +1428,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Node Group under Cluster</para>
+        /// <para>Create a node group in a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNodeGroupRequest
@@ -1427,8 +1493,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Node Group under Cluster</para>
+        /// <para>Create a node group in a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateNodeGroupRequest
@@ -1487,8 +1558,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Node Group under Cluster</para>
+        /// <para>Create a node group in a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodeGroupRequest
@@ -1505,8 +1581,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create Node Group under Cluster</para>
+        /// <para>Create a node group in a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a front-end endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateNodeGroupRequest
@@ -1679,7 +1760,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a virtual storage channel (VSC).</para>
+        /// <para>Creates a VSC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1743,7 +1824,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a virtual storage channel (VSC).</para>
+        /// <para>Creates a VSC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1807,7 +1888,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a virtual storage channel (VSC).</para>
+        /// <para>Creates a VSC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1825,7 +1906,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a virtual storage channel (VSC).</para>
+        /// <para>Creates a VSC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1963,7 +2044,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个未使用超节点</para>
+        /// <para>Deletes an unused hyper node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2005,7 +2086,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个未使用超节点</para>
+        /// <para>Deletes an unused hyper node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2047,7 +2128,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个未使用超节点</para>
+        /// <para>Deletes an unused hyper node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2065,7 +2146,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个未使用超节点</para>
+        /// <para>Deletes an unused hyper node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2083,7 +2164,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个未使用节点</para>
+        /// <para>Releases a pay-as-you-go node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2125,7 +2206,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个未使用节点</para>
+        /// <para>Releases a pay-as-you-go node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2167,7 +2248,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个未使用节点</para>
+        /// <para>Releases a pay-as-you-go node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2185,7 +2266,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除一个未使用节点</para>
+        /// <para>Releases a pay-as-you-go node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2331,7 +2412,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual storage channel (VSC).</para>
+        /// <para>Deletes a VSC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2379,7 +2460,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual storage channel (VSC).</para>
+        /// <para>Deletes a VSC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2427,7 +2508,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual storage channel (VSC).</para>
+        /// <para>Deletes a VSC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2445,7 +2526,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a virtual storage channel (VSC).</para>
+        /// <para>Deletes a VSC.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2463,8 +2544,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a Lingjun cluster.</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterRequest
@@ -2505,8 +2591,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a Lingjun cluster.</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterRequest
@@ -2547,8 +2638,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a Lingjun cluster.</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterRequest
@@ -2565,8 +2661,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a Lingjun cluster.</para>
+        /// <para>Queries the details of a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified cluster.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeClusterRequest
@@ -2723,8 +2824,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点列表</para>
+        /// <para>Queries the details of a hyper node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified hyper node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHyperNodeRequest
@@ -2765,8 +2871,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点列表</para>
+        /// <para>Queries the details of a hyper node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified hyper node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHyperNodeRequest
@@ -2807,8 +2918,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点列表</para>
+        /// <para>Queries the details of a hyper node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified hyper node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHyperNodeRequest
@@ -2825,8 +2941,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点列表</para>
+        /// <para>Queries the details of a hyper node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified hyper node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeHyperNodeRequest
@@ -2843,7 +2964,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list and status of O\\\&amp;M Assistant commands.</para>
+        /// <para>Queries the execution history and status of Cloud Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2897,7 +3018,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list and status of O\\\&amp;M Assistant commands.</para>
+        /// <para>Queries the execution history and status of Cloud Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2951,7 +3072,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list and status of O\\\&amp;M Assistant commands.</para>
+        /// <para>Queries the execution history and status of Cloud Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2969,7 +3090,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution list and status of O\\\&amp;M Assistant commands.</para>
+        /// <para>Queries the execution history and status of Cloud Assistant commands.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2987,7 +3108,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Network Test Result</para>
+        /// <para>Queries the results of a network test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3029,7 +3150,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Network Test Result</para>
+        /// <para>Queries the results of a network test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3071,7 +3192,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Network Test Result</para>
+        /// <para>Queries the results of a network test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3089,7 +3210,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Network Test Result</para>
+        /// <para>Queries the results of a network test.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3107,8 +3228,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes.</para>
+        /// <para>Queries the list of nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the detailed information of a hyper node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNodeRequest
@@ -3149,8 +3275,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes.</para>
+        /// <para>Queries the list of nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the detailed information of a hyper node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNodeRequest
@@ -3191,8 +3322,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes.</para>
+        /// <para>Queries the list of nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the detailed information of a hyper node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNodeRequest
@@ -3209,8 +3345,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes.</para>
+        /// <para>Queries the list of nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the detailed information of a hyper node.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNodeRequest
@@ -3227,8 +3368,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点分组</para>
+        /// <para>Queries the details of a node group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the details of a node group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNodeGroupRequest
@@ -3269,8 +3415,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点分组</para>
+        /// <para>Queries the details of a node group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the details of a node group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNodeGroupRequest
@@ -3311,8 +3462,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点分组</para>
+        /// <para>Queries the details of a node group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the details of a node group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNodeGroupRequest
@@ -3329,8 +3485,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点分组</para>
+        /// <para>Queries the details of a node group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries the details of a node group.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeNodeGroupRequest
@@ -3347,7 +3508,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点规格详情</para>
+        /// <para>Describes the constraints for a node type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3389,7 +3550,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点规格详情</para>
+        /// <para>Describes the constraints for a node type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3431,7 +3592,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点规格详情</para>
+        /// <para>Describes the constraints for a node type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3449,7 +3610,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询节点规格详情</para>
+        /// <para>Describes the constraints for a node type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3835,7 +3996,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a virtual storage channel (VSC).</para>
+        /// <para>Retrieves the details of a specific virtual switch controller (Vsc).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3877,7 +4038,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a virtual storage channel (VSC).</para>
+        /// <para>Retrieves the details of a specific virtual switch controller (Vsc).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3919,7 +4080,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a virtual storage channel (VSC).</para>
+        /// <para>Retrieves the details of a specific virtual switch controller (Vsc).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3937,7 +4098,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about a virtual storage channel (VSC).</para>
+        /// <para>Retrieves the details of a specific virtual switch controller (Vsc).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4075,8 +4236,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster Scaling</para>
+        /// <para>Extends a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Closes a remote session.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ExtendClusterRequest
@@ -4151,8 +4317,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster Scaling</para>
+        /// <para>Extends a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Closes a remote session.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ExtendClusterRequest
@@ -4227,8 +4398,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster Scaling</para>
+        /// <para>Extends a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Closes a remote session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExtendClusterRequest
@@ -4245,8 +4421,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cluster Scaling</para>
+        /// <para>Extends a cluster.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Closes a remote session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExtendClusterRequest
@@ -4263,7 +4444,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>集群下的主机分组列表，分组下的主机列表</para>
+        /// <para>Lists the node groups of a cluster and the nodes in each group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4327,7 +4508,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>集群下的主机分组列表，分组下的主机列表</para>
+        /// <para>Lists the node groups of a cluster and the nodes in each group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4391,7 +4572,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>集群下的主机分组列表，分组下的主机列表</para>
+        /// <para>Lists the node groups of a cluster and the nodes in each group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4409,7 +4590,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>集群下的主机分组列表，分组下的主机列表</para>
+        /// <para>Lists the node groups of a cluster and the nodes in each group.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4427,7 +4608,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes in a cluster.</para>
+        /// <para>Queries the nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4495,7 +4676,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes in a cluster.</para>
+        /// <para>Queries the nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4563,7 +4744,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes in a cluster.</para>
+        /// <para>Queries the nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4581,7 +4762,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes in a cluster.</para>
+        /// <para>Queries the nodes in a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4599,7 +4780,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of clusters.</para>
+        /// <para>Query cluster instances with optional filtering by resource group and tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4655,7 +4836,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of clusters.</para>
+        /// <para>Query cluster instances with optional filtering by resource group and tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4711,7 +4892,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of clusters.</para>
+        /// <para>Query cluster instances with optional filtering by resource group and tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4729,7 +4910,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of clusters.</para>
+        /// <para>Query cluster instances with optional filtering by resource group and tags.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4749,6 +4930,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <summary>
         /// <para>List of Diagnostic Tasks</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
@@ -4804,6 +4990,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>List of Diagnostic Tasks</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
         /// </param>
@@ -4858,6 +5049,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>List of Diagnostic Tasks</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
         /// </param>
@@ -4876,6 +5072,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>List of Diagnostic Tasks</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the frontend EndPoint and initiates a periodic task to track the session status.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListDiagnosticResultsRequest
         /// </param>
@@ -4891,7 +5092,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用rack物理机列表</para>
+        /// <para>Lists the active physical servers in the rack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4957,7 +5158,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用rack物理机列表</para>
+        /// <para>Lists the active physical servers in the rack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5023,7 +5224,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用rack物理机列表</para>
+        /// <para>Lists the active physical servers in the rack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5041,7 +5242,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>可用rack物理机列表</para>
+        /// <para>Lists the active physical servers in the rack.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5059,7 +5260,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes that are not used.</para>
+        /// <para>Lists all unused nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5127,7 +5328,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes that are not used.</para>
+        /// <para>Lists all unused nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5195,7 +5396,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes that are not used.</para>
+        /// <para>Lists all unused nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5213,7 +5414,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of nodes that are not used.</para>
+        /// <para>Lists all unused nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5231,8 +5432,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>机器列表</para>
+        /// <para>Machines</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of hypernodes.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListHyperNodesRequest
@@ -5333,8 +5539,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>机器列表</para>
+        /// <para>Machines</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of hypernodes.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListHyperNodesRequest
@@ -5435,8 +5646,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>机器列表</para>
+        /// <para>Machines</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of hypernodes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHyperNodesRequest
@@ -5453,8 +5669,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>机器列表</para>
+        /// <para>Machines</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of hypernodes.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListHyperNodesRequest
@@ -5607,7 +5828,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query machine network configuration using HPNZone and machine type</para>
+        /// <para>Queries the network configurations for machine types.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5655,7 +5876,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query machine network configuration using HPNZone and machine type</para>
+        /// <para>Queries the network configurations for machine types.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5703,7 +5924,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query machine network configuration using HPNZone and machine type</para>
+        /// <para>Queries the network configurations for machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5721,7 +5942,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query machine network configuration using HPNZone and machine type</para>
+        /// <para>Queries the network configurations for machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5739,7 +5960,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instance types that are available to users.</para>
+        /// <para>Queries a list of available machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5781,7 +6002,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instance types that are available to users.</para>
+        /// <para>Queries a list of available machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5823,7 +6044,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instance types that are available to users.</para>
+        /// <para>Queries a list of available machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5841,7 +6062,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of instance types that are available to users.</para>
+        /// <para>Queries a list of available machine types.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5859,13 +6080,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the results of network test results.</para>
+        /// <para>Lists network test results.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListNetTestResultsRequest
@@ -5918,13 +6134,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the results of network test results.</para>
+        /// <para>Lists network test results.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListNetTestResultsRequest
@@ -5977,13 +6188,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the results of network test results.</para>
+        /// <para>Lists network test results.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListNetTestResultsRequest
@@ -6000,13 +6206,8 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the results of network test results.</para>
+        /// <para>Lists network test results.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ListNetTestResultsRequest
@@ -6023,7 +6224,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node groups in a cluster.</para>
+        /// <para>Query Node Group Information Under the Cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6077,7 +6278,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node groups in a cluster.</para>
+        /// <para>Query Node Group Information Under the Cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6131,7 +6332,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node groups in a cluster.</para>
+        /// <para>Query Node Group Information Under the Cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6149,7 +6350,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries node groups in a cluster.</para>
+        /// <para>Query Node Group Information Under the Cluster</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6167,7 +6368,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统日志</para>
+        /// <para>Queries system logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6229,7 +6430,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统日志</para>
+        /// <para>Queries system logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6291,7 +6492,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统日志</para>
+        /// <para>Queries system logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6309,7 +6510,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统日志</para>
+        /// <para>Queries system logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6327,7 +6528,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of resources.</para>
+        /// <para>Queries the tags that are attached to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6385,7 +6586,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of resources.</para>
+        /// <para>Queries the tags that are attached to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6443,7 +6644,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of resources.</para>
+        /// <para>Queries the tags that are attached to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6461,7 +6662,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the tags of resources.</para>
+        /// <para>Queries the tags that are attached to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6482,9 +6683,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Query the cluster types available to the user</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListUserClusterTypesRequest
-        /// </param>
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6515,9 +6718,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Query the cluster types available to the user</para>
         /// </summary>
         /// 
-        /// <param name="request">
-        /// ListUserClusterTypesRequest
-        /// </param>
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
+        /// 
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -6548,6 +6753,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Query the cluster types available to the user</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
+        /// 
         /// <returns>
         /// ListUserClusterTypesResponse
         /// </returns>
@@ -6562,6 +6772,11 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
         /// <para>Query the cluster types available to the user</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>An interface for creating a session, which returns the front-end EndPoint and initiates a periodic task to track the session status</para>
+        /// </description>
+        /// 
         /// <returns>
         /// ListUserClusterTypesResponse
         /// </returns>
@@ -6573,7 +6788,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual storage channels (VSC).</para>
+        /// <para>Queries a list of VSCs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6643,7 +6858,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual storage channels (VSC).</para>
+        /// <para>Queries a list of VSCs.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6713,7 +6928,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual storage channels (VSC).</para>
+        /// <para>Queries a list of VSCs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6731,7 +6946,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of virtual storage channels (VSC).</para>
+        /// <para>Queries a list of VSCs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6897,7 +7112,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reinstall a node.</para>
+        /// <para>Reimages the specified nodes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -6957,7 +7172,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reinstall a node.</para>
+        /// <para>Reimages the specified nodes.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7017,7 +7232,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reinstall a node.</para>
+        /// <para>Reimages the specified nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7035,7 +7250,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Reinstall a node.</para>
+        /// <para>Reimages the specified nodes.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7053,8 +7268,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点异常问题上报</para>
+        /// <para>Reports issues with abnormal nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ReportNodesStatusRequest
@@ -7121,8 +7341,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点异常问题上报</para>
+        /// <para>Reports issues with abnormal nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ReportNodesStatusRequest
@@ -7189,8 +7414,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点异常问题上报</para>
+        /// <para>Reports issues with abnormal nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReportNodesStatusRequest
@@ -7207,8 +7437,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>节点异常问题上报</para>
+        /// <para>Reports issues with abnormal nodes.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a session, returns a frontend endpoint, and starts a periodic task to track the session status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ReportNodesStatusRequest
@@ -7697,7 +7932,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in a cluster.</para>
+        /// <para>Scales in a CC cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7753,7 +7988,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in a cluster.</para>
+        /// <para>Scales in a CC cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7809,7 +8044,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in a cluster.</para>
+        /// <para>Scales in a CC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7827,7 +8062,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Scales in a cluster.</para>
+        /// <para>Scales in a CC cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8125,7 +8360,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tags resources.</para>
+        /// <para>Applies tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8179,7 +8414,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tags resources.</para>
+        /// <para>Applies tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8233,7 +8468,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tags resources.</para>
+        /// <para>Applies tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8251,7 +8486,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Tags resources.</para>
+        /// <para>Applies tags to resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8269,7 +8504,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom tag from a resource.</para>
+        /// <para>Removes custom tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8327,7 +8562,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom tag from a resource.</para>
+        /// <para>Removes custom tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8385,7 +8620,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom tag from a resource.</para>
+        /// <para>Removes custom tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8403,7 +8638,7 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom tag from a resource.</para>
+        /// <para>Removes custom tags from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8421,8 +8656,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Node Group</para>
+        /// <para>Updates a node group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateNodeGroupRequest
@@ -8491,8 +8731,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Node Group</para>
+        /// <para>Updates a node group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateNodeGroupRequest
@@ -8561,8 +8806,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Node Group</para>
+        /// <para>Updates a node group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateNodeGroupRequest
@@ -8579,8 +8829,13 @@ namespace AlibabaCloud.SDK.Eflo_controller20221215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Update Node Group</para>
+        /// <para>Updates a node group.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a node group asynchronously. A task ID is returned to track the progress of the operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateNodeGroupRequest
